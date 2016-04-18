@@ -1,0 +1,8 @@
+// See:
+//   https://css-tricks.com/almanac/properties/w/word-break
+//   https://stackoverflow.com/a/10743974/247243
+.breakWord() {
+  word-wrap: break-word;
+  word-break: break-word; // Needed for Chrome (narrow site layout)
+  -moz-hyphens: auto; // Needed for Firefox (otherwise, text doesn't wrap)
+}

@@ -1,0 +1,34 @@
+@import (reference) "../type/type";
+@import (reference) "../layout/grid";
+
+@import (reference) "~basekick/mixin";
+
+.heroText() {
+  .basekick(@hero-type-scale, @hero-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+};
+
+.headlineText() {
+  .basekick(@headline-type-scale, @headline-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+};
+
+.headingText() {
+  .basekick(@heading-type-scale, @heading-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+};
+
+.subheadingText() {
+  .basekick(@subheading-type-scale, @subheading-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+};
+
+.standardText() {
+  .basekick(@standard-type-scale, @standard-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+};
+
+.smallText() {
+  .basekick(@small-type-scale, @small-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+};
+
+.touchableText(@font-scale: @interaction-type-scale) {
+  font-size: unit(@font-scale, rem);
+  line-height: (@grid-row-height * @interaction-type-row-span);
+  height: (@grid-row-height * @interaction-type-row-span);
+};

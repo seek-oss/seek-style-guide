@@ -1,0 +1,19 @@
+@import (reference) "../palette/colours";
+
+.link() {
+  color: @sk-link;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.nav_link() {
+  color: @sk-black;
+  text-decoration: none;
+  &:hover {
+    color: #d4006b; // accessible @sk-pink on @sk-grey-light
+    cursor: pointer;
+  }
+}
