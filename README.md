@@ -7,22 +7,22 @@ Living style guide containing the building blocks and design principles for SEEK
 
 ### Requirements
 
-This style guide has been extracted from Houston, so depends on the following packages:
+This style guide has been extracted from [Houston](https://github.com/SEEK-Jobs/chalice), and depends on the following packages:
 
- - React
- - Webpack
- - babel-loader
- - css-loader (v0.23)
- - less-loader
- - postcss-loader
- - postcss-local-scope
- - svgo-loader
- - raw-loader
+ - [React](https://github.com/facebook/react)
+ - [Webpack](https://webpack.github.io/)
+ - [babel-loader](https://github.com/babel/babel-loader)
+ - [css-loader (v0.23)](https://github.com/webpack/css-loader)
+ - [less-loader](https://github.com/webpack/less-loader)
+ - [postcss-loader](https://github.com/postcss/postcss-loader)
+ - [postcss-local-scope](https://github.com/css-modules/postcss-modules-local-by-default)
+ - [svgo-loader](https://github.com/rpominov/svgo-loader)
+ - [raw-loader](https://github.com/webpack/raw-loader)
 
 ### Installation
 
 ```bash
-$ npm install --save-dev seek-style-guide#version
+$ npm install --save-dev seek-jobs/seek-style-guide#<version>
 ```
 
 In your Webpack loader config, ensure you aren't excluding the style guide from your `.js` loader config:
@@ -71,17 +71,17 @@ import { HeartIcon, StarIcon } from 'seek-style-guide/react';
 ```
 
 #### Available Components
-- [BlueButton](./buttons/BlueButton)
-- [EmailField](./fields/EmailField)
-- [TextField](./fields/TextField)
-- [ChevronIcon](./icons/ChevronIcon)
-- [ClearIcon](./icons/ClearIcon)
-- [CloseIcon](./icons/CloseIcon)
-- [ErrorIcon](./icons/ErrorIcon)
-- [HeartIcon](./icons/HeartIcon)
-- [HelpIcon](./icons/HelpIcon)
-- [ProfileIcon](./icons/ProfileIcon)
-- [SearchIcon](./icons/SearchIcon)
-- [StarIcon](./icons/StarIcon)
-- [ThumbsUpIcon](./icons/ThumbsUpIcon)
-- [TickIcon](./icons/TickIcon)
+- [BlueButton](./react/buttons/BlueButton)
+- [EmailField](./react/fields/EmailField)
+- [TextField](./react/fields/TextField)
+- [ChevronIcon](./react/icons/ChevronIcon)
+- [ClearIcon](./react/icons/ClearIcon)
+- [CloseIcon](./react/icons/CloseIcon)
+- [ErrorIcon](./react/icons/ErrorIcon)
+- [HeartIcon](./react/icons/HeartIcon)
+- [HelpIcon](./react/icons/HelpIcon)
+- [ProfileIcon](./react/icons/ProfileIcon)
+- [SearchIcon](./react/icons/SearchIcon)
+- [StarIcon](./react/icons/StarIcon)
+- [ThumbsUpIcon](./react/icons/ThumbsUpIcon)
+- [TickIcon](./react/icons/TickIcon)
