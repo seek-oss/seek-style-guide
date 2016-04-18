@@ -2,9 +2,11 @@
 
 Living style guide containing the building blocks and design principles for SEEK web apps.
 
-## Project Requirements
+## Getting Started
 
-This style guide has been extracted from [chalice](https://github.com/SEEK-Jobs/chalice), and depends on the following packages:
+### Project Requirements
+
+This style guide has been extracted from [chalice](https://github.com/SEEK-Jobs/chalice), so for now your project needs to use the following packages:
 
  - [React](https://github.com/facebook/react)
  - [Webpack](https://webpack.github.io/)
@@ -16,10 +18,10 @@ This style guide has been extracted from [chalice](https://github.com/SEEK-Jobs/
  - [svgo-loader](https://github.com/rpominov/svgo-loader)
  - [raw-loader](https://github.com/webpack/raw-loader)
 
-## Installation
+### Installation
 
 ```bash
-$ npm install --save-dev seek-jobs/seek-style-guide#<version>
+$ npm install --save-dev SEEK-Jobs/seek-style-guide#<version>
 ```
 
 In your Webpack loader config, ensure you aren't excluding the style guide from your `.js` loader config:
