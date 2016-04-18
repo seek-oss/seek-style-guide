@@ -1,13 +1,10 @@
-seek-style-guide
-================
+# seek-style-guide
 
 Living style guide containing the building blocks and design principles for SEEK web apps.
 
-## Getting Started
+## Project Requirements
 
-### Requirements
-
-This style guide has been extracted from [Houston](https://github.com/SEEK-Jobs/chalice), and depends on the following packages:
+This style guide has been extracted from [chalice](https://github.com/SEEK-Jobs/chalice), and depends on the following packages:
 
  - [React](https://github.com/facebook/react)
  - [Webpack](https://webpack.github.io/)
@@ -19,7 +16,7 @@ This style guide has been extracted from [Houston](https://github.com/SEEK-Jobs/
  - [svgo-loader](https://github.com/rpominov/svgo-loader)
  - [raw-loader](https://github.com/webpack/raw-loader)
 
-### Installation
+## Installation
 
 ```bash
 $ npm install --save-dev seek-jobs/seek-style-guide#<version>
@@ -34,7 +31,7 @@ loaders: [
 ]
 ```
 
-In the Webpack config for your node targets, ensure `seek-style-guide` is marked as an external using [webpack-node-externals](https://github.com/liady/webpack-node-externals):
+In the Webpack config for your node targets, ensure `seek-style-guide/react` is marked as an external using [webpack-node-externals](https://github.com/liady/webpack-node-externals):
 
 ```js
 const nodeExternals = require('webpack-node-externals');
@@ -44,7 +41,7 @@ module.exports = {
   target: 'node',
   externals: [
     nodeExternals({
-      whitelist: ['seek-style-guide']
+      whitelist: ['seek-style-guide/react']
     })
   ]
   ...
@@ -54,7 +51,7 @@ module.exports = {
 ## Theme
 Contains the design principles that define things like the typographic hierarchy, the grid, the colour paletter etc. These principles are currently only defined as variables and mixins using [LESS](http://lesscss.org/).
 
-#### Usage
+### Usage
 Here is an example usage when using [LESS](http://lesscss.org/) and [Webpack](https://webpack.github.io/)'s [module resolving](https://webpack.github.io/docs/resolving.html#resolving-a-module-path).
 
 ```Less
@@ -70,7 +67,7 @@ Contains common components like icons, fields, etc.
 import { HeartIcon, StarIcon } from 'seek-style-guide/react';
 ```
 
-#### Available Components
+### Available Components
 - [BlueButton](./react/buttons/BlueButton)
 - [EmailField](./react/fields/EmailField)
 - [TextField](./react/fields/TextField)
