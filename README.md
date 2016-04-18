@@ -4,8 +4,52 @@ seek-style-guide
 Living style guide containing the building blocks and design principles for SEEK web apps.
 
 ## Getting Started
-Coming soon!
 
+### Requirements
+
+This style guide has been extracted from Houston, so depends on the following packages:
+
+ - React
+ - Webpack
+ - babel-loader
+ - css-loader (v0.23)
+ - less-loader
+ - postcss-loader
+ - postcss-local-scope
+ - svgo-loader
+ - raw-loader
+
+### Installation
+
+```bash
+$ npm install --save-dev seek-style-guide#version
+```
+
+In your Webpack loader config, ensure you aren't excluding the style guide from your `.js` loader config:
+
+```js
+loaders: [
+  ...
+  { test: /\.js$/, loader: 'babel', exclude: /node_modules\/(?!seek-style-guide)/ }
+]
+```
+
+In the Webpack config for your node targets, ensure `seek-style-guide` is marked as an external using [webpack-node-externals](https://github.com/liady/webpack-node-externals):
+
+```js
+const nodeExternals = require('webpack-node-externals');
+...
+module.exports = {
+  ...
+  target: 'node',
+  externals: [
+    nodeExternals({
+      whitelist: ['seek-style-guide']
+    })
+  ]
+  ...
+};
+```
 
 ## Theme
 Contains the design principles that define things like the typographic hierarchy, the grid, the colour paletter etc. These principles are currently only defined as variables and mixins using [LESS](http://lesscss.org/).
