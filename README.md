@@ -20,6 +20,12 @@ Here is an example usage when using [LESS](http://lesscss.org/) and [Webpack](ht
 ## React Components
 Contains common components like icons, fields, etc.
 
+#### Usage
+
+```js
+import { HeartIcon, StarIcon } from 'seek-style-guide/react';
+```
+
 #### Available Components
 - [BlueButton](./buttons/BlueButton)
 - [EmailField](./fields/EmailField)
