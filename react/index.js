@@ -1,4 +1,5 @@
 import ChevronIcon from './icons/ChevronIcon/ChevronIcon';
+import DownRightArrowIcon from './icons/DownRightArrowIcon/DownRightArrowIcon';
 import ClearIcon from './icons/ClearIcon/ClearIcon';
 import CloseIcon from './icons/CloseIcon/CloseIcon';
 import HeartIcon from './icons/HeartIcon/HeartIcon';
@@ -15,6 +16,7 @@ import EmailField from './fields/EmailField/EmailField';
 
 export {
   ChevronIcon,
+  DownRightArrowIcon,
   ClearIcon,
   CloseIcon,
   HeartIcon,

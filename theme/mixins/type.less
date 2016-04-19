@@ -19,8 +19,8 @@
   .basekick(@subheading-type-scale, @subheading-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
 };
 
-.standardText() {
-  .basekick(@standard-type-scale, @standard-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+.standardText(@font-scale: @standard-type-scale) {
+  .basekick(@font-scale, @standard-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
 };
 
 .smallText() {
