@@ -42,7 +42,7 @@ export default class TextField extends Component {
         <input className={classNames(styles.input, inputClassName)} ref={this.storeInputReference} {...remainingInputProps} />
         {
           invalid &&
-            <p className={styles.message}>
+            <p className={styles.message} data-automation="textfield-invalid-message">
               { message && <ErrorIcon filled={true} className={styles.messageIcon} svgClassName={styles.messageIconSvg} /> }
               { message }
             </p>
