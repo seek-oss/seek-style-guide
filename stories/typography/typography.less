@@ -1,0 +1,27 @@
+@import (reference) "../../theme";
+
+.baseline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: 100% 18px;
+  background-image: linear-gradient(to bottom,rgba(255, 145, 145, 0.34) 50%,rgba(0, 0, 0, 0) 8%,rgba(0, 0, 0, 0) 100%);
+  z-index: -1;
+  content: '';
+  pointer-events: none;
+}
+
+.example {
+  background-color: rgba(75, 179, 255, 0.35);
+  margin-bottom: (@grid-row-height * 3);
+}
+
+.hero       { .heroText();       }
+.headline   { .headlineText();   }
+.heading    { .headingText();    }
+.subheading { .subheadingText(); }
+.standard   { .standardText();   }
+.small      { .smallText();      }
+.touchable  { .touchableText();  }

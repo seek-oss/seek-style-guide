@@ -1,0 +1,30 @@
+@import (reference) "../theme";
+
+:global {
+  @import "~css-reset/reset.css";
+
+  html {
+    font-family: @base-font-stack;
+    font-size: unit(@base-font-size, px);
+    background-color: @sk-background;
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow-y: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    font-family: inherit;
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+  }
+
+  input {
+    margin: 0;
+  }
+
+  input[type=search]::-webkit-search-decoration {
+    -webkit-appearance:none;
+  }
+}
