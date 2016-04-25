@@ -46,6 +46,7 @@
     "postcss-loader": "0.8.0",
     "postcss-local-scope": "0.0.5",
     "raw-loader": "^0.5.1",
+    "react-baseline": "^0.2.1",
     "style-loader": "0.13.0",
     "svgo": "0.6.1",
     "svgo-loader": "1.1.0",
