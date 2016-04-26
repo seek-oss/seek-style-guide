@@ -24,7 +24,7 @@ module.exports = {
       'custom-controls': path.resolve('.storybook/ui/controls.js'),
       'theme.less': path.resolve('theme.less')
     },
-    modulesDirectories: ['node_modules', 'react']
+    modulesDirectories: ['node_modules', 'react', '.storybook/components']
   },
   plugins: [
     new webpack.NormalModuleReplacementPlugin(/^\.\/layout$/, 'custom-layout'),
