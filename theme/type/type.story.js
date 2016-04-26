@@ -1,4 +1,5 @@
 import React from 'react';
+import Baseline from 'react-baseline';
 import { storiesOf, action } from '@kadira/storybook';
 import styles from './type.story.less';
 
@@ -7,16 +8,17 @@ storiesOf('Typography', module)
   .add('Font Stack', () => getFontStack());
 
 const getHierarchy = () => (
-  <div>
-    <div className={styles.baseline}></div>
-    { getTypeItem('hero') }
-    { getTypeItem('headline') }
-    { getTypeItem('heading') }
-    { getTypeItem('subheading') }
-    { getTypeItem('standard') }
-    { getTypeItem('small') }
-    { getTypeItem('touchable') }
-  </div>
+  <Baseline>
+    <div>
+      { getTypeItem('hero') }
+      { getTypeItem('headline') }
+      { getTypeItem('heading') }
+      { getTypeItem('subheading') }
+      { getTypeItem('standard') }
+      { getTypeItem('small') }
+      { getTypeItem('touchable') }
+    </div>
+  </Baseline>
 );
 
 const getTypeItem = (level, sample) => (
