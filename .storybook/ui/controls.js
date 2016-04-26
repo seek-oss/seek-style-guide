@@ -109,9 +109,9 @@ export default class StorybookControls extends Component {
 
     const h1WrapStyle = {
       position: 'absolute',
-      top: '0px',
+      top: 0,
       right: '-10px',
-      left: '0px',
+      left: 0,
       textAlign: 'center'
     };
 
@@ -126,7 +126,7 @@ export default class StorybookControls extends Component {
       borderRadius: '2px',
       padding: '5px',
       cursor: 'default',
-      margin: '0'
+      margin: 0
     };
 
     const listStyle = {

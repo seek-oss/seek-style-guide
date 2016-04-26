@@ -1,9 +1,11 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
+import styles from './BlueButton.story.less';
+
 import BlueButton from './BlueButton';
 import HeartIcon from 'icons/HeartIcon/HeartIcon';
 
-storiesOf('BlueButton', module)
+storiesOf('Button', module)
   .add('Default', () => getItem({
   }))
   .add('Loading', () => getItem({
@@ -15,7 +17,7 @@ storiesOf('BlueButton', module)
 
 const getItem = ({ loading, Icon }) => (
   <BlueButton loading={loading}>
-    { Icon && <Icon /> }
+    { Icon && <Icon filled={true} svgClassName={styles.iconSvg} /> }
     My Blue Button
   </BlueButton>
 );
