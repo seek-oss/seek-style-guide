@@ -21,7 +21,8 @@ module.exports = {
   resolve: {
     alias: {
       'custom-layout': path.resolve('.storybook/ui/layout.js'),
-      'custom-controls': path.resolve('.storybook/ui/controls.js')
+      'custom-controls': path.resolve('.storybook/ui/controls.js'),
+      'theme.less': path.resolve('theme.less')
     },
     modulesDirectories: ['node_modules', 'react']
   },
