@@ -1,5 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
+import Story from 'Story/Story';
+
 import TextField from 'fields/TextField/TextField';
 
 storiesOf('TextField', module)
@@ -11,5 +13,7 @@ storiesOf('TextField', module)
   }));
 
 const getItem = ({ invalid, message }) => (
-  <TextField invalid={invalid} message={message} />
+  <Story title="TextField">
+    <TextField invalid={invalid} message={message} />
+  </Story>
 );
