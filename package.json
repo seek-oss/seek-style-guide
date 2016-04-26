@@ -40,6 +40,7 @@
     "css-reset": "git+ssh://git@github.com/SEEK-Jobs/css-reset",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
+    "hex-rgb": "^1.0.0",
     "json-loader": "^0.5.4",
     "less": "2.6.1",
     "less-loader": "2.2.3",
