@@ -7,20 +7,28 @@ import BlueButton from './BlueButton';
 import HeartIcon from 'icons/HeartIcon/HeartIcon';
 
 storiesOf('Button', module)
-  .add('Default', () => getItem({
-  }))
-  .add('Loading', () => getItem({
-    loading: true
-  }))
-  .add('With Icons', () => getItem({
-    Icon: HeartIcon
-  }));
+  .add('BlueButton', () => getStory());
 
-const getItem = ({ loading, Icon }) => (
+const getStory = () => (
   <Story title="Button">
-    <BlueButton loading={loading}>
-      { Icon && <Icon filled={true} svgClassName={styles.iconSvg} /> }
-      My Blue Button
-    </BlueButton>
+    <div className={styles.wrapper}>
+      <h1 className={styles.label}>Default Button</h1>
+      <BlueButton>
+        My Blue Button
+      </BlueButton>
+    </div>
+    <div className={styles.wrapper}>
+      <h1 className={styles.label}>Loading Button</h1>
+      <BlueButton loading={true}>
+        My Blue Button
+      </BlueButton>
+      </div>
+    <div className={styles.wrapper}>
+      <h1 className={styles.label}>Button with icon</h1>
+      <BlueButton>
+        <HeartIcon filled={true} svgClassName={styles.iconSvg} />
+        My Blue Button
+      </BlueButton>
+    </div>
   </Story>
 );
