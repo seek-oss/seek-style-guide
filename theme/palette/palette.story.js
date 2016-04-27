@@ -50,16 +50,41 @@ const getPalette = (name, palette) => (
   </div>
 );
 
+const lookupValue = value => {
+  const isVariable = value.indexOf('@') === 0;
+  return isVariable ? dictionary[value] : value;
+};
+
+const isAccessible = name => /-on-/.test(name);
+
+const getAccessibleSwatchStyle = name => {
+  const color = dictionary[name];
+  const backgroundValue = `@sk-${name.split('-on-')[1]}`;
+  const backgroundColor = lookupValue(backgroundValue);
+
+  return { color, backgroundColor };
+}
+
+const getStandardSwatchStyle = name => {
+  const value = dictionary[name];
+  const backgroundColor = lookupValue(value);
+  const color = blackOrWhite(backgroundColor);
+
+  return { color, backgroundColor };
+}
+
+const getSwatchStyle = name => isAccessible(name) ?
+  getAccessibleSwatchStyle(name) :
+  getStandardSwatchStyle(name);
+
 const getSwatch = name => {
   const value = dictionary[name];
-  const isVariable = value.indexOf('@') === 0;
-  const colourValue = isVariable ? dictionary[value] : value;
 
   return (
     <div
       key={name}
       title={name.replace('@', '')}
-      style={{color: blackOrWhite(colourValue), backgroundColor: colourValue}}
+      style={getSwatchStyle(name)}
       className={styles.swatch}>
       <span className={styles.swatchName}>{name.replace('@', '')}</span>
       <span className={styles.swatchColour}>{value.replace('@', '')}</span>
