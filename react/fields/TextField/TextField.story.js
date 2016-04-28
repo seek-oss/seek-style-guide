@@ -1,19 +1,22 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import Story from 'Story/Story';
+import styles from './TextField.story.less';
 
 import TextField from 'fields/TextField/TextField';
 
-storiesOf('TextField', module)
-  .add('Default', () => getItem({
-  }))
-  .add('Invalid', () => getItem({
-    invalid: true,
-    message: 'Nup something broke'
-  }));
+storiesOf('Components', module)
+  .add('TextField', () => getStory());
 
-const getItem = ({ invalid, message }) => (
+const getStory = () => (
   <Story title="TextField">
-    <TextField invalid={invalid} message={message} />
+    <div className={styles.wrapper}>
+      <h1 className={styles.label}>Default TextField</h1>
+      <TextField />
+    </div>
+    <div className={styles.wrapper}>
+      <h1 className={styles.label}>Invalid TextField</h1>
+      <TextField invalid={true} message="Nup something broke" />
+    </div>
   </Story>
 );

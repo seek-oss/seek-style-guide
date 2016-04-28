@@ -4,11 +4,11 @@ import { storiesOf, action } from '@kadira/storybook';
 import Story from 'Story/Story';
 import styles from './type.story.less';
 
-storiesOf('Typography', module)
-  .add('Hierarchy', () => getHierarchy())
+storiesOf('Theme', module)
+  .add('Type Hierarchy', () => getTypeHierarchy())
   .add('Font Stack', () => getFontStack());
 
-const getHierarchy = () => (
+const getTypeHierarchy = () => (
   <Story title="Type Hierarchy">
     <Baseline type="bar" color="rgba(255, 145, 145, 0.3)">
       <div>
