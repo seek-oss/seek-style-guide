@@ -6,7 +6,7 @@ import styles from './BlueButton.story.less';
 import BlueButton from './BlueButton';
 import HeartIcon from 'icons/HeartIcon/HeartIcon';
 
-storiesOf('Button', module)
+storiesOf('Components', module)
   .add('BlueButton', () => getStory());
 
 const getStory = () => (

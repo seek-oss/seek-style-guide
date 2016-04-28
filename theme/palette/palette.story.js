@@ -26,10 +26,10 @@ const dictionary = {
   ...accessiblesJs
 };
 
-storiesOf('Colours', module)
-  .add('Palette', () => getPalettes());
+storiesOf('Theme', module)
+  .add('Colour Palette', () => getColourPalette());
 
-const getPalettes = () => (
+const getColourPalette = () => (
   <Story title="Colour Palette">
     <div className={styles.story}>
     { getPalette('Brand', brandsJs) }
