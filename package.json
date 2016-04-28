@@ -48,7 +48,7 @@
     "json-loader": "^0.5.4",
     "less": "2.6.1",
     "less-loader": "2.2.3",
-    "less-vars-to-js": "^1.0.0",
+    "less-vars-to-js": "^1.1.1",
     "postcss-loader": "0.8.2",
     "postcss-local-scope": "0.0.5",
     "raw-loader": "^0.5.1",
