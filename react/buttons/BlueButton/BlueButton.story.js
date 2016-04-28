@@ -5,6 +5,7 @@ import styles from './BlueButton.story.less';
 
 import BlueButton from './BlueButton';
 import HeartIcon from 'icons/HeartIcon/HeartIcon';
+import AddCode from 'AddCode/AddCode';
 
 storiesOf('Components', module)
   .add('BlueButton', () => getStory());
@@ -13,22 +14,28 @@ const getStory = () => (
   <Story title="Button">
     <div className={styles.wrapper}>
       <h1 className={styles.label}>Default Button</h1>
-      <BlueButton>
-        My Blue Button
-      </BlueButton>
+      <AddCode>
+        <BlueButton>
+          My Blue Button
+        </BlueButton>
+      </AddCode>
     </div>
     <div className={styles.wrapper}>
       <h1 className={styles.label}>Loading Button</h1>
-      <BlueButton loading={true}>
-        My Blue Button
-      </BlueButton>
+      <AddCode>
+        <BlueButton loading={true}>
+          My Blue Button
+        </BlueButton>
+      </AddCode>
       </div>
     <div className={styles.wrapper}>
       <h1 className={styles.label}>Button with icon</h1>
-      <BlueButton>
-        <HeartIcon filled={true} svgClassName={styles.iconSvg} />
-        My Blue Button
-      </BlueButton>
+      <AddCode>
+        <BlueButton>
+          <HeartIcon filled={true} svgClassName={styles.iconSvg} />
+          My Blue Button
+        </BlueButton>
+      </AddCode>
     </div>
   </Story>
 );
