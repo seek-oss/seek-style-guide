@@ -3,6 +3,7 @@ import { storiesOf, action } from '@kadira/storybook';
 import Story from 'Story/Story';
 import styles from './palette.story.less';
 
+import CopyToClipboard from 'react-copy-to-clipboard';
 import lessToJs from 'less-vars-to-js';
 import blackOrWhite from 'black-or-white';
 
@@ -81,13 +82,14 @@ const getSwatch = name => {
   const value = dictionary[name];
 
   return (
-    <div
-      key={name}
-      title={name.replace('@', '')}
-      style={getSwatchStyle(name)}
-      className={styles.swatch}>
-      <span className={styles.swatchName}>{name.replace('@', '')}</span>
-      <span className={styles.swatchColour}>{value.replace('@', '')}</span>
-    </div>
+    <CopyToClipboard text={name} key={name}>
+      <div
+        title={`Click to copy ${name}`}
+        style={getSwatchStyle(name)}
+        className={styles.swatch}>
+        <span className={styles.swatchName}>{name.replace('@', '')}</span>
+        <span className={styles.swatchColour}>{value.replace('@', '')}</span>
+      </div>
+    </CopyToClipboard>
   );
 };
