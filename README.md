@@ -2,36 +2,43 @@
 
 Living style guide containing the building blocks and design principles for SEEK web apps.
 
-## Getting Started
+For now, this style guide is designed for projects using React, Webpack and LESS.
 
-### Project Requirements
-
-This style guide has been extracted from [chalice](https://github.com/SEEK-Jobs/chalice), so for now your project needs to use the following packages:
-
- - [React](https://github.com/facebook/react)
- - [Webpack](https://webpack.github.io/)
- - [babel-loader](https://github.com/babel/babel-loader)
- - [css-loader (v0.23)](https://github.com/webpack/css-loader)
- - [less-loader](https://github.com/webpack/less-loader)
- - [postcss-loader](https://github.com/postcss/postcss-loader)
- - [postcss-local-scope](https://github.com/css-modules/postcss-modules-local-by-default)
- - [svgo-loader](https://github.com/rpominov/svgo-loader)
- - [raw-loader](https://github.com/webpack/raw-loader)
-
-### Installation
+## Installation
 
 ```bash
 $ npm install --save-dev SEEK-Jobs/seek-style-guide#<version>
 ```
 
-In your Webpack loader config, ensure you aren't excluding the style guide from your `.js` loader config:
+## Setup
+
+First, decorate your server Webpack config:
 
 ```js
-loaders: [
-  ...
-  { test: /\.js$/, loader: 'babel', exclude: /node_modules\/(?!seek-style-guide)/ }
-]
+const decorateServerConfig = require('seek-style-guide/webpack').decorateServerConfig;
+
+module.exports = decorateServerConfig({
+  // Webpack config...
+});
 ```
+
+Then, decorate your client Webpack config:
+
+```js
+const decorateClientConfig = require('seek-style-guide/webpack').decorateClientConfig;
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const config = {
+  // Webpack config...
+};
+
+module.exports = decorateClientConfig(config, {
+  // Ensure you pass your ExtractTextPlugin instance to the decorator, if required:
+  extractTextPlugin: ExtractTextPlugin
+});
+```
+
+Please note that, if your Webpack loaders aren't scoped to your local project files via the ["include" option](https://webpack.github.io/docs/configuration.html#module-loaders), the decorator will throw an error.
 
 In the Webpack config for your node targets, ensure `seek-style-guide/react` is marked as an external using [webpack-node-externals](https://github.com/liady/webpack-node-externals):
 

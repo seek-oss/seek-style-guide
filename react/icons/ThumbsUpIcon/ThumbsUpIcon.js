@@ -1,4 +1,4 @@
-import svgMarkup from '!!raw!svgo!./ThumbsUpIcon.svg';
+import svgMarkup from './ThumbsUpIcon.svg';
 
 import React, { Component, PropTypes } from 'react';
 

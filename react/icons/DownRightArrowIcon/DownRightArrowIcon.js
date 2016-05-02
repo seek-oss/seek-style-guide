@@ -1,4 +1,4 @@
-import svgMarkup from '!!raw!svgo!./DownRightArrowIcon.svg';
+import svgMarkup from './DownRightArrowIcon.svg';
 import styles from './DownRightArrowIcon.less';
 
 import React, { Component, PropTypes } from 'react';

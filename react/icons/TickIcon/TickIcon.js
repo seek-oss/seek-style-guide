@@ -1,4 +1,4 @@
-import svgMarkup from '!!raw!svgo!./TickIcon.svg';
+import svgMarkup from './TickIcon.svg';
 
 import React, { Component, PropTypes } from 'react';
 

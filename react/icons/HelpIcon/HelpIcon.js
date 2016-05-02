@@ -1,4 +1,4 @@
-import svgMarkup from '!!raw!svgo!./HelpIcon.svg';
+import svgMarkup from './HelpIcon.svg';
 
 import React, { Component, PropTypes } from 'react';
 

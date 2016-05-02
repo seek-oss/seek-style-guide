@@ -12,6 +12,13 @@ module.exports = {
           'postcss',
           'less'
         ]
+      },
+      {
+        test: /\.svg$/,
+        loaders: [
+          'raw',
+          'svgo'
+        ]
       }
     ]
   },
@@ -20,9 +27,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
+      'seek-style-guide': path.resolve(__dirname, '../'),
       'custom-layout': path.resolve('.storybook/ui/layout.js'),
-      'custom-controls': path.resolve('.storybook/ui/controls.js'),
-      'theme.less': path.resolve('theme.less')
+      'custom-controls': path.resolve('.storybook/ui/controls.js')
     },
     modulesDirectories: ['node_modules', 'react', 'wip_modules', '.storybook/components']
   },

@@ -1,7 +1,7 @@
 import styles from './HeartIcon.less';
 
-import svgMarkup from '!!raw!svgo!./HeartIcon.svg';
-import svgMarkupFilled from '!!raw!svgo!./HeartIconFilled.svg';
+import svgMarkup from './HeartIcon.svg';
+import svgMarkupFilled from './HeartIconFilled.svg';
 
 import React, { Component, PropTypes } from 'react';
 

@@ -1,7 +1,7 @@
 import styles from './StarIcon.less';
 
-import svgMarkup from '!!raw!svgo!./StarIcon.svg';
-import svgMarkupFilled from '!!raw!svgo!./StarIconFilled.svg';
+import svgMarkup from './StarIcon.svg';
+import svgMarkupFilled from './StarIconFilled.svg';
 
 import React, { Component, PropTypes } from 'react';
 
