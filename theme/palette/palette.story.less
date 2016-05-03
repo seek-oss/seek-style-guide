@@ -15,6 +15,12 @@
   justify-content: space-between;
   height: 90px;
   width: 220px;
+  cursor: pointer;
+  transition: transform .2s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 
   &:not(:last-of-type) {
     border-bottom: 3px solid @sk-white;
