@@ -1,6 +1,6 @@
 {
   "name": "seek-style-guide",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Living style guide containing the building blocks and design principles for SEEK web apps",
   "private": true,
   "main": "index.js",
