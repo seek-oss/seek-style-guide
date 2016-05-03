@@ -1,4 +1,4 @@
-import svgMarkup from '!!raw!svgo!./CloseIcon.svg';
+import svgMarkup from './CloseIcon.svg';
 
 import React, { Component, PropTypes } from 'react';
 

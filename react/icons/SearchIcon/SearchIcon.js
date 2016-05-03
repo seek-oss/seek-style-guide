@@ -1,4 +1,4 @@
-import svgMarkup from '!!raw!svgo!./SearchIcon.svg';
+import svgMarkup from './SearchIcon.svg';
 
 import React, { Component, PropTypes } from 'react';
 

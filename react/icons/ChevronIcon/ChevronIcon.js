@@ -1,4 +1,4 @@
-import svgMarkup from '!!raw!svgo!./ChevronIcon.svg';
+import svgMarkup from './ChevronIcon.svg';
 import styles from './ChevronIcon.less';
 
 import React, { Component, PropTypes } from 'react';

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import logo from '!!raw!svgo!./logo.svg';
+import logo from './logo.svg';
 import { version } from 'json!../../package.json';
 
 export default class StorybookControls extends Component {

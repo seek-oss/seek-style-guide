@@ -1,7 +1,7 @@
 import styles from './ErrorIcon.less';
 
-import svgMarkup from '!!raw!svgo!./ErrorIcon.svg';
-import svgMarkupFilled from '!!raw!svgo!./ErrorIconFilled.svg';
+import svgMarkup from './ErrorIcon.svg';
+import svgMarkupFilled from './ErrorIconFilled.svg';
 
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
