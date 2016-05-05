@@ -60,10 +60,13 @@
     "json-loader": "0.5.4",
     "jsx-to-string": "0.2.11",
     "less-vars-to-js": "1.1.1",
+    "lodash.debounce": "4.0.6",
     "react": "15.0.2",
+    "react-addons-pure-render-mixin": "15.0.2",
     "react-baseline": "0.2.1",
     "react-copy-to-clipboard": "4.1.0",
     "react-dom": "15.0.2",
+    "react-prism": "3.2.0",
     "webpack": "1.13.0",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.10.0"

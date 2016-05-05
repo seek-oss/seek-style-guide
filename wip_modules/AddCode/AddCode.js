@@ -1,7 +1,9 @@
 import styles from './AddCode.less';
 
 import React, { Children, Component, PropTypes } from 'react';
+import debounce from 'lodash.debounce';
 import jsxToString from 'jsx-to-string';
+import { PrismCode } from 'react-prism'
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 // Hack. Please show me a better way :)
@@ -25,6 +27,10 @@ export default class AddCode extends Component {
       copiedToClipboard: false
     };
 
+    this.debouncedResetCopiedToClipboard =
+      debounce(this.resetCopiedToClipboard, 5000);
+
+    this.resetCopiedToClipboard = this.resetCopiedToClipboard.bind(this);
     this.toggleCodeVisibility = this.toggleCodeVisibility.bind(this);
     this.copiedToClipboard = this.copiedToClipboard.bind(this);
   }
@@ -37,16 +43,16 @@ export default class AddCode extends Component {
     });
   }
 
+  resetCopiedToClipboard() {
+    this.setState({
+      copiedToClipboard: false
+    });
+  }
+
   copiedToClipboard() {
     this.setState({
       copiedToClipboard: true
-    }, () => {
-      setTimeout(() => {
-        this.setState({
-          copiedToClipboard: false
-        });
-      }, 5000);
-    });
+    }, this.debouncedResetCopiedToClipboard);
   }
 
   render() {
@@ -61,20 +67,23 @@ export default class AddCode extends Component {
           <button className={styles.showHideButton} onClick={this.toggleCodeVisibility}>
             {isCodeVisible ? 'Hide code' : 'Show code'}
           </button>
-          {
-            isCodeVisible &&
-              <CopyToClipboard text={code} onCopy={this.copiedToClipboard}>
-                <button className={styles.copyToClipboardButton} disabled={copiedToClipboard}>
-                  {copiedToClipboard ? 'Copied!' : 'Copy to clipboard'}
-                </button>
-              </CopyToClipboard>
-          }
         </div>
         {
           isCodeVisible &&
-            <pre className={styles.code}>
-              {code}
-            </pre>
+            <CopyToClipboard text={code} onCopy={this.copiedToClipboard}>
+              <div className={styles.code} onMouseLeave={this.resetCopiedToClipboard}>
+                <pre>
+                  <PrismCode className="language-jsx">
+                    <code>
+                      {code}
+                    </code>
+                  </PrismCode>
+                </pre>
+                <span className={styles.message}>
+                  {copiedToClipboard ? 'Copied!' : 'Click to copy'}
+                </span>
+              </div>
+            </CopyToClipboard>
         }
       </div>
     );
