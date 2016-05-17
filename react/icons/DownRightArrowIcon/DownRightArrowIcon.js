@@ -6,6 +6,8 @@ import classnames from 'classnames';
 
 export default class DownRightArrowIcon extends Component {
 
+  static displayName = 'DownRightArrowIcon';
+
   static propTypes = {
     className: PropTypes.string,
     svgClassName: PropTypes.string
@@ -26,7 +28,7 @@ export default class DownRightArrowIcon extends Component {
     };
 
     return (
-      <span {...combinedProps} dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} />
+      <span {...combinedProps} dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} /> // eslint-disable-line react/no-danger
     );
   }
 

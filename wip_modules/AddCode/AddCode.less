@@ -11,15 +11,16 @@
 }
 
 .showHideButton {
+  height: (@grid-row-height * 3);
   width: 80px;
 }
 
 .message {
+  .standardText(@small-type-scale);
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: .3em .5em;
-  font-size: .7em;
+  padding: @grid-row-height .5em;
   cursor: pointer;
   opacity: 0;
 
@@ -29,8 +30,9 @@
 }
 
 .code {
+  .rawText(@standard-type-scale);
   position: relative;
-  font-size: 1.6em;
+  min-width: (@grid-gutter-width * 15);
 
   :global {
     /*
@@ -61,7 +63,7 @@
       border-left: 3px solid @sk-blue;
       background-color: #fdfdfd;
       overflow: visible;
-      padding: .5em 2em .5em 0;
+      padding: (@grid-row-height * 2) 2em (@grid-row-height * 2) 0;
     }
 
     code[class*="language"] {

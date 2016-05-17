@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 
 const isProduction = () => process.env.NODE_ENV === 'production';
 
@@ -7,6 +6,10 @@ const styleGuidePaths = [
   path.resolve(__dirname, '../react'),
   path.resolve(__dirname, '../theme')
 ];
+
+const resolveAliases = {
+  'seek-style-guide': path.resolve(__dirname, '..')
+};
 
 const POSTCSS_STYLE_GUIDE_PACK = 'seek-style-guide';
 const POSTCSS_DEFAULT_PACK = 'default';
@@ -30,13 +33,14 @@ const decoratePostCss = config => {
   // Setup postcss-loader plugin packs
   // (https://github.com/postcss/postcss-loader#plugins-packs)
   const postcssPlugins = [
-    require('autoprefixer'),
-    require('postcss-local-scope')
+    require('autoprefixer')
   ];
 
   if (config.postcss) {
     // Keep a reference to the consumer's PostCSS plugins
-    const defaultPostcssPlugins = config.postcss;
+    const defaultPostcssPlugins = typeof config.postcss === 'function' ?
+      config.postcss() :
+      config.postcss;
 
     // Name existing config the "default" plugin pack
     config.postcss = () => ({
@@ -72,19 +76,14 @@ const getCommonLoaders = () => ([
     test: /\.js$/,
     include: styleGuidePaths,
     loader: require.resolve('babel-loader'),
-    query: (() => {
-      const babelRcPath = path.resolve(__dirname, '../.babelrc');
-      const babelRc = fs.readFileSync(babelRcPath, 'utf-8');
-      const query = JSON.parse(babelRc);
-
-      // Disable HMR for consumers
-      delete query.env;
-
-      // Ignore babelrc contents when consuming package
-      query.babelrc = false;
-
-      return query;
-    }())
+    query: {
+      babelrc: false,
+      presets: ['es2015', 'react'],
+      plugins: [
+        'transform-class-properties',
+        'transform-object-rest-spread'
+      ]
+    }
   },
   {
     test: /\.svg$/,
@@ -106,6 +105,21 @@ const decorateConfig = (config, loaders) => {
     .concat(loaders)
     .concat(config.module.loaders);
 
+  // Add resolve aliases
+  const consumerAliases =
+    (config.resolve && config.resolve.alias) ? config.resolve.alias : {};
+
+  for (var alias in resolveAliases) {
+    if (consumerAliases[alias] && consumerAliases[alias] !== resolveAliases[alias]) {
+      throw new Error(`Resolve alias '${alias}' is reserved. Please rename it.\n`)
+    } else {
+      consumerAliases[alias] = resolveAliases[alias];
+    }
+  }
+
+  config.resolve = config.resolve || {};
+  config.resolve.alias = consumerAliases;
+
   return config;
 };
 
@@ -114,7 +128,7 @@ const decorateServerConfig = config => decorateConfig(config, [
     test: /\.less$/,
     include: styleGuidePaths,
     loaders: [
-      `${require.resolve('css-loader/locals')}?localIdentName=${getLocalIdentName()}`,
+      `${require.resolve('css-loader/locals')}?modules&localIdentName=${getLocalIdentName()}`,
       `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
       require.resolve('less-loader')
     ]
@@ -123,14 +137,16 @@ const decorateServerConfig = config => decorateConfig(config, [
 
 const decorateClientConfig = (config, options) => {
   const extractTextPlugin = options && options.extractTextPlugin;
-  const decorateStyleLoaders = extractTextPlugin ? extractTextPlugin.extract.bind(null, 'style') : (x => x);
+  const decorateStyleLoaders = extractTextPlugin ?
+    extractTextPlugin.extract.bind(null, 'style') :
+    loaders => `${require.resolve('style-loader')}!${loaders}`;
 
   return decorateConfig(config, [
     {
       test: /\.less$/,
       include: styleGuidePaths,
       loader: decorateStyleLoaders([
-        `${require.resolve('css-loader')}?${isProduction() ? 'minimize&' : ''}localIdentName=${getLocalIdentName()}`,
+        `${require.resolve('css-loader')}?modules&${isProduction() ? 'minimize&' : ''}localIdentName=${getLocalIdentName()}`,
         `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
         `${require.resolve('less-loader')}`
       ].join('!'))

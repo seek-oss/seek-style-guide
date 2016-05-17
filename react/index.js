@@ -1,3 +1,4 @@
+import SeekApp from './SeekApp/SeekApp';
 import ChevronIcon from './icons/ChevronIcon/ChevronIcon';
 import DownRightArrowIcon from './icons/DownRightArrowIcon/DownRightArrowIcon';
 import ClearIcon from './icons/ClearIcon/ClearIcon';
@@ -15,6 +16,7 @@ import TextField from './fields/TextField/TextField';
 import EmailField from './fields/EmailField/EmailField';
 
 export {
+  SeekApp,
   ChevronIcon,
   DownRightArrowIcon,
   ClearIcon,

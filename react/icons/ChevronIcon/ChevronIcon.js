@@ -5,6 +5,8 @@ import React, { Component, PropTypes } from 'react';
 
 export default class ChevronIcon extends Component {
 
+  static displayName = 'ChevronIcon';
+
   static propTypes = {
     svgClassName: PropTypes.string,
     direction: React.PropTypes.oneOf([
@@ -27,7 +29,7 @@ export default class ChevronIcon extends Component {
       className: `${styles.rotate}${styles[direction] ? ` ${styles[direction]}` : ''}${className ? ` ${className}` : ''}`
     };
 
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...combinedProps } />;
+    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...combinedProps } />; // eslint-disable-line react/no-danger
   }
 
 }

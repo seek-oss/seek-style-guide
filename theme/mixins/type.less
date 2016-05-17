@@ -5,30 +5,34 @@
 
 .heroText() {
   .basekick(@hero-type-scale, @hero-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
-};
+}
 
 .headlineText() {
   .basekick(@headline-type-scale, @headline-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
-};
+}
 
 .headingText() {
   .basekick(@heading-type-scale, @heading-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
-};
+}
 
 .subheadingText() {
   .basekick(@subheading-type-scale, @subheading-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
-};
+}
 
 .standardText(@font-scale: @standard-type-scale) {
   .basekick(@font-scale, @standard-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
-};
+}
 
 .smallText() {
   .basekick(@small-type-scale, @small-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
-};
+}
+
+.rawText(@font-scale: @standard-type-scale, @row-span: @standard-type-row-span) {
+  font-size: unit((@font-scale * @base-font-size), px);
+  line-height: (@grid-row-height * @row-span);
+  min-height: (@grid-row-height * @row-span);
+}
 
 .touchableText(@font-scale: @interaction-type-scale) {
-  font-size: unit(@font-scale, rem);
-  line-height: (@grid-row-height * @interaction-type-row-span);
-  height: (@grid-row-height * @interaction-type-row-span);
-};
+  .rawText(@font-scale, @interaction-type-row-span);
+}

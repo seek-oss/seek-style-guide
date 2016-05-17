@@ -1,0 +1,41 @@
+@import (reference) "~seek-style-guide/theme";
+
+:global {
+  #app {
+    height: 100%;
+  }
+}
+
+.root {
+  display: flex;
+  height: 100%;
+}
+
+.navigationContainer {
+  border-right: 1px solid @sk-blue;
+}
+
+.headerLink {
+  text-decoration: none;
+}
+
+.headerLogo {
+  display: block;
+  height: (@grid-row-height * 11);
+  text-align: center;
+  background-color: @sk-blue;
+  padding: (@grid-row-height * 2) (@grid-gutter-width / 2);
+}
+
+.headerText {
+  @border-width: 3px;
+  .rawText(@standard-type-scale, 5);
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: @sk-blue;
+  font-weight: @sk-bold;
+  border-bottom: @border-width solid @sk-blue;
+  margin-bottom: (@grid-row-height * 2) - @border-width;
+}

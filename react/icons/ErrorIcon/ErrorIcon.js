@@ -4,9 +4,11 @@ import svgMarkup from './ErrorIcon.svg';
 import svgMarkupFilled from './ErrorIconFilled.svg';
 
 import React, { Component, PropTypes } from 'react';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 export default class ErrorIcon extends Component {
+
+  static displayName = 'ErrorIcon';
 
   static propTypes = {
     svgClassName: PropTypes.string,
@@ -34,8 +36,8 @@ export default class ErrorIcon extends Component {
 
     return (
       <span
-        className={classNames(styles.root, className)}
-        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
+        className={classnames(styles.root, className)}
+        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} // eslint-disable-line react/no-danger
         { ...props }
       />
     );

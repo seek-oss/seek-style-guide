@@ -1,0 +1,26 @@
+@import (reference) "~seek-style-guide/theme";
+
+.heading {
+  .headlineText();
+}
+
+.content {
+  margin-top: (@grid-row-height * 4);
+}
+
+.itemsContainer {
+  position: relative;
+}
+
+.item {
+  background-color: rgba(75, 179, 255, 0.35);
+  margin-bottom: (@grid-row-height * 3);
+}
+
+.heroItem       { .heroText();       }
+.headlineItem   { .headlineText();   }
+.headingItem    { .headingText();    }
+.subheadingItem { .subheadingText(); }
+.standardItem   { .standardText();   }
+.smallItem      { .smallText();      }
+.touchableItem  { .touchableText();  }
