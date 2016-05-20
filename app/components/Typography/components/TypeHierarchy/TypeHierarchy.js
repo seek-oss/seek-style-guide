@@ -2,6 +2,8 @@ import styles from './TypeHierarchy.less';
 
 import React from 'react';
 import Baseline from 'react-baseline';
+import Section from 'Section/Section';
+import Heading from 'Heading/Heading';
 
 const items = [
   'hero',
@@ -23,15 +25,13 @@ const renderItem = item => (
 
 export default function TypeHierarchy() {
   return (
-    <div>
-      <h1 className={styles.heading}>Type hierarchy</h1>
-      <div className={styles.content}>
-        <Baseline type="bar" color="rgba(255, 145, 145, 0.3)">
-          <div className={styles.itemsContainer}>
-            {items.map(renderItem)}
-          </div>
-        </Baseline>
-      </div>
-    </div>
+    <Section>
+      <Heading>Type hierarchy</Heading>
+      <Baseline type="bar" color="rgba(255, 145, 145, 0.3)">
+        <div className={styles.itemsContainer}>
+          {items.map(renderItem)}
+        </div>
+      </Baseline>
+    </Section>
   );
 }

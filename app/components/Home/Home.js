@@ -1,11 +1,8 @@
-import styles from './Home.less';
-
 import React from 'react';
+import Heading from 'Heading/Heading';
 
 export default function Home() {
   return (
-    <div>
-      <h1 className={styles.heading}>Welcome to SEEK Style Guide</h1>
-    </div>
+    <Heading>Welcome to SEEK Style Guide</Heading>
   );
 }

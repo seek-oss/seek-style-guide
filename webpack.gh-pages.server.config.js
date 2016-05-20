@@ -17,13 +17,12 @@ const appPaths = [
 
 const routes = [
   '/',
-  '/theme',
-  '/theme/color-palette',
-  '/theme/type-hierarchy',
-  '/theme/font-stack',
-  '/components',
-  '/components/BlueButton',
-  '/components/TextField'
+  '/typography',
+  '/colours',
+  '/grid',
+  '/icons',
+  '/buttons',
+  '/fields'
 ];
 
 const config = {

@@ -1,10 +1,11 @@
-import styles from './ColorPalette.less';
+import styles from './ColourPalette.less';
 
 import React from 'react';
 
 import CopyToClipboard from 'react-copy-to-clipboard';
 import lessToJs from 'less-vars-to-js';
 import blackOrWhite from 'black-or-white';
+import Heading from 'Heading/Heading';
 
 import accessible from '!!raw!seek-style-guide/theme/palette/accessible-variants.less';
 import brand from '!!raw!seek-style-guide/theme/palette/brand.less';
@@ -81,17 +82,15 @@ const getPalette = (name, palette) => (
   </div>
 );
 
-export default function ColorPalette() {
+export default function ColourPalette() {
   return (
     <div>
-      <h1 className={styles.heading}>Color Palette</h1>
-      <div className={styles.content}>
-        { getPalette('Brand', brandsJs) }
-        { getPalette('Accessible variants', accessiblesJs) }
-        { getPalette('Partner brands', partnersJs) }
-        { getPalette('Elements', elementsJs) }
-        { getPalette('Grays', graysJs) }
-      </div>
+      <Heading>Colour Palette</Heading>
+      { getPalette('Brand', brandsJs) }
+      { getPalette('Accessible variants', accessiblesJs) }
+      { getPalette('Partner brands', partnersJs) }
+      { getPalette('Elements', elementsJs) }
+      { getPalette('Grays', graysJs) }
     </div>
   );
 }

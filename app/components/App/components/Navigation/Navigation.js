@@ -8,23 +8,22 @@ export default function Navigation() {
     <nav className={styles.root}>
       <ul className={styles.list}>
         <li>
-          <NavLink className={styles.link} to="/theme">Theme</NavLink>
-          <nav>
-            <ul className={styles.list}>
-              <li><NavLink className={styles.link} to="/theme/color-palette">Color Palette</NavLink></li>
-              <li><NavLink className={styles.link} to="/theme/type-hierarchy">Type Hierarchy</NavLink></li>
-              <li><NavLink className={styles.link} to="/theme/font-stack">Font Stack</NavLink></li>
-            </ul>
-          </nav>
+          <NavLink className={styles.link} to="/typography">Typography</NavLink>
         </li>
         <li>
-          <NavLink className={styles.link} to="/components">Components</NavLink>
-          <nav>
-            <ul className={styles.list}>
-              <li><NavLink className={styles.link} to="/components/BlueButton">BlueButton</NavLink></li>
-              <li><NavLink className={styles.link} to="/components/TextField">TextField</NavLink></li>
-            </ul>
-          </nav>
+          <NavLink className={styles.link} to="/colours">Colour Palette</NavLink>
+        </li>
+        <li>
+          <NavLink className={styles.link} to="/grid">Grid</NavLink>
+        </li>
+        <li>
+          <NavLink className={styles.link} to="/icons">Icons</NavLink>
+        </li>
+        <li>
+          <NavLink className={styles.link} to="/buttons">Buttons</NavLink>
+        </li>
+        <li>
+          <NavLink className={styles.link} to="/fields">Fields</NavLink>
         </li>
       </ul>
     </nav>
