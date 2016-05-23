@@ -5,7 +5,6 @@ import { SeekApp } from 'seek-style-guide/react';
 import logo from './logo.svg';
 import NavLink from 'NavLink/NavLink';
 import Navigation from 'Navigation/Navigation';
-import Main from 'Main/Main';
 
 export default function App({ children }) {
   /* eslint-disable react/no-danger */
@@ -23,9 +22,9 @@ export default function App({ children }) {
           </header>
           <Navigation />
         </div>
-        <Main>
+        <main className={styles.mainContainer}>
           {children}
-        </Main>
+        </main>
       </div>
     </SeekApp>
   );
