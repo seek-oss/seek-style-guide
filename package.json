@@ -7,7 +7,11 @@
   "scripts": {
     "start": "node server",
     "lint": "eslint app react ./*.js",
-    "dist": "rm -rf dist/ && mkdir dist && NODE_ENV=production webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
+    "prebuild": "npm run lint",
+    "build": "rm -rf dist/ && mkdir dist && NODE_ENV=production webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
+    "preversion": "npm run build",
+    "postversion": "git push && git push --tags && npm run deploy",
+    "deploy": "gh-pages -d dist",
     "static": "opn http://localhost:1804 && superstatic dist --port 1804",
     "install-git-hooks": "./scripts/install-git-hooks"
   },
