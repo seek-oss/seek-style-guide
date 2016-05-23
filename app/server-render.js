@@ -3,6 +3,8 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext, createMemoryHistory } from 'react-router';
 import routes from './routes';
 
+const baseHref = process.env.BASE_HREF || '/';
+
 // Static site renderer
 export default ({ path, template }, callback) => {
   const history = createMemoryHistory(path);
@@ -12,6 +14,6 @@ export default ({ path, template }, callback) => {
       <RouterContext {...renderProps} />
     );
 
-    callback(null, template({ html }));
+    callback(null, template({ html, baseHref }));
   });
 };
