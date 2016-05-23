@@ -5,6 +5,8 @@ const seekEmailRegex = '^[a-zA-Z0-9_][a-zA-Z0-9!#$%&\'*+/=?_`{|}~\-]*(?:\.[a-zA-
 
 export default class EmailField extends Component {
 
+  static displayName = 'EmailField';
+
   static propTypes = {
     inputProps: PropTypes.object
   };

@@ -1,9 +1,11 @@
 import styles from './BlueButton.less';
 
 import React, { Component, PropTypes } from 'react';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 export default class BlueButton extends Component {
+
+  static displayName = 'BlueButton';
 
   static propTypes = {
     children: PropTypes.oneOfType([
@@ -24,7 +26,7 @@ export default class BlueButton extends Component {
 
     const combinedProps = {
       type: 'button',
-      className: classNames(styles.root, className, {
+      className: classnames(styles.root, className, {
         [styles.loading]: loading
       }),
       disabled: loading,

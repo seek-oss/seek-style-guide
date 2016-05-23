@@ -4,6 +4,8 @@ import React, { Component, PropTypes } from 'react';
 
 export default class ClearIcon extends Component {
 
+  static displayName = 'ClearIcon';
+
   static propTypes = {
     svgClassName: PropTypes.string
   };
@@ -16,7 +18,7 @@ export default class ClearIcon extends Component {
     const svgMarkupWithClassName = svgMarkup
       .replace('<svg ', `<svg class="${this.props.svgClassName}" `);
 
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...this.props } />;
+    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...this.props } />; // eslint-disable-line react/no-danger
   }
 
 }

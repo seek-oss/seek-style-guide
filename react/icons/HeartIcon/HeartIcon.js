@@ -7,6 +7,8 @@ import React, { Component, PropTypes } from 'react';
 
 export default class HeartIcon extends Component {
 
+  static displayName = 'HeartIcon';
+
   static propTypes = {
     svgClassName: PropTypes.string,
     className: PropTypes.string,
@@ -36,7 +38,7 @@ export default class HeartIcon extends Component {
       className: `${className}${filled ? ` ${styles.filled}` : ''}`
     };
 
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...combinedProps } />;
+    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...combinedProps } />; // eslint-disable-line react/no-danger
   }
 
 }

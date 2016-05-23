@@ -1,0 +1,45 @@
+@import (reference) "~seek-style-guide/theme";
+
+:global {
+  @import "./reset";
+
+  html {
+    background-color: @sk-background;
+    min-height: 100%;
+    overflow-y: auto;
+  }
+
+  body {
+    overflow-y: hidden;
+  }
+}
+
+.root {
+  font-family: @base-font-stack;
+  font-size: unit(@base-font-size, px);
+  background-color: @sk-background;
+  box-sizing: border-box;
+
+  :global {
+    *,
+    *:before,
+    *:after {
+      font-family: inherit;
+      box-sizing: inherit;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: transparent; /* For some Androids */
+    }
+
+    input {
+      margin: 0;
+    }
+
+    input[type=search]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.fullScreen {
+  height: 100%;
+}
