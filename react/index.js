@@ -12,6 +12,7 @@ import ErrorIcon from './icons/ErrorIcon/ErrorIcon';
 import TickIcon from './icons/TickIcon/TickIcon';
 import HelpIcon from './icons/HelpIcon/HelpIcon';
 import BlueButton from './buttons/BlueButton/BlueButton';
+import PinkButton from './buttons/PinkButton/PinkButton';
 import TextField from './fields/TextField/TextField';
 import EmailField from './fields/EmailField/EmailField';
 
@@ -30,6 +31,7 @@ export {
   TickIcon,
   HelpIcon,
   BlueButton,
+  PinkButton,
   TextField,
   EmailField
 };

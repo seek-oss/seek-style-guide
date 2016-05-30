@@ -78,6 +78,7 @@ import { HeartIcon, StarIcon } from 'seek-style-guide/react';
 
 ### Available Components
 - [BlueButton](./react/buttons/BlueButton)
+- [PinkButton](./react/buttons/PinkButton)
 - [EmailField](./react/fields/EmailField)
 - [TextField](./react/fields/TextField)
 - [ChevronIcon](./react/icons/ChevronIcon)
