@@ -27,12 +27,12 @@
   .basekick(@small-type-scale, @small-type-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
 }
 
-.rawText(@font-scale: @standard-type-scale, @row-span: @standard-type-row-span) {
+.rawText(@font-scale: @standard-type-scale) {
   font-size: unit((@font-scale * @base-font-size), px);
-  line-height: (@grid-row-height * @row-span);
-  min-height: (@grid-row-height * @row-span);
 }
 
 .touchableText(@font-scale: @interaction-type-scale) {
-  .rawText(@font-scale, @interaction-type-row-span);
+  .rawText(@font-scale);
+  line-height: (@grid-row-height * @interaction-type-row-span);
+  height: (@grid-row-height * @interaction-type-row-span);
 }
