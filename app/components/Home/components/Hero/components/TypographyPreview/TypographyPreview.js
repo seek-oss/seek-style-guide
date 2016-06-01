@@ -11,7 +11,7 @@ const sampleText = 'AaBbCc';
 
 export default function TypographyPreview() {
   return (
-    <div>
+    <div className={styles.root}>
       {items.map(item => (
         <p key={item} className={styles[`${item}Item`]}>
           <div className={styles.bold}>{ sampleText }</div>

@@ -6,17 +6,15 @@ import { Button } from 'seek-style-guide/react';
 
 export default function ButtonsPreview() {
   return (
-    <div>
+    <div className={styles.root}>
       <div className={styles.group}>
         <Button colour="pink">SEEK</Button>
         <Button colour="pink" className={buttonStyles.rootHover}>SEEK</Button>
-        <Button colour="pink" className={buttonStyles.rootFocus}>SEEK</Button>
         <Button colour="pink" className={buttonStyles.rootActive}>SEEK</Button>
       </div>
       <div className={styles.group}>
         <Button colour="blue">SEEK</Button>
         <Button colour="blue" className={buttonStyles.rootHover}>SEEK</Button>
-        <Button colour="blue" className={buttonStyles.rootFocus}>SEEK</Button>
         <Button colour="blue" className={buttonStyles.rootActive}>SEEK</Button>
       </div>
     </div>

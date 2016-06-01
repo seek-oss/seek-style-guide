@@ -1,5 +1,28 @@
 @import (reference) "~seek-style-guide/theme";
 
+.root {
+  cursor: pointer;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -(@grid-row-height * 2);
+    bottom: -(@grid-row-height * 2);
+    left: -(@grid-gutter-width * 1.5);
+    right: -(@grid-gutter-width * 1.5);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+}
+
+.root:hover:before {
+  opacity: 1;
+}
+
 .drop {
-  margin-bottom: @grid-row-height;
+  &:not(:last-child) {
+    margin-bottom: @grid-row-height;
+  }
 }
