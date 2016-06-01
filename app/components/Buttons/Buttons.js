@@ -5,12 +5,24 @@ import React, { Component } from 'react';
 import Baseline from 'react-baseline';
 import classnames from 'classnames';
 import { StickyContainer, Sticky } from 'react-sticky';
+import debounce from 'lodash.debounce';
+import jsxToString from 'jsx-to-string';
+import { PrismCode } from 'react-prism';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 import GridContainer from 'GridContainer/GridContainer';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
 
 import { Button } from 'seek-style-guide/react';
+
+// Hack. Please show me a better way :)
+const cssModulesClassNameRegex = /\b[\w-]+___\w+\b/g;
+
+function getCode(jsx) {
+  return jsxToString(jsx)
+    .replace(cssModulesClassNameRegex, '...');
+}
 
 const specs = {
   default: {
@@ -63,7 +75,8 @@ export default class Buttons extends Component {
       active: false,
       focus: false,
       loading: false,
-      baseline: false
+      baseline: false,
+      copiedToClipboard: false
     };
 
     this.toggleHover = this.toggleHover.bind(this);
@@ -71,6 +84,10 @@ export default class Buttons extends Component {
     this.toggleFocus = this.toggleFocus.bind(this);
     this.toggleLoading = this.toggleLoading.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
+
+    this.resetCopiedToClipboard = this.resetCopiedToClipboard.bind(this);
+    this.debouncedResetCopiedToClipboard = debounce(this.resetCopiedToClipboard, 5000);
+    this.copiedToClipboard = this.copiedToClipboard.bind(this);
   }
 
   toggleHover(event) {
@@ -103,8 +120,20 @@ export default class Buttons extends Component {
     });
   }
 
+  resetCopiedToClipboard() {
+    this.setState({
+      copiedToClipboard: false
+    });
+  }
+
+  copiedToClipboard() {
+    this.setState({
+      copiedToClipboard: true
+    }, this.debouncedResetCopiedToClipboard);
+  }
+
   render() {
-    const { hover, active, focus, loading, baseline } = this.state;
+    const { hover, active, focus, loading, baseline, copiedToClipboard } = this.state;
     const className = classnames({
       [buttonStyles.rootHover]: hover,
       [buttonStyles.rootActive]: active,
@@ -116,6 +145,12 @@ export default class Buttons extends Component {
       active,
       focus
     });
+    const button = (
+      <Button colour="pink" className={className} loading={loading} ref="button">
+        Button
+      </Button>
+    );
+    const code = getCode(button);
 
     return (
       <StickyContainer>
@@ -126,9 +161,7 @@ export default class Buttons extends Component {
                 <div className={styles.fixedContainerContent}>
                   <div className={styles.buttonContainer}>
                     <Baseline isVisible={baseline}>
-                      <Button colour="pink" className={className} loading={loading}>
-                        Button
-                      </Button>
+                      {button}
                     </Baseline>
                   </div>
 
@@ -180,6 +213,26 @@ export default class Buttons extends Component {
                     }
                   </tbody>
                 </table>
+              </div>
+            </Section>
+
+            <Section>
+              <HeadlineText>Code</HeadlineText>
+              <div className={styles.codeContainer}>
+                <CopyToClipboard text={code} onCopy={this.copiedToClipboard}>
+                  <div className={styles.code} onMouseLeave={this.resetCopiedToClipboard}>
+                    <pre>
+                      <PrismCode className="language-jsx">
+                        <code>
+                          {code}
+                        </code>
+                      </PrismCode>
+                    </pre>
+                    <span className={styles.message}>
+                      {copiedToClipboard ? 'Copied!' : 'Click to copy'}
+                    </span>
+                  </div>
+                </CopyToClipboard>
               </div>
             </Section>
           </GridContainer>
