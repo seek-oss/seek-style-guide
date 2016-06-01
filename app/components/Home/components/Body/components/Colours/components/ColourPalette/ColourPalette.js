@@ -29,34 +29,25 @@ const lookupValue = value => {
   return isVariable ? dictionary[value] : value;
 };
 
-const getAccessibleSwatchStyle = name => {
-  const color = dictionary[name];
-  const backgroundValue = `@sk-${name.split('-on-')[1]}`;
-  const backgroundColor = lookupValue(backgroundValue);
-
-  return { color, backgroundColor };
-};
-
-const getStandardSwatchStyle = name => {
+const getSwatchStyle = name => {
   const value = dictionary[name];
   const backgroundColor = lookupValue(value);
-  const color = blackOrWhite(backgroundColor);
+  const outline = blackOrWhite(backgroundColor, 10) === '#000' ? 'rgba(0,0,0,0.2)' : '';
 
-  return { color, backgroundColor };
+  return { outline, backgroundColor };
 };
 
-const isAccessible = name => /-on-/.test(name);
-
-const getSwatchStyle = name => isAccessible(name) ?
-  getAccessibleSwatchStyle(name) :
-  getStandardSwatchStyle(name);
-
 const getSwatch = name => {
-  const colour = getSwatchStyle(name).backgroundColor;
+  const { backgroundColor, outline } = getSwatchStyle(name);
 
   return (
     <div className={styles.swatch}>
-      <Droplet colour={colour} sizeInRows={7} />
+      <Droplet
+        colour={backgroundColor}
+        sizeInRows={7}
+        outline={!!outline}
+        outlineColour={outline}
+      />
     </div>
   );
 };
