@@ -2,29 +2,25 @@ import styles from './ColourPalette.less';
 
 import React from 'react';
 
-import CopyToClipboard from 'react-copy-to-clipboard';
 import lessToJs from 'less-vars-to-js';
 import blackOrWhite from 'black-or-white';
-import Heading from 'Heading/Heading';
+import Droplet from 'Droplet/Droplet';
 
-import accessible from '!!raw!seek-style-guide/theme/palette/accessible-variants.less';
 import brand from '!!raw!seek-style-guide/theme/palette/brand.less';
 import elements from '!!raw!seek-style-guide/theme/palette/elements.less';
-import grays from '!!raw!seek-style-guide/theme/palette/grays.less';
+import greys from '!!raw!seek-style-guide/theme/palette/grays.less';
 import partners from '!!raw!seek-style-guide/theme/palette/partners.less';
 
-const accessiblesJs = lessToJs(accessible);
 const brandsJs = lessToJs(brand);
 const elementsJs = lessToJs(elements);
-const graysJs = lessToJs(grays);
+const greysJs = lessToJs(greys);
 const partnersJs = lessToJs(partners);
 
 const dictionary = {
   ...brandsJs,
   ...partnersJs,
-  ...graysJs,
-  ...elementsJs,
-  ...accessiblesJs
+  ...greysJs,
+  ...elementsJs
 };
 
 const lookupValue = value => {
@@ -56,28 +52,20 @@ const getSwatchStyle = name => isAccessible(name) ?
   getStandardSwatchStyle(name);
 
 const getSwatch = name => {
-  const value = dictionary[name];
+  const colour = getSwatchStyle(name).backgroundColor;
 
   return (
-    <CopyToClipboard text={name} key={name}>
-      <div
-        className={styles.swatch}
-        style={getSwatchStyle(name)}
-        title={`Click to copy ${name}`}>
-        <span className={styles.swatchName}>{name.replace('@', '')}</span>
-        <span className={styles.swatchColour}>{value.replace('@', '')}</span>
-      </div>
-    </CopyToClipboard>
+    <div className={styles.swatch}>
+      <Droplet colour={colour} sizeInRows={7} />
+    </div>
   );
 };
 
 const getPalette = (name, palette) => (
   <div className={styles.palette}>
-    <h1 className={styles.name}>
-      {name}
-    </h1>
+    <div className={styles.paletteTitle}>{name}</div>
     <div className={styles.swatches}>
-      {Object.keys(palette).map(getSwatch)}
+      { Object.keys(palette).map(getSwatch) }
     </div>
   </div>
 );
@@ -85,12 +73,10 @@ const getPalette = (name, palette) => (
 export default function ColourPalette() {
   return (
     <div>
-      <Heading>Colour Palette</Heading>
-      { getPalette('Brand', brandsJs) }
-      { getPalette('Accessible variants', accessiblesJs) }
-      { getPalette('Partner brands', partnersJs) }
+      { getPalette('Greys', greysJs) }
       { getPalette('Elements', elementsJs) }
-      { getPalette('Grays', graysJs) }
+      { getPalette('Partners', partnersJs) }
+      { getPalette('Brand', brandsJs) }
     </div>
   );
 }

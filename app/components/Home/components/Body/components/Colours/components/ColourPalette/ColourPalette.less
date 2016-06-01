@@ -1,29 +1,27 @@
 @import (reference) "~seek-style-guide/theme";
 
 .palette {
-  float: left;
-  border: 1px solid @sk-mid-grey-light;
-  margin-right: (@grid-gutter-width / 2);
-  margin-bottom: (@grid-row-height * 2);
-  background-color: @sk-white;
+  margin-bottom: @grid-row-height * 3;
+  display: flex;
+}
+
+.paletteTitle {
+  .headingText();
+  width: @grid-gutter-width * 6;
+  flex-shrink: 0;
+}
+
+.swatches {
+  display: flex;
 }
 
 .swatch {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  height: 90px;
-  width: 220px;
-  cursor: pointer;
-  transition: transform .2s;
+  margin-right: @grid-gutter-width;
+}
 
-  &:hover {
-    transform: scale(1.03);
-  }
-
-  &:not(:last-of-type) {
-    border-bottom: 3px solid @sk-white;
-  }
+.description {
+  .headingText();
+  margin-bottom: @grid-row-height * 2;
 }
 
 .name {
