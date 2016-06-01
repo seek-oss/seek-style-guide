@@ -2,8 +2,12 @@
 
 import React from 'react';
 
+import GridContainer from 'GridContainer/GridContainer';
+
 export default function Preface() {
   return (
-    <div>Preface</div>
+    <GridContainer>
+      Preface
+    </GridContainer>
   );
 }
