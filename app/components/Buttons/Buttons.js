@@ -1,4 +1,7 @@
+import styles from './Buttons.less';
+
 import React, { Component } from 'react';
+import Baseline from 'react-baseline';
 import classnames from 'classnames';
 
 import Heading from 'Heading/Heading';
@@ -55,13 +58,15 @@ export default class Buttons extends Component {
       hover: false,
       active: false,
       focus: false,
-      loading: false
+      loading: false,
+      baseline: false
     };
 
     this.toggleHover = this.toggleHover.bind(this);
     this.toggleActive = this.toggleActive.bind(this);
     this.toggleFocus = this.toggleFocus.bind(this);
     this.toggleLoading = this.toggleLoading.bind(this);
+    this.toggleBaseline = this.toggleBaseline.bind(this);
   }
 
   toggleHover(event) {
@@ -88,8 +93,14 @@ export default class Buttons extends Component {
     });
   }
 
+  toggleBaseline(event) {
+    this.setState({
+      baseline: event.target.checked
+    });
+  }
+
   render() {
-    const { hover, active, focus, loading } = this.state;
+    const { hover, active, focus, loading, baseline } = this.state;
     const className = classnames({
       [pinkButtonStyles.rootHover]: hover,
       [pinkButtonStyles.rootActive]: active,
@@ -127,11 +138,20 @@ export default class Buttons extends Component {
               <input type="checkbox" checked={loading} onChange={this.toggleLoading} /> loading
             </label>
           </p>
+          <p>
+            <label>
+              <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
+            </label>
+          </p>
         </div>
 
-        <PinkButton className={className} loading={loading}>
-          Button
-        </PinkButton>
+        <div className={styles.buttonContainer}>
+          <Baseline isVisible={baseline}>
+            <PinkButton className={className} loading={loading}>
+              Button
+            </PinkButton>
+          </Baseline>
+        </div>
 
         <div>
           <table>

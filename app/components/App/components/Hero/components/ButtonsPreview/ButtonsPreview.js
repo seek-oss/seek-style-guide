@@ -5,6 +5,7 @@ import blueButtonStyles from 'seek-style-guide/react/buttons/BlueButton/BlueButt
 import React from 'react';
 import { PinkButton, BlueButton } from 'seek-style-guide/react';
 
+/*
 const getSwatch = name => {
   const value = brandValues[name];
 
@@ -18,6 +19,7 @@ const getSwatch = name => {
     </div>
   );
 };
+*/
 
 export default function ButtonsPreview() {
   return (
