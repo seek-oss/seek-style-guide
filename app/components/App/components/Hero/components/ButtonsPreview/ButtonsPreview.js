@@ -1,40 +1,23 @@
 import styles from './ButtonsPreview.less';
-import pinkButtonStyles from 'seek-style-guide/react/buttons/PinkButton/PinkButton.less';
-import blueButtonStyles from 'seek-style-guide/react/buttons/BlueButton/BlueButton.less';
+import buttonStyles from 'seek-style-guide/react/Button/Button.less';
 
 import React from 'react';
-import { PinkButton, BlueButton } from 'seek-style-guide/react';
-
-/*
-const getSwatch = name => {
-  const value = brandValues[name];
-
-  return (
-    <div className={styles.drop} key={name}>
-      <Droplet
-        colour={value}
-        sizeInRows={5}
-        showHex={true}
-      />
-    </div>
-  );
-};
-*/
+import { Button } from 'seek-style-guide/react';
 
 export default function ButtonsPreview() {
   return (
     <div>
       <div className={styles.group}>
-        <PinkButton>SEEK</PinkButton>
-        <PinkButton className={pinkButtonStyles.rootHover}>SEEK</PinkButton>
-        <PinkButton className={pinkButtonStyles.rootFocus}>SEEK</PinkButton>
-        <PinkButton className={pinkButtonStyles.rootActive}>SEEK</PinkButton>
+        <Button colour="pink">SEEK</Button>
+        <Button colour="pink" className={buttonStyles.rootHover}>SEEK</Button>
+        <Button colour="pink" className={buttonStyles.rootFocus}>SEEK</Button>
+        <Button colour="pink" className={buttonStyles.rootActive}>SEEK</Button>
       </div>
       <div className={styles.group}>
-        <BlueButton>SEEK</BlueButton>
-        <BlueButton className={blueButtonStyles.rootHover}>SEEK</BlueButton>
-        <BlueButton className={blueButtonStyles.rootFocus}>SEEK</BlueButton>
-        <BlueButton className={blueButtonStyles.rootActive}>SEEK</BlueButton>
+        <Button colour="blue">SEEK</Button>
+        <Button colour="blue" className={buttonStyles.rootHover}>SEEK</Button>
+        <Button colour="blue" className={buttonStyles.rootFocus}>SEEK</Button>
+        <Button colour="blue" className={buttonStyles.rootActive}>SEEK</Button>
       </div>
     </div>
   );

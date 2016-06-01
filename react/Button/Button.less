@@ -1,31 +1,45 @@
 @import (reference) "~seek-style-guide/theme";
 
+.buttonColor(@colour) {
+  background-color: @colour;
+  &:hover,
+  &.rootHover {
+    background-color: lighten(@colour, 5%);
+  }
+  &:active,
+  &.rootActive {
+    background-color: darken(@colour, 5%);
+  }
+}
+
 .root {
   .touchableText();
   text-align: center;
   padding: 0 @grid-gutter-width;
-  background-color: @sk-pink;
   color: @sk-white;
   box-shadow: 0 1px fade(@sk-black, 70%);
   border: 0;
   border-radius: 2px;
   transition: background-color 0.2s, transform .2s cubic-bezier(0.020, 1.505, 0.745, 1.235);
   cursor: pointer;
+  &:active,
+  &.rootActive {
+    box-shadow: none;
+    outline: none;
+    transform: scale(0.95);
+  }
+  &:focus,
+  &.rootFocus {
+    .focus();
+  }
 }
 
-.root:hover, .rootHover {
-  background-color: lighten(@sk-pink, 5%);
+.root_isPink {
+  .buttonColor(@sk-pink);
 }
 
-.root:active, .rootActive {
-  background-color: darken(@sk-pink, 5%);
-  box-shadow: none;
-  outline: none;
-  transform: scale(0.95);
-}
-
-.root:focus, .rootFocus {
-  .focus();
+.root_isBlue {
+  .buttonColor(@sk-highlight);
 }
 
 .loading {

@@ -1,13 +1,16 @@
-import styles from './BlueButton.less';
+import styles from './Button.less';
 
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-export default class BlueButton extends Component {
+export default class Button extends Component {
 
-  static displayName = 'BlueButton';
+  static displayName = 'Button';
 
   static propTypes = {
+    colour: PropTypes.oneOf([
+      'pink', 'blue'
+    ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node
@@ -22,12 +25,14 @@ export default class BlueButton extends Component {
   };
 
   render() {
-    const { className, loading, children, ...props } = this.props;
+    const { colour, className, loading, children, ...props } = this.props;
 
     const combinedProps = {
       type: 'button',
       className: classnames(styles.root, className, {
-        [styles.loading]: loading
+        [styles.loading]: loading,
+        [styles.root_isPink]: colour === 'pink',
+        [styles.root_isBlue]: colour === 'blue'
       }),
       disabled: loading,
       ...props
