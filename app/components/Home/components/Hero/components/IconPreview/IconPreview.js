@@ -16,7 +16,7 @@ import {
 
 export default function IconPreview() {
   return (
-    <div className={styles.root}>
+    <a className={styles.root} href="#Iconography">
       <HeartIcon svgClassName={styles.icon} />
       <ProfileIcon svgClassName={styles.icon} />
       <TickIcon svgClassName={styles.icon} />
@@ -27,6 +27,6 @@ export default function IconPreview() {
       <CloseIcon svgClassName={styles.icon} />
       <ErrorIcon svgClassName={styles.icon} />
       <HelpIcon svgClassName={styles.icon} />
-    </div>
+    </a>
   );
 }

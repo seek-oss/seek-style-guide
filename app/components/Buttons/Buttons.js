@@ -156,7 +156,7 @@ export default class Buttons extends Component {
 
     return (
       <StickyContainer>
-        <div className={styles.root}>
+        <div>
           <Sticky className={styles.sticky}>
             <div className={styles.fixedContainer}>
               <GridContainer>

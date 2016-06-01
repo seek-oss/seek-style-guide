@@ -46,7 +46,8 @@ const renderDemo = () => (
 
 const renderIntro = () => (
   <GridContainer>
-    <HeroText>Iconography</HeroText>
+    <a name="Iconography" />
+    <h1><HeroText>Iconography</HeroText></h1>
     <SubheadingText>An icon is a pictogram illustration that is used in many digital environments to attract users to important content and to help remind them how to re-find content when they return to that page. It needs to be simple and meaningful in that it truly communicates something of the subject it represents.</SubheadingText>
   </GridContainer>
 );

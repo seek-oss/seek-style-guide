@@ -23,8 +23,8 @@ const getSwatch = name => {
 
 export default function ColourPreview() {
   return (
-    <div className={styles.root}>
+    <a className={styles.root} href="#Colours">
       {Object.keys(brandValues).map(getSwatch)}
-    </div>
+    </a>
   );
 }

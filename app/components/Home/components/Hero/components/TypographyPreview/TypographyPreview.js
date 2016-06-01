@@ -11,13 +11,13 @@ const sampleText = 'AaBbCc';
 
 export default function TypographyPreview() {
   return (
-    <div className={styles.root}>
+    <a className={styles.root} href="#Typography">
       {items.map(item => (
-        <p key={item} className={styles[`${item}Item`]}>
-          <div className={styles.bold}>{ sampleText }</div>
-          <div>{ sampleText }</div>
-        </p>
+        <div key={item} className={styles[`${item}Item`]}>
+          <p className={styles.bold}>{ sampleText }</p>
+          <p>{ sampleText }</p>
+        </div>
       ))}
-    </div>
+    </a>
   );
 }
