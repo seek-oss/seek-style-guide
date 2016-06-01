@@ -12,7 +12,12 @@ import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
-import { Button } from 'seek-style-guide/react';
+import { Button, HeartIcon, StarIcon } from 'seek-style-guide/react';
+
+const icons = {
+  HeartIcon,
+  StarIcon
+};
 
 const loremIpsum = 'Lorem ipsum dolor sit amet, an sit quas justo, lucilius pericula no sit. In tota meis maiestatis eos, quem quod noluisse sea ea, ei pri dicta adolescens. Ad suas purto volutpat cum. Mea id tota paulo efficiantur. Ius in nisl dicam delenit. In sit summo contentiones consectetuer. His id velit vivendum patrioque, id qui delenit tincidunt posidonium.';
 
@@ -77,6 +82,7 @@ export default class Buttons extends Component {
 
     this.state = {
       color: 'pink',
+      icon: '',
       hover: false,
       active: false,
       focus: false,
@@ -85,6 +91,7 @@ export default class Buttons extends Component {
     };
 
     this.setColor = this.setColor.bind(this);
+    this.setIcon = this.setIcon.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
     this.toggleActive = this.toggleActive.bind(this);
     this.toggleFocus = this.toggleFocus.bind(this);
@@ -95,6 +102,12 @@ export default class Buttons extends Component {
   setColor(event) {
     this.setState({
       color: event.target.value
+    });
+  }
+
+  setIcon(event) {
+    this.setState({
+      icon: event.target.value
     });
   }
 
@@ -129,7 +142,7 @@ export default class Buttons extends Component {
   }
 
   render() {
-    const { color, hover, active, focus, loading, baseline } = this.state;
+    const { color, icon, hover, active, focus, loading, baseline } = this.state;
     const isPink = (color === 'pink');
     const isBlue = (color === 'blue');
     const className = classnames({
@@ -148,8 +161,12 @@ export default class Buttons extends Component {
       pinkActive: isPink && active,
       blueActive: isBlue && active
     });
-    const button = (
-      <Button colour={color} className={className} loading={loading} ref="button">
+    const iconComponent = icon ?
+      React.createElement(icons[icon], { filled: true, svgClassName: styles.iconSvg }) :
+      null;
+    const buttonComponent = (
+      <Button colour={color} className={className} loading={loading}>
+        {iconComponent}
         Click here
       </Button>
     );
@@ -163,7 +180,7 @@ export default class Buttons extends Component {
                 <div className={styles.fixedContainerContent}>
                   <div className={styles.buttonContainer}>
                     <Baseline isVisible={baseline}>
-                      {button}
+                      {buttonComponent}
                     </Baseline>
                   </div>
 
@@ -174,6 +191,16 @@ export default class Buttons extends Component {
                       </label>
                       <label>
                         <input type="radio" value="blue" name="button-color" checked={isBlue} onChange={this.setColor} /> blue
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        Icon:
+                        <select onChange={this.setIcon}>
+                          <option value="">None</option>
+                          <option value="HeartIcon">Heart</option>
+                          <option value="StarIcon">Star</option>
+                        </select>
                       </label>
                     </p>
                     <p>
@@ -215,7 +242,7 @@ export default class Buttons extends Component {
 
             <Section className={styles.section}>
               <HeadlineText>Code</HeadlineText>
-              <Code jsx={button} />
+              <Code jsx={buttonComponent} />
             </Section>
           </GridContainer>
 
