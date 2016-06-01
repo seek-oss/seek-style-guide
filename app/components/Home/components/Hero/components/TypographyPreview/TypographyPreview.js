@@ -4,19 +4,19 @@ import React from 'react';
 
 const items = [
   'hero',
-  'headline',
-  'heading',
-  'subheading',
-  'standard',
-  'small',
-  'touchable'
+  'headline'
 ];
+
+const sampleText = 'AaBbCc';
 
 export default function TypographyPreview() {
   return (
     <div>
       {items.map(item => (
-        <p className={styles[`${item}Item`]} key={item}>Aa</p>
+        <p key={item} className={styles[`${item}Item`]}>
+          <div className={styles.bold}>{ sampleText }</div>
+          <div>{ sampleText }</div>
+        </p>
       ))}
     </div>
   );

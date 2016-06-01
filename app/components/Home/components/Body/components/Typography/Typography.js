@@ -13,6 +13,7 @@ const renderDemo = () => (
     <GridContainer>
       <TypeSample mixin="heroText" description="Hero text" />
       <TypeSample mixin="headlineText" description="Headline text" />
+      <TypeSample mixin="headingText" description="Heading text" />
       <TypeSample mixin="subheadingText" description="Subheading text" />
       <TypeSample mixin="standardText" description="Standard text" />
       <TypeSample mixin="smallText" description="Small text" />
