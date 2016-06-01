@@ -3,42 +3,30 @@ import styles from './StarIcon.less';
 import svgMarkup from './StarIcon.svg';
 import svgMarkupFilled from './StarIconFilled.svg';
 
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
+import classnames from 'classnames';
+import Icon from '../icon';
 
-export default class StarIcon extends Component {
+export default function StarIcon({ filled, className, ...props }) {
+  const markup = filled ? svgMarkupFilled : svgMarkup;
 
-  static displayName = 'StarIcon';
-
-  static propTypes = {
-    svgClassName: PropTypes.string,
-    className: PropTypes.string,
-    filled: PropTypes.bool
+  const combinedProps = {
+    ...props,
+    className: classnames({
+      [styles.filled]: filled,
+      [className]: className
+    })
   };
 
-  static defaultProps = {
-    svgClassName: '',
-    className: '',
-    filled: false
-  };
-
-  getSvg() {
-    const { filled } = this.props;
-
-    return filled ? svgMarkupFilled : svgMarkup;
-  }
-
-  render() {
-    const { svgClassName, className, filled } = this.props;
-
-    const svgMarkupWithClassName = this.getSvg()
-      .replace('<svg ', `<svg class="${svgClassName}" `);
-
-    const combinedProps = {
-      ...this.props,
-      className: `${className}${filled ? ` ${styles.filled}` : ''}`
-    };
-
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...combinedProps } />; // eslint-disable-line react/no-danger
-  }
-
+  return <Icon markup={markup} { ...combinedProps } />;
 }
+
+StarIcon.propTypes = {
+  filled: PropTypes.bool,
+  className: PropTypes.string
+};
+
+StarIcon.defaultProps = {
+  filled: false,
+  className: ''
+};

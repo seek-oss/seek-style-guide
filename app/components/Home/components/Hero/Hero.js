@@ -7,6 +7,7 @@ import ColourPreview from 'ColourPreview/ColourPreview';
 import ButtonsPreview from 'ButtonsPreview/ButtonsPreview';
 import TypographyPreview from 'TypographyPreview/TypographyPreview';
 import TextFieldPreview from 'TextFieldPreview/TextFieldPreview';
+import IconPreview from 'IconPreview/IconPreview';
 
 export default function Hero() {
   return (
@@ -17,6 +18,7 @@ export default function Hero() {
           <ButtonsPreview />
           <TypographyPreview />
           <TextFieldPreview />
+          <IconPreview />
         </div>
       </GridContainer>
     </div>
