@@ -18,18 +18,16 @@ const renderDemo = () => (
 
 const renderIntro = () => (
   <GridContainer>
-    <Section>
-      <HeroText>Colours</HeroText>
-      <SubheadingText>The Seek experience should have the same colour scheme and visual &lsquo;weight&rsquo; whichever device it is viewed on. This is made up of content on white, highlighting such as primary call to action in pink and use of the light and dark grey to provide accent and balance. All colour combinations should be tested for AA accessibility.</SubheadingText>
-    </Section>
+    <HeroText>Colours</HeroText>
+    <SubheadingText>The Seek experience should have the same colour scheme and visual &lsquo;weight&rsquo; whichever device it is viewed on. This is made up of content on white, highlighting such as primary call to action in pink and use of the light and dark grey to provide accent and balance. All colour combinations should be tested for AA accessibility.</SubheadingText>
   </GridContainer>
 );
 
 export default function Colours() {
   return (
-    <div>
+    <Section>
       { renderIntro() }
       { renderDemo() }
-    </div>
+    </Section>
   );
 }
