@@ -7,7 +7,12 @@
 
 .paletteTitle {
   .headingText();
+  line-height: @grid-row-height * 7;
+  transform: none; // reset basekick adjustment
+  text-align: right;
   width: @grid-gutter-width * 6;
+  padding-right: @grid-gutter-width * 1.5;
+  color: @sk-mid-grey-dark;
   flex-shrink: 0;
 }
 
