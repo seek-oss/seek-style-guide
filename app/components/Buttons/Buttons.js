@@ -24,12 +24,14 @@ const loremIpsum = 'Lorem ipsum dolor sit amet, an sit quas justo, lucilius peri
 const specs = {
   default: {
     Height: '5 grid rows',
-    'Padding left': '1 gutter width',
-    'Padding right': '1 gutter width',
+    'Left and right internal padding': '1 gutter width',
     'Text color': '@sk-white',
     'Font size': '18px',
     'Border radius': '2px',
     Shadow: '0 1px rgba(33, 33, 33, 0.7)'
+  },
+  icon: {
+    'Space between icon and text': '7px'
   },
   active: {
     Shadow: 'none',
@@ -152,6 +154,7 @@ export default class Buttons extends Component {
     });
     const spec = getSpec({
       default: true,
+      icon,
       active,
       focus,
       pink: isPink,
