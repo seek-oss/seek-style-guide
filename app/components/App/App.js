@@ -8,10 +8,13 @@ import Hero from 'Hero/Hero';
 import Preface from 'Preface/Preface';
 import Body from 'Body/Body';
 
+import Buttons from 'Buttons/Buttons';
+
 export default function App() {
   return (
     <SeekApp fullScreen={true}>
       <div className={styles.root}>
+        <Buttons />
         <Header />
         <Hero />
         <Preface />
