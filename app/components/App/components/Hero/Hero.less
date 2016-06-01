@@ -1,1 +1,14 @@
 @import (reference) "~seek-style-guide/theme";
+
+.root {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: linear-gradient(transparent 0%, transparent 88.8889%, @sk-mid-grey-light 88.8889%, @sk-mid-grey-light 100%);
+  background-size: 100% @grid-row-height;
+  padding: (@grid-row-height * 3) 0;
+
+  > * {
+    flex: 1 0 100%;
+  }
+}
