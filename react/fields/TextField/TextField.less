@@ -16,7 +16,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  &:not([readonly]):not([disabled]):focus {
+  &:not([readonly]):not([disabled]):focus,
+  .rootFocus & {
     outline: none;
     border-color: @sk-focus;
   }
@@ -25,7 +26,8 @@
     border-color: @sk-pink;
     margin-bottom: 0;
 
-    &:not([readonly]):not([disabled]):focus {
+    &:not([readonly]):not([disabled]):focus,
+    .rootFocus & {
       border-color: @sk-pink;
     }
   }
