@@ -14,6 +14,8 @@ import Code from 'Code/Code';
 
 import { Button } from 'seek-style-guide/react';
 
+const loremIpsum = 'Lorem ipsum dolor sit amet, an sit quas justo, lucilius pericula no sit. In tota meis maiestatis eos, quem quod noluisse sea ea, ei pri dicta adolescens. Ad suas purto volutpat cum. Mea id tota paulo efficiantur. Ius in nisl dicam delenit. In sit summo contentiones consectetuer. His id velit vivendum patrioque, id qui delenit tincidunt posidonium.';
+
 const specs = {
   default: {
     Height: '5 grid rows',
@@ -170,7 +172,7 @@ export default class Buttons extends Component {
             </div>
           </Sticky>
 
-          <GridContainer className={styles.specAndCodeContainer}>
+          <GridContainer className={styles.gridContainer}>
             <Section className={styles.section}>
               <HeadlineText>Spec</HeadlineText>
               <Spec spec={spec} />
@@ -179,6 +181,22 @@ export default class Buttons extends Component {
             <Section className={styles.section}>
               <HeadlineText>Code</HeadlineText>
               <Code jsx={button} />
+            </Section>
+          </GridContainer>
+
+          <GridContainer className={styles.gridContainer}>
+            <Section className={styles.section}>
+              <HeadlineText>Do</HeadlineText>
+              <p className={styles.content}>
+                {loremIpsum}
+              </p>
+            </Section>
+
+            <Section className={styles.section}>
+              <HeadlineText>Don't</HeadlineText>
+              <p className={styles.content}>
+                {loremIpsum}
+              </p>
             </Section>
           </GridContainer>
         </div>

@@ -23,10 +23,18 @@
   text-align: center;
 }
 
-.specAndCodeContainer {
+.gridContainer {
   display: flex;
 }
 
 .section {
   flex-grow: 1;
+
+  &:not(:last-child) {
+    margin-right: @grid-gutter-width * 3;
+  }
+}
+
+.content {
+  .standardText();
 }
