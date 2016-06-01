@@ -3,7 +3,6 @@ import styles from './Code.less';
 import React, { Component, PropTypes } from 'react';
 import debounce from 'lodash.debounce';
 import jsxToString from 'jsx-to-string';
-import { PrismCode } from 'react-prism';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 // Hack. Please show me a better way :)
@@ -46,13 +45,11 @@ export default class Code extends Component {
 
     return (
       <CopyToClipboard text={code} onCopy={this.copiedToClipboard}>
-        <div className={styles.code} onMouseLeave={this.resetCopiedToClipboard}>
-          <pre>
-            <PrismCode className="language-jsx">
-              <code>
-                {code}
-              </code>
-            </PrismCode>
+        <div className={styles.root} onMouseLeave={this.resetCopiedToClipboard}>
+          <pre className={styles.code}>
+            <code>
+              {code}
+            </code>
           </pre>
           <span className={styles.message}>
             {copiedToClipboard ? 'Copied!' : 'Click to copy'}
