@@ -4,7 +4,6 @@ import React from 'react';
 
 import GridContainer from 'GridContainer/GridContainer';
 import TypeSample from 'TypeSample/TypeSample';
-import Columns from 'Columns/Columns';
 
 const renderDemo = () => (
   <div className={styles.demo}>
@@ -18,7 +17,7 @@ const renderDemo = () => (
   </div>
 );
 
-const renderContent = () => (
+const renderIntro = () => (
   <GridContainer>
     <section className={styles.content}>
       <h1 className={styles.hero}>Typography</h1>
@@ -30,8 +29,8 @@ const renderContent = () => (
 export default function Typography() {
   return (
     <div>
+      { renderIntro() }
       { renderDemo() }
-      { renderContent() }
     </div>
   );
 }
