@@ -5,7 +5,7 @@ import React, { PropTypes } from 'react';
 export default function Section({ children }) {
   return (
     <div className={styles.root}>
-    { children }
+      { children }
     </div>
   );
 }

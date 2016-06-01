@@ -3,7 +3,10 @@ import styles from './Typography.less';
 import React from 'react';
 
 import GridContainer from 'GridContainer/GridContainer';
+import Section from 'Section/Section';
 import TypeSample from 'TypeSample/TypeSample';
+import HeroText from 'HeroText/HeroText';
+import SubheadingText from 'SubheadingText/SubheadingText';
 
 const renderDemo = () => (
   <div className={styles.demo}>
@@ -19,10 +22,10 @@ const renderDemo = () => (
 
 const renderIntro = () => (
   <GridContainer>
-    <section className={styles.content}>
-      <h1 className={styles.hero}>Typography</h1>
-      <p className={styles.intro}>All typographic application needs to be functional. Whether it be through size, colour or weight, it is important that any variation in typographic application, is logically derived from a necessity to improve the clarity of the content, and heighten the clarity of communication to the reader. Typography should be used functionally, not for ornament.</p>
-    </section>
+    <Section>
+      <HeroText>Typography</HeroText>
+      <SubheadingText>All typographic application needs to be functional. Whether it be through size, colour or weight, it is important that any variation in typographic application, is logically derived from a necessity to improve the clarity of the content, and heighten the clarity of communication to the reader. Typography should be used functionally, not for ornament.</SubheadingText>
+    </Section>
   </GridContainer>
 );
 
