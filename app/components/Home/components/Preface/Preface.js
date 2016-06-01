@@ -48,7 +48,8 @@ export default function Preface() {
               </StandardText>
               <StandardText>
                 <h2>Consistency matters</h2>
-                <p>Appearance follows behaviour (Form follows function). Designed elements should look like they behave&mdash;someone should be able to predict how an interface element will behave merely by looking at it. Embrace consistency, but not homogeneity. If something looks the same it should always act the same</p>
+                <p>Appearance follows behaviour (Form follows function). Designed elements should look like they behave&mdash;someone should be able to predict how an interface element will behave merely by looking at it.</p>
+                <p>Embrace consistency, but not homogeneity. If something looks the same it should always act the same</p>
               </StandardText>
               <StandardText>
                 <h2>Accessibile design is good design</h2>
