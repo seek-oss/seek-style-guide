@@ -1,4 +1,32 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  padding-top: @grid-row-height * 6;
+}
+
+.sticky {
+  z-index: 1;
+}
+
+.fixedContainer {
+  background-color: @sk-white;
+  padding-top: @grid-row-height * 4;
+  padding-bottom: @grid-row-height * 4;
+}
+
+.fixedContainerContent {
+  display: flex;
+}
+
 .buttonContainer {
   width: 200px;
   text-align: center;
+}
+
+.specContainer {
+  .standardText();
+}
+
+.specProperty {
+  padding: @grid-row-height (@grid-gutter-width * 2) @grid-row-height 0;
 }

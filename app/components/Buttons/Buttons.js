@@ -1,12 +1,16 @@
 import styles from './Buttons.less';
+import buttonStyles from 'seek-style-guide/react/Button/Button.less';
 
 import React, { Component } from 'react';
 import Baseline from 'react-baseline';
 import classnames from 'classnames';
+import { StickyContainer, Sticky } from 'react-sticky';
 
+import GridContainer from 'GridContainer/GridContainer';
+import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
+
 import { Button } from 'seek-style-guide/react';
-import buttonStyles from 'seek-style-guide/react/Button/Button.less';
 
 const specs = {
   default: {
@@ -114,60 +118,73 @@ export default class Buttons extends Component {
     });
 
     return (
-      <div>
-        <HeadlineText>Button</HeadlineText>
+      <StickyContainer>
+        <div className={styles.root}>
+          <Sticky className={styles.sticky}>
+            <div className={styles.fixedContainer}>
+              <GridContainer>
+                <div className={styles.fixedContainerContent}>
+                  <div className={styles.buttonContainer}>
+                    <Baseline isVisible={baseline}>
+                      <Button colour="pink" className={className} loading={loading}>
+                        Button
+                      </Button>
+                    </Baseline>
+                  </div>
 
-        <div>
-          <p>
-            <label>
-              <input type="checkbox" checked={hover} onChange={this.toggleHover} /> hover
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" checked={active} onChange={this.toggleActive} /> active
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" checked={focus} onChange={this.toggleFocus} /> focus
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" checked={loading} onChange={this.toggleLoading} /> loading
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
-            </label>
-          </p>
-        </div>
+                  <div>
+                    <p>
+                      <label>
+                        <input type="checkbox" checked={hover} onChange={this.toggleHover} /> hover
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input type="checkbox" checked={active} onChange={this.toggleActive} /> active
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input type="checkbox" checked={focus} onChange={this.toggleFocus} /> focus
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input type="checkbox" checked={loading} onChange={this.toggleLoading} /> loading
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
+                      </label>
+                    </p>
+                  </div>
+                </div>
+              </GridContainer>
+            </div>
+          </Sticky>
 
-        <div className={styles.buttonContainer}>
-          <Baseline isVisible={baseline}>
-            <Button colour="pink" className={className} loading={loading}>
-              Button
-            </Button>
-          </Baseline>
+          <GridContainer>
+            <Section>
+              <HeadlineText>Spec</HeadlineText>
+              <div className={styles.specContainer}>
+                <table>
+                  <tbody>
+                    {
+                      Object.keys(spec).map(property =>
+                        <tr key={property}>
+                          <td className={styles.specProperty}>{property}</td>
+                          <td>{spec[property]}</td>
+                        </tr>
+                      )
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </Section>
+          </GridContainer>
         </div>
-
-        <div>
-          <table>
-            <tbody>
-              {
-                Object.keys(spec).map(property =>
-                  <tr key={property}>
-                    <td>{property}</td>
-                    <td>{spec[property]}</td>
-                  </tr>
-                )
-              }
-            </tbody>
-          </table>
-        </div>
-      </div>
+      </StickyContainer>
     );
   }
 }
