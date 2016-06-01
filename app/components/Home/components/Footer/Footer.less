@@ -1,0 +1,16 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  .touchableText();
+  text-align: center;
+  margin: (@grid-row-height * 4);
+}
+
+.github {
+  fill: @sk-mid-grey-dark;
+  opacity: 0.5;
+  transition: opacity .3s ease;
+  .link:hover & {
+    opacity: 1;
+  }
+}
