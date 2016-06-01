@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Baseline from 'react-baseline';
 import classnames from 'classnames';
 
-import Heading from 'Heading/Heading';
+import HeadlineText from 'HeadlineText/HeadlineText';
 import { Button } from 'seek-style-guide/react';
 import buttonStyles from 'seek-style-guide/react/Button/Button.less';
 
@@ -115,7 +115,7 @@ export default class Buttons extends Component {
 
     return (
       <div>
-        <Heading>Button</Heading>
+        <HeadlineText>Button</HeadlineText>
 
         <div>
           <p>
