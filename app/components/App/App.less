@@ -8,39 +8,10 @@
 
 .root {
   display: flex;
-  height: 100%;
-}
+  justify-content: center;
+  flex-wrap: wrap;
 
-.navigationContainer {
-  border-right: 1px solid @sk-blue;
-}
-
-.mainContainer {
-  flex-grow: 1;
-  padding: (@grid-row-height * 3) (@grid-gutter-width * 2);
-}
-
-.headerLink {
-  text-decoration: none;
-}
-
-.headerLogo {
-  display: block;
-  height: (@grid-row-height * 11);
-  text-align: center;
-  background-color: @sk-blue;
-  padding: (@grid-row-height * 2) (@grid-gutter-width / 2);
-}
-
-.headerText {
-  @border-width: 3px;
-  .touchableText(@standard-type-scale);
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  color: @sk-blue;
-  font-weight: @sk-bold;
-  border-bottom: @border-width solid @sk-blue;
-  margin-bottom: (@grid-row-height * 2) - @border-width;
+  > * {
+    flex: 1 0 100%;
+  }
 }

@@ -16,13 +16,7 @@ const appPaths = [
 ];
 
 const routes = [
-  '/',
-  '/typography',
-  '/colours',
-  '/grid',
-  '/icons',
-  '/buttons',
-  '/fields'
+  '/'
 ];
 
 const config = {
