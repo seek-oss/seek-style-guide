@@ -1,5 +1,4 @@
 import React from 'react';
-import AddCode from 'AddCode/AddCode';
 import Section from 'Section/Section';
 import Heading from 'Heading/Heading';
 import Subheading from 'Subheading/Subheading';
@@ -12,21 +11,15 @@ export default function TextFieldComponent() {
         <Heading>Text field</Heading>
 
         <Subheading>Default</Subheading>
-        <AddCode>
-          <TextField />
-        </AddCode>
+        <TextField />
 
         <Subheading>Invalid</Subheading>
-        <AddCode>
-          <TextField invalid={true} message="Something went wrong" />
-        </AddCode>
+        <TextField invalid={true} message="Something went wrong" />
       </Section>
 
       <Section>
         <Heading>Email field</Heading>
-        <AddCode>
-          <EmailField />
-        </AddCode>
+        <EmailField />
       </Section>
     </div>
   );

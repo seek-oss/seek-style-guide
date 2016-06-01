@@ -21,22 +21,35 @@ const specs = {
     Height: '5 grid rows',
     'Padding left': '1 gutter width',
     'Padding right': '1 gutter width',
-    'Font size': '18px',
     'Text color': '@sk-white',
-    'Background color': '@sk-pink',
+    'Font size': '18px',
     'Border radius': '2px',
     Shadow: '0 1px rgba(33, 33, 33, 0.7)'
   },
-  hover: {
-    'Background color': 'lighten(@sk-pink, 5%)'
-  },
   active: {
-    'Background color': 'darken(@sk-pink, 5%)',
     Shadow: 'none',
     Transform: 'scale(0.95)'
   },
   focus: {
     Shadow: '0 0 0 1px @sk-focus'
+  },
+  pink: {
+    'Background color': '@sk-pink'
+  },
+  pinkHover: {
+    'Background color': 'lighten(@sk-pink, 5%)'
+  },
+  pinkActive: {
+    'Background color': 'darken(@sk-pink, 5%)'
+  },
+  blue: {
+    'Background color': '@sk-highlight'
+  },
+  blueHover: {
+    'Background color': 'lighten(@sk-highlight, 5%)'
+  },
+  blueActive: {
+    'Background color': 'darken(@sk-highlight, 5%)'
   }
 };
 const propertiesToRemove = {
@@ -71,11 +84,18 @@ export default class Buttons extends Component {
       baseline: false
     };
 
+    this.setColor = this.setColor.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
     this.toggleActive = this.toggleActive.bind(this);
     this.toggleFocus = this.toggleFocus.bind(this);
     this.toggleLoading = this.toggleLoading.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
+  }
+
+  setColor(event) {
+    this.setState({
+      color: event.target.value
+    });
   }
 
   toggleHover(event) {
@@ -109,7 +129,9 @@ export default class Buttons extends Component {
   }
 
   render() {
-    const { hover, active, focus, loading, baseline } = this.state;
+    const { color, hover, active, focus, loading, baseline } = this.state;
+    const isPink = (color === 'pink');
+    const isBlue = (color === 'blue');
     const className = classnames({
       [buttonStyles.rootHover]: hover,
       [buttonStyles.rootActive]: active,
@@ -117,12 +139,17 @@ export default class Buttons extends Component {
     });
     const spec = getSpec({
       default: true,
-      hover,
       active,
-      focus
+      focus,
+      pink: isPink,
+      blue: isBlue,
+      pinkHover: isPink && hover,
+      blueHover: isBlue && hover,
+      pinkActive: isPink && active,
+      blueActive: isBlue && active
     });
     const button = (
-      <Button colour="pink" className={className} loading={loading} ref="button">
+      <Button colour={color} className={className} loading={loading} ref="button">
         Button
       </Button>
     );
@@ -141,6 +168,14 @@ export default class Buttons extends Component {
                   </div>
 
                   <div>
+                    <p>
+                      <label>
+                        <input type="radio" value="pink" name="button-color" checked={isPink} onChange={this.setColor} /> pink
+                      </label>
+                      <label>
+                        <input type="radio" value="blue" name="button-color" checked={isBlue} onChange={this.setColor} /> blue
+                      </label>
+                    </p>
                     <p>
                       <label>
                         <input type="checkbox" checked={hover} onChange={this.toggleHover} /> hover
