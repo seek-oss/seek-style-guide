@@ -6,6 +6,7 @@ import Subheading from 'Subheading/Subheading';
 import { PinkButton } from 'seek-style-guide/react';
 import { PinkButton as pinkButtonStyles } from 'seek-style-guide/react/styles';
 
+/*
 const defaultSpec = {
   'Height': '5 grid rows',
   'Padding left': '1 gutter width',
@@ -24,6 +25,7 @@ const activeSpec = {
   'Box shadow': 'none',
   'Transform': 'scale(0.95)'
 };
+*/
 
 export default class Buttons extends Component {
   constructor() {
