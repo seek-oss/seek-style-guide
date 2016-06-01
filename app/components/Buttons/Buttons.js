@@ -150,7 +150,7 @@ export default class Buttons extends Component {
     });
     const button = (
       <Button colour={color} className={className} loading={loading} ref="button">
-        Button
+        Click here
       </Button>
     );
 
