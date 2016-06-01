@@ -16,7 +16,9 @@ const appPaths = [
 ];
 
 const routes = [
-  '/'
+  '/',
+  '/buttons',
+  '/textfields'
 ];
 
 const config = {
