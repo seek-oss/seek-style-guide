@@ -5,8 +5,8 @@ import Baseline from 'react-baseline';
 import classnames from 'classnames';
 
 import Heading from 'Heading/Heading';
-import { PinkButton } from 'seek-style-guide/react';
-import { PinkButton as pinkButtonStyles } from 'seek-style-guide/react/styles';
+import { Button } from 'seek-style-guide/react';
+import buttonStyles from 'seek-style-guide/react/Button/Button.less';
 
 const specs = {
   default: {
@@ -102,9 +102,9 @@ export default class Buttons extends Component {
   render() {
     const { hover, active, focus, loading, baseline } = this.state;
     const className = classnames({
-      [pinkButtonStyles.rootHover]: hover,
-      [pinkButtonStyles.rootActive]: active,
-      [pinkButtonStyles.rootFocus]: focus
+      [buttonStyles.rootHover]: hover,
+      [buttonStyles.rootActive]: active,
+      [buttonStyles.rootFocus]: focus
     });
     const spec = getSpec({
       default: true,
@@ -147,9 +147,9 @@ export default class Buttons extends Component {
 
         <div className={styles.buttonContainer}>
           <Baseline isVisible={baseline}>
-            <PinkButton className={className} loading={loading}>
+            <Button colour="pink" className={className} loading={loading}>
               Button
-            </PinkButton>
+            </Button>
           </Baseline>
         </div>
 
