@@ -1,4 +1,4 @@
-import styles from './BrandColours.less';
+import styles from './ColourPreview.less';
 
 import React from 'react';
 import lessToJs from 'less-vars-to-js';
@@ -21,7 +21,7 @@ const getSwatch = name => {
   );
 };
 
-export default function BrandColours() {
+export default function ColourPreview() {
   return (
     <div>
       {Object.keys(brandValues).map(getSwatch)}
