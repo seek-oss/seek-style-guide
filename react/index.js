@@ -15,6 +15,7 @@ import BlueButton from './buttons/BlueButton/BlueButton';
 import PinkButton from './buttons/PinkButton/PinkButton';
 import TextField from './fields/TextField/TextField';
 import EmailField from './fields/EmailField/EmailField';
+import Logo from './Logo/Logo';
 
 export {
   SeekApp,
@@ -33,5 +34,6 @@ export {
   BlueButton,
   PinkButton,
   TextField,
-  EmailField
+  EmailField,
+  Logo
 };

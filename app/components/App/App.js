@@ -9,7 +9,6 @@ import Preface from 'Preface/Preface';
 import Body from 'Body/Body';
 
 export default function App() {
-  /* eslint-disable react/no-danger */
   return (
     <SeekApp fullScreen={true}>
       <div className={styles.root}>
@@ -20,5 +19,4 @@ export default function App() {
       </div>
     </SeekApp>
   );
-  /* eslint-enable react/no-danger */
 }
