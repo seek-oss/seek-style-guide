@@ -7,6 +7,9 @@ import classnames from 'classnames';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 import GridContainer from 'GridContainer/GridContainer';
+import SandboxPreview from 'SandboxPreview/SandboxPreview';
+import SandboxTogglePanel from 'SandboxTogglePanel/SandboxTogglePanel';
+import SandboxToggle from 'SandboxToggle/SandboxToggle';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
@@ -178,63 +181,102 @@ export default class Buttons extends Component {
       <StickyContainer>
         <div>
           <Sticky className={styles.sticky}>
-            <div className={styles.fixedContainer}>
-              <GridContainer>
-                <div className={styles.fixedContainerContent}>
-                  <div className={styles.buttonContainer}>
-                    <Baseline isVisible={baseline}>
+            <Baseline isVisible={baseline}>
+              <div className={styles.sandboxContainer}>
+                <GridContainer>
+                  <div className={styles.sandbox}>
+                    <SandboxPreview>
                       {buttonComponent}
-                    </Baseline>
-                  </div>
+                    </SandboxPreview>
 
-                  <div>
-                    <p>
-                      <label>
-                        <input type="radio" value="pink" name="button-color" checked={isPink} onChange={this.setColor} /> pink
-                      </label>
-                      <label>
-                        <input type="radio" value="blue" name="button-color" checked={isBlue} onChange={this.setColor} /> blue
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        Icon:
-                        <select onChange={this.setIcon}>
-                          <option value="">None</option>
-                          <option value="HeartIcon">Heart</option>
-                          <option value="StarIcon">Star</option>
-                        </select>
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={hover} onChange={this.toggleHover} /> hover
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={active} onChange={this.toggleActive} /> active
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={focus} onChange={this.toggleFocus} /> focus
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={loading} onChange={this.toggleLoading} /> loading
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
-                      </label>
-                    </p>
+                    <SandboxTogglePanel>
+                      <SandboxToggle
+                        label="Hover"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: hover,
+                          onChange: this.toggleHover
+                        }}
+                      />
+                      <SandboxToggle
+                        label="Active"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: active,
+                          onChange: this.toggleActive
+                        }}
+                      />
+                      <SandboxToggle
+                        label="Focus"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: focus,
+                          onChange: this.toggleFocus
+                        }}
+                      />
+                      <SandboxToggle
+                        label="Loading"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: loading,
+                          onChange: this.toggleLoading
+                        }}
+                      />
+                      <div className={styles.divider} />
+                      <SandboxToggle
+                        label="Pink"
+                        toggleType="radio"
+                        toggleProps={{
+                          type: 'radio',
+                          value: 'pink',
+                          checked: isPink,
+                          name: 'button-color',
+                          onChange: this.setColor
+                        }}
+                      />
+                      <SandboxToggle
+                        label="Blue"
+                        toggleType="radio"
+                        toggleProps={{
+                          type: 'radio',
+                          value: 'blue',
+                          checked: isBlue,
+                          name: 'button-color',
+                          onChange: this.setColor
+                        }}
+                      />
+                      <div className={styles.divider} />
+                      <SandboxToggle
+                        toggleType="select"
+                        toggleProps={{
+                          options: [
+                            { name: 'No', value: '' },
+                            { name: 'Heart', value: 'HeartIcon' },
+                            { name: 'Star', value: 'StarIcon' }
+                          ],
+                          onChange: this.setIcon
+                        }}
+                      />
+                    </SandboxTogglePanel>
+                    <div style={{ position: 'absolute', top: 0, right: 0 }}>
+                      <SandboxToggle
+                        label="Baseline"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: baseline,
+                          onChange: this.toggleBaseline
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
-              </GridContainer>
-            </div>
+                </GridContainer>
+              </div>
+            </Baseline>
           </Sticky>
 
           <GridContainer className={styles.gridContainer}>

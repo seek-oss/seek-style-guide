@@ -7,6 +7,9 @@ import classnames from 'classnames';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 import GridContainer from 'GridContainer/GridContainer';
+import SandboxPreview from 'SandboxPreview/SandboxPreview';
+import SandboxTogglePanel from 'SandboxTogglePanel/SandboxTogglePanel';
+import SandboxToggle from 'SandboxToggle/SandboxToggle';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
@@ -93,35 +96,49 @@ export default class TextFields extends Component {
       <StickyContainer>
         <div>
           <Sticky className={styles.sticky}>
-            <div className={styles.fixedContainer}>
-              <GridContainer>
-                <div className={styles.fixedContainerContent}>
-                  <div className={styles.textFieldContainer}>
-                    <Baseline isVisible={baseline}>
+            <Baseline isVisible={baseline}>
+              <div className={styles.sandboxContainer}>
+                <GridContainer>
+                  <div className={styles.sandbox}>
+                    <SandboxPreview>
                       {textfield}
-                    </Baseline>
-                  </div>
+                    </SandboxPreview>
 
-                  <div>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={focus} onChange={this.toggleFocus} /> focus
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={invalid} onChange={this.toggleInvalid} /> invalid
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
-                      </label>
-                    </p>
+                    <SandboxTogglePanel>
+                      <SandboxToggle
+                        label="Focus"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: focus,
+                          onChange: this.toggleFocus
+                        }}
+                      />
+                      <SandboxToggle
+                        label="Invalid"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: invalid,
+                          onChange: this.toggleInvalid
+                        }}
+                      />
+                    </SandboxTogglePanel>
+                    <div style={{ position: 'absolute', top: 0, right: 0 }}>
+                      <SandboxToggle
+                        label={`${baseline ? 'Hide' : 'Show'} baseline`}
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: baseline,
+                          onChange: this.toggleBaseline
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
-              </GridContainer>
-            </div>
+                </GridContainer>
+              </div>
+            </Baseline>
           </Sticky>
 
           <GridContainer className={styles.gridContainer}>

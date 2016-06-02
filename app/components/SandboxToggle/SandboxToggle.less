@@ -1,0 +1,80 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  display: inline-block;
+}
+
+.label {
+  .touchableText(@standard-type-scale);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: (@grid-gutter-width * 4);
+  color: @sk-mid-grey;
+}
+
+.toggle {
+  position: absolute;
+  opacity: 0;
+  &:checked {
+    ~ .radio,
+    ~ .text {
+      color: @sk-pink;
+    }
+
+    ~ .radio:before {
+      opacity: 1;
+    }
+  }
+}
+
+.tick {
+  > * {
+    position: relative;
+    top: 1px;
+    height: 16px;
+    margin-right: 4px;
+    > * {
+      stroke: @sk-mid-grey-light;
+    }
+  }
+}
+
+.checked > * {
+  > * {
+    stroke: @sk-pink;
+  }
+}
+
+.radio {
+  position: relative;
+  text-align: center;
+  width: (@grid-gutter-width * 3);
+  &:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    bottom: 11px;
+    height: 1px;
+    background-color: @sk-pink;
+    opacity: 0;
+    transition: opacity .2s ease;
+  }
+}
+
+.select {
+  .standardText();
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  position: relative;
+  top: -5px;
+  color: inherit;
+  padding: 2px 5px;
+  &:focus {
+    outline: none;
+  }
+}

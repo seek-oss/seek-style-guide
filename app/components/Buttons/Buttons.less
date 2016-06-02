@@ -4,19 +4,15 @@
   z-index: 1;
 }
 
-.fixedContainer {
+.sandboxContainer {
   background-color: @sk-white;
-  padding-top: @grid-row-height * 4;
-  padding-bottom: @grid-row-height * 4;
 }
 
-.fixedContainerContent {
+.sandbox {
+  position: relative;
   display: flex;
-}
-
-.buttonContainer {
-  width: 200px;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gridContainer {
@@ -29,6 +25,15 @@
   &:not(:last-child) {
     margin-right: @grid-gutter-width * 3;
   }
+}
+
+.divider {
+  display: inline-block;
+  width: 1px;
+  height: (@grid-row-height * 3);
+  margin: 0 30px;
+  position: relative;
+  top: 10px;
 }
 
 .content {
