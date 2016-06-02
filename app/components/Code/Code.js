@@ -5,9 +5,6 @@ import debounce from 'lodash.debounce';
 import jsxToString from 'jsx-to-string';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-// Hack. Please show me a better way :)
-const cssModulesClassNameRegex = /\b[\w-]+___\w+\b/g;
-
 export default class Code extends Component {
 
   static propTypes = {
@@ -41,9 +38,15 @@ export default class Code extends Component {
   render() {
     const { copiedToClipboard } = this.state;
     const { jsx } = this.props;
-    const code = jsxToString(jsx, {
+
+    const jsxClone = React.cloneElement(jsx, {
+      ...jsx.props,
+      ...(jsx.props.svgClassName ? { svgClassName: '...' } : {})
+    });
+
+    const code = jsxToString(jsxClone, {
       ignoreProps: ['className']
-    }).replace(cssModulesClassNameRegex, '...');
+    });
 
     return (
       <CopyToClipboard text={code} onCopy={this.copiedToClipboard}>
