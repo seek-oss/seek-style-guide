@@ -102,7 +102,9 @@ export default class Icons extends Component {
   }
 
   saveAutosuggest(autosuggest) {
-    this.autosuggestInput = autosuggest.input;
+    if (autosuggest !== null) {
+      this.autosuggestInput = autosuggest.input;
+    }
   }
 
   onChange(event, { newValue }) {
