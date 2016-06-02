@@ -1,12 +1,14 @@
 import styles from './Typography.less';
 
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import basekick from 'basekick';
 import Baseline from 'react-baseline';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 import GridContainer from 'GridContainer/GridContainer';
+import SandboxPreview from 'SandboxPreview/SandboxPreview';
+import SandboxTogglePanel from 'SandboxTogglePanel/SandboxTogglePanel';
+import SandboxToggle from 'SandboxToggle/SandboxToggle';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
@@ -110,10 +112,6 @@ export default class Typography extends Component {
   render() {
     const { typeLevel, typeScale, baseline } = this.state;
     const isTypeScaleConfigurable = typeLevel.name === 'Standard' || typeLevel.name === 'Touchable';
-    const textContainerClassName = classnames({
-      [styles.textContainerWithBaseline]: baseline,
-      [styles.textContainer]: !baseline
-    });
     const typeScaleFloat = parseFloat(typeLevel.spec['Type Scale'], 10);
     const minTypeScale = typeScaleFloat - 1;
     const maxTypeScale = typeScaleFloat + 1;
@@ -136,57 +134,62 @@ export default class Typography extends Component {
       <StickyContainer>
         <div>
           <Sticky className={styles.sticky}>
-            <div className={styles.fixedContainer}>
-              <GridContainer>
-                <div className={styles.fixedContainerContent}>
-                  <div>
-                    <p>
-                      <label>
-                        Type Level:
-                        <select onChange={this.setTypeLevel}>
-                          {
-                            typeLevels.map(level => (
-                              <option value={level.name} key={level.name}>
-                                {level.name}
-                              </option>
-                            ))
-                          }
-                        </select>
-                      </label>
-                    </p>
-                    {
-                      isTypeScaleConfigurable &&
-                        <p>
-                          <label>
-                            Type Scale:
-                            <input
-                              type="range"
-                              min={minTypeScale}
-                              max={maxTypeScale}
-                              step="0.1"
-                              value={typeScale}
-                              onChange={this.setTypeScale}
-                            />
-                          </label>
+            <Baseline isVisible={baseline}>
+              <div className={styles.sandboxContainer}>
+                <GridContainer>
+                  <div className={styles.sandbox}>
+                    <SandboxPreview>
+                      <div className={styles.textContainer}>
+                        <p style={textStyles}>
+                          Living Style Guide
                         </p>
-                    }
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
-                      </label>
-                    </p>
-                  </div>
+                      </div>
+                    </SandboxPreview>
 
-                  <Baseline isVisible={baseline}>
-                    <div className={textContainerClassName}>
-                      <p style={textStyles}>
-                        Living Style Guide
-                      </p>
+                    <SandboxTogglePanel>
+                      <SandboxToggle
+                        toggleType="select"
+                        toggleProps={{
+                          options: typeLevels.map(({ name }) => {
+                            return { name, value: name };
+                          }),
+                          onChange: this.setTypeLevel
+                        }}
+                      />
+                      {
+                        isTypeScaleConfigurable &&
+                          <div style={{ display: 'inline-block' }}>
+                            <div className={styles.divider} />
+                            <SandboxToggle
+                              label="Type Scale"
+                              toggleType="range"
+                              toggleProps={{
+                                type: 'range',
+                                min: minTypeScale,
+                                max: maxTypeScale,
+                                step: '0.1',
+                                value: typeScale,
+                                onChange: this.setTypeScale
+                              }}
+                            />
+                          </div>
+                      }
+                    </SandboxTogglePanel>
+                    <div style={{ position: 'absolute', top: 0, right: 0 }}>
+                      <SandboxToggle
+                        label="Baseline"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: baseline,
+                          onChange: this.toggleBaseline
+                        }}
+                      />
                     </div>
-                  </Baseline>
-                </div>
-              </GridContainer>
-            </div>
+                  </div>
+                </GridContainer>
+              </div>
+            </Baseline>
           </Sticky>
 
           <GridContainer className={styles.gridContainer}>

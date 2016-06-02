@@ -4,14 +4,15 @@
   z-index: 1;
 }
 
-.fixedContainer {
+.sandboxContainer {
   background-color: @sk-white;
-  padding-top: @grid-row-height * 4;
-  padding-bottom: @grid-row-height * 4;
 }
 
-.fixedContainerContent {
+.sandbox {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gridContainer {
@@ -26,11 +27,20 @@
   }
 }
 
+.divider {
+  display: inline-block;
+  width: 1px;
+  height: (@grid-row-height * 3);
+  margin: 0 30px;
+  position: relative;
+  top: 10px;
+}
+
 .textContainer {
   margin: (@grid-row-height * 3) (@grid-gutter-width * 2) (@grid-row-height * 2);
+  background-color: fade(@sk-blue, 20%);
 }
 
 .textContainerWithBaseline {
   composes: textContainer;
-  background-color: fade(@sk-blue, 20%);
 }

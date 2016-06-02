@@ -254,9 +254,9 @@ export default class Buttons extends Component {
                         toggleType="select"
                         toggleProps={{
                           options: [
-                            { name: 'No', value: '' },
-                            { name: 'Heart', value: 'HeartIcon' },
-                            { name: 'Star', value: 'StarIcon' }
+                            { name: 'No icon', value: '' },
+                            { name: 'Heart Icon', value: 'HeartIcon' },
+                            { name: 'Star Icon', value: 'StarIcon' }
                           ],
                           onChange: this.setIcon
                         }}

@@ -19,7 +19,7 @@ export default function SandboxToggle({ toggleType, toggleProps, label }) {
             <select name="select" className={styles.select} { ...restProps}>
               {
                 options.map(({ name, value }) => (
-                  <option value={value} key={value}>{`${name} Icon`}</option>
+                  <option value={value} key={value}>{name}</option>
                 ))
               }
             </select>
@@ -31,6 +31,14 @@ export default function SandboxToggle({ toggleType, toggleProps, label }) {
           <label className={styles.label}>
             <input className={styles.toggle} {...restProps} />
             <span className={styles.radio}>{label}</span>
+          </label>
+        );
+
+      case 'range':
+        return (
+          <label className={styles.label}>
+            <span className={styles.range}>{label}</span>
+            <input {...restProps} />
           </label>
         );
 
