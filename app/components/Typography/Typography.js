@@ -121,13 +121,20 @@ export default class Typography extends Component {
       ...defaultSpec
     };
     const typeSizeModifier = parseFloat(typeScale, 10);
-    const textStyles = basekick({
-      baseFontSize: 10,
-      descenderHeightScale: 0.12,
-      gridRowHeight: 9,
-      typeSizeModifier,
-      typeRowSpan: parseInt(spec['Line Height'], 10)
-    });
+    const baseFontSize = 10;
+    const textStyles = typeLevel.name === 'Touchable' ?
+      {
+        fontSize: `${typeSizeModifier * baseFontSize}px`,
+        lineHeight: '45px',
+        height: '45px'
+      } :
+      basekick({
+        baseFontSize,
+        descenderHeightScale: 0.12,
+        gridRowHeight: 9,
+        typeSizeModifier,
+        typeRowSpan: parseInt(spec['Line Height'], 10)
+      });
     const lessCode = `.${typeLevel.name.toLowerCase()}Text(${typeSizeModifier === typeScaleFloat ? '' : typeSizeModifier})`;
 
     return (
