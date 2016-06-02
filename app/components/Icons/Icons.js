@@ -27,10 +27,10 @@ import {
 } from 'seek-style-guide/react';
 
 const icons = [
-  { icon: HeartIcon, name: 'Heart' },
-  { icon: HeartIcon, name: 'Filled Heart', props: { filled: true } },
-  { icon: StarIcon, name: 'Star' },
-  { icon: StarIcon, name: 'Filled Star', props: { filled: true } },
+  { icon: ThumbsUpIcon, name: 'Thumbs Up' },
+  { icon: ProfileIcon, name: 'Profile' },
+  { icon: SearchIcon, name: 'Search' },
+  { icon: TickIcon, name: 'Tick' },
   { icon: ChevronIcon, name: 'Down Chevron', props: { direction: 'down' } },
   { icon: ChevronIcon, name: 'Up Chevron', props: { direction: 'up' } },
   { icon: ChevronIcon, name: 'Left Chevron', props: { direction: 'left' } },
@@ -41,10 +41,10 @@ const icons = [
   { icon: ErrorIcon, name: 'Error' },
   { icon: ErrorIcon, name: 'Filled Error', props: { filled: true } },
   { icon: HelpIcon, name: 'Help' },
-  { icon: ProfileIcon, name: 'Profile' },
-  { icon: SearchIcon, name: 'Search' },
-  { icon: ThumbsUpIcon, name: 'Thumbs Up' },
-  { icon: TickIcon, name: 'Tick' }
+  { icon: HeartIcon, name: 'Heart' },
+  { icon: HeartIcon, name: 'Filled Heart', props: { filled: true } },
+  { icon: StarIcon, name: 'Star' },
+  { icon: StarIcon, name: 'Filled Star', props: { filled: true } }
 ];
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
