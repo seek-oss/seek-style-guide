@@ -6,11 +6,19 @@ import { SeekApp } from 'seek-style-guide/react';
 import Header from 'Header/Header';
 import Footer from 'Footer/Footer';
 
-export default function App({ children }) {
+const titles = {
+  '/': 'living style',
+  '/icons': 'icons',
+  '/buttons': 'buttons',
+  '/textfields': 'text fields',
+  '/typography': 'typography'
+};
+
+export default function App({ location, children }) {
   return (
     <SeekApp fullScreen={true}>
       <div className={styles.root}>
-        <Header />
+        <Header title={titles[location.pathname]} />
         <main>
           {children}
         </main>
@@ -21,5 +29,6 @@ export default function App({ children }) {
 }
 
 App.propTypes = {
+  location: PropTypes.object,
   children: PropTypes.node
 };
