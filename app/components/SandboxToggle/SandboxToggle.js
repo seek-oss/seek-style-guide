@@ -63,7 +63,7 @@ export default function SandboxToggle({ toggleType, toggleProps, label }) {
 }
 
 SandboxToggle.propTypes = {
-  toggleType: PropTypes.oneOf(['checkbox', 'radio', 'select']).isRequired,
+  toggleType: PropTypes.oneOf(['checkbox', 'radio', 'select', 'range']).isRequired,
   toggleProps: PropTypes.object.isRequired,
   label: PropTypes.string
 };
