@@ -1,14 +1,15 @@
 @import (reference) "~seek-style-guide/theme";
 
-@border-color: @sk-mid-grey;
+@border-color: @sk-mid-grey-light;
 @border-radius: 4px;
 
 .container {
   position: relative;
+  margin: @grid-row-height 0;
 }
 
 .input {
-  .standardText();
+  .touchableText();
   width: @grid-gutter-width * 14;
   height: @grid-row-height * 5;
   padding: @grid-row-height @grid-gutter-width;

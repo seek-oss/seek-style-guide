@@ -141,7 +141,7 @@ export default class Typography extends Component {
       <StickyContainer>
         <div>
           <Sticky className={styles.sticky}>
-            <Baseline isVisible={baseline}>
+            <Baseline isVisible={baseline} color="#eee">
               <div className={styles.sandboxContainer}>
                 <GridContainer>
                   <div className={styles.sandbox}>
@@ -152,36 +152,6 @@ export default class Typography extends Component {
                         </p>
                       </div>
                     </SandboxPreview>
-
-                    <SandboxTogglePanel>
-                      <SandboxToggle
-                        toggleType="select"
-                        toggleProps={{
-                          options: typeLevels.map(({ name }) => {
-                            return { name, value: name };
-                          }),
-                          onChange: this.setTypeLevel
-                        }}
-                      />
-                      {
-                        isTypeScaleConfigurable &&
-                          <div style={{ display: 'inline-block' }}>
-                            <div className={styles.divider} />
-                            <SandboxToggle
-                              label="Type Scale"
-                              toggleType="range"
-                              toggleProps={{
-                                type: 'range',
-                                min: minTypeScale,
-                                max: maxTypeScale,
-                                step: '0.1',
-                                value: typeScale,
-                                onChange: this.setTypeScale
-                              }}
-                            />
-                          </div>
-                      }
-                    </SandboxTogglePanel>
                     <div style={{ position: 'absolute', top: 0, right: 0 }}>
                       <SandboxToggle
                         label="Baseline"
@@ -198,6 +168,36 @@ export default class Typography extends Component {
               </div>
             </Baseline>
           </Sticky>
+
+          <SandboxTogglePanel>
+            <SandboxToggle
+              toggleType="select"
+              toggleProps={{
+                options: typeLevels.map(({ name }) => {
+                  return { name, value: name };
+                }),
+                onChange: this.setTypeLevel
+              }}
+            />
+            {
+              isTypeScaleConfigurable &&
+                <div style={{ display: 'inline-block' }}>
+                  <div className={styles.divider} />
+                  <SandboxToggle
+                    label="Type Scale"
+                    toggleType="range"
+                    toggleProps={{
+                      type: 'range',
+                      min: minTypeScale,
+                      max: maxTypeScale,
+                      step: '0.1',
+                      value: typeScale,
+                      onChange: this.setTypeScale
+                    }}
+                  />
+                </div>
+            }
+          </SandboxTogglePanel>
 
           <GridContainer className={styles.gridContainer}>
             <Section className={styles.section}>

@@ -4,14 +4,15 @@
   z-index: 1;
 }
 
-.fixedContainer {
+.sandboxContainer {
   background-color: @sk-white;
-  padding-top: @grid-row-height * 4;
-  padding-bottom: @grid-row-height * 4;
 }
 
-.fixedContainerContent {
+.sandbox {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gridContainer {
@@ -26,14 +27,10 @@
   }
 }
 
-.iconContainer {
-  padding: (@grid-row-height * 2) (@grid-gutter-width * 2);
-}
-
 .iconSvg {
   fill: @sk-charcoal;
-  width: (@grid-row-height * 4);
-  height: (@grid-row-height * 4);
+  width: (@grid-row-height * 6);
+  height: (@grid-row-height * 6);
 }
 
 .iconSvgWithBaseline {

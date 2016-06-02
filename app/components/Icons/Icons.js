@@ -7,6 +7,9 @@ import Baseline from 'react-baseline';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 import GridContainer from 'GridContainer/GridContainer';
+import SandboxPreview from 'SandboxPreview/SandboxPreview';
+import SandboxTogglePanel from 'SandboxTogglePanel/SandboxTogglePanel';
+import SandboxToggle from 'SandboxToggle/SandboxToggle';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
 import Code from 'Code/Code';
@@ -159,40 +162,46 @@ export default class Icons extends Component {
       <StickyContainer>
         <div>
           <Sticky className={styles.sticky}>
-            <div className={styles.fixedContainer}>
-              <GridContainer>
-                <div className={styles.fixedContainerContent}>
-                  <Baseline isVisible={baseline}>
-                    <div className={styles.iconContainer}>
-                      {iconComponent}
+            <Baseline isVisible={baseline} color="#eee">
+              <div className={styles.sandboxContainer}>
+                <GridContainer>
+                  <div className={styles.sandbox}>
+                    <SandboxPreview>
+                      <div className={styles.iconContainer}>
+                        {iconComponent}
+                      </div>
+                    </SandboxPreview>
+
+                    <div style={{ position: 'absolute', top: 0, right: 0 }}>
+                      <SandboxToggle
+                        label="Baseline"
+                        toggleType="checkbox"
+                        toggleProps={{
+                          type: 'checkbox',
+                          checked: baseline,
+                          onChange: this.toggleBaseline
+                        }}
+                      />
                     </div>
-                  </Baseline>
-
-                  <div>
-                    <Autosuggest
-                      suggestions={suggestions}
-                      onSuggestionsUpdateRequested={this.onSuggestionsUpdateRequested}
-                      getSuggestionValue={getSuggestionValue}
-                      renderSuggestion={renderSuggestion}
-                      shouldRenderSuggestions={() => true}
-                      onSuggestionSelected={this.onSuggestionSelected}
-                      inputProps={inputProps}
-                      theme={autosuggestStyles}
-                      ref={this.saveAutosuggest}
-                    />
                   </div>
-
-                  <div>
-                    <p>
-                      <label>
-                        <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
-                      </label>
-                    </p>
-                  </div>
-                </div>
-              </GridContainer>
-            </div>
+                </GridContainer>
+              </div>
+            </Baseline>
           </Sticky>
+
+          <SandboxTogglePanel>
+            <Autosuggest
+              suggestions={suggestions}
+              onSuggestionsUpdateRequested={this.onSuggestionsUpdateRequested}
+              getSuggestionValue={getSuggestionValue}
+              renderSuggestion={renderSuggestion}
+              shouldRenderSuggestions={() => true}
+              onSuggestionSelected={this.onSuggestionSelected}
+              inputProps={inputProps}
+              theme={autosuggestStyles}
+              ref={this.saveAutosuggest}
+            />
+          </SandboxTogglePanel>
 
           <GridContainer className={styles.gridContainer}>
             <Section className={styles.section}>

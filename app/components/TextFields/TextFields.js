@@ -96,34 +96,13 @@ export default class TextFields extends Component {
       <StickyContainer>
         <div>
           <Sticky className={styles.sticky}>
-            <Baseline isVisible={baseline}>
+            <Baseline isVisible={baseline} color="#eee">
               <div className={styles.sandboxContainer}>
                 <GridContainer>
                   <div className={styles.sandbox}>
                     <SandboxPreview>
                       {textfield}
                     </SandboxPreview>
-
-                    <SandboxTogglePanel>
-                      <SandboxToggle
-                        label="Focus"
-                        toggleType="checkbox"
-                        toggleProps={{
-                          type: 'checkbox',
-                          checked: focus,
-                          onChange: this.toggleFocus
-                        }}
-                      />
-                      <SandboxToggle
-                        label="Invalid"
-                        toggleType="checkbox"
-                        toggleProps={{
-                          type: 'checkbox',
-                          checked: invalid,
-                          onChange: this.toggleInvalid
-                        }}
-                      />
-                    </SandboxTogglePanel>
                     <div style={{ position: 'absolute', top: 0, right: 0 }}>
                       <SandboxToggle
                         label={`${baseline ? 'Hide' : 'Show'} baseline`}
@@ -140,6 +119,27 @@ export default class TextFields extends Component {
               </div>
             </Baseline>
           </Sticky>
+
+          <SandboxTogglePanel>
+            <SandboxToggle
+              label="Focus"
+              toggleType="checkbox"
+              toggleProps={{
+                type: 'checkbox',
+                checked: focus,
+                onChange: this.toggleFocus
+              }}
+            />
+            <SandboxToggle
+              label="Invalid"
+              toggleType="checkbox"
+              toggleProps={{
+                type: 'checkbox',
+                checked: invalid,
+                onChange: this.toggleInvalid
+              }}
+            />
+          </SandboxTogglePanel>
 
           <GridContainer className={styles.gridContainer}>
             <Section className={styles.section}>
