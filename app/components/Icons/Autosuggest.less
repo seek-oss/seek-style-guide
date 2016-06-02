@@ -1,0 +1,62 @@
+@import (reference) "~seek-style-guide/theme";
+
+@border-color: @sk-mid-grey;
+@border-radius: 4px;
+
+.container {
+  position: relative;
+}
+
+.input {
+  .standardText();
+  width: @grid-gutter-width * 14;
+  height: @grid-row-height * 5;
+  padding: @grid-row-height @grid-gutter-width;
+  border: 1px solid @border-color;
+  border-radius: @border-radius;
+
+  &:focus {
+    outline: none;
+  }
+
+  .containerOpen & {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.suggestionsContainer {
+  position: absolute;
+  top: @grid-row-height * 5 - 1px;
+  width: @grid-gutter-width * 14;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid @border-color;
+  background-color: @sk-white;
+  border-bottom-left-radius: @border-radius;
+  border-bottom-right-radius: @border-radius;
+  z-index: 2;
+  max-height: @grid-row-height * 30;
+  overflow-y: auto;
+}
+
+.suggestion {
+  cursor: pointer;
+  padding: @grid-row-height @grid-gutter-width;
+}
+
+.suggestionFocused {
+  background-color: @sk-mid-grey-light;
+}
+
+.iconSvg {
+  fill: @sk-charcoal;
+  width: (@grid-row-height * 2);
+  height: (@grid-row-height * 2);
+}
+
+.suggestionText {
+  .standardText();
+  padding-left: @grid-gutter-width;
+}
