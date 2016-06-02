@@ -17,16 +17,16 @@ import {
 export default function IconPreview() {
   return (
     <a className={styles.root} href="#Iconography">
-      <HeartIcon svgClassName={styles.icon} />
-      <ProfileIcon svgClassName={styles.icon} />
-      <TickIcon svgClassName={styles.icon} />
-      <SearchIcon svgClassName={styles.icon} />
-      <ChevronIcon direction="down" svgClassName={styles.icon} />
-      <StarIcon svgClassName={styles.icon} />
-      <ThumbsUpIcon svgClassName={styles.icon} />
-      <CloseIcon svgClassName={styles.icon} />
-      <ErrorIcon svgClassName={styles.icon} />
-      <HelpIcon svgClassName={styles.icon} />
+      <HeartIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <ProfileIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <TickIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <SearchIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <ChevronIcon direction="down" className={styles.icon} svgClassName={styles.iconSvg} />
+      <StarIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <ThumbsUpIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <CloseIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <ErrorIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <HelpIcon className={styles.icon} svgClassName={styles.iconSvg} />
     </a>
   );
 }

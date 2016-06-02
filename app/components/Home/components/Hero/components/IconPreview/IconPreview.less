@@ -1,5 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
+@iconSize: (@grid-row-height * 4);
+
 .root {
   display: flex;
   position: relative;
@@ -26,7 +28,11 @@
 }
 
 .icon {
+  height: @iconSize;
+}
+
+.iconSvg {
   fill: @sk-highlight;
-  width: 36px;
-  height: 36px;
+  width: @iconSize;
+  height: @iconSize;
 }
