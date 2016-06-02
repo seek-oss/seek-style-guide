@@ -109,6 +109,7 @@ export default class Typography extends Component {
 
   render() {
     const { typeLevel, typeScale, baseline } = this.state;
+    const isTypeScaleConfigurable = typeLevel.name === 'Standard' || typeLevel.name === 'Touchable';
     const textContainerClassName = classnames({
       [styles.textContainerWithBaseline]: baseline,
       [styles.textContainer]: !baseline
@@ -153,19 +154,22 @@ export default class Typography extends Component {
                         </select>
                       </label>
                     </p>
-                    <p>
-                      <label>
-                        Type Scale:
-                        <input
-                          type="range"
-                          min={minTypeScale}
-                          max={maxTypeScale}
-                          step="0.1"
-                          value={typeScale}
-                          onChange={this.setTypeScale}
-                        />
-                      </label>
-                    </p>
+                    {
+                      isTypeScaleConfigurable &&
+                        <p>
+                          <label>
+                            Type Scale:
+                            <input
+                              type="range"
+                              min={minTypeScale}
+                              max={maxTypeScale}
+                              step="0.1"
+                              value={typeScale}
+                              onChange={this.setTypeScale}
+                            />
+                          </label>
+                        </p>
+                    }
                     <p>
                       <label>
                         <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
@@ -175,9 +179,9 @@ export default class Typography extends Component {
 
                   <Baseline isVisible={baseline}>
                     <div className={textContainerClassName}>
-                      <span style={textStyles}>
+                      <p style={textStyles}>
                         Living Style Guide
-                      </span>
+                      </p>
                     </div>
                   </Baseline>
                 </div>
