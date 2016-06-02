@@ -9,6 +9,7 @@ export default function Header() {
     <GridContainer>
       <div className={styles.logo}>
         <Logo />
+        <p className={styles.title}>design system</p>
       </div>
     </GridContainer>
   );
