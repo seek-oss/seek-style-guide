@@ -2,6 +2,7 @@ import styles from './Typography.less';
 
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import basekick from 'basekick';
 import Baseline from 'react-baseline';
 import { StickyContainer, Sticky } from 'react-sticky';
 
@@ -18,7 +19,6 @@ const defaultSpec = {
 const typeLevels = [
   {
     name: 'Hero',
-    lessCode: '.heroText()',
     spec: {
       'Line Height': '5 grid rows',
       'Type Scale': '4.2'
@@ -26,7 +26,6 @@ const typeLevels = [
   },
   {
     name: 'Headline',
-    lessCode: '.headlineText()',
     spec: {
       'Line Height': '4 grid rows',
       'Type Scale': '2.8'
@@ -34,7 +33,6 @@ const typeLevels = [
   },
   {
     name: 'Heading',
-    lessCode: '.headingText()',
     spec: {
       'Line Height': '3 grid rows',
       'Type Scale': '2.1'
@@ -42,7 +40,6 @@ const typeLevels = [
   },
   {
     name: 'Subheading',
-    lessCode: '.subheadingText()',
     spec: {
       'Line Height': '3 grid rows',
       'Type Scale': '1.8'
@@ -50,7 +47,6 @@ const typeLevels = [
   },
   {
     name: 'Standard',
-    lessCode: '.standardText()',
     spec: {
       'Line Height': '2 grid rows',
       'Type Scale': '1.4'
@@ -58,7 +54,6 @@ const typeLevels = [
   },
   {
     name: 'Small',
-    lessCode: '.smallText()',
     spec: {
       'Line Height': '2 grid rows',
       'Type Scale': '1.2'
@@ -66,7 +61,6 @@ const typeLevels = [
   },
   {
     name: 'Touchable',
-    lessCode: '.touchableText()',
     spec: {
       'Line Height': '5 grid rows',
       'Type Scale': '1.8'
@@ -80,16 +74,30 @@ export default class Typography extends Component {
 
     this.state = {
       typeLevel: typeLevels[0],
+      typeScale: typeLevels[0].spec['Type Scale'],
       baseline: true
     };
 
     this.setTypeLevel = this.setTypeLevel.bind(this);
+    this.setTypeScale = this.setTypeScale.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
   }
 
   setTypeLevel(event) {
+    const typeLevel = typeLevels.find(typeLevel =>
+      typeLevel.name === event.target.value
+    );
+    const typeScale = typeLevel.spec['Type Scale'];
+
     this.setState({
-      typeLevel: typeLevels.find(typeLevel => typeLevel.name === event.target.value)
+      typeLevel,
+      typeScale
+    });
+  }
+
+  setTypeScale(event) {
+    this.setState({
+      typeScale: event.target.value
     });
   }
 
@@ -100,18 +108,28 @@ export default class Typography extends Component {
   }
 
   render() {
-    const { typeLevel, baseline } = this.state;
+    const { typeLevel, typeScale, baseline } = this.state;
     const textContainerClassName = classnames({
       [styles.textContainerWithBaseline]: baseline,
       [styles.textContainer]: !baseline
     });
-    const textClassName = classnames({
-      [styles[typeLevel.name.toLowerCase() + 'Text']]: true
-    });
+    const typeScaleFloat = parseFloat(typeLevel.spec['Type Scale'], 10);
+    const minTypeScale = typeScaleFloat - 1;
+    const maxTypeScale = typeScaleFloat + 1;
     const spec = {
       ...typeLevel.spec,
+      'Type Scale': typeScale,
       ...defaultSpec
     };
+    const typeSizeModifier = parseFloat(typeScale, 10);
+    const textStyles = basekick({
+      baseFontSize: 10,
+      descenderHeightScale: 0.12,
+      gridRowHeight: 9,
+      typeSizeModifier,
+      typeRowSpan: parseInt(spec['Line Height'], 10)
+    });
+    const lessCode = `.${typeLevel.name.toLowerCase()}Text(${typeSizeModifier === typeScaleFloat ? '' : typeSizeModifier})`;
 
     return (
       <StickyContainer>
@@ -120,14 +138,6 @@ export default class Typography extends Component {
             <div className={styles.fixedContainer}>
               <GridContainer>
                 <div className={styles.fixedContainerContent}>
-                  <Baseline isVisible={baseline}>
-                    <div className={textContainerClassName}>
-                      <span className={textClassName}>
-                        Living Style Guide
-                      </span>
-                    </div>
-                  </Baseline>
-
                   <div>
                     <p>
                       <label>
@@ -145,10 +155,31 @@ export default class Typography extends Component {
                     </p>
                     <p>
                       <label>
+                        Type Scale:
+                        <input
+                          type="range"
+                          min={minTypeScale}
+                          max={maxTypeScale}
+                          step="0.1"
+                          value={typeScale}
+                          onChange={this.setTypeScale}
+                        />
+                      </label>
+                    </p>
+                    <p>
+                      <label>
                         <input type="checkbox" checked={baseline} onChange={this.toggleBaseline} /> baseline
                       </label>
                     </p>
                   </div>
+
+                  <Baseline isVisible={baseline}>
+                    <div className={textContainerClassName}>
+                      <span style={textStyles}>
+                        Living Style Guide
+                      </span>
+                    </div>
+                  </Baseline>
                 </div>
               </GridContainer>
             </div>
@@ -162,7 +193,7 @@ export default class Typography extends Component {
 
             <Section className={styles.section}>
               <HeadlineText>Code</HeadlineText>
-              <Code less={typeLevel.lessCode} />
+              <Code less={lessCode} />
             </Section>
           </GridContainer>
         </div>
