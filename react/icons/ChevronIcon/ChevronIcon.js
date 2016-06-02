@@ -18,6 +18,8 @@ export default function ChevronIcon({ direction, className,  ...props }) {
   return <Icon markup={svgMarkup} { ...combinedProps } />;
 }
 
+ChevronIcon.displayName = 'ChevronIcon';
+
 ChevronIcon.propTypes = {
   direction: React.PropTypes.oneOf([
     'up', 'down', 'right', 'left'

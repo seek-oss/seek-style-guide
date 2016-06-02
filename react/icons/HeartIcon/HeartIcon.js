@@ -21,6 +21,8 @@ export default function HeartIcon({ filled, className, ...props }) {
   return <Icon markup={markup} { ...combinedProps } />;
 }
 
+HeartIcon.displayName = 'HeartIcon';
+
 HeartIcon.propTypes = {
   filled: PropTypes.bool,
   className: PropTypes.string

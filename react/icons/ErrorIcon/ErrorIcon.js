@@ -10,6 +10,8 @@ export default function ErrorIcon({ filled, ...props }) {
   return <Icon markup={markup} { ...props } />;
 }
 
+ErrorIcon.displayName = 'ErrorIcon';
+
 ErrorIcon.propTypes = {
   filled: PropTypes.bool
 };

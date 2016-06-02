@@ -21,6 +21,8 @@ export default function StarIcon({ filled, className, ...props }) {
   return <Icon markup={markup} { ...combinedProps } />;
 }
 
+StarIcon.displayName = 'StarIcon';
+
 StarIcon.propTypes = {
   filled: PropTypes.bool,
   className: PropTypes.string

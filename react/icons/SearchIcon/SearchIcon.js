@@ -6,3 +6,5 @@ import Icon from '../icon';
 export default function SearchIcon(props) {
   return <Icon markup={svgMarkup} { ...props } />;
 }
+
+SearchIcon.displayName = 'SearchIcon';
