@@ -122,8 +122,8 @@ export default class Typography extends Component {
     };
     const typeSizeModifier = parseFloat(typeScale, 10);
     const baseFontSize = 10;
-    const textStyles = typeLevel.name === 'Touchable' ?
-      {
+    const textStyles = typeLevel.name === 'Touchable'
+      ? {
         fontSize: `${typeSizeModifier * baseFontSize}px`,
         lineHeight: '45px',
         height: '45px'
