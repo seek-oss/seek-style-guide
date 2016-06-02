@@ -8,7 +8,8 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 export default class Code extends Component {
 
   static propTypes = {
-    jsx: PropTypes.element.isRequired
+    jsx: PropTypes.element,
+    less: PropTypes.string
   };
 
   constructor() {
@@ -37,16 +38,22 @@ export default class Code extends Component {
 
   render() {
     const { copiedToClipboard } = this.state;
-    const { jsx } = this.props;
+    const { jsx, less } = this.props;
 
-    const jsxClone = React.cloneElement(jsx, {
+    const jsxClone = jsx ? React.cloneElement(jsx, {
       ...jsx.props,
       ...(jsx.props.svgClassName ? { svgClassName: '...' } : {})
-    });
+    }) : null;
 
-    const code = jsxToString(jsxClone, {
-      ignoreProps: ['className']
-    });
+    let code = '';
+
+    if (jsx) {
+      code = jsxToString(jsxClone, {
+        ignoreProps: ['className']
+      });
+    } else if (less) {
+      code = less;
+    }
 
     return (
       <CopyToClipboard text={code} onCopy={this.copiedToClipboard}>

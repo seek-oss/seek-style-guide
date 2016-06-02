@@ -9,6 +9,7 @@ import GridContainer from 'GridContainer/GridContainer';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
+import Code from 'Code/Code';
 
 const defaultSpec = {
   'Font Size': '10px'
@@ -17,6 +18,7 @@ const defaultSpec = {
 const typeLevels = [
   {
     name: 'Hero',
+    lessCode: '.heroText()',
     spec: {
       'Line Height': '5 grid rows',
       'Type Scale': '4.2'
@@ -24,6 +26,7 @@ const typeLevels = [
   },
   {
     name: 'Headline',
+    lessCode: '.headlineText()',
     spec: {
       'Line Height': '4 grid rows',
       'Type Scale': '2.8'
@@ -31,6 +34,7 @@ const typeLevels = [
   },
   {
     name: 'Heading',
+    lessCode: '.headingText()',
     spec: {
       'Line Height': '3 grid rows',
       'Type Scale': '2.1'
@@ -38,6 +42,7 @@ const typeLevels = [
   },
   {
     name: 'Subheading',
+    lessCode: '.subheadingText()',
     spec: {
       'Line Height': '3 grid rows',
       'Type Scale': '1.8'
@@ -45,6 +50,7 @@ const typeLevels = [
   },
   {
     name: 'Standard',
+    lessCode: '.standardText()',
     spec: {
       'Line Height': '2 grid rows',
       'Type Scale': '1.4'
@@ -52,6 +58,7 @@ const typeLevels = [
   },
   {
     name: 'Small',
+    lessCode: '.smallText()',
     spec: {
       'Line Height': '2 grid rows',
       'Type Scale': '1.2'
@@ -59,6 +66,7 @@ const typeLevels = [
   },
   {
     name: 'Touchable',
+    lessCode: '.touchableText()',
     spec: {
       'Line Height': '5 grid rows',
       'Type Scale': '1.8'
@@ -154,6 +162,7 @@ export default class Typography extends Component {
 
             <Section className={styles.section}>
               <HeadlineText>Code</HeadlineText>
+              <Code less={typeLevel.lessCode} />
             </Section>
           </GridContainer>
         </div>
