@@ -26,7 +26,7 @@ const specs = {
     'Margin bottom': '3 grid rows',
     'Text colour': '@sk-charcoal',
     'Font scale': '1.8 — @interaction-type-scale',
-    Border: '1px @sk-mid-grey-light',
+    Border: '1px — @sk-mid-grey-light',
     'Border radius': '2px — @field-border-radius'
   },
   focus: {

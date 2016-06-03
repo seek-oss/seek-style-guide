@@ -27,11 +27,11 @@ const loremIpsum = 'Lorem ipsum dolor sit amet, an sit quas justo, lucilius peri
 const specs = {
   default: {
     Height: '5 grid rows',
-    'Left and right internal padding': '1 gutter width',
+    'Internal gutter': '1 gutter width',
     'Text colour': '@sk-white',
     'Font size': '18px',
     'Border radius': '2px',
-    Shadow: '0 1px rgba(33, 33, 33, 0.7)'
+    Shadow: '1px, @sk-black 70%'
   },
   icon: {
     'Space between icon and text': '7px'

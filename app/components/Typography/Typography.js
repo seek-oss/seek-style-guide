@@ -15,7 +15,7 @@ import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
 const defaultSpec = {
-  'Font Size': '10px'
+  'Font Size': '10px — @base-font-size'
 };
 
 const typeLevels = [
@@ -135,7 +135,7 @@ export default class Typography extends Component {
         typeSizeModifier,
         typeRowSpan: parseInt(spec['Line Height'], 10)
       });
-    const lessCode = `.${typeLevel.name.toLowerCase()}Text(${typeSizeModifier === typeScaleFloat ? '' : typeSizeModifier})`;
+    const lessCode = `@import (reference) "~seek-style-guide/theme";\n\n\n.element {\n  .${typeLevel.name.toLowerCase()}Text(${typeSizeModifier === typeScaleFloat ? '' : typeSizeModifier});\n}`;
 
     return (
       <StickyContainer>

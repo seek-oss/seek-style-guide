@@ -31,7 +31,7 @@ const renderer = (spec, property) => {
         <Droplet
           colour={dictionary[value]}
           variableName={value}
-          sizeInRows={5}
+          sizeInRows={4}
           showHex={true}
           showVariable={true}
         />
