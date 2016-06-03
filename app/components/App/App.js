@@ -14,11 +14,11 @@ const titles = {
   '/typography': 'typography'
 };
 
-export default function App({ location, children }) {
+export default function App({ routes, children }) {
   return (
     <SeekApp fullScreen={true}>
       <div className={styles.root}>
-        <Header title={titles[location.pathname]} />
+        <Header title={titles[routes[routes.length - 1].path || '/']} />
         <main>
           {children}
         </main>
@@ -29,6 +29,6 @@ export default function App({ location, children }) {
 }
 
 App.propTypes = {
-  location: PropTypes.object,
+  routes: PropTypes.array,
   children: PropTypes.node
 };
