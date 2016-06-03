@@ -29,19 +29,19 @@ const specs = {
     Height: '5 grid rows',
     'Internal gutter': '1 gutter width',
     'Text colour': '@sk-white',
-    'Font size': '18px',
-    'Border radius': '2px',
-    Shadow: '1px, @sk-black 70%'
+    'Font size': '1.8 — @interaction-type-scale',
+    'Border radius': '2px — @field-border-radius',
+    'Drop shadow': '1px, @sk-black 70%'
   },
   icon: {
     'Space between icon and text': '7px'
   },
   active: {
-    Shadow: 'none',
+    'Drop shadow': 'none',
     Transform: 'scale(0.95)'
   },
   focus: {
-    Shadow: '0 0 0 1px @sk-focus'
+    'Drop shadow': '1px @sk-focus'
   },
   pink: {
     'Background colour': '@sk-pink'
@@ -63,7 +63,7 @@ const specs = {
   }
 };
 const propertiesToRemove = {
-  Shadow: 'none'
+  'Drop shadow': 'none'
 };
 
 function getSpec(specsObj) {

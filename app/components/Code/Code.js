@@ -43,11 +43,13 @@ export default class Code extends Component {
     let code = '';
 
     if (jsx) {
-      code = jsxToString(jsx, {
+      const componentCode = jsxToString(jsx, {
         ignoreProps: ['className']
       }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."');
+
+      code = `import { ${jsx.type.displayName} } from 'seek-style-guide/react';\n\n\n...\n\n\n${componentCode}`;
     } else if (less) {
-      code = less;
+      code = `@import (reference) "~seek-style-guide/theme";\n\n\n.element {\n  .${less}\n}`;
     }
 
     return (

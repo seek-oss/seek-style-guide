@@ -21,8 +21,7 @@ import { TextField } from 'seek-style-guide/react';
 const specs = {
   default: {
     Height: '5 grid rows',
-    'Padding left': '15px — @field-gutter-width',
-    'Padding right': '15px — @field-gutter-width',
+    'Internal gutters': '15px — @field-gutter-width',
     'Margin bottom': '3 grid rows',
     'Text colour': '@sk-charcoal',
     'Font scale': '1.8 — @interaction-type-scale',
