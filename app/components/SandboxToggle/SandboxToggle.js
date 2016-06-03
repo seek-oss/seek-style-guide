@@ -57,7 +57,7 @@ export default function SandboxToggle({ toggleType, toggleProps, label }) {
 
   return (
     <p className={styles.root}>
-    {renderer()}
+      {renderer()}
     </p>
   );
 }
