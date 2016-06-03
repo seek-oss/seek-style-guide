@@ -29,6 +29,7 @@ export default function Droplet({ colour, outline, outlineColour, showHex, showV
         (showHex || showVariable) && (
           <div className={styles.hex}>
           { showHex && <p>{colour}</p> }
+          { (showHex || showVariable) && ' — ' }
           { showVariable && <p>{variableName}</p> }
           </div>
       )}
