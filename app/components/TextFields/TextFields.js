@@ -12,12 +12,11 @@ import SandboxTogglePanel from 'SandboxTogglePanel/SandboxTogglePanel';
 import SandboxToggle from 'SandboxToggle/SandboxToggle';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
+import SubheadingText from 'SubheadingText/SubheadingText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
 import { TextField } from 'seek-style-guide/react';
-
-const loremIpsum = 'Lorem ipsum dolor sit amet, an sit quas justo, lucilius pericula no sit. In tota meis maiestatis eos, quem quod noluisse sea ea, ei pri dicta adolescens. Ad suas purto volutpat cum. Mea id tota paulo efficiantur. Ius in nisl dicam delenit. In sit summo contentiones consectetuer. His id velit vivendum patrioque, id qui delenit tincidunt posidonium.';
 
 const specs = {
   default: {
@@ -51,11 +50,13 @@ export default class TextFields extends Component {
 
     this.state = {
       focus: false,
+      help: false,
       invalid: false,
       baseline: false
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
+    this.toggleHelp = this.toggleHelp.bind(this);
     this.toggleInvalid = this.toggleInvalid.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
   }
@@ -63,6 +64,12 @@ export default class TextFields extends Component {
   toggleFocus(event) {
     this.setState({
       focus: event.target.checked
+    });
+  }
+
+  toggleHelp(event) {
+    this.setState({
+      help: event.target.checked
     });
   }
 
@@ -79,7 +86,7 @@ export default class TextFields extends Component {
   }
 
   render() {
-    const { focus, invalid, baseline } = this.state;
+    const { focus, help, invalid, baseline } = this.state;
     const className = classnames({
       [textFieldStyles.rootFocus]: focus
     });
@@ -89,7 +96,13 @@ export default class TextFields extends Component {
       invalid
     });
     const textfield = (
-      <TextField className={className} invalid={invalid} message={invalid ? 'Something went wrong' : ''} />
+      <TextField
+        className={className}
+        label="First name"
+        help={help ? 'e.g. David' : ''}
+        invalid={invalid}
+        message={invalid ? 'Something went wrong' : ''}
+      />
     );
 
     return (
@@ -131,6 +144,15 @@ export default class TextFields extends Component {
               }}
             />
             <SandboxToggle
+              label="Help"
+              toggleType="checkbox"
+              toggleProps={{
+                type: 'checkbox',
+                checked: help,
+                onChange: this.toggleHelp
+              }}
+            />
+            <SandboxToggle
               label="Invalid"
               toggleType="checkbox"
               toggleProps={{
@@ -156,16 +178,22 @@ export default class TextFields extends Component {
           <GridContainer className={styles.gridContainer}>
             <Section className={styles.section}>
               <HeadlineText>Do</HeadlineText>
-              <p className={styles.content}>
-                {loremIpsum}
-              </p>
+              <div className={styles.content}>
+                <SubheadingText>
+                  Do put help text below the field:
+                </SubheadingText>
+                <TextField label="First name" help="e.g. David" />
+              </div>
             </Section>
 
             <Section className={styles.section}>
               <HeadlineText>Don't</HeadlineText>
-              <p className={styles.content}>
-                {loremIpsum}
-              </p>
+              <div className={styles.content}>
+                <SubheadingText>
+                  Do not use placeholder text in the field:
+                </SubheadingText>
+                <TextField label="First name" inputProps={{ placeholder: 'e.g. David' }} />
+              </div>
             </Section>
           </GridContainer>
         </div>

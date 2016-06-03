@@ -13,14 +13,18 @@ export default class TextField extends Component {
     className: PropTypes.string,
     inputProps: PropTypes.object,
     invalid: PropTypes.bool,
-    message: PropTypes.string
+    message: PropTypes.string,
+    label: PropTypes.string,
+    help: PropTypes.string
   };
 
   static defaultProps = {
     className: '',
     inputProps: {},
     invalid: false,
-    message: ''
+    message: '',
+    label: '',
+    help: ''
   };
 
   constructor() {
@@ -36,12 +40,24 @@ export default class TextField extends Component {
   }
 
   render() {
-    const { className, invalid, message, inputProps, ...props } = this.props;
+    const { className, invalid, message, label, help, inputProps, ...props } = this.props;
     const { className: inputClassName, ...remainingInputProps } = inputProps;
 
     return (
       <div className={classnames(styles.root, className, { [styles.invalid]: invalid })} {...props}>
+        {
+          label &&
+            <label className={styles.label}>
+              {label}
+            </label>
+        }
         <input className={classnames(styles.input, inputClassName)} ref={this.storeInputReference} {...remainingInputProps} />
+        {
+          help &&
+            <p className={styles.help}>
+              {help}
+            </p>
+        }
         {
           invalid &&
             <p className={styles.message} data-automation="textfield-invalid-message">

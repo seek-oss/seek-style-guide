@@ -4,6 +4,12 @@
   display: inline-block;
 }
 
+.label {
+  .standardText();
+  display: inline-block;
+  margin-bottom: @grid-row-height;
+}
+
 .input {
   .touchableText();
   padding: 0 @field-gutter-width;
@@ -31,6 +37,10 @@
       border-color: @sk-pink;
     }
   }
+}
+
+.help {
+  .standardText();
 }
 
 .message {
