@@ -40,17 +40,12 @@ export default class Code extends Component {
     const { copiedToClipboard } = this.state;
     const { jsx, less } = this.props;
 
-    const jsxClone = jsx ? React.cloneElement(jsx, {
-      ...jsx.props,
-      ...(jsx.props.svgClassName ? { svgClassName: '...' } : {})
-    }) : null;
-
     let code = '';
 
     if (jsx) {
-      code = jsxToString(jsxClone, {
+      code = jsxToString(jsx, {
         ignoreProps: ['className']
-      });
+      }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."');
     } else if (less) {
       code = less;
     }
