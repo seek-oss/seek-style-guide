@@ -7,7 +7,7 @@ import grid from '!!raw!seek-style-guide/theme/layout/grid.less';
 const gridValues = lessToJs(grid);
 const rowHeight = parseInt(gridValues['@grid-row-height'], 10);
 
-export default function Droplet({ colour, outline, outlineColour, showHex, sizeInRows }) {
+export default function Droplet({ colour, outline, outlineColour, showHex, showVariable, variableName, sizeInRows }) {
   const size = (sizeInRows * rowHeight);
   const outlineStyles = outline ?
     { boxShadow: `0 0 1px 0 ${outlineColour}` } :
@@ -25,7 +25,13 @@ export default function Droplet({ colour, outline, outlineColour, showHex, sizeI
         className={styles.drop}
         style={dropletStyles}
       />
-      { showHex && <p className={styles.hex}>{colour}</p>}
+      {
+        (showHex || showVariable) && (
+          <div className={styles.hex}>
+          { showHex && <p>{colour}</p> }
+          { showVariable && <p>{variableName}</p> }
+          </div>
+      )}
     </div>
   );
 }
@@ -34,6 +40,8 @@ Droplet.propTypes = {
   colour: PropTypes.string.isRequired,
   sizeInRows: PropTypes.number,
   showHex: PropTypes.bool,
+  showVariable: PropTypes.bool,
+  variableName: PropTypes.string,
   outline: PropTypes.bool,
   outlineColour: PropTypes.string
 };
@@ -42,6 +50,8 @@ Droplet.defaultProps = {
   colour: PropTypes.string,
   sizeInRows: 6,
   showHex: false,
+  showVariable: false,
+  variableName: '',
   outline: false,
   outlineColour: ''
 };

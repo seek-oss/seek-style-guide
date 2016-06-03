@@ -28,7 +28,7 @@ const specs = {
   default: {
     Height: '5 grid rows',
     'Left and right internal padding': '1 gutter width',
-    'Text color': '@sk-white',
+    'Text colour': '@sk-white',
     'Font size': '18px',
     'Border radius': '2px',
     Shadow: '0 1px rgba(33, 33, 33, 0.7)'
@@ -44,22 +44,22 @@ const specs = {
     Shadow: '0 0 0 1px @sk-focus'
   },
   pink: {
-    'Background color': '@sk-pink'
+    'Background colour': '@sk-pink'
   },
   pinkHover: {
-    'Background color': 'lighten(@sk-pink, 5%)'
+    'Background colour': 'lighten(@sk-pink, 5%)'
   },
   pinkActive: {
-    'Background color': 'darken(@sk-pink, 5%)'
+    'Background colour': 'darken(@sk-pink, 5%)'
   },
   blue: {
-    'Background color': '@sk-highlight'
+    'Background colour': '@sk-highlight'
   },
   blueHover: {
-    'Background color': 'lighten(@sk-highlight, 5%)'
+    'Background colour': 'lighten(@sk-highlight, 5%)'
   },
   blueActive: {
-    'Background color': 'darken(@sk-highlight, 5%)'
+    'Background colour': 'darken(@sk-highlight, 5%)'
   }
 };
 const propertiesToRemove = {

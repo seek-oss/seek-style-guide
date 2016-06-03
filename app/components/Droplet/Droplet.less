@@ -2,9 +2,7 @@
 
 .root {
   display: flex;
-  // flex-direction: column;
   align-items: center;
-  // justify-content: center;
 }
 
 .drop {
@@ -12,9 +10,14 @@
 }
 
 .hex {
-  .standardText();
+  .rawText();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: @sk-mid-grey-dark;
   margin-left: @grid-gutter-width;
-  margin-bottom: @grid-row-height;
-  text-align: center;
+  > * {
+    line-height: (@standard-type-row-span * @grid-row-height);
+    height: (@standard-type-row-span * @grid-row-height);
+  }
 }

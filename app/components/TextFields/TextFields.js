@@ -25,7 +25,7 @@ const specs = {
     'Padding left': '15px — @field-gutter-width',
     'Padding right': '15px — @field-gutter-width',
     'Margin bottom': '3 grid rows',
-    'Text color': '@sk-charcoal',
+    'Text colour': '@sk-charcoal',
     'Font scale': '1.8 — @interaction-type-scale',
     Border: '1px @sk-mid-grey-light',
     'Border radius': '2px — @field-border-radius'

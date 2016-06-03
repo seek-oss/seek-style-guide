@@ -1,10 +1,14 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  .standardText();
-  white-space: nowrap;
 }
 
 .property {
-  padding: @grid-row-height (@grid-gutter-width * 2) @grid-row-height 0;
+  .touchableText(@standard-type-scale);
+  white-space: nowrap;
+  vertical-align: middle;
+  color: @sk-mid-grey-dark;
+  &:not(:first-of-type) {
+    padding: 0 (@grid-gutter-width * 2);
+  }
 }
