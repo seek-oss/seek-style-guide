@@ -117,7 +117,7 @@ export default class TextFields extends Component {
                     </SandboxPreview>
                     <div style={{ position: 'absolute', top: 0, right: 0 }}>
                       <SandboxToggle
-                        label={`${baseline ? 'Hide' : 'Show'} baseline`}
+                        label="Baseline"
                         toggleType="checkbox"
                         toggleProps={{
                           type: 'checkbox',
