@@ -1,10 +1,10 @@
-import svgMarkup from './TrashCanIcon.svg';
+import svgMarkup from './DeleteIcon.svg';
 
 import React, { Component, PropTypes } from 'react';
 
-export default class TrashCanIcon extends Component {
+export default class DeleteIcon extends Component {
 
-  static displayName = 'TrashCanIcon';
+  static displayName = 'DeleteIcon';
 
   static propTypes = {
     svgClassName: PropTypes.string

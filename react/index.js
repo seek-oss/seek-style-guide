@@ -12,7 +12,7 @@ import ErrorIcon from './icons/ErrorIcon/ErrorIcon';
 import TickIcon from './icons/TickIcon/TickIcon';
 import HelpIcon from './icons/HelpIcon/HelpIcon';
 import PlusIcon from './icons/PlusIcon/PlusIcon';
-import TrashCanIcon from './icons/TrashCanIcon/TrashCanIcon';
+import DeleteIcon from './icons/DeleteIcon/DeleteIcon';
 import BlueButton from './buttons/BlueButton/BlueButton';
 import PinkButton from './buttons/PinkButton/PinkButton';
 import TextField from './fields/TextField/TextField';
@@ -33,7 +33,7 @@ export {
   TickIcon,
   HelpIcon,
   PlusIcon,
-  TrashCanIcon,
+  DeleteIcon,
   BlueButton,
   PinkButton,
   TextField,
