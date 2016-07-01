@@ -50,10 +50,12 @@ const decoratePostCss = config => {
 
     // Ensure the "default" plugin pack is configured for consumer's postcss-loader config
     config.module.loaders = config.module.loaders.map(loaderConfig => {
-      loaderConfig.loader = loaderConfig.loader
-        // This is pretty hacky, but will do the trick for now...
-        .replace(/(postcss(-loader)?\?)/, `$1pack=${POSTCSS_DEFAULT_PACK}&`) // With query string
-        .replace(/(postcss(-loader)?(?!\?))/, `$1?pack=${POSTCSS_DEFAULT_PACK}`); // Without query string
+      if (typeof loaderConfig.loader === 'string') {
+        loaderConfig.loader = loaderConfig.loader
+          // This is pretty hacky, but will do the trick for now...
+          .replace(/(postcss(-loader)?\?)/, `$1pack=${POSTCSS_DEFAULT_PACK}&`) // With query string
+          .replace(/(postcss(-loader)?(?!\?))/, `$1?pack=${POSTCSS_DEFAULT_PACK}`); // Without query string
+      }
 
       return loaderConfig;
     });
@@ -96,6 +98,10 @@ const getCommonLoaders = () => ([
 ]);
 
 const decorateConfig = (config, loaders) => {
+  // Ensure config meets minimum requirements for decoration
+  config.module = config.module || {};
+  config.module.loaders = config.module.loaders || [];
+
   validateConfig(config);
 
   config = decoratePostCss(config);
