@@ -21,6 +21,18 @@ export default class BlueButton extends Component {
     loading: false
   };
 
+  constructor() {
+    super();
+
+    this.storeButtonReference = this.storeButtonReference.bind(this);
+  }
+
+  storeButtonReference(button) {
+    if (button !== null) {
+      this.button = button;
+    }
+  }
+
   render() {
     const { className, loading, children, ...props } = this.props;
 
@@ -30,6 +42,7 @@ export default class BlueButton extends Component {
         [styles.loading]: loading
       }),
       disabled: loading,
+      ref: this.storeButtonReference,
       ...props
     };
 
