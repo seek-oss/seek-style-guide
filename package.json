@@ -69,7 +69,7 @@
     "react-addons-pure-render-mixin": "^15.0.2",
     "react-autosuggest": "^3.7.4",
     "react-baseline": "^1.0.1",
-    "react-copy-to-clipboard": "^4.1.0",
+    "react-copy-to-clipboard": "4.1.0",
     "react-dom": "^15.0.2",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-router": "^2.4.0",
