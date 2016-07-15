@@ -19,17 +19,21 @@ export default class DownRightArrowIcon extends Component {
   };
 
   render() {
-    const { className, svgClassName, ...props } = this.props;
+    const { className, svgClassName, ...restProps } = this.props;
     const svgMarkupWithClassName = svgMarkup
       .replace('<svg ', `<svg class="${svgClassName}" `);
     const combinedProps = {
-      props,
+      ...restProps,
       className: classnames(styles.root, className)
     };
 
+    /* eslint-disable react/no-danger */
     return (
-      <span {...combinedProps} dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} /> // eslint-disable-line react/no-danger
+      <span
+        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
+        {...combinedProps} />
     );
+    /* eslint-enable react/no-danger */
   }
 
 }

@@ -15,10 +15,17 @@ export default class HelpIcon extends Component {
   };
 
   render() {
+    const { svgClassName, ...restProps } = this.props;
     const svgMarkupWithClassName = svgMarkup
-      .replace('<svg ', `<svg class="${this.props.svgClassName}" `);
+      .replace('<svg ', `<svg class="${svgClassName}" `);
 
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...this.props } />; // eslint-disable-line react/no-danger
+    /* eslint-disable react/no-danger */
+    return (
+      <span
+        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
+        {...restProps} />
+    );
+    /* eslint-enable react/no-danger */
   }
 
 }

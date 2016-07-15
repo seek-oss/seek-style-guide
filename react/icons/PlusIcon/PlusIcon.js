@@ -19,7 +19,13 @@ export default class PlusIcon extends Component {
     const svgMarkupWithClassName = svgMarkup
       .replace('<svg ', `<svg class="${svgClassName}" `);
 
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...restProps } />; // eslint-disable-line react/no-danger
+    /* eslint-disable react/no-danger */
+    return (
+      <span
+        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
+        {...restProps} />
+    );
+    /* eslint-enable react/no-danger */
   }
 
 }

@@ -29,18 +29,22 @@ export default class ErrorIcon extends Component {
   }
 
   render() {
-    const { svgClassName, className, ...props } = this.props;
-
+    const { svgClassName, className, ...restProps } = this.props;
     const svgMarkupWithClassName = this.getSvg()
       .replace('<svg ', `<svg class="${svgClassName}" `);
+    const combinedProps = {
+      ...restProps,
+      className: classnames(styles.root, className)
+    };
 
+    /* eslint-disable react/no-danger */
     return (
       <span
-        className={classnames(styles.root, className)}
-        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} // eslint-disable-line react/no-danger
-        { ...props }
+        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
+        {...combinedProps}
       />
     );
+    /* eslint-enable react/no-danger */
   }
 
 }

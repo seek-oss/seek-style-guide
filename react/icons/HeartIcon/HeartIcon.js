@@ -4,6 +4,7 @@ import svgMarkup from './HeartIcon.svg';
 import svgMarkupFilled from './HeartIconFilled.svg';
 
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 
 export default class HeartIcon extends Component {
 
@@ -28,17 +29,23 @@ export default class HeartIcon extends Component {
   }
 
   render() {
-    const { svgClassName, className, filled } = this.props;
-
+    const { svgClassName, className, filled, ...restProps } = this.props;
     const svgMarkupWithClassName = this.getSvg()
       .replace('<svg ', `<svg class="${svgClassName}" `);
-
     const combinedProps = {
-      ...this.props,
-      className: `${className}${filled ? ` ${styles.filled}` : ''}`
+      ...restProps,
+      className: classnames(className, {
+        [styles.filled]: filled
+      })
     };
 
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...combinedProps } />; // eslint-disable-line react/no-danger
+    /* eslint-disable react/no-danger */
+    return (
+      <span
+        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
+        {...combinedProps} />
+    );
+    /* eslint-enable react/no-danger */
   }
 
 }
