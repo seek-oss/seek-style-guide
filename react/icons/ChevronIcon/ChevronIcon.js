@@ -2,6 +2,7 @@ import svgMarkup from './ChevronIcon.svg';
 import styles from './ChevronIcon.less';
 
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 
 export default class ChevronIcon extends Component {
 
@@ -21,15 +22,21 @@ export default class ChevronIcon extends Component {
   };
 
   render() {
-    const { svgClassName, direction, className } = this.props;
+    const { svgClassName, direction, className, ...restProps } = this.props;
     const svgMarkupWithClassName = svgMarkup
       .replace('<svg ', `<svg class="${svgClassName}" `);
     const combinedProps = {
-      ...this.props,
-      className: `${styles.rotate}${styles[direction] ? ` ${styles[direction]}` : ''}${className ? ` ${className}` : ''}`
+      ...restProps,
+      className: classnames(className, styles.rotate, styles[direction])
     };
 
-    return <span dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }} { ...combinedProps } />; // eslint-disable-line react/no-danger
+    /* eslint-disable react/no-danger */
+    return (
+      <span
+        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
+        { ...combinedProps } />
+    );
+    /* eslint-enable react/no-danger */
   }
 
 }
