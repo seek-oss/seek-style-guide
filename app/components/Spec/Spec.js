@@ -44,7 +44,7 @@ const renderer = (spec, property) => {
 
 export default function Spec({ spec }) {
   return (
-    <table className={styles.root}>
+    <table>
       <tbody>
         {
           Object.keys(spec).map(property =>
