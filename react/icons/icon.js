@@ -1,4 +1,4 @@
-import styles from './Icon.less';
+import styles from './icon.less';
 
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
