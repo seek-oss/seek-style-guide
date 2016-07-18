@@ -1,4 +1,4 @@
-import styles from  './App.less';
+import styles from './App.less';
 
 import React, { PropTypes } from 'react';
 import { SeekApp } from 'seek-style-guide/react';
