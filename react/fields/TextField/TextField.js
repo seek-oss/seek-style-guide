@@ -93,24 +93,35 @@ export default class TextField extends Component {
     return (
       <div className={classnames(styles.root, className, { [styles.invalid]: invalid })}>
         {
-          label &&
+          label ?
             <label className={styles.label} {...labelProps} htmlFor={id || null}>
               {label}
-            </label>
+            </label> :
+            null
         }
         <input className={classnames(styles.input, inputClassName)} ref={this.storeInputReference} {...remainingInputProps} id={id} />
         {
-          (!invalid && help) &&
+          (!invalid && help) ?
             <p className={styles.help} {...helpProps}>
               {help}
-            </p>
+            </p> :
+            null
         }
         {
-          message &&
+          message ?
             <p className={styles.message} {...messageProps}>
-              {invalid && <ErrorIcon filled={true} className={styles.messageIcon} svgClassName={styles.messageIconSvg} />}
+              {
+                invalid ?
+                  <ErrorIcon
+                    filled={true}
+                    className={styles.messageIcon}
+                    svgClassName={styles.messageIconSvg}
+                  /> :
+                  null
+              }
               {message}
-            </p>
+            </p> :
+            null
         }
       </div>
     );
