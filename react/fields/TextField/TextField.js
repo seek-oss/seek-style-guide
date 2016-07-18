@@ -10,11 +10,48 @@ export default class TextField extends Component {
   static displayName = 'TextField';
 
   static propTypes = {
+    id: (props, propName, componentName) => {
+      const { id, label } = props;
+
+      if (typeof id !== 'string') {
+        return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
+      }
+
+      if (label && !id) {
+        return new Error(`When ${componentName} has a \`label\`, it should also have an \`id\`.`);
+      }
+    },
     className: PropTypes.string,
     invalid: PropTypes.bool,
     label: PropTypes.string,
-    labelProps: PropTypes.object,
-    inputProps: PropTypes.object,
+    labelProps: (props, propName, componentName) => {
+      const { id, label, labelProps } = props;
+      const { htmlFor: labelFor } = labelProps || {};
+
+      if (typeof labelProps !== 'undefined' && typeof labelProps !== 'object') {
+        return new Error(`Invalid prop \`labelProps\` of type \`${typeof labelProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
+      }
+
+      if (!label && labelProps) {
+        return new Error(`Specifying \`labelProps\` is redundant when \`label\` is not specified in ${componentName}.`);
+      }
+
+      if (labelFor && id) {
+        return new Error(`\`labelProps.htmlFor\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
+      }
+    },
+    inputProps: (props, propName, componentName) => {
+      const { id, inputProps } = props;
+      const { id: inputId } = inputProps || {};
+
+      if (typeof inputProps !== 'undefined' && typeof inputProps !== 'object') {
+        return new Error(`Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
+      }
+
+      if (inputId && id) {
+        return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
+      }
+    },
     help: PropTypes.string,
     helpProps: PropTypes.object,
     message: PropTypes.string,
@@ -22,15 +59,16 @@ export default class TextField extends Component {
   };
 
   static defaultProps = {
+    id: '',
     className: '',
     invalid: false,
     label: '',
-    labelProps: {},
-    inputProps: {},
+    labelProps: undefined,
+    inputProps: undefined,
     help: '',
-    helpProps: {},
+    helpProps: undefined,
     message: '',
-    messageProps: {}
+    messageProps: undefined
   };
 
   constructor() {
@@ -47,8 +85,8 @@ export default class TextField extends Component {
 
   render() {
     const {
-      className, invalid, label, labelProps, inputProps,
-      help, helpProps, message, messageProps
+      id, className, invalid, label, labelProps = {}, inputProps = {},
+      help, helpProps = {}, message, messageProps = {}
     } = this.props;
     const { className: inputClassName, ...remainingInputProps } = inputProps;
 
@@ -56,11 +94,11 @@ export default class TextField extends Component {
       <div className={classnames(styles.root, className, { [styles.invalid]: invalid })}>
         {
           label &&
-            <label className={styles.label} {...labelProps}>
+            <label className={styles.label} {...labelProps} htmlFor={id || null}>
               {label}
             </label>
         }
-        <input className={classnames(styles.input, inputClassName)} ref={this.storeInputReference} {...remainingInputProps} />
+        <input className={classnames(styles.input, inputClassName)} ref={this.storeInputReference} {...remainingInputProps} id={id} />
         {
           (!invalid && help) &&
             <p className={styles.help} {...helpProps}>
