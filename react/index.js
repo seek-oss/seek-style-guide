@@ -11,12 +11,12 @@ import ThumbsUpIcon from './icons/ThumbsUpIcon/ThumbsUpIcon';
 import ErrorIcon from './icons/ErrorIcon/ErrorIcon';
 import TickIcon from './icons/TickIcon/TickIcon';
 import HelpIcon from './icons/HelpIcon/HelpIcon';
+import Button from './Button/Button';
 import PlusIcon from './icons/PlusIcon/PlusIcon';
 import DeleteIcon from './icons/DeleteIcon/DeleteIcon';
-import BlueButton from './buttons/BlueButton/BlueButton';
-import PinkButton from './buttons/PinkButton/PinkButton';
 import TextField from './fields/TextField/TextField';
 import EmailField from './fields/EmailField/EmailField';
+import Logo from './Logo/Logo';
 
 export {
   SeekApp,
@@ -32,10 +32,10 @@ export {
   ErrorIcon,
   TickIcon,
   HelpIcon,
+  Button,
   PlusIcon,
   DeleteIcon,
-  BlueButton,
-  PinkButton,
   TextField,
-  EmailField
+  EmailField,
+  Logo
 };

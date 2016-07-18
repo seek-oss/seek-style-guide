@@ -12,6 +12,6 @@ new WebpackDevServer(webpack(config), {
   if (error) {
     console.log(error); // eslint-disable-line no-console
   } else {
-    opn('http://localhost:' + port);
+    opn(`http://localhost:${port}`);
   }
 });

@@ -1,0 +1,51 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  height: (@grid-row-height * 14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  .touchableText(@hero-type-scale);
+  font-weight: 300;
+  position: relative;
+  top: -5px;
+  margin-left: 18px;
+}
+
+.link {
+  .touchableText(@standard-type-scale);
+  .link();
+  display: inline-block;
+  margin-left: @grid-gutter-width;
+  color: @sk-mid-grey-dark;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    bottom: 11px;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity .2s ease;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.active {
+  position: relative;
+  color: @sk-black;
+  &:before {
+    opacity: 1;
+  }
+}

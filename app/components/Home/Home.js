@@ -1,8 +1,15 @@
 import React from 'react';
-import Heading from 'Heading/Heading';
+
+import Hero from 'Hero/Hero';
+import Preface from 'Preface/Preface';
+import Body from 'Body/Body';
 
 export default function Home() {
   return (
-    <Heading>Welcome to SEEK Style Guide</Heading>
+    <div>
+      <Hero />
+      <Preface />
+      <Body />
+    </div>
   );
 }

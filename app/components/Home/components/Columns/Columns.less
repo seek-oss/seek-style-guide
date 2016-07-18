@@ -1,0 +1,14 @@
+@import (reference) "~seek-style-guide/theme";
+
+.columns {
+  display: flex;
+  margin-bottom: @grid-row-height * 4;
+  .column {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-right: @grid-gutter-width * 3;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

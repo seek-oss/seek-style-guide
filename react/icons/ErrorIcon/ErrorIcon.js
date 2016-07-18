@@ -1,50 +1,21 @@
-import styles from './ErrorIcon.less';
-
 import svgMarkup from './ErrorIcon.svg';
 import svgMarkupFilled from './ErrorIconFilled.svg';
 
-import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
+import React, { PropTypes } from 'react';
+import Icon from '../icon';
 
-export default class ErrorIcon extends Component {
+export default function ErrorIcon({ filled, ...props }) {
+  const markup = filled ? svgMarkupFilled : svgMarkup;
 
-  static displayName = 'ErrorIcon';
-
-  static propTypes = {
-    svgClassName: PropTypes.string,
-    className: PropTypes.string,
-    filled: PropTypes.bool
-  };
-
-  static defaultProps = {
-    svgClassName: '',
-    className: '',
-    filled: false
-  };
-
-  getSvg() {
-    const { filled } = this.props;
-
-    return filled ? svgMarkupFilled : svgMarkup;
-  }
-
-  render() {
-    const { svgClassName, className, ...restProps } = this.props;
-    const svgMarkupWithClassName = this.getSvg()
-      .replace('<svg ', `<svg class="${svgClassName}" `);
-    const combinedProps = {
-      ...restProps,
-      className: classnames(styles.root, className)
-    };
-
-    /* eslint-disable react/no-danger */
-    return (
-      <span
-        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
-        {...combinedProps}
-      />
-    );
-    /* eslint-enable react/no-danger */
-  }
-
+  return <Icon markup={markup} {...props} />;
 }
+
+ErrorIcon.displayName = 'ErrorIcon';
+
+ErrorIcon.propTypes = {
+  filled: PropTypes.bool
+};
+
+ErrorIcon.defaultProps = {
+  filled: false
+};

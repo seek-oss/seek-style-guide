@@ -1,31 +1,10 @@
 import svgMarkup from './ProfileIcon.svg';
 
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import Icon from '../icon';
 
-export default class ProfileIcon extends Component {
-
-  static displayName = 'ProfileIcon';
-
-  static propTypes = {
-    svgClassName: PropTypes.string
-  };
-
-  static defaultProps = {
-    svgClassName: ''
-  };
-
-  render() {
-    const { svgClassName, ...restProps } = this.props;
-    const svgMarkupWithClassName = svgMarkup
-      .replace('<svg ', `<svg class="${svgClassName}" `);
-
-    /* eslint-disable react/no-danger */
-    return (
-      <span
-        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
-        {...restProps} />
-    );
-    /* eslint-enable react/no-danger */
-  }
-
+export default function ProfileIcon(props) {
+  return <Icon markup={svgMarkup} {...props} />;
 }
+
+ProfileIcon.displayName = 'ProfileIcon';

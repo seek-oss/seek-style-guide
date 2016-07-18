@@ -3,49 +3,32 @@ import styles from './HeartIcon.less';
 import svgMarkup from './HeartIcon.svg';
 import svgMarkupFilled from './HeartIconFilled.svg';
 
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import Icon from '../icon';
 
-export default class HeartIcon extends Component {
+export default function HeartIcon({ filled, className, ...props }) {
+  const markup = filled ? svgMarkupFilled : svgMarkup;
 
-  static displayName = 'HeartIcon';
-
-  static propTypes = {
-    svgClassName: PropTypes.string,
-    className: PropTypes.string,
-    filled: PropTypes.bool
+  const combinedProps = {
+    ...props,
+    className: classnames({
+      [styles.filled]: filled,
+      [className]: className
+    })
   };
 
-  static defaultProps = {
-    svgClassName: '',
-    className: '',
-    filled: false
-  };
-
-  getSvg() {
-    const { filled } = this.props;
-
-    return filled ? svgMarkupFilled : svgMarkup;
-  }
-
-  render() {
-    const { svgClassName, className, filled, ...restProps } = this.props;
-    const svgMarkupWithClassName = this.getSvg()
-      .replace('<svg ', `<svg class="${svgClassName}" `);
-    const combinedProps = {
-      ...restProps,
-      className: classnames(className, {
-        [styles.filled]: filled
-      })
-    };
-
-    /* eslint-disable react/no-danger */
-    return (
-      <span
-        dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
-        {...combinedProps} />
-    );
-    /* eslint-enable react/no-danger */
-  }
-
+  return <Icon markup={markup} {...combinedProps} />;
 }
+
+HeartIcon.displayName = 'HeartIcon';
+
+HeartIcon.propTypes = {
+  filled: PropTypes.bool,
+  className: PropTypes.string
+};
+
+HeartIcon.defaultProps = {
+  filled: false,
+  className: ''
+};

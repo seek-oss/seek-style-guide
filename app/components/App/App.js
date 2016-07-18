@@ -1,36 +1,30 @@
-import styles from './App.less';
-
 import React, { PropTypes } from 'react';
 import { SeekApp } from 'seek-style-guide/react';
-import logo from './logo.svg';
-import NavLink from 'NavLink/NavLink';
-import Navigation from 'Navigation/Navigation';
 
-export default function App({ children }) {
-  /* eslint-disable react/no-danger */
+import Header from 'Header/Header';
+import Footer from 'Footer/Footer';
+
+const titles = {
+  '/': 'living style',
+  '/icons': 'icons',
+  '/buttons': 'buttons',
+  '/textfields': 'text fields',
+  '/typography': 'typography'
+};
+
+export default function App({ routes, children }) {
   return (
     <SeekApp fullScreen={true}>
-      <div className={styles.root}>
-        <div className={styles.navigationContainer}>
-          <header>
-            <h1>
-              <NavLink className={styles.headerLink} to="/" onlyActiveOnIndex={true}>
-                <span className={styles.headerLogo} dangerouslySetInnerHTML={{ __html: logo }} />
-                <span className={styles.headerText}>Style Guide</span>
-              </NavLink>
-            </h1>
-          </header>
-          <Navigation />
-        </div>
-        <main className={styles.mainContainer}>
-          {children}
-        </main>
-      </div>
+      <Header title={titles[routes[routes.length - 1].path || '/']} />
+      <main>
+        {children}
+      </main>
+      <Footer />
     </SeekApp>
   );
-  /* eslint-enable react/no-danger */
 }
 
 App.propTypes = {
+  routes: PropTypes.array,
   children: PropTypes.node
 };

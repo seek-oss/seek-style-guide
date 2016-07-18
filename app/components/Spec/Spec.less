@@ -1,0 +1,11 @@
+@import (reference) "~seek-style-guide/theme";
+
+.property {
+  .touchableText(@standard-type-scale);
+  white-space: nowrap;
+  vertical-align: middle;
+  color: @sk-mid-grey-dark;
+  &:not(:first-of-type) {
+    padding: 0 (@grid-gutter-width * 2);
+  }
+}

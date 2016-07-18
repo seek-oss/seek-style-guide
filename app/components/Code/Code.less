@@ -1,0 +1,28 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  .rawText(@standard-type-scale);
+  position: relative;
+  padding: (@grid-row-height * 2) (@grid-gutter-width * 2);
+  background-color: @sk-white;
+  border-left: 3px solid @sk-blue;
+  cursor: pointer;
+}
+
+.code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.message {
+  .standardText(@small-type-scale);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: @grid-row-height .5em;
+  cursor: pointer;
+  opacity: 0;
+
+  .root:hover & {
+    opacity: 1;
+  }
+}

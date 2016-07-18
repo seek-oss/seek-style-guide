@@ -1,0 +1,25 @@
+@import (reference) "~seek-style-guide/theme";
+
+@size: (@interaction-type-row-span * @grid-row-height);
+
+.root {
+  text-align: center;
+  margin: (@grid-row-height * 5) 0;
+}
+
+.github {
+  height: @size;
+  width: @size;
+}
+
+.link {
+  display: inline-block;
+  height: @size;
+  width: @size;
+  color: @sk-mid-grey-dark;
+  opacity: 0.5;
+  transition: opacity .3s ease;
+  &:hover {
+    opacity: 1;
+  }
+}

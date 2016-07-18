@@ -1,0 +1,42 @@
+@import (reference) "~seek-style-guide/theme";
+
+.sandboxContainer {
+  background-color: @sk-white;
+}
+
+.sandbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gridContainer {
+  display: flex;
+}
+
+.section {
+  flex: 1;
+
+  &:not(:last-child) {
+    margin-right: @grid-gutter-width * 3;
+  }
+}
+
+.divider {
+  display: inline-block;
+  width: 1px;
+  height: (@grid-row-height * 3);
+  margin: 0 30px;
+  position: relative;
+  top: 10px;
+}
+
+.content {
+  .standardText();
+}
+
+.iconSvg {
+  fill: @sk-white;
+  margin-right: 7px;
+}
