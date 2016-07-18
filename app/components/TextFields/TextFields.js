@@ -95,10 +95,14 @@ export default class TextFields extends Component {
     const textfield = (
       <TextField
         className={className}
-        label="First name"
-        help={help ? 'e.g. David' : ''}
         invalid={invalid}
+        label="First name"
+        labelProps={{ htmlFor: 'firstName' }}
+        inputProps={{ id: 'firstName' }}
+        help={help ? 'e.g. David' : ''}
+        helpProps={{ 'data-automation': 'first-name-help' }}
         message={invalid ? 'Something went wrong' : ''}
+        messageProps={{ 'data-automation': 'first-name-error-message' }}
       />
     );
 
