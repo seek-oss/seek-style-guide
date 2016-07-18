@@ -12,7 +12,6 @@ import SandboxTogglePanel from 'SandboxTogglePanel/SandboxTogglePanel';
 import SandboxToggle from 'SandboxToggle/SandboxToggle';
 import Section from 'Section/Section';
 import HeadlineText from 'HeadlineText/HeadlineText';
-import SubheadingText from 'SubheadingText/SubheadingText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
@@ -171,28 +170,6 @@ export default class TextFields extends Component {
             <Section className={styles.section}>
               <HeadlineText>Code</HeadlineText>
               <Code jsx={textfield} />
-            </Section>
-          </GridContainer>
-
-          <GridContainer className={styles.gridContainer}>
-            <Section className={styles.section}>
-              <HeadlineText>Do</HeadlineText>
-              <div className={styles.content}>
-                <SubheadingText>
-                  Do put help text below the field:
-                </SubheadingText>
-                <TextField label="First name" help="e.g. David" />
-              </div>
-            </Section>
-
-            <Section className={styles.section}>
-              <HeadlineText>Don't</HeadlineText>
-              <div className={styles.content}>
-                <SubheadingText>
-                  Do not use placeholder text in the field:
-                </SubheadingText>
-                <TextField label="First name" inputProps={{ placeholder: 'e.g. David' }} />
-              </div>
             </Section>
           </GridContainer>
         </div>

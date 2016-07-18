@@ -147,7 +147,7 @@ export default class Typography extends Component {
                   <div className={styles.sandbox}>
                     <SandboxPreview>
                       <div className={styles.textContainer}>
-                        <p className={styles.previewText} style={textStyles} contentEditable={true}>
+                        <p className={styles.previewText} style={textStyles}>
                           Living Style Guide
                         </p>
                       </div>

@@ -24,6 +24,18 @@ export default class Button extends Component {
     loading: false
   };
 
+  constructor() {
+    super();
+
+    this.storeButtonReference = this.storeButtonReference.bind(this);
+  }
+
+  storeButtonReference(button) {
+    if (button !== null) {
+      this.button = button;
+    }
+  }
+
   render() {
     const { colour, className, loading, children, ...props } = this.props;
 
@@ -35,6 +47,7 @@ export default class Button extends Component {
         [styles.root_isBlue]: colour === 'blue'
       }),
       disabled: loading,
+      ref: this.storeButtonReference,
       ...props
     };
 

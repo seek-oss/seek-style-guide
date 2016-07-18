@@ -12,6 +12,8 @@ import ErrorIcon from './icons/ErrorIcon/ErrorIcon';
 import TickIcon from './icons/TickIcon/TickIcon';
 import HelpIcon from './icons/HelpIcon/HelpIcon';
 import Button from './Button/Button';
+import PlusIcon from './icons/PlusIcon/PlusIcon';
+import DeleteIcon from './icons/DeleteIcon/DeleteIcon';
 import TextField from './fields/TextField/TextField';
 import EmailField from './fields/EmailField/EmailField';
 import Logo from './Logo/Logo';
@@ -31,6 +33,8 @@ export {
   TickIcon,
   HelpIcon,
   Button,
+  PlusIcon,
+  DeleteIcon,
   TextField,
   EmailField,
   Logo

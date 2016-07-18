@@ -38,7 +38,7 @@ export default function Droplet({ colour, outline, outlineColour, showHex, showV
 }
 
 Droplet.propTypes = {
-  colour: PropTypes.string.isRequired,
+  colour: PropTypes.string,
   sizeInRows: PropTypes.number,
   showHex: PropTypes.bool,
   showVariable: PropTypes.bool,
@@ -48,7 +48,7 @@ Droplet.propTypes = {
 };
 
 Droplet.defaultProps = {
-  colour: PropTypes.string,
+  colour: '#BAD',
   sizeInRows: 6,
   showHex: false,
   showVariable: false,
