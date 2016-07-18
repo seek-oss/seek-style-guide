@@ -32,7 +32,7 @@ const lookupValue = value => {
 const getSwatchStyle = name => {
   const value = dictionary[name];
   const backgroundColor = lookupValue(value);
-  const outline = blackOrWhite(backgroundColor, 10) === '#000' ? 'rgba(0,0,0,0.2)' : '';
+  const outline = blackOrWhite(backgroundColor, 10) === '#000' ? 'rgba(0, 0, 0, 0.2)' : '';
 
   return { outline, backgroundColor };
 };

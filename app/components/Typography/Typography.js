@@ -169,9 +169,7 @@ export default class Typography extends Component {
           <SandboxToggle
             toggleType="select"
             toggleProps={{
-              options: typeLevels.map(({ name }) => {
-                return { name, value: name };
-              }),
+              options: typeLevels.map(({ name }) => ({ name, value: name })),
               onChange: this.setTypeLevel
             }}
           />

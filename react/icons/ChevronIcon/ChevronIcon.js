@@ -8,11 +8,7 @@ import Icon from '../icon';
 export default function ChevronIcon({ direction, className,  ...props }) {
   const combinedProps = {
     ...props,
-    className: classnames({
-      [styles.root]: true,
-      [styles[direction]]: styles[direction],
-      [className]: className
-    })
+    className: classnames(styles.root, styles[direction], className)
   };
 
   return <Icon markup={svgMarkup} {...combinedProps} />;

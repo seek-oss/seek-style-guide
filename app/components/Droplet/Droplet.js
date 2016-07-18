@@ -8,7 +8,7 @@ const gridValues = lessToJs(grid);
 const rowHeight = parseInt(gridValues['@grid-row-height'], 10);
 
 export default function Droplet({ colour, outline, outlineColour, showHex, showVariable, variableName, sizeInRows }) {
-  const size = (sizeInRows * rowHeight);
+  const size = sizeInRows * rowHeight;
   const outlineStyles = outline ?
     { boxShadow: `0 0 1px 0 ${outlineColour}` } :
     {};
@@ -21,16 +21,13 @@ export default function Droplet({ colour, outline, outlineColour, showHex, showV
 
   return (
     <div className={styles.root}>
-      <div
-        className={styles.drop}
-        style={dropletStyles}
-      />
+      <div className={styles.drop} style={dropletStyles} />
       {
         (showHex || showVariable) && (
           <div className={styles.hex}>
-          {showHex && <p>{colour}</p>}
-          {(showHex && showVariable) && ' — '}
-          {showVariable && <p>{variableName}</p>}
+            {showHex && <p>{colour}</p>}
+            {(showHex && showVariable) && ' — '}
+            {showVariable && <p>{variableName}</p>}
           </div>
       )}
     </div>
