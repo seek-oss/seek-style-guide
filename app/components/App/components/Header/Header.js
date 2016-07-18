@@ -10,7 +10,9 @@ export default function Header({ title }) {
     <GridContainer>
       <div className={styles.root}>
         <div className={styles.logo}>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <p className={styles.title}>{title}</p>
         </div>
         <div>
