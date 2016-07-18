@@ -10,6 +10,7 @@ export default class TextField extends Component {
   static displayName = 'TextField';
 
   static propTypes = {
+    /* eslint-disable consistent-return */
     id: (props, propName, componentName) => {
       const { id, label } = props;
 
@@ -21,9 +22,11 @@ export default class TextField extends Component {
         return new Error(`When ${componentName} has a \`label\`, it should also have an \`id\`.`);
       }
     },
+    /* eslint-enable consistent-return */
     className: PropTypes.string,
     invalid: PropTypes.bool,
     label: PropTypes.string,
+    /* eslint-disable consistent-return */
     labelProps: (props, propName, componentName) => {
       const { id, label, labelProps } = props;
       const { htmlFor: labelFor } = labelProps || {};
@@ -52,6 +55,7 @@ export default class TextField extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
+    /* eslint-disable consistent-return */
     help: PropTypes.string,
     helpProps: PropTypes.object,
     message: PropTypes.string,
@@ -63,12 +67,8 @@ export default class TextField extends Component {
     className: '',
     invalid: false,
     label: '',
-    labelProps: undefined,
-    inputProps: undefined,
     help: '',
-    helpProps: undefined,
-    message: '',
-    messageProps: undefined
+    message: ''
   };
 
   constructor() {

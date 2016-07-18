@@ -85,9 +85,7 @@ export default class Typography extends Component {
   }
 
   setTypeLevel(event) {
-    const typeLevel = typeLevels.find(typeLevel =>
-      typeLevel.name === event.target.value
-    );
+    const typeLevel = typeLevels.find(level => level.name === event.target.value);
     const typeScale = typeLevel.spec['Type Scale'];
 
     this.setState({
@@ -121,19 +119,18 @@ export default class Typography extends Component {
     };
     const typeSizeModifier = parseFloat(typeScale, 10);
     const baseFontSize = 10;
-    const textStyles = typeLevel.name === 'Touchable'
-      ? {
-        fontSize: `${typeSizeModifier * baseFontSize}px`,
-        lineHeight: '45px',
-        height: '45px'
-      } :
-      basekick({
-        baseFontSize,
-        descenderHeightScale: 0.12,
-        gridRowHeight: 9,
-        typeSizeModifier,
-        typeRowSpan: parseInt(spec['Line Height'], 10)
-      });
+    const textStyles = typeLevel.name === 'Touchable' ? {
+      fontSize: `${typeSizeModifier * baseFontSize}px`,
+      lineHeight: '45px',
+      height: '45px'
+    } :
+    basekick({
+      baseFontSize,
+      descenderHeightScale: 0.12,
+      gridRowHeight: 9,
+      typeSizeModifier,
+      typeRowSpan: parseInt(spec['Line Height'], 10)
+    });
     const lessCode = `${typeLevel.name.toLowerCase()}Text(${typeSizeModifier === typeScaleFloat ? '' : typeSizeModifier});`;
 
     return (

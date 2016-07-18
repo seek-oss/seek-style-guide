@@ -7,7 +7,7 @@ const decorateServerConfig = require('./webpack').decorateServerConfig;
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const templatePath = path.resolve(__dirname, 'index.ejs');
-const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8'));
+const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8')); // eslint-disable-line no-sync
 
 // Must be absolute paths
 const appPaths = [

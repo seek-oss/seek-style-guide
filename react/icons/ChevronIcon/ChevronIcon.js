@@ -5,7 +5,7 @@ import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import Icon from '../icon';
 
-export default function ChevronIcon({ direction, className,  ...props }) {
+export default function ChevronIcon({ direction, className, ...props }) {
   const combinedProps = {
     ...props,
     className: classnames(styles.root, styles[direction], className)
