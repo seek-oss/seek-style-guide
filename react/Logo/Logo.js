@@ -7,3 +7,5 @@ export default function Logo() {
     <div dangerouslySetInnerHTML={{ __html: logo }} /> // eslint-disable-line react/no-danger
   );
 }
+
+Logo.displayName = 'Logo';

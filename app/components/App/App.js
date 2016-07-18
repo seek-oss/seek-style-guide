@@ -1,5 +1,3 @@
-import styles from './App.less';
-
 import React, { PropTypes } from 'react';
 import { SeekApp } from 'seek-style-guide/react';
 
@@ -17,13 +15,11 @@ const titles = {
 export default function App({ routes, children }) {
   return (
     <SeekApp fullScreen={true}>
-      <div className={styles.root}>
-        <Header title={titles[routes[routes.length - 1].path || '/']} />
-        <main>
-          {children}
-        </main>
-        <Footer />
-      </div>
+      <Header title={titles[routes[routes.length - 1].path || '/']} />
+      <main>
+        {children}
+      </main>
+      <Footer />
     </SeekApp>
   );
 }
