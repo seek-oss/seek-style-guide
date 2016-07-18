@@ -53,7 +53,7 @@ export default class Button extends Component {
 
     return (
       <button {...combinedProps}>
-        { children }
+        {children}
       </button>
     );
   }

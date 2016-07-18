@@ -15,7 +15,7 @@ export default function ChevronIcon({ direction, className,  ...props }) {
     })
   };
 
-  return <Icon markup={svgMarkup} { ...combinedProps } />;
+  return <Icon markup={svgMarkup} {...combinedProps} />;
 }
 
 ChevronIcon.displayName = 'ChevronIcon';

@@ -18,7 +18,7 @@ export default function StarIcon({ filled, className, ...props }) {
     })
   };
 
-  return <Icon markup={markup} { ...combinedProps } />;
+  return <Icon markup={markup} {...combinedProps} />;
 }
 
 StarIcon.displayName = 'StarIcon';

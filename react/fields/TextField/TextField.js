@@ -61,8 +61,8 @@ export default class TextField extends Component {
         {
           invalid &&
             <p className={styles.message} data-automation="textfield-invalid-message">
-              { message && <ErrorIcon filled={true} className={styles.messageIcon} svgClassName={styles.messageIconSvg} /> }
-              { message }
+              {message && <ErrorIcon filled={true} className={styles.messageIcon} svgClassName={styles.messageIconSvg} />}
+              {message}
             </p>
         }
       </div>

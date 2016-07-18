@@ -19,21 +19,21 @@ export default class Code extends Component {
       copiedToClipboard: false
     };
 
-    this.resetCopiedToClipboard = this.resetCopiedToClipboard.bind(this);
-    this.debouncedResetCopiedToClipboard = debounce(this.resetCopiedToClipboard, 5000);
-    this.copiedToClipboard = this.copiedToClipboard.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    this.debouncedHandleMouseLeave = debounce(this.handleMouseLeave, 5000);
+    this.handleCopy = this.handleCopy.bind(this);
   }
 
-  resetCopiedToClipboard() {
+  handleMouseLeave() {
     this.setState({
       copiedToClipboard: false
     });
   }
 
-  copiedToClipboard() {
+  handleCopy() {
     this.setState({
       copiedToClipboard: true
-    }, this.debouncedResetCopiedToClipboard);
+    }, this.debouncedHandleMouseLeave);
   }
 
   render() {
@@ -53,8 +53,8 @@ export default class Code extends Component {
     }
 
     return (
-      <CopyToClipboard text={code} onCopy={this.copiedToClipboard}>
-        <div className={styles.root} onMouseLeave={this.resetCopiedToClipboard}>
+      <CopyToClipboard text={code} onCopy={this.handleCopy}>
+        <div className={styles.root} onMouseLeave={this.handleMouseLeave}>
           <pre className={styles.code}>
             <code>
               {code}

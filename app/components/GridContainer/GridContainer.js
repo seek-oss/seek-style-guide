@@ -8,7 +8,7 @@ export default function GridContainer({ className, children }) {
 
   return (
     <div className={classes}>
-      { children }
+      {children}
     </div>
   );
 }

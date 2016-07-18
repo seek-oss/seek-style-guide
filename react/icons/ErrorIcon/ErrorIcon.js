@@ -7,7 +7,7 @@ import Icon from '../icon';
 export default function ErrorIcon({ filled, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;
 
-  return <Icon markup={markup} { ...props } />;
+  return <Icon markup={markup} {...props} />;
 }
 
 ErrorIcon.displayName = 'ErrorIcon';

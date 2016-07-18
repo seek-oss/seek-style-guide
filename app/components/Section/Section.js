@@ -8,7 +8,7 @@ export default function Section({ className, children }) {
 
   return (
     <div className={classes}>
-      { children }
+      {children}
     </div>
   );
 }

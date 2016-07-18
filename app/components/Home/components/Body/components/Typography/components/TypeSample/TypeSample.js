@@ -7,7 +7,7 @@ export default function TypeSample({ mixin, description }) {
     <div className={styles.root}>
       <p className={`${styles[mixin]} ${styles.bold}`}>The quick brown fox applied for the lazy job.</p>
       <p className={styles[mixin]}>The quick brown fox applied for the lazy job.</p>
-      <p className={styles.description}>{ description }</p>
+      <p className={styles.description}>{description}</p>
     </div>
   );
 }

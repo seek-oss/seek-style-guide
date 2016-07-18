@@ -4,7 +4,7 @@ import React from 'react';
 import Icon from '../icon';
 
 export default function ThumbsUpIcon(props) {
-  return <Icon markup={svgMarkup} { ...props } />;
+  return <Icon markup={svgMarkup} {...props} />;
 }
 
 ThumbsUpIcon.displayName = 'ThumbsUpIcon';

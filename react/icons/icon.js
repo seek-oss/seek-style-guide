@@ -13,7 +13,7 @@ export default function Icon(props) {
   };
 
   return (
-    <span dangerouslySetInnerHTML={{ __html: svgWithClassName }} { ...combinedProps } /> // eslint-disable-line react/no-danger
+    <span dangerouslySetInnerHTML={{ __html: svgWithClassName }} {...combinedProps} /> // eslint-disable-line react/no-danger
   );
 }
 

@@ -99,8 +99,8 @@ export default class Icons extends Component {
     this.saveAutosuggest = this.saveAutosuggest.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onFocus = this.onFocus.bind(this);
-    this.onSuggestionsUpdateRequested = this.onSuggestionsUpdateRequested.bind(this);
-    this.onSuggestionSelected = this.onSuggestionSelected.bind(this);
+    this.handleSuggestionsUpdateRequested = this.handleSuggestionsUpdateRequested.bind(this);
+    this.handleSuggestionSelected = this.handleSuggestionSelected.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
   }
 
@@ -123,7 +123,7 @@ export default class Icons extends Component {
     });
   }
 
-  onSuggestionsUpdateRequested({ value, reason }) {
+  handleSuggestionsUpdateRequested({ value, reason }) {
     if (reason !== 'click' && reason !== 'enter') {
       this.setState({
         suggestions: getSuggestions(value)
@@ -131,7 +131,11 @@ export default class Icons extends Component {
     }
   }
 
-  onSuggestionSelected(event, { suggestion }) {
+  shouldRenderSuggestions() {
+    return true;
+  }
+
+  handleSuggestionSelected(event, { suggestion }) {
     this.setState({
       icon: suggestion
     }, () => {
@@ -192,11 +196,11 @@ export default class Icons extends Component {
           <SandboxTogglePanel>
             <Autosuggest
               suggestions={suggestions}
-              onSuggestionsUpdateRequested={this.onSuggestionsUpdateRequested}
+              onSuggestionsUpdateRequested={this.handleSuggestionsUpdateRequested}
               getSuggestionValue={getSuggestionValue}
               renderSuggestion={renderSuggestion}
-              shouldRenderSuggestions={() => true}
-              onSuggestionSelected={this.onSuggestionSelected}
+              shouldRenderSuggestions={this.shouldRenderSuggestions}
+              onSuggestionSelected={this.handleSuggestionSelected}
               inputProps={inputProps}
               theme={autosuggestStyles}
               ref={this.saveAutosuggest}

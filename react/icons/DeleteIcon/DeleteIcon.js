@@ -23,7 +23,8 @@ export default class DeleteIcon extends Component {
     return (
       <span
         dangerouslySetInnerHTML={{ __html: svgMarkupWithClassName }}
-        {...restProps} />
+        {...restProps}
+      />
     );
     /* eslint-enable react/no-danger */
   }

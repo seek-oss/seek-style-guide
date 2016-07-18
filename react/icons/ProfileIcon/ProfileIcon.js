@@ -4,7 +4,7 @@ import React from 'react';
 import Icon from '../icon';
 
 export default function ProfileIcon(props) {
-  return <Icon markup={svgMarkup} { ...props } />;
+  return <Icon markup={svgMarkup} {...props} />;
 }
 
 ProfileIcon.displayName = 'ProfileIcon';

@@ -56,7 +56,7 @@ const getPalette = (name, palette) => (
   <div className={styles.palette}>
     <div className={styles.paletteTitle}>{name}</div>
     <div className={styles.swatches}>
-      { Object.keys(palette).map(getSwatch) }
+      {Object.keys(palette).map(getSwatch)}
     </div>
   </div>
 );
@@ -64,10 +64,10 @@ const getPalette = (name, palette) => (
 export default function ColourPalette() {
   return (
     <div>
-      { getPalette('Greys', greysJs) }
-      { getPalette('Elements', elementsJs) }
-      { getPalette('Partners', partnersJs) }
-      { getPalette('Brand', brandsJs) }
+      {getPalette('Greys', greysJs)}
+      {getPalette('Elements', elementsJs)}
+      {getPalette('Partners', partnersJs)}
+      {getPalette('Brand', brandsJs)}
     </div>
   );
 }

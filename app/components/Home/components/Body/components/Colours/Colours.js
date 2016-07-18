@@ -27,8 +27,8 @@ const renderIntro = () => (
 export default function Colours() {
   return (
     <Section>
-      { renderIntro() }
-      { renderDemo() }
+      {renderIntro()}
+      {renderDemo()}
     </Section>
   );
 }

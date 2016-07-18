@@ -16,7 +16,7 @@ export default function SandboxToggle({ toggleType, toggleProps, label }) {
       case 'select':
         return (
           <label htmlFor="select" className={styles.label}>
-            <select name="select" className={styles.select} { ...restProps}>
+            <select name="select" className={styles.select} {...restProps}>
               {
                 options.map(({ name, value }) => (
                   <option value={value} key={value}>{name}</option>

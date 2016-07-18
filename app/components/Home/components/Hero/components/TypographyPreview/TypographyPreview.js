@@ -14,8 +14,8 @@ export default function TypographyPreview() {
     <a className={styles.root} href="#Typography">
       {items.map(item => (
         <div key={item} className={styles[`${item}Item`]}>
-          <p className={styles.bold}>{ sampleText }</p>
-          <p>{ sampleText }</p>
+          <p className={styles.bold}>{sampleText}</p>
+          <p>{sampleText}</p>
         </div>
       ))}
     </a>
