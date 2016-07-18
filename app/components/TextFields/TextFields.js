@@ -4,7 +4,6 @@ import textFieldStyles from 'seek-style-guide/react/fields/TextField/TextField.l
 import React, { Component } from 'react';
 import Baseline from 'react-baseline';
 import classnames from 'classnames';
-import { StickyContainer, Sticky } from 'react-sticky';
 
 import GridContainer from 'GridContainer/GridContainer';
 import SandboxPreview from 'SandboxPreview/SandboxPreview';
@@ -104,76 +103,72 @@ export default class TextFields extends Component {
     );
 
     return (
-      <StickyContainer>
-        <div>
-          <Sticky className={styles.sticky}>
-            <Baseline isVisible={baseline} color="#eee">
-              <div className={styles.sandboxContainer}>
-                <GridContainer>
-                  <div className={styles.sandbox}>
-                    <SandboxPreview>
-                      {textfield}
-                    </SandboxPreview>
-                    <div style={{ position: 'absolute', top: 0, right: 0 }}>
-                      <SandboxToggle
-                        label="Baseline"
-                        toggleType="checkbox"
-                        toggleProps={{
-                          type: 'checkbox',
-                          checked: baseline,
-                          onChange: this.toggleBaseline
-                        }}
-                      />
-                    </div>
-                  </div>
-                </GridContainer>
+      <div>
+        <Baseline isVisible={baseline} color="#eee">
+          <div className={styles.sandboxContainer}>
+            <GridContainer>
+              <div className={styles.sandbox}>
+                <SandboxPreview>
+                  {textfield}
+                </SandboxPreview>
+                <div style={{ position: 'absolute', top: 0, right: 0 }}>
+                  <SandboxToggle
+                    label="Baseline"
+                    toggleType="checkbox"
+                    toggleProps={{
+                      type: 'checkbox',
+                      checked: baseline,
+                      onChange: this.toggleBaseline
+                    }}
+                  />
+                </div>
               </div>
-            </Baseline>
-          </Sticky>
+            </GridContainer>
+          </div>
+        </Baseline>
 
-          <SandboxTogglePanel>
-            <SandboxToggle
-              label="Focus"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: focus,
-                onChange: this.toggleFocus
-              }}
-            />
-            <SandboxToggle
-              label="Help"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: help,
-                onChange: this.toggleHelp
-              }}
-            />
-            <SandboxToggle
-              label="Invalid"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: invalid,
-                onChange: this.toggleInvalid
-              }}
-            />
-          </SandboxTogglePanel>
+        <SandboxTogglePanel>
+          <SandboxToggle
+            label="Focus"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: focus,
+              onChange: this.toggleFocus
+            }}
+          />
+          <SandboxToggle
+            label="Help"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: help,
+              onChange: this.toggleHelp
+            }}
+          />
+          <SandboxToggle
+            label="Invalid"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: invalid,
+              onChange: this.toggleInvalid
+            }}
+          />
+        </SandboxTogglePanel>
 
-          <GridContainer className={styles.gridContainer}>
-            <Section className={styles.section}>
-              <HeadlineText>Spec</HeadlineText>
-              <Spec spec={spec} />
-            </Section>
+        <GridContainer className={styles.gridContainer}>
+          <Section className={styles.section}>
+            <HeadlineText>Spec</HeadlineText>
+            <Spec spec={spec} />
+          </Section>
 
-            <Section className={styles.section}>
-              <HeadlineText>Code</HeadlineText>
-              <Code jsx={textfield} />
-            </Section>
-          </GridContainer>
-        </div>
-      </StickyContainer>
+          <Section className={styles.section}>
+            <HeadlineText>Code</HeadlineText>
+            <Code jsx={textfield} />
+          </Section>
+        </GridContainer>
+      </div>
     );
   }
 }

@@ -4,7 +4,6 @@ import autosuggestStyles from './Autosuggest.less';
 import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
 import Baseline from 'react-baseline';
-import { StickyContainer, Sticky } from 'react-sticky';
 
 import GridContainer from 'GridContainer/GridContainer';
 import SandboxPreview from 'SandboxPreview/SandboxPreview';
@@ -163,62 +162,58 @@ export default class Icons extends Component {
     };
 
     return (
-      <StickyContainer>
-        <div>
-          <Sticky className={styles.sticky}>
-            <Baseline isVisible={baseline} color="#eee">
-              <div className={styles.sandboxContainer}>
-                <GridContainer>
-                  <div className={styles.sandbox}>
-                    <SandboxPreview>
-                      <div className={styles.iconContainer}>
-                        {iconComponent}
-                      </div>
-                    </SandboxPreview>
-
-                    <div style={{ position: 'absolute', top: 0, right: 0 }}>
-                      <SandboxToggle
-                        label="Baseline"
-                        toggleType="checkbox"
-                        toggleProps={{
-                          type: 'checkbox',
-                          checked: baseline,
-                          onChange: this.toggleBaseline
-                        }}
-                      />
-                    </div>
+      <div>
+        <Baseline isVisible={baseline} color="#eee">
+          <div className={styles.sandboxContainer}>
+            <GridContainer>
+              <div className={styles.sandbox}>
+                <SandboxPreview>
+                  <div className={styles.iconContainer}>
+                    {iconComponent}
                   </div>
-                </GridContainer>
+                </SandboxPreview>
+
+                <div style={{ position: 'absolute', top: 0, right: 0 }}>
+                  <SandboxToggle
+                    label="Baseline"
+                    toggleType="checkbox"
+                    toggleProps={{
+                      type: 'checkbox',
+                      checked: baseline,
+                      onChange: this.toggleBaseline
+                    }}
+                  />
+                </div>
               </div>
-            </Baseline>
-          </Sticky>
+            </GridContainer>
+          </div>
+        </Baseline>
 
-          <SandboxTogglePanel>
-            <Autosuggest
-              suggestions={suggestions}
-              onSuggestionsUpdateRequested={this.handleSuggestionsUpdateRequested}
-              getSuggestionValue={getSuggestionValue}
-              renderSuggestion={renderSuggestion}
-              shouldRenderSuggestions={this.shouldRenderSuggestions}
-              onSuggestionSelected={this.handleSuggestionSelected}
-              inputProps={inputProps}
-              theme={autosuggestStyles}
-              ref={this.saveAutosuggest}
-            />
-          </SandboxTogglePanel>
+        <SandboxTogglePanel>
+          <Autosuggest
+            suggestions={suggestions}
+            onSuggestionsUpdateRequested={this.handleSuggestionsUpdateRequested}
+            getSuggestionValue={getSuggestionValue}
+            renderSuggestion={renderSuggestion}
+            shouldRenderSuggestions={this.shouldRenderSuggestions}
+            onSuggestionSelected={this.handleSuggestionSelected}
+            inputProps={inputProps}
+            theme={autosuggestStyles}
+            ref={this.saveAutosuggest}
+          />
+        </SandboxTogglePanel>
 
-          <GridContainer className={styles.gridContainer}>
-            <Section className={styles.section}>
-              <HeadlineText>Spec</HeadlineText>
-            </Section>
+        <GridContainer className={styles.gridContainer}>
+          <Section className={styles.section}>
+            <HeadlineText>Spec</HeadlineText>
+          </Section>
 
-            <Section className={styles.section}>
-              <HeadlineText>Code</HeadlineText>
-              <Code jsx={iconComponent} />
-            </Section>
-          </GridContainer>
-        </div>
-      </StickyContainer>
+          <Section className={styles.section}>
+            <HeadlineText>Code</HeadlineText>
+            <Code jsx={iconComponent} />
+          </Section>
+        </GridContainer>
+      </div>
     );
   }
 }

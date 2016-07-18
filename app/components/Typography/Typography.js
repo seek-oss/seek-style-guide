@@ -3,7 +3,6 @@ import styles from './Typography.less';
 import React, { Component } from 'react';
 import basekick from 'basekick';
 import Baseline from 'react-baseline';
-import { StickyContainer, Sticky } from 'react-sticky';
 
 import GridContainer from 'GridContainer/GridContainer';
 import SandboxPreview from 'SandboxPreview/SandboxPreview';
@@ -138,80 +137,76 @@ export default class Typography extends Component {
     const lessCode = `${typeLevel.name.toLowerCase()}Text(${typeSizeModifier === typeScaleFloat ? '' : typeSizeModifier});`;
 
     return (
-      <StickyContainer>
-        <div>
-          <Sticky className={styles.sticky}>
-            <Baseline isVisible={baseline} color="#eee">
-              <div className={styles.sandboxContainer}>
-                <GridContainer>
-                  <div className={styles.sandbox}>
-                    <SandboxPreview>
-                      <div className={styles.textContainer}>
-                        <p className={styles.previewText} style={textStyles}>
-                          Living Style Guide
-                        </p>
-                      </div>
-                    </SandboxPreview>
-                    <div style={{ position: 'absolute', top: 0, right: 0 }}>
-                      <SandboxToggle
-                        label="Baseline"
-                        toggleType="checkbox"
-                        toggleProps={{
-                          type: 'checkbox',
-                          checked: baseline,
-                          onChange: this.toggleBaseline
-                        }}
-                      />
-                    </div>
+      <div>
+        <Baseline isVisible={baseline} color="#eee">
+          <div className={styles.sandboxContainer}>
+            <GridContainer>
+              <div className={styles.sandbox}>
+                <SandboxPreview>
+                  <div className={styles.textContainer}>
+                    <p className={styles.previewText} style={textStyles}>
+                      Living Style Guide
+                    </p>
                   </div>
-                </GridContainer>
-              </div>
-            </Baseline>
-          </Sticky>
-
-          <SandboxTogglePanel>
-            <SandboxToggle
-              toggleType="select"
-              toggleProps={{
-                options: typeLevels.map(({ name }) => {
-                  return { name, value: name };
-                }),
-                onChange: this.setTypeLevel
-              }}
-            />
-            {
-              isTypeScaleConfigurable &&
-                <div style={{ display: 'inline-block' }}>
-                  <div className={styles.divider} />
+                </SandboxPreview>
+                <div style={{ position: 'absolute', top: 0, right: 0 }}>
                   <SandboxToggle
-                    label="Type Scale"
-                    toggleType="range"
+                    label="Baseline"
+                    toggleType="checkbox"
                     toggleProps={{
-                      type: 'range',
-                      min: minTypeScale,
-                      max: maxTypeScale,
-                      step: '0.1',
-                      value: typeScale,
-                      onChange: this.setTypeScale
+                      type: 'checkbox',
+                      checked: baseline,
+                      onChange: this.toggleBaseline
                     }}
                   />
                 </div>
-            }
-          </SandboxTogglePanel>
+              </div>
+            </GridContainer>
+          </div>
+        </Baseline>
 
-          <GridContainer className={styles.gridContainer}>
-            <Section className={styles.section}>
-              <HeadlineText>Spec</HeadlineText>
-              <Spec spec={spec} />
-            </Section>
+        <SandboxTogglePanel>
+          <SandboxToggle
+            toggleType="select"
+            toggleProps={{
+              options: typeLevels.map(({ name }) => {
+                return { name, value: name };
+              }),
+              onChange: this.setTypeLevel
+            }}
+          />
+          {
+            isTypeScaleConfigurable &&
+              <div style={{ display: 'inline-block' }}>
+                <div className={styles.divider} />
+                <SandboxToggle
+                  label="Type Scale"
+                  toggleType="range"
+                  toggleProps={{
+                    type: 'range',
+                    min: minTypeScale,
+                    max: maxTypeScale,
+                    step: '0.1',
+                    value: typeScale,
+                    onChange: this.setTypeScale
+                  }}
+                />
+              </div>
+          }
+        </SandboxTogglePanel>
 
-            <Section className={styles.section}>
-              <HeadlineText>Code</HeadlineText>
-              <Code less={lessCode} />
-            </Section>
-          </GridContainer>
-        </div>
-      </StickyContainer>
+        <GridContainer className={styles.gridContainer}>
+          <Section className={styles.section}>
+            <HeadlineText>Spec</HeadlineText>
+            <Spec spec={spec} />
+          </Section>
+
+          <Section className={styles.section}>
+            <HeadlineText>Code</HeadlineText>
+            <Code less={lessCode} />
+          </Section>
+        </GridContainer>
+      </div>
     );
   }
 }
