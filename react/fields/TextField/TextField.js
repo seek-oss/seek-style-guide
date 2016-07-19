@@ -5,6 +5,15 @@ import classnames from 'classnames';
 
 import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
 
+function combineClassNames(props = {}, ...classNames) {
+  const { className, ...restProps } = props;
+
+  return {
+    className: classnames.apply(null, [...classNames, className]), // eslint-disable-line no-useless-call
+    ...restProps
+  };
+}
+
 export default class TextField extends Component {
 
   static displayName = 'TextField';
@@ -96,10 +105,8 @@ export default class TextField extends Component {
     }
 
     const { labelProps, id } = this.props;
-    const { className: labelClassName, ...remainingLabelProps } = labelProps || {};
     const allLabelProps = {
-      className: classnames(styles.label, labelClassName),
-      ...remainingLabelProps,
+      ...combineClassNames(labelProps, styles.label),
       ...(id ? { htmlFor: id } : {})
     };
 
@@ -112,12 +119,10 @@ export default class TextField extends Component {
 
   renderInput() {
     const { inputProps, id } = this.props;
-    const { className: inputClassName, ...remainingInputProps } = inputProps || {};
     const allInputProps = {
-      className: classnames(styles.input, inputClassName),
-      ref: this.storeInputReference,
-      ...remainingInputProps,
-      ...(id ? { id } : {})
+      ...combineClassNames(inputProps, styles.input),
+      ...(id ? { id } : {}),
+      ref: this.storeInputReference
     };
 
     return (
@@ -133,11 +138,7 @@ export default class TextField extends Component {
     }
 
     const { helpProps } = this.props;
-    const { className: helpClassName, ...remainingHelpProps } = helpProps || {};
-    const allHelpProps = {
-      className: classnames(styles.help, helpClassName),
-      ...remainingHelpProps
-    };
+    const allHelpProps = combineClassNames(helpProps, styles.help);
 
     return (
       <p {...allHelpProps}>
@@ -154,11 +155,7 @@ export default class TextField extends Component {
     }
 
     const { messageProps } = this.props;
-    const { className: messageClassName, ...remainingMessageProps } = messageProps || {};
-    const allMessageProps = {
-      className: classnames(styles.message, messageClassName),
-      ...remainingMessageProps
-    };
+    const allMessageProps = combineClassNames(messageProps, styles.message);
 
     return (
       <p {...allMessageProps}>

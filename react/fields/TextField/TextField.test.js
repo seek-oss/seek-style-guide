@@ -92,7 +92,7 @@ describe('TextField', () => {
 
     it('should pass through className to the label', () => {
       render(<TextField id="firstName" label="First Name" labelProps={{ className: 'first-name-label' }} />);
-      expect(label.props.className).to.contain('first-name-label');
+      expect(label.props.className).to.match(/first-name-label$/);
     });
 
     it('should pass through other props to the label', () => {
@@ -121,7 +121,7 @@ describe('TextField', () => {
 
     it('should pass through className to the input', () => {
       render(<TextField inputProps={{ className: 'first-name-field' }} />);
-      expect(input.props.className).to.contain('first-name-field');
+      expect(input.props.className).to.match(/first-name-field$/);
     });
 
     it('should pass through other props to the input', () => {
@@ -149,7 +149,7 @@ describe('TextField', () => {
 
     it('should pass through className to the help text', () => {
       render(<TextField help="e.g. David" helpProps={{ className: 'first-name-help' }} />);
-      expect(help.props.className).to.contain('first-name-help');
+      expect(help.props.className).to.match(/first-name-help$/);
     });
 
     it('should pass through other props to the help text', () => {
@@ -176,7 +176,7 @@ describe('TextField', () => {
 
     it('should pass through className to the message', () => {
       render(<TextField message="Something went wrong" messageProps={{ className: 'first-name-message' }} />);
-      expect(message.props.className).to.contain('first-name-message');
+      expect(message.props.className).to.match(/first-name-message$/);
     });
 
     it('should pass through other props to the message', () => {
