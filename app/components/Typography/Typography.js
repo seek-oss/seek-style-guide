@@ -171,7 +171,7 @@ export default class Typography extends Component {
             }}
           />
           {
-            isTypeScaleConfigurable &&
+            isTypeScaleConfigurable ?
               <div style={{ display: 'inline-block' }}>
                 <div className={styles.divider} />
                 <SandboxToggle
@@ -186,7 +186,8 @@ export default class Typography extends Component {
                     onChange: this.setTypeScale
                   }}
                 />
-              </div>
+              </div> :
+              null
           }
         </SandboxTogglePanel>
 
