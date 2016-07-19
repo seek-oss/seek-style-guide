@@ -1,0 +1,21 @@
+@import (reference) "type";
+@import (reference) "~basekick/mixin";
+
+.__responsiveText(@variant) when (isstring(@variant)) {
+  // Define responsive text breakpoint limits
+  @max-breakpoint: unit((@responsive-type-breakpoint - 1), px);
+  @min-breakpoint: unit(@responsive-type-breakpoint, px);
+
+  // Concatenate type hierarchy variable name
+  @type-scale: "@{variant}-type-scale";
+  @row-span: "@{variant}-type-row-span";
+  @mobile-type-scale: "@{type-scale}-mobile";
+  @mobile-row-span: "@{row-span}-mobile";
+
+  @media only screen and (max-width: @max-breakpoint) {
+    .basekick(@@mobile-type-scale, @@mobile-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+  }
+  @media only screen and (min-width: @min-breakpoint) {
+    .basekick(@@type-scale, @@row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+  }
+}
