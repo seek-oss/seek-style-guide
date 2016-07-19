@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "lint": "eslint app react ./*.js",
+    "lint": "eslint app react test ./*.js",
     "test": "mocha test --require ignore-styles",
     "prebuild": "npm run lint",
     "local-build": "rm -rf dist/ && mkdir dist && NODE_ENV=production webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
@@ -62,6 +62,7 @@
     "eslint-plugin-react": "^6.0.0-alpha.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "gh-pages": "^0.11.0",
+    "glob": "^7.0.5",
     "hex-rgb": "^1.0.0",
     "ignore-styles": "^4.0.0",
     "json-loader": "^0.5.4",
