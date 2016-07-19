@@ -2,11 +2,13 @@
   "env": {
     "es6": true,
     "node": true,
-    "browser": true
+    "browser": true,
+    "mocha": true
   },
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "mocha"
   ],
   "rules": {
     "comma-dangle": 2,
@@ -209,6 +211,8 @@
     "react/jsx-sort-props": 0,
     "react/jsx-space-before-closing": [2, "always"],
     "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2
+    "react/jsx-uses-vars": 2,
+
+    "mocha/no-exclusive-tests": 2
   }
 }

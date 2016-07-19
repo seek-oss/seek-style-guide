@@ -75,6 +75,11 @@ export default class TextField extends Component {
     super();
 
     this.storeInputReference = this.storeInputReference.bind(this);
+    this.renderLabel = this.renderLabel.bind(this);
+    this.renderInput = this.renderInput.bind(this);
+    this.renderHelp = this.renderHelp.bind(this);
+    this.renderMessage = this.renderMessage.bind(this);
+    this.renderIcon = this.renderIcon.bind(this);
   }
 
   storeInputReference(input) {
@@ -83,46 +88,111 @@ export default class TextField extends Component {
     }
   }
 
+  renderLabel() {
+    const { label } = this.props;
+
+    if (!label) {
+      return;
+    }
+
+    const { labelProps, id } = this.props;
+    const { className: labelClassName, ...remainingLabelProps } = labelProps || {};
+    const allLabelProps = {
+      className: classnames(styles.label, labelClassName),
+      ...remainingLabelProps,
+      ...(id ? { htmlFor: id } : {})
+    };
+
+    return (
+      <label {...allLabelProps}>
+        {label}
+      </label>
+    );
+  }
+
+  renderInput() {
+    const { inputProps, id } = this.props;
+    const { className: inputClassName, ...remainingInputProps } = inputProps || {};
+    const allInputProps = {
+      className: classnames(styles.input, inputClassName),
+      ref: this.storeInputReference,
+      ...remainingInputProps,
+      ...(id ? { id } : {})
+    };
+
+    return (
+      <input {...allInputProps} />
+    );
+  }
+
+  renderHelp() {
+    const { message, help } = this.props;
+
+    if (message || !help) {
+      return;
+    }
+
+    const { helpProps } = this.props;
+    const { className: helpClassName, ...remainingHelpProps } = helpProps || {};
+    const allHelpProps = {
+      className: classnames(styles.help, helpClassName),
+      ...remainingHelpProps
+    };
+
+    return (
+      <p {...allHelpProps}>
+        {help}
+      </p>
+    );
+  }
+
+  renderMessage() {
+    const { message } = this.props;
+
+    if (!message) {
+      return;
+    }
+
+    const { messageProps } = this.props;
+    const { className: messageClassName, ...remainingMessageProps } = messageProps || {};
+    const allMessageProps = {
+      className: classnames(styles.message, messageClassName),
+      ...remainingMessageProps
+    };
+
+    return (
+      <p {...allMessageProps}>
+        {this.renderIcon()}
+        {message}
+      </p>
+    );
+  }
+
+  renderIcon() {
+    const { invalid } = this.props;
+
+    if (!invalid) {
+      return;
+    }
+
+    return (
+      <ErrorIcon
+        filled={true}
+        className={styles.messageIcon}
+        svgClassName={styles.messageIconSvg}
+      />
+    );
+  }
+
   render() {
-    const {
-      id, className, invalid, label, labelProps = {}, inputProps = {},
-      help, helpProps = {}, message, messageProps = {}
-    } = this.props;
-    const { className: inputClassName, ...remainingInputProps } = inputProps;
+    const { className, invalid } = this.props;
 
     return (
       <div className={classnames(styles.root, className, { [styles.invalid]: invalid })}>
-        {
-          label ?
-            <label className={styles.label} {...labelProps} htmlFor={id || null}>
-              {label}
-            </label> :
-            null
-        }
-        <input className={classnames(styles.input, inputClassName)} ref={this.storeInputReference} {...remainingInputProps} id={id} />
-        {
-          (!invalid && help) ?
-            <p className={styles.help} {...helpProps}>
-              {help}
-            </p> :
-            null
-        }
-        {
-          message ?
-            <p className={styles.message} {...messageProps}>
-              {
-                invalid ?
-                  <ErrorIcon
-                    filled={true}
-                    className={styles.messageIcon}
-                    svgClassName={styles.messageIconSvg}
-                  /> :
-                  null
-              }
-              {message}
-            </p> :
-            null
-        }
+        {this.renderLabel()}
+        {this.renderInput()}
+        {this.renderHelp()}
+        {this.renderMessage()}
       </div>
     );
   }
