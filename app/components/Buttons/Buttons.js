@@ -25,7 +25,6 @@ const specs = {
   default: {
     Height: '5 grid rows',
     'Internal gutter': '1 gutter width',
-    'Text color': '@sk-white',
     'Font size': '1.8 — @interaction-type-scale',
     'Border radius': '2px — @field-border-radius',
     'Drop shadow': '1px, @sk-black 70%'
@@ -41,7 +40,8 @@ const specs = {
     'Drop shadow': '1px @sk-focus'
   },
   pink: {
-    'Background color': '@sk-pink'
+    'Background color': '@sk-pink',
+    'Text color': '@sk-white'
   },
   pinkHover: {
     'Background color': 'lighten(@sk-pink, 5%)'
@@ -50,13 +50,24 @@ const specs = {
     'Background color': 'darken(@sk-pink, 5%)'
   },
   blue: {
-    'Background color': '@sk-highlight'
+    'Background color': '@sk-highlight',
+    'Text color': '@sk-white'
   },
   blueHover: {
     'Background color': 'lighten(@sk-highlight, 5%)'
   },
   blueActive: {
     'Background color': 'darken(@sk-highlight, 5%)'
+  },
+  gray: {
+    'Background color': '@sk-mid-gray-light',
+    'Text color': '@sk-black'
+  },
+  grayHover: {
+    'Background color': 'lighten(@sk-mid-gray-light, 5%)'
+  },
+  grayActive: {
+    'Background color': 'darken(@sk-mid-gray-light, 5%)'
   }
 };
 const propertiesToRemove = {
@@ -147,6 +158,7 @@ export default class Buttons extends Component {
     const { color, icon, hover, active, focus, loading, baseline } = this.state;
     const isPink = (color === 'pink');
     const isBlue = (color === 'blue');
+    const isGray = (color === 'gray');
     const className = classnames({
       [buttonStyles.rootHover]: hover,
       [buttonStyles.rootActive]: active,
@@ -158,11 +170,14 @@ export default class Buttons extends Component {
       active,
       focus,
       pink: isPink,
-      blue: isBlue,
       pinkHover: isPink && hover,
-      blueHover: isBlue && hover,
       pinkActive: isPink && active,
-      blueActive: isBlue && active
+      blue: isBlue,
+      blueHover: isBlue && hover,
+      blueActive: isBlue && active,
+      gray: isGray,
+      grayHover: isGray && hover,
+      grayActive: isGray && active
     });
     const iconComponent = icon ?
       React.createElement(icons[icon], { filled: true, svgClassName: styles.iconSvg }) :
