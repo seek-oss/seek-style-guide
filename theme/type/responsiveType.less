@@ -1,7 +1,7 @@
 @import (reference) "type";
-@import (reference) "~basekick/mixin";
+@import (reference) "baselineType";
 
-.__responsiveText(@variant) when (isstring(@variant)) {
+.__responsiveType(@variant) when (isstring(@variant)) {
   // Define responsive text breakpoint limits
   @max-breakpoint: unit((@responsive-type-breakpoint - 1), px);
   @min-breakpoint: unit(@responsive-type-breakpoint, px);
@@ -13,9 +13,9 @@
   @mobile-row-span: "@{row-span}-mobile";
 
   @media only screen and (max-width: @max-breakpoint) {
-    .basekick(@@mobile-type-scale, @@mobile-row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+    .__baselineType(@@mobile-type-scale, @@mobile-row-span);
   }
   @media only screen and (min-width: @min-breakpoint) {
-    .basekick(@@type-scale, @@row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+    .__baselineType(@@type-scale, @@row-span);
   }
 }
