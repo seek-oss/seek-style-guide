@@ -108,7 +108,7 @@ export default class Typography extends Component {
 
   render() {
     const { typeLevel, typeScale, baseline } = this.state;
-    const isTypeScaleConfigurable = typeLevel.name === 'Standard' || typeLevel.name === 'Touchable';
+    const isTypeScaleConfigurable = typeLevel.name === 'Touchable';
     const typeScaleFloat = parseFloat(typeLevel.spec['Type Scale'], 10);
     const minTypeScale = typeScaleFloat - 1;
     const maxTypeScale = typeScaleFloat + 1;
