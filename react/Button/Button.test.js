@@ -18,12 +18,12 @@ describe('Button', () => {
   }
 
   it('should have a displayName', () => {
-    render(<Button colour="blue">SEEK</Button>);
+    render(<Button color="blue">SEEK</Button>);
     expect(element.type.displayName).to.equal('Button');
   });
 
   it('should render button text', () => {
-    render(<Button colour="blue">SEEK</Button>);
+    render(<Button color="blue">SEEK</Button>);
     expect(buttonText()).to.equal('SEEK');
   });
 });

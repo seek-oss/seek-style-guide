@@ -25,7 +25,7 @@ const specs = {
   default: {
     Height: '5 grid rows',
     'Internal gutter': '1 gutter width',
-    'Text colour': '@sk-white',
+    'Text color': '@sk-white',
     'Font size': '1.8 — @interaction-type-scale',
     'Border radius': '2px — @field-border-radius',
     'Drop shadow': '1px, @sk-black 70%'
@@ -41,22 +41,22 @@ const specs = {
     'Drop shadow': '1px @sk-focus'
   },
   pink: {
-    'Background colour': '@sk-pink'
+    'Background color': '@sk-pink'
   },
   pinkHover: {
-    'Background colour': 'lighten(@sk-pink, 5%)'
+    'Background color': 'lighten(@sk-pink, 5%)'
   },
   pinkActive: {
-    'Background colour': 'darken(@sk-pink, 5%)'
+    'Background color': 'darken(@sk-pink, 5%)'
   },
   blue: {
-    'Background colour': '@sk-highlight'
+    'Background color': '@sk-highlight'
   },
   blueHover: {
-    'Background colour': 'lighten(@sk-highlight, 5%)'
+    'Background color': 'lighten(@sk-highlight, 5%)'
   },
   blueActive: {
-    'Background colour': 'darken(@sk-highlight, 5%)'
+    'Background color': 'darken(@sk-highlight, 5%)'
   }
 };
 const propertiesToRemove = {
@@ -168,7 +168,7 @@ export default class Buttons extends Component {
       React.createElement(icons[icon], { filled: true, svgClassName: styles.iconSvg }) :
       null;
     const buttonComponent = (
-      <Button colour={color} className={className} loading={loading}>
+      <Button color={color} className={className} loading={loading}>
         {iconComponent}
         Click here
       </Button>
@@ -238,24 +238,13 @@ export default class Buttons extends Component {
           />
           <div className={styles.divider} />
           <SandboxToggle
-            label="Pink"
-            toggleType="radio"
+            toggleType="select"
             toggleProps={{
-              type: 'radio',
-              value: 'pink',
-              checked: isPink,
-              name: 'button-color',
-              onChange: this.setColor
-            }}
-          />
-          <SandboxToggle
-            label="Blue"
-            toggleType="radio"
-            toggleProps={{
-              type: 'radio',
-              value: 'blue',
-              checked: isBlue,
-              name: 'button-color',
+              options: [
+                { name: 'Pink', value: 'pink' },
+                { name: 'Blue', value: 'blue' },
+                { name: 'Gray', value: 'gray' }
+              ],
               onChange: this.setColor
             }}
           />

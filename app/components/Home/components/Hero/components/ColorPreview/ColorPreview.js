@@ -1,4 +1,4 @@
-import styles from './ColourPreview.less';
+import styles from './ColorPreview.less';
 
 import React from 'react';
 import lessToJs from 'less-vars-to-js';
@@ -13,7 +13,7 @@ const getSwatch = name => {
   return (
     <div className={styles.drop} key={name}>
       <Droplet
-        colour={value}
+        color={value}
         sizeInRows={5}
         showHex={true}
       />
@@ -21,9 +21,9 @@ const getSwatch = name => {
   );
 };
 
-export default function ColourPreview() {
+export default function ColorPreview() {
   return (
-    <a className={styles.root} href="#Colours">
+    <a className={styles.root} href="#Colors">
       {Object.keys(brandValues).map(getSwatch)}
     </a>
   );

@@ -65,36 +65,36 @@ Before any of these building blocks can be used, first import the Less theme by 
 @import (reference) "~seek-style-guide/theme";
 ```
 
-### Colour Variables
+### Color Variables
 
-As much as possible, colours should be directly imported from the style guide. The following colours are provided:
+As much as possible, colors should be directly imported from the style guide. The following colors are provided:
 
 ```less
-// Brand colours
+// Brand colors
 @sk-blue
 @sk-pink
 @sk-green
 
-// Partner brand colours
+// Partner brand colors
 @sk-business
 @sk-volunteer
 @sk-learning-light
 @sk-learning-medium
 @sk-learning-dark
 
-// Greys
+// Grays
 @sk-black
 @sk-charcoal
-@sk-mid-grey-dark
-@sk-mid-grey-medium
-@sk-mid-grey
-@sk-mid-grey-light
-@sk-grey-light
-@sk-grey-lightest
+@sk-mid-gray-dark
+@sk-mid-gray-medium
+@sk-mid-gray
+@sk-mid-gray-light
+@sk-gray-light
+@sk-gray-lightest
 @sk-off-white
 @sk-white
 
-// Element colours
+// Element colors
 @sk-link
 @sk-link-visited
 @sk-focus
@@ -105,18 +105,18 @@ As much as possible, colours should be directly imported from the style guide. T
 @sk-yellow
 ```
 
-### Accessible Colour Variants
+### Accessible Color Variants
 
-The contrast ratio of certain foreground/background colour combinations don't meet the [AA accessibility standards](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) that we aim for. As a result, a suite of accessible variants have been provided:
+The contrast ratio of certain foreground/background color combinations don't meet the [AA accessibility standards](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) that we aim for. As a result, a suite of accessible variants have been provided:
 
 ```less
-@sk-mid-grey-on-white
-@sk-pink-on-grey-light
-@sk-learning-dark-on-grey-light
-@sk-business-on-grey-light
+@sk-mid-gray-on-white
+@sk-pink-on-gray-light
+@sk-learning-dark-on-gray-light
+@sk-business-on-gray-light
 ```
 
-Please note that this list is not exhaustive, so contributions are encouraged. To validate colour combinations, we recommend the use of the web-based tool [Accessible Colors](http://accessible-colors.com) by [@moroshko](https://github.com/moroshko).
+Please note that this list is not exhaustive, so contributions are encouraged. To validate color combinations, we recommend the use of the web-based tool [Accessible Colors](http://accessible-colors.com) by [@moroshko](https://github.com/moroshko).
 
 ### Typographic Mixins
 

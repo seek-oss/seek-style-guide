@@ -1,4 +1,4 @@
-import styles from './ColourPalette.less';
+import styles from './ColorPalette.less';
 
 import React from 'react';
 
@@ -8,18 +8,18 @@ import Droplet from 'Droplet/Droplet';
 
 import brand from '!!raw!seek-style-guide/theme/palette/brand.less';
 import elements from '!!raw!seek-style-guide/theme/palette/elements.less';
-import greys from '!!raw!seek-style-guide/theme/palette/grays.less';
+import grays from '!!raw!seek-style-guide/theme/palette/grays.less';
 import partners from '!!raw!seek-style-guide/theme/palette/partners.less';
 
 const brandsJs = lessToJs(brand);
 const elementsJs = lessToJs(elements);
-const greysJs = lessToJs(greys);
+const graysJs = lessToJs(grays);
 const partnersJs = lessToJs(partners);
 
 const dictionary = {
   ...brandsJs,
   ...partnersJs,
-  ...greysJs,
+  ...graysJs,
   ...elementsJs
 };
 
@@ -43,10 +43,10 @@ const getSwatch = name => {
   return (
     <div className={styles.swatch} key={name}>
       <Droplet
-        colour={backgroundColor}
+        color={backgroundColor}
         sizeInRows={7}
         outline={outline !== ''}
-        outlineColour={outline}
+        outlineColor={outline}
       />
     </div>
   );
@@ -61,10 +61,10 @@ const getPalette = (name, palette) => (
   </div>
 );
 
-export default function ColourPalette() {
+export default function ColorPalette() {
   return (
     <div>
-      {getPalette('Greys', greysJs)}
+      {getPalette('Grays', graysJs)}
       {getPalette('Elements', elementsJs)}
       {getPalette('Partners', partnersJs)}
       {getPalette('Brand', brandsJs)}

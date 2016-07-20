@@ -7,15 +7,15 @@ import grid from '!!raw!seek-style-guide/theme/layout/grid.less';
 const gridValues = lessToJs(grid);
 const rowHeight = parseInt(gridValues['@grid-row-height'], 10);
 
-export default function Droplet({ colour, outline, outlineColour, showHex, showVariable, variableName, sizeInRows }) {
+export default function Droplet({ color, outline, outlineColor, showHex, showVariable, variableName, sizeInRows }) {
   const size = sizeInRows * rowHeight;
   const outlineStyles = outline ?
-    { boxShadow: `0 0 1px 0 ${outlineColour}` } :
+    { boxShadow: `0 0 1px 0 ${outlineColor}` } :
     {};
   const dropletStyles = {
     height: `${size}px`,
     width: `${size}px`,
-    backgroundColor: colour,
+    backgroundColor: color,
     ...outlineStyles
   };
 
@@ -25,7 +25,7 @@ export default function Droplet({ colour, outline, outlineColour, showHex, showV
       {
         (showHex || showVariable) ?
           <div className={styles.hex}>
-            {showHex ? <p>{colour}</p> : null}
+            {showHex ? <p>{color}</p> : null}
             {(showHex && showVariable) ? ' — ' : null}
             {showVariable ? <p>{variableName}</p> : null}
           </div> :
@@ -36,21 +36,21 @@ export default function Droplet({ colour, outline, outlineColour, showHex, showV
 }
 
 Droplet.propTypes = {
-  colour: PropTypes.string,
+  color: PropTypes.string,
   sizeInRows: PropTypes.number,
   showHex: PropTypes.bool,
   showVariable: PropTypes.bool,
   variableName: PropTypes.string,
   outline: PropTypes.bool,
-  outlineColour: PropTypes.string
+  outlineColor: PropTypes.string
 };
 
 Droplet.defaultProps = {
-  colour: '#BAD',
+  color: '#BAD',
   sizeInRows: 6,
   showHex: false,
   showVariable: false,
   variableName: '',
   outline: false,
-  outlineColour: ''
+  outlineColor: ''
 };

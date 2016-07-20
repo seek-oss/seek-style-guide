@@ -8,8 +8,8 @@ export default class Button extends Component {
   static displayName = 'Button';
 
   static propTypes = {
-    colour: PropTypes.oneOf([
-      'pink', 'blue'
+    color: PropTypes.oneOf([
+      'pink', 'blue', 'gray'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -37,18 +37,19 @@ export default class Button extends Component {
   }
 
   render() {
-    const { colour, className, loading, children, ...props } = this.props;
+    const { color, className, loading, children, ...restProps } = this.props;
 
     const combinedProps = {
       type: 'button',
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
-        [styles.root_isPink]: colour === 'pink',
-        [styles.root_isBlue]: colour === 'blue'
+        [styles.root_isPink]: color === 'pink',
+        [styles.root_isBlue]: color === 'blue',
+        [styles.root_isGray]: color === 'gray'
       }),
       disabled: loading,
       ref: this.storeButtonReference,
-      ...props
+      ...restProps
     };
 
     return (
