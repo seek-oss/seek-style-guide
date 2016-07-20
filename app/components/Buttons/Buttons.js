@@ -238,24 +238,13 @@ export default class Buttons extends Component {
           />
           <div className={styles.divider} />
           <SandboxToggle
-            label="Pink"
-            toggleType="radio"
+            toggleType="select"
             toggleProps={{
-              type: 'radio',
-              value: 'pink',
-              checked: isPink,
-              name: 'button-color',
-              onChange: this.setColor
-            }}
-          />
-          <SandboxToggle
-            label="Blue"
-            toggleType="radio"
-            toggleProps={{
-              type: 'radio',
-              value: 'blue',
-              checked: isBlue,
-              name: 'button-color',
+              options: [
+                { name: 'Pink', value: 'pink' },
+                { name: 'Blue', value: 'blue' },
+                { name: 'Grey', value: 'grey' }
+              ],
               onChange: this.setColor
             }}
           />

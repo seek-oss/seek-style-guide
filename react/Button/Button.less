@@ -1,14 +1,17 @@
 @import (reference) "~seek-style-guide/theme";
 
-.buttonColor(@colour) {
-  background-color: @colour;
+.buttonColor(@color, @background-colour) {
+  color: @color;
+  background-color: @background-colour;
+
   &:hover,
   &.rootHover {
-    background-color: lighten(@colour, 5%);
+    background-color: lighten(@background-colour, 5%);
   }
+
   &:active,
   &.rootActive {
-    background-color: darken(@colour, 5%);
+    background-color: darken(@background-colour, 5%);
   }
 }
 
@@ -16,7 +19,6 @@
   .touchableText();
   text-align: center;
   padding: 0 @grid-gutter-width;
-  color: @sk-white;
   box-shadow: 0 1px fade(@sk-black, 70%);
   border: 0;
   border-radius: 2px;
@@ -35,11 +37,15 @@
 }
 
 .root_isPink {
-  .buttonColor(@sk-pink);
+  .buttonColor(@sk-white, @sk-pink);
 }
 
 .root_isBlue {
-  .buttonColor(@sk-highlight);
+  .buttonColor(@sk-white, @sk-highlight);
+}
+
+.root_isGrey {
+  .buttonColor(@sk-black, @sk-mid-grey-light);
 }
 
 .loading {
