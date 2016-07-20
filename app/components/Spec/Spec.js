@@ -6,18 +6,18 @@ import lessToJs from 'less-vars-to-js';
 
 import brand from '!!raw!seek-style-guide/theme/palette/brand.less';
 import elements from '!!raw!seek-style-guide/theme/palette/elements.less';
-import greys from '!!raw!seek-style-guide/theme/palette/grays.less';
+import grays from '!!raw!seek-style-guide/theme/palette/grays.less';
 import partners from '!!raw!seek-style-guide/theme/palette/partners.less';
 
 const brandsJs = lessToJs(brand);
 const elementsJs = lessToJs(elements);
-const greysJs = lessToJs(greys);
+const graysJs = lessToJs(grays);
 const partnersJs = lessToJs(partners);
 
 const dictionary = {
   ...brandsJs,
   ...partnersJs,
-  ...greysJs,
+  ...graysJs,
   ...elementsJs
 };
 
@@ -25,11 +25,11 @@ const renderer = (spec, property) => {
   const value = spec[property];
 
   switch (property) {
-    case 'Background colour':
-    case 'Text colour':
+    case 'Background color':
+    case 'Text color':
       return (
         <Droplet
-          colour={dictionary[value]}
+          color={dictionary[value]}
           variableName={value}
           sizeInRows={4}
           showHex={true}

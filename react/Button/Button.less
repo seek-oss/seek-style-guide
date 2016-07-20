@@ -1,17 +1,17 @@
 @import (reference) "~seek-style-guide/theme";
 
-.buttonColor(@color, @background-colour) {
+.buttonColor(@color, @background-color) {
   color: @color;
-  background-color: @background-colour;
+  background-color: @background-color;
 
   &:hover,
   &.rootHover {
-    background-color: lighten(@background-colour, 5%);
+    background-color: lighten(@background-color, 5%);
   }
 
   &:active,
   &.rootActive {
-    background-color: darken(@background-colour, 5%);
+    background-color: darken(@background-color, 5%);
   }
 }
 
@@ -44,8 +44,8 @@
   .buttonColor(@sk-white, @sk-highlight);
 }
 
-.root_isGrey {
-  .buttonColor(@sk-black, @sk-mid-grey-light);
+.root_isGray {
+  .buttonColor(@sk-black, @sk-mid-gray-light);
 }
 
 .loading {

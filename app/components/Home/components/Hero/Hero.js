@@ -3,7 +3,7 @@ import styles from './Hero.less';
 import React from 'react';
 
 import GridContainer from 'GridContainer/GridContainer';
-import ColourPreview from 'ColourPreview/ColourPreview';
+import ColorPreview from 'ColorPreview/ColorPreview';
 import ButtonsPreview from 'ButtonsPreview/ButtonsPreview';
 import TypographyPreview from 'TypographyPreview/TypographyPreview';
 import TextFieldPreview from 'TextFieldPreview/TextFieldPreview';
@@ -14,7 +14,7 @@ export default function Hero() {
     <div className={styles.root}>
       <GridContainer>
         <div className={styles.layout}>
-          <ColourPreview />
+          <ColorPreview />
           <ButtonsPreview />
           <TypographyPreview />
           <TextFieldPreview />

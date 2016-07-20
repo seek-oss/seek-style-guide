@@ -27,7 +27,7 @@ const renderIntro = () => (
   <GridContainer>
     <a name="Typography" />
     <h1><HeroText>Typography</HeroText></h1>
-    <SubheadingText>All typographic application needs to be functional. Whether it be through size, colour or weight, it is important that any variation in typographic application, is logically derived from a necessity to improve the clarity of the content, and heighten the clarity of communication to the reader. Typography should be used functionally, not for ornament.</SubheadingText>
+    <SubheadingText>All typographic application needs to be functional. Whether it be through size, color or weight, it is important that any variation in typographic application, is logically derived from a necessity to improve the clarity of the content, and heighten the clarity of communication to the reader. Typography should be used functionally, not for ornament.</SubheadingText>
   </GridContainer>
 );
 
@@ -70,7 +70,7 @@ const renderContent = () => (
 
         <StandardText>
           <h2>Headings & body copy</h2>
-          <p>Roman weight should always be used for body content and headings when a hierachical distinction has been made with colour or type size. Typographic distinction through colour, size, and weight should be used functinally. Reserve Bold for headings where a sub-heading is set in Roman. Never use Bold for body content.</p>
+          <p>Roman weight should always be used for body content and headings when a hierachical distinction has been made with color or type size. Typographic distinction through color, size, and weight should be used functinally. Reserve Bold for headings where a sub-heading is set in Roman. Never use Bold for body content.</p>
         </StandardText>
       </div>
       <div>

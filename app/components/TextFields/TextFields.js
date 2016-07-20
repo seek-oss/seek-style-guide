@@ -21,9 +21,9 @@ const specs = {
     Height: '5 grid rows',
     'Internal gutters': '15px — @field-gutter-width',
     'Margin bottom': '3 grid rows',
-    'Text colour': '@sk-charcoal',
+    'Text color': '@sk-charcoal',
     'Font scale': '1.8 — @interaction-type-scale',
-    Border: '1px — @sk-mid-grey-light',
+    Border: '1px — @sk-mid-gray-light',
     'Border radius': '2px — @field-border-radius'
   },
   focus: {
