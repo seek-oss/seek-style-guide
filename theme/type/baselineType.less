@@ -1,0 +1,12 @@
+@import (reference) "~basekick/mixin";
+
+@import (reference) "../layout/grid";
+@import (reference) "type";
+
+.__baselineType(@type-scale; @row-span) when (isnumber(@type-scale)) and (isnumber(@row-span)) {
+  .basekick(@type-scale,
+            @row-span,
+            @font-descender-height-scale,
+            @base-font-size,
+            @grid-row-height);
+}
