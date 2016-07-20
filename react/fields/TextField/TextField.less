@@ -25,16 +25,19 @@
   &:not([readonly]):not([disabled]):focus,
   .rootFocus & {
     outline: none;
-    border-color: @sk-focus;
+    border-color: transparent;
+    .focus();
   }
 
   .invalid & {
-    border-color: @sk-pink;
+    border-color: transparent;
+    box-shadow: 0 0 0 @field-border-width @sk-pink;
     margin-bottom: 0;
 
     &:not([readonly]):not([disabled]):focus,
     .rootFocus & {
-      border-color: @sk-pink;
+      border-color: transparent;
+      box-shadow: 0 0 0 @field-border-width @sk-pink;
     }
   }
 }
