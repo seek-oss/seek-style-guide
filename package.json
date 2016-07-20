@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server",
     "lint": "eslint app react test ./*.js",
-    "test": "mocha test --require mock-css-modules --harmony-proxies",
+    "test": "BABEL_ENV=test mocha 'react/**/*.test.js' --compilers js:babel-register --require test/setup.js --harmony-proxies",
     "prebuild": "npm run lint && npm test",
     "local-build": "npm run prebuild && rm -rf dist/ && mkdir dist && NODE_ENV=production webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
     "gh-pages-build": "npm run prebuild && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/seek-style-guide/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
