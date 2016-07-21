@@ -1,9 +1,12 @@
 @import (reference) "../layout/grid.less";
 
 // Base
-@base-font-stack: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+@base-font-stack: Roboto, "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+@classic-base-font-stack: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 @base-font-size: 10;
-@font-descender-height-scale: 0.12;
+// Descender height has been adjusted to cater for both Roboto and
+// Helvetica Neue being as close to the baseline as possible:
+@font-descender-height-scale: 0.1365;
 
 // Hierarchy
 @hero-type-row-span: 5;

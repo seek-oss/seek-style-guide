@@ -1,10 +1,14 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
+const chalk = require('chalk');
 
 const isProduction = () => process.env.NODE_ENV === 'production';
 
 const styleGuidePaths = [
   path.resolve(__dirname, '../react'),
-  path.resolve(__dirname, '../theme')
+  path.resolve(__dirname, '../theme'),
+  path.resolve(__dirname, '../fonts')
 ];
 
 const resolveAliases = {
@@ -16,15 +20,30 @@ const POSTCSS_DEFAULT_PACK = 'default';
 
 const singleLine = string => string
   .replace(/^ +/gm, ' ')
-  .replace(/\n|\r/gm, '');
+  .replace(/\n|\r/gm, '')
+  .trim();
+
+const warn = message => console.warn(chalk.yellow(
+  `\nSEEK STYLE GUIDE WARNING:\n${singleLine(message)}\n`
+));
+
+const error = message => {
+  throw new Error(
+    chalk.red(
+      `\nSEEK STYLE GUIDE ERROR:\n${singleLine(message)}\n`
+    )
+  );
+};
 
 const validateConfig = config => {
   config.module.loaders.forEach(loader => {
     if (!loader.include) {
-      throw new Error(singleLine(`The following loader config is missing an
+      error(`
+        The following loader config is missing an
         "include" value: ${loader.test}. This is required by 'seek-style-guide'
         in order to avoid loader clashes. More info:
-        https://webpack.github.io/docs/configuration.html#module-loaders`));
+        https://webpack.github.io/docs/configuration.html#module-loaders
+      `);
     }
   });
 };
@@ -77,6 +96,7 @@ const getCommonLoaders = () => ([
   {
     test: /\.js$/,
     include: styleGuidePaths,
+    exclude: /\.raw\.js$/,
     loader: require.resolve('babel-loader'),
     query: {
       babelrc: false,
@@ -88,6 +108,14 @@ const getCommonLoaders = () => ([
     }
   },
   {
+    test: /\.raw\.js$/,
+    include: styleGuidePaths,
+    loaders: [
+      require.resolve('raw-loader'),
+      require.resolve('uglify-loader')
+    ]
+  },
+  {
     test: /\.svg$/,
     include: styleGuidePaths,
     loaders: [
@@ -97,10 +125,15 @@ const getCommonLoaders = () => ([
   }
 ]);
 
-const decorateConfig = (config, loaders) => {
+const decorateConfig = (config, options) => {
+  const loaders = options.loaders || [];
+  const plugins = options.plugins || [];
+  const externals = options.externals;
+
   // Ensure config meets minimum requirements for decoration
   config.module = config.module || {};
   config.module.loaders = config.module.loaders || [];
+  config.plugins = config.plugins || [];
 
   validateConfig(config);
 
@@ -111,13 +144,33 @@ const decorateConfig = (config, loaders) => {
     .concat(loaders)
     .concat(config.module.loaders);
 
+  // Prepend style guide plugins
+  config.plugins = plugins
+    .concat(config.plugins);
+
+  // Provide externals, if provided
+  if (externals) {
+    if (config.externals) {
+      warn(`
+        You've provided "externals" in your Webpack config.
+        This means that the style guide cannot provide its
+        own externals for you. It's recommended that you
+        delete your externals and let the style guide take
+        care of it, otherwise you will have to manually keep
+        your own externals in sync with the style guide.
+      `);
+    } else {
+      config.externals = externals;
+    }
+  }
+
   // Add resolve aliases
   const consumerAliases =
     (config.resolve && config.resolve.alias) ? config.resolve.alias : {};
 
   for (var alias in resolveAliases) {
     if (consumerAliases[alias] && consumerAliases[alias] !== resolveAliases[alias]) {
-      throw new Error(`Resolve alias '${alias}' is reserved. Please rename it.\n`)
+      error(`Resolve alias '${alias}' is reserved. Please rename it.\n`);
     } else {
       consumerAliases[alias] = resolveAliases[alias];
     }
@@ -129,35 +182,91 @@ const decorateConfig = (config, loaders) => {
   return config;
 };
 
-const decorateServerConfig = config => decorateConfig(config, [
-  {
-    test: /\.less$/,
-    include: styleGuidePaths,
-    loaders: [
-      `${require.resolve('css-loader/locals')}?modules&localIdentName=${getLocalIdentName()}`,
-      `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
-      require.resolve('less-loader')
-    ]
-  }
-]);
+const decorateServerConfig = config => decorateConfig(config, {
+  externals: [
+    nodeExternals({
+      whitelist: [
+        'seek-style-guide/react',
+        'seek-style-guide/fonts'
+      ]
+    })
+  ],
 
-const decorateClientConfig = (config, options) => {
-  const extractTextPlugin = options && options.extractTextPlugin;
-  const decorateStyleLoaders = extractTextPlugin ?
-    extractTextPlugin.extract.bind(null, 'style') :
-    loaders => `${require.resolve('style-loader')}!${loaders}`;
-
-  return decorateConfig(config, [
+  loaders: [
     {
       test: /\.less$/,
       include: styleGuidePaths,
-      loader: decorateStyleLoaders([
-        `${require.resolve('css-loader')}?modules&${isProduction() ? 'minimize&' : ''}localIdentName=${getLocalIdentName()}`,
+      loaders: [
+        `${require.resolve('css-loader/locals')}?modules&localIdentName=${getLocalIdentName()}`,
         `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
-        `${require.resolve('less-loader')}`
-      ].join('!'))
+        require.resolve('less-loader')
+      ]
     }
-  ]);
+  ]
+});
+
+const decorateClientConfig = (config, options) => {
+  const extractTextPlugin = options && options.extractTextPlugin;
+
+  if (extractTextPlugin === ExtractTextPlugin) {
+    error(`
+      You appear to be passing in a reference to "ExtractTextPlugin"
+      directly, rather than creating an instance via
+      "new ExtractTextPlugin(...)". This causes incorrect CSS to be generated
+      since the style guide also uses extract-text-webpack-plugin to
+      generate its own CSS files for web fonts. As a result, it's
+      important that you create your own instance of ExtractTextPlugin and
+      pass it in instead. If you're not sure how to do this, you can see
+      the Webpack documentation at
+      https://github.com/webpack/extract-text-webpack-plugin/tree/webpack-1
+    `);
+  }
+
+  const decorateStyleLoaders = extractTextPlugin ?
+    extractTextPlugin.extract.bind(extractTextPlugin, 'style') :
+    loaders => `${require.resolve('style-loader')}!${loaders}`;
+
+  const extractWoff = new ExtractTextPlugin('roboto.woff.css');
+  const extractWoff2 = new ExtractTextPlugin('roboto.woff2.css');
+
+  return decorateConfig(config, {
+    loaders: [
+      {
+        test: /\.less$/,
+        include: styleGuidePaths,
+        loader: decorateStyleLoaders([
+          `${require.resolve('css-loader')}?modules&${isProduction() ? 'minimize&' : ''}localIdentName=${getLocalIdentName()}`,
+          `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
+          `${require.resolve('less-loader')}`
+        ].join('!'))
+      },
+      {
+        test: /Roboto.woff.css$/,
+        include: styleGuidePaths,
+        loader: extractWoff.extract([
+          `${require.resolve('css-loader')}?minimize`
+        ])
+      },
+      {
+        test: /Roboto.woff2.css$/,
+        include: styleGuidePaths,
+        loader: extractWoff2.extract([
+          `${require.resolve('css-loader')}?minimize`
+        ])
+      },
+      {
+        test: /\.woff2?$/,
+        include: styleGuidePaths,
+        loaders: [
+          require.resolve('base64-font-loader')
+        ]
+      }
+    ],
+    plugins: [
+      extractWoff,
+      extractWoff2
+    ]
+  });
 };
 
 module.exports = {

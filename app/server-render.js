@@ -2,6 +2,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext, createMemoryHistory } from 'react-router';
 import routes from './routes';
+import { renderFontSnippet } from 'seek-style-guide/fonts';
 
 const baseHref = process.env.BASE_HREF || '/';
 
@@ -14,6 +15,8 @@ export default ({ path, template }, callback) => {
       <RouterContext {...renderProps} />
     );
 
-    callback(null, template({ html, baseHref }));
+    const fontSnippet = renderFontSnippet({ baseHref });
+
+    callback(null, template({ html, fontSnippet, baseHref }));
   });
 };

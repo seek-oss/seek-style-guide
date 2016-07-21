@@ -26,3 +26,9 @@
 .rawText(@font-scale: @standard-type-scale) {
   font-size: unit((@font-scale * @base-font-size), px);
 }
+
+.classicFontStack() {
+  font-family: @classic-base-font-stack;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}

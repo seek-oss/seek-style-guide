@@ -60,7 +60,10 @@ const config = decorateClientConfig({
   ],
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
+    })
   ]
 });
 

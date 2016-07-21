@@ -28,33 +28,53 @@ Then, decorate your client Webpack config:
 const decorateClientConfig = require('seek-style-guide/webpack').decorateClientConfig;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const extractCss = new ExtractTextPlugin('style.css');
+
 const config = {
   // Webpack config...
 };
 
 module.exports = decorateClientConfig(config, {
   // Ensure you pass your ExtractTextPlugin instance to the decorator, if required:
-  extractTextPlugin: ExtractTextPlugin
+  extractTextPlugin: extractCss
 });
 ```
 
 Please note that, if your Webpack loaders aren't scoped to your local project files via the ["include" option](https://webpack.github.io/docs/configuration.html#module-loaders), the decorator will throw an error.
 
-In the Webpack config for your node targets, ensure `seek-style-guide/react` is marked as an external using [webpack-node-externals](https://github.com/liady/webpack-node-externals):
+## Web Fonts
+
+Our standard web font loading strategy is to load and cache web fonts in the background, and only display them on page load if already present in the cache. This is to ensure that text is rendered as soon as possible, without the dreaded "flash of invisible text" (FOIT), or "flash of unstyled text" (FOUT), both of which are negative performance impacts commonly found with web fonts.
+
+Typically, engineering performant web fonts takes a lot of work, so we've provided a simple mechanism to hook this into your application.
+
+First, include the font bundle by requiring it in the entry point to your client code:
 
 ```js
-const nodeExternals = require('webpack-node-externals');
-...
-module.exports = {
-  ...
-  target: 'node',
-  externals: [
-    nodeExternals({
-      whitelist: ['seek-style-guide/react']
-    })
-  ]
-  ...
-};
+require('seek-style-guide/fonts/bundle');
+```
+
+Then, render the font snippet and provide it to your main application template, ensuring it's rendered in the markup before your main CSS file. Note that you need to provide the base href to your static assets:
+
+```js
+import { renderFontSnippet } from 'seek-style-guide/fonts';
+
+const fontSnippet = renderFontSnippet({
+  baseHref: process.env.SEEK_STATIC_RESOURCE_PATH // (as an example)
+});
+
+// Now, pass your generated font snippet to your template.
+```
+
+If your application doesn't have a dynamic server component, you can optionally evaluate the snippet immediately:
+
+```js
+import { renderFontSnippet } from 'seek-style-guide/fonts';
+
+const fontSnippet = renderFontSnippet({
+  baseHref: process.env.SEEK_STATIC_RESOURCE_PATH,  // (as an example)
+  evaluate: true
+});
 ```
 
 ## Less
@@ -135,6 +155,18 @@ All type should use the standard typographic mixins, e.g.
 ```
 
 Under the hood, these mixins leverage [basekick](https://github.com/mjt01/basekick) to ensure that typography sits correctly on the baseline grid.
+
+### Classic Font Stack
+
+The style guide enforces modern font styling as a default. However, some aspects of the UI may need to fall back to the classic font stack, e.g. the common header used across SEEK. This can be achieved via a simple mixin:
+
+```less
+.element {
+  .classicFontStack();
+}
+```
+
+Note that, since font styles cascade, this can be applied to a parent component in order to correctly style all children.
 
 ### Grid Variables
 
