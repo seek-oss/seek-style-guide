@@ -68,6 +68,7 @@
     "gh-pages": "^0.11.0",
     "glob": "^7.0.5",
     "hex-rgb": "^1.0.0",
+    "jsdom": "^9.4.1",
     "json-loader": "^0.5.4",
     "jsx-to-string": "^0.2.13",
     "less-vars-to-js": "^1.1.1",

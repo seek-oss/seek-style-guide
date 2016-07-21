@@ -1,14 +1,20 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+import {
+  createRenderer,
+  Simulate,
+  renderIntoDocument,
+  findRenderedDOMComponentWithClass,
+  scryRenderedDOMComponentsWithClass
+} from 'react-addons-test-utils';
 import { findAllWithClass } from 'react-shallow-testutils';
 import TextField from './TextField';
 
 const renderer = createRenderer();
 
 describe('TextField', () => {
-  let element, textField, label, input, help, message, messageIcon, errors;
+  let element, textField, rootElement, label, input, help, message, messageIcon, clearField, errors;
 
   beforeEach(() => {
     errors = [];
@@ -30,6 +36,14 @@ describe('TextField', () => {
     help = findAllWithClass(textField, 'help')[0] || null;
     message = findAllWithClass(textField, 'message')[0] || null;
     messageIcon = findAllWithClass(textField, 'messageIcon')[0] || null;
+  }
+
+  function renderToDom(jsx) {
+    element = jsx;
+    textField = renderIntoDocument(element);
+    rootElement = scryRenderedDOMComponentsWithClass(textField, 'root')[0];
+    input = findRenderedDOMComponentWithClass(textField, 'input');
+    clearField = findRenderedDOMComponentWithClass(textField, 'clearField');
   }
 
   function helpText() {
@@ -194,6 +208,93 @@ describe('TextField', () => {
     it('should render a message icon', () => {
       render(<TextField invalid={true} message="Something went wrong" />);
       expect(messageIcon).not.to.equal(null);
+    });
+  });
+
+  describe('clear button', () => {
+    const handleBlur = sinon.spy();
+    const handleClear = sinon.spy();
+
+    const clickClear = () => {
+      Simulate.mouseDown(clearField);
+      Simulate.mouseUp(clearField);
+      Simulate.click(clearField);
+    };
+
+    beforeEach(() => {
+      handleBlur.reset();
+      handleClear.reset();
+    });
+
+    it('should not be visible when value is empty', () => {
+      renderToDom(<TextField inputProps={{ value: '' }} onClear={handleClear} />);
+      expect(rootElement.className).not.to.contain('canClear');
+    });
+
+    it('should be visible when value is provided', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} onClear={handleClear} />);
+      expect(rootElement.className).to.contain('canClear');
+    });
+
+    it('should not be visible when value is provided but no clear handler', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} />);
+      expect(rootElement.className).not.to.contain('canClear');
+    });
+
+    it('should invoke the clear handler when clicked', () => {
+      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} onClear={handleClear} />);
+      clickClear();
+      expect(handleClear.called).to.equal(true);
+    });
+
+    it('should invoke the clear handler when touched', () => {
+      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} onClear={handleClear} />);
+      Simulate.touchStart(clearField);
+      expect(handleClear.called).to.equal(true);
+    });
+
+    it('should focus the input when clicked', () => {
+      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} onClear={handleClear} />);
+      clickClear();
+      expect(global.document.activeElement).to.equal(input);
+    });
+  });
+
+  describe('blur', () => {
+    let expected;
+    const eventData = { data: 'BLUR_EVENT' };
+    const handleBlur = sinon.spy(event => {
+      expected = event.data;
+    });
+
+    beforeEach(() => {
+      handleBlur.reset();
+    });
+
+    it('should fire blur handler if provided', () => {
+      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} />);
+      Simulate.blur(input, eventData);
+      expect(handleBlur.called).to.equal(true);
+      expect(expected).to.equal('BLUR_EVENT');
+    });
+  });
+
+  describe('change', () => {
+    let expected;
+    const eventData = { data: 'CHANGE_EVENT' };
+    const handleChange = sinon.spy(event => {
+      expected = event.data;
+    });
+
+    beforeEach(() => {
+      handleChange.reset();
+    });
+
+    it('should fire blur handler if provided', () => {
+      renderToDom(<TextField inputProps={{ onChange: handleChange }} />);
+      Simulate.change(input, eventData);
+      expect(handleChange.called).to.equal(true);
+      expect(expected).to.equal('CHANGE_EVENT');
     });
   });
 });

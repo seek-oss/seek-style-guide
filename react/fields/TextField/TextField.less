@@ -1,7 +1,9 @@
 @import (reference) "~seek-style-guide/theme";
+@import (reference) "ClearField/ClearFieldVariables";
 
 .root {
   display: inline-block;
+  position: relative;
 }
 
 .label {
@@ -12,7 +14,7 @@
 
 .input {
   .touchableText();
-  padding: 0 @field-gutter-width;
+  padding: 0 @clear-button-width 0 @field-gutter-width;
   margin-bottom: (@grid-row-height * 3);
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
@@ -40,10 +42,30 @@
       box-shadow: 0 0 0 @field-border-width @sk-pink;
     }
   }
+
+  &[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  &[type="search"]::-ms-clear {
+    display: none;
+  }
 }
 
 .help {
   .standardText();
+}
+
+.clearField {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  .canClear & {
+    opacity: 1;
+    transition: opacity .3s ease;
+    max-width: initial;
+  }
 }
 
 .message {

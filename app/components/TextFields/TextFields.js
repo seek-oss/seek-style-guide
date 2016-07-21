@@ -49,13 +49,16 @@ export default class TextFields extends Component {
       focus: false,
       help: false,
       invalid: false,
-      baseline: false
+      baseline: false,
+      inputValue: ''
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
     this.toggleHelp = this.toggleHelp.bind(this);
     this.toggleInvalid = this.toggleInvalid.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   toggleFocus(event) {
@@ -82,8 +85,20 @@ export default class TextFields extends Component {
     });
   }
 
+  handleChange(event) {
+    this.setState({
+      inputValue: event.target.value
+    });
+  }
+
+  handleClear() {
+    this.setState({
+      inputValue: ''
+    });
+  }
+
   render() {
-    const { focus, help, invalid, baseline } = this.state;
+    const { focus, help, invalid, baseline, inputValue } = this.state;
     const className = classnames({
       [textFieldStyles.rootFocus]: focus
     });
@@ -100,6 +115,12 @@ export default class TextFields extends Component {
         label="First name"
         help={help ? 'e.g. David' : ''}
         message={invalid ? 'Something went wrong' : ''}
+        inputProps={{
+          type: 'search',
+          onChange: this.handleChange,
+          value: inputValue
+        }}
+        onClear={this.handleClear}
       />
     );
 
