@@ -4,6 +4,8 @@ const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const decorateClientConfig = require('./webpack').decorateClientConfig;
 
+const appCss = new ExtractTextPlugin('app.css');
+
 // Must be absolute paths
 const appPaths = [
   path.resolve(__dirname, 'app'),
@@ -35,7 +37,7 @@ const config = {
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!less'),
+        loader: appCss.extract('style', 'css?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!less'),
         include: appPaths
       },
       {
@@ -60,7 +62,7 @@ const config = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new ExtractTextPlugin('app.css'),
+    appCss,
     new webpack.optimize.UglifyJsPlugin({
       output: {
         comments: false
@@ -73,5 +75,5 @@ const config = {
 };
 
 module.exports = decorateClientConfig(config, {
-  extractTextPlugin: ExtractTextPlugin
+  extractTextPlugin: appCss
 });
