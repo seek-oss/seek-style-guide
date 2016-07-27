@@ -79,8 +79,7 @@ export default class TextField extends Component {
     invalid: false,
     label: '',
     help: '',
-    message: '',
-    onClear: null
+    message: ''
   };
 
   constructor() {
