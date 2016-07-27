@@ -1,14 +1,26 @@
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
 import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
 import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+import {
+  createRenderer,
+  Simulate,
+  renderIntoDocument,
+  findRenderedDOMComponentWithClass,
+  scryRenderedDOMComponentsWithClass
+} from 'react-addons-test-utils';
+import SyntheticEvent from 'react/lib/SyntheticEvent';
 import { findAllWithClass } from 'react-shallow-testutils';
 import TextField from './TextField';
+
+chai.use(sinonChai);
+
+const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
 
 const renderer = createRenderer();
 
 describe('TextField', () => {
-  let element, textField, label, input, help, message, messageIcon, errors;
+  let element, textField, rootElement, label, input, help, message, messageIcon, clearField, errors;
 
   beforeEach(() => {
     errors = [];
@@ -32,12 +44,24 @@ describe('TextField', () => {
     messageIcon = findAllWithClass(textField, 'messageIcon')[0] || null;
   }
 
+  function renderToDom(jsx) {
+    element = jsx;
+    textField = renderIntoDocument(element);
+    rootElement = scryRenderedDOMComponentsWithClass(textField, 'root')[0];
+    input = findRenderedDOMComponentWithClass(textField, 'input');
+    clearField = findRenderedDOMComponentWithClass(textField, 'clearField');
+  }
+
   function helpText() {
     return help.props.children;
   }
 
   function messageText() {
-    return message.props.children[1] || null;
+    return message.props.children[1];
+  }
+
+  function isClearButtonVisible() {
+    return /\bcanClear\b/.test(rootElement.className);
   }
 
   it('should have a displayName', () => {
@@ -194,6 +218,72 @@ describe('TextField', () => {
     it('should render a message icon', () => {
       render(<TextField invalid={true} message="Something went wrong" />);
       expect(messageIcon).not.to.equal(null);
+    });
+  });
+
+  describe('clear button', () => {
+    const handleBlur = sinon.spy();
+    const handleClear = sinon.spy();
+
+    const clickClear = () => {
+      Simulate.mouseDown(clearField);
+      Simulate.mouseUp(clearField);
+      Simulate.click(clearField);
+    };
+
+    beforeEach(() => {
+      handleBlur.reset();
+      handleClear.reset();
+    });
+
+    it('should not be visible when value is empty', () => {
+      renderToDom(<TextField inputProps={{ value: '' }} onClear={handleClear} />);
+      expect(isClearButtonVisible()).to.equal(false);
+    });
+
+    it('should be visible when value is provided', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} onClear={handleClear} />);
+      expect(isClearButtonVisible()).to.equal(true);
+    });
+
+    it('should be visible when value has white spaces only', () => {
+      renderToDom(<TextField inputProps={{ value: '  ' }} onClear={handleClear} />);
+      expect(isClearButtonVisible()).to.equal(true);
+    });
+
+    it('should not be visible when value is provided but no clear handler', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} />);
+      expect(isClearButtonVisible()).to.equal(false);
+    });
+
+    it('should not add an "input_isClearable" class to the input when no clear handler is provided', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} />);
+      expect(input.className).not.to.contain('input_isClearable');
+    });
+
+    it('should add an "input_isClearable" class to the input when a clear handler is provided', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} onClear={handleClear} />);
+      expect(input.className).to.contain('input_isClearable');
+    });
+
+    it('should invoke the clear handler when clicked', () => {
+      renderToDom(<TextField onClear={handleClear} />);
+      clickClear();
+      expect(handleClear.calledOnce).to.equal(true);
+      expect(handleClear).to.be.calledWith(eventMatcher);
+    });
+
+    it('should invoke the clear handler when touched', () => {
+      renderToDom(<TextField onClear={handleClear} />);
+      Simulate.touchStart(clearField);
+      expect(handleClear.calledOnce).to.equal(true);
+      expect(handleClear).to.be.calledWith(eventMatcher);
+    });
+
+    it('should focus the input when clicked', () => {
+      renderToDom(<TextField onClear={handleClear} />);
+      clickClear();
+      expect(global.document.activeElement).to.equal(input);
     });
   });
 });
