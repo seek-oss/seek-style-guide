@@ -14,7 +14,7 @@
 
 .input {
   .touchableText();
-  padding: 0 @clear-button-width 0 @field-gutter-width;
+  padding: 0 @field-gutter-width;
   margin-bottom: (@grid-row-height * 3);
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
@@ -49,6 +49,9 @@
   &[type="search"]::-ms-clear {
     display: none;
   }
+}
+.input_isClearable {
+  padding: 0 @clear-button-width 0 @field-gutter-width;
 }
 
 .help {

@@ -89,6 +89,7 @@
     "react-router": "^2.5.2",
     "react-shallow-testutils": "^2.0.0",
     "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0",
     "static-site-generator-webpack-plugin": "^2.1.0",
     "superstatic": "^4.0.3",
     "webpack": "^1.13.1",

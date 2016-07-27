@@ -92,8 +92,6 @@ export default class TextField extends Component {
     this.renderHelp = this.renderHelp.bind(this);
     this.renderMessage = this.renderMessage.bind(this);
     this.renderIcon = this.renderIcon.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
     this.handleMouseDownOnClear = this.handleMouseDownOnClear.bind(this);
   }
 
@@ -110,24 +108,6 @@ export default class TextField extends Component {
       onClear(event);
       this.input.focus();
       event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
-    }
-  }
-
-  handleChange(event) {
-    const { inputProps = {} } = this.props;
-    const { onChange } = inputProps;
-
-    if (typeof onChange === 'function') {
-      onChange(event);
-    }
-  }
-
-  handleBlur(event) {
-    const { inputProps = {} } = this.props;
-    const { onBlur } = inputProps;
-
-    if (typeof onBlur === 'function') {
-      onBlur(event);
     }
   }
 
@@ -152,12 +132,10 @@ export default class TextField extends Component {
   }
 
   renderInput() {
-    const { inputProps, id } = this.props;
+    const { inputProps, id, onClear } = this.props;
     const allInputProps = {
-      ...combineClassNames(inputProps, styles.input),
+      ...combineClassNames(inputProps, styles.input, onClear && styles.input_isClearable),
       ...(id ? { id } : {}),
-      onChange: this.handleChange,
-      onBlur: this.handleBlur,
       ref: this.storeInputReference
     };
 

@@ -1,5 +1,6 @@
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
 import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
 import React from 'react';
 import {
   createRenderer,
@@ -8,8 +9,13 @@ import {
   findRenderedDOMComponentWithClass,
   scryRenderedDOMComponentsWithClass
 } from 'react-addons-test-utils';
+import SyntheticEvent from 'react/lib/SyntheticEvent';
 import { findAllWithClass } from 'react-shallow-testutils';
 import TextField from './TextField';
+
+chai.use(sinonChai);
+
+const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
 
 const renderer = createRenderer();
 
@@ -51,7 +57,11 @@ describe('TextField', () => {
   }
 
   function messageText() {
-    return message.props.children[1] || null;
+    return message.props.children[1];
+  }
+
+  function isClearButtonVisible() {
+    return /\bcanClear\b/.test(rootElement.className);
   }
 
   it('should have a displayName', () => {
@@ -228,73 +238,52 @@ describe('TextField', () => {
 
     it('should not be visible when value is empty', () => {
       renderToDom(<TextField inputProps={{ value: '' }} onClear={handleClear} />);
-      expect(rootElement.className).not.to.contain('canClear');
+      expect(isClearButtonVisible()).to.equal(false);
     });
 
     it('should be visible when value is provided', () => {
       renderToDom(<TextField inputProps={{ value: 'abc' }} onClear={handleClear} />);
-      expect(rootElement.className).to.contain('canClear');
+      expect(isClearButtonVisible()).to.equal(true);
+    });
+
+    it('should be visible when value has white spaces only', () => {
+      renderToDom(<TextField inputProps={{ value: '  ' }} onClear={handleClear} />);
+      expect(isClearButtonVisible()).to.equal(true);
     });
 
     it('should not be visible when value is provided but no clear handler', () => {
       renderToDom(<TextField inputProps={{ value: 'abc' }} />);
-      expect(rootElement.className).not.to.contain('canClear');
+      expect(isClearButtonVisible()).to.equal(false);
+    });
+
+    it('should not add an "input_isClearable" class to the input when no clear handler is provided', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} />);
+      expect(input.className).not.to.contain('input_isClearable');
+    });
+
+    it('should add an "input_isClearable" class to the input when a clear handler is provided', () => {
+      renderToDom(<TextField inputProps={{ value: 'abc' }} onClear={handleClear} />);
+      expect(input.className).to.contain('input_isClearable');
     });
 
     it('should invoke the clear handler when clicked', () => {
-      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} onClear={handleClear} />);
+      renderToDom(<TextField onClear={handleClear} />);
       clickClear();
-      expect(handleClear.called).to.equal(true);
+      expect(handleClear.calledOnce).to.equal(true);
+      expect(handleClear).to.be.calledWith(eventMatcher);
     });
 
     it('should invoke the clear handler when touched', () => {
-      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} onClear={handleClear} />);
+      renderToDom(<TextField onClear={handleClear} />);
       Simulate.touchStart(clearField);
-      expect(handleClear.called).to.equal(true);
+      expect(handleClear.calledOnce).to.equal(true);
+      expect(handleClear).to.be.calledWith(eventMatcher);
     });
 
     it('should focus the input when clicked', () => {
-      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} onClear={handleClear} />);
+      renderToDom(<TextField onClear={handleClear} />);
       clickClear();
       expect(global.document.activeElement).to.equal(input);
-    });
-  });
-
-  describe('blur', () => {
-    let expected;
-    const eventData = { data: 'BLUR_EVENT' };
-    const handleBlur = sinon.spy(event => {
-      expected = event.data;
-    });
-
-    beforeEach(() => {
-      handleBlur.reset();
-    });
-
-    it('should fire blur handler if provided', () => {
-      renderToDom(<TextField inputProps={{ onBlur: handleBlur }} />);
-      Simulate.blur(input, eventData);
-      expect(handleBlur.called).to.equal(true);
-      expect(expected).to.equal('BLUR_EVENT');
-    });
-  });
-
-  describe('change', () => {
-    let expected;
-    const eventData = { data: 'CHANGE_EVENT' };
-    const handleChange = sinon.spy(event => {
-      expected = event.data;
-    });
-
-    beforeEach(() => {
-      handleChange.reset();
-    });
-
-    it('should fire blur handler if provided', () => {
-      renderToDom(<TextField inputProps={{ onChange: handleChange }} />);
-      Simulate.change(input, eventData);
-      expect(handleChange.called).to.equal(true);
-      expect(expected).to.equal('CHANGE_EVENT');
     });
   });
 });
