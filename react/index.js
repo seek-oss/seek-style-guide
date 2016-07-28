@@ -12,6 +12,7 @@ import ErrorIcon from './icons/ErrorIcon/ErrorIcon';
 import TickIcon from './icons/TickIcon/TickIcon';
 import HelpIcon from './icons/HelpIcon/HelpIcon';
 import Button from './Button/Button';
+import TextLink from './TextLink/TextLink';
 import PlusIcon from './icons/PlusIcon/PlusIcon';
 import DeleteIcon from './icons/DeleteIcon/DeleteIcon';
 import TextField from './fields/TextField/TextField';
@@ -34,6 +35,7 @@ export {
   TickIcon,
   HelpIcon,
   Button,
+  TextLink,
   PlusIcon,
   DeleteIcon,
   TextField,
