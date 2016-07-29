@@ -11,8 +11,8 @@
     "prebuild": "npm run lint && npm test",
     "local-build": "npm run prebuild && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
     "gh-pages-build": "npm run prebuild && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/seek-style-guide/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
-    "preversion": "npm run gh-pages-build",
-    "postversion": "git push && git push --tags && npm run deploy",
+    "preversion": "bash ./scripts/prepublish && npm run gh-pages-build",
+    "postversion": "git push && git push --tags && npm run deploy && npm publish --registry=http://npmregistryinternal.seekinfra.com:4873",
     "deploy": "gh-pages -d dist && printf '\nURL: http://seek-jobs.github.io/seek-style-guide\n\n'",
     "static": "opn http://localhost:1804 && superstatic dist --port 1804",
     "install-git-hooks": "./scripts/install-git-hooks"
