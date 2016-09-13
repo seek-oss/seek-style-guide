@@ -1,5 +1,5 @@
 {
-  "name": "seek-style-guide",
+  "name": "@seek/seek-style-guide",
   "version": "7.2.0",
   "description": "Living style guide containing the building blocks and design principles for SEEK web applications",
   "private": true,
