@@ -7,7 +7,7 @@ In the interest of increased productivity, new projects are strongly encouraged 
 ## Installation
 
 ```bash
-$ npm install --save-dev SEEK-Jobs/seek-style-guide#<version>
+$ npm install --save-dev @seek/seek-style-guide@<version>
 ```
 
 ## Configuring Webpack
@@ -15,7 +15,7 @@ $ npm install --save-dev SEEK-Jobs/seek-style-guide#<version>
 First, decorate your server Webpack config:
 
 ```js
-const decorateServerConfig = require('seek-style-guide/webpack').decorateServerConfig;
+const decorateServerConfig = require('@seek/seek-style-guide/webpack').decorateServerConfig;
 
 module.exports = decorateServerConfig({
   // Webpack config...
@@ -25,7 +25,7 @@ module.exports = decorateServerConfig({
 Then, decorate your client Webpack config:
 
 ```js
-const decorateClientConfig = require('seek-style-guide/webpack').decorateClientConfig;
+const decorateClientConfig = require('@seek/seek-style-guide/webpack').decorateClientConfig;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractCss = new ExtractTextPlugin('style.css');
@@ -51,13 +51,13 @@ Typically, engineering performant web fonts takes a lot of work, so we've provid
 First, include the font bundle by requiring it in the entry point to your client code:
 
 ```js
-require('seek-style-guide/fonts/bundle');
+require('@seek/seek-style-guide/fonts/bundle');
 ```
 
 Then, render the font snippet and provide it to your main application template, ensuring it's rendered in the markup before your main CSS file. Note that you need to provide the base href to your static assets:
 
 ```js
-import { renderFontSnippet } from 'seek-style-guide/fonts';
+import { renderFontSnippet } from '@seek/seek-style-guide/fonts';
 
 const fontSnippet = renderFontSnippet({
   baseHref: process.env.SEEK_STATIC_RESOURCE_PATH // (as an example)
@@ -69,7 +69,7 @@ const fontSnippet = renderFontSnippet({
 If your application doesn't have a dynamic server component, you can optionally evaluate the snippet immediately:
 
 ```js
-import { renderFontSnippet } from 'seek-style-guide/fonts';
+import { renderFontSnippet } from '@seek/seek-style-guide/fonts';
 
 const fontSnippet = renderFontSnippet({
   baseHref: process.env.SEEK_STATIC_RESOURCE_PATH,  // (as an example)
@@ -82,7 +82,7 @@ const fontSnippet = renderFontSnippet({
 Before any of these building blocks can be used, first import the Less theme by reference.
 
 ```less
-@import (reference) "~seek-style-guide/theme";
+@import (reference) "~@seek/seek-style-guide/theme";
 ```
 
 ### Color Variables
@@ -222,7 +222,7 @@ It's important to note that any additions to these values (e.g. borders) will ne
 A growing suite of React components are provided in this style guide. They can be imported like so:
 
 ```js
-import { HeartIcon, StarIcon } from 'seek-style-guide/react';
+import { HeartIcon, StarIcon } from '@seek/seek-style-guide/react';
 ```
 
 These components can be viewed online in the following categories:
