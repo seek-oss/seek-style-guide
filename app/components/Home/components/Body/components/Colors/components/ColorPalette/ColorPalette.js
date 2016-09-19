@@ -44,7 +44,7 @@ const getSwatch = name => {
     <div className={styles.swatch} key={name}>
       <Droplet
         color={backgroundColor}
-        sizeInRows={7}
+        sizeInRows={6}
         outline={outline !== ''}
         outlineColor={outline}
       />
