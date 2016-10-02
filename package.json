@@ -2,7 +2,6 @@
   "name": "seek-style-guide",
   "version": "8.0.0",
   "description": "Living style guide containing the building blocks and design principles for SEEK web applications",
-  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "BASE_HREF=/ node server",
