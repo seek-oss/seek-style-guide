@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const chalk = require('chalk');
+const emoji = require('emoji-dictionary');
 
 const isProduction = () => process.env.NODE_ENV === 'production';
 
@@ -88,9 +89,10 @@ const decoratePostCss = config => {
   return config;
 };
 
+const artEmoji = emoji.getUnicode('art');
 const getLocalIdentName = () => isProduction() ?
-  '[hash:base64:7]' :
-  '__STYLE_GUIDE__[name]__[local]___[hash:base64:7]';
+  `${artEmoji}[emoji]` :
+  `__STYLE_GUIDE__[name]__[local]___${artEmoji}[emoji]`;
 
 const getCommonLoaders = () => ([
   {
