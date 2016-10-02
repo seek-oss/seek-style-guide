@@ -230,3 +230,15 @@ These components can be viewed online in the following categories:
 - [Buttons](http://seek-jobs.github.io/seek-style-guide/buttons)
 - [Textfields](http://seek-jobs.github.io/seek-style-guide/textfields)
 - [Icons](http://seek-jobs.github.io/seek-style-guide/icons)
+
+## Release Process
+
+This package follows [semantic versioning](http://semver.org). In the `master` branch, run `npm version` with the appropriate version bump:
+
+```bash
+$ npm version major
+$ npm version minor
+$ npm version patch
+```
+
+This will automate the process of generating static assets, committing and tagging an updated version number, publishing to npm, pushing to GitHub, and deploying the demo site to GitHub Pages.
