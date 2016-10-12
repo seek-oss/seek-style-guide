@@ -2,7 +2,7 @@ import styles from './Icons.less';
 import autosuggestStyles from './Autosuggest.less';
 
 import React, { Component } from 'react';
-import Autosuggest from 'react-autosuggest';
+import { Autosuggest } from 'seek-style-guide/react';
 import Baseline from 'react-baseline';
 
 import GridContainer from 'GridContainer/GridContainer';
@@ -130,10 +130,6 @@ export default class Icons extends Component {
     }
   }
 
-  shouldRenderSuggestions() {
-    return true;
-  }
-
   handleSuggestionSelected(event, { suggestion }) {
     this.setState({
       icon: suggestion
@@ -148,6 +144,10 @@ export default class Icons extends Component {
     });
   }
 
+  shouldRenderSuggestions() {
+    return true;
+  }
+
   render() {
     const { icon, baseline, value, suggestions } = this.state;
     const { icon: Icon, props: iconProps } = icon;
@@ -155,10 +155,10 @@ export default class Icons extends Component {
       <Icon {...iconProps} svgClassName={baseline ? styles.iconSvgWithBaseline : styles.iconSvg} />
     );
     const inputProps = {
-      placeholder: 'Type to filter',
       value,
       onChange: this.onChange,
-      onFocus: this.onFocus
+      onFocus: this.onFocus,
+      placeholder: 'Type to filter'
     };
 
     return (
@@ -191,14 +191,18 @@ export default class Icons extends Component {
 
         <SandboxTogglePanel>
           <Autosuggest
-            suggestions={suggestions}
-            onSuggestionsUpdateRequested={this.handleSuggestionsUpdateRequested}
-            getSuggestionValue={getSuggestionValue}
-            renderSuggestion={renderSuggestion}
-            shouldRenderSuggestions={this.shouldRenderSuggestions}
-            onSuggestionSelected={this.handleSuggestionSelected}
+            autosuggestProps={{
+              suggestions,
+              onSuggestionsFetchRequested: this.handleSuggestionsUpdateRequested,
+              onSuggestionsClearRequested: () => {},
+              getSuggestionValue,
+              renderSuggestion,
+              shouldRenderSuggestions: this.shouldRenderSuggestions,
+              onSuggestionSelected: this.handleSuggestionSelected,
+              theme: autosuggestStyles
+            }}
             inputProps={inputProps}
-            theme={autosuggestStyles}
+            className={styles.autosuggest}
             ref={this.saveAutosuggest}
           />
         </SandboxTogglePanel>
