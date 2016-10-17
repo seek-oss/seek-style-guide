@@ -4,6 +4,7 @@ import autosuggestStyles from './Autosuggest.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
+import IsolatedScroll from 'react-isolated-scroll';
 
 import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
 import ClearField from '../TextField/ClearField/ClearField';
@@ -133,6 +134,18 @@ export default class Autosuggest extends Component {
     );
   }
 
+  renderSuggestionsContainer({ ref, ...rest }) {
+    const callRef = isolatedScroll => {
+      if (isolatedScroll !== null) {
+        ref(isolatedScroll.component);
+      }
+    };
+
+    return (
+      <IsolatedScroll {...rest} ref={callRef} />
+    );
+  }
+
   renderInput() {
     const { inputProps, id, onClear, autosuggestProps } = this.props;
     const { theme } = autosuggestProps;
@@ -141,6 +154,7 @@ export default class Autosuggest extends Component {
       ...inputProps
     };
     const allAutosuggestProps = {
+      renderSuggestionsContainer: this.renderSuggestionsContainer,
       ...autosuggestProps,
       theme: {
         input: classnames({

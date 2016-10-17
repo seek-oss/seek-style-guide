@@ -46,6 +46,7 @@
     "postcss-loader": "0.9.1",
     "raw-loader": "0.5.1",
     "react-autosuggest": "6.0.4",
+    "react-isolated-scroll": "0.1.0",
     "style-loader": "0.13.1",
     "svgo": "0.6.6",
     "svgo-loader": "1.1.0",
