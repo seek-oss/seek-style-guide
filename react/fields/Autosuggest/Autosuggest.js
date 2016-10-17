@@ -135,32 +135,27 @@ export default class Autosuggest extends Component {
 
   renderInput() {
     const { inputProps, id, onClear, autosuggestProps } = this.props;
-    const { suggestions, onSuggestionsFetchRequested, theme, onSuggestionsClearRequested,
-            onSuggestionSelected, getSuggestionValue, renderSuggestion, shouldRenderSuggestions } = autosuggestProps;
+    const { theme } = autosuggestProps;
     const allInputProps = {
       ...(id ? { id } : {}),
       ...inputProps
     };
-    const autosuggestTheme = {
-      input: classnames({
-        [textfieldStyle.input]: true,
-        [textfieldStyle.input_isClearable]: onClear
-      }),
-      ...(theme || autosuggestStyles)
+    const allAutosuggestProps = {
+      ...autosuggestProps,
+      theme: {
+        input: classnames({
+          [textfieldStyle.input]: true,
+          [textfieldStyle.input_isClearable]: onClear
+        }),
+        ...(theme || autosuggestStyles)
+      }
     };
 
     return (
       <ReactAutosuggest
         inputProps={allInputProps}
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={onSuggestionsClearRequested}
-        onSuggestionSelected={onSuggestionSelected}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        shouldRenderSuggestions={shouldRenderSuggestions}
-        theme={autosuggestTheme}
         ref={this.storeInputReference}
+        {...allAutosuggestProps}
       />
     );
   }
