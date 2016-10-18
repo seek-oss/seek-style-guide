@@ -20,6 +20,7 @@ import EmailField from './fields/EmailField/EmailField';
 import Logo from './Logo/Logo';
 import ClearField from './fields/TextField/ClearField/ClearField';
 import Autosuggest from './fields/Autosuggest/Autosuggest';
+import Textarea from './fields/Textarea/Textarea';
 
 export {
   SeekApp,
@@ -43,5 +44,6 @@ export {
   EmailField,
   Logo,
   ClearField,
-  Autosuggest
+  Autosuggest,
+  Textarea
 };
