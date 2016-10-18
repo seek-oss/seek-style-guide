@@ -22,26 +22,24 @@
     max-height: 385px;
     overflow-y: auto;
     top: @grid-row-height * 6;
-
-    @media only screen and (min-width: 920px) {
-      max-width: initial;
-    }
   }
 }
 
 .sectionTitle {
-  .rawText();
-
+  .rawText(1);
   line-height: (@grid-row-height * 4);
   height: (@grid-row-height * 4);
   margin: @grid-row-height (@grid-gutter-width * 0.75) 0;
-  border-top: 1px dashed @sk-mid-gray-light;
-  color: @sk-mid-gray-dark;
+  color: darken(@sk-highlight, 10%);
+  font-weight: @sk-bold;
+
+  .sectionContainer:first-child & {
+    margin-top: 0;
+  }
 }
 
 .suggestion {
   .rawText();
-
   line-height: (@grid-row-height * 4);
   height: (@grid-row-height * 4);
   padding: 0 (@grid-gutter-width * 0.75);

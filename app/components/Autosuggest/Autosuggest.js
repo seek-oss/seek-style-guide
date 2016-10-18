@@ -14,7 +14,7 @@ import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
-import { Autosuggest } from 'seek-style-guide/react';
+import { Autosuggest as SeekAutosuggest } from 'seek-style-guide/react';
 
 const specs = {
   default: {
@@ -41,7 +41,7 @@ function getSpec(specsObj) {
   }), {});
 }
 
-export default class TextFields extends Component {
+export default class Autosuggest extends Component {
   constructor() {
     super();
 
@@ -108,14 +108,14 @@ export default class TextFields extends Component {
       invalid
     });
     const autosuggestProps = {
-      suggestions: ['Developer'],
+      suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer'],
       onSuggestionsFetchRequested: () => {},
       onSuggestionsClearRequested: () => {},
       renderSuggestion: suggestion => <div>{suggestion}</div>,
       getSuggestionValue: suggestion => suggestion
     };
-    const textfield = (
-      <Autosuggest
+    const autosuggest = (
+      <SeekAutosuggest
         id="jobTitles"
         className={className}
         invalid={invalid}
@@ -139,7 +139,7 @@ export default class TextFields extends Component {
             <GridContainer>
               <div className={styles.sandbox}>
                 <SandboxPreview>
-                  {textfield}
+                  {autosuggest}
                 </SandboxPreview>
                 <div style={{ position: 'absolute', top: 0, right: 0 }}>
                   <SandboxToggle
@@ -195,7 +195,7 @@ export default class TextFields extends Component {
 
           <Section className={styles.section}>
             <HeadlineText>Code</HeadlineText>
-            <Code jsx={textfield} />
+            <Code jsx={autosuggest} />
           </Section>
         </GridContainer>
       </div>
