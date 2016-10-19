@@ -22,14 +22,14 @@
 .textarea {
   .rawText();
   width: 100%;
-  height: 90px;
+  height: @grid-row-height * 10;
   resize: vertical;
-  max-height: 180px;
+  max-height: @grid-row-height * 20;
   line-height: @grid-row-height * 2;
   color: @sk-charcoal;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
-  padding: 12px 15px;
+  padding: 12px @field-gutter-width;
   vertical-align: top;
   background-color: @sk-white;
   -webkit-appearance: none;

@@ -18,7 +18,8 @@ import { Textarea as SeekTextarea } from 'seek-style-guide/react';
 
 const specs = {
   default: {
-    Height: '5 grid rows',
+    Height: '10 grid rows',
+    'Max height': '20 grid rows',
     'Internal gutters': '15px — @field-gutter-width',
     'Margin bottom': '3 grid rows',
     'Text color': '@sk-charcoal',
