@@ -43,15 +43,16 @@
     }
   }
 
-  &[type="search"]::-webkit-search-cancel-button {
+  .canClear & {
+    padding: 0 @clear-button-width 0 @field-gutter-width;
+  }
+
+  &::-webkit-search-cancel-button {
     -webkit-appearance: none;
   }
-  &[type="search"]::-ms-clear {
+  &::-ms-clear {
     display: none;
   }
-}
-.input_isClearable {
-  padding: 0 @clear-button-width 0 @field-gutter-width;
 }
 
 .help {

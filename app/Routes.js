@@ -5,6 +5,7 @@ import App from 'App/App';
 import Home from 'Home/Home';
 import Buttons from 'Buttons/Buttons';
 import TextFields from 'TextFields/TextFields';
+import Autosuggest from 'Autosuggest/Autosuggest';
 import Icons from 'Icons/Icons';
 import Typography from 'Typography/Typography';
 
@@ -14,6 +15,7 @@ export default (
 
     <Route path="/buttons" component={Buttons} />
     <Route path="/textfields" component={TextFields} />
+    <Route path="/autosuggest" component={Autosuggest} />
     <Route path="/icons" component={Icons} />
     <Route path="/typography" component={Typography} />
   </Route>

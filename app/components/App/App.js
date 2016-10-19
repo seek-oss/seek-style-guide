@@ -9,6 +9,7 @@ const titles = {
   '/icons': 'icons',
   '/buttons': 'buttons',
   '/textfields': 'text fields',
+  '/autosuggest': 'autosuggest',
   '/typography': 'typography'
 };
 

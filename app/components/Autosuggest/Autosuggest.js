@@ -1,4 +1,4 @@
-import styles from './TextFields.less';
+import styles from './Autosuggest.less';
 import textFieldStyles from 'seek-style-guide/react/fields/TextField/TextField.less';
 
 import React, { Component } from 'react';
@@ -14,7 +14,7 @@ import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
-import { TextField } from 'seek-style-guide/react';
+import { Autosuggest as SeekAutosuggest } from 'seek-style-guide/react';
 
 const specs = {
   default: {
@@ -41,7 +41,7 @@ function getSpec(specsObj) {
   }), {});
 }
 
-export default class TextFields extends Component {
+export default class Autosuggest extends Component {
   constructor() {
     super();
 
@@ -85,9 +85,9 @@ export default class TextFields extends Component {
     });
   }
 
-  handleChange(event) {
+  handleChange(_, { newValue }) {
     this.setState({
-      inputValue: event.target.value
+      inputValue: newValue
     });
   }
 
@@ -108,13 +108,20 @@ export default class TextFields extends Component {
       focus,
       invalid
     });
-    const textfield = (
-      <TextField
-        id="firstName"
+    const autosuggestProps = {
+      suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer'],
+      onSuggestionsFetchRequested: () => {},
+      onSuggestionsClearRequested: () => {},
+      renderSuggestion: suggestion => <div>{suggestion}</div>,
+      getSuggestionValue: suggestion => suggestion
+    };
+    const autosuggest = (
+      <SeekAutosuggest
+        id="jobTitles"
         className={className}
         invalid={invalid}
-        label="First name"
-        help={help ? 'e.g. David' : ''}
+        label="Job Titles"
+        help={help ? 'e.g. Engineer' : ''}
         message={invalid ? 'Something went wrong' : ''}
         inputProps={{
           type: 'search',
@@ -122,6 +129,7 @@ export default class TextFields extends Component {
           value: inputValue
         }}
         onClear={this.handleClear}
+        autosuggestProps={autosuggestProps}
       />
     );
 
@@ -132,7 +140,7 @@ export default class TextFields extends Component {
             <GridContainer>
               <div className={styles.sandbox}>
                 <SandboxPreview>
-                  {textfield}
+                  {autosuggest}
                 </SandboxPreview>
                 <div style={{ position: 'absolute', top: 0, right: 0 }}>
                   <SandboxToggle
@@ -188,7 +196,7 @@ export default class TextFields extends Component {
 
           <Section className={styles.section}>
             <HeadlineText>Code</HeadlineText>
-            <Code jsx={textfield} />
+            <Code jsx={autosuggest} />
           </Section>
         </GridContainer>
       </div>
