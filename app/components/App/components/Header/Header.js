@@ -16,12 +16,17 @@ export default function Header({ title }) {
           <p className={styles.title}>{title}</p>
         </div>
         <div>
-          <Link className={styles.link} activeClassName={styles.active} to="/" onlyActiveOnIndex={true}>Home</Link>
-          <Link className={styles.link} activeClassName={styles.active} to="typography">Typography</Link>
-          <Link className={styles.link} activeClassName={styles.active} to="buttons">Buttons</Link>
-          <Link className={styles.link} activeClassName={styles.active} to="textfields">Textfields</Link>
-          <Link className={styles.link} activeClassName={styles.active} to="autosuggest">Autosuggest</Link>
-          <Link className={styles.link} activeClassName={styles.active} to="icons">Icons</Link>
+          <Link className={styles.menuItem} activeClassName={styles.active} to="/" onlyActiveOnIndex={true}>Home</Link>
+          <Link className={styles.menuItem} activeClassName={styles.active} to="typography">Typography</Link>
+          <Link className={styles.menuItem} activeClassName={styles.active} to="buttons">Buttons</Link>
+          <div className={styles.menuItem}>
+            <span>Fields</span>
+            <ul className={styles.submenu}>
+              <Link className={styles.link} to="textfield"><li>Textfield</li></Link>
+              <Link className={styles.link} to="autosuggest"><li>Autosuggest</li></Link>
+            </ul>
+          </div>
+          <Link className={styles.menuItem} activeClassName={styles.active} to="icons">Icons</Link>
         </div>
       </div>
     </GridContainer>
