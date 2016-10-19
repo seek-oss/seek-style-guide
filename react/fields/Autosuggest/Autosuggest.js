@@ -161,7 +161,7 @@ export default class Autosuggest extends Component {
   }
 
   renderInput() {
-    const { inputProps, id, onClear, autosuggestProps, suggestionsContainerClassName } = this.props;
+    const { inputProps, id, autosuggestProps, suggestionsContainerClassName } = this.props;
     const { theme = {} } = autosuggestProps;
     const { className: inputClassName, ...restInputProps } = inputProps;
     const allInputProps = {
@@ -180,7 +180,6 @@ export default class Autosuggest extends Component {
         ...theme,
         input: classnames({
           [textfieldStyle.input]: true,
-          [textfieldStyle.input_isClearable]: onClear,
           [inputClassName]: inputClassName
         })
       }

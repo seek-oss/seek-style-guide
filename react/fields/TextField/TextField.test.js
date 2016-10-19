@@ -256,16 +256,6 @@ describe('TextField', () => {
       expect(isClearButtonVisible()).to.equal(false);
     });
 
-    it('should not add an "input_isClearable" class to the input when no clear handler is provided', () => {
-      renderToDom(<TextField inputProps={{ value: 'abc' }} />);
-      expect(input.className).not.to.contain('input_isClearable');
-    });
-
-    it('should add an "input_isClearable" class to the input when a clear handler is provided', () => {
-      renderToDom(<TextField inputProps={{ value: 'abc' }} onClear={handleClear} />);
-      expect(input.className).to.contain('input_isClearable');
-    });
-
     it('should invoke the clear handler when clicked', () => {
       renderToDom(<TextField onClear={handleClear} />);
       clickClear();

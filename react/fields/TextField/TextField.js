@@ -131,9 +131,9 @@ export default class TextField extends Component {
   }
 
   renderInput() {
-    const { inputProps, id, onClear } = this.props;
+    const { inputProps, id } = this.props;
     const allInputProps = {
-      ...combineClassNames(inputProps, styles.input, onClear && styles.input_isClearable),
+      ...combineClassNames(inputProps, styles.input),
       ...(id ? { id } : {}),
       ref: this.storeInputReference
     };

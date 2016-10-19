@@ -100,6 +100,7 @@ export default class TextFields extends Component {
   render() {
     const { focus, help, invalid, baseline, inputValue } = this.state;
     const className = classnames({
+      [styles.input]: true,
       [textFieldStyles.rootFocus]: focus
     });
     const spec = getSpec({
