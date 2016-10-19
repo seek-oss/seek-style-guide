@@ -6,6 +6,7 @@
   width: 100%;
 }
 
+@suggestionContainerRowsOffset: 6;
 .suggestionsContainer {
   display: none;
   z-index: 1;
@@ -18,11 +19,16 @@
   max-width: 100%;
   max-height: 385px;
   overflow-y: auto;
-  top: @grid-row-height * 6;
+  top: @grid-row-height * @suggestionContainerRowsOffset;
 
   .containerOpen & {
     display: block;
   }
+}
+
+.suggestionsContainer_withLabel {
+  @labelRowOffset: 3;
+  top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
 }
 
 .sectionTitle {
