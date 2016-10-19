@@ -70,6 +70,20 @@ export default class Autosuggest extends Component {
     },
     /* eslint-disable consistent-return */
     autosuggestProps: PropTypes.object.isRequired,
+    suggestionsContainerClassName: (props, _, componentName) => {
+      const { suggestionsContainerClassName, autosuggestProps } = props;
+      const { theme } = autosuggestProps || {};
+      const { suggestionsContainer } = theme || {};
+      const propType = typeof suggestionsContainerClassName;
+
+      if (propType !== 'undefined' && propType !== 'string') {
+        return new Error(`Invalid prop \`suggestionsContainerClassName\` of type \`${propType}\` supplied to \`${componentName}\`, expected \`string\`.`);
+      }
+
+      if (suggestionsContainer && suggestionsContainerClassName) {
+        return new Error('\`suggestionsContainerClassName\` will be overridden by the \`suggestionsContainer\` class in autosuggestProps \`theme\`. Please remove it.');
+      }
+    },
     help: PropTypes.string,
     helpProps: PropTypes.object,
     message: PropTypes.string,
@@ -147,7 +161,7 @@ export default class Autosuggest extends Component {
   }
 
   renderInput() {
-    const { inputProps, id, onClear, autosuggestProps } = this.props;
+    const { inputProps, id, onClear, autosuggestProps, suggestionsContainerClassName } = this.props;
     const { theme = {} } = autosuggestProps;
     const { className: inputClassName, ...restInputProps } = inputProps;
     const allInputProps = {
@@ -159,6 +173,10 @@ export default class Autosuggest extends Component {
       ...autosuggestProps,
       theme: {
         ...autosuggestStyles,
+        suggestionsContainer: classnames({
+          [autosuggestStyles.suggestionsContainer]: true,
+          [suggestionsContainerClassName]: suggestionsContainerClassName
+        }),
         ...theme,
         input: classnames({
           [textfieldStyle.input]: true,

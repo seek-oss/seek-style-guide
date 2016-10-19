@@ -287,6 +287,20 @@ describe('Autosuggest', () => {
   });
 
   describe('autosuggest', () => {
+    it('should error if `suggestionsContainerClassName` is not a string', () => {
+      render(<Autosuggest {...getAutosuggestProps()} suggestionsContainerClassName={true} />);
+      expect(errors[0]).to.match(/Invalid prop `suggestionsContainerClassName` of type `boolean` supplied to `Autosuggest`, expected `string/);
+    });
+
+    it('should error if `suggestionsContainerClassName` and theme with class `suggestionsContainer` are both specified', () => {
+      const props = getAutosuggestProps();
+      props.autosuggestProps.theme = {
+        suggestionsContainer: 'TEST'
+      };
+      render(<Autosuggest {...props} suggestionsContainerClassName="TEST 2" />);
+      expect(errors[0]).to.match(/`suggestionsContainerClassName` will be overridden by the `suggestionsContainer` class in autosuggestProps `theme`. Please remove it./);
+    });
+
     it('should render suggestions', () => {
       renderToDom(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} />);
       expect(suggestion).to.have.length(2);

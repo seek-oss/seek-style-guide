@@ -8,20 +8,20 @@
 
 .suggestionsContainer {
   display: none;
+  z-index: 1;
+  position: absolute;
+  background-color: @sk-white;
+  box-shadow: 0 9px 30px rgba(0, 0, 0, 0.4);
+  padding: @grid-row-height 0;
+  border-radius: 2px;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 385px;
+  overflow-y: auto;
+  top: @grid-row-height * 6;
 
   .containerOpen & {
-    z-index: 1;
     display: block;
-    position: absolute;
-    background-color: @sk-white;
-    box-shadow: 0 9px 30px rgba(0, 0, 0, 0.4);
-    padding: @grid-row-height 0;
-    border-radius: 2px;
-    min-width: 100%;
-    max-width: 100%;
-    max-height: 385px;
-    overflow-y: auto;
-    top: @grid-row-height * 6;
   }
 }
 
