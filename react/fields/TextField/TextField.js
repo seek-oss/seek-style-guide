@@ -15,6 +15,14 @@ function combineClassNames(props = {}, ...classNames) {
   };
 }
 
+const attachRefs = (...refs) => ref => {
+  refs.forEach(callRef => {
+    if (typeof callRef === 'function') {
+      callRef(ref);
+    }
+  });
+};
+
 export default class TextField extends Component {
 
   static displayName = 'TextField';
@@ -131,11 +139,12 @@ export default class TextField extends Component {
   }
 
   renderInput() {
-    const { inputProps, id } = this.props;
+    const { inputProps = {}, id } = this.props;
+    const { ref } = inputProps;
     const allInputProps = {
       ...combineClassNames(inputProps, styles.input),
       ...(id ? { id } : {}),
-      ref: this.storeInputReference
+      ref: attachRefs(this.storeInputReference, ref)
     };
 
     return (

@@ -5,7 +5,9 @@ import React from 'react';
 import {
   createRenderer,
   renderIntoDocument,
-  scryRenderedDOMComponentsWithClass
+  scryRenderedDOMComponentsWithClass,
+  findRenderedDOMComponentWithClass,
+  Simulate
 } from 'react-addons-test-utils';
 import Autosuggest from './Autosuggest';
 
@@ -30,7 +32,13 @@ const getAutosuggestProps = (suggestions = []) => ({
 });
 
 describe('Autosuggest', () => {
-  let element, autosuggest, errors, suggestion, suggestionsContainer;
+  let element, autosuggest, errors, suggestions, suggestionsContainer, input;
+
+  const clickSuggestion = suggestion => {
+    Simulate.mouseDown(suggestion);
+    Simulate.mouseUp(suggestion);
+    Simulate.click(suggestion);
+  };
 
   beforeEach(() => {
     errors = [];
@@ -52,8 +60,9 @@ describe('Autosuggest', () => {
   function renderToDom(jsx) {
     element = jsx;
     autosuggest = renderIntoDocument(element);
-    suggestion = scryRenderedDOMComponentsWithClass(autosuggest, 'suggestion');
+    suggestions = scryRenderedDOMComponentsWithClass(autosuggest, 'suggestion');
     suggestionsContainer = scryRenderedDOMComponentsWithClass(autosuggest, 'suggestionsContainer')[0];
+    input = findRenderedDOMComponentWithClass(autosuggest, 'input');
   }
 
   it('should have a displayName', () => {
@@ -63,12 +72,17 @@ describe('Autosuggest', () => {
 
   it('should render suggestions', () => {
     renderToDom(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} />);
-    expect(suggestion).to.have.length(2);
+    expect(suggestions).to.have.length(2);
   });
 
   it('should render suggestions list below input field when a label is supplied', () => {
     renderToDom(<Autosuggest {...getAutosuggestProps()} id="Foo" label="Foo" />);
     expect(suggestionsContainer.className).to.contain('suggestionsContainer_withLabel');
+  });
+
+  it('should render suggestions list below input field when a label is not supplied', () => {
+    renderToDom(<Autosuggest {...getAutosuggestProps()} />);
+    expect(suggestionsContainer.className).to.not.contain('suggestionsContainer_withLabel');
   });
 
   it('should render suggestions list below input field when a label is not supplied', () => {
@@ -88,5 +102,11 @@ describe('Autosuggest', () => {
     };
     render(<Autosuggest {...props} suggestionsContainerClassName="TEST 2" />);
     expect(errors[0]).to.match(/`suggestionsContainerClassName` will be overridden by the `suggestionsContainer` class in autosuggestProps `theme`. Please remove it./);
+  });
+
+  it('should focus field when suggestion is clicked', () => {
+    renderToDom(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} />);
+    clickSuggestion(suggestions[0]);
+    expect(global.document.activeElement).to.equal(input);
   });
 });

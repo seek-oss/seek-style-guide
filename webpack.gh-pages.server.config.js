@@ -20,6 +20,7 @@ const routes = [
   '/icons',
   '/buttons',
   '/textfields',
+  '/autosuggest',
   '/typography'
 ];
 
