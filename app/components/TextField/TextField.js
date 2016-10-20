@@ -1,4 +1,4 @@
-import styles from './TextFields.less';
+import styles from './TextField.less';
 import textFieldStyles from 'seek-style-guide/react/fields/TextField/TextField.less';
 
 import React, { Component } from 'react';
@@ -14,7 +14,7 @@ import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
-import { TextField } from 'seek-style-guide/react';
+import { TextField as SeekTextField } from 'seek-style-guide/react';
 
 const specs = {
   default: {
@@ -41,7 +41,7 @@ function getSpec(specsObj) {
   }), {});
 }
 
-export default class TextFields extends Component {
+export default class TextField extends Component {
   constructor() {
     super();
 
@@ -109,7 +109,7 @@ export default class TextFields extends Component {
       invalid
     });
     const textfield = (
-      <TextField
+      <SeekTextField
         id="firstName"
         className={className}
         invalid={invalid}

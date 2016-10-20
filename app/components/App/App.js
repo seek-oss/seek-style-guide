@@ -8,7 +8,7 @@ const titles = {
   '/': 'living style',
   '/icons': 'icons',
   '/buttons': 'buttons',
-  '/textfields': 'text fields',
+  '/textfield': 'textfield',
   '/autosuggest': 'autosuggest',
   '/typography': 'typography'
 };
