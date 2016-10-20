@@ -34,12 +34,6 @@ const getAutosuggestProps = (suggestions = []) => ({
 describe('Autosuggest', () => {
   let element, autosuggest, errors, suggestions, suggestionsContainer, input;
 
-  const clickSuggestion = suggestion => {
-    Simulate.mouseDown(suggestion);
-    Simulate.mouseUp(suggestion);
-    Simulate.click(suggestion);
-  };
-
   beforeEach(() => {
     errors = [];
 
@@ -85,11 +79,6 @@ describe('Autosuggest', () => {
     expect(suggestionsContainer.className).to.not.contain('suggestionsContainer_withLabel');
   });
 
-  it('should render suggestions list below input field when a label is not supplied', () => {
-    renderToDom(<Autosuggest {...getAutosuggestProps()} />);
-    expect(suggestionsContainer.className).to.not.contain('suggestionsContainer_withLabel');
-  });
-
   it('should error if `suggestionsContainerClassName` is not a string', () => {
     render(<Autosuggest {...getAutosuggestProps()} suggestionsContainerClassName={true} />);
     expect(errors[0]).to.match(/Invalid prop `suggestionsContainerClassName` of type `boolean` supplied to `Autosuggest`, expected `string/);
@@ -106,7 +95,7 @@ describe('Autosuggest', () => {
 
   it('should focus field when suggestion is clicked', () => {
     renderToDom(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} />);
-    clickSuggestion(suggestions[0]);
+    Simulate.click(suggestions[0]);
     expect(global.document.activeElement).to.equal(input);
   });
 });
