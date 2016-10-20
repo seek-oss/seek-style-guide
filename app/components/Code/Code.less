@@ -3,14 +3,23 @@
 .root {
   .rawText(@standard-type-scale);
   position: relative;
-  padding: (@grid-row-height * 2) (@grid-gutter-width * 2);
+  padding: (@grid-row-height * 2) 0;
   background-color: @sk-white;
   border-left: 3px solid @sk-blue;
   cursor: pointer;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .code {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 (@grid-gutter-width / 2);
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 }
 
 .message {

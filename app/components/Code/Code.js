@@ -2,7 +2,7 @@ import styles from './Code.less';
 
 import React, { Component, PropTypes } from 'react';
 import debounce from 'lodash.debounce';
-import jsxToString from 'jsx-to-string';
+import jsxToString from 'react-element-to-jsx-string';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 export default class Code extends Component {
@@ -44,8 +44,10 @@ export default class Code extends Component {
 
     if (jsx) {
       const componentCode = jsxToString(jsx, {
-        ignoreProps: ['className']
-      }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."');
+        filterProps: ['className'],
+        useBooleanShorthandSyntax: false
+      }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
+      .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}');
 
       code = `import { ${jsx.type.displayName} } from 'seek-style-guide/react';\n\n\n...\n\n\n${componentCode}`;
     } else if (less) {
