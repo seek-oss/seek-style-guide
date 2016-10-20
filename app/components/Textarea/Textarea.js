@@ -118,6 +118,11 @@ export default class Textarea extends Component {
       focus,
       invalid
     });
+    const countFeedback = value => {
+      return {
+        count: 500 - value.length
+      };
+    };
     const textarea = (
       <SeekTextarea
         id="description"
@@ -131,7 +136,7 @@ export default class Textarea extends Component {
           value: inputValue
         }}
         {...(maxCharacters ? { maxCharacters: 500 } : {})}
-        {...(showCount ? { countFeedback: v => 500 - v.length } : {})}
+        {...(showCount ? { countFeedback } : {})}
       />
     );
 

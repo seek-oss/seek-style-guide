@@ -70,12 +70,16 @@ export default class Textarea extends Component {
     message: PropTypes.string,
     messageProps: PropTypes.object,
     maxCharacters: PropTypes.number,
-    countFeedback: (props, propName) => {
-      const { inputProps } = props;
-      const { value } = inputProps || {};
+    countFeedback: (props, propName, componentName) => {
+      const { inputProps = {} } = props;
+      const { value } = inputProps;
+
+      if (typeof props[propName] !== 'function') {
+        return new Error(`Invalid prop \`${propName}\` of type \`${typeof props[propName]}\` supplied to \`${componentName}\`, expected \`function\`.`);
+      }
 
       if (props[propName] && typeof value !== 'string') {
-        return new Error(`inputProps.value must be supplied if ${propName} is set`);
+        return new Error(`\`inputProps.value\` must be supplied if \`${propName}\` is set`);
       }
     }
   };
@@ -136,7 +140,7 @@ export default class Textarea extends Component {
     }
 
     return (
-      <span className={styles.characterLimit}>
+      <span className={styles.maxCharacters}>
         {`(${maxCharacters} character limit)`}
       </span>
     );
@@ -207,13 +211,18 @@ export default class Textarea extends Component {
   }
 
   renderCharacterCount() {
-    const { countFeedback, inputProps } = this.props;
+    const { countFeedback, inputProps = {} } = this.props;
+    const { value } = inputProps;
 
-    if (typeof countFeedback !== 'function') {
+    if (typeof countFeedback !== 'function' || typeof value !== 'string') {
       return;
     }
 
-    const count = countFeedback(inputProps.value);
+    const { show = true, count } = countFeedback(value);
+
+    if (!show) {
+      return;
+    }
 
     const className = classnames({
       [styles.characterCount]: true,
@@ -221,7 +230,9 @@ export default class Textarea extends Component {
     });
 
     return (
-      <span className={className}>{ count }</span>
+      <span className={className}>
+        { count }
+      </span>
     );
   }
 
