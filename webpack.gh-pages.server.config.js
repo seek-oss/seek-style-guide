@@ -19,7 +19,7 @@ const routes = [
   '/',
   '/icons',
   '/buttons',
-  '/textfields',
+  '/textfield',
   '/autosuggest',
   '/typography'
 ];
