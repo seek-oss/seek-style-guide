@@ -6,6 +6,7 @@ import Home from 'Home/Home';
 import Buttons from 'Buttons/Buttons';
 import TextFields from 'TextFields/TextFields';
 import Autosuggest from 'Autosuggest/Autosuggest';
+import MonthPicker from 'MonthPicker/MonthPicker';
 import Icons from 'Icons/Icons';
 import Typography from 'Typography/Typography';
 import Textarea from 'Textarea/Textarea';
@@ -18,6 +19,7 @@ export default (
     <Route path="/textfields" component={TextFields} />
     <Route path="/autosuggest" component={Autosuggest} />
     <Route path="/textarea" component={Textarea} />
+    <Route path="/monthpicker" component={MonthPicker} />
     <Route path="/icons" component={Icons} />
     <Route path="/typography" component={Typography} />
   </Route>

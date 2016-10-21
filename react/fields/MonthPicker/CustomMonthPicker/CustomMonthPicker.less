@@ -1,0 +1,34 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  > :not(:first-child) {
+    margin-top: @grid-row-height;
+  }
+}
+
+.dropdown:first-child {
+  margin-right: @grid-gutter-width / 2;
+}
+
+.dropdown {
+  .standardText();
+  flex-basis: 50%;
+  border: 1px solid @sk-mid-gray-light;
+  height: @grid-row-height * 5;
+  background: @sk-white;
+  width: @grid-gutter-width * 4.5;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.errorMsg {
+  .standardText();
+  color: @sk-pink;
+}
