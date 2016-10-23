@@ -21,6 +21,7 @@ const routes = [
   '/buttons',
   '/textfields',
   '/autosuggest',
+  '/textarea',
   '/typography'
 ];
 

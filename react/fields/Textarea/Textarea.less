@@ -1,0 +1,101 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  display: inline-block;
+  position: relative;
+}
+
+.label {
+  .standardText();
+  display: inline-block;
+  margin-bottom: @grid-row-height;
+  margin-right: 5px;
+}
+
+.maxCharacters {
+  .standardText();
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: @grid-row-height;
+}
+
+.textarea {
+  .rawText();
+  width: 100%;
+  height: @grid-row-height * 10;
+  resize: vertical;
+  max-height: @grid-row-height * 20;
+  line-height: @grid-row-height * 2;
+  color: @sk-charcoal;
+  border: @field-border-width solid @sk-mid-gray-light;
+  border-radius: @field-border-radius;
+  padding: 12px @field-gutter-width;
+  vertical-align: top;
+  background-color: @sk-white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:not([readonly]):not([disabled]):focus,
+  .rootFocus & {
+    outline: none;
+    border-color: transparent;
+    .focus();
+  }
+
+  .invalid & {
+    border-color: transparent;
+    box-shadow: 0 0 0 @field-border-width @sk-pink;
+
+    &:not([readonly]):not([disabled]):focus,
+    .rootFocus & {
+      border-color: transparent;
+      box-shadow: 0 0 0 @field-border-width @sk-pink;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: (@grid-row-height * @standard-type-row-span);
+  margin-bottom: @grid-row-height;
+}
+
+.help {
+  .standardText();
+}
+
+.message {
+  .standardText();
+
+  .invalid & {
+    color: @sk-pink;
+  }
+}
+
+.messageIcon {
+  position: relative;
+  top: 2px;
+  margin-right: 4px;
+}
+
+.messageIconSvg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.characterCount {
+  .standardText();
+  color: @sk-mid-gray-dark;
+  text-align: right;
+
+  &:only-child {
+    flex-basis: 100%;
+  }
+}
+
+.invalidCharacterCount {
+  color: @sk-pink
+}

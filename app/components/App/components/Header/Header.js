@@ -21,6 +21,7 @@ export default function Header({ title }) {
           <Link className={styles.link} activeClassName={styles.active} to="buttons">Buttons</Link>
           <Link className={styles.link} activeClassName={styles.active} to="textfields">Textfields</Link>
           <Link className={styles.link} activeClassName={styles.active} to="autosuggest">Autosuggest</Link>
+          <Link className={styles.link} activeClassName={styles.active} to="textarea">Textarea</Link>
           <Link className={styles.link} activeClassName={styles.active} to="icons">Icons</Link>
         </div>
       </div>
