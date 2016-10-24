@@ -1,3 +1,4 @@
+[![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide)
 # seek-style-guide
 
 This style guide assumes you're using [Less](http://lesscss.org/) for preprocessing CSS. For high level components, it's assumed that your application is built with [React](https://facebook.github.io/react) and compiled using [Webpack](https://webpack.github.io).
