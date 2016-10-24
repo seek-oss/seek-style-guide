@@ -113,13 +113,14 @@ export default class MonthPicker extends Component {
   }
 
   renderInput() {
-    const { inputProps = {}, id, monthValue, yearValue, onChange, native } = this.props;
+    const { inputProps = {}, id, monthValue, yearValue, onChange, native, invalid } = this.props;
     const allInputProps = {
       ...combineClassNames(inputProps, styles.input),
       ...(id ? { id } : {}),
       monthValue,
       yearValue,
-      onChange
+      onChange,
+      invalid
     };
 
     return (

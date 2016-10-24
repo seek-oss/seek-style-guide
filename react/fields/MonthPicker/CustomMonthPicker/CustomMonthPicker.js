@@ -66,10 +66,11 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { monthValue, yearValue, className } = this.props;
+    const { monthValue, yearValue, className, invalid } = this.props;
 
     const rootClasses = classnames({
       [className]: className,
+      [styles.invalid]: invalid,
       [styles.root]: true
     });
 
@@ -80,13 +81,15 @@ export default class CustomMonthPicker extends Component {
             {
               months.map(({ value: month, text }) => (
                 <option value={month} key={month}>{text}</option>
-              ))}
+              ))
+            }
           </select>
           <select onChange={this.handleYearChange} value={yearValue} className={styles.dropdown}>
             {
               years.map(({ value: year, text }) => (
                 <option value={year} key={year}>{text}</option>
-              ))}
+              ))
+            }
           </select>
         </div>
       </div>
