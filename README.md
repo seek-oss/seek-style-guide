@@ -8,7 +8,7 @@ In the interest of increased productivity, new projects are strongly encouraged 
 ## Installation
 
 ```bash
-$ npm install --save-dev SEEK-Jobs/seek-style-guide#<version>
+$ npm install --save-dev seek-style-guide
 ```
 
 ## Configuring Webpack
