@@ -12,6 +12,7 @@ const titles = {
   '/autosuggest': 'autosuggest',
   '/textarea': 'textarea',
   '/monthpicker': 'month picker',
+  '/dropdown': 'dropdown',
   '/typography': 'typography'
 };
 
