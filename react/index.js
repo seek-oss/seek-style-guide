@@ -21,6 +21,7 @@ import Logo from './Logo/Logo';
 import ClearField from './fields/TextField/ClearField/ClearField';
 import Autosuggest from './fields/Autosuggest/Autosuggest';
 import Textarea from './fields/Textarea/Textarea';
+import Dropdown from './fields/Dropdown/Dropdown';
 
 export {
   SeekApp,
@@ -45,5 +46,6 @@ export {
   Logo,
   ClearField,
   Autosuggest,
-  Textarea
+  Textarea,
+  Dropdown
 };
