@@ -1,21 +1,23 @@
+import styles from './CustomMonthPicker.less';
+
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import styles from './CustomMonthPicker.less';
+import Dropdown from '../../Dropdown/Dropdown';
 
 const months = [
-  { value: 1, text: 'Jan' },
-  { value: 2, text: 'Feb' },
-  { value: 3, text: 'Mar' },
-  { value: 4, text: 'Apr' },
-  { value: 5, text: 'May' },
-  { value: 6, text: 'Jun' },
-  { value: 7, text: 'Jul' },
-  { value: 8, text: 'Aug' },
-  { value: 9, text: 'Sep' },
-  { value: 10, text: 'Oct' },
-  { value: 11, text: 'Nov' },
-  { value: 12, text: 'Dec' }
+  { value: '1', label: 'Jan' },
+  { value: '2', label: 'Feb' },
+  { value: '3', label: 'Mar' },
+  { value: '4', label: 'Apr' },
+  { value: '5', label: 'May' },
+  { value: '6', label: 'Jun' },
+  { value: '7', label: 'Jul' },
+  { value: '8', label: 'Aug' },
+  { value: '9', label: 'Sep' },
+  { value: '10', label: 'Oct' },
+  { value: '11', label: 'Nov' },
+  { value: '12', label: 'Dec' }
 ];
 
 const years = [];
@@ -24,7 +26,7 @@ const startYear = new Date().getFullYear();
 const endYear = startYear - 80;
 
 for (let i = startYear; i >= endYear; i--) {
-  years.push({ value: i, text: i });
+  years.push({ value: `${i}`, label: `${i}` });
 }
 
 export default class CustomMonthPicker extends Component {
@@ -51,7 +53,7 @@ export default class CustomMonthPicker extends Component {
     const { onChange, yearValue } = this.props;
 
     onChange({
-      month: value,
+      month: parseInt(value, 10),
       year: yearValue
     });
   }
@@ -61,7 +63,7 @@ export default class CustomMonthPicker extends Component {
 
     onChange({
       month: monthValue,
-      year: value
+      year: parseInt(value, 10)
     });
   }
 
@@ -76,22 +78,26 @@ export default class CustomMonthPicker extends Component {
 
     return (
       <div className={rootClasses}>
-        <div className={styles.inner}>
-          <select onChange={this.handleMonthChange} value={monthValue} className={styles.dropdown}>
-            {
-              months.map(({ value: month, text }) => (
-                <option value={month} key={month}>{text}</option>
-              ))
-            }
-          </select>
-          <select onChange={this.handleYearChange} value={yearValue} className={styles.dropdown}>
-            {
-              years.map(({ value: year, text }) => (
-                <option value={year} key={year}>{text}</option>
-              ))
-            }
-          </select>
-        </div>
+        <Dropdown
+          options={months}
+          className={styles.dropdown}
+          invalid={invalid}
+          inputProps={{
+            onChange: this.handleMonthChange,
+            value: monthValue,
+            className: styles.select
+          }}
+        />
+        <Dropdown
+          options={years}
+          className={styles.dropdown}
+          invalid={invalid}
+          inputProps={{
+            onChange: this.handleYearChange,
+            value: yearValue,
+            className: styles.select
+          }}
+        />
       </div>
     );
   }

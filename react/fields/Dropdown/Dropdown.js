@@ -72,7 +72,7 @@ export default class Dropdown extends Component {
     messageProps: PropTypes.object,
     options: PropTypes.arrayOf(
       PropTypes.shape({
-        value: PropTypes.any.isRequired,
+        value: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired
       })
     ).isRequired,

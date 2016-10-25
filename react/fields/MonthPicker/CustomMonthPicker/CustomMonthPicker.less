@@ -3,58 +3,12 @@
 .root {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-
-  > :not(:first-child) {
-    margin-top: @grid-row-height;
-  }
 }
 
 .dropdown {
-  .touchableText();
-  flex-basis: 50%;
-  height: @grid-row-height * 5;
-  padding: 0 @field-gutter-width;
-  background: @sk-white;
-  width: @grid-gutter-width * 4.5;
-  margin-bottom: (@grid-row-height * 3);
-  border: @field-border-width solid @sk-mid-gray-light;
-  border-radius: @field-border-radius;
-  color: @sk-charcoal;
-  background-color: @sk-white;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  &:not([readonly]):not([disabled]):focus,
-  .rootFocus & {
-    outline: none;
-    border-color: transparent;
-    .focus();
-  }
-
-  .invalid & {
-    border-color: transparent;
-    box-shadow: 0 0 0 @field-border-width @sk-pink;
-    margin-bottom: 0;
-
-    &:not([readonly]):not([disabled]):focus,
-    .rootFocus & {
-      border-color: transparent;
-      box-shadow: 0 0 0 @field-border-width @sk-pink;
-    }
-  }
-
-  &:first-child {
-    margin-right: @grid-gutter-width / 2;
-  }
+  flex-basis: 45%;
 }
 
-.inner {
-  display: flex;
-  justify-content: space-between;
-}
-
-.errorMsg {
-  .standardText();
-  color: @sk-pink;
+.select {
+  margin-bottom: 0 !important;
 }

@@ -49,8 +49,7 @@ export default class MonthPickerDemo extends Component {
       focus: false,
       invalid: false,
       baseline: false,
-      native: false,
-      inputValue: ''
+      native: false
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
@@ -85,6 +84,7 @@ export default class MonthPickerDemo extends Component {
   }
 
   handleChange({ month, year }) {
+    console.log({ month, year });
     this.setState({
       monthValue: month,
       yearValue: year
