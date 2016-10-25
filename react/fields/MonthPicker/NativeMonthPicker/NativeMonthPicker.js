@@ -1,7 +1,25 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import pad from 'pad-left';
 
 import styles from './NativeMonthPicker.less';
+
+const makeMonthString = (month, year) => {
+  if (month && year) {
+    return `${year}-${pad(month, 2, '0')}`;
+  }
+
+  return '';
+};
+
+const getValueFromString = monthString => {
+  const [ year, month ] = monthString.split('-');
+
+  return {
+    year: parseInt(year, 10),
+    month: parseInt(month, 10)
+  };
+};
 
 export default class NativeMonthPicker extends Component {
   static propTypes = {
@@ -23,26 +41,29 @@ export default class NativeMonthPicker extends Component {
   }
 
   handleChange({ target: { value } }) {
-    const { onChange, yearValue } = this.props;
+    const { onChange } = this.props;
 
-    onChange({
-      month: value,
-      year: yearValue
-    });
+    onChange(getValueFromString(value));
   }
 
   render() {
-    const { monthValue, yearValue, className } = this.props;
+    const { monthValue, yearValue, className, invalid } = this.props;
 
-    const value = `${yearValue}-${monthValue}`;
+    const value = makeMonthString(monthValue, yearValue);
 
     const rootClasses = classnames({
       [className]: className,
-      [styles.root]: true
+      [styles.root]: true,
+      [styles.invalid]: invalid
     });
 
     return (
-      <input className={rootClasses} type="month" value={value} />
+      <input
+        className={rootClasses}
+        type="month"
+        value={value}
+        onChange={this.handleChange}
+      />
     );
   }
 }

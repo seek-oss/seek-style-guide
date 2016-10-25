@@ -1,6 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
+  .touchableText();
   display: block;
   width: 100%;
   height: @grid-row-height * 5;
@@ -11,4 +12,16 @@
   color: @sk-charcoal;
   background-color: @sk-white;
   cursor: pointer;
+
+  &.invalid {
+    border-color: transparent;
+    box-shadow: 0 0 0 @field-border-width @sk-pink;
+  }
+
+  &:not([readonly]):not([disabled]):focus,
+  .rootFocus & {
+    outline: none;
+    border-color: transparent;
+    .focus();
+  }
 }
