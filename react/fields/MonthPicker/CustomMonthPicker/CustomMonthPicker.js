@@ -6,6 +6,20 @@ import range from 'lodash.range';
 
 import Dropdown from '../../Dropdown/Dropdown';
 
+const getYearOptions = () => {
+  const maxYear = new Date().getFullYear();
+  const minYear = maxYear - 100;
+
+  return range(maxYear, minYear - 1).map(value => {
+    const stringValue = `${value}`;
+
+    return {
+      value: stringValue,
+      label: stringValue
+    };
+  });
+};
+
 const months = [
   { value: '1', label: 'Jan' },
   { value: '2', label: 'Feb' },
@@ -20,8 +34,12 @@ const months = [
   { value: '11', label: 'Nov' },
   { value: '12', label: 'Dec' }
 ];
+const years = getYearOptions();
 
 export default class CustomMonthPicker extends Component {
+
+  static displayName = 'CustomMonthPicker';
+
   static propTypes = {
     onChange: PropTypes.func,
     monthValue: PropTypes.number,
@@ -37,23 +55,8 @@ export default class CustomMonthPicker extends Component {
   constructor() {
     super();
 
-    this.getYearOptions = this.getYearOptions.bind(this);
     this.handleMonthChange = this.handleMonthChange.bind(this);
     this.handleYearChange = this.handleYearChange.bind(this);
-  }
-
-  getYearOptions() {
-    const maxYear = new Date().getFullYear();
-    const minYear = maxYear - 100;
-
-    return range(maxYear, minYear - 1).map(value => {
-      const stringValue = `${value}`;
-
-      return {
-        value: stringValue,
-        label: stringValue
-      };
-    });
   }
 
   handleMonthChange({ target: { value } }) {
@@ -79,7 +82,6 @@ export default class CustomMonthPicker extends Component {
 
     const rootClasses = classnames({
       [className]: className,
-      [styles.invalid]: invalid,
       [styles.root]: true
     });
 
@@ -87,7 +89,7 @@ export default class CustomMonthPicker extends Component {
       <div className={rootClasses}>
         <Dropdown
           options={months}
-          className={styles.dropdown}
+          className={styles.dropdownInput}
           invalid={invalid}
           placeholder="Month"
           inputProps={{
@@ -97,8 +99,8 @@ export default class CustomMonthPicker extends Component {
           }}
         />
         <Dropdown
-          options={this.getYearOptions()}
-          className={styles.dropdown}
+          options={years}
+          className={styles.dropdownInput}
           invalid={invalid}
           placeholder="Year"
           inputProps={{

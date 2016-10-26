@@ -22,6 +22,9 @@ const getValueFromString = monthString => {
 };
 
 export default class NativeMonthPicker extends Component {
+
+  static displayName = 'NativeMonthPicker';
+
   static propTypes = {
     onChange: PropTypes.func,
     monthValue: PropTypes.number,
