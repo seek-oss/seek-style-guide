@@ -84,7 +84,6 @@ export default class MonthPickerDemo extends Component {
   }
 
   handleChange({ month, year }) {
-    console.log({ month, year });
     this.setState({
       monthValue: month,
       yearValue: year

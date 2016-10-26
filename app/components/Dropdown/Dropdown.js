@@ -103,15 +103,15 @@ export default class DropDownDemo extends Component {
     });
     const options = [
       {
-        value: 1,
+        value: '1',
         label: 'Developer'
       },
       {
-        value: 2,
+        value: '2',
         label: 'Tester'
       },
       {
-        value: 3,
+        value: '3',
         label: 'Product Manager'
       }
     ];

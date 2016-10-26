@@ -2,6 +2,7 @@ import styles from './CustomMonthPicker.less';
 
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import range from 'lodash.range';
 
 import Dropdown from '../../Dropdown/Dropdown';
 
@@ -20,15 +21,6 @@ const months = [
   { value: '12', label: 'Dec' }
 ];
 
-const years = [];
-
-const startYear = new Date().getFullYear();
-const endYear = startYear - 80;
-
-for (let i = startYear; i >= endYear; i--) {
-  years.push({ value: `${i}`, label: `${i}` });
-}
-
 export default class CustomMonthPicker extends Component {
   static propTypes = {
     onChange: PropTypes.func,
@@ -45,8 +37,23 @@ export default class CustomMonthPicker extends Component {
   constructor() {
     super();
 
+    this.getYearOptions = this.getYearOptions.bind(this);
     this.handleMonthChange = this.handleMonthChange.bind(this);
     this.handleYearChange = this.handleYearChange.bind(this);
+  }
+
+  getYearOptions() {
+    const maxYear = new Date().getFullYear();
+    const minYear = maxYear - 100;
+
+    return range(maxYear, minYear - 1).map(value => {
+      const stringValue = `${value}`;
+
+      return {
+        value: stringValue,
+        label: stringValue
+      };
+    });
   }
 
   handleMonthChange({ target: { value } }) {
@@ -82,6 +89,7 @@ export default class CustomMonthPicker extends Component {
           options={months}
           className={styles.dropdown}
           invalid={invalid}
+          placeholder="Month"
           inputProps={{
             onChange: this.handleMonthChange,
             value: monthValue,
@@ -89,9 +97,10 @@ export default class CustomMonthPicker extends Component {
           }}
         />
         <Dropdown
-          options={years}
+          options={this.getYearOptions()}
           className={styles.dropdown}
           invalid={invalid}
+          placeholder="Year"
           inputProps={{
             onChange: this.handleYearChange,
             value: yearValue,

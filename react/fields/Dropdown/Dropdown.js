@@ -135,14 +135,16 @@ export default class Dropdown extends Component {
     const allInputProps = {
       ...combineClassNames(inputProps, inputStyles),
       ...(id ? { id } : {}),
-      ref: this.storeInputReference
+      ref: this.storeInputReference,
+      value: inputProps.value || ''
     };
 
     return (
       <select {...allInputProps}>
         <option
           className={styles.blankOption}
-          value="">
+          value=""
+          disabled={true}>
           { placeholder }
         </option>
         {

@@ -57,7 +57,11 @@
     "react-autosuggest": "^7.0.1",
     "react-isolated-scroll": "^0.1.0",
     "classnames": "^2.2.5",
-    "lodash.omit": "^4.5.0"
+    "lodash.omit": "^4.5.0",
+    "lodash.range": "^3.2.0",
+    "pad-left": "^2.1.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
@@ -77,6 +81,7 @@
     "less-vars-to-js": "^1.1.1",
     "lodash.debounce": "^4.0.6",
     "lodash.omit": "^4.5.0",
+    "lodash.range": "^3.2.0",
     "mocha": "^2.5.3",
     "mock-css-modules": "^1.0.0",
     "opn": "^4.0.1",

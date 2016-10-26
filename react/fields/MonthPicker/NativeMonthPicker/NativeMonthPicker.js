@@ -1,8 +1,8 @@
+import styles from './NativeMonthPicker.less';
+
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import pad from 'pad-left';
-
-import styles from './NativeMonthPicker.less';
 
 const makeMonthString = (month, year) => {
   if (month && year) {
