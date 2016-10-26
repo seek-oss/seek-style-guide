@@ -4,6 +4,8 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import pad from 'pad-left';
 
+import ChevronIcon from '../../../icons/ChevronIcon/ChevronIcon';
+
 const makeMonthString = (month, year) => {
   if (month && year) {
     return `${year}-${pad(month, 2, '0')}`;
@@ -55,18 +57,25 @@ export default class NativeMonthPicker extends Component {
     const value = makeMonthString(monthValue, yearValue);
 
     const rootClasses = classnames({
-      [className]: className,
       [styles.root]: true,
+      [className]: className,
       [styles.invalid]: invalid
     });
 
     return (
-      <input
-        className={rootClasses}
-        type="month"
-        value={value}
-        onChange={this.handleChange}
-      />
+      <div className={rootClasses}>
+        <ChevronIcon
+          className={styles.chevron}
+          svgClassName={styles.chevronSvg}
+          direction="down"
+        />
+        <input
+          className={styles.input}
+          type="month"
+          value={value}
+          onChange={this.handleChange}
+        />
+      </div>
     );
   }
 }

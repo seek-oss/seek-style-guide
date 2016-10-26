@@ -89,24 +89,24 @@ export default class CustomMonthPicker extends Component {
       <div className={rootClasses}>
         <Dropdown
           options={months}
-          className={styles.dropdownInput}
+          className={styles.dropdown}
           invalid={invalid}
           placeholder="Month"
           inputProps={{
             onChange: this.handleMonthChange,
             value: monthValue,
-            className: styles.select
+            className: styles.dropdownInput
           }}
         />
         <Dropdown
           options={years}
-          className={styles.dropdownInput}
+          className={styles.dropdown}
           invalid={invalid}
           placeholder="Year"
           inputProps={{
             onChange: this.handleYearChange,
             value: yearValue,
-            className: styles.select
+            className: styles.dropdownInput
           }}
         />
       </div>

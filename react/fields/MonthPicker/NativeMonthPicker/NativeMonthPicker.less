@@ -1,8 +1,14 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
+  display: inline-block;
+  position: relative;
+}
+
+.input {
   .touchableText();
   display: block;
+  position: relative;
   width: 100%;
   height: @grid-row-height * 5;
   padding: 0 @field-gutter-width;
@@ -13,7 +19,28 @@
   background-color: @sk-white;
   cursor: pointer;
 
-  &.invalid {
+  &::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+
+  &::-webkit-clear-button {
+    display: none;
+  }
+
+  .invalid & {
     border-color: transparent;
     box-shadow: 0 0 0 @field-border-width @sk-pink;
   }
@@ -24,4 +51,26 @@
     border-color: transparent;
     .focus();
   }
+}
+
+.chevron {
+  position: absolute;
+  right: 0;
+  top: @grid-row-height * 3;
+  overflow: hidden;
+  color: @sk-mid-gray;
+  height: (@interaction-type-row-span * @grid-row-height);
+  border: 0;
+  padding: 0 @field-gutter-width;
+  background-color: transparent;
+  color: @sk-mid-gray;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.chevronSvg {
+  height: 16px;
+  width: 16px;
 }

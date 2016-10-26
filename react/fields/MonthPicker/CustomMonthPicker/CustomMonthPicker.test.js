@@ -33,15 +33,15 @@ describe('CustomMonthPicker', () => {
   function render(jsx) {
     element = jsx;
     monthPicker = renderer.render(element);
-    monthDropdown = findAllWithClass(monthPicker, 'dropdownInput')[0] || null;
-    yearDropdown = findAllWithClass(monthPicker, 'dropdownInput')[1] || null;
+    monthDropdown = findAllWithClass(monthPicker, 'dropdown')[0] || null;
+    yearDropdown = findAllWithClass(monthPicker, 'dropdown')[1] || null;
   }
 
   function renderToDom(jsx) {
     element = jsx;
     monthPicker = renderIntoDocument(element);
-    monthDropdown = scryRenderedDOMComponentsWithClass(monthPicker, 'dropdown')[0] || null;
-    yearDropdown = scryRenderedDOMComponentsWithClass(monthPicker, 'dropdown')[1] || null;
+    monthDropdown = scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[0] || null;
+    yearDropdown = scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[1] || null;
   }
 
   it('should have a displayName', () => {

@@ -16,7 +16,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('NativeMonthPicker', () => {
-  let element, rootElement, monthPicker, errors, value;
+  let element, rootElement, monthPicker, errors, value, input;
 
   beforeEach(() => {
     errors = [];
@@ -34,12 +34,13 @@ describe('NativeMonthPicker', () => {
     element = jsx;
     monthPicker = renderer.render(element);
     rootElement = findAllWithClass(monthPicker, 'root')[0] || null;
+    input = findAllWithClass(monthPicker, 'input')[0] || null;
   }
 
   function renderToDom(jsx) {
     element = jsx;
     monthPicker = renderIntoDocument(element);
-    rootElement = findRenderedDOMComponentWithClass(monthPicker, 'root');
+    input = findRenderedDOMComponentWithClass(monthPicker, 'input');
   }
 
   it('should have a displayName', () => {
@@ -52,14 +53,14 @@ describe('NativeMonthPicker', () => {
     expect(errors.length).to.equal(0);
   });
 
-  it('should assign invald className when invalid is true', () => {
+  it('should assign invalid className when invalid is true', () => {
     render(<NativeMonthPicker invalid={true} />);
     expect(rootElement.props.className).to.contain('invalid');
   });
 
   it('should convert monthValue & yearValue to generic month string', () => {
     render(<NativeMonthPicker monthValue={1} yearValue={2016} />);
-    expect(rootElement.props.value).to.equal('2016-01');
+    expect(input.props.value).to.equal('2016-01');
   });
 
   it('should send correct month year format in onChange handler', () => {
@@ -67,8 +68,8 @@ describe('NativeMonthPicker', () => {
       value = newValue;
     };
     renderToDom(<NativeMonthPicker onChange={onChange} monthValue={6} yearValue={2010} />);
-    rootElement.value = '2012-11';
-    Simulate.change(rootElement);
+    input.value = '2012-11';
+    Simulate.change(input);
     expect(value).to.deep.equal({
       month: 11,
       year: 2012
