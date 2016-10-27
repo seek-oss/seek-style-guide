@@ -59,9 +59,7 @@
     "classnames": "^2.2.5",
     "lodash.omit": "^4.5.0",
     "lodash.range": "^3.2.0",
-    "pad-left": "^2.1.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "pad-left": "^2.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
