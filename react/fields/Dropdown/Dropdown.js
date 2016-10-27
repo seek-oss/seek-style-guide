@@ -72,7 +72,7 @@ export default class Dropdown extends Component {
     messageProps: PropTypes.object,
     options: PropTypes.arrayOf(
       PropTypes.shape({
-        value: PropTypes.any.isRequired,
+        value: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired
       })
     ).isRequired,
@@ -127,7 +127,7 @@ export default class Dropdown extends Component {
   }
 
   renderSelect() {
-    const { inputProps = {}, id, options, placeholder } = this.props;
+    const { inputProps = {}, id, options = [], placeholder } = this.props;
     const inputStyles = classnames({
       [styles.dropdown]: true,
       [styles.blankValueSelected]: !inputProps.value
@@ -135,14 +135,16 @@ export default class Dropdown extends Component {
     const allInputProps = {
       ...combineClassNames(inputProps, inputStyles),
       ...(id ? { id } : {}),
-      ref: this.storeInputReference
+      ref: this.storeInputReference,
+      value: inputProps.value || ''
     };
 
     return (
       <select {...allInputProps}>
         <option
           className={styles.blankOption}
-          value="">
+          value=""
+          disabled={true}>
           { placeholder }
         </option>
         {
