@@ -118,29 +118,6 @@ describe('MonthPicker', () => {
     });
   });
 
-  describe('inputProps', () => {
-    it('should error if `inputProps` is not an object', () => {
-      render(<MonthPicker inputProps="hey" />);
-      expect(errors[0]).to.match(/Invalid prop `inputProps`/);
-    });
-
-    it('should error if `inputProps`\'s `id` is specified', () => {
-      render(<MonthPicker id="firstName" inputProps={{ id: 'ignored' }} />);
-      expect(errors[0]).to.match(/`inputProps.id` will be overridden by `id`/);
-    });
-
-    it('should pass through className to the input', () => {
-      render(<MonthPicker inputProps={{ className: 'first-name-field' }} />);
-      expect(input.props.className).to.match(/first-name-field$/);
-    });
-
-    it('should pass through other props to the input', () => {
-      render(<MonthPicker inputProps={{ id: 'firstName', 'data-automation': 'first-name-field' }} />);
-      expect(input.props.id).to.equal('firstName');
-      expect(input.props['data-automation']).to.equal('first-name-field');
-    });
-  });
-
   describe('message', () => {
     it('should not be rendered by default', () => {
       render(<MonthPicker />);

@@ -34,18 +34,6 @@ export default class MonthPicker extends Component {
       }
     },
     className: PropTypes.string,
-    inputProps: (props, propName, componentName) => {
-      const { id, inputProps } = props;
-      const { id: inputId } = inputProps || {};
-
-      if (typeof inputProps !== 'undefined' && typeof inputProps !== 'object') {
-        return new Error(`Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
-      }
-
-      if (inputId && id) {
-        return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
-      }
-    },
     /* eslint-enable consistent-return */
     invalid: PropTypes.bool,
     label: PropTypes.string,
@@ -113,9 +101,9 @@ export default class MonthPicker extends Component {
   }
 
   renderInput() {
-    const { inputProps = {}, id, monthValue, yearValue, onChange, native, invalid } = this.props;
-    const allInputProps = {
-      ...combineClassNames(inputProps, styles.input),
+    const { id, monthValue, yearValue, onChange, native, invalid } = this.props;
+    const monthPickerProps = {
+      className: styles.input,
       ...(id ? { id } : {}),
       monthValue,
       yearValue,
@@ -125,8 +113,8 @@ export default class MonthPicker extends Component {
 
     return (
       native ?
-        <NativeMonthPicker {...allInputProps} /> :
-        <CustomMonthPicker {...allInputProps} />
+        <NativeMonthPicker {...monthPickerProps} /> :
+        <CustomMonthPicker {...monthPickerProps} />
     );
   }
 

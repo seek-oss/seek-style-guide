@@ -45,7 +45,8 @@ export default class CustomMonthPicker extends Component {
     monthValue: PropTypes.number,
     yearValue: PropTypes.number,
     invalid: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    id: PropTypes.string
   };
 
   static defaultProps = {
@@ -78,7 +79,7 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { monthValue, yearValue, className, invalid } = this.props;
+    const { monthValue, yearValue, className, invalid, id } = this.props;
 
     const rootClasses = classnames({
       [className]: className,
@@ -88,6 +89,7 @@ export default class CustomMonthPicker extends Component {
     return (
       <div className={rootClasses}>
         <Dropdown
+          {...(id ? { id } : {})}
           options={months}
           className={styles.dropdown}
           invalid={invalid}

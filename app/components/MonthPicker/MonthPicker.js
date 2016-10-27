@@ -46,23 +46,15 @@ export default class MonthPickerDemo extends Component {
     super();
 
     this.state = {
-      focus: false,
       invalid: false,
       baseline: false,
       native: false
     };
 
-    this.toggleFocus = this.toggleFocus.bind(this);
     this.toggleInvalid = this.toggleInvalid.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
     this.toggleNative = this.toggleNative.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  toggleFocus(event) {
-    this.setState({
-      focus: event.target.checked
-    });
   }
 
   toggleInvalid(event) {
@@ -91,20 +83,15 @@ export default class MonthPickerDemo extends Component {
   }
 
   render() {
-    const { focus, invalid, baseline, monthValue, yearValue, native } = this.state;
-    const className = classnames({
-      [styles.input]: true,
-      [monthPickerStyles.rootFocus]: focus
-    });
+    const { invalid, baseline, monthValue, yearValue, native } = this.state;
     const spec = getSpec({
       default: true,
-      focus,
       invalid
     });
     const monthPicker = (
       <SeekMonthPicker
         id="startDate"
-        className={className}
+        className={styles.input}
         invalid={invalid}
         label="Start Date"
         message={invalid ? 'Something went wrong' : ''}
@@ -141,15 +128,6 @@ export default class MonthPickerDemo extends Component {
         </Baseline>
 
         <SandboxTogglePanel>
-          <SandboxToggle
-            label="Focus"
-            toggleType="checkbox"
-            toggleProps={{
-              type: 'checkbox',
-              checked: focus,
-              onChange: this.toggleFocus
-            }}
-          />
           <SandboxToggle
             label="Invalid"
             toggleType="checkbox"

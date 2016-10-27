@@ -32,7 +32,8 @@ export default class NativeMonthPicker extends Component {
     monthValue: PropTypes.number,
     yearValue: PropTypes.number,
     invalid: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    id: PropTypes.string
   };
 
   static defaultProps = {
@@ -52,7 +53,7 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { monthValue, yearValue, className, invalid } = this.props;
+    const { monthValue, yearValue, className, invalid, id } = this.props;
 
     const value = makeMonthString(monthValue, yearValue);
 
@@ -70,6 +71,7 @@ export default class NativeMonthPicker extends Component {
           direction="down"
         />
         <input
+          {...(id ? { id } : {})}
           className={styles.input}
           type="month"
           value={value}
