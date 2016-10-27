@@ -11,6 +11,7 @@ import ThumbsUpIcon from './icons/ThumbsUpIcon/ThumbsUpIcon';
 import ErrorIcon from './icons/ErrorIcon/ErrorIcon';
 import TickIcon from './icons/TickIcon/TickIcon';
 import HelpIcon from './icons/HelpIcon/HelpIcon';
+import Icon from './icons/icon';
 import Button from './Button/Button';
 import TextLink from './TextLink/TextLink';
 import PlusIcon from './icons/PlusIcon/PlusIcon';
@@ -36,6 +37,7 @@ export {
   ErrorIcon,
   TickIcon,
   HelpIcon,
+  Icon,
   Button,
   TextLink,
   PlusIcon,
