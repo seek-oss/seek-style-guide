@@ -1,0 +1,76 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  margin-top: @grid-row-height;
+  .touchableText(@standard-type-scale);
+}
+
+.controlIndicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: @grid-row-height * 3;
+  width: @grid-row-height * 3;
+  background: @sk-white;
+  border-radius: @field-border-radius;
+  border: @field-border-width solid @sk-mid-gray-light;
+}
+
+.control {
+  // padding-top: @grid-row-height;
+  display: block;
+  position: relative;
+  padding-left: @grid-gutter-width * 2;
+  cursor: pointer;
+
+  .input {
+    // position: absolute;
+    // z-index: -1;
+    // opacity: 0;
+    display: none;
+  }
+}
+
+.control:hover .input ~ .controlIndicator,
+.control .input:focus ~ .controlIndicator {
+  background: @sk-mid-gray-light;
+}
+.control .input:checked ~ .controlIndicator {
+  background: @sk-mid-gray-light;
+}
+.control:hover .input:not([disabled]):checked ~ .controlIndicator,
+.control .input:checked:focus ~ .controlIndicator {
+  background: @sk-mid-gray-light;
+}
+.control .input:disabled ~ .controlIndicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.controlIndicator {
+  &:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+}
+
+.control {
+  .controlIndicator{
+    &:after {
+      left: 10px;
+      top: 3px;
+      width: 7px;
+      height: 16px;
+      border: solid @sk-black;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  .input:disabled ~ .controlIndicator:after {
+    border-color: @sk-mid-gray-light;
+  }
+  .input:checked ~ .controlIndicator:after {
+    display: block;
+  }
+}

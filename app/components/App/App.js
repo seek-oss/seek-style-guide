@@ -11,6 +11,7 @@ const titles = {
   '/textfields': 'text fields',
   '/autosuggest': 'autosuggest',
   '/textarea': 'textarea',
+  '/checkbox': 'checkbox',
   '/typography': 'typography'
 };
 
