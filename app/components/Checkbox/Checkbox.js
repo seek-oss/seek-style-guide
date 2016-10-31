@@ -93,7 +93,7 @@ export default class Checkbox extends Component {
 
   handleChange(event) {
     this.setState({
-      inputValue: event.target.value
+      inputValue: event.target.checked
     });
   }
 
@@ -114,10 +114,8 @@ export default class Checkbox extends Component {
       <SeekCheckbox
         label="Functional"
         inputProps={{
-          onChange: (a, b, c, d) => {
-            console.log('change', a, b, c, d);
-          },
-          value: inputValue
+          onChange: this.handleChange,
+          checked: inputValue
         }}
       />
     );

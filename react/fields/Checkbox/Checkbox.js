@@ -7,6 +7,7 @@ export default class Checkbox extends Component {
 
   static propTypes = {
     label: PropTypes.string.isRequired,
+    className: PropTypes.string,
     ariaLabel: PropTypes.string, // for now
     inputProps: PropTypes.shape({
       onChange: PropTypes.func,
@@ -17,16 +18,18 @@ export default class Checkbox extends Component {
   render() {
     const { inputProps: { onChange, checked }, label, className } = this.props;
 
-    const classNames = classnames({
+    const rootClassNames = classnames({
       [styles.root]: true,
+      [styles.checked]: checked,
       [className]: className
     });
 
     return (
-      <div className={classNames}>
-        <label className={`${styles.control}`}>{label}
-          <input className={`${styles.input}`} type="checkbox" checked={checked} onChange={onChange} />
-          <div className={styles.controlIndicator} />
+      <div className={rootClassNames}>
+        <input className={styles.input} id="check1" type="checkbox" onChange={onChange} checked={checked} />
+        <label className={styles.label} htmlFor="check1">
+          <span className={styles.tickBox} />
+          <span>Checkbox</span>
         </label>
       </div>
     );
