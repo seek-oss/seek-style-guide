@@ -55,10 +55,14 @@ export default class Dropdown extends Component {
     },
     inputProps: (props, propName, componentName) => {
       const { id, inputProps } = props;
-      const { id: inputId } = inputProps || {};
+      const { id: inputId, value } = inputProps || {};
 
-      if (typeof inputProps !== 'undefined' && typeof inputProps !== 'object') {
+      if (typeof inputProps !== 'object') {
         return new Error(`Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
+      }
+
+      if (typeof value !== 'string') {
+        return new Error(`Invalid prop \`inputProps.value\` of type \`${typeof value}\` supplied to \`${componentName}\`, expected \`string\`.`);
       }
 
       if (inputId && id) {
@@ -137,7 +141,7 @@ export default class Dropdown extends Component {
   }
 
   renderSelect() {
-    const { inputProps = {}, id, options, placeholder } = this.props;
+    const { inputProps, id, options, placeholder } = this.props;
     const inputStyles = classnames({
       [styles.dropdown]: true,
       [styles.placeholderSelected]: !inputProps.value
