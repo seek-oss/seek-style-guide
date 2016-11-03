@@ -19,16 +19,12 @@ import { Checkbox as SeekCheckbox } from 'seek-style-guide/react';
 const specs = {
   default: {
     'Internal gutters': '15px — @field-gutter-width',
-    'Margin bottom': '3 grid rows',
     'Font scale': '1.8 — @interaction-type-scale',
     Border: '1px — @sk-mid-gray-light',
     'Border radius': '2px — @field-border-radius'
   },
   focus: {
     Border: '1px @sk-focus'
-  },
-  invalid: {
-    Border: '1px @sk-pink'
   }
 };
 
@@ -54,9 +50,6 @@ export default class Checkbox extends Component {
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
-    this.toggleHelp = this.toggleHelp.bind(this);
-    this.toggleInvalid = this.toggleInvalid.bind(this);
-    this.toggleDisabled = this.toggleDisabled.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -64,24 +57,6 @@ export default class Checkbox extends Component {
   toggleFocus(event) {
     this.setState({
       focus: event.target.checked
-    });
-  }
-
-  toggleHelp(event) {
-    this.setState({
-      help: event.target.checked
-    });
-  }
-
-  toggleDisabled(event) {
-    this.setState({
-      disabled: event.target.checked
-    });
-  }
-
-  toggleInvalid(event) {
-    this.setState({
-      invalid: event.target.checked
     });
   }
 
@@ -98,21 +73,22 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const { focus, help, invalid, baseline, inputValue, disabled } = this.state;
-    // const className = classnames({
-    //   [checkboxStyles.rootFocus]: focus,
-    //   [styles.textarea]: true
-    // });
+    const { baseline, inputValue, focus } = this.state;
+
     const spec = getSpec({
       default: true,
-      focus,
-      invalid
+      focus
     });
-    // checked: inputValue
+
+    const classNames = classnames({
+      [checkboxStyles.rootFocus]: focus
+    });
 
     const checkbox = (
       <SeekCheckbox
-        label="Functional"
+        className={classNames}
+        label="Still in role"
+        id="still-in-role"
         inputProps={{
           onChange: this.handleChange,
           checked: inputValue
@@ -153,33 +129,6 @@ export default class Checkbox extends Component {
               type: 'checkbox',
               checked: focus,
               onChange: this.toggleFocus
-            }}
-          />
-          <SandboxToggle
-            label="Help"
-            toggleType="checkbox"
-            toggleProps={{
-              type: 'checkbox',
-              checked: help,
-              onChange: this.toggleHelp
-            }}
-          />
-          <SandboxToggle
-            label="Invalid"
-            toggleType="checkbox"
-            toggleProps={{
-              type: 'checkbox',
-              checked: invalid,
-              onChange: this.toggleInvalid
-            }}
-          />
-          <SandboxToggle
-            label="Disabled"
-            toggleType="checkbox"
-            toggleProps={{
-              type: 'checkbox',
-              checked: disabled,
-              onChange: this.toggleDisabled
             }}
           />
         </SandboxTogglePanel>

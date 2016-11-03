@@ -4,6 +4,11 @@
   display: inline-block;
 }
 
+.input {
+  opacity: 0;
+  position: absolute;
+}
+
 .label {
   cursor: pointer;
   .touchableText(1.4);
@@ -11,20 +16,24 @@
   align-items: center;
 }
 
-.input {
-  display: none;
-}
-
-.tickBox {
+.checkMark {
   width: @grid-row-height * 3;
   height: @grid-row-height * 3;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   margin-right: @field-gutter-width;
+  padding: 3px;
+  display: block;
+  fill: @sk-white;
 
-  .checked & {
-    background: url('!!url-loader!./checklist.svg') 0 0 no-repeat;
-    background-size: 80%;
-    background-position: center;
+  .input:not([readonly]):not([disabled]):focus + .label &,
+  .rootFocus & {
+    outline: none;
+    border-color: transparent;
+    .focus();
   }
+}
+
+.checked {
+  fill: @sk-pink;
 }

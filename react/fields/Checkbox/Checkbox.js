@@ -1,36 +1,76 @@
 import React, { Component, PropTypes } from 'react';
 import styles from './Checkbox.less';
+import CheckMarkIcon from '../../icons/CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
+
+function combineClassNames(props = {}, ...classNames) {
+  const { className, ...restProps } = props;
+
+  return {
+    className: classnames.apply(null, [...classNames, className]), // eslint-disable-line no-useless-call
+    ...restProps
+  };
+}
 
 export default class Checkbox extends Component {
   static displayName = 'Checkbox';
 
   static propTypes = {
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     className: PropTypes.string,
-    ariaLabel: PropTypes.string, // for now
     inputProps: PropTypes.shape({
       onChange: PropTypes.func,
       checked: PropTypes.bool
     })
   }
 
+  static defaultProps = {
+    inputProps: {}
+  }
+
+  renderLabel() {
+    const { inputProps: { checked = false }, label, id } = this.props;
+
+    const checkMarkClassNames = classnames({
+      [styles.checkMark]: true,
+      [styles.checked]: checked
+    });
+
+    return (
+      <label className={styles.label} htmlFor={id}>
+        <CheckMarkIcon svgClassName={checkMarkClassNames} />
+        <span>{label}</span>
+      </label>
+    );
+  }
+
+  renderInput() {
+    const { inputProps, id } = this.props;
+
+    const allInputProps = {
+      ...combineClassNames(inputProps, styles.input),
+      ...{ type: 'checkbox' },
+      ...{ id }
+    };
+
+    return (
+      <input {...allInputProps} />
+    );
+  }
+
   render() {
-    const { inputProps: { onChange, checked }, label, className } = this.props;
+    const { className } = this.props;
 
     const rootClassNames = classnames({
       [styles.root]: true,
-      [styles.checked]: checked,
       [className]: className
     });
 
     return (
       <div className={rootClassNames}>
-        <input className={styles.input} id="check1" type="checkbox" onChange={onChange} checked={checked} />
-        <label className={styles.label} htmlFor="check1">
-          <span className={styles.tickBox} />
-          <span>Checkbox</span>
-        </label>
+        { this.renderInput() }
+        { this.renderLabel() }
       </div>
     );
   }
