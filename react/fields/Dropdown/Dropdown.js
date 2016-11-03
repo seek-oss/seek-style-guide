@@ -70,12 +70,21 @@ export default class Dropdown extends Component {
     helpProps: PropTypes.object,
     message: PropTypes.string,
     messageProps: PropTypes.object,
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        value: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired
-      })
-    ).isRequired,
+    options: PropTypes.arrayOf((propValue, key, componentName) => {
+      const { value, label } = propValue[key];
+
+      if (typeof value !== 'string') {
+        return new Error(`Invalid prop \`options[${key}].value\` of type \`${typeof value}\` supplied to \`${componentName}\`, expected \`string\`.`);
+      }
+
+      if (value === '') {
+        return new Error(`\`options[${key}].value\` can't be an empty string.`);
+      }
+
+      if (typeof label !== 'string') {
+        return new Error(`Invalid prop \`options[${key}].label\` of type \`${typeof label}\` supplied to \`${componentName}\`, expected \`string\`.`);
+      }
+    }),
     placeholder: PropTypes.string
   };
 
@@ -86,7 +95,8 @@ export default class Dropdown extends Component {
     label: '',
     help: '',
     message: '',
-    placeholder: ''
+    placeholder: '',
+    options: []
   };
 
   constructor() {
@@ -127,22 +137,20 @@ export default class Dropdown extends Component {
   }
 
   renderSelect() {
-    const { inputProps = {}, id, options = [], placeholder } = this.props;
+    const { inputProps = {}, id, options, placeholder } = this.props;
     const inputStyles = classnames({
       [styles.dropdown]: true,
-      [styles.blankValueSelected]: !inputProps.value
+      [styles.placeholderSelected]: !inputProps.value
     });
     const allInputProps = {
       ...combineClassNames(inputProps, inputStyles),
       ...(id ? { id } : {}),
-      ref: this.storeInputReference,
-      value: inputProps.value || ''
+      ref: this.storeInputReference
     };
 
     return (
       <select {...allInputProps}>
         <option
-          className={styles.blankOption}
           value=""
           disabled={true}>
           { placeholder }

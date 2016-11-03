@@ -14,7 +14,7 @@ import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
-import { Dropdown as SeekDropDown } from 'seek-style-guide/react';
+import SeekDropDown from 'seek-style-guide/react/fields/Dropdown/Dropdown';
 
 const specs = {
   default: {
@@ -121,7 +121,6 @@ export default class DropDownDemo extends Component {
         className={className}
         invalid={invalid}
         label="Job Titles"
-        focus={focus}
         message={invalid ? 'Something went wrong' : ''}
         help={help ? 'eg. Product Manager' : ''}
         options={options}
