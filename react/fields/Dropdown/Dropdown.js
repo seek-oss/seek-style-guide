@@ -127,16 +127,15 @@ export default class Dropdown extends Component {
   }
 
   renderSelect() {
-    const { inputProps = {}, id, options = [], placeholder } = this.props;
+    const { inputProps = {}, id, options, placeholder } = this.props;
     const inputStyles = classnames({
       [styles.dropdown]: true,
-      [styles.blankValueSelected]: !inputProps.value
+      [styles.placeholderSelected]: !inputProps.value
     });
     const allInputProps = {
       ...combineClassNames(inputProps, inputStyles),
       ...(id ? { id } : {}),
-      ref: this.storeInputReference,
-      value: inputProps.value || ''
+      ref: this.storeInputReference
     };
 
     return (

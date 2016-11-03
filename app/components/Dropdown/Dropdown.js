@@ -121,7 +121,6 @@ export default class DropDownDemo extends Component {
         className={className}
         invalid={invalid}
         label="Job Titles"
-        focus={focus}
         message={invalid ? 'Something went wrong' : ''}
         help={help ? 'eg. Product Manager' : ''}
         options={options}

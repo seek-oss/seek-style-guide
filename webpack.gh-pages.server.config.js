@@ -22,7 +22,8 @@ const routes = [
   '/textfields',
   '/autosuggest',
   '/textarea',
-  '/typography'
+  '/typography',
+  '/dropdown'
 ];
 
 const config = {
