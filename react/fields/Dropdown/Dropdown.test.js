@@ -5,7 +5,10 @@ import React from 'react';
 import {
   createRenderer
 } from 'react-addons-test-utils';
-import { findAllWithClass } from 'react-shallow-testutils';
+import {
+  findAllWithClass,
+  findAllWithType
+} from 'react-shallow-testutils';
 import Dropdown from './Dropdown';
 
 chai.use(sinonChai);
@@ -24,7 +27,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, label, input, help, message, messageIcon, errors;
+  let element, dropdown, label, input, help, message, messageIcon, placeholder, errors;
 
   beforeEach(() => {
     errors = [];
@@ -46,6 +49,7 @@ describe('Dropdown', () => {
     help = findAllWithClass(dropdown, 'help')[0] || null;
     message = findAllWithClass(dropdown, 'message')[0] || null;
     messageIcon = findAllWithClass(dropdown, 'messageIcon')[0] || null;
+    placeholder = findAllWithType(dropdown, 'option')[0] || null;
   }
 
   function helpText() {
@@ -54,6 +58,10 @@ describe('Dropdown', () => {
 
   function messageText() {
     return message.props.children[1];
+  }
+
+  function placeholderText() {
+    return placeholder.props.children;
   }
 
   it('should have a displayName', () => {
@@ -69,14 +77,14 @@ describe('Dropdown', () => {
   });
 
   describe('options', () => {
-    it('should error if `options` are not provided', () => {
-      render(<Dropdown />);
-      expect(errors[0]).to.match(/Required prop `options`/);
-    });
-
     it('should error if `options.value` is not a string', () => {
       render(<Dropdown options={[{ value: 2, label: '' }]} />);
       expect(errors[0]).to.match(/Invalid prop `options\[0\].value` of type `number` supplied to `Dropdown`, expected `string`/);
+    });
+
+    it('should error if `options.value` is an empty string', () => {
+      render(<Dropdown options={[{ value: '', label: '' }]} />);
+      expect(errors[0]).to.match(/`options\[0\].value` can\'t be an empty string/);
     });
 
     it('should error if `options.label` is not a string', () => {
@@ -138,6 +146,13 @@ describe('Dropdown', () => {
     it('should not have an `id` if it is not specified', () => {
       render(<Dropdown options={options} />);
       expect(input.props).not.to.include.keys('id');
+    });
+  });
+
+  describe('placeholder', () => {
+    it('should render placeholder as first option in list ', () => {
+      render(<Dropdown options={options} placeholder="test" />);
+      expect(placeholderText()).to.equal('test');
     });
   });
 
