@@ -10,30 +10,38 @@
 }
 
 .label {
+  .touchableText(@standard-type-scale);
   cursor: pointer;
-  .touchableText(1.4);
   display: flex;
   align-items: center;
 }
 
-.checkMark {
+.checkBox {
   width: @grid-row-height * 3;
   height: @grid-row-height * 3;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   margin-right: @field-gutter-width;
-  padding: 3px;
-  display: block;
-  fill: @sk-white;
+  padding: @field-border-radius;
+  fill: @sk-pink;
 
-  .input:not([readonly]):not([disabled]):focus + .label &,
-  .rootFocus & {
+
+  .input:not([readonly]):not([disabled]):focus + .label &, .rootFocus & {
     outline: none;
     border-color: transparent;
     .focus();
   }
 }
 
-.checked {
+
+.checkMark {
+  display: block;
+  width: initial;
+  height: initial;
   fill: @sk-pink;
+  opacity: 0;
+}
+
+.checked {
+  opacity: 1;
 }

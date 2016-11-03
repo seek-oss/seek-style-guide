@@ -32,14 +32,14 @@ export default class Checkbox extends Component {
   renderLabel() {
     const { inputProps: { checked = false }, label, id } = this.props;
 
-    const checkMarkClassNames = classnames({
+    const svgClassName = classnames({
       [styles.checkMark]: true,
       [styles.checked]: checked
     });
 
     return (
       <label className={styles.label} htmlFor={id}>
-        <CheckMarkIcon svgClassName={checkMarkClassNames} />
+        <CheckMarkIcon svgClassName={svgClassName} className={styles.checkBox} />
         <span>{label}</span>
       </label>
     );

@@ -18,8 +18,7 @@ import { Checkbox as SeekCheckbox } from 'seek-style-guide/react';
 
 const specs = {
   default: {
-    'Internal gutters': '15px — @field-gutter-width',
-    'Font scale': '1.8 — @interaction-type-scale',
+    'Font scale': '1.4 — @standard-type-scale',
     Border: '1px — @sk-mid-gray-light',
     'Border radius': '2px — @field-border-radius'
   },
@@ -41,10 +40,6 @@ export default class Checkbox extends Component {
 
     this.state = {
       focus: false,
-      help: false,
-      invalid: false,
-      maxCharacters: false,
-      showCount: false,
       baseline: false,
       inputValue: true
     };
