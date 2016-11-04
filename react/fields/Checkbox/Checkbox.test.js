@@ -6,6 +6,7 @@ import {
   createRenderer,
   Simulate,
   renderIntoDocument,
+  scryRenderedDOMComponentsWithClass,
   findRenderedDOMComponentWithClass
 } from 'react-addons-test-utils';
 import SyntheticEvent from 'react/lib/SyntheticEvent';
@@ -19,7 +20,7 @@ const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
 const renderer = createRenderer();
 
 describe('Checkbox', () => {
-  let element, checkbox, input, errors;
+  let element, checkbox, rootElement, input, label, errors;
 
   beforeEach(() => {
     errors = [];
@@ -37,11 +38,14 @@ describe('Checkbox', () => {
     element = jsx;
     checkbox = renderer.render(element);
     input = findAllWithClass(checkbox, 'input')[0] || null;
+    label = findAllWithClass(checkbox, 'label')[0] || null;
   }
 
   function renderToDom(jsx) {
     element = jsx;
     checkbox = renderIntoDocument(element);
+    rootElement = scryRenderedDOMComponentsWithClass(checkbox, 'root')[0];
+    label = scryRenderedDOMComponentsWithClass(checkbox, 'label')[0];
     input = findRenderedDOMComponentWithClass(checkbox, 'input');
   }
 
@@ -50,14 +54,27 @@ describe('Checkbox', () => {
     expect(element.type.displayName).to.equal('Checkbox');
   });
 
+  it('should mark pass through id', () => {
+    const id = 'test';
+    renderToDom(<Checkbox id={id} />);
+    expect(input.id).to.equal(id);
+  });
+
+  it('should mark pass through className', () => {
+    const className = 'test';
+    renderToDom(<Checkbox className={className} />);
+    expect(rootElement.classList.contains('test')).to.equal(true);
+  });
+
+  it('should have `htmlFor` equal to `id` when `label` is specified', () => {
+    render(<Checkbox id="still-in-role" label="Still in role" />);
+    expect(label.props).to.contain.keys({ htmlFor: 'still-in-role' });
+  });
+
   describe('inputProps', () => {
-    const handleChange = sinon.spy();
-
-    beforeEach(() => {
-      handleChange.reset();
-    });
-
     it('should invoke the onChange handler when touched', () => {
+      const handleChange = sinon.spy();
+      handleChange.reset();
       const props = {
         id: 'still-in-role',
         label: 'still in role',
@@ -71,6 +88,11 @@ describe('Checkbox', () => {
       Simulate.change(input, { 'target': { 'checked': true } });
       expect(handleChange.calledOnce).to.equal(true);
       expect(handleChange).to.be.calledWith(eventMatcher);
+    });
+
+    it('should mark input as checked', () => {
+      renderToDom(<Checkbox id='test' inputProps={{ checked: true }} />);
+      expect(input.checked).to.equal(true);
     });
   });
 });

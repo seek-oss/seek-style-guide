@@ -25,21 +25,12 @@ export default class Checkbox extends Component {
     })
   }
 
-  static defaultProps = {
-    inputProps: {}
-  }
-
   renderLabel() {
-    const { inputProps: { checked = false }, label, id } = this.props;
-
-    const svgClassName = classnames({
-      [styles.checkMark]: true,
-      [styles.checked]: checked
-    });
+    const { label, id } = this.props;
 
     return (
       <label className={styles.label} htmlFor={id}>
-        <CheckMarkIcon svgClassName={svgClassName} className={styles.checkBox} />
+        <CheckMarkIcon svgClassName={styles.checkMark} className={styles.checkBox} />
         <span>{label}</span>
       </label>
     );
@@ -50,8 +41,8 @@ export default class Checkbox extends Component {
 
     const allInputProps = {
       ...combineClassNames(inputProps, styles.input),
-      ...{ type: 'checkbox' },
-      ...{ id }
+      type: 'checkbox',
+      id
     };
 
     return (
