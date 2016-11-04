@@ -112,7 +112,7 @@ export default class DropDownDemo extends Component {
       },
       {
         value: '3',
-        label: 'Product Manager'
+        label: 'Really really long job title that is not gonna fit'
       }
     ];
     const dropdown = (
