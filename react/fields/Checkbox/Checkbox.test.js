@@ -94,5 +94,10 @@ describe('Checkbox', () => {
       renderToDom(<Checkbox id='test' inputProps={{ checked: true }} />);
       expect(input.checked).to.equal(true);
     });
+
+    it('should pass through other props to the input', () => {
+      render(<Checkbox inputProps={{ 'data-automation': 'first-name-field' }} />);
+      expect(input.props['data-automation']).to.equal('first-name-field');
+    });
   });
 });
