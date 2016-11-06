@@ -81,6 +81,9 @@ export default class CustomMonthPicker extends Component {
   render() {
     const { monthValue, yearValue, className, invalid, id } = this.props;
 
+    const month = monthValue ? `${monthValue}` : '';
+    const year = yearValue ? `${yearValue}` : '';
+
     const rootClasses = classnames({
       [className]: className,
       [styles.root]: true
@@ -96,7 +99,7 @@ export default class CustomMonthPicker extends Component {
           placeholder="Month"
           inputProps={{
             onChange: this.handleMonthChange,
-            value: monthValue,
+            value: month,
             className: styles.dropdownInput
           }}
         />
@@ -107,7 +110,7 @@ export default class CustomMonthPicker extends Component {
           placeholder="Year"
           inputProps={{
             onChange: this.handleYearChange,
-            value: yearValue,
+            value: year,
             className: styles.dropdownInput
           }}
         />
