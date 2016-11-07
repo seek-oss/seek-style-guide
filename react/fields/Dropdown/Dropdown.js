@@ -153,7 +153,12 @@ export default class Dropdown extends Component {
         </option>
         {
           options.map(({ value, label }) => (
-            <option value={value} key={value}>{ label }</option>
+            <option
+              value={value}
+              key={value}
+              className={styles.option}>
+              { label }
+            </option>
           ))
         }
       </select>
