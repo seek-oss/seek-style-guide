@@ -29,6 +29,7 @@ export default class NativeMonthPicker extends Component {
 
   static propTypes = {
     onChange: PropTypes.func,
+    onBlur: PropTypes.func,
     monthValue: PropTypes.number,
     yearValue: PropTypes.number,
     invalid: PropTypes.bool,
@@ -53,7 +54,7 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { monthValue, yearValue, className, invalid, id } = this.props;
+    const { monthValue, yearValue, className, invalid, id, onBlur } = this.props;
 
     const value = makeMonthString(monthValue, yearValue);
 
@@ -76,6 +77,7 @@ export default class NativeMonthPicker extends Component {
           type="month"
           value={value}
           onChange={this.handleChange}
+          onBlur={onBlur}
         />
       </div>
     );

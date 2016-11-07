@@ -42,6 +42,7 @@ export default class CustomMonthPicker extends Component {
 
   static propTypes = {
     onChange: PropTypes.func,
+    onBlur: PropTypes.func,
     monthValue: PropTypes.number,
     yearValue: PropTypes.number,
     invalid: PropTypes.bool,
@@ -58,6 +59,21 @@ export default class CustomMonthPicker extends Component {
 
     this.handleMonthChange = this.handleMonthChange.bind(this);
     this.handleYearChange = this.handleYearChange.bind(this);
+    this.storeMonthReference = this.storeMonthReference.bind(this);
+    this.storeYearReference = this.storeYearReference.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+  }
+
+  storeMonthReference(input) {
+    if (input !== null) {
+      this.monthInput = input;
+    }
+  }
+
+  storeYearReference(input) {
+    if (input !== null) {
+      this.yearInput = input;
+    }
   }
 
   handleMonthChange({ target: { value } }) {
@@ -76,6 +92,20 @@ export default class CustomMonthPicker extends Component {
       month: monthValue,
       year: parseInt(value, 10)
     });
+  }
+
+  handleBlur(event) {
+    const { onBlur } = this.props;
+
+    if (onBlur) {
+      setTimeout(() => {
+        const { activeElement } = document;
+        console.log(activeElement, this.monthInput, this.yearInput);
+        if (activeElement !== this.monthInput && activeElement !== this.yearInput) {
+          onBlur(event);
+        }
+      });
+    }
   }
 
   render() {
@@ -98,9 +128,11 @@ export default class CustomMonthPicker extends Component {
           invalid={invalid}
           placeholder="Month"
           inputProps={{
+            onBlur: this.handleBlur,
             onChange: this.handleMonthChange,
             value: month,
-            className: styles.dropdownInput
+            className: styles.dropdownInput,
+            ref: this.storeMonthReference
           }}
         />
         <Dropdown
@@ -109,9 +141,11 @@ export default class CustomMonthPicker extends Component {
           invalid={invalid}
           placeholder="Year"
           inputProps={{
+            onBlur: this.handleBlur,
             onChange: this.handleYearChange,
             value: year,
-            className: styles.dropdownInput
+            className: styles.dropdownInput,
+            ref: this.storeYearReference
           }}
         />
       </div>
