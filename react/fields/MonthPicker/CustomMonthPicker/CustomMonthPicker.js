@@ -100,7 +100,7 @@ export default class CustomMonthPicker extends Component {
     if (onBlur) {
       setTimeout(() => {
         const { activeElement } = document;
-        console.log(activeElement, this.monthInput, this.yearInput);
+
         if (activeElement !== this.monthInput && activeElement !== this.yearInput) {
           onBlur(event);
         }
