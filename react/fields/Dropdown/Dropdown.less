@@ -28,6 +28,10 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 
+  &::-ms-expand {
+    display: none;
+  }
+
   &:not([readonly]):not([disabled]):focus,
   .rootFocus & {
     outline: none;
@@ -53,6 +57,10 @@
   &:last-child {
     margin-bottom: (@grid-row-height * 3);
   }
+}
+
+.option {
+  color: @sk-charcoal;
 }
 
 .chevron {
