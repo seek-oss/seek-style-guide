@@ -64,7 +64,7 @@ describe('CustomMonthPicker', () => {
     const onChange = newValue => {
       value = newValue;
     };
-    renderToDom(<CustomMonthPicker onChange={onChange} monthValue={6} yearValue={2010} />);
+    renderToDom(<CustomMonthPicker onChange={onChange} value={{ month: 6, year: 2010 }} />);
     monthDropdown.value = '11';
     Simulate.change(monthDropdown);
     expect(value).to.deep.equal({
@@ -77,7 +77,7 @@ describe('CustomMonthPicker', () => {
     const onChange = newValue => {
       value = newValue;
     };
-    renderToDom(<CustomMonthPicker onChange={onChange} monthValue={6} yearValue={2010} />);
+    renderToDom(<CustomMonthPicker onChange={onChange} value={{ month: 6, year: 2010 }} />);
     yearDropdown.value = '1999';
     Simulate.change(yearDropdown);
     expect(value).to.deep.equal({

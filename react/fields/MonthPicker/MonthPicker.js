@@ -56,8 +56,10 @@ export default class MonthPicker extends Component {
     },
     message: PropTypes.string,
     messageProps: PropTypes.object,
-    monthValue: PropTypes.number,
-    yearValue: PropTypes.number,
+    value: PropTypes.shape({
+      month: PropTypes.number,
+      year: PropTypes.number
+    }),
     native: PropTypes.bool,
     onChange: PropTypes.func,
     onBlur: PropTypes.func
@@ -102,12 +104,11 @@ export default class MonthPicker extends Component {
   }
 
   renderInput() {
-    const { id, monthValue, yearValue, onChange, native, invalid, onBlur } = this.props;
+    const { id, value, onChange, native, invalid, onBlur } = this.props;
     const monthPickerProps = {
       className: styles.input,
       ...(id ? { id } : {}),
-      monthValue,
-      yearValue,
+      value,
       onChange,
       onBlur,
       invalid

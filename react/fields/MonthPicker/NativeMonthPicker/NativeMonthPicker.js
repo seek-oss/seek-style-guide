@@ -6,7 +6,7 @@ import pad from 'pad-left';
 
 import ChevronIcon from '../../../icons/ChevronIcon/ChevronIcon';
 
-const makeMonthString = (month, year) => {
+const makeMonthString = ({ month, year }) => {
   if (month && year) {
     return `${year}-${pad(month, 2, '0')}`;
   }
@@ -30,15 +30,18 @@ export default class NativeMonthPicker extends Component {
   static propTypes = {
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
-    monthValue: PropTypes.number,
-    yearValue: PropTypes.number,
+    value: PropTypes.shape({
+      month: PropTypes.number,
+      year: PropTypes.number
+    }),
     invalid: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string
   };
 
   static defaultProps = {
-    invalid: false
+    invalid: false,
+    value: {}
   };
 
   constructor() {
@@ -54,9 +57,9 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { monthValue, yearValue, className, invalid, id, onBlur } = this.props;
+    const { value, className, invalid, id, onBlur } = this.props;
 
-    const value = makeMonthString(monthValue, yearValue);
+    const inputValue = makeMonthString(value);
 
     const rootClasses = classnames({
       [styles.root]: true,
@@ -75,7 +78,7 @@ export default class NativeMonthPicker extends Component {
           {...(id ? { id } : {})}
           className={styles.input}
           type="month"
-          value={value}
+          value={inputValue}
           onChange={this.handleChange}
           onBlur={onBlur}
         />

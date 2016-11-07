@@ -59,7 +59,7 @@ describe('NativeMonthPicker', () => {
   });
 
   it('should convert monthValue & yearValue to generic month string', () => {
-    render(<NativeMonthPicker monthValue={1} yearValue={2016} />);
+    render(<NativeMonthPicker value={{ month: 1, year: 2016 }} />);
     expect(input.props.value).to.equal('2016-01');
   });
 
@@ -67,7 +67,7 @@ describe('NativeMonthPicker', () => {
     const onChange = newValue => {
       value = newValue;
     };
-    renderToDom(<NativeMonthPicker onChange={onChange} monthValue={6} yearValue={2010} />);
+    renderToDom(<NativeMonthPicker onChange={onChange} value={{ month: 6, year: 2010 }} />);
     input.value = '2012-11';
     Simulate.change(input);
     expect(value).to.deep.equal({

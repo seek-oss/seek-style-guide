@@ -43,15 +43,18 @@ export default class CustomMonthPicker extends Component {
   static propTypes = {
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
-    monthValue: PropTypes.number,
-    yearValue: PropTypes.number,
+    value: PropTypes.shape({
+      month: PropTypes.number,
+      year: PropTypes.number
+    }),
     invalid: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string
   };
 
   static defaultProps = {
-    invalid: false
+    invalid: false,
+    value: {}
   };
 
   constructor() {
@@ -77,42 +80,42 @@ export default class CustomMonthPicker extends Component {
   }
 
   handleMonthChange({ target: { value } }) {
-    const { onChange, yearValue } = this.props;
+    const { onChange, value: { year } } = this.props;
 
     onChange({
       month: parseInt(value, 10),
-      year: yearValue
+      year
     });
   }
 
   handleYearChange({ target: { value } }) {
-    const { onChange, monthValue } = this.props;
+    const { onChange, value: { month } } = this.props;
 
     onChange({
-      month: monthValue,
+      month,
       year: parseInt(value, 10)
     });
   }
 
-  handleBlur(event) {
-    const { onBlur } = this.props;
+  handleBlur() {
+    const { onBlur, value } = this.props;
 
     if (onBlur) {
       setTimeout(() => {
         const { activeElement } = document;
 
         if (activeElement !== this.monthInput && activeElement !== this.yearInput) {
-          onBlur(event);
+          onBlur(value);
         }
       });
     }
   }
 
   render() {
-    const { monthValue, yearValue, className, invalid, id } = this.props;
-
-    const month = monthValue ? `${monthValue}` : '';
-    const year = yearValue ? `${yearValue}` : '';
+    const { value, className, invalid, id } = this.props;
+    const { month, year } = value;
+    const monthValue = month ? `${month}` : '';
+    const yearValue = year ? `${year}` : '';
 
     const rootClasses = classnames({
       [className]: className,
@@ -130,7 +133,7 @@ export default class CustomMonthPicker extends Component {
           inputProps={{
             onBlur: this.handleBlur,
             onChange: this.handleMonthChange,
-            value: month,
+            value: monthValue,
             className: styles.dropdownInput,
             ref: this.storeMonthReference
           }}
@@ -143,7 +146,7 @@ export default class CustomMonthPicker extends Component {
           inputProps={{
             onBlur: this.handleBlur,
             onChange: this.handleYearChange,
-            value: year,
+            value: yearValue,
             className: styles.dropdownInput,
             ref: this.storeYearReference
           }}
