@@ -106,18 +106,11 @@ export default class Dropdown extends Component {
   constructor() {
     super();
 
-    this.storeInputReference = this.storeInputReference.bind(this);
     this.renderLabel = this.renderLabel.bind(this);
     this.renderSelect = this.renderSelect.bind(this);
     this.renderHelp = this.renderHelp.bind(this);
     this.renderMessage = this.renderMessage.bind(this);
     this.renderIcon = this.renderIcon.bind(this);
-  }
-
-  storeInputReference(input) {
-    if (input !== null) {
-      this.input = input;
-    }
   }
 
   renderLabel() {
@@ -148,8 +141,7 @@ export default class Dropdown extends Component {
     });
     const allInputProps = {
       ...combineClassNames(inputProps, inputStyles),
-      ...(id ? { id } : {}),
-      ref: this.storeInputReference
+      ...(id ? { id } : {})
     };
 
     return (
