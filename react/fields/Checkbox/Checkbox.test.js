@@ -54,13 +54,13 @@ describe('Checkbox', () => {
     expect(element.type.displayName).to.equal('Checkbox');
   });
 
-  it('should mark pass through id', () => {
+  it('should pass through id', () => {
     const id = 'test';
     renderToDom(<Checkbox id={id} />);
     expect(input.id).to.equal(id);
   });
 
-  it('should mark pass through className', () => {
+  it('should pass through className', () => {
     const className = 'test';
     renderToDom(<Checkbox className={className} />);
     expect(rootElement.classList.contains('test')).to.equal(true);
