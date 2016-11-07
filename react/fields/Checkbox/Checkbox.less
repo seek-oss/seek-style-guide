@@ -1,0 +1,45 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  display: inline-block;
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  .touchableText(@standard-type-scale);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.checkBox {
+  width: @grid-row-height * 3 - (@field-border-width * 2);
+  height: @grid-row-height * 3 - (@field-border-width * 2);
+  border: @field-border-width solid @sk-mid-gray-light;
+  border-radius: @field-border-radius;
+  margin-right: @field-gutter-width;
+  padding: @field-border-radius;
+  fill: @sk-pink;
+
+  .input:not([readonly]):not([disabled]):focus + .label &, .rootFocus & {
+    outline: none;
+    border-color: transparent;
+    .focus();
+  }
+}
+
+.checkMark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: @sk-pink;
+  opacity: 0;
+
+  .input:checked + .label & {
+    opacity: 1;
+  }
+}
