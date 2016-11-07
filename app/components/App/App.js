@@ -12,6 +12,7 @@ const titles = {
   '/autosuggest': 'autosuggest',
   '/textarea': 'textarea',
   '/dropdown': 'dropdown',
+  '/checkbox': 'checkbox',
   '/typography': 'typography'
 };
 

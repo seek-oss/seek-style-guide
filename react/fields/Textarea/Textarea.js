@@ -74,7 +74,7 @@ export default class Textarea extends Component {
       const { inputProps = {} } = props;
       const { value } = inputProps;
 
-      if (typeof props[propName] !== 'function') {
+      if (typeof props[propName] !== 'function' && typeof props[propName] !== 'undefined') {
         return new Error(`Invalid prop \`${propName}\` of type \`${typeof props[propName]}\` supplied to \`${componentName}\`, expected \`function\`.`);
       }
 
