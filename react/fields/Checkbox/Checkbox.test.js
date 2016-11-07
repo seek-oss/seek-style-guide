@@ -90,7 +90,7 @@ describe('Checkbox', () => {
       expect(handleChange).to.be.calledWith(eventMatcher);
     });
 
-    it('should mark input as checked', () => {
+    it('should pass through className', () => {
       renderToDom(<Checkbox id='test' inputProps={{ checked: true }} />);
       expect(input.checked).to.equal(true);
     });

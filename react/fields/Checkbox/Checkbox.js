@@ -20,10 +20,17 @@ export default class Checkbox extends Component {
     label: PropTypes.string.isRequired,
     className: PropTypes.string,
     inputProps: PropTypes.shape({
-      onChange: PropTypes.func,
-      checked: PropTypes.bool
+      onChange: PropTypes.func.isRequired,
+      checked: PropTypes.bool.isRequired
     })
   }
+
+  static defaultProps = {
+    className: '',
+    inputProps: {
+      checked: false
+    }
+  };
 
   renderLabel() {
     const { label, id } = this.props;
