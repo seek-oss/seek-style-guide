@@ -92,6 +92,16 @@ const getLocalIdentName = () => isProduction() ?
   '[hash:base64:7]' :
   '__STYLE_GUIDE__[name]__[local]___[hash:base64:7]';
 
+const getSvgoLoader = () => {
+  const svgoConfig = JSON.stringify({
+    plugins: [
+      { addAttributesToSVGElement: { attribute: 'focusable="false"' } }
+    ]
+  });
+
+  return `${require.resolve('svgo-loader')}?${svgoConfig}`;
+};
+
 const getCommonLoaders = () => ([
   {
     test: /\.js$/,
@@ -120,7 +130,7 @@ const getCommonLoaders = () => ([
     include: styleGuidePaths,
     loaders: [
       require.resolve('raw-loader'),
-      require.resolve('svgo-loader')
+      getSvgoLoader()
     ]
   }
 ]);
