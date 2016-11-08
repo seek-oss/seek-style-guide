@@ -3,14 +3,14 @@ import styles from './SeekApp.less';
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import Helmet from 'react-helmet';
-import ScreenReaderOnly from 'Accessibility/ScreenReaderOnly';
+import ScreenReaderOnly from '../Accessibility/ScreenReaderOnly';
 
 const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
 const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';
 
 const getLocalisedPageTitle = locale => locale === 'AU' ? defaultPageTitleAU : defaultPageTitleNZ;
 
-export default function SeekApp({ fullScreen, children, meta = [], link = [], title, locale = 'AU' }) {
+export default function SeekApp({ fullScreen, children, meta, link, title, locale }) {
   const className = classnames({
     [styles.root]: true,
     [styles.fullScreen]: fullScreen
@@ -45,5 +45,8 @@ SeekApp.propTypes = {
 };
 
 SeekApp.defaultProps = {
-  fullScreen: false
+  fullScreen: false,
+  meta: [],
+  link: [],
+  locale: 'AU'
 };

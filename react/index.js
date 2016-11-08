@@ -22,6 +22,7 @@ import ClearField from './fields/TextField/ClearField/ClearField';
 import Autosuggest from './fields/Autosuggest/Autosuggest';
 import Textarea from './fields/Textarea/Textarea';
 import Checkbox from './fields/Checkbox/Checkbox';
+import ScreenReaderOnly from './Accessibility/ScreenReaderOnly';
 
 export {
   SeekApp,
@@ -47,5 +48,7 @@ export {
   ClearField,
   Autosuggest,
   Textarea,
-  Checkbox
+  Checkbox,
+  ScreenReaderOnly
 };
+
