@@ -52,6 +52,11 @@ describe('Textarea', () => {
     expect(element.type.displayName).to.equal('Textarea');
   });
 
+  it('should render without errors', () => {
+    render(<Textarea />);
+    expect(errors.length).to.equal(0);
+  });
+
   describe('id', () => {
     it('should error if `id` is not a string', () => {
       render(<Textarea id={true} />);

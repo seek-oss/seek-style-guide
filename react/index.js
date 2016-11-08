@@ -22,6 +22,7 @@ import ClearField from './fields/TextField/ClearField/ClearField';
 import Autosuggest from './fields/Autosuggest/Autosuggest';
 import Textarea from './fields/Textarea/Textarea';
 import MonthPicker from './fields/MonthPicker/MonthPicker';
+import Checkbox from './fields/Checkbox/Checkbox';
 
 export {
   SeekApp,
@@ -47,5 +48,6 @@ export {
   ClearField,
   Autosuggest,
   Textarea,
-  MonthPicker
+  MonthPicker,
+  Checkbox
 };

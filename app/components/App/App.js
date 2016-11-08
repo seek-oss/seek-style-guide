@@ -13,6 +13,7 @@ const titles = {
   '/textarea': 'textarea',
   '/monthpicker': 'month picker',
   '/dropdown': 'dropdown',
+  '/checkbox': 'checkbox',
   '/typography': 'typography'
 };
 
