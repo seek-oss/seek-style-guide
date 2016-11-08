@@ -1,9 +1,7 @@
 import styles from './MonthPicker.less';
-import monthPickerStyles from 'seek-style-guide/react/fields/MonthPicker/MonthPicker.less';
 
 import React, { Component } from 'react';
 import Baseline from 'react-baseline';
-import classnames from 'classnames';
 
 import GridContainer from 'GridContainer/GridContainer';
 import SandboxPreview from 'SandboxPreview/SandboxPreview';
@@ -75,15 +73,12 @@ export default class MonthPickerDemo extends Component {
     });
   }
 
-  handleChange({ month, year }) {
-    this.setState({
-      monthValue: month,
-      yearValue: year
-    });
+  handleChange(value) {
+    this.setState({ value });
   }
 
   render() {
-    const { invalid, baseline, monthValue, yearValue, native } = this.state;
+    const { invalid, baseline, value, native } = this.state;
     const spec = getSpec({
       default: true,
       invalid
@@ -93,11 +88,9 @@ export default class MonthPickerDemo extends Component {
         id="startDate"
         className={styles.input}
         invalid={invalid}
-        label="Start Date"
         message={invalid ? 'Something went wrong' : ''}
         native={native}
-        monthValue={monthValue}
-        yearValue={yearValue}
+        value={value}
         onChange={this.handleChange}
       />
     );

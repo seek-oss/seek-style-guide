@@ -97,17 +97,27 @@ export default class CustomMonthPicker extends Component {
     });
   }
 
-  handleBlur() {
+  onBlurIfNotFocussed(active) {
     const { onBlur, value } = this.props;
 
-    if (onBlur) {
-      setTimeout(() => {
-        const { activeElement } = document;
+    if (active !== this.monthInput && active !== this.yearInput) {
+      onBlur(value);
+    }
+  }
 
-        if (activeElement !== this.monthInput && activeElement !== this.yearInput) {
-          onBlur(value);
-        }
-      });
+  handleBlur({ relatedTarget }) {
+    const { onBlur } = this.props;
+
+    if (onBlur) {
+      if (relatedTarget !== null) {
+        this.onBlurIfNotFocussed(relatedTarget);
+      } else {
+        // IE 9 - 11 Hack -- relatedTarget not present in blur event
+        setTimeout(() => {
+          const { activeElement } = document;
+          this.onBlurIfNotFocussed(activeElement);
+        });
+      }
     }
   }
 

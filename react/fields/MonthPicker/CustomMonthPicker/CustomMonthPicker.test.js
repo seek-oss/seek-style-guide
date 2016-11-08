@@ -20,6 +20,7 @@ describe('CustomMonthPicker', () => {
 
   beforeEach(() => {
     errors = [];
+    value = {};
 
     sinon.stub(console, 'error', errorMessage => {
       errors.push(errorMessage);
