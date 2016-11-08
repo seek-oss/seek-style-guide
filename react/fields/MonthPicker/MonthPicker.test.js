@@ -156,4 +156,20 @@ describe('MonthPicker', () => {
       expect(messageIcon).not.to.equal(null);
     });
   });
+
+  describe('onChange', () => {
+    it('should pass onChange prop through to input', () => {
+      const onChange = () => {};
+      render(<MonthPicker onChange={onChange} />);
+      expect(input.props.onChange).to.equal(onChange);
+    });
+  });
+
+  describe('onBlur', () => {
+    it('should pass onBlur prop through to input', () => {
+      const onBlur = () => {};
+      render(<MonthPicker onBlur={onBlur} />);
+      expect(input.props.onBlur).to.equal(onBlur);
+    });
+  });
 });

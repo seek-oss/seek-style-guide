@@ -75,4 +75,10 @@ describe('NativeMonthPicker', () => {
       year: 2012
     });
   });
+
+  it('should pass onBlur prop through to input', () => {
+    const onBlur = () => {};
+    render(<NativeMonthPicker onBlur={onBlur} />);
+    expect(input.props.onBlur).to.equal(onBlur);
+  });
 });

@@ -65,6 +65,7 @@ export default class CustomMonthPicker extends Component {
     this.storeMonthReference = this.storeMonthReference.bind(this);
     this.storeYearReference = this.storeYearReference.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
+    this.blurIfNotFocussed = this.blurIfNotFocussed.bind(this);
   }
 
   storeMonthReference(input) {
@@ -97,7 +98,7 @@ export default class CustomMonthPicker extends Component {
     });
   }
 
-  onBlurIfNotFocussed(active) {
+  blurIfNotFocussed(active) {
     const { onBlur, value } = this.props;
 
     if (active !== this.monthInput && active !== this.yearInput) {
@@ -110,12 +111,12 @@ export default class CustomMonthPicker extends Component {
 
     if (onBlur) {
       if (relatedTarget !== null) {
-        this.onBlurIfNotFocussed(relatedTarget);
+        this.blurIfNotFocussed(relatedTarget);
       } else {
-        // IE 9 - 11 Hack -- relatedTarget not present in blur event
+        // IE 9 - 11 Hack -- relatedTarget is null in blur event
         setTimeout(() => {
           const { activeElement } = document;
-          this.onBlurIfNotFocussed(activeElement);
+          this.blurIfNotFocussed(activeElement);
         });
       }
     }
