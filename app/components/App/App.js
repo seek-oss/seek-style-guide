@@ -19,7 +19,7 @@ const titles = {
 
 export default function App({ routes, children }) {
   return (
-    <SeekApp fullScreen={true}>
+    <SeekApp fullScreen={true} title="SEEK Styleguide">
       <Header title={titles[routes[routes.length - 1].path || '/']} />
       <main>
         {children}

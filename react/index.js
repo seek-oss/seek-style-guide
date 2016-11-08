@@ -23,6 +23,7 @@ import Autosuggest from './fields/Autosuggest/Autosuggest';
 import Textarea from './fields/Textarea/Textarea';
 import MonthPicker from './fields/MonthPicker/MonthPicker';
 import Checkbox from './fields/Checkbox/Checkbox';
+import ScreenReaderOnly from './Accessibility/ScreenReaderOnly';
 
 export {
   SeekApp,
@@ -49,5 +50,6 @@ export {
   Autosuggest,
   Textarea,
   MonthPicker,
-  Checkbox
+  Checkbox,
+  ScreenReaderOnly
 };
