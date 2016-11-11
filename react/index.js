@@ -1,54 +1,33 @@
-import SeekApp from './SeekApp/SeekApp';
-import ChevronIcon from './icons/ChevronIcon/ChevronIcon';
-import DownRightArrowIcon from './icons/DownRightArrowIcon/DownRightArrowIcon';
-import ClearIcon from './icons/ClearIcon/ClearIcon';
-import CloseIcon from './icons/CloseIcon/CloseIcon';
-import HeartIcon from './icons/HeartIcon/HeartIcon';
-import ProfileIcon from './icons/ProfileIcon/ProfileIcon';
-import SearchIcon from './icons/SearchIcon/SearchIcon';
-import StarIcon from './icons/StarIcon/StarIcon';
-import ThumbsUpIcon from './icons/ThumbsUpIcon/ThumbsUpIcon';
-import ErrorIcon from './icons/ErrorIcon/ErrorIcon';
-import TickIcon from './icons/TickIcon/TickIcon';
-import HelpIcon from './icons/HelpIcon/HelpIcon';
-import Button from './Button/Button';
-import TextLink from './TextLink/TextLink';
-import PlusIcon from './icons/PlusIcon/PlusIcon';
-import DeleteIcon from './icons/DeleteIcon/DeleteIcon';
-import TextField from './fields/TextField/TextField';
-import EmailField from './fields/EmailField/EmailField';
-import Logo from './Logo/Logo';
-import ClearField from './fields/TextField/ClearField/ClearField';
-import Autosuggest from './fields/Autosuggest/Autosuggest';
-import Textarea from './fields/Textarea/Textarea';
-import Checkbox from './fields/Checkbox/Checkbox';
-import ScreenReaderOnly from './Accessibility/ScreenReaderOnly';
+// Components
+export { default as SeekApp } from './SeekApp/SeekApp';
+export { default as TextLink } from './TextLink/TextLink';
+export { default as Button } from './Button/Button';
+export { default as Logo } from './Logo/Logo';
 
-export {
-  SeekApp,
-  ChevronIcon,
-  DownRightArrowIcon,
-  ClearIcon,
-  CloseIcon,
-  HeartIcon,
-  ProfileIcon,
-  SearchIcon,
-  StarIcon,
-  ThumbsUpIcon,
-  ErrorIcon,
-  TickIcon,
-  HelpIcon,
-  Button,
-  TextLink,
-  PlusIcon,
-  DeleteIcon,
-  TextField,
-  EmailField,
-  Logo,
-  ClearField,
-  Autosuggest,
-  Textarea,
-  Checkbox,
-  ScreenReaderOnly
-};
+// Icons
+export { default as ChevronIcon } from './icons/ChevronIcon/ChevronIcon';
+export { default as DownRightArrowIcon } from './icons/DownRightArrowIcon/DownRightArrowIcon';
+export { default as ClearIcon } from './icons/ClearIcon/ClearIcon';
+export { default as CloseIcon } from './icons/CloseIcon/CloseIcon';
+export { default as HeartIcon } from './icons/HeartIcon/HeartIcon';
+export { default as ProfileIcon } from './icons/ProfileIcon/ProfileIcon';
+export { default as SearchIcon } from './icons/SearchIcon/SearchIcon';
+export { default as StarIcon } from './icons/StarIcon/StarIcon';
+export { default as ThumbsUpIcon } from './icons/ThumbsUpIcon/ThumbsUpIcon';
+export { default as ErrorIcon } from './icons/ErrorIcon/ErrorIcon';
+export { default as TickIcon } from './icons/TickIcon/TickIcon';
+export { default as HelpIcon } from './icons/HelpIcon/HelpIcon';
+export { default as PlusIcon } from './icons/PlusIcon/PlusIcon';
+export { default as DeleteIcon } from './icons/DeleteIcon/DeleteIcon';
+
+// Fields
+export { default as TextField } from './fields/TextField/TextField';
+export { default as EmailField } from './fields/EmailField/EmailField';
+export { default as ClearField } from './fields/TextField/ClearField/ClearField';
+export { default as Autosuggest } from './fields/Autosuggest/Autosuggest';
+export { default as Textarea } from './fields/Textarea/Textarea';
+export { default as Checkbox } from './fields/Checkbox/Checkbox';
+
+// Accessibility
+export { default as ScreenReaderOnly } from './Accessibility/ScreenReaderOnly';
 
