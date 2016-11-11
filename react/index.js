@@ -30,4 +30,5 @@ export { default as Checkbox } from './fields/Checkbox/Checkbox';
 
 // Accessibility
 export { default as ScreenReaderOnly } from './Accessibility/ScreenReaderOnly';
-
+export { default as ScreenReaderSkipLink } from './Accessibility/ScreenReaderSkipLink';
+export { default as ScreenReaderTarget } from './Accessibility/ScreenReaderSkipTarget';
