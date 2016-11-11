@@ -84,19 +84,23 @@ export default class CustomMonthPicker extends Component {
   handleMonthChange({ target: { value } }) {
     const { onChange, value: { year } } = this.props;
 
-    onChange({
-      month: parseInt(value, 10),
-      year
-    });
+    if (typeof onChange === 'function') {
+      onChange({
+        month: parseInt(value, 10),
+        year
+      });
+    }
   }
 
   handleYearChange({ target: { value } }) {
     const { onChange, value: { month } } = this.props;
 
-    onChange({
-      month,
-      year: parseInt(value, 10)
-    });
+    if (typeof onChange === 'function') {
+      onChange({
+        month,
+        year: parseInt(value, 10)
+      });
+    }
   }
 
   blurIfNotFocussed(active) {
@@ -110,7 +114,7 @@ export default class CustomMonthPicker extends Component {
   handleBlur({ relatedTarget }) {
     const { onBlur } = this.props;
 
-    if (onBlur) {
+    if (typeof onBlur === 'function') {
       if (relatedTarget !== null) {
         this.blurIfNotFocussed(relatedTarget);
       } else {

@@ -54,7 +54,9 @@ export default class NativeMonthPicker extends Component {
   handleChange({ target: { value } }) {
     const { onChange } = this.props;
 
-    onChange(getValueFromString(value));
+    if (typeof onChange === 'function') {
+      onChange(getValueFromString(value));
+    }
   }
 
   render() {
