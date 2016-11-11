@@ -172,4 +172,12 @@ describe('MonthPicker', () => {
       expect(input.props.onBlur).to.equal(onBlur);
     });
   });
+
+  describe('value', () => {
+    it('should pass value prop through to input', () => {
+      const value = { month: 1, year: 2000 };
+      render(<MonthPicker value={value} />);
+      expect(input.props.value).to.equal(value);
+    });
+  });
 });

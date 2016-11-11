@@ -41,7 +41,8 @@ export default class NativeMonthPicker extends Component {
 
   static defaultProps = {
     invalid: false,
-    value: {}
+    value: {},
+    className: ''
   };
 
   constructor() {
@@ -63,8 +64,8 @@ export default class NativeMonthPicker extends Component {
 
     const rootClasses = classnames({
       [styles.root]: true,
-      [className]: className,
-      [styles.invalid]: invalid
+      [styles.invalid]: invalid,
+      [className]: className
     });
 
     return (

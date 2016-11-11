@@ -11,7 +11,7 @@ const getYearOptions = () => {
   const minYear = maxYear - 100;
 
   return range(maxYear, minYear - 1).map(value => {
-    const stringValue = `${value}`;
+    const stringValue = String(value);
 
     return {
       value: stringValue,
@@ -54,7 +54,8 @@ export default class CustomMonthPicker extends Component {
 
   static defaultProps = {
     invalid: false,
-    value: {}
+    value: {},
+    className: ''
   };
 
   constructor() {
@@ -125,12 +126,12 @@ export default class CustomMonthPicker extends Component {
   render() {
     const { value, className, invalid, id } = this.props;
     const { month, year } = value;
-    const monthValue = month ? `${month}` : '';
-    const yearValue = year ? `${year}` : '';
+    const monthValue = String(month || '');
+    const yearValue = String(year || '');
 
     const rootClasses = classnames({
-      [className]: className,
-      [styles.root]: true
+      [styles.root]: true,
+      [className]: className
     });
 
     return (
