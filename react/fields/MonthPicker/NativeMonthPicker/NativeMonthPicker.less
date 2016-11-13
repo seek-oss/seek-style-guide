@@ -1,0 +1,59 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  position: relative;
+}
+
+.input {
+  .touchableText();
+  display: block;
+  position: relative;
+  width: 100%;
+  height: @grid-row-height * 5;
+  padding: 0 @field-gutter-width;
+  background: @sk-white;
+  border: @field-border-width solid @sk-mid-gray-light;
+  border-radius: @field-border-radius;
+  color: @sk-charcoal;
+  background-color: @sk-white;
+  appearance: none;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator,
+  &::-webkit-clear-button {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  .invalid & {
+    border-color: transparent;
+    box-shadow: 0 0 0 @field-border-width @sk-pink;
+  }
+
+  &:not([readonly]):not([disabled]):focus {
+    outline: none;
+    border-color: transparent;
+    .focus();
+  }
+}
+
+.chevron {
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  color: @sk-mid-gray;
+  height: (@interaction-type-row-span * @grid-row-height);
+  border: 0;
+  padding: 0 @field-gutter-width;
+  background-color: transparent;
+  color: @sk-mid-gray;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.chevronSvg {
+  height: 16px;
+  width: 16px;
+}
