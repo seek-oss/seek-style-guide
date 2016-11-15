@@ -25,7 +25,8 @@ import {
   ProfileIcon,
   SearchIcon,
   ThumbsUpIcon,
-  TickIcon
+  TickIcon,
+  MailIcon
 } from 'seek-style-guide/react';
 
 const icons = [
@@ -46,7 +47,8 @@ const icons = [
   { icon: HeartIcon, name: 'Heart' },
   { icon: HeartIcon, name: 'Filled Heart', props: { filled: true } },
   { icon: StarIcon, name: 'Star' },
-  { icon: StarIcon, name: 'Filled Star', props: { filled: true } }
+  { icon: StarIcon, name: 'Filled Star', props: { filled: true } },
+  { icon: MailIcon, name: 'Mail' }
 ];
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
