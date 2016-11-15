@@ -28,7 +28,9 @@ export { default as ClearField } from './fields/TextField/ClearField/ClearField'
 export { default as Autosuggest } from './fields/Autosuggest/Autosuggest';
 export { default as Textarea } from './fields/Textarea/Textarea';
 export { default as Checkbox } from './fields/Checkbox/Checkbox';
+export { default as MonthPicker } from './fields/MonthPicker/MonthPicker';
 
 // Accessibility
 export { default as ScreenReaderOnly } from './Accessibility/ScreenReaderOnly';
-
+export { default as ScreenReaderSkipLink } from './Accessibility/ScreenReaderSkipLink';
+export { default as ScreenReaderTarget } from './Accessibility/ScreenReaderSkipTarget';

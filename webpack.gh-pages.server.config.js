@@ -24,6 +24,7 @@ const routes = [
   '/textarea',
   '/dropdown',
   '/checkbox',
+  '/monthpicker',
   '/typography'
 ];
 

@@ -1,0 +1,21 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  .link();
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0 @grid-gutter-width;
+
+  &:focus {
+    .rawText();
+    line-height: (@grid-row-height * 3);
+    height: (@grid-row-height * 3);
+    left: 0;
+    width: auto;
+    z-index: 4;
+  }
+}
