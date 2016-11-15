@@ -48,7 +48,7 @@ const icons = [
   { icon: HeartIcon, name: 'Filled Heart', props: { filled: true } },
   { icon: StarIcon, name: 'Star' },
   { icon: StarIcon, name: 'Filled Star', props: { filled: true } },
-  { icon: MailIcon, name: 'Mail', props: { filled: true } }
+  { icon: MailIcon, name: 'Mail' }
 ];
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
