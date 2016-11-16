@@ -33,4 +33,4 @@ export { default as MonthPicker } from './fields/MonthPicker/MonthPicker';
 // Accessibility
 export { default as ScreenReaderOnly } from './Accessibility/ScreenReaderOnly';
 export { default as ScreenReaderSkipLink } from './Accessibility/ScreenReaderSkipLink';
-export { default as ScreenReaderTarget } from './Accessibility/ScreenReaderSkipTarget';
+export { default as ScreenReaderSkipTarget } from './Accessibility/ScreenReaderSkipTarget';
