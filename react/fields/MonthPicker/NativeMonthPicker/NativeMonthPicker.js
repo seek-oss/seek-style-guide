@@ -49,6 +49,7 @@ export default class NativeMonthPicker extends Component {
     super();
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   handleChange({ target: { value } }) {
@@ -56,6 +57,14 @@ export default class NativeMonthPicker extends Component {
 
     if (typeof onChange === 'function') {
       onChange(getValueFromString(value));
+    }
+  }
+
+  handleBlur({ target: { value } }) {
+    const { onBlur } = this.props;
+
+    if (typeof onBlur === 'function') {
+      onBlur(getValueFromString(value));
     }
   }
 
@@ -83,7 +92,7 @@ export default class NativeMonthPicker extends Component {
           type="month"
           value={inputValue}
           onChange={this.handleChange}
-          onBlur={onBlur}
+          onBlur={this.handleBlur}
         />
       </div>
     );

@@ -76,9 +76,16 @@ describe('NativeMonthPicker', () => {
     });
   });
 
-  it('should pass onBlur prop through to input', () => {
-    const onBlur = () => {};
-    render(<NativeMonthPicker onBlur={onBlur} />);
-    expect(input.props.onBlur).to.equal(onBlur);
+  it('should send correct month year format in onBlur handler', () => {
+    const onBlur = newValue => {
+      value = newValue;
+    };
+    renderToDom(<NativeMonthPicker onBlur={onBlur} value={{ month: 6, year: 2010 }} />);
+    input.value = '2012-11';
+    Simulate.blur(input);
+    expect(value).to.deep.equal({
+      month: 11,
+      year: 2012
+    });
   });
 });
