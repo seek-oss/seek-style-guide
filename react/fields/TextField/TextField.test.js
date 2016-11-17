@@ -9,7 +9,7 @@ import {
   findRenderedDOMComponentWithClass,
   scryRenderedDOMComponentsWithClass
 } from 'react-addons-test-utils';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
+import SyntheticEvent from 'react-dom/lib/SyntheticEvent';
 import { findAllWithClass } from 'react-shallow-testutils';
 import TextField from './TextField';
 

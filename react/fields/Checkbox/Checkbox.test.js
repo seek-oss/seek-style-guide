@@ -9,7 +9,7 @@ import {
   scryRenderedDOMComponentsWithClass,
   findRenderedDOMComponentWithClass
 } from 'react-addons-test-utils';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
+import SyntheticEvent from 'react-dom/lib/SyntheticEvent';
 import { findAllWithClass } from 'react-shallow-testutils';
 import Checkbox from './Checkbox';
 
