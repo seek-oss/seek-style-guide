@@ -101,20 +101,31 @@ export default class DropDownDemo extends Component {
       focus,
       invalid
     });
+
     const options = [
       {
-        value: '1',
-        label: 'Developer'
+        label: 'Major Cities',
+        value: [
+          {
+            label: 'Melbourne',
+            value: '3004'
+          },
+          {
+            label: 'Sydney',
+            value: '3002'
+          }
+        ]
       },
       {
-        value: '2',
-        label: 'Tester'
+        label: 'Balarat',
+        value: '3005'
       },
       {
-        value: '3',
-        label: 'Really really long job title that is not gonna fit'
+        label: 'Really really long job title that is not gonna fit',
+        value: '3'
       }
     ];
+
     const dropdown = (
       <SeekDropDown
         id="jobTitles"
