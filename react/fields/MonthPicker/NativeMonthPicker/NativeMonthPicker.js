@@ -69,7 +69,7 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, invalid, id, onBlur } = this.props;
+    const { value, className, invalid, id } = this.props;
 
     const inputValue = makeMonthString(value);
 
