@@ -29,6 +29,7 @@ export { default as Autosuggest } from './fields/Autosuggest/Autosuggest';
 export { default as Textarea } from './fields/Textarea/Textarea';
 export { default as Checkbox } from './fields/Checkbox/Checkbox';
 export { default as MonthPicker } from './fields/MonthPicker/MonthPicker';
+export { default as Dropdown } from './fields/Dropdown/Dropdown';
 
 // Accessibility
 export { default as ScreenReaderOnly } from './Accessibility/ScreenReaderOnly';

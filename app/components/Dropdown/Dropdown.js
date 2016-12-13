@@ -104,6 +104,10 @@ export default class DropDownDemo extends Component {
 
     const options = [
       {
+        label: 'Really really long job title that is not gonna fit',
+        value: '3'
+      },
+      {
         label: 'Major Cities',
         value: [
           {
@@ -119,10 +123,6 @@ export default class DropDownDemo extends Component {
       {
         label: 'Balarat',
         value: '3005'
-      },
-      {
-        label: 'Really really long job title that is not gonna fit',
-        value: '3'
       }
     ];
 
