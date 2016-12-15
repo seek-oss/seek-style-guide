@@ -27,7 +27,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, label, input, help, message, messageIcon, placeholder, optionGroup, childOptions, errors;
+  let element, dropdown, label, input, help, message, messageIcon, placeholder, optionGroup, childOptions, errors, option;
 
   beforeEach(() => {
     errors = [];
@@ -52,6 +52,7 @@ describe('Dropdown', () => {
     placeholder = findAllWithType(dropdown, 'option')[0] || null;
     optionGroup = findAllWithType(dropdown, 'optgroup')[0] || null;
     childOptions = findAllWithType(optionGroup, 'option') || null;
+    option = findAllWithType(dropdown, 'option')[1] || null;
   }
 
   function helpText() {
@@ -79,34 +80,28 @@ describe('Dropdown', () => {
   });
 
   describe('options', () => {
-    it('should error if `options.value` is an empty string', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={[{ value: '', label: '' }]} />);
-      expect(errors[0]).to.match(/`options\[0\].value` can\'t be an empty string/);
-    });
-
-    it('should error if `options.label` is not a string', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={[{ value: '2', label: 2 }]} />);
-      expect(errors[0]).to.match(/Invalid prop `options\[0\].label` of type `number` supplied to `Dropdown`, expected `string`/);
+    const opt = [{ label: 'suburbs', value: '3130' }];
+    it('should render options correctly', () => {
+      render(<Dropdown inputProps={{ value: '' }} options={opt} />);
+      expect(option.props.value).to.equal('3130');
     });
   });
 
   describe('Option Group', () => {
-    const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
-    it('should render optgroup correctly', () => {
+    before(() => {
+      const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
       render(<Dropdown inputProps={{ value: '' }} options={opts} />);
+    });
+    it('should render optgroup correctly', () => {
       expect(optionGroup.props.label).to.equal('suburbs');
     });
     it('should render optgroup children correctly', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={opts} />);
       expect(optionGroup.props.children.length).to.equal(2);
     });
     it('should render 1st optgroup child value correctly', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={opts} />);
-      console.log(childOptions);
       expect(childOptions[0].props.children).to.equal('truganina');
     });
     it('should render 2nd optgroup child value correctly', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={opts} />);
       expect(childOptions[1].props.children).to.equal('wl');
     });
   });

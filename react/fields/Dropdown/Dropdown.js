@@ -74,17 +74,18 @@ export default class Dropdown extends Component {
     helpProps: PropTypes.object,
     message: PropTypes.string,
     messageProps: PropTypes.object,
-    options: PropTypes.arrayOf((propValue, key, componentName) => {
-      const { value, label } = propValue[key];
-
-      if (value === '') {
-        return new Error(`\`options[${key}].value\` can't be an empty string.`);
-      }
-
-      if (typeof label !== 'string') {
-        return new Error(`Invalid prop \`options[${key}].label\` of type \`${typeof label}\` supplied to \`${componentName}\`, expected \`string\`.`);
-      }
-    }),
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.oneOfType([
+          PropTypes.arrayOf(PropTypes.shape({
+            value: PropTypes.string,
+            label: PropTypes.string
+          })),
+          PropTypes.string
+        ]).isRequired,
+        label: PropTypes.string
+      })
+    ),
     placeholder: PropTypes.string
   };
 
