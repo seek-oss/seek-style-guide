@@ -121,7 +121,7 @@ export default class DropDownDemo extends Component {
         ]
       },
       {
-        label: 'Balarat',
+        label: 'Ballarat',
         value: '3005'
       }
     ];
