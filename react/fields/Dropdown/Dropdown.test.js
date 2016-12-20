@@ -27,7 +27,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, label, input, help, message, messageIcon, placeholder, errors;
+  let element, dropdown, label, input, help, message, messageIcon, placeholder, optionGroup, childOptions, errors, option;
 
   beforeEach(() => {
     errors = [];
@@ -50,6 +50,9 @@ describe('Dropdown', () => {
     message = findAllWithClass(dropdown, 'message')[0] || null;
     messageIcon = findAllWithClass(dropdown, 'messageIcon')[0] || null;
     placeholder = findAllWithType(dropdown, 'option')[0] || null;
+    optionGroup = findAllWithType(dropdown, 'optgroup')[0] || null;
+    childOptions = findAllWithType(optionGroup, 'option') || null;
+    option = findAllWithType(dropdown, 'option')[1] || null;
   }
 
   function helpText() {
@@ -77,19 +80,29 @@ describe('Dropdown', () => {
   });
 
   describe('options', () => {
-    it('should error if `options.value` is not a string', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={[{ value: 2, label: '' }]} />);
-      expect(errors[0]).to.match(/Invalid prop `options\[0\].value` of type `number` supplied to `Dropdown`, expected `string`/);
+    const opt = [{ label: 'suburbs', value: '3130' }];
+    it('should render options correctly', () => {
+      render(<Dropdown inputProps={{ value: '' }} options={opt} />);
+      expect(option.props.value).to.equal('3130');
     });
+  });
 
-    it('should error if `options.value` is an empty string', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={[{ value: '', label: '' }]} />);
-      expect(errors[0]).to.match(/`options\[0\].value` can\'t be an empty string/);
+  describe('Option Group', () => {
+    before(() => {
+      const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
+      render(<Dropdown inputProps={{ value: '' }} options={opts} />);
     });
-
-    it('should error if `options.label` is not a string', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={[{ value: '2', label: 2 }]} />);
-      expect(errors[0]).to.match(/Invalid prop `options\[0\].label` of type `number` supplied to `Dropdown`, expected `string`/);
+    it('should render optgroup correctly', () => {
+      expect(optionGroup.props.label).to.equal('suburbs');
+    });
+    it('should render optgroup children correctly', () => {
+      expect(optionGroup.props.children.length).to.equal(2);
+    });
+    it('should render 1st optgroup child value correctly', () => {
+      expect(childOptions[0].props.children).to.equal('truganina');
+    });
+    it('should render 2nd optgroup child value correctly', () => {
+      expect(childOptions[1].props.children).to.equal('wl');
     });
   });
 

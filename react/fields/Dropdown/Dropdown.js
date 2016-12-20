@@ -74,21 +74,18 @@ export default class Dropdown extends Component {
     helpProps: PropTypes.object,
     message: PropTypes.string,
     messageProps: PropTypes.object,
-    options: PropTypes.arrayOf((propValue, key, componentName) => {
-      const { value, label } = propValue[key];
-
-      if (typeof value !== 'string') {
-        return new Error(`Invalid prop \`options[${key}].value\` of type \`${typeof value}\` supplied to \`${componentName}\`, expected \`string\`.`);
-      }
-
-      if (value === '') {
-        return new Error(`\`options[${key}].value\` can't be an empty string.`);
-      }
-
-      if (typeof label !== 'string') {
-        return new Error(`Invalid prop \`options[${key}].label\` of type \`${typeof label}\` supplied to \`${componentName}\`, expected \`string\`.`);
-      }
-    }),
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.oneOfType([
+          PropTypes.arrayOf(PropTypes.shape({
+            value: PropTypes.string,
+            label: PropTypes.string
+          })),
+          PropTypes.string
+        ]).isRequired,
+        label: PropTypes.string
+      })
+    ),
     placeholder: PropTypes.string
   };
 
@@ -133,6 +130,14 @@ export default class Dropdown extends Component {
     );
   }
 
+  renderOption({ value, label }) {
+    return (<option
+      value={value}
+      key={value}
+      className={styles.option}>
+      { label }
+    </option>);
+  }
   renderSelect() {
     const { inputProps, id, options, placeholder } = this.props;
     const inputStyles = classnames({
@@ -152,14 +157,12 @@ export default class Dropdown extends Component {
           { placeholder }
         </option>
         {
-          options.map(({ value, label }) => (
-            <option
-              value={value}
-              key={value}
-              className={styles.option}>
-              { label }
-            </option>
-          ))
+          options.map(({ value, label }) => {
+            if (Array.isArray(value)) {
+              return (<optgroup value="" label={label} key={label}>{value.map(this.renderOption)}</optgroup>);
+            }
+            return this.renderOption({ value, label });
+          })
         }
       </select>
     );

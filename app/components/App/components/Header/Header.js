@@ -25,6 +25,7 @@ export default function Header({ title }) {
           <Link className={styles.link} activeClassName={styles.active} to="monthpicker">Month picker</Link>
           <Link className={styles.link} activeClassName={styles.active} to="checkbox">Checkbox</Link>
           <Link className={styles.link} activeClassName={styles.active} to="icons">Icons</Link>
+          <Link className={styles.link} activeClassName={styles.active} to="dropdown">Dropdown</Link>
         </div>
       </div>
     </GridContainer>

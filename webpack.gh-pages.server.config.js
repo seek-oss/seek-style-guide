@@ -25,7 +25,8 @@ const routes = [
   '/dropdown',
   '/checkbox',
   '/monthpicker',
-  '/typography'
+  '/typography',
+  '/dropdown'
 ];
 
 const config = {
