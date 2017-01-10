@@ -19,6 +19,7 @@ import {
   ThumbsUpIcon,
   ErrorIcon,
   TickIcon,
+  TickInCircleIcon,
   HelpIcon
 } from 'seek-style-guide/react';
 
@@ -29,6 +30,7 @@ const renderDemo = () => (
         <IconSample Icon={HeartIcon} name="Heart" />
         <IconSample Icon={ProfileIcon} name="Profile" />
         <IconSample Icon={TickIcon} name="Tick" />
+        <IconSample Icon={TickInCircleIcon} name="TickInCircle" />
         <IconSample Icon={SearchIcon} name="Search" />
         <IconSample Icon={ChevronIcon} direction="down" name="Down" />
         <IconSample Icon={ChevronIcon} direction="up" name="Up" />

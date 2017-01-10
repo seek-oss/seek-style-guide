@@ -16,6 +16,7 @@ export { default as StarIcon } from './icons/StarIcon/StarIcon';
 export { default as ThumbsUpIcon } from './icons/ThumbsUpIcon/ThumbsUpIcon';
 export { default as ErrorIcon } from './icons/ErrorIcon/ErrorIcon';
 export { default as TickIcon } from './icons/TickIcon/TickIcon';
+export { default as TickInCircleIcon } from './icons/TickInCircleIcon/TickInCircleIcon';
 export { default as HelpIcon } from './icons/HelpIcon/HelpIcon';
 export { default as PlusIcon } from './icons/PlusIcon/PlusIcon';
 export { default as DeleteIcon } from './icons/DeleteIcon/DeleteIcon';
