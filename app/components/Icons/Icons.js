@@ -26,7 +26,7 @@ import {
   SearchIcon,
   ThumbsUpIcon,
   TickIcon,
-  TickInCircleIcon,
+  TickCircleIcon,
   MailIcon
 } from 'seek-style-guide/react';
 
@@ -35,7 +35,7 @@ const icons = [
   { icon: ProfileIcon, name: 'Profile' },
   { icon: SearchIcon, name: 'Search' },
   { icon: TickIcon, name: 'Tick' },
-  { icon: TickInCircleIcon, name: 'TickInCircle' },
+  { icon: TickCircleIcon, name: 'TickCircle' },
   { icon: ChevronIcon, name: 'Down Chevron', props: { direction: 'down' } },
   { icon: ChevronIcon, name: 'Up Chevron', props: { direction: 'up' } },
   { icon: ChevronIcon, name: 'Left Chevron', props: { direction: 'left' } },
