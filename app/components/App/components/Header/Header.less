@@ -1,15 +1,14 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  height: (@grid-row-height * 14);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: (@grid-row-height * 16);
+  padding-top: (@grid-row-height * 2);
 }
 
 .logo {
   display: flex;
   align-items: center;
+  margin-left: -(@grid-gutter-width / 2);
 }
 
 .title {
@@ -24,7 +23,7 @@
   .touchableText(@standard-type-scale);
   .link();
   display: inline-block;
-  margin-left: @grid-gutter-width;
+  margin-right: @grid-gutter-width;
   color: @sk-mid-gray-dark;
   &:before {
     content: '';
