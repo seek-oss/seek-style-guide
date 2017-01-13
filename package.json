@@ -21,7 +21,7 @@
     "url": "git+https://github.com/SEEK-Jobs/seek-style-guide.git"
   },
   "author": "SEEK",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SEEK-Jobs/seek-style-guide/issues"
   },
