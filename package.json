@@ -6,10 +6,9 @@
   "scripts": {
     "start": "BASE_HREF=/ node server",
     "lint": "eslint app react test ./*.js",
-    "test": "BABEL_ENV=test mocha 'react/**/*.test.js' --compilers js:babel-register --require test/setup.js",
-    "prebuild": "npm run lint && npm test",
-    "local-build": "npm run prebuild && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
-    "gh-pages-build": "npm run prebuild && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/seek-style-guide/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
+    "test": "BABEL_ENV=test mocha 'react/**/*.test.js' --compilers js:babel-register --require test/setup.js && npm run lint",
+    "local-build": "npm run test && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
+    "gh-pages-build": "npm run test && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/seek-style-guide/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
     "preversion": "npm run gh-pages-build",
     "postversion": "npm publish && git push && git push --tags && npm run deploy",
     "deploy": "gh-pages -d dist && printf '\nURL: http://seek-jobs.github.io/seek-style-guide\n\n'",
