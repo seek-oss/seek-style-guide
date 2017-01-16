@@ -11,20 +11,20 @@
     "gh-pages-build": "npm run test && rm -rf dist/ && mkdir dist && NODE_ENV=production BASE_HREF=/seek-style-guide/ webpack --config webpack.gh-pages.server.config.js && rm dist/render.js && NODE_ENV=production webpack --config webpack.gh-pages.client.config.js",
     "preversion": "npm run gh-pages-build",
     "postversion": "npm publish && git push && git push --tags && npm run deploy",
-    "deploy": "gh-pages -d dist && printf '\nURL: http://seek-jobs.github.io/seek-style-guide\n\n'",
+    "deploy": "gh-pages -d dist && printf '\nURL: https://seek-oss.github.io/seek-style-guide\n\n'",
     "static": "opn http://localhost:1804 && superstatic dist --port 1804",
     "install-git-hooks": "./scripts/install-git-hooks"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SEEK-Jobs/seek-style-guide.git"
+    "url": "git+https://github.com/seek-oss/seek-style-guide.git"
   },
   "author": "SEEK",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SEEK-Jobs/seek-style-guide/issues"
+    "url": "https://github.com/seek-oss/seek-style-guide/issues"
   },
-  "homepage": "https://github.com/SEEK-Jobs/seek-style-guide#readme",
+  "homepage": "https://github.com/seek-oss/seek-style-guide#readme",
   "dependencies": {
     "autoprefixer": "6.3.7",
     "babel-core": "6.10.4",
