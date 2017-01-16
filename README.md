@@ -268,7 +268,7 @@ render() {
 }
 ```
 
-`StyleGuideProvider`'s props are used to set the page head properties using Helmet.
+`StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
 
 
 ## Release Process
