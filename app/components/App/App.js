@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { SeekApp } from 'seek-style-guide/react';
+import { StyleGuideProvider } from 'seek-style-guide/react';
 
 import Header from 'Header/Header';
 import Footer from 'Footer/Footer';
@@ -19,13 +19,13 @@ const titles = {
 
 export default function App({ routes, children }) {
   return (
-    <SeekApp fullScreen={true} title="SEEK Styleguide">
+    <StyleGuideProvider fullScreen={true} title="SEEK Styleguide">
       <Header title={titles[routes[routes.length - 1].path || '/']} />
       <main>
         {children}
       </main>
       <Footer />
-    </SeekApp>
+    </StyleGuideProvider>
   );
 }
 

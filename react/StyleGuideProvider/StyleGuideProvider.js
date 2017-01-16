@@ -1,4 +1,4 @@
-import styles from './SeekApp.less';
+import styles from './StyleGuideProvider.less';
 
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
@@ -10,7 +10,7 @@ const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Care
 
 const getLocalisedPageTitle = locale => locale === 'AU' ? defaultPageTitleAU : defaultPageTitleNZ;
 
-export default function SeekApp({ fullScreen, children, meta, link, title, locale }) {
+export default function StyleGuideProvider({ fullScreen, children, meta, link, title, locale }) {
   const className = classnames({
     [styles.root]: true,
     [styles.fullScreen]: fullScreen
@@ -35,7 +35,7 @@ export default function SeekApp({ fullScreen, children, meta, link, title, local
   );
 }
 
-SeekApp.propTypes = {
+StyleGuideProvider.propTypes = {
   fullScreen: PropTypes.bool,
   children: PropTypes.node,
   title: PropTypes.string,
@@ -44,7 +44,7 @@ SeekApp.propTypes = {
   locale: PropTypes.oneOf(['AU', 'NZ'])
 };
 
-SeekApp.defaultProps = {
+StyleGuideProvider.defaultProps = {
   fullScreen: false,
   meta: [],
   link: [],
