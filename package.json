@@ -1,6 +1,6 @@
 {
   "name": "seek-style-guide",
-  "version": "15.1.0",
+  "version": "0.0.0-development",
   "description": "Living style guide containing the building blocks and design principles for SEEK web applications",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,19 @@
     "postversion": "npm publish && git push && git push --tags && npm run deploy",
     "deploy": "gh-pages -d dist && printf '\nURL: https://seek-oss.github.io/seek-style-guide\n\n'",
     "static": "opn http://localhost:1804 && superstatic dist --port 1804",
-    "install-git-hooks": "./scripts/install-git-hooks"
+    "install-git-hooks": "./scripts/install-git-hooks",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seek-oss/seek-style-guide.git"
+    "url": "https://github.com/seek-oss/seek-style-guide.git"
   },
   "author": "SEEK",
   "license": "MIT",
@@ -66,6 +74,8 @@
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
     "classnames": "^2.2.5",
+    "commitizen": "^2.9.5",
+    "cz-conventional-changelog": "^1.2.0",
     "ejs": "^2.4.2",
     "eslint": "^3.1.0",
     "eslint-plugin-mocha": "^4.0.0",
@@ -73,6 +83,7 @@
     "gh-pages": "^0.11.0",
     "glob": "^7.0.5",
     "hex-rgb": "^1.0.0",
+    "husky": "^0.12.0",
     "jsdom": "^9.4.1",
     "json-loader": "^0.5.4",
     "jsx-to-string": "^0.2.13",
@@ -92,17 +103,19 @@
     "react-autosuggest": "^8.0.0",
     "react-baseline": "^1.0.1",
     "react-copy-to-clipboard": "4.2.1",
-    "react-helmet": "^3.2.2",
     "react-dom": "^15.3.1",
     "react-element-to-jsx-string": "4.2.0",
+    "react-helmet": "^3.2.2",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-isolated-scroll": "^0.1.0",
     "react-router": "^2.5.2",
     "react-shallow-testutils": "^2.0.0",
+    "semantic-release": "^6.3.2",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "static-site-generator-webpack-plugin": "^2.1.0",
     "superstatic": "^4.0.3",
+    "validate-commit-msg": "^2.8.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
