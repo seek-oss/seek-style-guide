@@ -229,9 +229,47 @@ import { HeartIcon, StarIcon } from 'seek-style-guide/react';
 
 These components can be viewed online in the following categories:
 
-- [Buttons](http://seek-jobs.github.io/seek-style-guide/buttons)
-- [Textfields](http://seek-jobs.github.io/seek-style-guide/textfields)
-- [Icons](http://seek-jobs.github.io/seek-style-guide/icons)
+- [Buttons](http://seek-oss.github.io/seek-style-guide/buttons)
+- [Textfields](http://seek-oss.github.io/seek-style-guide/textfields)
+- [Textarea](http://seek-oss.github.io/seek-style-guide/textarea)
+- [Icons](http://seek-oss.github.io/seek-style-guide/icons)
+- [Autosuggest](http://seek-oss.github.io/seek-style-guide/autosuggest)
+- [Monthpicker](http://seek-oss.github.io/seek-style-guide/monthpicker)
+- [Checkbox](http://seek-oss.github.io/seek-style-guide/checkbox)
+- [Dropdown](http://seek-oss.github.io/seek-style-guide/dropdown)
+
+###StyleGuideProvider prerequisite
+
+You wrap your app in the `StyleGuideProvider` component to use any of the style guide components.  For example:
+
+```js
+render() {
+
+     const meta = {
+      meta: [
+        { name: 'description', content: 'The most stylish of SEEK pages'},
+      ],
+      link: [
+        { rel: 'canonical', href: 'https://stylish.url' }
+      ]
+    };
+    const pageTitle = 'Super Awesome SEEK Page';
+    const locale = 'en_US';
+
+    return (
+      <StyleGuideProvider title={pageTitle} meta={meta.meta} link={meta.link} locale={locale}>
+        <div className={styles.root}>
+
+          ...
+
+        </div>
+      </StyleGuideProvider>
+    );
+}
+```
+
+`StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
+
 
 ## Release Process
 

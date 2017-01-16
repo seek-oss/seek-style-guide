@@ -1,5 +1,6 @@
 // Components
-export { default as SeekApp } from './SeekApp/SeekApp';
+export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
+export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  //Alias for backwards compatibility
 export { default as TextLink } from './TextLink/TextLink';
 export { default as Button } from './Button/Button';
 export { default as Logo } from './Logo/Logo';
