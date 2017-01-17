@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide)
+[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
 # seek-style-guide
 
@@ -271,14 +271,12 @@ render() {
 `StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
 
 
-## Release Process
+## Contributing
 
-This package follows [semantic versioning](http://semver.org). In the `master` branch, run `npm version` with the appropriate version bump:
+This package follows [semantic versioning](http://semver.org). New versions are published automatically from [Travis CI](https://travis-ci.org) using [semantic-release](https://github.com/semantic-release/semantic-release).
 
-```bash
-$ npm version major
-$ npm version minor
-$ npm version patch
-```
+In order to automatically increment version numbers correctly, commit messages must follow the [AngularJS commit message convention](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines). To make this easier, you can use [commitizen](https://github.com/commitizen/cz-cli) to guide you through the commit process by running `npm run commit` from the command line.
 
-This will automate the process of generating static assets, committing and tagging an updated version number, publishing to npm, pushing to GitHub, and deploying the demo site to GitHub Pages.
+## License
+
+MIT.
