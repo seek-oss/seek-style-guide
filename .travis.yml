@@ -4,13 +4,11 @@ cache:
     - node_modules
 notifications:
   email: false
-node_js:
-  - '7'
-  - '6'
 before_script:
   - npm prune
 after_success:
-  - npm run semantic-release
-branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  - if [ -n "$TRAVIS_PULL_REQUEST_SHA" ]; then
+      npm run deploy-surge -- -d seek-style-guide--${TRAVIS_PULL_REQUEST_SHA}.surge.sh;
+    elif [ "$TRAVIS_BRANCH" == "master" ]; then
+      npm run semantic-release;
+    fi
