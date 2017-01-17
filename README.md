@@ -240,7 +240,7 @@ These components can be viewed online in the following categories:
 
 ###StyleGuideProvider prerequisite
 
-You wrap your app in the `StyleGuideProvider` component to use any of the style guide components.  For example:
+You wrap your app in the `StyleGuideProvider` component to use any of the style guide components. For example:
 
 ```js
 render() {
