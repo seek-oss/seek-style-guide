@@ -1,4 +1,4 @@
-import styles from './DropDown.less';
+import styles from './Dropdown.less';
 import dropdownStyles from 'seek-style-guide/react/fields/Dropdown/Dropdown.less';
 
 import React, { Component } from 'react';
