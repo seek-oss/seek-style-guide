@@ -11,5 +11,4 @@ after_success:
       npm run deploy-surge -- -d seek-style-guide--${TRAVIS_PULL_REQUEST_SHA}.surge.sh;
     elif [ "$TRAVIS_BRANCH" == "master" ]; then
       npm run semantic-release;
-      ./scripts/deploy-gh-pages.sh;
     fi
