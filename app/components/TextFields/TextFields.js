@@ -113,7 +113,7 @@ export default class TextFields extends Component {
         id="firstName"
         className={className}
         invalid={invalid}
-        label="First name"
+        label="First Name"
         help={help ? 'e.g. David' : ''}
         message={invalid ? 'Something went wrong' : ''}
         inputProps={{
