@@ -3,27 +3,32 @@ var ghpages = require('gh-pages');
 var basePath = path.join(__dirname, '../dist');
 var repoUrl = require('../package.json').repository.url;
 
-var makeConfig = function(token) {
-  if (token) {
-    // CI deployment config
-    return {
-      repo: repoUrl.replace(/^https?:\/\//, 'http://' + token + '@'),
-      logger: function(message) {
-        // Hide token from build logs
-        message = message.replace(new RegExp(token, 'g'), '[TOKEN]');
-        console.log(message);
-      }
-    };
+var GH_PAGES_TOKEN = process.env.GH_PAGES_TOKEN;
+var tokenRegex = GH_PAGES_TOKEN ? new RegExp(GH_PAGES_TOKEN, 'g') : null;
+
+var log = function(message) {
+  if (tokenRegex) {
+    // Hide token from build logs
+    message = message.replace(tokenRegex, '[GH_PAGES_TOKEN]');
   }
 
-  // Local deployment config
+  console.log(message);
+};
+
+var makeConfig = function() {
   return {
-    logger: function (message) {
-      console.log(message)
-    }
+    repo: GH_PAGES_TOKEN ?
+      repoUrl.replace('https://', 'https://' + GH_PAGES_TOKEN + '@') :
+      repoUrl,
+    logger: log
   };
 };
 
-ghpages.publish(basePath, makeConfig(process.env.GH_TOKEN), function() {
-  console.log('Deployment complete!');
+ghpages.publish(basePath, makeConfig(), function(err) {
+  if (err) {
+    log('Deployment error');
+    return log(JSON.stringify(err));
+  }
+
+  log('Deployment complete!');
 });
