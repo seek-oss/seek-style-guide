@@ -4,15 +4,15 @@
 
 This style guide assumes you're using [Less](http://lesscss.org/) for preprocessing CSS. For high level components, it's assumed that your application is built with [React](https://facebook.github.io/react) and compiled using [Webpack](https://webpack.github.io).
 
-In the interest of increased productivity, new projects are strongly encouraged to adhere to this set of technology choices. However, if you'd like to suggest alternatives, feel free join the conversation in the [living-style-guide Slack channel](https://seekchat.slack.com/messages/living-style-guide/).
-
 ## Installation
 
 ```bash
 $ npm install --save-dev seek-style-guide
 ```
 
-## Configuring Webpack
+## Setup
+
+### Setting up Webpack
 
 First, decorate your server Webpack config:
 
@@ -44,7 +44,39 @@ module.exports = decorateClientConfig(config, {
 
 Please note that, if your Webpack loaders aren't scoped to your local project files via the ["include" option](https://webpack.github.io/docs/configuration.html#module-loaders), the decorator will throw an error.
 
-## Web Fonts
+### Setting up React
+
+Wrap your app with the `StyleGuideProvider` component to use any of the style guide components. For example:
+
+```js
+render() {
+
+     const meta = {
+      meta: [
+        { name: 'description', content: 'The most stylish of SEEK pages'},
+      ],
+      link: [
+        { rel: 'canonical', href: 'https://stylish.url' }
+      ]
+    };
+    const pageTitle = 'Super Awesome SEEK Page';
+    const locale = 'en_US';
+
+    return (
+      <StyleGuideProvider title={pageTitle} meta={meta.meta} link={meta.link} locale={locale}>
+        <div className={styles.root}>
+
+          ...
+
+        </div>
+      </StyleGuideProvider>
+    );
+}
+```
+
+`StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
+
+### Setting up Web Fonts
 
 Our standard web font loading strategy is to load and cache web fonts in the background, and only display them on page load if already present in the cache. This is to ensure that text is rendered as soon as possible, without the dreaded "flash of invisible text" (FOIT), or "flash of unstyled text" (FOUT), both of which are negative performance impacts commonly found with web fonts.
 
@@ -81,7 +113,7 @@ const fontSnippet = renderFontSnippet({
 
 ## Less
 
-Before any of these building blocks can be used, first import the Less theme by reference.
+In any style sheet that depends on the style guide, first import the Less theme by reference.
 
 ```less
 @import (reference) "~seek-style-guide/theme";
@@ -238,44 +270,9 @@ These components can be viewed online in the following categories:
 - [Checkbox](http://seek-oss.github.io/seek-style-guide/checkbox)
 - [Dropdown](http://seek-oss.github.io/seek-style-guide/dropdown)
 
-###StyleGuideProvider prerequisite
-
-You wrap your app in the `StyleGuideProvider` component to use any of the style guide components. For example:
-
-```js
-render() {
-
-     const meta = {
-      meta: [
-        { name: 'description', content: 'The most stylish of SEEK pages'},
-      ],
-      link: [
-        { rel: 'canonical', href: 'https://stylish.url' }
-      ]
-    };
-    const pageTitle = 'Super Awesome SEEK Page';
-    const locale = 'en_US';
-
-    return (
-      <StyleGuideProvider title={pageTitle} meta={meta.meta} link={meta.link} locale={locale}>
-        <div className={styles.root}>
-
-          ...
-
-        </div>
-      </StyleGuideProvider>
-    );
-}
-```
-
-`StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
-
-
 ## Contributing
 
-This package follows [semantic versioning](http://semver.org). New versions are published automatically from [Travis CI](https://travis-ci.org) using [semantic-release](https://github.com/semantic-release/semantic-release).
-
-In order to automatically increment version numbers correctly, commit messages must follow the [AngularJS commit message convention](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines). To make this easier, you can use [commitizen](https://github.com/commitizen/cz-cli) to guide you through the commit process by running `npm run commit` from the command line.
+Refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License
 
