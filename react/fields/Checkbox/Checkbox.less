@@ -9,8 +9,9 @@
   position: absolute;
 }
 
-.label {
+.standard {
   .touchableText(@standard-type-scale);
+
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -41,5 +42,30 @@
 
   .input:checked + .label & {
     opacity: 1;
+  }
+}
+
+.button {
+  .touchableText(@standard-type-scale);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @sk-gray-light;
+  color: @sk-charcoal;
+  border: 1px solid @sk-mid-gray-light;
+  border-radius: 2px;
+  cursor: pointer;
+
+  .input:checked + .label & {
+    font-weight: @sk-bold;
+    background-color: @sk-white;
+    border-bottom: 1px solid @sk-pink;
+  }
+
+  .input:not([readonly]):not([disabled]):focus + .label &, .rootFocus & {
+    outline: none;
+    border-color: transparent;
+    .focus();
   }
 }
