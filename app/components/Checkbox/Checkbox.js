@@ -17,13 +17,20 @@ import Code from 'Code/Code';
 import { Checkbox as SeekCheckbox } from 'seek-style-guide/react';
 
 const specs = {
-  default: {
+  standard: {
     'Font scale': '1.4 — @standard-type-scale',
     Border: '1px — @sk-mid-gray-light',
     'Border radius': '2px — @field-border-radius'
   },
+  button: {
+    'Font scale': '1.4 — @standard-type-scale',
+    Border: '1px — @sk-mid-gray-light',
+    'Bottom border': '1px — @sk-pink',
+    'Border radius': '2px — @field-border-radius',
+    'Background': '@sk-gray-light'
+  },
   focus: {
-    Border: '1px @sk-focus'
+    Border: '1px — @sk-focus'
   }
 };
 
@@ -41,11 +48,13 @@ export default class Checkbox extends Component {
     this.state = {
       focus: false,
       baseline: false,
-      inputValue: true
+      inputValue: true,
+      type: 'standard'
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
+    this.setType = this.setType.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -61,6 +70,12 @@ export default class Checkbox extends Component {
     });
   }
 
+  setType(event) {
+    this.setState({
+      type: event.target.value
+    });
+  }
+
   handleChange(event) {
     this.setState({
       inputValue: event.target.checked
@@ -68,15 +83,18 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const { baseline, inputValue, focus } = this.state;
+    const { baseline, inputValue, focus, type } = this.state;
 
     const spec = getSpec({
-      default: true,
-      focus
+      standard: type === 'standard',
+      button: type === 'button',
+      focus,
+      inputValue
     });
 
     const classNames = classnames({
-      [checkboxStyles.rootFocus]: focus
+      [checkboxStyles.rootFocus]: focus,
+      [styles.input]: true
     });
 
     const checkbox = (
@@ -88,6 +106,7 @@ export default class Checkbox extends Component {
           onChange: this.handleChange,
           checked: inputValue
         }}
+        type={type}
       />
     );
 
@@ -124,6 +143,17 @@ export default class Checkbox extends Component {
               type: 'checkbox',
               checked: focus,
               onChange: this.toggleFocus
+            }}
+          />
+          <SandboxToggle
+            label="Type"
+            toggleType="select"
+            toggleProps={{
+              options: [
+                { name: 'Standard', value: 'standard' },
+                { name: 'Button', value: 'button' }
+              ],
+              onChange: this.setType
             }}
           />
         </SandboxTogglePanel>

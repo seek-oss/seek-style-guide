@@ -1,9 +1,20 @@
 // Components
 export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
 export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  // Alias for backwards compatibility
-export { default as TextLink } from './TextLink/TextLink';
 export { default as Button } from './Button/Button';
 export { default as Logo } from './Logo/Logo';
+
+// Typography
+export { default as Text } from './Text/Text';
+export { default as TextLink } from './TextLink/TextLink';
+export { default as Strong } from './Strong/Strong';
+export { default as Secondary } from './Secondary/Secondary';
+
+// Layout
+export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';
+export { default as Card } from './Card/Card';
+export { default as PageBlock } from './PageBlock/PageBlock';
+export { default as Section } from './Section/Section';
 
 // Icons
 export { default as ChevronIcon } from './icons/ChevronIcon/ChevronIcon';
