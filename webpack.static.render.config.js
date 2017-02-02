@@ -17,6 +17,7 @@ const appPaths = [
 
 const routes = [
   '/',
+  '/playground',
   '/icons',
   '/buttons',
   '/textfields',

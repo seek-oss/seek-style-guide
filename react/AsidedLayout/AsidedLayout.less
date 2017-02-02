@@ -1,0 +1,21 @@
+@import (reference) "~seek-style-guide/theme";
+
+@media only screen and (min-width: unit(@responsive-type-breakpoint, px)) {
+  .root {
+    display: flex;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .content {
+    flex: 1 1;
+  }
+
+  .aside {
+    padding-left: @grid-gutter-width;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}

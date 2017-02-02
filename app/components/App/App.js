@@ -14,7 +14,8 @@ const titles = {
   '/monthpicker': 'month picker',
   '/dropdown': 'dropdown',
   '/checkbox': 'checkbox',
-  '/typography': 'typography'
+  '/typography': 'typography',
+  '/playground': 'playground'
 };
 
 export default function App({ routes, children }) {

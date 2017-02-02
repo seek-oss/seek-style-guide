@@ -12,6 +12,7 @@ import Icons from 'Icons/Icons';
 import Typography from 'Typography/Typography';
 import Textarea from 'Textarea/Textarea';
 import Checkbox from 'Checkbox/Checkbox';
+import Playground from 'Playground/Playground';
 
 export default (
   <Route path="/" component={App}>
@@ -26,5 +27,7 @@ export default (
     <Route path="/checkbox" component={Checkbox} />
     <Route path="/icons" component={Icons} />
     <Route path="/typography" component={Typography} />
+
+    <Route path="/playground" component={Playground} />
   </Route>
 );
