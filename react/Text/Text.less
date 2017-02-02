@@ -1,0 +1,31 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  .standardTextResponsive();
+  padding-bottom: @grid-row-height;
+
+  .root {
+    position: relative;
+    outline: 2px solid red;
+    &::after {
+      content: 'ERROR: Multiple <Text> components nested';
+      background: red;
+      font-weight: @sk-bold;
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 @grid-gutter-width;
+    }
+  }
+}
+
+.small { .smallTextResponsive(); }
+.subheading { .subheadingTextResponsive(); }
+.headline { .headlineTextResponsive(); }
+.heading { .headingTextResponsive(); }
+.hero { .heroTextResponsive(); }
+
+.raw {
+  padding-bottom: 0;
+}
