@@ -20,7 +20,7 @@ const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
 const renderer = createRenderer();
 
 describe('Checkbox', () => {
-  let element, checkbox, rootElement, input, label, errors;
+  let element, checkbox, rootElement, input, label, errors, standard, button;
 
   beforeEach(() => {
     errors = [];
@@ -39,6 +39,8 @@ describe('Checkbox', () => {
     checkbox = renderer.render(element);
     input = findAllWithClass(checkbox, 'input')[0] || null;
     label = findAllWithClass(checkbox, 'label')[0] || null;
+    standard = findAllWithClass(checkbox, 'standard')[0] || null;
+    button = findAllWithClass(checkbox, 'button')[0] || null;
   }
 
   function renderToDom(jsx) {
@@ -69,6 +71,27 @@ describe('Checkbox', () => {
   it('should have `htmlFor` equal to `id` when `label` is specified', () => {
     render(<Checkbox id="still-in-role" label="Still in role" />);
     expect(label.props).to.contain.keys({ htmlFor: 'still-in-role' });
+  });
+
+  describe('when type is not set', () => {
+    it('should render standard checkbox', () => {
+      render(<Checkbox />);
+      expect(standard).to.not.equal(null);
+    });
+  });
+
+  describe('when type is standard', () => {
+    it('should render standard checkbox', () => {
+      render(<Checkbox type="standard" />);
+      expect(standard).to.not.equal(null);
+    });
+  });
+
+  describe('when type is button', () => {
+    it('should render button checkbox', () => {
+      render(<Checkbox type="button" />);
+      expect(button).to.not.equal(null);
+    });
   });
 
   describe('inputProps', () => {

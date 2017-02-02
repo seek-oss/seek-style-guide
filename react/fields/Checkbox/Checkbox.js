@@ -3,6 +3,9 @@ import styles from './Checkbox.less';
 import CheckMarkIcon from '../../icons/CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
 
+const STANDARD = 'standard';
+const BUTTON = 'button';
+
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
 
@@ -22,23 +25,45 @@ export default class Checkbox extends Component {
     inputProps: PropTypes.shape({
       onChange: PropTypes.func.isRequired,
       checked: PropTypes.bool.isRequired
-    })
+    }),
+    type: PropTypes.oneOf([STANDARD, BUTTON])
   }
 
   static defaultProps = {
     className: '',
     inputProps: {
       checked: false
-    }
+    },
+    type: STANDARD
   };
 
+  renderButton(label) {
+    return (
+      <span className={styles.button}>
+        {label}
+      </span>
+    );
+  }
+
+  renderStandard(label) {
+    return (
+      <div className={styles.standard}>
+        <CheckMarkIcon svgClassName={styles.checkMark} className={styles.checkBox} />
+        <span>{label}</span>
+      </div>
+    );
+  }
+
   renderLabel() {
-    const { label, id } = this.props;
+    const { label, id, type } = this.props;
 
     return (
       <label className={styles.label} htmlFor={id}>
-        <CheckMarkIcon svgClassName={styles.checkMark} className={styles.checkBox} />
-        <span>{label}</span>
+        {
+          type === STANDARD ?
+            this.renderStandard(label) :
+            this.renderButton(label)
+        }
       </label>
     );
   }
