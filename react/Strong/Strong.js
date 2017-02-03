@@ -1,14 +1,16 @@
 import styles from './Strong.less';
 import React, { PropTypes } from 'react';
+import classnames from 'classnames';
 
-export default function Strong({ children }) {
+export default function Strong({ children, className, ...restProps }) {
   return (
-    <strong className={styles.root}>
+    <strong {...restProps} className={classnames(styles.root, className)}>
       {children}
     </strong>
   );
 }
 
 Strong.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
 };
