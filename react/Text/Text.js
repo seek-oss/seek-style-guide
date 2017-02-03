@@ -10,10 +10,12 @@ export default function Text({
   headline,
   heading,
   hero,
-  raw
+  raw,
+  ...restProps
 }) {
   return (
     <div
+      {...restProps}
       className={classnames({
         [styles.root]: true,
         [className]: className,

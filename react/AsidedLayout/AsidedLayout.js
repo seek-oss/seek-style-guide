@@ -12,9 +12,10 @@ const conditionallyRenderAside = (condition, renderAside, size) => (
     null
 );
 
-export default function AsidedLayout({ className, children, renderAside = defaultRenderAside, size, reverse }) {
+export default function AsidedLayout({ className, children, renderAside = defaultRenderAside, size, reverse, ...restProps }) {
   return (
     <div
+      {...restProps}
       className={classnames({
         [className]: className,
         [styles.root]: true,
