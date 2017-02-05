@@ -2,9 +2,9 @@ import styles from './PageBlock.less';
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 
-export default function PageBlock({ children, className }) {
+export default function PageBlock({ children, className, ...restProps }) {
   return (
-    <div className={classnames(className)}>
+    <div {...restProps} className={classnames(className)}>
       <div className={styles.content}>
         {children}
       </div>
