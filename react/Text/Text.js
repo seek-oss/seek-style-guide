@@ -11,7 +11,7 @@ const renderContent = ({ children, secondary, strong }) => {
     strong ? Strong : null
   ].filter(x => x);
 
-  return modifiers.reduce((content, mod) => mod({ children: content }), children);
+  return modifiers.reduce((content, Modifier) => <Modifier>{content}</Modifier>, children);
 };
 
 export default function Text({
