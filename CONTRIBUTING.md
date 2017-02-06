@@ -1,6 +1,6 @@
 # Contributing to seek-style-guide
 
-> Note: If you work at SEEK and run into issues along the way, or even if you find some of these steps confusing or intimidating, please reach out to your friendly neighbourhood developer in the living style guide Slack channel. We'll be super excited to help out!
+> **Note:** If you work at SEEK and run into issues along the way, or even if you find some of these steps confusing or intimidating, please reach out to your friendly neighbourhood developer in the living style guide Slack channel. We'll be super excited to help out!
 
 ## Setup
 
