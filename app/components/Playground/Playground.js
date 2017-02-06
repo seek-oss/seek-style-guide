@@ -11,9 +11,7 @@ import {
   Section,
   AsidedLayout,
   Card,
-  Text,
-  Strong,
-  Secondary
+  Text
 } from 'seek-style-guide/react';
 
 import TextLink from './Atoms/TextLink/TextLink';
@@ -24,7 +22,7 @@ const renderAsideProfile = () => (
   <Card transparent>
     <Section>
       <Text heading>Profile visibility</Text>
-      <Text><Secondary>Employers cant view your profile or resumes or contact you with job opportunities.</Secondary></Text>
+      <Text secondary>Employers cant view your profile or resumes or contact you with job opportunities.</Text>
     </Section>
   </Card>
 );
@@ -84,30 +82,30 @@ const renderAsideMyActivityActions = () => (
 );
 
 const renderJobDetailDate = () => (
-  <Text headline><Secondary>18 Jan 2017</Secondary></Text>
+  <Text headline secondary>18 Jan 2017</Text>
 );
 
 const renderJobDetailMetadata = () => (
   <div>
     <Card>
       <Section>
-        <Button className={styles.fullWidthTextField} color="pink">Apply for this job</Button>
+        <Button color="pink" className={styles.fullWidthTextField}>Apply for this job</Button>
       </Section>
       <Section>
-        <Text><Secondary>Applications for this role will take you to the advertiser's site.</Secondary></Text>
+        <Text secondary>{'Applications for this role will take you to the advertiser\'s site.'}</Text>
       </Section>
       <Section>
-        <Button className={styles.halfWidthTextField}><StarIcon /> Save Job</Button>
-        <Button className={styles.halfWidthTextField}><MailIcon /> Send Job</Button>
+        <Button color="gray" className={styles.halfWidthTextField}><StarIcon /> Save Job</Button>
+        <Button color="gray" className={styles.halfWidthTextField}><MailIcon /> Send Job</Button>
       </Section>
     </Card>
     <Card>
       <Section>
-        <Strong><Text raw>Melbourne,</Text></Strong>
+        <Text strong raw>Melbourne,</Text>
         <Text>CBD & Inner Suburbs</Text>
-        <Strong><Text>Base + Super</Text></Strong>
-        <Strong><Text>Full time</Text></Strong>
-        <Strong><Text raw>Information & Communication Technology</Text></Strong>
+        <Text strong>Base + Super</Text>
+        <Text strong>Full time</Text>
+        <Text strong raw>Information & Communication Technology</Text>
         <Text>Architects</Text>
       </Section>
     </Card>
@@ -120,7 +118,7 @@ export default class Playground extends Component {
   render() {
     return (
       <div>
-        <PageBlock raw className={styles.header}>
+        <PageBlock className={styles.header}>
           <AsidedLayout size="340px">
             <Section>
               <AsidedLayout renderAside={renderAsideProfilePhoto} size="400px">
@@ -152,11 +150,11 @@ export default class Playground extends Component {
               <Section>
                 <Text heading>Resumé</Text>
                 <Text subheading>Default Resumé</Text>
-                <Text><Secondary><TextLink href="https://www.seek.com.au">20140714_-_cc11017_development...orm.pdf</TextLink> (75.82KB Added - 16 Dec 2016)</Secondary></Text>
+                <Text secondary><TextLink href="https://www.seek.com.au">20140714_-_cc11017_development...orm.pdf</TextLink> (75.82KB Added - 16 Dec 2016)</Text>
                 <Text>Your “Default” resumé is not visible to employers.</Text>
                 <Text>Update your privacy setting to “Standard” so that employers can view your resumé and get in contact with job opportunities. <TextLink href="https://www.seek.com.au">Learn more</TextLink> about your privacy.</Text>
                 <Text subheading>Other Resumés</Text>
-                <Text><Secondary><TextLink href="https://www.seek.com.au">Ohter_Resume.pdf</TextLink> (75.82KB Added - 16 Dec 2016)</Secondary></Text>
+                <Text secondary><TextLink href="https://www.seek.com.au">Ohter_Resume.pdf</TextLink> (75.82KB Added - 16 Dec 2016)</Text>
                 <IconButton icon="plus">Add summary</IconButton>
               </Section>
             </Card>
@@ -164,8 +162,8 @@ export default class Playground extends Component {
             <Card>
               <Section>
                 <Text heading>About the role you are looking for</Text>
-                <Text><Secondary>Classification/s of interest:</Secondary></Text>
-                <Text><Secondary>Role type</Secondary></Text>
+                <Text secondary>Classification/s of interest:</Text>
+                <Text secondary>Role type</Text>
               </Section>
             </Card>
           </AsidedLayout>
@@ -210,7 +208,7 @@ export default class Playground extends Component {
                 <TextField id="lname" label="Last name" inputProps={{ type: 'text' }} className={styles.halfWidthTextField} />
                 <TextField id="email" label="Email address" inputProps={{ type: 'email' }} className={styles.fullWidthTextField} />
                 <TextField id="password" label="Password" inputProps={{ type: 'password' }} className={styles.fullWidthTextField} />
-                <Text><Secondary>By registering you agree to the <TextLink href="https://www.seek.com.au">SEEK privacy policy</TextLink></Secondary></Text>
+                <Text secondary>By registering you agree to the <TextLink href="https://www.seek.com.au">SEEK privacy policy</TextLink></Text>
                 <Button color="pink">Register</Button>
                 <Text>Already have an account? <TextLink href="https://www.seek.com.au">Sign in</TextLink></Text>
               </Section>
@@ -256,8 +254,8 @@ export default class Playground extends Component {
                     <TextLink subheading href="https://www.seek.com.au">Local Health District Registered Nurse</TextLink>
                     <Text>Western NSW Local Health District</Text>
                     <Text raw>Job posted 30d+ ago</Text>
-                    <Text raw><Secondary>Dubbo & Central NSW</Secondary></Text>
-                    <Text><Secondary>Salary Rate: $29.32 to $41.18 ph</Secondary></Text>
+                    <Text raw secondary>Dubbo & Central NSW</Text>
+                    <Text secondary>Salary Rate: $29.32 to $41.18 ph</Text>
                     <Text>
                       Are you a Registered Nurse and looking for variety and challenges on a daily basis? Yes? Here is your chance - Full Time or Part-time available.
                     </Text>

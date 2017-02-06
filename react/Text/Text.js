@@ -2,6 +2,18 @@ import styles from './Text.less';
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 
+import Secondary from '../Secondary/Secondary';
+import Strong from '../Strong/Strong';
+
+const renderContent = ({ children, secondary, strong }) => {
+  const modifiers = [
+    secondary ? Secondary : null,
+    strong ? Strong : null
+  ].filter(x => x);
+
+  return modifiers.reduce((content, Modifier) => <Modifier>{content}</Modifier>, children);
+};
+
 export default function Text({
   children,
   className,
@@ -11,6 +23,8 @@ export default function Text({
   heading,
   hero,
   raw,
+  secondary,
+  strong,
   ...restProps
 }) {
   return (
@@ -26,7 +40,7 @@ export default function Text({
         [styles.hero]: hero,
         [styles.raw]: raw
       })}>
-      {children}
+      {renderContent({ children, secondary, strong })}
     </div>
   );
 }
@@ -39,5 +53,7 @@ Text.propTypes = {
   headline: PropTypes.bool,
   heading: PropTypes.bool,
   hero: PropTypes.bool,
-  raw: PropTypes.bool
+  raw: PropTypes.bool,
+  secondary: PropTypes.bool,
+  strong: PropTypes.bool
 };
