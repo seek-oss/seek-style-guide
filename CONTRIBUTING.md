@@ -58,11 +58,13 @@ $ npm run commit
 Once you've committed your work, push your changes to a branch of the same name on GitHub:
 
 ```bash
-$ git push -u origin $(git symbolic-ref --short HEAD)
+$ git push --set-upstream origin $(git symbolic-ref --short HEAD)
 ```
 
 Next, head over to the style guide's GitHub page and create a new pull request from your branch.
 
 In order for your pull request to be accepted, the [Travis CI](https://travis-ci.org) build needs to pass, and another contributor needs to approve your work. It's likely that you might need to make some changes for your work to be accepted, but don't take this personally! Ultimately, the aim is to make it feel like the codebase was written by a single person, but this takes a lot of work and constant review of each others' work.
 
-Once your work is approved and ready to go, hit the merge button and check that your commit message and description are clean and free of cruft, removing any irrelevant messages due to review feedback. Finally, take a deep breath, hit the green "confirm" button, and we have liftoff—your work should be automatically deployed! 🎨📦🚀
+Once your work is approved and ready to go, hit the merge button and check that your commit message and description are clean and free of cruft, removing any irrelevant messages due to review feedback. Finally, take a deep breath, hit the green "confirm" button, and we have liftoff—your work should be automatically deployed!
+
+🎨📦🚀
