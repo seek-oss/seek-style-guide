@@ -9,6 +9,12 @@
   position: absolute;
 }
 
+.label {
+  input:checked + & {
+    font-weight: @sk-bold;
+  }
+}
+
 .standard {
   .touchableText(@standard-type-scale);
 
@@ -41,7 +47,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  fill: @sk-pink;
+  fill: @sk-black;
   opacity: 0;
 
   .input:checked + .label & {
