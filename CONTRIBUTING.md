@@ -24,7 +24,7 @@ $ git pull
 Next, create a new branch for your work, with an appropriate name for your change:
 
 ```bash
-$ git checkout -b add-new-feature
+$ git checkout -b add-my-cool-new-feature
 ```
 
 In order to see changes to the style guide during development, run the local development server:
