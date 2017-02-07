@@ -12,6 +12,7 @@ export { default as Secondary } from './Secondary/Secondary';
 
 // Layout
 export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';
+export { default as Columns } from './Columns/Columns';
 export { default as Card } from './Card/Card';
 export { default as PageBlock } from './PageBlock/PageBlock';
 export { default as Section } from './Section/Section';

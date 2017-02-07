@@ -10,6 +10,7 @@ import {
   PageBlock,
   Section,
   AsidedLayout,
+  Columns,
   Card,
   Text
 } from 'seek-style-guide/react';
@@ -95,8 +96,10 @@ const renderJobDetailMetadata = () => (
         <Text secondary>{'Applications for this role will take you to the advertiser\'s site.'}</Text>
       </Section>
       <Section>
-        <Button color="gray" className={styles.halfWidthTextField}><StarIcon /> Save Job</Button>
-        <Button color="gray" className={styles.halfWidthTextField}><MailIcon /> Send Job</Button>
+        <Columns tight>
+          <Button color="gray" className={styles.fullWidthTextField}><StarIcon /> Save Job</Button>
+          <Button color="gray" className={styles.fullWidthTextField}><MailIcon /> Send Job</Button>
+        </Columns>
       </Section>
     </Card>
     <Card>
@@ -289,6 +292,62 @@ export default class Playground extends Component {
               </Section>
             </Card>
           </AsidedLayout>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Two columns</Text>
+          </Section>
+          <Columns>
+            <Card>
+              <Section>
+                <Text heading>The quick brown fox</Text>
+                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
+                <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Text heading>The quick brown fox</Text>
+                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
+                <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
+              </Section>
+            </Card>
+          </Columns>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Three columns</Text>
+          </Section>
+          <Columns>
+            <Card>
+              <Section>
+                <Text heading>The quick brown fox</Text>
+                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
+                <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Text heading>The quick brown fox</Text>
+                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
+                <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Text heading>The quick brown fox</Text>
+                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
+                <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
+              </Section>
+            </Card>
+          </Columns>
         </PageBlock>
       </div>
     );

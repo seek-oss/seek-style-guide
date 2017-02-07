@@ -1,0 +1,24 @@
+@import (reference) "~seek-style-guide/theme";
+
+.columns {
+  @media only screen and (min-width: unit(@responsive-type-breakpoint, px)) {
+    display: flex;
+  }
+}
+
+.column {
+  @media only screen and (min-width: unit(@responsive-type-breakpoint, px)) {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0 (@grid-gutter-width / 2);
+    .columns_tight & {
+      padding: 0 (@grid-gutter-width / 4);
+    }
+    &:first-child {
+      padding-left: 0 !important;
+    }
+    &:last-child {
+      padding-right: 0 !important;
+    }
+  }
+}
