@@ -207,8 +207,10 @@ export default class Playground extends Component {
                 <TextLink href="https://www.seek.com.au" chevron="right">Are you an Employer?</TextLink>
               </Section>
               <Section>
-                <TextField id="fname" label="First name" inputProps={{ type: 'text' }} className={styles.halfWidthTextField} />
-                <TextField id="lname" label="Last name" inputProps={{ type: 'text' }} className={styles.halfWidthTextField} />
+                <Columns>
+                  <TextField id="fname" label="First name" inputProps={{ type: 'text' }} className={styles.fullWidthTextField} />
+                  <TextField id="lname" label="Last name" inputProps={{ type: 'text' }} className={styles.fullWidthTextField} />
+                </Columns>
                 <TextField id="email" label="Email address" inputProps={{ type: 'email' }} className={styles.fullWidthTextField} />
                 <TextField id="password" label="Password" inputProps={{ type: 'password' }} className={styles.fullWidthTextField} />
                 <Text secondary>By registering you agree to the <TextLink href="https://www.seek.com.au">SEEK privacy policy</TextLink></Text>
