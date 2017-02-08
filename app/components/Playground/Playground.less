@@ -37,27 +37,6 @@
   width: 100%;
 }
 
-.halfWidthTextField {
-  display: inline-block;
-  width: 50%;
-  padding-right: @grid-gutter-width * 0.5;
-
-  @media only screen and (max-width: 740px) {
-    display: block;
-    width: 100%;
-    padding: 0;
-  }
-
-  &  + .halfWidthTextField {
-    padding-left: @grid-gutter-width * 0.5;
-    padding-right: 0;
-
-    @media only screen and (max-width: 740px) {
-      padding: 0;
-    }
-  }
-}
-
 .activityPanel {
   @media only screen and (min-width: 740px) {
     padding-top: @grid-row-height;
