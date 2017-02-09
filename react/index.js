@@ -34,6 +34,7 @@ export { default as HelpIcon } from './icons/HelpIcon/HelpIcon';
 export { default as PlusIcon } from './icons/PlusIcon/PlusIcon';
 export { default as DeleteIcon } from './icons/DeleteIcon/DeleteIcon';
 export { default as MailIcon } from './icons/MailIcon/MailIcon';
+export { default as CrossIcon } from './icons/CrossIcon/CrossIcon';
 
 // Fields
 export { default as TextField } from './fields/TextField/TextField';
