@@ -191,7 +191,7 @@ All type should use the standard typographic mixins, e.g.
 Under the hood, these mixins leverage [basekick](https://github.com/mjt01/basekick) to ensure that typography sits correctly on the baseline grid.
 
 
-###Responsive Breakpoint and Type
+### Responsive Breakpoint and Type
 
 The style guide exposes one responsive breakpoint:
 
