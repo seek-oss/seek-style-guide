@@ -190,6 +190,33 @@ All type should use the standard typographic mixins, e.g.
 
 Under the hood, these mixins leverage [basekick](https://github.com/mjt01/basekick) to ensure that typography sits correctly on the baseline grid.
 
+
+### Responsive Breakpoint and Type
+
+The style guide exposes one responsive breakpoint:
+
+```less
+@responsive-breakpoint: 740px;
+```
+
+Our components use this internally, and can be expected to change presentation past this breakpoint if there is an advantage in doing so (for example the `Columns` component only presents as columns past this breakpoint).
+
+We also expose responsive type mixins that may change scale and row span based on this breakpoint:
+
+```less
+.element {
+  .heroTextResponsive();
+  .headlineTextResponsive();
+  .headingTextResponsive();
+  .subheadingTextResponsive();
+  .standardTextResponsive();
+  .smallTextResponsive();
+}
+```
+
+In particular standard text is larger on a smaller screen using `.standardTextResponsive`
+
+
 ### Classic Font Stack
 
 The style guide enforces modern font styling as a default. However, some aspects of the UI may need to fall back to the classic font stack, e.g. the common header used across SEEK. This can be achieved via a simple mixin:
