@@ -4,9 +4,13 @@ import classnames from 'classnames';
 
 import Secondary from '../Secondary/Secondary';
 import Strong from '../Strong/Strong';
+import Positive from '../Positive/Positive';
+import Critical from '../Critical/Critical';
 
-const renderContent = ({ children, secondary, strong }) => {
+const renderContent = ({ children, positive, critical, secondary, strong }) => {
   const modifiers = [
+    positive ? Positive : null,
+    critical ? Critical : null,
     secondary ? Secondary : null,
     strong ? Strong : null
   ].filter(x => x);
@@ -23,6 +27,8 @@ export default function Text({
   heading,
   hero,
   raw,
+  positive,
+  critical,
   secondary,
   strong,
   ...restProps
@@ -40,7 +46,7 @@ export default function Text({
         [styles.hero]: hero,
         [styles.raw]: raw
       })}>
-      {renderContent({ children, secondary, strong })}
+      {renderContent({ children, positive, critical, secondary, strong })}
     </div>
   );
 }
@@ -54,6 +60,8 @@ Text.propTypes = {
   heading: PropTypes.bool,
   hero: PropTypes.bool,
   raw: PropTypes.bool,
+  positive: PropTypes.bool,
+  critical: PropTypes.bool,
   secondary: PropTypes.bool,
   strong: PropTypes.bool
 };
