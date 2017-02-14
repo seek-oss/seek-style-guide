@@ -8,6 +8,8 @@ export { default as Rating } from './Rating/Rating';
 // Typography
 export { default as Text } from './Text/Text';
 export { default as TextLink } from './TextLink/TextLink';
+export { default as Positive } from './Positive/Positive';
+export { default as Critical } from './Critical/Critical';
 export { default as Strong } from './Strong/Strong';
 export { default as Secondary } from './Secondary/Secondary';
 

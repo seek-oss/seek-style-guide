@@ -12,7 +12,11 @@ import {
   AsidedLayout,
   Columns,
   Card,
-  Text
+  Text,
+  Positive,
+  Critical,
+  Secondary,
+  Strong
 } from 'seek-style-guide/react';
 
 import TextLink from './Atoms/TextLink/TextLink';
@@ -350,6 +354,30 @@ export default class Playground extends Component {
               </Section>
             </Card>
           </Columns>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Text variants</Text>
+          </Section>
+          <Card>
+            <Section>
+              <Text heading>Text component modifiers</Text>
+              <Text positive>Positive text</Text>
+              <Text critical>Critical text</Text>
+              <Text secondary>Secondary text</Text>
+              <Text strong>Strong text</Text>
+            </Section>
+          </Card>
+          <Card>
+            <Section>
+              <Text heading>Inline variant components</Text>
+              <Text><Positive>Positive text</Positive></Text>
+              <Text><Critical>Critical text</Critical></Text>
+              <Text><Secondary>Secondary text</Secondary></Text>
+              <Text><Strong>Strong text</Strong></Text>
+            </Section>
+          </Card>
         </PageBlock>
       </div>
     );
