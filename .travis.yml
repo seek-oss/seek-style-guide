@@ -7,13 +7,21 @@ notifications:
 before_script:
   - npm prune
 after_success:
-  - if [ -n "$TRAVIS_PULL_REQUEST_SHA" ]; then
-      npm run deploy-surge -- -d seek-style-guide--${TRAVIS_PULL_REQUEST_SHA}.surge.sh;
-    elif [ "$TRAVIS_BRANCH" == "master" ]; then
-      npm run semantic-release;
+  - if [ ${TRAVIS_SECURE_ENV_VARS} = "true" ]; then
+      if [ -n "$TRAVIS_PULL_REQUEST_SHA" ]; then
+        npm run deploy-surge -- -d seek-style-guide--${TRAVIS_PULL_REQUEST_SHA}.surge.sh;
+      elif [ "$TRAVIS_BRANCH" == "master" ]; then
+        npm run semantic-release;
 
-      git config --global user.name "Travis-CI";
-      git config --global user.email "travis@example.com";
-      npm run build-gh-pages;
-      npm run deploy-gh-pages;
+        git config --global user.name "Travis-CI";
+        git config --global user.email "travis@example.com";
+        npm run build-gh-pages;
+        npm run deploy-gh-pages;
+      fi
+    else
+      echo -e \
+        "\n"\
+        "Skipping deployment step because secure environment variables are unavailable.\n"\
+        "This is most likely because this build is happening in the context of a fork, which is untrusted code.\n"\
+        "\n";
     fi
