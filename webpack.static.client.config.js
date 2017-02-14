@@ -71,7 +71,9 @@ const config = {
         warnings: false
       }
     })
-  ]
+  ],
+
+  stats: { children: false }
 };
 
 module.exports = decorateClientConfig(config, {
