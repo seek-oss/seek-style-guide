@@ -3,6 +3,7 @@ export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuidePr
 export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  // Alias for backwards compatibility
 export { default as Button } from './Button/Button';
 export { default as Logo } from './Logo/Logo';
+export { default as Rating } from './Rating/Rating';
 
 // Typography
 export { default as Text } from './Text/Text';

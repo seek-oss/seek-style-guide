@@ -8,6 +8,7 @@ import TextFields from 'TextFields/TextFields';
 import Autosuggest from 'Autosuggest/Autosuggest';
 import MonthPicker from 'MonthPicker/MonthPicker';
 import Dropdown from 'Dropdown/Dropdown';
+import Rating from 'Rating/Rating';
 import Icons from 'Icons/Icons';
 import Typography from 'Typography/Typography';
 import Textarea from 'Textarea/Textarea';
@@ -24,6 +25,7 @@ export default (
     <Route path="/textarea" component={Textarea} />
     <Route path="/monthpicker" component={MonthPicker} />
     <Route path="/dropdown" component={Dropdown} />
+    <Route path="/rating" component={Rating} />
     <Route path="/checkbox" component={Checkbox} />
     <Route path="/icons" component={Icons} />
     <Route path="/typography" component={Typography} />
