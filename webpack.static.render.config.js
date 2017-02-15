@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const decorateServerConfig = require('./webpack').decorateServerConfig;
+const babelConfig = require('./babel.config.js')({ reactHotLoader: false });
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const templatePath = path.resolve(__dirname, 'index.ejs');
@@ -44,13 +45,7 @@ const config = {
       {
         test: /\.js$/,
         loader: 'babel',
-        query: {
-          presets: ['es2015', 'react'],
-          plugins: [
-            'transform-class-properties',
-            'transform-object-rest-spread'
-          ]
-        },
+        query: babelConfig,
         include: appPaths
       },
       {

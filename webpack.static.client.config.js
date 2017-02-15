@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const decorateClientConfig = require('./webpack').decorateClientConfig;
+const babelConfig = require('./babel.config.js')({ reactHotLoader: false });
 
 const appCss = new ExtractTextPlugin('app.css');
 
@@ -26,13 +27,7 @@ const config = {
       {
         test: /\.js$/,
         loader: 'babel',
-        query: {
-          presets: ['es2015', 'react'],
-          plugins: [
-            'transform-class-properties',
-            'transform-object-rest-spread'
-          ]
-        },
+        query: babelConfig,
         include: appPaths
       },
       {
