@@ -1,3 +1,6 @@
+const babelConfig = require('../babel.config.js')({ reactHotLoader: false });
+require('babel-register')(babelConfig);
+
 // Create jsdom required to test user behaviours.
 // Required by `TestUtils.renderIntoDocument`
 const jsdom = require('jsdom');
