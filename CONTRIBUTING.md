@@ -1,9 +1,9 @@
 # Contributing to seek-style-guide
 
-> ⚠️ 🌏 👀 First and foremost, remember that this repo is **open source**.
+⚠️ 🌏 👀 First and foremost, remember that this repo is **open source**.
 Don't post anything or commit any code that isn't ready for the entire world to see. If you're introducing new patterns, try to keep it abstract, rather than making specific reference to the features under development. While a lot of this information is probably harmless, it's better to be safe than sorry.
 
-> If you work at SEEK and run into issues along the way, or even if you find some of these steps confusing or intimidating, please reach out to your friendly neighbourhood developer in the living style guide Slack channel. We'll be super excited to help out! 
+If you work at SEEK and run into issues along the way, or even if you find some of these steps confusing or intimidating, please reach out to your friendly neighbourhood developer in the living style guide Slack channel. We'll be super excited to help out! 
 
 ## Setup
 
