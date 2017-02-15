@@ -6,7 +6,7 @@
   "scripts": {
     "start": "BASE_HREF=/ node server",
     "test": "npm run test-unit && npm run lint && npm run build",
-    "test-unit": "BABEL_ENV=test mocha 'react/**/*.test.js' --compilers js:babel-register --require test/setup.js",
+    "test-unit": "BABEL_ENV=test mocha 'react/**/*.test.js' --require test/setup.js",
     "lint": "eslint app react test ./*.js",
     "compile-render": "NODE_ENV=production BASE_HREF=${BASE_HREF:-/} webpack --config webpack.static.render.config.js && rm dist/render.js",
     "compile-client": "NODE_ENV=production webpack --config webpack.static.client.config.js",

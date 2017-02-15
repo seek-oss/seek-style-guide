@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const decorateClientConfig = require('./webpack').decorateClientConfig;
+const babelConfig = require('./babel.config.js')({ reactHotLoader: true });
 
 // Must be absolute paths
 const appPaths = [
@@ -28,14 +29,7 @@ const config = decorateClientConfig({
       {
         test: /\.js$/,
         loader: 'babel',
-        query: {
-          presets: ['es2015', 'react'],
-          plugins: [
-            'transform-class-properties',
-            'transform-object-rest-spread',
-            'react-hot-loader/babel'
-          ]
-        },
+        query: babelConfig,
         include: appPaths
       },
       {
