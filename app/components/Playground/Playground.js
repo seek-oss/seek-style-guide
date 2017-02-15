@@ -16,7 +16,8 @@ import {
   Positive,
   Critical,
   Secondary,
-  Strong
+  Strong,
+  Separator
 } from 'seek-style-guide/react';
 
 import TextLink from './Atoms/TextLink/TextLink';
@@ -295,6 +296,11 @@ export default class Playground extends Component {
                     dangerouslySetInnerHTML={{ __html: jobDetailsContent }} // eslint-disable-line react/no-danger
                   />
                 </Text>
+              </Section>
+              <Section>
+                <Separator>
+                  <Text>You must have the <Strong>right to live and work</Strong> in this location to apply for this job.</Text>
+                </Separator>
               </Section>
             </Card>
           </AsidedLayout>

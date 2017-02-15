@@ -18,6 +18,7 @@ export { default as Columns } from './Columns/Columns';
 export { default as Card } from './Card/Card';
 export { default as PageBlock } from './PageBlock/PageBlock';
 export { default as Section } from './Section/Section';
+export { default as Separator } from './Separator/Separator';
 
 // Icons
 export { default as ChevronIcon } from './icons/ChevronIcon/ChevronIcon';
