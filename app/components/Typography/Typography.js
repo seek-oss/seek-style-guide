@@ -61,6 +61,13 @@ const typeLevels = [
     }
   },
   {
+    name: 'Tiny',
+    spec: {
+      'Line Height': '2 grid rows',
+      'Type Scale': '1'
+    }
+  },
+  {
     name: 'Touchable',
     spec: {
       'Line Height': '5 grid rows',
