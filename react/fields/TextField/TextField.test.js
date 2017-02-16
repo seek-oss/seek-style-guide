@@ -20,7 +20,7 @@ const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
 const renderer = createRenderer();
 
 describe('TextField', () => {
-  let element, textField, rootElement, label, input, help, message, messageIcon, clearField, errors;
+  let element, textField, rootElement, label, input, message, messageIcon, clearField, errors;
 
   beforeEach(() => {
     errors = [];
@@ -39,7 +39,6 @@ describe('TextField', () => {
     textField = renderer.render(element);
     label = findAllWithClass(textField, 'label')[0] || null;
     input = findAllWithClass(textField, 'input')[0] || null;
-    help = findAllWithClass(textField, 'help')[0] || null;
     message = findAllWithClass(textField, 'message')[0] || null;
     messageIcon = findAllWithClass(textField, 'messageIcon')[0] || null;
   }
@@ -50,10 +49,6 @@ describe('TextField', () => {
     rootElement = scryRenderedDOMComponentsWithClass(textField, 'root')[0];
     input = findRenderedDOMComponentWithClass(textField, 'input');
     clearField = findRenderedDOMComponentWithClass(textField, 'clearField');
-  }
-
-  function helpText() {
-    return help.props.children;
   }
 
   function messageText() {
@@ -155,46 +150,15 @@ describe('TextField', () => {
     });
   });
 
-  describe('help', () => {
-    it('should not be rendered by default', () => {
-      render(<TextField />);
-      expect(help).to.equal(null);
-    });
-
-    it('should not be rendered when message exists', () => {
-      render(<TextField help="e.g. David" message="Something went wrong" />);
-      expect(help).to.equal(null);
-    });
-
-    it('should have the right text when `help` is specified', () => {
-      render(<TextField help="e.g. David" />);
-      expect(helpText()).to.equal('e.g. David');
-    });
-
-    it('should pass through className to the help text', () => {
-      render(<TextField help="e.g. David" helpProps={{ className: 'first-name-help' }} />);
-      expect(help.props.className).to.match(/first-name-help$/);
-    });
-
-    it('should pass through other props to the help text', () => {
-      render(<TextField help="e.g. David" helpProps={{ 'data-automation': 'first-name-help' }} />);
-      expect(help.props['data-automation']).to.equal('first-name-help');
-    });
-  });
-
   describe('message', () => {
     it('should not be rendered by default', () => {
       render(<TextField />);
       expect(message).to.equal(null);
     });
 
-    it('should have the right text when `message` is specified', () => {
+    it('should have the right text when `message` is specified and no icon by default', () => {
       render(<TextField message="Something went wrong" />);
       expect(messageText()).to.equal('Something went wrong');
-    });
-
-    it('should not render the message icon when `message` is specified and TextField is valid', () => {
-      render(<TextField message="Something went wrong" />);
       expect(messageIcon).to.equal(null);
     });
 
@@ -203,21 +167,56 @@ describe('TextField', () => {
       expect(message.props.className).to.match(/first-name-message$/);
     });
 
-    it('should pass through other props to the message', () => {
-      render(<TextField message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
-      expect(message.props['data-automation']).to.equal('first-name-message');
-    });
-  });
-
-  describe('invalid', () => {
-    it('should have the invalid className', () => {
-      render(<TextField invalid={true} />);
-      expect(textField.props.className).to.contain('invalid');
+    it('should default to secondary text', () => {
+      render(<TextField message="Something went wrong" />);
+      expect(message.props.secondary).to.equal(true);
     });
 
-    it('should render a message icon', () => {
-      render(<TextField invalid={true} message="Something went wrong" />);
-      expect(messageIcon).not.to.equal(null);
+    it('should have the hasMessage className', () => {
+      render(<TextField message="Something went wrong" />);
+      expect(textField.props.className).to.contain('hasMessage');
+    });
+
+    describe('messageProps', () => {
+      it('should pass through other props to the message', () => {
+        render(<TextField message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
+        expect(message.props['data-automation']).to.equal('first-name-message');
+      });
+    });
+
+    describe('valid', () => {
+      describe('set to false', () => {
+        it('TextField should have the invalid className, message should have a icon and set text as critical', () => {
+          render(<TextField valid={false} message="Something went wrong" />);
+          expect(textField.props.className).to.contain('invalid');
+          expect(messageIcon).not.to.equal(null);
+          expect(message.props.critical).to.equal(true);
+        });
+      });
+
+      describe('set to true', () => {
+        it('Message should have a icon and set text as positive', () => {
+          render(<TextField valid={true} message="Something went right" />);
+          expect(messageIcon).not.to.equal(null);
+          expect(message.props.positive).to.equal(true);
+        });
+      });
+    });
+
+    describe('valid & messageProps secondary', () => {
+      it('secondary messageProps trumps valid = true but still have icon', () => {
+        render(<TextField valid={true} message="Something went right" messageProps={{ secondary: true }} />);
+        expect(messageIcon).not.to.equal(null);
+        expect(message.props.positive).not.to.equal(true);
+        expect(message.props.secondary).to.equal(true);
+      });
+
+      it('secondary messageProps trumps valid = false but still have icon', () => {
+        render(<TextField valid={false} message="Something went wrong" messageProps={{ secondary: true }} />);
+        expect(messageIcon).not.to.equal(null);
+        expect(message.props.critical).not.to.equal(true);
+        expect(message.props.secondary).to.equal(true);
+      });
     });
   });
 
