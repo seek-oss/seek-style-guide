@@ -218,7 +218,7 @@ export default class TextField extends Component {
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,
-      [styles.hasMessage]: message || false,
+      [styles.hasMessage]: message,
       [styles.invalid]: invalid,
       [styles.canClear]: canClear,
       [className]: className
