@@ -16,7 +16,8 @@ import {
   Positive,
   Critical,
   Secondary,
-  Strong
+  Strong,
+  Row
 } from 'seek-style-guide/react';
 
 import TextLink from './Atoms/TextLink/TextLink';
@@ -376,6 +377,20 @@ export default class Playground extends Component {
               <Text><Critical>Critical text</Critical></Text>
               <Text><Secondary>Secondary text</Secondary></Text>
               <Text><Strong>Strong text</Strong></Text>
+            </Section>
+          </Card>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>This job is no longer advertised</Text>
+          </Section>
+          <Card>
+            <Section>
+              <Text>Expired jobs remain on SEEK for 90 days after last advertised, or until they are removed by the advertiser.</Text>
+              <Row top={2} bottom={3}>
+                <Button color="pink">Search for another job</Button>
+              </Row>
             </Section>
           </Card>
         </PageBlock>
