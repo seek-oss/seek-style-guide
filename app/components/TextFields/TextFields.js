@@ -238,6 +238,7 @@ export default class TextFields extends Component {
             }}
           />
         </SandboxTogglePanel>
+
         <SandboxTogglePanel>
           <h5 className={styles.messageHeader}>Message Style Examples:</h5>
 
