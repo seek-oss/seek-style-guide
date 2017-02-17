@@ -27,7 +27,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, label, input, help, message, messageIcon, placeholder, optionGroup, childOptions, errors, option;
+  let element, dropdown, label, input, message, messageIcon, placeholder, optionGroup, childOptions, errors, option;
 
   beforeEach(() => {
     errors = [];

@@ -257,58 +257,58 @@ export default class DropDownDemo extends Component {
         </SandboxTogglePanel>
 
         <SandboxTogglePanel>
-            <h5 className={styles.messageHeader}>Message Style Examples:</h5>
+          <h5 className={styles.messageHeader}>Message Style Examples:</h5>
 
-            <SandboxToggle
-              label="Standard"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: messageStandard,
-                onChange: this.toggleMessageStandard
-              }}
-            />
+          <SandboxToggle
+            label="Standard"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageStandard,
+              onChange: this.toggleMessageStandard
+            }}
+          />
 
-            <SandboxToggle
-              label="Critical"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: messageCritical,
-                onChange: this.toggleMessageCritical
-              }}
-            />
+          <SandboxToggle
+            label="Critical"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageCritical,
+              onChange: this.toggleMessageCritical
+            }}
+          />
 
-            <SandboxToggle
-              label="Postive"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: messagePostive,
-                onChange: this.toggleMessagePostive
-              }}
-            />
+          <SandboxToggle
+            label="Postive"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messagePostive,
+              onChange: this.toggleMessagePostive
+            }}
+          />
 
-            <SandboxToggle
-              label="Adequate"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: messageAdequate,
-                onChange: this.toggleMessageAdequate
-              }}
-            />
+          <SandboxToggle
+            label="Adequate"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageAdequate,
+              onChange: this.toggleMessageAdequate
+            }}
+          />
 
-            <SandboxToggle
-              label="Reserve No Space For Message"
-              toggleType="checkbox"
-              toggleProps={{
-                type: 'checkbox',
-                checked: noReserveMessageSpace,
-                onChange: this.toggleNoReserveMessageSpace
-              }}
-            />
-          </SandboxTogglePanel>
+          <SandboxToggle
+            label="Reserve No Space For Message"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: noReserveMessageSpace,
+              onChange: this.toggleNoReserveMessageSpace
+            }}
+          />
+        </SandboxTogglePanel>
 
         <GridContainer className={styles.gridContainer}>
           <Section className={styles.section}>

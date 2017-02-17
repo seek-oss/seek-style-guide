@@ -13,7 +13,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('Textarea', () => {
-  let element, textarea, label, input, help, message, messageIcon, errors, characterCount, maxCharacters;
+  let element, textarea, label, input, message, messageIcon, errors, characterCount, maxCharacters;
 
   beforeEach(() => {
     errors = [];

@@ -241,7 +241,7 @@ export default class Textarea extends Component {
   }
 
   render() {
-    const { className, valid, message } = this.props;
+    const { className, valid } = this.props;
     const classNames = classnames({
       [styles.root]: true,
       [styles.invalid]: valid === false,
