@@ -15,6 +15,10 @@
   align-items: center;
 }
 
+.sandboxPreview {
+  min-height: auto;
+}
+
 .gridContainer {
   display: flex;
 }
@@ -26,4 +30,11 @@
   &:not(:last-child) {
     margin-right: @grid-gutter-width * 3;
   }
+}
+
+.messageHeader {
+  .subheadingText();
+  text-align: center;
+  position: absolute;
+  margin-top: -30px;
 }
