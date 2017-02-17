@@ -61,7 +61,6 @@ export default class TextFields extends Component {
     this.toggleMessageCritical = this.toggleMessageCritical.bind(this);
     this.toggleMessagePostive = this.toggleMessagePostive.bind(this);
     this.toggleMessageAdequate = this.toggleMessageAdequate.bind(this);
-    this.toggleValid = this.toggleValid.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleClear = this.handleClear.bind(this);
   }
@@ -111,13 +110,6 @@ export default class TextFields extends Component {
       messageCritical: false,
       messagePostive: false,
       messageAdequate: event.target.checked
-    });
-  }
-
-  toggleValid(event) {
-    this.setState({
-      messageStandard: false,
-      valid: event.target.checked
     });
   }
 
@@ -222,8 +214,10 @@ export default class TextFields extends Component {
           />
         </SandboxTogglePanel>
         <SandboxTogglePanel>
+          <h5 className={styles.messageHeader}>Message Style Examples:</h5>
+
           <SandboxToggle
-            label="Message Standard"
+            label="Standard"
             toggleType="checkbox"
             toggleProps={{
               type: 'checkbox',
@@ -233,7 +227,7 @@ export default class TextFields extends Component {
           />
 
           <SandboxToggle
-            label="Message Critical"
+            label="Critical"
             toggleType="checkbox"
             toggleProps={{
               type: 'checkbox',
@@ -243,7 +237,7 @@ export default class TextFields extends Component {
           />
 
           <SandboxToggle
-            label="Message Postive"
+            label="Postive"
             toggleType="checkbox"
             toggleProps={{
               type: 'checkbox',
@@ -253,7 +247,7 @@ export default class TextFields extends Component {
           />
 
           <SandboxToggle
-            label="Message Adequate"
+            label="Adequate"
             toggleType="checkbox"
             toggleProps={{
               type: 'checkbox',
