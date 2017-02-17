@@ -78,7 +78,10 @@ export default class TextField extends Component {
       }
     },
     /* eslint-disable consistent-return */
-    message: PropTypes.string,
+    message: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.oneOf([false])
+    ]),
     messageProps: PropTypes.object,
     onClear: PropTypes.func
   };
@@ -178,7 +181,11 @@ export default class TextField extends Component {
     const allMessageProps = combineClassNames(restMessageProps, styles.message);
 
     return (
-      <Text {...allMessageProps} critical={(valid === false && !secondary) || critical} positive={(valid === true && !secondary) || positive} secondary={typeof valid === 'undefined' || secondary}>
+      <Text
+        {...allMessageProps}
+        critical={(valid === false && !secondary) || critical}
+        positive={(valid === true && !secondary) || positive}
+        secondary={typeof valid === 'undefined' || secondary}>
         {this.renderMessageIcon()}
         {message}
       </Text>
@@ -208,7 +215,7 @@ export default class TextField extends Component {
       );
     }
 
-    return;
+    return null;
   }
 
   render() {
@@ -217,7 +224,7 @@ export default class TextField extends Component {
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,
-      [styles.hasMessage]: message,
+      [styles.noMarginBottom]: message || message === false,
       [styles.invalid]: valid === false,
       [styles.canClear]: canClear,
       [className]: className

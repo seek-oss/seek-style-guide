@@ -172,9 +172,14 @@ describe('TextField', () => {
       expect(message.props.secondary).to.equal(true);
     });
 
-    it('should have the hasMessage className', () => {
+    it('should have the noMarginBottom className if passed a string', () => {
       render(<TextField message="Something went wrong" />);
-      expect(textField.props.className).to.contain('hasMessage');
+      expect(textField.props.className).to.contain('noMarginBottom');
+    });
+
+    it('should have the noMarginBottom className if false', () => {
+      render(<TextField message={false} />);
+      expect(textField.props.className).to.contain('noMarginBottom');
     });
 
     describe('messageProps', () => {

@@ -29,8 +29,11 @@ const specs = {
   focus: {
     Border: '1px @sk-focus'
   },
-  invalid: {
+  messageCritical: {
     Border: '1px @sk-pink'
+  },
+  noReserveMessageSpace: {
+    'Margin bottom': '0px'
   }
 };
 
@@ -52,7 +55,8 @@ export default class TextFields extends Component {
       messageStandard: false,
       messageCritical: false,
       messagePostive: false,
-      messageAdequate: false
+      messageAdequate: false,
+      noReserveMessageSpace: false
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
@@ -61,6 +65,7 @@ export default class TextFields extends Component {
     this.toggleMessageCritical = this.toggleMessageCritical.bind(this);
     this.toggleMessagePostive = this.toggleMessagePostive.bind(this);
     this.toggleMessageAdequate = this.toggleMessageAdequate.bind(this);
+    this.toggleNoReserveMessageSpace = this.toggleNoReserveMessageSpace.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleClear = this.handleClear.bind(this);
   }
@@ -82,7 +87,8 @@ export default class TextFields extends Component {
       messageStandard: event.target.checked,
       messageCritical: false,
       messagePostive: false,
-      messageAdequate: false
+      messageAdequate: false,
+      noReserveMessageSpace: false
     });
   }
 
@@ -91,7 +97,8 @@ export default class TextFields extends Component {
       messageStandard: false,
       messageCritical: event.target.checked,
       messagePostive: false,
-      messageAdequate: false
+      messageAdequate: false,
+      noReserveMessageSpace: false
     });
   }
 
@@ -100,7 +107,8 @@ export default class TextFields extends Component {
       messageStandard: false,
       messageCritical: false,
       messagePostive: event.target.checked,
-      messageAdequate: false
+      messageAdequate: false,
+      noReserveMessageSpace: false
     });
   }
 
@@ -109,7 +117,18 @@ export default class TextFields extends Component {
       messageStandard: false,
       messageCritical: false,
       messagePostive: false,
-      messageAdequate: event.target.checked
+      messageAdequate: event.target.checked,
+      noReserveMessageSpace: false
+    });
+  }
+
+  toggleNoReserveMessageSpace(event) {
+    this.setState({
+      messageStandard: false,
+      messageCritical: false,
+      messagePostive: false,
+      messageAdequate: false,
+      noReserveMessageSpace: event.target.checked
     });
   }
 
@@ -126,14 +145,16 @@ export default class TextFields extends Component {
   }
 
   render() {
-    const { focus, baseline, inputValue, messageStandard, messageCritical, messagePostive, messageAdequate } = this.state;
+    const { focus, baseline, inputValue, messageStandard, messageCritical, messagePostive, messageAdequate, noReserveMessageSpace } = this.state;
     const className = classnames({
       [styles.input]: true,
       [textFieldStyles.rootFocus]: focus
     });
     const spec = getSpec({
       default: true,
-      focus
+      focus,
+      messageCritical,
+      noReserveMessageSpace
     });
 
     let message;
@@ -160,6 +181,10 @@ export default class TextFields extends Component {
       messageProps.secondary = true;
     }
 
+    if (noReserveMessageSpace) {
+      message = false;
+    }
+
     const textfield = (
       <TextField
         id="firstName"
@@ -183,7 +208,7 @@ export default class TextFields extends Component {
           <div className={styles.sandboxContainer}>
             <GridContainer>
               <div className={styles.sandbox}>
-                <SandboxPreview>
+                <SandboxPreview className={styles.sandboxPreview}>
                   {textfield}
                 </SandboxPreview>
                 <div style={{ position: 'absolute', top: 0, right: 0 }}>
@@ -253,6 +278,16 @@ export default class TextFields extends Component {
               type: 'checkbox',
               checked: messageAdequate,
               onChange: this.toggleMessageAdequate
+            }}
+          />
+
+          <SandboxToggle
+            label="Reserve No Space For Message"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: noReserveMessageSpace,
+              onChange: this.toggleNoReserveMessageSpace
             }}
           />
         </SandboxTogglePanel>
