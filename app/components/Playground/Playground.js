@@ -93,17 +93,19 @@ const renderJobDetailDate = () => (
 const renderJobDetailMetadata = () => (
   <div>
     <Card>
-      <Section>
-        <Button color="pink" className={styles.fullWidthTextField}>Apply for this job</Button>
-      </Section>
-      <Section>
-        <Text secondary>{'Applications for this role will take you to the advertiser\'s site.'}</Text>
-      </Section>
-      <Section>
-        <Columns tight>
-          <Button color="gray" className={styles.fullWidthTextField}><StarIcon /> Save Job</Button>
-          <Button color="gray" className={styles.fullWidthTextField}><MailIcon /> Send Job</Button>
-        </Columns>
+      <Section group>
+        <Section>
+          <Button color="pink" className={styles.fullWidthTextField}>Apply for this job</Button>
+        </Section>
+        <Section>
+          <Text secondary>{'Applications for this role will take you to the advertiser\'s site.'}</Text>
+        </Section>
+        <Section>
+          <Columns tight>
+            <Button color="gray" className={styles.fullWidthTextField}><StarIcon /> Save Job</Button>
+            <Button color="gray" className={styles.fullWidthTextField}><MailIcon /> Send Job</Button>
+          </Columns>
+        </Section>
       </Section>
     </Card>
     <Card>
@@ -234,14 +236,16 @@ export default class Playground extends Component {
           </Section>
 
           <AsidedLayout reverse renderAside={renderAsideRecommendedJobs} size="240px">
-            <Card>
+            <Card group>
               {
                 [0, 1, 2, 3].map(n => (
-                  <Section key={n} className={styles.borderBottom}>
-                    <TextLink subheading href="https://www.seek.com.au">Building Supervisor</TextLink>
-                    <Text>A1 Building Group</Text>
-                    <Text>CBD & Inner Suburbs, Melbourne</Text>
-                  </Section>
+                  <Card key={n}>
+                    <Section>
+                      <TextLink subheading href="https://www.seek.com.au">Building Supervisor</TextLink>
+                      <Text>A1 Building Group</Text>
+                      <Text>CBD & Inner Suburbs, Melbourne</Text>
+                    </Section>
+                  </Card>
                 ))
               }
             </Card>
@@ -255,24 +259,26 @@ export default class Playground extends Component {
             <Tab>Applied</Tab>
           </Section>
 
-          <Card>
+          <Card group>
             {
               [0, 1, 2, 3].map(n => (
-                <Section key={n} className={styles.borderBottom}>
-                  <AsidedLayout renderAside={renderAsideMyActivity} size="270px">
-                    <TextLink subheading href="https://www.seek.com.au">Local Health District Registered Nurse</TextLink>
-                    <Text>Western NSW Local Health District</Text>
-                    <Text raw>Job posted 30d+ ago</Text>
-                    <Text raw secondary>Dubbo & Central NSW</Text>
-                    <Text secondary>Salary Rate: $29.32 to $41.18 ph</Text>
-                    <Text>
-                      Are you a Registered Nurse and looking for variety and challenges on a daily basis? Yes? Here is your chance - Full Time or Part-time available.
-                    </Text>
-                  </AsidedLayout>
-                  <AsidedLayout renderAside={renderAsideMyActivityActions} size="270px">
-                    <IconButton icon="plus">Add Notes</IconButton>
-                  </AsidedLayout>
-                </Section>
+                <Card key={n}>
+                  <Section>
+                    <AsidedLayout renderAside={renderAsideMyActivity} size="270px">
+                      <TextLink subheading href="https://www.seek.com.au">Local Health District Registered Nurse</TextLink>
+                      <Text>Western NSW Local Health District</Text>
+                      <Text raw>Job posted 30d+ ago</Text>
+                      <Text raw secondary>Dubbo & Central NSW</Text>
+                      <Text secondary>Salary Rate: $29.32 to $41.18 ph</Text>
+                      <Text>
+                        Are you a Registered Nurse and looking for variety and challenges on a daily basis? Yes? Here is your chance - Full Time or Part-time available.
+                      </Text>
+                    </AsidedLayout>
+                    <AsidedLayout renderAside={renderAsideMyActivityActions} size="270px">
+                      <IconButton icon="plus">Add Notes</IconButton>
+                    </AsidedLayout>
+                  </Section>
+                </Card>
               ))
             }
           </Card>
@@ -288,16 +294,39 @@ export default class Playground extends Component {
           </Section>
 
           <AsidedLayout reverse renderAside={renderJobDetailMetadata} size="360px">
-            <Card>
-              <Section>
-                <Text>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: jobDetailsContent }} // eslint-disable-line react/no-danger
-                  />
-                </Text>
-              </Section>
+            <Card group>
+              <Card>
+                <Section>
+                  <Text>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: jobDetailsContent }} // eslint-disable-line react/no-danger
+                    />
+                  </Text>
+                </Section>
+              </Card>
+              <Card>
+                <Section>
+                  <Text>You must have the <Strong>right to live and work</Strong> in this location to apply for this job.</Text>
+                </Section>
+              </Card>
             </Card>
           </AsidedLayout>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>This job is no longer advertised</Text>
+          </Section>
+          <Card>
+            <Section group>
+              <Section>
+                <Text>Expired jobs remain on SEEK for 90 days after last advertised, or until they are removed by the advertiser.</Text>
+              </Section>
+              <Section>
+                <Button color="pink">Search for another job</Button>
+              </Section>
+            </Section>
+          </Card>
         </PageBlock>
 
         <PageBlock>
@@ -360,23 +389,25 @@ export default class Playground extends Component {
           <Section header>
             <Text hero>Text variants</Text>
           </Section>
-          <Card>
-            <Section>
-              <Text heading>Text component modifiers</Text>
-              <Text positive>Positive text</Text>
-              <Text critical>Critical text</Text>
-              <Text secondary>Secondary text</Text>
-              <Text strong>Strong text</Text>
-            </Section>
-          </Card>
-          <Card>
-            <Section>
-              <Text heading>Inline variant components</Text>
-              <Text><Positive>Positive text</Positive></Text>
-              <Text><Critical>Critical text</Critical></Text>
-              <Text><Secondary>Secondary text</Secondary></Text>
-              <Text><Strong>Strong text</Strong></Text>
-            </Section>
+          <Card group>
+            <Card>
+              <Section>
+                <Text heading>Text component modifiers</Text>
+                <Text positive>Positive text</Text>
+                <Text critical>Critical text</Text>
+                <Text secondary>Secondary text</Text>
+                <Text strong>Strong text</Text>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Text heading>Inline variant components</Text>
+                <Text><Positive>Positive text</Positive></Text>
+                <Text><Critical>Critical text</Critical></Text>
+                <Text><Secondary>Secondary text</Secondary></Text>
+                <Text><Strong>Strong text</Strong></Text>
+              </Section>
+            </Card>
           </Card>
         </PageBlock>
       </div>
