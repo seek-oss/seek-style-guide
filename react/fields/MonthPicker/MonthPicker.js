@@ -4,9 +4,11 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
+import TickCircleIcon from '../../icons/TickCircleIcon/TickCircleIcon';
 import CustomMonthPicker from './CustomMonthPicker/CustomMonthPicker';
 import NativeMonthPicker from './NativeMonthPicker/NativeMonthPicker';
 
+import Text from '../../Text/Text';
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
 
@@ -35,7 +37,7 @@ export default class MonthPicker extends Component {
     },
     className: PropTypes.string,
     /* eslint-enable consistent-return */
-    invalid: PropTypes.bool,
+    valid: PropTypes.bool,
     label: PropTypes.string,
     /* eslint-disable consistent-return */
     labelProps: (props, propName, componentName) => {
@@ -54,7 +56,10 @@ export default class MonthPicker extends Component {
         return new Error(`\`labelProps.htmlFor\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    message: PropTypes.string,
+    message: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.oneOf([false])
+    ]),
     messageProps: PropTypes.object,
     value: PropTypes.shape({
       month: PropTypes.number,
@@ -68,10 +73,14 @@ export default class MonthPicker extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    invalid: false,
     label: '',
+    native: false,
     message: '',
-    native: false
+    messageProps: {
+      critical: false,
+      positive: false,
+      secondary: false
+    }
   };
 
   constructor() {
@@ -80,7 +89,7 @@ export default class MonthPicker extends Component {
     this.renderLabel = this.renderLabel.bind(this);
     this.renderInput = this.renderInput.bind(this);
     this.renderMessage = this.renderMessage.bind(this);
-    this.renderIcon = this.renderIcon.bind(this);
+    this.renderMessageIcon = this.renderMessageIcon.bind(this);
   }
 
   renderLabel() {
@@ -104,14 +113,14 @@ export default class MonthPicker extends Component {
   }
 
   renderInput() {
-    const { id, value, onChange, native, invalid, onBlur } = this.props;
+    const { id, value, onChange, native, valid, onBlur } = this.props;
     const monthPickerProps = {
       className: styles.input,
       ...(id ? { id } : {}),
       value,
       onChange,
       onBlur,
-      invalid
+      valid
     };
 
     return (
@@ -122,44 +131,58 @@ export default class MonthPicker extends Component {
   }
 
   renderMessage() {
-    const { message } = this.props;
+    const { message, valid } = this.props;
 
     if (!message) {
       return;
     }
 
-    const { messageProps } = this.props;
-    const allMessageProps = combineClassNames(messageProps, styles.message);
+    const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
+    const allMessageProps = combineClassNames(restMessageProps, styles.message);
 
     return (
-      <p {...allMessageProps}>
-        {this.renderIcon()}
+      <Text
+        {...allMessageProps}
+        critical={(valid === false && !secondary) || critical}
+        positive={(valid === true && !secondary) || positive}
+        secondary={typeof valid === 'undefined' || secondary}>
+        {this.renderMessageIcon()}
         {message}
-      </p>
+      </Text>
     );
   }
 
-  renderIcon() {
-    const { invalid } = this.props;
+  renderMessageIcon() {
+    const { valid } = this.props;
 
-    if (!invalid) {
-      return;
+    if (valid === false) {
+      return (
+        <ErrorIcon
+          filled={true}
+          className={styles.messageIcon}
+          svgClassName={styles.messageIconSvg}
+        />
+      );
     }
 
-    return (
-      <ErrorIcon
-        filled={true}
-        className={styles.messageIcon}
-        svgClassName={styles.messageIconSvg}
-      />
-    );
+    if (valid === true) {
+      return (
+        <TickCircleIcon
+          filled={true}
+          className={styles.messageIcon}
+          svgClassName={styles.messageIconSvg}
+        />
+      );
+    }
+
+    return null;
   }
 
   render() {
-    const { className, invalid } = this.props;
+    const { className, message } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: invalid,
+      [styles.noMarginBottom]: message || message === false,
       [className]: className
     });
 

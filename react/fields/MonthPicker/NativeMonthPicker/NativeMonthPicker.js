@@ -34,13 +34,12 @@ export default class NativeMonthPicker extends Component {
       month: PropTypes.number,
       year: PropTypes.number
     }),
-    invalid: PropTypes.bool,
+    valid: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string
   };
 
   static defaultProps = {
-    invalid: false,
     value: {},
     className: ''
   };
@@ -69,13 +68,13 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, invalid, id } = this.props;
+    const { value, className, valid, id } = this.props;
 
     const inputValue = makeMonthString(value);
 
     const rootClasses = classnames({
       [styles.root]: true,
-      [styles.invalid]: invalid,
+      [styles.invalid]: valid === false,
       [className]: className
     });
 

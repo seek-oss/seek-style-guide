@@ -9,26 +9,16 @@
   &:last-child {
     margin-bottom: @grid-row-height * 3;
   }
+
+  .noMarginBottom & {
+    margin-bottom: 0;
+  }
 }
 
 .label {
   .standardText();
   display: inline-block;
   margin-bottom: @grid-row-height;
-}
-
-.help {
-  .standardText();
-}
-
-.message {
-  .standardText();
-  margin-bottom: @grid-row-height;
-  min-height: (@grid-row-height * @standard-type-row-span);
-
-  .invalid & {
-    color: @sk-pink;
-  }
 }
 
 .messageIcon {
