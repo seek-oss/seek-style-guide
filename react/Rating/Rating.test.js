@@ -72,7 +72,7 @@ describe('Rating', () => {
         props.svgClassName === 'star-class-name';
       return testStars(findStars(),
         [hasAppliedSvgClassName, hasAppliedSvgClassName, hasAppliedSvgClassName,
-         hasAppliedSvgClassName, hasAppliedSvgClassName]
+          hasAppliedSvgClassName, hasAppliedSvgClassName]
        );
     });
 
