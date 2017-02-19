@@ -8,6 +8,8 @@ export { default as Rating } from './Rating/Rating';
 // Typography
 export { default as Text } from './Text/Text';
 export { default as TextLink } from './TextLink/TextLink';
+export { default as Positive } from './Positive/Positive';
+export { default as Critical } from './Critical/Critical';
 export { default as Strong } from './Strong/Strong';
 export { default as Secondary } from './Secondary/Secondary';
 
@@ -36,6 +38,9 @@ export { default as PlusIcon } from './icons/PlusIcon/PlusIcon';
 export { default as DeleteIcon } from './icons/DeleteIcon/DeleteIcon';
 export { default as MailIcon } from './icons/MailIcon/MailIcon';
 export { default as CrossIcon } from './icons/CrossIcon/CrossIcon';
+export { default as FacebookIcon } from './icons/FacebookIcon/FacebookIcon';
+export { default as LinkedInIcon } from './icons/LinkedInIcon/LinkedInIcon';
+export { default as TwitterIcon } from './icons/TwitterIcon/TwitterIcon';
 
 // Fields
 export { default as TextField } from './fields/TextField/TextField';
