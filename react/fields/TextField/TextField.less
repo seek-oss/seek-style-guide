@@ -2,7 +2,7 @@
 @import (reference) "ClearField/ClearFieldVariables";
 
 .root {
-  display: inline-block;
+  display: block;
   position: relative;
 }
 
@@ -31,10 +31,13 @@
     .focus();
   }
 
+  .hasMessage & {
+    margin-bottom: 0;
+  }
+
   .invalid & {
     border-color: transparent;
     box-shadow: 0 0 0 @field-border-width @sk-pink;
-    margin-bottom: 0;
 
     &:not([readonly]):not([disabled]):focus,
     .rootFocus & {
@@ -55,10 +58,6 @@
   }
 }
 
-.help {
-  .standardText();
-}
-
 .clearField {
   position: absolute;
   right: 0;
@@ -69,16 +68,6 @@
     opacity: 1;
     transition: opacity .3s ease;
     max-width: initial;
-  }
-}
-
-.message {
-  .standardText();
-  margin-bottom: @grid-row-height;
-  min-height: (@grid-row-height * @standard-type-row-span);
-
-  .invalid & {
-    color: @sk-pink;
   }
 }
 

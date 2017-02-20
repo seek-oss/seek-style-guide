@@ -4,7 +4,11 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
+import TickCircleIcon from '../../icons/TickCircleIcon/TickCircleIcon';
+
 import ClearField from './ClearField/ClearField';
+
+import Text from '../../Text/Text';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -74,8 +78,6 @@ export default class TextField extends Component {
       }
     },
     /* eslint-disable consistent-return */
-    help: PropTypes.string,
-    helpProps: PropTypes.object,
     message: PropTypes.string,
     messageProps: PropTypes.object,
     onClear: PropTypes.func
@@ -86,8 +88,12 @@ export default class TextField extends Component {
     className: '',
     invalid: false,
     label: '',
-    help: '',
-    message: ''
+    message: '',
+    messageProps: {
+      critical: false,
+      positive: false,
+      valid: false
+    }
   };
 
   constructor() {
@@ -96,9 +102,8 @@ export default class TextField extends Component {
     this.storeInputReference = this.storeInputReference.bind(this);
     this.renderLabel = this.renderLabel.bind(this);
     this.renderInput = this.renderInput.bind(this);
-    this.renderHelp = this.renderHelp.bind(this);
     this.renderMessage = this.renderMessage.bind(this);
-    this.renderIcon = this.renderIcon.bind(this);
+    this.renderMessageIcon = this.renderMessageIcon.bind(this);
     this.handleMouseDownOnClear = this.handleMouseDownOnClear.bind(this);
   }
 
@@ -163,23 +168,6 @@ export default class TextField extends Component {
     );
   }
 
-  renderHelp() {
-    const { message, help } = this.props;
-
-    if (message || !help) {
-      return;
-    }
-
-    const { helpProps } = this.props;
-    const allHelpProps = combineClassNames(helpProps, styles.help);
-
-    return (
-      <p {...allHelpProps}>
-        {help}
-      </p>
-    );
-  }
-
   renderMessage() {
     const { message } = this.props;
 
@@ -187,39 +175,50 @@ export default class TextField extends Component {
       return;
     }
 
-    const { messageProps } = this.props;
-    const allMessageProps = combineClassNames(messageProps, styles.message);
+    const { critical, positive, valid, ...restMessageProps } = this.props.messageProps;
+    const allMessageProps = combineClassNames(restMessageProps, styles.message);
 
     return (
-      <p {...allMessageProps}>
-        {this.renderIcon()}
+      <Text {...allMessageProps} critical={critical} positive={positive} secondary={(!critical && !positive) || valid}>
+        {this.renderMessageIcon()}
         {message}
-      </p>
+      </Text>
     );
   }
 
-  renderIcon() {
-    const { invalid } = this.props;
+  renderMessageIcon() {
+    const { critical, positive, valid } = this.props.messageProps;
 
-    if (!invalid) {
-      return;
+    if (critical) {
+      return (
+        <ErrorIcon
+          filled={true}
+          className={styles.messageIcon}
+          svgClassName={styles.messageIconSvg}
+        />
+      );
     }
 
-    return (
-      <ErrorIcon
-        filled={true}
-        className={styles.messageIcon}
-        svgClassName={styles.messageIconSvg}
-      />
-    );
+    if (positive || valid) {
+      return (
+        <TickCircleIcon
+          filled={true}
+          className={styles.messageIcon}
+          svgClassName={styles.messageIconSvg}
+        />
+      );
+    }
+
+    return;
   }
 
   render() {
-    const { className, invalid, onClear, inputProps = {} } = this.props;
+    const { className, invalid, message, onClear, inputProps = {} } = this.props;
     const hasValue = (inputProps.value && inputProps.value.length > 0);
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,
+      [styles.hasMessage]: message,
       [styles.invalid]: invalid,
       [styles.canClear]: canClear,
       [className]: className
@@ -230,7 +229,6 @@ export default class TextField extends Component {
         {this.renderLabel()}
         {this.renderInput()}
         {this.renderClear()}
-        {this.renderHelp()}
         {this.renderMessage()}
       </div>
     );

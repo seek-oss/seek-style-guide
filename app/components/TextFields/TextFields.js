@@ -47,16 +47,24 @@ export default class TextFields extends Component {
 
     this.state = {
       focus: false,
-      help: false,
       invalid: false,
       baseline: false,
-      inputValue: ''
+      inputValue: '',
+      messageToggle: false,
+      messageProps: {
+        critical: false,
+        positive: false,
+        valid: false
+      }
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
-    this.toggleHelp = this.toggleHelp.bind(this);
     this.toggleInvalid = this.toggleInvalid.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
+    this.toggleMessage = this.toggleMessage.bind(this);
+    this.toggleMessagePropsCritical = this.toggleMessagePropsCritical.bind(this);
+    this.toggleMessagePropsPositive = this.toggleMessagePropsPositive.bind(this);
+    this.toggleMessagePropsValid = this.toggleMessagePropsValid.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleClear = this.handleClear.bind(this);
   }
@@ -64,12 +72,6 @@ export default class TextFields extends Component {
   toggleFocus(event) {
     this.setState({
       focus: event.target.checked
-    });
-  }
-
-  toggleHelp(event) {
-    this.setState({
-      help: event.target.checked
     });
   }
 
@@ -82,6 +84,40 @@ export default class TextFields extends Component {
   toggleBaseline(event) {
     this.setState({
       baseline: event.target.checked
+    });
+  }
+
+  toggleMessage(event) {
+    this.setState({
+      messageToggle: event.target.checked,
+      messageProps: {}
+    });
+  }
+
+  toggleMessagePropsCritical(event) {
+    this.setState({
+      messageToggle: false,
+      messageProps: {
+        critical: event.target.checked
+      }
+    });
+  }
+
+  toggleMessagePropsPositive(event) {
+    this.setState({
+      messageToggle: false,
+      messageProps: {
+        positive: event.target.checked
+      }
+    });
+  }
+
+  toggleMessagePropsValid(event) {
+    this.setState({
+      messageToggle: false,
+      messageProps: {
+        valid: event.target.checked
+      }
     });
   }
 
@@ -98,7 +134,7 @@ export default class TextFields extends Component {
   }
 
   render() {
-    const { focus, help, invalid, baseline, inputValue } = this.state;
+    const { focus, invalid, baseline, inputValue, messageToggle, messageProps } = this.state;
     const className = classnames({
       [styles.input]: true,
       [textFieldStyles.rootFocus]: focus
@@ -106,21 +142,39 @@ export default class TextFields extends Component {
     const spec = getSpec({
       default: true,
       focus,
-      invalid
+      invalid,
+      messageProps
     });
+
+    let message;
+
+    if (messageToggle) {
+      message = 'e.g. David';
+    }
+
+    if (messageProps.critical) {
+      message = 'Something went wrong';
+    }
+    if (messageProps.positive) {
+      message = 'Looking good ;)';
+    }
+    if (messageProps.valid) {
+      message = 'Could be better, go on';
+    }
+
     const textfield = (
       <TextField
         id="firstName"
         className={className}
         invalid={invalid}
         label="First Name"
-        help={help ? 'e.g. David' : ''}
-        message={invalid ? 'Something went wrong' : ''}
+        message={message}
         inputProps={{
           type: 'search',
           onChange: this.handleChange,
           value: inputValue
         }}
+        messageProps={messageProps}
         onClear={this.handleClear}
       />
     );
@@ -161,21 +215,54 @@ export default class TextFields extends Component {
             }}
           />
           <SandboxToggle
-            label="Help"
-            toggleType="checkbox"
-            toggleProps={{
-              type: 'checkbox',
-              checked: help,
-              onChange: this.toggleHelp
-            }}
-          />
-          <SandboxToggle
             label="Invalid"
             toggleType="checkbox"
             toggleProps={{
               type: 'checkbox',
               checked: invalid,
               onChange: this.toggleInvalid
+            }}
+          />
+        </SandboxTogglePanel>
+
+        <SandboxTogglePanel>
+          <SandboxToggle
+            label="Message Standard"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageToggle,
+              onChange: this.toggleMessage
+            }}
+          />
+
+          <SandboxToggle
+            label="Message Critical"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageProps.critical,
+              onChange: this.toggleMessagePropsCritical
+            }}
+          />
+
+          <SandboxToggle
+            label="Message Positive"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageProps.positive,
+              onChange: this.toggleMessagePropsPositive
+            }}
+          />
+
+          <SandboxToggle
+            label="Message Valid"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageProps.valid,
+              onChange: this.toggleMessagePropsValid
             }}
           />
         </SandboxTogglePanel>
