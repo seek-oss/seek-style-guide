@@ -3,6 +3,13 @@
 .root {
   background: @sk-white;
   margin-bottom: (@grid-row-height * 2);
+  .group & {
+    margin-bottom: 0;
+    box-shadow: inset 0 -1px 0 0 @sk-gray-medium;
+    &:last-child {
+      box-shadow: none;
+    }
+  }
 }
 
 .transparent {
