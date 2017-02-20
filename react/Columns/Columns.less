@@ -1,13 +1,13 @@
 @import (reference) "~seek-style-guide/theme";
 
 .columns {
-  @media only screen and (min-width: unit(@responsive-breakpoint, px)) {
+  @media only screen and (min-width: @responsive-breakpoint) {
     display: flex;
   }
 }
 
 .column {
-  @media only screen and (min-width: unit(@responsive-breakpoint, px)) {
+  @media only screen and (min-width: @responsive-breakpoint) {
     flex-basis: 0;
     flex-grow: 1;
     padding: 0 (@grid-gutter-width / 2);
