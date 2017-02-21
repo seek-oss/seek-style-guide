@@ -29,7 +29,7 @@ describe('Rating', () => {
     expect(findStars().length).to.equal(5);
   });
 
-  describe('should render correct start rating', () => {
+  describe('should render correct star rating', () => {
     const isFilled = ({ props }) => props.filled === true;
     const isHalfFilled = ({ props }) => props.markup === 'mock svg';
     const isEmpty = ({ props }) => props.filled === false;
