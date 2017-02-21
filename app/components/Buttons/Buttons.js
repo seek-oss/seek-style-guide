@@ -96,6 +96,7 @@ export default class Buttons extends Component {
     this.state = {
       color: 'pink',
       icon: '',
+      component: '',
       hover: false,
       active: false,
       focus: false,
@@ -105,6 +106,7 @@ export default class Buttons extends Component {
 
     this.setColor = this.setColor.bind(this);
     this.setIcon = this.setIcon.bind(this);
+    this.setComponent = this.setComponent.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
     this.toggleActive = this.toggleActive.bind(this);
     this.toggleFocus = this.toggleFocus.bind(this);
@@ -121,6 +123,12 @@ export default class Buttons extends Component {
   setIcon(event) {
     this.setState({
       icon: event.target.value
+    });
+  }
+
+  setComponent(event) {
+    this.setState({
+      component: event.target.value
     });
   }
 
@@ -155,7 +163,7 @@ export default class Buttons extends Component {
   }
 
   render() {
-    const { color, icon, hover, active, focus, loading, baseline } = this.state;
+    const { color, icon, hover, active, focus, loading, baseline, component } = this.state;
     const isPink = (color === 'pink');
     const isBlue = (color === 'blue');
     const isGray = (color === 'gray');
@@ -183,7 +191,11 @@ export default class Buttons extends Component {
       React.createElement(icons[icon], { filled: true, svgClassName: styles.iconSvg }) :
       null;
     const buttonComponent = (
-      <Button color={color} className={className} loading={loading}>
+      <Button
+        {...(component ? { component } : {})}
+        color={color}
+        className={className}
+        loading={loading}>
         {iconComponent}
         Click here
       </Button>
@@ -249,6 +261,18 @@ export default class Buttons extends Component {
               type: 'checkbox',
               checked: loading,
               onChange: this.toggleLoading
+            }}
+          />
+          <div className={styles.divider} />
+          <SandboxToggle
+            toggleType="select"
+            toggleProps={{
+              options: [
+                { name: 'As Button', value: '' },
+                { name: 'As Anchor', value: 'a' },
+                { name: 'As Div', value: 'div' }
+              ],
+              onChange: this.setComponent
             }}
           />
           <div className={styles.divider} />
