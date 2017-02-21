@@ -3,9 +3,10 @@ import styles from './MonthPicker.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
 import CustomMonthPicker from './CustomMonthPicker/CustomMonthPicker';
 import NativeMonthPicker from './NativeMonthPicker/NativeMonthPicker';
+
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -35,7 +36,7 @@ export default class MonthPicker extends Component {
     },
     className: PropTypes.string,
     /* eslint-enable consistent-return */
-    invalid: PropTypes.bool,
+    valid: PropTypes.bool,
     label: PropTypes.string,
     /* eslint-disable consistent-return */
     labelProps: (props, propName, componentName) => {
@@ -54,8 +55,6 @@ export default class MonthPicker extends Component {
         return new Error(`\`labelProps.htmlFor\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    message: PropTypes.string,
-    messageProps: PropTypes.object,
     value: PropTypes.shape({
       month: PropTypes.number,
       year: PropTypes.number
@@ -68,9 +67,7 @@ export default class MonthPicker extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    invalid: false,
     label: '',
-    message: '',
     native: false
   };
 
@@ -79,8 +76,6 @@ export default class MonthPicker extends Component {
 
     this.renderLabel = this.renderLabel.bind(this);
     this.renderInput = this.renderInput.bind(this);
-    this.renderMessage = this.renderMessage.bind(this);
-    this.renderIcon = this.renderIcon.bind(this);
   }
 
   renderLabel() {
@@ -104,14 +99,14 @@ export default class MonthPicker extends Component {
   }
 
   renderInput() {
-    const { id, value, onChange, native, invalid, onBlur } = this.props;
+    const { id, value, onChange, native, valid, onBlur } = this.props;
     const monthPickerProps = {
       className: styles.input,
       ...(id ? { id } : {}),
       value,
       onChange,
       onBlur,
-      invalid
+      valid
     };
 
     return (
@@ -121,45 +116,10 @@ export default class MonthPicker extends Component {
     );
   }
 
-  renderMessage() {
-    const { message } = this.props;
-
-    if (!message) {
-      return;
-    }
-
-    const { messageProps } = this.props;
-    const allMessageProps = combineClassNames(messageProps, styles.message);
-
-    return (
-      <p {...allMessageProps}>
-        {this.renderIcon()}
-        {message}
-      </p>
-    );
-  }
-
-  renderIcon() {
-    const { invalid } = this.props;
-
-    if (!invalid) {
-      return;
-    }
-
-    return (
-      <ErrorIcon
-        filled={true}
-        className={styles.messageIcon}
-        svgClassName={styles.messageIconSvg}
-      />
-    );
-  }
-
   render() {
-    const { className, invalid } = this.props;
+    const { className } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: invalid,
       [className]: className
     });
 
@@ -167,7 +127,7 @@ export default class MonthPicker extends Component {
       <div className={classNames}>
         {this.renderLabel()}
         {this.renderInput()}
-        {this.renderMessage()}
+        <FieldMessage {...this.props} />
       </div>
     );
   }

@@ -2,7 +2,6 @@
 @import (reference) "ClearField/ClearFieldVariables";
 
 .root {
-  display: inline-block;
   position: relative;
 }
 
@@ -15,7 +14,6 @@
 .input {
   .touchableText();
   padding: 0 @field-gutter-width;
-  margin-bottom: (@grid-row-height * 3);
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   color: @sk-charcoal;
@@ -34,7 +32,6 @@
   .invalid & {
     border-color: transparent;
     box-shadow: 0 0 0 @field-border-width @sk-pink;
-    margin-bottom: 0;
 
     &:not([readonly]):not([disabled]):focus,
     .rootFocus & {
@@ -55,10 +52,6 @@
   }
 }
 
-.help {
-  .standardText();
-}
-
 .clearField {
   position: absolute;
   right: 0;
@@ -70,26 +63,4 @@
     transition: opacity .3s ease;
     max-width: initial;
   }
-}
-
-.message {
-  .standardText();
-  margin-bottom: @grid-row-height;
-  min-height: (@grid-row-height * @standard-type-row-span);
-
-  .invalid & {
-    color: @sk-pink;
-  }
-}
-
-.messageIcon {
-  position: relative;
-  top: 2px;
-  margin-right: 4px;
-}
-
-.messageIconSvg {
-  width: 14px;
-  height: 14px;
-  fill: currentColor;
 }

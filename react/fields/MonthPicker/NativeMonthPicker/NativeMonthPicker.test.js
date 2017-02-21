@@ -53,8 +53,8 @@ describe('NativeMonthPicker', () => {
     expect(errors.length).to.equal(0);
   });
 
-  it('should assign invalid className when invalid is true', () => {
-    render(<NativeMonthPicker invalid={true} />);
+  it('should assign invalid className when valid is false', () => {
+    render(<NativeMonthPicker valid={false} />);
     expect(rootElement.props.className).to.contain('invalid');
   });
 

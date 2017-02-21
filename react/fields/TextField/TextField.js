@@ -3,8 +3,9 @@ import styles from './TextField.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
 import ClearField from './ClearField/ClearField';
+
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -42,7 +43,7 @@ export default class TextField extends Component {
     },
     /* eslint-enable consistent-return */
     className: PropTypes.string,
-    invalid: PropTypes.bool,
+    valid: PropTypes.bool,
     label: PropTypes.string,
     /* eslint-disable consistent-return */
     labelProps: (props, propName, componentName) => {
@@ -73,21 +74,13 @@ export default class TextField extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    /* eslint-disable consistent-return */
-    help: PropTypes.string,
-    helpProps: PropTypes.object,
-    message: PropTypes.string,
-    messageProps: PropTypes.object,
     onClear: PropTypes.func
   };
 
   static defaultProps = {
     id: '',
     className: '',
-    invalid: false,
-    label: '',
-    help: '',
-    message: ''
+    label: ''
   };
 
   constructor() {
@@ -96,9 +89,6 @@ export default class TextField extends Component {
     this.storeInputReference = this.storeInputReference.bind(this);
     this.renderLabel = this.renderLabel.bind(this);
     this.renderInput = this.renderInput.bind(this);
-    this.renderHelp = this.renderHelp.bind(this);
-    this.renderMessage = this.renderMessage.bind(this);
-    this.renderIcon = this.renderIcon.bind(this);
     this.handleMouseDownOnClear = this.handleMouseDownOnClear.bind(this);
   }
 
@@ -163,64 +153,13 @@ export default class TextField extends Component {
     );
   }
 
-  renderHelp() {
-    const { message, help } = this.props;
-
-    if (message || !help) {
-      return;
-    }
-
-    const { helpProps } = this.props;
-    const allHelpProps = combineClassNames(helpProps, styles.help);
-
-    return (
-      <p {...allHelpProps}>
-        {help}
-      </p>
-    );
-  }
-
-  renderMessage() {
-    const { message } = this.props;
-
-    if (!message) {
-      return;
-    }
-
-    const { messageProps } = this.props;
-    const allMessageProps = combineClassNames(messageProps, styles.message);
-
-    return (
-      <p {...allMessageProps}>
-        {this.renderIcon()}
-        {message}
-      </p>
-    );
-  }
-
-  renderIcon() {
-    const { invalid } = this.props;
-
-    if (!invalid) {
-      return;
-    }
-
-    return (
-      <ErrorIcon
-        filled={true}
-        className={styles.messageIcon}
-        svgClassName={styles.messageIconSvg}
-      />
-    );
-  }
-
   render() {
-    const { className, invalid, onClear, inputProps = {} } = this.props;
+    const { className, valid, onClear, inputProps = {} } = this.props;
     const hasValue = (inputProps.value && inputProps.value.length > 0);
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: invalid,
+      [styles.invalid]: valid === false,
       [styles.canClear]: canClear,
       [className]: className
     });
@@ -230,8 +169,7 @@ export default class TextField extends Component {
         {this.renderLabel()}
         {this.renderInput()}
         {this.renderClear()}
-        {this.renderHelp()}
-        {this.renderMessage()}
+        <FieldMessage {...this.props} />
       </div>
     );
   }

@@ -13,7 +13,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('MonthPicker', () => {
-  let element, monthPicker, label, input, message, messageIcon, errors;
+  let element, monthPicker, label, input, errors;
 
   beforeEach(() => {
     errors = [];
@@ -32,12 +32,6 @@ describe('MonthPicker', () => {
     monthPicker = renderer.render(element);
     label = findAllWithClass(monthPicker, 'label')[0] || null;
     input = findAllWithClass(monthPicker, 'input')[0] || null;
-    message = findAllWithClass(monthPicker, 'message')[0] || null;
-    messageIcon = findAllWithClass(monthPicker, 'messageIcon')[0] || null;
-  }
-
-  function messageText() {
-    return message.props.children[1];
   }
 
   it('should have a displayName', () => {
@@ -115,45 +109,6 @@ describe('MonthPicker', () => {
     it('should render the `NativeMonthPicker` when native is true', () => {
       render(<MonthPicker native={true} />);
       expect(input.type.displayName).to.equal('NativeMonthPicker');
-    });
-  });
-
-  describe('message', () => {
-    it('should not be rendered by default', () => {
-      render(<MonthPicker />);
-      expect(message).to.equal(null);
-    });
-
-    it('should have the right text when `message` is specified', () => {
-      render(<MonthPicker message="Something went wrong" />);
-      expect(messageText()).to.equal('Something went wrong');
-    });
-
-    it('should not render the message icon when `message` is specified and MonthPicker is valid', () => {
-      render(<MonthPicker message="Something went wrong" />);
-      expect(messageIcon).to.equal(null);
-    });
-
-    it('should pass through className to the message', () => {
-      render(<MonthPicker message="Something went wrong" messageProps={{ className: 'first-name-message' }} />);
-      expect(message.props.className).to.match(/first-name-message$/);
-    });
-
-    it('should pass through other props to the message', () => {
-      render(<MonthPicker message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
-      expect(message.props['data-automation']).to.equal('first-name-message');
-    });
-  });
-
-  describe('invalid', () => {
-    it('should have the invalid className', () => {
-      render(<MonthPicker invalid={true} />);
-      expect(monthPicker.props.className).to.contain('invalid');
-    });
-
-    it('should render a message icon', () => {
-      render(<MonthPicker invalid={true} message="Something went wrong" />);
-      expect(messageIcon).not.to.equal(null);
     });
   });
 

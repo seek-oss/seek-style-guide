@@ -55,10 +55,10 @@ describe('CustomMonthPicker', () => {
     expect(errors.length).to.equal(0);
   });
 
-  it('should send invalid prop to both dropdowns when invalid is true', () => {
-    render(<CustomMonthPicker invalid={true} />);
-    expect(monthDropdown.props.invalid).to.equal(true);
-    expect(yearDropdown.props.invalid).to.equal(true);
+  it('should send valid prop to false to both dropdowns when valid is false', () => {
+    render(<CustomMonthPicker valid={false} />);
+    expect(monthDropdown.props.valid).to.equal(false);
+    expect(yearDropdown.props.valid).to.equal(false);
   });
 
   it('should send correct month year format in onChange handler when month is changed', () => {

@@ -9,7 +9,7 @@ export default function TextFieldPreview() {
     <div className={styles.root}>
       <TextField />
       <TextField className={textFieldStyles.rootFocus} />
-      <TextField invalid={true} message="Something went wrong" />
+      <TextField valid={false} message="Something went wrong" />
     </div>
   );
 }
