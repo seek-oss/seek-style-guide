@@ -8,15 +8,6 @@ import TickCircleIcon from '../../icons/TickCircleIcon/TickCircleIcon';
 
 import Text from '../../Text/Text';
 
-function combineClassNames(props = {}, ...classNames) {
-  const { className, ...restProps } = props;
-
-  return {
-    className: classnames.apply(null, [...classNames, className]), // eslint-disable-line no-useless-call
-    ...restProps
-  };
-}
-
 export default class FieldMessage extends Component {
 
   static displayName = 'FieldMessage';
