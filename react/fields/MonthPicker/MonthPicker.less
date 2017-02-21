@@ -16,29 +16,3 @@
   display: inline-block;
   margin-bottom: @grid-row-height;
 }
-
-.help {
-  .standardText();
-}
-
-.message {
-  .standardText();
-  margin-bottom: @grid-row-height;
-  min-height: (@grid-row-height * @standard-type-row-span);
-
-  .invalid & {
-    color: @sk-pink;
-  }
-}
-
-.messageIcon {
-  position: relative;
-  top: 2px;
-  margin-right: 4px;
-}
-
-.messageIconSvg {
-  width: 14px;
-  height: 14px;
-  fill: currentColor;
-}

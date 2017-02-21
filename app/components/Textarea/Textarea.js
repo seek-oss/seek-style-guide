@@ -30,7 +30,7 @@ const specs = {
   focus: {
     Border: '1px @sk-focus'
   },
-  invalid: {
+  messageCritical: {
     Border: '1px @sk-pink'
   }
 };
@@ -48,17 +48,21 @@ export default class Textarea extends Component {
 
     this.state = {
       focus: false,
-      help: false,
-      invalid: false,
       maxCharacters: false,
       showCount: false,
       baseline: false,
-      inputValue: ''
+      inputValue: '',
+      messageStandard: false,
+      messageCritical: false,
+      messagePostive: false,
+      messageAdequate: false
     };
 
     this.toggleFocus = this.toggleFocus.bind(this);
-    this.toggleHelp = this.toggleHelp.bind(this);
-    this.toggleInvalid = this.toggleInvalid.bind(this);
+    this.toggleMessageStandard = this.toggleMessageStandard.bind(this);
+    this.toggleMessageCritical = this.toggleMessageCritical.bind(this);
+    this.toggleMessagePostive = this.toggleMessagePostive.bind(this);
+    this.toggleMessageAdequate = this.toggleMessageAdequate.bind(this);
     this.toggleMaxCharacters = this.toggleMaxCharacters.bind(this);
     this.toggleShowCount = this.toggleShowCount.bind(this);
     this.toggleBaseline = this.toggleBaseline.bind(this);
@@ -71,15 +75,39 @@ export default class Textarea extends Component {
     });
   }
 
-  toggleHelp(event) {
+  toggleMessageStandard(event) {
     this.setState({
-      help: event.target.checked
+      messageStandard: event.target.checked,
+      messageCritical: false,
+      messagePostive: false,
+      messageAdequate: false
     });
   }
 
-  toggleInvalid(event) {
+  toggleMessageCritical(event) {
     this.setState({
-      invalid: event.target.checked
+      messageStandard: false,
+      messageCritical: event.target.checked,
+      messagePostive: false,
+      messageAdequate: false
+    });
+  }
+
+  toggleMessagePostive(event) {
+    this.setState({
+      messageStandard: false,
+      messageCritical: false,
+      messagePostive: event.target.checked,
+      messageAdequate: false
+    });
+  }
+
+  toggleMessageAdequate(event) {
+    this.setState({
+      messageStandard: false,
+      messageCritical: false,
+      messagePostive: false,
+      messageAdequate: event.target.checked
     });
   }
 
@@ -108,7 +136,7 @@ export default class Textarea extends Component {
   }
 
   render() {
-    const { focus, help, invalid, baseline, inputValue, maxCharacters, showCount } = this.state;
+    const { focus, baseline, inputValue, maxCharacters, showCount, messageStandard, messageCritical, messagePostive, messageAdequate } = this.state;
     const className = classnames({
       [textareaStyles.rootFocus]: focus,
       [styles.textarea]: true
@@ -116,21 +144,46 @@ export default class Textarea extends Component {
     const spec = getSpec({
       default: true,
       focus,
-      invalid
+      messageCritical
     });
     const countFeedback = value => {
       return {
         count: 500 - value.length
       };
     };
+
+    let message;
+    let valid;
+    const messageProps = {};
+
+    if (messageStandard) {
+      message = 'e.g. David';
+    }
+
+    if (messageCritical) {
+      message = 'Something went wrong';
+      valid = false;
+    }
+
+    if (messagePostive) {
+      message = 'Looking good ;)';
+      valid = true;
+    }
+
+    if (messageAdequate) {
+      message = 'We think it could be better.';
+      valid = true;
+      messageProps.secondary = true;
+    }
+
     const textarea = (
       <SeekTextarea
         id="description"
         className={className}
-        invalid={invalid}
         label="Description"
-        help={help ? 'e.g. Notes about your recent role' : ''}
-        message={invalid ? 'Something went wrong' : ''}
+        message={message}
+        valid={valid}
+        messageProps={messageProps}
         inputProps={{
           onChange: this.handleChange,
           value: inputValue
@@ -185,30 +238,56 @@ export default class Textarea extends Component {
             }}
           />
           <SandboxToggle
-            label="Help"
-            toggleType="checkbox"
-            toggleProps={{
-              type: 'checkbox',
-              checked: help,
-              onChange: this.toggleHelp
-            }}
-          />
-          <SandboxToggle
-            label="Invalid"
-            toggleType="checkbox"
-            toggleProps={{
-              type: 'checkbox',
-              checked: invalid,
-              onChange: this.toggleInvalid
-            }}
-          />
-          <SandboxToggle
             label="Max Characters"
             toggleType="checkbox"
             toggleProps={{
               type: 'checkbox',
               checked: maxCharacters,
               onChange: this.toggleMaxCharacters
+            }}
+          />
+        </SandboxTogglePanel>
+
+        <SandboxTogglePanel>
+          <h5 className={styles.messageHeader}>Message Style Examples:</h5>
+
+          <SandboxToggle
+            label="Standard"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageStandard,
+              onChange: this.toggleMessageStandard
+            }}
+          />
+
+          <SandboxToggle
+            label="Critical"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageCritical,
+              onChange: this.toggleMessageCritical
+            }}
+          />
+
+          <SandboxToggle
+            label="Postive"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messagePostive,
+              onChange: this.toggleMessagePostive
+            }}
+          />
+
+          <SandboxToggle
+            label="Adequate"
+            toggleType="checkbox"
+            toggleProps={{
+              type: 'checkbox',
+              checked: messageAdequate,
+              onChange: this.toggleMessageAdequate
             }}
           />
         </SandboxTogglePanel>
