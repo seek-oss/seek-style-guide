@@ -1,0 +1,13 @@
+@import (reference) "~seek-style-guide/theme";
+
+.generate-rows(9);
+.generate-rows(@n, @i: 1) when (@i =< @n) {
+  .top-@{i} {
+    padding-top: (@i * @grid-row-height);
+  }
+
+  .bottom-@{i} {
+    padding-bottom: (@i * @grid-row-height);
+  }
+  .generate-rows(@n, (@i + 1));
+}
