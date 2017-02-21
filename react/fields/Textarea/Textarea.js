@@ -3,10 +3,7 @@ import styles from './Textarea.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
-import TickCircleIcon from '../../icons/TickCircleIcon/TickCircleIcon';
-
-import Text from '../../Text/Text';
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -67,12 +64,6 @@ export default class Textarea extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    /* eslint-disable consistent-return */
-    message: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.oneOf([false])
-    ]),
-    messageProps: PropTypes.object,
     maxCharacters: PropTypes.number,
     countFeedback: (props, propName, componentName) => {
       const { inputProps = {} } = props;
@@ -91,13 +82,7 @@ export default class Textarea extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    label: '',
-    message: '',
-    messageProps: {
-      critical: false,
-      positive: false,
-      secondary: false
-    }
+    label: ''
   };
 
   constructor() {
@@ -107,8 +92,6 @@ export default class Textarea extends Component {
     this.renderLabel = this.renderLabel.bind(this);
     this.renderCharacterLimit = this.renderCharacterLimit.bind(this);
     this.renderInput = this.renderInput.bind(this);
-    this.renderMessage = this.renderMessage.bind(this);
-    this.renderMessageIcon = this.renderMessageIcon.bind(this);
     this.renderCharacterCount = this.renderCharacterCount.bind(this);
   }
 
@@ -165,55 +148,6 @@ export default class Textarea extends Component {
     );
   }
 
-  renderMessage() {
-    const { message, valid } = this.props;
-
-    if (!message) {
-      return;
-    }
-
-    const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
-    const allMessageProps = combineClassNames(restMessageProps, styles.message);
-
-    return (
-      <Text
-        raw
-        {...allMessageProps}
-        critical={(valid === false && !secondary) || critical}
-        positive={(valid === true && !secondary) || positive}
-        secondary={typeof valid === 'undefined' || secondary}>
-        {this.renderMessageIcon()}
-        {message}
-      </Text>
-    );
-  }
-
-  renderMessageIcon() {
-    const { valid } = this.props;
-
-    if (valid === false) {
-      return (
-        <ErrorIcon
-          filled={true}
-          className={styles.messageIcon}
-          svgClassName={styles.messageIconSvg}
-        />
-      );
-    }
-
-    if (valid === true) {
-      return (
-        <TickCircleIcon
-          filled={true}
-          className={styles.messageIcon}
-          svgClassName={styles.messageIconSvg}
-        />
-      );
-    }
-
-    return null;
-  }
-
   renderCharacterCount() {
     const { countFeedback, inputProps = {} } = this.props;
     const { value } = inputProps;
@@ -254,7 +188,7 @@ export default class Textarea extends Component {
         {this.renderCharacterLimit()}
         {this.renderInput()}
         <div className={styles.footer}>
-          {this.renderMessage()}
+          <FieldMessage {...this.props} />
           {this.renderCharacterCount()}
         </div>
       </div>

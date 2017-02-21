@@ -13,7 +13,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('MonthPicker', () => {
-  let element, monthPicker, label, input, message, messageIcon, errors;
+  let element, monthPicker, label, input, errors;
 
   beforeEach(() => {
     errors = [];
@@ -32,12 +32,6 @@ describe('MonthPicker', () => {
     monthPicker = renderer.render(element);
     label = findAllWithClass(monthPicker, 'label')[0] || null;
     input = findAllWithClass(monthPicker, 'input')[0] || null;
-    message = findAllWithClass(monthPicker, 'message')[0] || null;
-    messageIcon = findAllWithClass(monthPicker, 'messageIcon')[0] || null;
-  }
-
-  function messageText() {
-    return message.props.children[1];
   }
 
   it('should have a displayName', () => {
@@ -115,80 +109,6 @@ describe('MonthPicker', () => {
     it('should render the `NativeMonthPicker` when native is true', () => {
       render(<MonthPicker native={true} />);
       expect(input.type.displayName).to.equal('NativeMonthPicker');
-    });
-  });
-
-  describe('message', () => {
-    it('should not be rendered by default', () => {
-      render(<MonthPicker />);
-      expect(message).to.equal(null);
-    });
-
-    it('should have the right text when `message` is specified and no icon by default', () => {
-      render(<MonthPicker message="Something went wrong" />);
-      expect(messageText()).to.equal('Something went wrong');
-      expect(messageIcon).to.equal(null);
-    });
-
-    it('should pass through className to the message', () => {
-      render(<MonthPicker message="Something went wrong" messageProps={{ className: 'first-name-message' }} />);
-      expect(message.props.className).to.match(/first-name-message$/);
-    });
-
-    it('should default to secondary text', () => {
-      render(<MonthPicker message="Something went wrong" />);
-      expect(message.props.secondary).to.equal(true);
-    });
-
-    it('should have the noMarginBottom className if passed a string', () => {
-      render(<MonthPicker message="Something went wrong" />);
-      expect(monthPicker.props.className).to.contain('noMarginBottom');
-    });
-
-    it('should have the noMarginBottom className if false', () => {
-      render(<MonthPicker message={false} />);
-      expect(monthPicker.props.className).to.contain('noMarginBottom');
-    });
-
-    describe('messageProps', () => {
-      it('should pass through other props to the message', () => {
-        render(<MonthPicker message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
-        expect(message.props['data-automation']).to.equal('first-name-message');
-      });
-    });
-
-    describe('valid', () => {
-      describe('set to false', () => {
-        it('MonthPicker should have the message should have a icon and set text as critical', () => {
-          render(<MonthPicker valid={false} message="Something went wrong" />);
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.critical).to.equal(true);
-        });
-      });
-
-      describe('set to true', () => {
-        it('Message should have a icon and set text as positive', () => {
-          render(<MonthPicker valid={true} message="Something went right" />);
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.positive).to.equal(true);
-        });
-      });
-    });
-
-    describe('valid & messageProps secondary', () => {
-      it('secondary messageProps trumps valid = true but still have icon', () => {
-        render(<MonthPicker valid={true} message="Something went right" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.positive).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
-      });
-
-      it('secondary messageProps trumps valid = false but still have icon', () => {
-        render(<MonthPicker valid={false} message="Something went wrong" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.critical).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
-      });
     });
   });
 

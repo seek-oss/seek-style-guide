@@ -3,11 +3,9 @@ import styles from './Dropdown.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
-import TickCircleIcon from '../../icons/TickCircleIcon/TickCircleIcon';
 import ChevronIcon from '../../icons/ChevronIcon/ChevronIcon';
 
-import Text from '../../Text/Text';
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -72,12 +70,6 @@ export default class Dropdown extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    /* eslint-disable consistent-return */
-    message: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.oneOf([false])
-    ]),
-    messageProps: PropTypes.object,
     options: PropTypes.arrayOf(
       PropTypes.shape({
         value: PropTypes.oneOfType([
@@ -97,12 +89,6 @@ export default class Dropdown extends Component {
     id: '',
     className: '',
     label: '',
-    message: '',
-    messageProps: {
-      critical: false,
-      positive: false,
-      secondary: false
-    },
     placeholder: '',
     options: []
   };
@@ -112,8 +98,6 @@ export default class Dropdown extends Component {
 
     this.renderLabel = this.renderLabel.bind(this);
     this.renderSelect = this.renderSelect.bind(this);
-    this.renderMessage = this.renderMessage.bind(this);
-    this.renderMessageIcon = this.renderMessageIcon.bind(this);
   }
 
   renderLabel() {
@@ -184,59 +168,10 @@ export default class Dropdown extends Component {
     );
   }
 
-  renderMessage() {
-    const { message, valid } = this.props;
-
-    if (!message) {
-      return;
-    }
-
-    const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
-    const allMessageProps = combineClassNames(restMessageProps, styles.message);
-
-    return (
-      <Text
-        {...allMessageProps}
-        critical={(valid === false && !secondary) || critical}
-        positive={(valid === true && !secondary) || positive}
-        secondary={typeof valid === 'undefined' || secondary}>
-        {this.renderMessageIcon()}
-        {message}
-      </Text>
-    );
-  }
-
-  renderMessageIcon() {
-    const { valid } = this.props;
-
-    if (valid === false) {
-      return (
-        <ErrorIcon
-          filled={true}
-          className={styles.messageIcon}
-          svgClassName={styles.messageIconSvg}
-        />
-      );
-    }
-
-    if (valid === true) {
-      return (
-        <TickCircleIcon
-          filled={true}
-          className={styles.messageIcon}
-          svgClassName={styles.messageIconSvg}
-        />
-      );
-    }
-
-    return null;
-  }
-
   render() {
-    const { className, valid, message } = this.props;
+    const { className, valid } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.noMarginBottom]: message || message === false,
       [styles.invalid]: valid === false,
       [className]: className
     });
@@ -246,7 +181,7 @@ export default class Dropdown extends Component {
         {this.renderLabel()}
         {this.renderChevron()}
         {this.renderSelect()}
-        {this.renderMessage()}
+        <FieldMessage {...this.props} />
       </div>
     );
   }

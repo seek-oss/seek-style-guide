@@ -13,7 +13,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('Textarea', () => {
-  let element, textarea, label, input, message, messageIcon, errors, characterCount, maxCharacters;
+  let element, textarea, label, input, errors, characterCount, maxCharacters;
 
   beforeEach(() => {
     errors = [];
@@ -32,14 +32,8 @@ describe('Textarea', () => {
     textarea = renderer.render(element);
     label = findAllWithClass(textarea, 'label')[0] || null;
     input = findAllWithClass(textarea, 'textarea')[0] || null;
-    message = findAllWithClass(textarea, 'message')[0] || null;
-    messageIcon = findAllWithClass(textarea, 'messageIcon')[0] || null;
     characterCount = findAllWithClass(textarea, 'characterCount')[0] || null;
     maxCharacters = findAllWithClass(textarea, 'maxCharacters')[0] || null;
-  }
-
-  function messageText() {
-    return message.props.children[1];
   }
 
   it('should have a displayName', () => {
@@ -138,62 +132,11 @@ describe('Textarea', () => {
     });
   });
 
-  describe('message', () => {
-    it('should not be rendered by default', () => {
-      render(<Textarea />);
-      expect(message).to.equal(null);
-    });
-
-    it('should have the right text when `message` is specified and no icon by default', () => {
-      render(<Textarea message="Something went wrong" />);
-      expect(messageText()).to.equal('Something went wrong');
-      expect(messageIcon).to.equal(null);
-    });
-
-    it('should pass through className to the message', () => {
-      render(<Textarea message="Something went wrong" messageProps={{ className: 'first-name-message' }} />);
-      expect(message.props.className).to.match(/first-name-message$/);
-    });
-
-    describe('messageProps', () => {
-      it('should pass through other props to the message', () => {
-        render(<Textarea message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
-        expect(message.props['data-automation']).to.equal('first-name-message');
-      });
-    });
-
-    describe('valid', () => {
-      describe('set to false', () => {
-        it('Textarea should have the invalid className, message should have a icon and set text as critical', () => {
-          render(<Textarea valid={false} message="Something went wrong" />);
-          expect(textarea.props.className).to.contain('invalid');
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.critical).to.equal(true);
-        });
-      });
-
-      describe('set to true', () => {
-        it('Message should have a icon and set text as positive', () => {
-          render(<Textarea valid={true} message="Something went right" />);
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.positive).to.equal(true);
-        });
-      });
-    });
-
-    describe('valid & messageProps secondary', () => {
-      it('secondary messageProps trumps valid = true but still have icon', () => {
-        render(<Textarea valid={true} message="Something went right" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.positive).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
-      });
-
-      it('secondary messageProps trumps valid = false but still have icon', () => {
-        render(<Textarea valid={false} message="Something went wrong" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.critical).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
+  describe('valid', () => {
+    describe('set to false', () => {
+      it('Textarea should have the invalid className', () => {
+        render(<Textarea valid={false} />);
+        expect(textarea.props.className).to.contain('invalid');
       });
     });
   });

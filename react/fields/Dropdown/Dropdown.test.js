@@ -27,7 +27,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, label, input, message, messageIcon, placeholder, optionGroup, childOptions, errors, option;
+  let element, dropdown, label, input, placeholder, optionGroup, childOptions, errors, option;
 
   beforeEach(() => {
     errors = [];
@@ -46,16 +46,10 @@ describe('Dropdown', () => {
     dropdown = renderer.render(element);
     label = findAllWithClass(dropdown, 'label')[0] || null;
     input = findAllWithClass(dropdown, 'dropdown')[0] || null;
-    message = findAllWithClass(dropdown, 'message')[0] || null;
-    messageIcon = findAllWithClass(dropdown, 'messageIcon')[0] || null;
     placeholder = findAllWithType(dropdown, 'option')[0] || null;
     optionGroup = findAllWithType(dropdown, 'optgroup')[0] || null;
     childOptions = findAllWithType(optionGroup, 'option') || null;
     option = findAllWithType(dropdown, 'option')[1] || null;
-  }
-
-  function messageText() {
-    return message.props.children[1];
   }
 
   function placeholderText() {
@@ -197,77 +191,11 @@ describe('Dropdown', () => {
     });
   });
 
-  describe('message', () => {
-    it('should not be rendered by default', () => {
-      render(<Dropdown inputProps={{ value: '' }} />);
-      expect(message).to.equal(null);
-    });
-
-    it('should have the right text when `message` is specified and no icon by default', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" />);
-      expect(messageText()).to.equal('Something went wrong');
-      expect(messageIcon).to.equal(null);
-    });
-
-    it('should pass through className to the message', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" messageProps={{ className: 'first-name-message' }} />);
-      expect(message.props.className).to.match(/first-name-message$/);
-    });
-
-    it('should default to secondary text', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" />);
-      expect(message.props.secondary).to.equal(true);
-    });
-
-    it('should have the noMarginBottom className if passed a string', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" />);
-      expect(dropdown.props.className).to.contain('noMarginBottom');
-    });
-
-    it('should have the noMarginBottom className if false', () => {
-      render(<Dropdown inputProps={{ value: '' }} message={false} />);
-      expect(dropdown.props.className).to.contain('noMarginBottom');
-    });
-
-    describe('messageProps', () => {
-      it('should pass through other props to the message', () => {
-        render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
-        expect(message.props['data-automation']).to.equal('first-name-message');
-      });
-    });
-
-    describe('valid', () => {
-      describe('set to false', () => {
-        it('Dropdown should have the invalid className, message should have a icon and set text as critical', () => {
-          render(<Dropdown inputProps={{ value: '' }} valid={false} message="Something went wrong" />);
-          expect(dropdown.props.className).to.contain('invalid');
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.critical).to.equal(true);
-        });
-      });
-
-      describe('set to true', () => {
-        it('Message should have a icon and set text as positive', () => {
-          render(<Dropdown inputProps={{ value: '' }} valid={true} message="Something went right" />);
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.positive).to.equal(true);
-        });
-      });
-    });
-
-    describe('valid & messageProps secondary', () => {
-      it('secondary messageProps trumps valid = true but still have icon', () => {
-        render(<Dropdown inputProps={{ value: '' }} valid={true} message="Something went right" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.positive).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
-      });
-
-      it('secondary messageProps trumps valid = false but still have icon', () => {
-        render(<Dropdown inputProps={{ value: '' }} valid={false} message="Something went wrong" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.critical).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
+  describe('valid', () => {
+    describe('set to false', () => {
+      it('Dropdown should have the invalid className', () => {
+        render(<Dropdown inputProps={{ value: '' }} valid={false} />);
+        expect(dropdown.props.className).to.contain('invalid');
       });
     });
   });

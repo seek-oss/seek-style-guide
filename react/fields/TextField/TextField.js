@@ -3,12 +3,9 @@ import styles from './TextField.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
-import TickCircleIcon from '../../icons/TickCircleIcon/TickCircleIcon';
-
 import ClearField from './ClearField/ClearField';
 
-import Text from '../../Text/Text';
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -77,25 +74,13 @@ export default class TextField extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    /* eslint-disable consistent-return */
-    message: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.oneOf([false])
-    ]),
-    messageProps: PropTypes.object,
     onClear: PropTypes.func
   };
 
   static defaultProps = {
     id: '',
     className: '',
-    label: '',
-    message: '',
-    messageProps: {
-      critical: false,
-      positive: false,
-      secondary: false
-    }
+    label: ''
   };
 
   constructor() {
@@ -104,8 +89,6 @@ export default class TextField extends Component {
     this.storeInputReference = this.storeInputReference.bind(this);
     this.renderLabel = this.renderLabel.bind(this);
     this.renderInput = this.renderInput.bind(this);
-    this.renderMessage = this.renderMessage.bind(this);
-    this.renderMessageIcon = this.renderMessageIcon.bind(this);
     this.handleMouseDownOnClear = this.handleMouseDownOnClear.bind(this);
   }
 
@@ -170,61 +153,12 @@ export default class TextField extends Component {
     );
   }
 
-  renderMessage() {
-    const { message, valid } = this.props;
-
-    if (!message) {
-      return;
-    }
-
-    const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
-    const allMessageProps = combineClassNames(restMessageProps, styles.message);
-
-    return (
-      <Text
-        {...allMessageProps}
-        critical={(valid === false && !secondary) || critical}
-        positive={(valid === true && !secondary) || positive}
-        secondary={typeof valid === 'undefined' || secondary}>
-        {this.renderMessageIcon()}
-        {message}
-      </Text>
-    );
-  }
-
-  renderMessageIcon() {
-    const { valid } = this.props;
-
-    if (valid === false) {
-      return (
-        <ErrorIcon
-          filled={true}
-          className={styles.messageIcon}
-          svgClassName={styles.messageIconSvg}
-        />
-      );
-    }
-
-    if (valid === true) {
-      return (
-        <TickCircleIcon
-          filled={true}
-          className={styles.messageIcon}
-          svgClassName={styles.messageIconSvg}
-        />
-      );
-    }
-
-    return null;
-  }
-
   render() {
-    const { className, valid, message, onClear, inputProps = {} } = this.props;
+    const { className, valid, onClear, inputProps = {} } = this.props;
     const hasValue = (inputProps.value && inputProps.value.length > 0);
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,
-      [styles.noMarginBottom]: message || message === false,
       [styles.invalid]: valid === false,
       [styles.canClear]: canClear,
       [className]: className
@@ -235,7 +169,7 @@ export default class TextField extends Component {
         {this.renderLabel()}
         {this.renderInput()}
         {this.renderClear()}
-        {this.renderMessage()}
+        <FieldMessage {...this.props} />
       </div>
     );
   }

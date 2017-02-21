@@ -20,7 +20,7 @@ const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
 const renderer = createRenderer();
 
 describe('TextField', () => {
-  let element, textField, rootElement, label, input, message, messageIcon, clearField, errors;
+  let element, textField, rootElement, label, input, clearField, errors;
 
   beforeEach(() => {
     errors = [];
@@ -39,8 +39,6 @@ describe('TextField', () => {
     textField = renderer.render(element);
     label = findAllWithClass(textField, 'label')[0] || null;
     input = findAllWithClass(textField, 'input')[0] || null;
-    message = findAllWithClass(textField, 'message')[0] || null;
-    messageIcon = findAllWithClass(textField, 'messageIcon')[0] || null;
   }
 
   function renderToDom(jsx) {
@@ -49,10 +47,6 @@ describe('TextField', () => {
     rootElement = scryRenderedDOMComponentsWithClass(textField, 'root')[0];
     input = findRenderedDOMComponentWithClass(textField, 'input');
     clearField = findRenderedDOMComponentWithClass(textField, 'clearField');
-  }
-
-  function messageText() {
-    return message.props.children[1];
   }
 
   function isClearButtonVisible() {
@@ -150,77 +144,11 @@ describe('TextField', () => {
     });
   });
 
-  describe('message', () => {
-    it('should not be rendered by default', () => {
-      render(<TextField />);
-      expect(message).to.equal(null);
-    });
-
-    it('should have the right text when `message` is specified and no icon by default', () => {
-      render(<TextField message="Something went wrong" />);
-      expect(messageText()).to.equal('Something went wrong');
-      expect(messageIcon).to.equal(null);
-    });
-
-    it('should pass through className to the message', () => {
-      render(<TextField message="Something went wrong" messageProps={{ className: 'first-name-message' }} />);
-      expect(message.props.className).to.match(/first-name-message$/);
-    });
-
-    it('should default to secondary text', () => {
-      render(<TextField message="Something went wrong" />);
-      expect(message.props.secondary).to.equal(true);
-    });
-
-    it('should have the noMarginBottom className if passed a string', () => {
-      render(<TextField message="Something went wrong" />);
-      expect(textField.props.className).to.contain('noMarginBottom');
-    });
-
-    it('should have the noMarginBottom className if false', () => {
-      render(<TextField message={false} />);
-      expect(textField.props.className).to.contain('noMarginBottom');
-    });
-
-    describe('messageProps', () => {
-      it('should pass through other props to the message', () => {
-        render(<TextField message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
-        expect(message.props['data-automation']).to.equal('first-name-message');
-      });
-    });
-
-    describe('valid', () => {
-      describe('set to false', () => {
-        it('TextField should have the invalid className, message should have a icon and set text as critical', () => {
-          render(<TextField valid={false} message="Something went wrong" />);
-          expect(textField.props.className).to.contain('invalid');
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.critical).to.equal(true);
-        });
-      });
-
-      describe('set to true', () => {
-        it('Message should have a icon and set text as positive', () => {
-          render(<TextField valid={true} message="Something went right" />);
-          expect(messageIcon).not.to.equal(null);
-          expect(message.props.positive).to.equal(true);
-        });
-      });
-    });
-
-    describe('valid & messageProps secondary', () => {
-      it('secondary messageProps trumps valid = true but still have icon', () => {
-        render(<TextField valid={true} message="Something went right" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.positive).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
-      });
-
-      it('secondary messageProps trumps valid = false but still have icon', () => {
-        render(<TextField valid={false} message="Something went wrong" messageProps={{ secondary: true }} />);
-        expect(messageIcon).not.to.equal(null);
-        expect(message.props.critical).not.to.equal(true);
-        expect(message.props.secondary).to.equal(true);
+  describe('valid', () => {
+    describe('set to false', () => {
+      it('TextField should have the invalid className', () => {
+        render(<TextField valid={false} />);
+        expect(textField.props.className).to.contain('invalid');
       });
     });
   });
