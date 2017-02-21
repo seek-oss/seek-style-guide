@@ -76,7 +76,7 @@
     "chai": "^3.5.0",
     "classnames": "^2.2.5",
     "commitizen": "^2.9.5",
-    "cz-conventional-changelog": "^1.2.0",
+    "cz-conventional-changelog": "^2.0.0",
     "ejs": "^2.4.2",
     "eslint": "^3.1.0",
     "eslint-plugin-jest": "^1.0.2",
