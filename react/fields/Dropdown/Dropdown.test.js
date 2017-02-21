@@ -88,7 +88,7 @@ describe('Dropdown', () => {
   });
 
   describe('Option Group', () => {
-    before(() => {
+    beforeAll(() => {
       const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
       render(<Dropdown inputProps={{ value: '' }} options={opts} />);
     });
