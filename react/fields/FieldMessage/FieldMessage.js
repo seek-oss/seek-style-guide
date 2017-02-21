@@ -54,11 +54,10 @@ export default class FieldMessage extends Component {
 
     if (message) {
       const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
-      const allMessageProps = combineClassNames(restMessageProps, styles.message);
 
       return (
         <Text
-          {...allMessageProps}
+          {...restMessageProps}
           critical={(valid === false && !secondary) || critical}
           positive={(valid === true && !secondary) || positive}
           secondary={typeof valid === 'undefined' || secondary}>
