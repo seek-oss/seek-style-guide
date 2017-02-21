@@ -3,8 +3,9 @@ import styles from './Dropdown.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ErrorIcon from '../../icons/ErrorIcon/ErrorIcon';
 import ChevronIcon from '../../icons/ChevronIcon/ChevronIcon';
+
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -34,7 +35,7 @@ export default class Dropdown extends Component {
     },
     /* eslint-enable consistent-return */
     className: PropTypes.string,
-    invalid: PropTypes.bool,
+    valid: PropTypes.bool,
     label: PropTypes.string,
     /* eslint-disable consistent-return */
     labelProps: (props, propName, componentName) => {
@@ -69,11 +70,6 @@ export default class Dropdown extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    /* eslint-disable consistent-return */
-    help: PropTypes.string,
-    helpProps: PropTypes.object,
-    message: PropTypes.string,
-    messageProps: PropTypes.object,
     options: PropTypes.arrayOf(
       PropTypes.shape({
         value: PropTypes.oneOfType([
@@ -92,10 +88,7 @@ export default class Dropdown extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    invalid: false,
     label: '',
-    help: '',
-    message: '',
     placeholder: '',
     options: []
   };
@@ -105,9 +98,6 @@ export default class Dropdown extends Component {
 
     this.renderLabel = this.renderLabel.bind(this);
     this.renderSelect = this.renderSelect.bind(this);
-    this.renderHelp = this.renderHelp.bind(this);
-    this.renderMessage = this.renderMessage.bind(this);
-    this.renderIcon = this.renderIcon.bind(this);
   }
 
   renderLabel() {
@@ -178,62 +168,11 @@ export default class Dropdown extends Component {
     );
   }
 
-  renderHelp() {
-    const { message, help } = this.props;
-
-    if (message || !help) {
-      return;
-    }
-
-    const { helpProps } = this.props;
-    const allHelpProps = combineClassNames(helpProps, styles.help);
-
-    return (
-      <p {...allHelpProps}>
-        {help}
-      </p>
-    );
-  }
-
-  renderMessage() {
-    const { message } = this.props;
-
-    if (!message) {
-      return;
-    }
-
-    const { messageProps } = this.props;
-    const allMessageProps = combineClassNames(messageProps, styles.message);
-
-    return (
-      <p {...allMessageProps}>
-        {this.renderIcon()}
-        {message}
-      </p>
-    );
-  }
-
-  renderIcon() {
-    const { invalid } = this.props;
-
-    if (!invalid) {
-      return;
-    }
-
-    return (
-      <ErrorIcon
-        filled={true}
-        className={styles.messageIcon}
-        svgClassName={styles.messageIconSvg}
-      />
-    );
-  }
-
   render() {
-    const { className, invalid } = this.props;
+    const { className, valid } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: invalid,
+      [styles.invalid]: valid === false,
       [className]: className
     });
 
@@ -242,8 +181,7 @@ export default class Dropdown extends Component {
         {this.renderLabel()}
         {this.renderChevron()}
         {this.renderSelect()}
-        {this.renderHelp()}
-        {this.renderMessage()}
+        <FieldMessage {...this.props} />
       </div>
     );
   }

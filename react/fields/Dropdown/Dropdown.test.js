@@ -27,7 +27,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, label, input, help, message, messageIcon, placeholder, optionGroup, childOptions, errors, option;
+  let element, dropdown, label, input, placeholder, optionGroup, childOptions, errors, option;
 
   beforeEach(() => {
     errors = [];
@@ -46,21 +46,10 @@ describe('Dropdown', () => {
     dropdown = renderer.render(element);
     label = findAllWithClass(dropdown, 'label')[0] || null;
     input = findAllWithClass(dropdown, 'dropdown')[0] || null;
-    help = findAllWithClass(dropdown, 'help')[0] || null;
-    message = findAllWithClass(dropdown, 'message')[0] || null;
-    messageIcon = findAllWithClass(dropdown, 'messageIcon')[0] || null;
     placeholder = findAllWithType(dropdown, 'option')[0] || null;
     optionGroup = findAllWithType(dropdown, 'optgroup')[0] || null;
     childOptions = findAllWithType(optionGroup, 'option') || null;
     option = findAllWithType(dropdown, 'option')[1] || null;
-  }
-
-  function helpText() {
-    return help.props.children;
-  }
-
-  function messageText() {
-    return message.props.children[1];
   }
 
   function placeholderText() {
@@ -88,7 +77,7 @@ describe('Dropdown', () => {
   });
 
   describe('Option Group', () => {
-    before(() => {
+    beforeAll(() => {
       const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
       render(<Dropdown inputProps={{ value: '' }} options={opts} />);
     });
@@ -202,69 +191,12 @@ describe('Dropdown', () => {
     });
   });
 
-  describe('help', () => {
-    it('should not be rendered by default', () => {
-      render(<Dropdown inputProps={{ value: '' }} />);
-      expect(help).to.equal(null);
-    });
-
-    it('should not be rendered when message exists', () => {
-      render(<Dropdown inputProps={{ value: '' }} help="e.g. David" message="Something went wrong" />);
-      expect(help).to.equal(null);
-    });
-
-    it('should have the right text when `help` is specified', () => {
-      render(<Dropdown inputProps={{ value: '' }} help="e.g. David" />);
-      expect(helpText()).to.equal('e.g. David');
-    });
-
-    it('should pass through className to the help text', () => {
-      render(<Dropdown inputProps={{ value: '' }} help="e.g. David" helpProps={{ className: 'first-name-help' }} />);
-      expect(help.props.className).to.match(/first-name-help$/);
-    });
-
-    it('should pass through other props to the help text', () => {
-      render(<Dropdown inputProps={{ value: '' }} help="e.g. David" helpProps={{ 'data-automation': 'first-name-help' }} />);
-      expect(help.props['data-automation']).to.equal('first-name-help');
-    });
-  });
-
-  describe('message', () => {
-    it('should not be rendered by default', () => {
-      render(<Dropdown inputProps={{ value: '' }} />);
-      expect(message).to.equal(null);
-    });
-
-    it('should have the right text when `message` is specified', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" />);
-      expect(messageText()).to.equal('Something went wrong');
-    });
-
-    it('should not render the message icon when `message` is specified and Dropdown is valid', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" />);
-      expect(messageIcon).to.equal(null);
-    });
-
-    it('should pass through className to the message', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" messageProps={{ className: 'first-name-message' }} />);
-      expect(message.props.className).to.match(/first-name-message$/);
-    });
-
-    it('should pass through other props to the message', () => {
-      render(<Dropdown inputProps={{ value: '' }} message="Something went wrong" messageProps={{ 'data-automation': 'first-name-message' }} />);
-      expect(message.props['data-automation']).to.equal('first-name-message');
-    });
-  });
-
-  describe('invalid', () => {
-    it('should have the invalid className', () => {
-      render(<Dropdown inputProps={{ value: '' }} invalid={true} />);
-      expect(dropdown.props.className).to.contain('invalid');
-    });
-
-    it('should render a message icon', () => {
-      render(<Dropdown inputProps={{ value: '' }} invalid={true} message="Something went wrong" />);
-      expect(messageIcon).not.to.equal(null);
+  describe('valid', () => {
+    describe('set to false', () => {
+      it('Dropdown should have the invalid className', () => {
+        render(<Dropdown inputProps={{ value: '' }} valid={false} />);
+        expect(dropdown.props.className).to.contain('invalid');
+      });
     });
   });
 });

@@ -3,12 +3,12 @@
     "es6": true,
     "node": true,
     "browser": true,
-    "mocha": true
+    "jest": true
   },
   "parser": "babel-eslint",
   "plugins": [
     "react",
-    "mocha"
+    "jest"
   ],
   "rules": {
     "comma-dangle": 2,
@@ -212,6 +212,6 @@
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
 
-    "mocha/no-exclusive-tests": 2
+    "jest/no-exclusive-tests": 2
   }
 }

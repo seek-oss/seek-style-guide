@@ -1,0 +1,15 @@
+{
+  "testPathIgnorePatterns": [
+    "<rootDir>[/\\\\](dist|node_modules)[/\\\\]"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
+  "transform": {
+    "^.+\\.js$": "<rootDir>/test/babel.transform.js",
+    "^.+\\.svg$": "<rootDir>/test/svg.transform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+  ]
+}

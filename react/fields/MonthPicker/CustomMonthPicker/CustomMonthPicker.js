@@ -47,13 +47,12 @@ export default class CustomMonthPicker extends Component {
       month: PropTypes.number,
       year: PropTypes.number
     }),
-    invalid: PropTypes.bool,
+    valid: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string
   };
 
   static defaultProps = {
-    invalid: false,
     value: {},
     className: ''
   };
@@ -128,7 +127,7 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, invalid, id } = this.props;
+    const { value, className, valid, id } = this.props;
     const { month, year } = value;
     const monthValue = String(month || '');
     const yearValue = String(year || '');
@@ -144,7 +143,7 @@ export default class CustomMonthPicker extends Component {
           {...(id ? { id } : {})}
           options={months}
           className={styles.dropdown}
-          invalid={invalid}
+          valid={valid}
           placeholder="Month"
           inputProps={{
             onBlur: this.handleBlur,
@@ -157,7 +156,7 @@ export default class CustomMonthPicker extends Component {
         <Dropdown
           options={years}
           className={styles.dropdown}
-          invalid={invalid}
+          valid={valid}
           placeholder="Year"
           inputProps={{
             onBlur: this.handleBlur,
