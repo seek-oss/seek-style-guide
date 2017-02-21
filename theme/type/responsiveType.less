@@ -3,8 +3,8 @@
 
 .__responsiveType(@variant) when (isstring(@variant)) {
   // Define responsive text breakpoint limits
-  @max-breakpoint: unit((@responsive-breakpoint - 1), px);
-  @min-breakpoint: unit(@responsive-breakpoint, px);
+  @max-breakpoint: (@responsive-breakpoint - 1);
+  @min-breakpoint: @responsive-breakpoint;
 
   // Concatenate type hierarchy variable name
   @type-scale: "@{variant}-type-scale";
