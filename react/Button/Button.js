@@ -16,12 +16,17 @@ export default class Button extends Component {
       PropTypes.node
     ]).isRequired,
     className: PropTypes.string,
+    component: PropTypes.oneOfType([
+      PropTypes.func,
+      PropTypes.string
+    ]),
     loading: PropTypes.bool
   };
 
   static defaultProps = {
     className: '',
-    loading: false
+    loading: false,
+    component: 'button'
   };
 
   constructor() {
@@ -37,10 +42,9 @@ export default class Button extends Component {
   }
 
   render() {
-    const { color, className, loading, children, ...restProps } = this.props;
+    const { color, className, loading, children, component, ...restProps } = this.props;
 
     const combinedProps = {
-      type: 'button',
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
         [styles.root_isPink]: color === 'pink',
@@ -52,11 +56,7 @@ export default class Button extends Component {
       ...restProps
     };
 
-    return (
-      <button {...combinedProps}>
-        {children}
-      </button>
-    );
+    return React.createElement(component, combinedProps, children);
   }
 
 }
