@@ -154,6 +154,8 @@ As much as possible, colors should be directly imported from the style guide. Th
 @sk-focus
 @sk-highlight
 @sk-green-light
+@sk-yellow
+@sk-yellow-light
 @sk-footer
 @sk-background
 @sk-yellow
