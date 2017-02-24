@@ -1,0 +1,41 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  @border-width: 1px;
+
+  background-color: @sk-white;
+  border: @border-width solid @sk-mid-gray-light;
+  border-radius: 2px;
+  padding: (@grid-row-height - @border-width) 0;
+}
+
+.item {
+  .touchableText(@standard-type-scale);
+  display: flex;
+  padding: 0 (@grid-gutter-width * 2);
+  white-space: nowrap;
+  color: @sk-black;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    color: @sk-black;
+    background-color: @sk-mid-gray-light;
+  }
+}
+
+.subItem {
+  background-color: @sk-gray-light;
+}
+
+.icon {
+  margin-left: @grid-gutter-width;
+  width: @grid-gutter-width;
+  text-align: center;
+}
+
+.iconSvg {
+  width: 14px;
+  height: 14px;
+}

@@ -1,0 +1,59 @@
+@import (reference) "~seek-style-guide/theme";
+
+@nav-item-width: (@grid-column-width * 3);
+@number-nav-items: 5;
+@nav-min-width: (@nav-item-width * @number-nav-items);
+
+.root {
+  background-color: @sk-background;
+  display: flex;
+  justify-content: center;
+
+  &.divider {
+    border-bottom: @grid-row-height solid @sk-blue;
+  }
+}
+
+.list {
+  display: flex;
+
+  @media only screen and (max-width: 1024px) {
+    flex-grow: 1;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    width: @grid-container-width;
+  }
+}
+
+.item {
+  @media only screen and (max-width: (@nav-min-width - 1)) {
+    flex-grow: 1;
+  }
+}
+
+.link {
+  .touchableText();
+  color: @sk-black;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: (@nav-min-width - 1)) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: @nav-min-width) {
+    width: @nav-item-width;
+  }
+}
+
+.link_isActive {
+  color: @sk-white;
+  background-color: @sk-blue;
+}

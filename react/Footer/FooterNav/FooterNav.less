@@ -1,0 +1,19 @@
+@import (reference) "~seek-style-guide/theme";
+@import (reference) "../Footer.common.less";
+
+.category {
+  @media only screen @footer-vertical {
+    display: none;
+  }
+
+  @media only screen @footer-horizontal {
+    flex-grow: 1;
+    flex-basis: (@grid-column-width * 3);
+  }
+}
+
+.heading {
+  .standardText();
+  font-weight: @sk-bold;
+  margin-bottom: (@grid-row-height * 2);
+}
