@@ -76,6 +76,27 @@ render() {
 
 `StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
 
+### Applying the Standard Header and Footer
+
+The standard header and footer are provided as React components:
+
+```js
+import { Header, Footer } from 'seek-style-guide/react';
+```
+
+The `<Header>` component accepts the following props:
+
+- **locale:** `'AU'` (default) or `'NZ'`
+- **authenticated:** `null/undefined` (default, authentication pending), `true` or `false`
+- **userName:** User's display name, when authenticated
+- **activeTab:** Text of the active tab, e.g. `'Job Search'`
+- **divider:** `true` (default, renders a blue divider below the navigation tabs) or `false`
+- **linkRenderer:** Function to allow custom rendering of links. The default implementation simply renders a standard link, spreading all props: `props => <a {...props} />`
+
+The `<Footer>` component accepts the following props:
+- **locale:** See above.
+- **linkRenderer:** See above.
+
 ### Setting up Web Fonts
 
 Our standard web font loading strategy is to load and cache web fonts in the background, and only display them on page load if already present in the cache. This is to ensure that text is rendered as soon as possible, without the dreaded "flash of invisible text" (FOIT), or "flash of unstyled text" (FOUT), both of which are negative performance impacts commonly found with web fonts.

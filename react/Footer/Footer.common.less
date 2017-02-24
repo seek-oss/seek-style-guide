@@ -1,0 +1,25 @@
+@import (reference) "~seek-style-guide/theme";
+
+@footer-vertical: ~"and (max-width: 767px)";
+@footer-horizontal: ~"and (min-width: 768px)";
+@footer-classic: ~"and (min-width: 1025px)";
+
+.footerText() {
+  .rawText();
+  line-height: (@grid-row-height * 4);
+  height: (@grid-row-height * 4);
+}
+
+.footerLink() {
+  .link();
+  color: @sk-link-on-mid-gray-light;
+
+  @media only screen @footer-vertical {
+    .touchableText();
+  }
+
+  @media only screen @footer-horizontal {
+    .footerText();
+    display: inline-block;
+  }
+}

@@ -16,7 +16,9 @@ import {
   Positive,
   Critical,
   Secondary,
-  Strong
+  Strong,
+  Header,
+  Footer
 } from 'seek-style-guide/react';
 
 import TextLink from './Atoms/TextLink/TextLink';
@@ -127,6 +129,8 @@ export default class Playground extends Component {
   render() {
     return (
       <div>
+        <Header />
+
         <PageBlock className={styles.header}>
           <AsidedLayout size="340px">
             <Section>
@@ -410,6 +414,8 @@ export default class Playground extends Component {
             </Card>
           </Card>
         </PageBlock>
+
+        <Footer />
       </div>
     );
   }

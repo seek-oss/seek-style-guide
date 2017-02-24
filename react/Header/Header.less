@@ -1,0 +1,143 @@
+@import (reference) "~seek-style-guide/theme";
+
+@small-ia: ~"only screen and (max-width: 767px)";
+@large-ia: ~"only screen and (min-width: 768px)";
+@classic-ia: ~"only screen and (min-width: 1025px)";
+
+.root {
+  background-color: @sk-white;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-flow: row wrap;
+  @media @large-ia {
+    justify-content: center;
+  }
+}
+
+.banner {
+  order: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 auto;
+  padding: 0 (@grid-gutter-width / 2);
+  @media @small-ia {
+    height: (@grid-row-height * 7);
+  }
+  @media @large-ia {
+    height: (@grid-row-height * 9);
+  }
+  @media @classic-ia {
+    flex: 0 0 @grid-container-width;
+    padding: 0;
+  }
+}
+
+.topBanner {
+  @media @small-ia {
+    display: none;
+  }
+  @media @large-ia {
+    display: flex;
+    background-color: @sk-background;
+    order: 0;
+    flex: 0 1 100%;
+    justify-content: center;
+    padding: 0 (@grid-gutter-width / 2);
+  }
+  @media @classic-ia {
+    flex-grow: 1;
+    padding: 0;
+  }
+}
+
+.topBannerContent {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  @media @classic-ia {
+    flex: 0 0 @grid-container-width;
+  }
+}
+
+.navigation {
+  @media @small-ia {
+    display: none;
+  }
+  @media @large-ia {
+    flex: 1 0 100%;
+    order: 2;
+  }
+}
+
+.logo {
+  position: relative;
+}
+
+.logoSvg {
+  height: 39px;
+  width: 105px;
+  @media @large-ia {
+    height: 51px;
+    width: 129px;
+  }
+}
+
+.logoLink {
+  position: absolute;
+  top: 0;
+  text-indent: 100%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.userWrapper {
+  display: flex;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.user_isReady {
+  opacity: 1;
+}
+
+.employerSite {
+  display: none;
+  white-space: nowrap;
+  @media @large-ia {
+    display: block;
+  }
+}
+
+.employerLink {
+  .touchableText();
+  .link();
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.locale {
+  position: absolute;
+  right: 0;
+}
+
+.divider {
+  @divider-width: 1px;
+  @divider-container-width: 35px;
+  @half-width: (@divider-container-width - @divider-width) / 2;
+
+  margin-left: ceil(@half-width);
+  margin-right: floor(@half-width);
+  width: @divider-width;
+  height: 14px;
+  border-right: @divider-width solid @sk-mid-gray-dark;
+  display: inline-block;
+}
