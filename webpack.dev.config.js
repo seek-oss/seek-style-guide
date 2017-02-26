@@ -1,3 +1,5 @@
+const BASE_DIR = process.env.BASE_DIR || 'app';
+
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
@@ -6,7 +8,7 @@ const babelConfig = require('./babel.config.js')({ reactHotLoader: true });
 
 // Must be absolute paths
 const appPaths = [
-  path.resolve(__dirname, 'app'),
+  path.resolve(__dirname, BASE_DIR),
   path.resolve(__dirname, 'wip_modules')
 ];
 
@@ -15,7 +17,7 @@ const config = decorateClientConfig({
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './app/client-render'
+    `./${BASE_DIR}/client-render`
   ],
 
   output: {
