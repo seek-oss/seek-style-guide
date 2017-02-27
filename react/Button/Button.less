@@ -1,18 +1,37 @@
 @import (reference) "~seek-style-guide/theme";
 
+.hoverState(@rules) {
+  &:hover,
+  &.rootHover {
+    @rules();
+  }
+}
+
+.activeState(@rules) {
+  &:active,
+  &.rootActive {
+    @rules();
+  }
+}
+
+.focusState(@rules) {
+  &:focus,
+  &.rootFocus {
+    @rules();
+  }
+}
+
 .buttonColor(@color, @background-color) {
   color: @color;
   background-color: @background-color;
 
-  &:hover,
-  &.rootHover {
+  .hoverState({
     background-color: lighten(@background-color, 5%);
-  }
+  });
 
-  &:active,
-  &.rootActive {
+  .activeState({
     background-color: darken(@background-color, 5%);
-  }
+  });
 }
 
 .root {
@@ -30,16 +49,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  &:active,
-  &.rootActive {
+  .activeState({
     box-shadow: none;
     outline: none;
     transform: scale(0.95);
-  }
-  &:focus,
-  &.rootFocus {
+  });
+  .focusState({
     .focus();
-  }
+  });
 }
 
 .root_isPink {
@@ -52,6 +69,27 @@
 
 .root_isGray {
   .buttonColor(@sk-black, @sk-mid-gray-light);
+}
+
+.root_isTransparent {
+  color: @sk-link;
+  background-color: @sk-transparent;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+
+  .hoverState({
+    text-decoration: underline;
+  });
+
+  .activeState({
+    transform: none;
+  });
+
+  .focusState({
+    box-shadow: none;
+    outline: auto;
+  });
 }
 
 .loading {
