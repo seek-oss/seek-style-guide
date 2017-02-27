@@ -65,15 +65,16 @@
   bottom: 0;
 }
 
-.userDisplayName {
+.userName {
   pointer-events: none;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
-  max-width: 101px; // ~ 10 characters
+  white-space: nowrap;
+  max-width: 100px; // ~ 10 characters
 
   @media only screen and (min-width: 400px) {
-    max-width: 201px; // ~ 20 characters
+    max-width: 200px; // ~ 20 characters
   }
 }
 
