@@ -98,7 +98,6 @@ function getSpec(specsObj) {
   }), {});
 
   return Object.keys(mergedSpec).reduce((spec, property) => {
-    console.log(mergedSpec[property], propertiesToRemove[property]);
     if (mergedSpec[property] !== propertiesToRemove[property]) {
       spec[property] = mergedSpec[property];
     }
