@@ -139,5 +139,9 @@
   width: @divider-width;
   height: 14px;
   border-right: @divider-width solid @sk-mid-gray-dark;
-  display: inline-block;
+  display: none;
+
+  @media @large-ia {
+    display: inline-block;
+  }
 }
