@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Code from './Code/Code';
 
 export default class Demo extends Component {
   constructor(props) {
@@ -118,12 +119,13 @@ export default class Demo extends Component {
     const { component: DemoComponent, spec } = this.props;
     const { options } = spec;
 
+    const demoElement = <DemoComponent {...this.calculateProps()} />;
+
     return (
       <div>
-        <DemoComponent {...this.calculateProps()} />
-        {
-          options.map(this.renderOption)
-        }
+        { demoElement }
+        { options.map(this.renderOption) }
+        <Code jsx={demoElement} />
       </div>
     );
   }
