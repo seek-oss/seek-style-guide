@@ -131,7 +131,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               data-analytics="header:high+salary"
               href="/150kjobs"
             >
-              $150k+ Job
+              $150k+ Jobs
             </a>
           </li>
           <li
@@ -531,7 +531,7 @@ exports[`Header: should render when authenticated 1`] = `
               data-analytics="header:high+salary"
               href="/150kjobs"
             >
-              $150k+ Job
+              $150k+ Jobs
             </a>
           </li>
           <li
@@ -813,7 +813,7 @@ exports[`Header: should render with locale of AU 1`] = `
               data-analytics="header:high+salary"
               href="/150kjobs"
             >
-              $150k+ Job
+              $150k+ Jobs
             </a>
           </li>
           <li
@@ -1354,7 +1354,7 @@ exports[`Header: should render with no divider 1`] = `
               data-analytics="header:high+salary"
               href="/150kjobs"
             >
-              $150k+ Job
+              $150k+ Jobs
             </a>
           </li>
           <li

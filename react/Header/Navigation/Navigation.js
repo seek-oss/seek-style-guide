@@ -12,7 +12,7 @@ const items = [
     analytics: 'header:jobs'
   },
   {
-    name: '$150k+ Job',
+    name: '$150k+ Jobs',
     'aria-label': 'One fifty K jobs',
     href: '/150kjobs',
     analytics: 'header:high+salary',
