@@ -14,52 +14,87 @@ export default class Demo extends Component {
 
     return (
       <div key={key}>
-        <ul>
-          {
-            option.states.map((state, i) => {
-              const checked = Boolean(
-                activeStates[option.label] &&
-                activeStates[option.label].indexOf(state.label) > -1
-              );
+        {
+          option.type === 'radio' ? (
+            <select onChange={this.makeSelectChangeHandler(option)}>
+              {
+                option.states.map((state, i) => {
+                  const selected = (activeStates[option.label] === state.label);
 
-              return (
-                <li key={i}>
-                  <label>
-                    <input
-                      type="checkbox"
-                      checked={checked}
-                      onChange={this.makeChangeHandler(option, state)}
-                    />
-                    { state.label }
-                  </label>
-                </li>
-              );
-            })
-          }
-        </ul>
+                  return (
+                    <option
+                      key={i}
+                      value={state.label}
+                      selected={selected}>
+                      { state.label }
+                    </option>
+                  );
+                })
+              }
+            </select>
+          ) : (
+            <ul>
+              {
+                option.states.map((state, i) => {
+                  const checked = Boolean(
+                    activeStates[option.label] &&
+                    activeStates[option.label].indexOf(state.label) > -1
+                  );
+
+                  return (
+                    <li key={i}>
+                      <label>
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          onChange={this.makeCheckboxChangeHandler(option, state)}
+                        />
+                        { state.label }
+                      </label>
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          )
+        }
       </div>
     );
   };
 
-  makeChangeHandler = (option, state) => event => {
+  makeCheckboxChangeHandler = (option, state) => event => {
     const { checked } = event.target;
-    const { activeStates } = this.state;
+    const { [option.label]: currentValue = [], ...restState } = this.state.activeStates;
 
     if (checked) {
       this.setState({
         activeStates: {
-          [option.label]: (activeStates[option.label] || [])
-            .concat(state.label)
+          ...restState,
+          [option.label]: option.type === 'radio' ? state.label :
+            currentValue.concat(state.label)
         }
       });
     } else {
       this.setState({
         activeStates: {
-          [option.label]: (activeStates[option.label] || [])
-            .filter(label => label !== state.label)
+          ...restState,
+          [option.label]: option.type === 'radio' ? null :
+            currentValue.filter(label => label !== state.label)
         }
       });
     }
+  };
+
+  makeSelectChangeHandler = option => event => {
+    const { value } = event.target;
+    const { activeStates } = this.state;
+
+    this.setState({
+      activeStates: {
+        ...activeStates,
+        [option.label]: value
+      }
+    });
   };
 
   calculateProps = () => {
