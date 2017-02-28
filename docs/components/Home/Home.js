@@ -1,7 +1,8 @@
 import React from 'react';
-import { PageBlock, Section, Text, Button } from 'seek-style-guide/react';
-import buttonDemoSpec from 'seek-style-guide/react/Button/Button.demo';
+import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Demo from 'Demo/Demo';
+import textDemoSpec from 'seek-style-guide/react/Text/Text.demo';
+import buttonDemoSpec from 'seek-style-guide/react/Button/Button.demo';
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
         </Section>
       </PageBlock>
 
-      <Demo component={Button} spec={buttonDemoSpec} />
+      <Demo spec={textDemoSpec} />
+      <Demo spec={buttonDemoSpec} />
 
     </div>
   );

@@ -50,7 +50,7 @@ export default class Code extends Component {
       }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
       .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}');
 
-      code = `import { ${jsx.type.displayName} } from 'seek-style-guide/react';\n\n\n${componentCode}`;
+      code = `import { ${jsx.type.displayName || jsx.type.name} } from 'seek-style-guide/react';\n\n\n${componentCode}`;
     } else if (less) {
       code = `@import (reference) "~seek-style-guide/theme";\n\n\n.element {\n  .${less}\n}`;
     }

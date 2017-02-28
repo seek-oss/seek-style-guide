@@ -1,9 +1,10 @@
 import React from 'react';
-import { HeartIcon, StarIcon } from 'seek-style-guide/react';
+import { Button, HeartIcon, StarIcon } from 'seek-style-guide/react';
 import styles from './Button.less';
 import classnames from 'classnames';
 
 export default {
+  component: Button,
   initialProps: {
     children: 'Hello world',
     color: 'pink'
@@ -17,21 +18,21 @@ export default {
           label: 'Hover',
           transformProps: ({ className, ...props }) => ({
             ...props,
-            className: classnames(className, styles.rootHover),
+            className: classnames(className, styles.rootHover)
           })
         },
         {
           label: 'Active',
           transformProps: ({ className, ...props }) => ({
             ...props,
-            className: classnames(className, styles.rootActive),
+            className: classnames(className, styles.rootActive)
           })
         },
         {
           label: 'Focus',
           transformProps: ({ className, ...props }) => ({
             ...props,
-            className: classnames(className, styles.rootFocus),
+            className: classnames(className, styles.rootFocus)
           })
         },
         {

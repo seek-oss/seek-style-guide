@@ -109,8 +109,7 @@ export default class Demo extends Component {
   }
 
   render() {
-    const { component: DemoComponent, spec } = this.props;
-    const { options } = spec;
+    const { component: DemoComponent, options } = this.props.spec;
 
     const demoElement = <DemoComponent {...this.calculateProps()} />;
 
