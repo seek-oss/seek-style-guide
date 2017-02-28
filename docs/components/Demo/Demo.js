@@ -100,7 +100,7 @@ export default class Demo extends Component {
 
       return states.reduce((innerProps, state) => {
         if (activeStates[option.label] && activeStates[option.label].indexOf(state.label) > -1) {
-          return state.reduceProps(innerProps);
+          return state.transformProps(innerProps);
         }
 
         return innerProps;

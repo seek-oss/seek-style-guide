@@ -15,28 +15,28 @@ export default {
       states: [
         {
           label: 'Hover',
-          reduceProps: ({ className, ...restProps }) => ({
+          transformProps: ({ className, ...props }) => ({
+            ...props,
             className: classnames(className, styles.rootHover),
-            ...restProps
           })
         },
         {
           label: 'Active',
-          reduceProps: ({ className, ...restProps }) => ({
+          transformProps: ({ className, ...props }) => ({
+            ...props,
             className: classnames(className, styles.rootActive),
-            ...restProps
           })
         },
         {
           label: 'Focus',
-          reduceProps: ({ className, ...restProps }) => ({
+          transformProps: ({ className, ...props }) => ({
+            ...props,
             className: classnames(className, styles.rootFocus),
-            ...restProps
           })
         },
         {
           label: 'Loading',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             loading: true
           })
@@ -49,14 +49,14 @@ export default {
       states: [
         {
           label: 'As Button',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             component: 'button'
           })
         },
         {
           label: 'As Link',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             component: 'a',
             href: '#'
@@ -64,7 +64,7 @@ export default {
         },
         {
           label: 'As Div',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             component: 'div'
           })
@@ -77,21 +77,21 @@ export default {
       states: [
         {
           label: 'Pink',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             color: 'pink'
           })
         },
         {
           label: 'Blue',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             color: 'blue'
           })
         },
         {
           label: 'Gray',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             color: 'gray'
           })
@@ -104,11 +104,11 @@ export default {
       states: [
         {
           label: 'No Icon',
-          reduceProps: props => props
+          transformProps: props => props
         },
         {
           label: 'Heart Icon',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             children: (
               <span>
@@ -120,7 +120,7 @@ export default {
         },
         {
           label: 'Star Icon',
-          reduceProps: props => ({
+          transformProps: props => ({
             ...props,
             children: (
               <span>
