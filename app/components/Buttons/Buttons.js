@@ -227,7 +227,7 @@ export default class Buttons extends Component {
           color={color}
           className={className}
           loading={loading}
-          key={key ? key : 1}>
+          key={key}>
           {iconComponent}
           Click here
         </Button>
