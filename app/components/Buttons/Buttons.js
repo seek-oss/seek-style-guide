@@ -72,7 +72,7 @@ const specs = {
   transparent: {
     'Border radius': '0',
     'Drop shadow': 'none',
-    'Background color': '@sk-transparent',
+    'Background color': 'transparent',
     'Text color': '@sk-link'
   },
   transparentHover: {
