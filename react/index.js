@@ -2,6 +2,7 @@
 export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
 export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  // Alias for backwards compatibility
 export { default as Button } from './Button/Button';
+export { default as ButtonGroup } from './ButtonGroup/ButtonGroup';
 export { default as Logo } from './Logo/Logo';
 export { default as Rating } from './Rating/Rating';
 export { default as Header } from './Header/Header';

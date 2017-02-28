@@ -14,7 +14,7 @@ import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
-import { Button, HeartIcon, StarIcon } from 'seek-style-guide/react';
+import { Button, ButtonGroup, HeartIcon, StarIcon } from 'seek-style-guide/react';
 
 const icons = {
   HeartIcon,
@@ -118,11 +118,13 @@ export default class Buttons extends Component {
       active: false,
       focus: false,
       loading: false,
-      baseline: false
+      baseline: false,
+      multiple: false
     };
 
     this.setColor = this.setColor.bind(this);
     this.setIcon = this.setIcon.bind(this);
+    this.setMultiple = this.setMultiple.bind(this);
     this.setComponent = this.setComponent.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
     this.toggleActive = this.toggleActive.bind(this);
@@ -140,6 +142,12 @@ export default class Buttons extends Component {
   setIcon(event) {
     this.setState({
       icon: event.target.value
+    });
+  }
+
+  setMultiple(event) {
+    this.setState({
+      multiple: JSON.parse(event.target.value)
     });
   }
 
@@ -180,7 +188,7 @@ export default class Buttons extends Component {
   }
 
   render() {
-    const { color, icon, hover, active, focus, loading, baseline, component } = this.state;
+    const { color, icon, hover, active, focus, loading, baseline, component, multiple } = this.state;
     const isPink = (color === 'pink');
     const isBlue = (color === 'blue');
     const isGray = (color === 'gray');
@@ -212,16 +220,24 @@ export default class Buttons extends Component {
     const iconComponent = icon ?
       React.createElement(icons[icon], { filled: true, svgClassName: styles.iconSvg }) :
       null;
-    const buttonComponent = (
-      <Button
-        {...(component ? { component } : {})}
-        color={color}
-        className={className}
-        loading={loading}>
-        {iconComponent}
-        Click here
-      </Button>
-    );
+    const button = key => {
+      return (
+        <Button
+          {...(component ? { component } : {})}
+          color={color}
+          className={className}
+          loading={loading}
+          key={key ? key : 1}>
+          {iconComponent}
+          Click here
+        </Button>
+      );
+    };
+    const buttonComponent = multiple ? (
+      <ButtonGroup>
+        {[ button(1), button(2), button(3) ]}
+      </ButtonGroup>
+    ) : button();
 
     return (
       <div>
@@ -320,6 +336,17 @@ export default class Buttons extends Component {
                 { name: 'Star Icon', value: 'StarIcon' }
               ],
               onChange: this.setIcon
+            }}
+          />
+          <div className={styles.divider} />
+          <SandboxToggle
+            toggleType="select"
+            toggleProps={{
+              options: [
+                { name: 'Single button', value: false },
+                { name: 'Mutiple buttons', value: true }
+              ],
+              onChange: this.setMultiple
             }}
           />
         </SandboxTogglePanel>
