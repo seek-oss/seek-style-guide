@@ -11,16 +11,9 @@ export default function Home() {
         <Section header>
           <Text hero>Hello world!</Text>
         </Section>
-
-        <Section group>
-          <Section>
-            <Text heading>Demo</Text>
-          </Section>
-          <Section>
-            <Demo component={Button} spec={buttonDemoSpec} />
-          </Section>
-        </Section>
       </PageBlock>
+
+      <Demo component={Button} spec={buttonDemoSpec} />
 
     </div>
   );

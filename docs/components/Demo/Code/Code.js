@@ -1,6 +1,6 @@
 import styles from './Code.less';
 import React, { Component, PropTypes } from 'react';
-import { Card, Section, Text } from 'seek-style-guide/react';
+import { Section, Text } from 'seek-style-guide/react';
 import debounce from 'lodash.debounce';
 import jsxToString from 'react-element-to-jsx-string';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -57,20 +57,18 @@ export default class Code extends Component {
 
     return (
       <CopyToClipboard text={code} onCopy={this.handleCopy}>
-        <Card>
-          <Section className={styles.root} onMouseLeave={this.handleMouseLeave}>
-            <Text body>
-              <pre className={styles.code}>
-                <code>
-                  {code}
-                </code>
-              </pre>
-            </Text>
-            <Text strong className={styles.message} positive={copiedToClipboard}>
-              {copiedToClipboard ? 'Copied' : 'Click to copy'}
-            </Text>
-          </Section>
-        </Card>
+        <Section header className={styles.root} onMouseLeave={this.handleMouseLeave}>
+          <Text>
+            <pre className={styles.code}>
+              <code>
+                {code}
+              </code>
+            </pre>
+          </Text>
+          <Text strong className={styles.message} positive={copiedToClipboard}>
+            {copiedToClipboard ? 'Copied' : 'Click to copy'}
+          </Text>
+        </Section>
       </CopyToClipboard>
     );
   }

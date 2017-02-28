@@ -1,0 +1,35 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  padding-bottom: @grid-row-height * 6;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: (@grid-row-height * 6) 0 (@grid-row-height * 7);
+}
+
+.options {
+  background: @sk-gray-medium;
+  border-radius: 3px;
+  padding: @grid-row-height 0;
+  margin-bottom: @grid-row-height * 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionItem {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.select {
+  font-size: 14px;
+}

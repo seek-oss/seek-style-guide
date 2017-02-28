@@ -1,5 +1,8 @@
+import styles from './Demo.less';
 import React, { Component, PropTypes } from 'react';
+import { PageBlock, Text } from 'seek-style-guide/react';
 import Code from './Code/Code';
+import flatten from 'lodash.flatten';
 
 export default class Demo extends Component {
   constructor(props) {
@@ -10,56 +13,46 @@ export default class Demo extends Component {
     };
   }
 
-  renderOption = (option, key) => {
+  renderOption = option => {
     const { activeStates } = this.state;
 
-    return (
-      <div key={key}>
+    return option.type === 'radio' ? (
+      <select className={styles.select} onChange={this.makeSelectChangeHandler(option)}>
         {
-          option.type === 'radio' ? (
-            <select onChange={this.makeSelectChangeHandler(option)}>
-              {
-                option.states.map((state, i) => {
-                  const selected = (activeStates[option.label] === state.label);
+          option.states.map((state, i) => {
+            const selected = (activeStates[option.label] === state.label);
 
-                  return (
-                    <option
-                      key={i}
-                      value={state.label}
-                      selected={selected}>
-                      { state.label }
-                    </option>
-                  );
-                })
-              }
-            </select>
-          ) : (
-            <ul>
-              {
-                option.states.map((state, i) => {
-                  const checked = Boolean(
-                    activeStates[option.label] &&
-                    activeStates[option.label].indexOf(state.label) > -1
-                  );
-
-                  return (
-                    <li key={i}>
-                      <label>
-                        <input
-                          type="checkbox"
-                          checked={checked}
-                          onChange={this.makeCheckboxChangeHandler(option, state)}
-                        />
-                        { state.label }
-                      </label>
-                    </li>
-                  );
-                })
-              }
-            </ul>
-          )
+            return (
+              <option
+                key={i}
+                value={state.label}
+                selected={selected}>
+                { state.label }
+              </option>
+            );
+          })
         }
-      </div>
+      </select>
+    ) : (
+      option.states.map((state, i) => {
+        const checked = Boolean(
+          activeStates[option.label] &&
+          activeStates[option.label].indexOf(state.label) > -1
+        );
+
+        return (
+          <Text key={i}>
+            <label>
+              <input
+                type="checkbox"
+                checked={checked}
+                onChange={this.makeCheckboxChangeHandler(option, state)}
+              />
+              { state.label }
+            </label>
+          </Text>
+        );
+      })
     );
   };
 
@@ -122,10 +115,23 @@ export default class Demo extends Component {
     const demoElement = <DemoComponent {...this.calculateProps()} />;
 
     return (
-      <div>
-        { demoElement }
-        { options.map(this.renderOption) }
-        <Code jsx={demoElement} />
+      <div className={styles.root}>
+        <div className={styles.component}>
+          { demoElement }
+        </div>
+        <PageBlock>
+          <div className={styles.options}>
+            {
+              flatten(options.map(this.renderOption))
+                .map((option, i) => (
+                  <div key={i} className={styles.optionItem}>{ option }</div>
+                ))
+              }
+          </div>
+        </PageBlock>
+        <PageBlock style={{ background: 'white' }}>
+          <Code jsx={demoElement} />
+        </PageBlock>
       </div>
     );
   }
