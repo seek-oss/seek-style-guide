@@ -46,7 +46,7 @@ export default class Code extends Component {
       const componentCode = jsxToString(jsx, {
         showDefaultProps: false,
         filterProps: ['className'],
-        useBooleanShorthandSyntax: true
+        useBooleanShorthandSyntax: false
       }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
       .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}');
 
