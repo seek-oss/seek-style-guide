@@ -4,6 +4,11 @@ import { PageBlock, Text } from 'seek-style-guide/react';
 import Code from './Code/Code';
 import flatten from 'lodash.flatten';
 
+const DefaultContainer = ({ component: DemoComponent }) => <DemoComponent />;
+DefaultContainer.propTypes = {
+  component: PropTypes.func.isRequired
+};
+
 export default class Demo extends Component {
   constructor(props) {
     super(props);
@@ -109,14 +114,19 @@ export default class Demo extends Component {
   }
 
   render() {
-    const { component: DemoComponent, options } = this.props.spec;
+    const {
+      component: DemoComponent,
+      container: Container = DefaultContainer,
+      options
+    } = this.props.spec;
 
     const demoElement = <DemoComponent {...this.calculateProps()} />;
+    const BoundComponent = props => <DemoComponent {...this.calculateProps()} {...props} />;
 
     return (
       <div className={styles.root}>
         <div className={styles.component}>
-          { demoElement }
+          <Container component={BoundComponent} />
         </div>
         <PageBlock>
           <div className={styles.options}>
@@ -137,6 +147,5 @@ export default class Demo extends Component {
 }
 
 Demo.propTypes = {
-  component: PropTypes.any.isRequired,
   spec: PropTypes.object.isRequired
 };
