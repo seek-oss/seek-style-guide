@@ -13,7 +13,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('MonthPicker', () => {
-  let element, monthPicker, label, input, errors;
+  let element, monthPicker, input, errors;
 
   beforeEach(() => {
     errors = [];
@@ -30,7 +30,6 @@ describe('MonthPicker', () => {
   function render(jsx) {
     element = jsx;
     monthPicker = renderer.render(element);
-    label = findAllWithClass(monthPicker, 'label')[0] || null;
     input = findAllWithClass(monthPicker, 'input')[0] || null;
   }
 
@@ -43,55 +42,6 @@ describe('MonthPicker', () => {
     it('should error if `id` is not a string', () => {
       render(<MonthPicker id={true} />);
       expect(errors[0]).to.match(/Invalid prop `id`/);
-    });
-  });
-
-  describe('label', () => {
-    it('should not be rendered by default', () => {
-      render(<MonthPicker />);
-      expect(label).to.equal(null);
-    });
-
-    it('should have `htmlFor` equal to `id` when `label` is specified', () => {
-      render(<MonthPicker id="firstName" label="First Name" />);
-      expect(label.props).to.contain.keys({ htmlFor: 'firstName' });
-    });
-
-    it('should have the right text when `label` is specified', () => {
-      render(<MonthPicker id="firstName" label="First Name" />);
-      expect(label.props.children).to.equal('First Name');
-    });
-
-    it('should error if `id` is not specified but `label` is', () => {
-      render(<MonthPicker label="First Name" />);
-      expect(errors[0]).to.match(/have an `id`/);
-    });
-  });
-
-  describe('labelProps', () => {
-    it('should error if `labelProps` is not an object', () => {
-      render(<MonthPicker id="firstName" label="First Name" labelProps="data-automation=first-name" />);
-      expect(errors[0]).to.match(/Invalid prop `labelProps`/);
-    });
-
-    it('should error if `labelProps` is specified but `label` is not', () => {
-      render(<MonthPicker labelProps={{ 'data-automation': 'first-name' }} />);
-      expect(errors[0]).to.match(/Specifying `labelProps` is redundant/);
-    });
-
-    it('should error if `labelProps`\'s `htmlFor` is specified', () => {
-      render(<MonthPicker id="firstName" label="First Name" labelProps={{ htmlFor: 'ignored' }} />);
-      expect(errors[0]).to.match(/`labelProps.htmlFor` will be overridden by `id`/);
-    });
-
-    it('should pass through className to the label', () => {
-      render(<MonthPicker id="firstName" label="First Name" labelProps={{ className: 'first-name-label' }} />);
-      expect(label.props.className).to.match(/first-name-label$/);
-    });
-
-    it('should pass through other props to the label', () => {
-      render(<MonthPicker id="firstName" label="First Name" labelProps={{ 'data-automation': 'first-name-label' }} />);
-      expect(label.props['data-automation']).to.equal('first-name-label');
     });
   });
 

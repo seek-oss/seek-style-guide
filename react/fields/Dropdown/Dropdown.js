@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import ChevronIcon from '../../icons/ChevronIcon/ChevronIcon';
 
 import FieldMessage from '../FieldMessage/FieldMessage';
+import FieldLabel from '../FieldLabel/FieldLabel';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -23,37 +24,16 @@ export default class Dropdown extends Component {
   static propTypes = {
     /* eslint-disable consistent-return */
     id: (props, propName, componentName) => {
-      const { id, label } = props;
+      const { id } = props;
 
       if (typeof id !== 'string') {
         return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
-      }
-
-      if (label && !id) {
-        return new Error(`When ${componentName} has a \`label\`, it should also have an \`id\`.`);
       }
     },
     /* eslint-enable consistent-return */
     className: PropTypes.string,
     valid: PropTypes.bool,
-    label: PropTypes.string,
     /* eslint-disable consistent-return */
-    labelProps: (props, propName, componentName) => {
-      const { id, label, labelProps } = props;
-      const { htmlFor: labelFor } = labelProps || {};
-
-      if (typeof labelProps !== 'undefined' && typeof labelProps !== 'object') {
-        return new Error(`Invalid prop \`labelProps\` of type \`${typeof labelProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
-      }
-
-      if (!label && labelProps) {
-        return new Error(`Specifying \`labelProps\` is redundant when \`label\` is not specified in ${componentName}.`);
-      }
-
-      if (labelFor && id) {
-        return new Error(`\`labelProps.htmlFor\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
-      }
-    },
     inputProps: (props, propName, componentName) => {
       const { id, inputProps } = props;
       const { id: inputId, value } = inputProps || {};
@@ -70,6 +50,7 @@ export default class Dropdown extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
+    /* eslint-enable consistent-return */
     options: PropTypes.arrayOf(
       PropTypes.shape({
         value: PropTypes.oneOfType([
@@ -88,7 +69,6 @@ export default class Dropdown extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    label: '',
     placeholder: '',
     options: []
   };
@@ -96,28 +76,7 @@ export default class Dropdown extends Component {
   constructor() {
     super();
 
-    this.renderLabel = this.renderLabel.bind(this);
     this.renderSelect = this.renderSelect.bind(this);
-  }
-
-  renderLabel() {
-    const { label } = this.props;
-
-    if (!label) {
-      return;
-    }
-
-    const { labelProps, id } = this.props;
-    const allLabelProps = {
-      ...combineClassNames(labelProps, styles.label),
-      ...(id ? { htmlFor: id } : {})
-    };
-
-    return (
-      <label {...allLabelProps}>
-        {label}
-      </label>
-    );
   }
 
   renderOption({ value, label }) {
@@ -178,7 +137,7 @@ export default class Dropdown extends Component {
 
     return (
       <div className={classNames}>
-        {this.renderLabel()}
+        <FieldLabel {...this.props} />
         {this.renderChevron()}
         {this.renderSelect()}
         <FieldMessage {...this.props} />
