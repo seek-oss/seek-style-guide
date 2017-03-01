@@ -14,7 +14,7 @@ import HeadlineText from 'HeadlineText/HeadlineText';
 import Spec from 'Spec/Spec';
 import Code from 'Code/Code';
 
-import { Button, ButtonGroup, HeartIcon, StarIcon } from 'seek-style-guide/react';
+import { Button, InputGroup, HeartIcon, StarIcon, Checkbox } from 'seek-style-guide/react';
 
 const icons = {
   HeartIcon,
@@ -220,23 +220,30 @@ export default class Buttons extends Component {
     const iconComponent = icon ?
       React.createElement(icons[icon], { filled: true, svgClassName: styles.iconSvg }) :
       null;
-    const button = key => {
-      return (
-        <Button
-          {...(component ? { component } : {})}
-          color={color}
-          className={className}
-          loading={loading}
-          key={key}>
-          {iconComponent}
-          Click here
-        </Button>
-      );
-    };
+    const button = key => (
+      <Button
+        {...(component ? { component } : {})}
+        color={color}
+        className={className}
+        loading={loading}
+        key={key}>
+        {iconComponent}
+        Click here
+      </Button>
+    );
+    const checkbox = () => (
+      <Checkbox
+        key="4"
+        id="input-group-checkbox"
+        inputProps={{ checked: true, onChange: () => {} }}
+        label="Check me"
+        type="standard"
+      />
+    );
     const buttonComponent = multiple ? (
-      <ButtonGroup>
-        {[ button(1), button(2), button(3) ]}
-      </ButtonGroup>
+      <InputGroup>
+        {[ button(1), button(2), button(3), checkbox() ]}
+      </InputGroup>
     ) : button();
 
     return (
