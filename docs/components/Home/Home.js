@@ -6,6 +6,7 @@ import buttonDemoSpec from 'seek-style-guide/react/Button/Button.demo';
 import textFieldDemoSpec from 'seek-style-guide/react/fields/TextField/TextField.demo';
 import autosuggestDemoSpec from 'seek-style-guide/react/fields/Autosuggest/Autosuggest.demo';
 import textareaDemoSpec from 'seek-style-guide/react/fields/Textarea/Textarea.demo';
+import monthPickerDemoSpec from 'seek-style-guide/react/fields/MonthPicker/MonthPicker.demo';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Demo spec={textFieldDemoSpec} />
       <Demo spec={autosuggestDemoSpec} />
       <Demo spec={textareaDemoSpec} />
+      <Demo spec={monthPickerDemoSpec} />
 
     </div>
   );
