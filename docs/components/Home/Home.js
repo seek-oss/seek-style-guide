@@ -8,6 +8,7 @@ import autosuggestDemoSpec from 'seek-style-guide/react/fields/Autosuggest/Autos
 import textareaDemoSpec from 'seek-style-guide/react/fields/Textarea/Textarea.demo';
 import monthPickerDemoSpec from 'seek-style-guide/react/fields/MonthPicker/MonthPicker.demo';
 import checkboxDemoSpec from 'seek-style-guide/react/fields/Checkbox/Checkbox.demo';
+import dropdownDemoSpec from 'seek-style-guide/react/fields/Dropdown/Dropdown.demo';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Demo spec={textareaDemoSpec} />
       <Demo spec={monthPickerDemoSpec} />
       <Demo spec={checkboxDemoSpec} />
+      <Demo spec={dropdownDemoSpec} />
 
     </div>
   );
