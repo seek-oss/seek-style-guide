@@ -2,21 +2,10 @@ import styles from './Text.less';
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 
-import Secondary from '../Secondary/Secondary';
-import Strong from '../Strong/Strong';
-import Positive from '../Positive/Positive';
-import Critical from '../Critical/Critical';
-
-const renderContent = ({ children, positive, critical, secondary, strong }) => {
-  const modifiers = [
-    positive ? Positive : null,
-    critical ? Critical : null,
-    secondary ? Secondary : null,
-    strong ? Strong : null
-  ].filter(x => x);
-
-  return modifiers.reduce((content, Modifier) => <Modifier>{content}</Modifier>, children);
-};
+import stylesPositive from '../Positive/Positive.less';
+import stylesCritical from '../Critical/Critical.less';
+import stylesSecondary from '../Secondary/Secondary.less';
+import stylesStrong from '../Strong/Strong.less';
 
 export default function Text({
   children,
@@ -44,9 +33,13 @@ export default function Text({
         [styles.headline]: headline,
         [styles.heading]: heading,
         [styles.hero]: hero,
-        [styles.raw]: raw
+        [styles.raw]: raw,
+        [stylesPositive.root]: positive,
+        [stylesCritical.root]: critical,
+        [stylesSecondary.root]: secondary,
+        [stylesStrong.root]: strong
       })}>
-      {renderContent({ children, positive, critical, secondary, strong })}
+      {children}
     </div>
   );
 }
