@@ -62,8 +62,7 @@ export default {
       getSuggestionValue: suggestion => suggestion
     },
     message: false,
-    // Provided for documentation purposes only,
-    // these props are overridden by the container
+    // Documentation only:
     inputProps: {
       type: 'search',
       value: '...',
