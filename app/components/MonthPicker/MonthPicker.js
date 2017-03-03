@@ -171,6 +171,7 @@ export default class MonthPickerDemo extends Component {
     const monthPicker = (
       <SeekMonthPicker
         id="startDate"
+        label="Start Date"
         className={styles.input}
         message={message}
         valid={valid}

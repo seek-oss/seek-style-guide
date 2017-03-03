@@ -27,8 +27,13 @@
 }
 
 .suggestionsContainer_withLabel {
-  @labelRowOffset: 3;
+  @labelRowOffset: 4;
   top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
+
+  @media only screen and (min-width: (@responsive-breakpoint)) {
+    @labelRowOffset: 3;
+    top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
+  }
 }
 
 .sectionTitle {
