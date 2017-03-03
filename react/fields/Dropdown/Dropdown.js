@@ -140,10 +140,10 @@ export default class Dropdown extends Component {
 
     return (
       <div className={classNames}>
-        <FieldLabel id={id} label={label} labelProps={labelProps} secondaryLabel={secondaryLabel} />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel }} />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage invalid={invalid} help={help} helpProps={helpProps} valid={valid} message={message} messageProps={messageProps} />
+        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }

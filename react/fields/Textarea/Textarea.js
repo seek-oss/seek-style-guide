@@ -146,10 +146,10 @@ export default class Textarea extends Component {
 
     return (
       <div className={classNames}>
-        <FieldLabel id={id} label={label} labelProps={labelProps} secondaryLabel={this.renderCharacterLimit()} />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel: this.renderCharacterLimit() }} />
         {this.renderInput()}
         <div className={styles.footer}>
-          <FieldMessage invalid={invalid} help={help} helpProps={helpProps} valid={valid} message={message} messageProps={messageProps} />
+        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
           {this.renderCharacterCount()}
         </div>
       </div>

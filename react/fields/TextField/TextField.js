@@ -128,10 +128,10 @@ export default class TextField extends Component {
 
     return (
       <div className={classNames}>
-        <FieldLabel id={id} label={label} labelProps={labelProps} secondaryLabel={secondaryLabel} />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel }} />
         {this.renderInput()}
         {this.renderClear()}
-        <FieldMessage invalid={invalid} help={help} helpProps={helpProps} valid={valid} message={message} messageProps={messageProps} />
+        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }
