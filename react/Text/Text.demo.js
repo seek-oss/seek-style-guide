@@ -17,13 +17,6 @@ export default {
             ...props,
             strong: true
           })
-        },
-        {
-          label: 'Secondary',
-          transformProps: props => ({
-            ...props,
-            secondary: true
-          })
         }
       ]
     },
@@ -47,6 +40,13 @@ export default {
           transformProps: props => ({
             ...props,
             critical: true
+          })
+        },
+        {
+          label: 'Secondary',
+          transformProps: props => ({
+            ...props,
+            secondary: true
           })
         }
       ]
