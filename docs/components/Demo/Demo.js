@@ -91,7 +91,7 @@ export default class Demo extends Component {
     this.setState({
       activeStates: {
         ...activeStates,
-        [option.label]: value
+        [option.label]: [value]
       }
     });
   };

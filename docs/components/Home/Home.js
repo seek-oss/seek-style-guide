@@ -9,6 +9,7 @@ import textareaDemoSpec from 'seek-style-guide/react/fields/Textarea/Textarea.de
 import monthPickerDemoSpec from 'seek-style-guide/react/fields/MonthPicker/MonthPicker.demo';
 import checkboxDemoSpec from 'seek-style-guide/react/fields/Checkbox/Checkbox.demo';
 import dropdownDemoSpec from 'seek-style-guide/react/fields/Dropdown/Dropdown.demo';
+import ratingDemoSpec from 'seek-style-guide/react/Rating/Rating.demo';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Demo spec={monthPickerDemoSpec} />
       <Demo spec={checkboxDemoSpec} />
       <Demo spec={dropdownDemoSpec} />
+      <Demo spec={ratingDemoSpec} />
 
     </div>
   );
