@@ -141,12 +141,15 @@ export default class Textarea extends Component {
       [className]: className
     });
 
+    // eslint-disable-next-line react/prop-types
+    const { id, label, labelProps, invalid, help, helpProps, message, messageProps } = this.props;
+
     return (
       <div className={classNames}>
-        <FieldLabel {...this.props} secondaryLabel={this.renderCharacterLimit()} />
+        <FieldLabel id={id} label={label} labelProps={labelProps} secondaryLabel={this.renderCharacterLimit()} />
         {this.renderInput()}
         <div className={styles.footer}>
-          <FieldMessage {...this.props} />
+          <FieldMessage invalid={invalid} help={help} helpProps={helpProps} valid={valid} message={message} messageProps={messageProps} />
           {this.renderCharacterCount()}
         </div>
       </div>

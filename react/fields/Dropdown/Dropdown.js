@@ -135,12 +135,15 @@ export default class Dropdown extends Component {
       [className]: className
     });
 
+    // eslint-disable-next-line react/prop-types
+    const { id, label, labelProps, secondaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
+
     return (
       <div className={classNames}>
-        <FieldLabel {...this.props} />
+        <FieldLabel id={id} label={label} labelProps={labelProps} secondaryLabel={secondaryLabel} />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage {...this.props} />
+        <FieldMessage invalid={invalid} help={help} helpProps={helpProps} valid={valid} message={message} messageProps={messageProps} />
       </div>
     );
   }
