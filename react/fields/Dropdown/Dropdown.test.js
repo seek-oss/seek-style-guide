@@ -27,7 +27,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, label, input, placeholder, optionGroup, childOptions, errors, option;
+  let element, dropdown, input, placeholder, optionGroup, childOptions, errors, option;
 
   beforeEach(() => {
     errors = [];
@@ -44,7 +44,6 @@ describe('Dropdown', () => {
   function render(jsx) {
     element = jsx;
     dropdown = renderer.render(element);
-    label = findAllWithClass(dropdown, 'label')[0] || null;
     input = findAllWithClass(dropdown, 'dropdown')[0] || null;
     placeholder = findAllWithType(dropdown, 'option')[0] || null;
     optionGroup = findAllWithType(dropdown, 'optgroup')[0] || null;
@@ -92,55 +91,6 @@ describe('Dropdown', () => {
     });
     it('should render 2nd optgroup child value correctly', () => {
       expect(childOptions[1].props.children).to.equal('wl');
-    });
-  });
-
-  describe('label', () => {
-    it('should not be rendered by default', () => {
-      render(<Dropdown inputProps={{ value: '' }} />);
-      expect(label).to.equal(null);
-    });
-
-    it('should have `htmlFor` equal to `id` when `label` is specified', () => {
-      render(<Dropdown inputProps={{ value: '' }} id="firstName" label="First Name" />);
-      expect(label.props).to.contain.keys({ htmlFor: 'firstName' });
-    });
-
-    it('should have the right text when `label` is specified', () => {
-      render(<Dropdown inputProps={{ value: '' }} id="firstName" label="First Name" />);
-      expect(label.props.children).to.equal('First Name');
-    });
-
-    it('should error if `id` is not specified but `label` is', () => {
-      render(<Dropdown inputProps={{ value: '' }} label="First Name" />);
-      expect(errors[0]).to.match(/have an `id`/);
-    });
-  });
-
-  describe('labelProps', () => {
-    it('should error if `labelProps` is not an object', () => {
-      render(<Dropdown inputProps={{ value: '' }} id="firstName" label="First Name" labelProps="data-automation=first-name" />);
-      expect(errors[0]).to.match(/Invalid prop `labelProps`/);
-    });
-
-    it('should error if `labelProps` is specified but `label` is not', () => {
-      render(<Dropdown inputProps={{ value: '' }} labelProps={{ 'data-automation': 'first-name' }} />);
-      expect(errors[0]).to.match(/Specifying `labelProps` is redundant/);
-    });
-
-    it('should error if `labelProps`\'s `htmlFor` is specified', () => {
-      render(<Dropdown inputProps={{ value: '' }} id="firstName" label="First Name" labelProps={{ htmlFor: 'ignored' }} />);
-      expect(errors[0]).to.match(/`labelProps.htmlFor` will be overridden by `id`/);
-    });
-
-    it('should pass through className to the label', () => {
-      render(<Dropdown inputProps={{ value: '' }} id="firstName" label="First Name" labelProps={{ className: 'first-name-label' }} />);
-      expect(label.props.className).to.match(/first-name-label$/);
-    });
-
-    it('should pass through other props to the label', () => {
-      render(<Dropdown inputProps={{ value: '' }} id="firstName" label="First Name" labelProps={{ 'data-automation': 'first-name-label' }} />);
-      expect(label.props['data-automation']).to.equal('first-name-label');
     });
   });
 
