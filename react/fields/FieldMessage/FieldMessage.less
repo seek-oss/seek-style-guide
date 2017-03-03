@@ -1,7 +1,11 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  margin-bottom: (@grid-row-height * 3);
+  margin-bottom: (@grid-row-height * 4);
+
+  @media only screen and (min-width: @responsive-breakpoint) {
+    margin-bottom: (@grid-row-height * 3);
+  }
 
    &.noMarginBottom {
     margin-bottom: 0;
