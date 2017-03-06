@@ -58,13 +58,11 @@ export default class Code extends Component {
     return (
       <CopyToClipboard text={code} onCopy={this.handleCopy}>
         <Section header className={styles.root} onMouseLeave={this.handleMouseLeave}>
-          <Text>
-            <pre className={styles.code}>
-              <code>
-                {code}
-              </code>
-            </pre>
-          </Text>
+          <pre className={styles.code}>
+            <code>
+              {code}
+            </code>
+          </pre>
           <Text strong className={styles.message} positive={copiedToClipboard}>
             {copiedToClipboard ? 'Copied' : 'Click to copy'}
           </Text>

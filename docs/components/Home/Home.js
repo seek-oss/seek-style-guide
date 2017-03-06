@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageBlock, Section } from 'seek-style-guide/react';
+import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Demo from 'Demo/Demo';
 import textDemoSpec from 'seek-style-guide/react/Text/Text.demo';
 import buttonDemoSpec from 'seek-style-guide/react/Button/Button.demo';
@@ -16,7 +16,9 @@ export default function Home() {
     <div>
 
       <PageBlock>
-        <Section />
+        <Section header>
+          <Text hero>Typography</Text>
+        </Section>
       </PageBlock>
 
       <Demo spec={textDemoSpec} />

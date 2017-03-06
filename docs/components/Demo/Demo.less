@@ -18,30 +18,52 @@
 }
 
 .options {
-  border-radius: 3px;
-  height: @grid-row-height * 7;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  padding: @grid-row-height @grid-gutter-width (@grid-row-height * 2) @grid-gutter-width;
+
+  @media only screen and (min-width: @responsive-breakpoint) {
+    height: @grid-row-height * 7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .optionItem {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  padding-bottom: @grid-row-height;
+
+  @media only screen and (min-width: @responsive-breakpoint) {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 0;
+  }
 }
 
 .select {
-  font-size: 14px;
   background: @sk-white;
   border: 0;
-  height: @grid-row-height * 3;
-  min-width: 150px;
+  font-size: 18px;
+  height: @grid-row-height * 4;
+  width: 100%;
+  margin: @grid-row-height 0;
+
+  @media only screen and (min-width: @responsive-breakpoint) {
+    font-size: 14px;
+    height: @grid-row-height * 3;
+    width: auto;
+    min-width: 130px;
+  }
 }
 
 .codeBlock {
   background: @sk-white;
+  overflow-x: auto;
+  overflow-y: hidden;
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 }
