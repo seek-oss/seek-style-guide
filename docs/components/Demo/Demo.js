@@ -1,6 +1,7 @@
 import styles from './Demo.less';
 import React, { Component, PropTypes } from 'react';
 import { PageBlock, Text } from 'seek-style-guide/react';
+import Baseline from 'react-baseline';
 import Code from './Code/Code';
 import flatten from 'lodash.flatten';
 
@@ -125,10 +126,12 @@ export default class Demo extends Component {
 
     return (
       <div className={styles.root}>
-        <div className={styles.component}>
-          <Container component={BoundComponent} />
-        </div>
-        <PageBlock>
+        <Baseline isVisible={true} type='bar' color="#e5e5e5">
+          <div className={styles.component}>
+            <Container component={BoundComponent} />
+          </div>
+        </Baseline>
+        <PageBlock className={styles.optionsBlock}>
           <div className={styles.options}>
             {
               flatten(options.map(this.renderOption))
@@ -138,7 +141,7 @@ export default class Demo extends Component {
               }
           </div>
         </PageBlock>
-        <PageBlock style={{ background: 'white' }}>
+        <PageBlock className={styles.codeBlock}>
           <Code jsx={demoElement} />
         </PageBlock>
       </div>

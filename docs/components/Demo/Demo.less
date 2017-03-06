@@ -8,14 +8,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: (@grid-row-height * 6) 0 (@grid-row-height * 7);
+  padding: (@grid-row-height * 8) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.optionsBlock {
+  background: #e5e5e5;
 }
 
 .options {
-  background: @sk-gray-medium;
   border-radius: 3px;
-  height: @grid-row-height * 5;
-  margin-bottom: @grid-row-height * 2;
+  height: @grid-row-height * 7;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,4 +36,12 @@
 
 .select {
   font-size: 14px;
+  background: @sk-white;
+  border: 0;
+  height: @grid-row-height * 3;
+  min-width: 150px;
+}
+
+.codeBlock {
+  background: @sk-white;
 }
