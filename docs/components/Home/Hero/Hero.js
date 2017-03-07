@@ -9,7 +9,7 @@ import IconPreview from './IconPreview/IconPreview';
 
 export default function Hero() {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} aria-hidden="true">
       <PageBlock>
         <Section>
           <div className={styles.layout}>

@@ -30,46 +30,46 @@ export default class Header extends Component {
         <div className={styles.headerPlaceholder} />
         <PageBlock className={styles.headerBlock}>
           <Section className={styles.headerSection}>
-            <Link to="/" onClick={this.handleMenuClose}>
-              <Logo svgClassName={styles.logo} />
-            </Link>
+            <div className={styles.sectionContent}>
+              <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
+                <Logo svgClassName={styles.logo} />
+                <Text heading className={styles.title}>style guide</Text>
+              </Link>
 
-            <div className={styles.hamburger}>
-              <input
-                onChange={this.handleMenuToggle}
-                checked={menuOpen}
-                id="hamburgerCheckbox"
-                type="checkbox"
-                className={styles.checkbox}
-              />
-              <label htmlFor="hamburgerCheckbox" className={styles.bars}>
-                <div className={styles.bar1} />
-                <div className={styles.bar2} />
-                <div className={styles.bar3} />
-                <span className={styles.hamburgerText}>Show menu</span>
-              </label>
+              <div className={styles.hamburger}>
+                <input
+                  onChange={this.handleMenuToggle}
+                  checked={menuOpen}
+                  id="hamburgerCheckbox"
+                  type="checkbox"
+                  className={styles.checkbox}
+                />
+                <label htmlFor="hamburgerCheckbox" className={styles.bars}>
+                  <div className={styles.bar1} />
+                  <div className={styles.bar2} />
+                  <div className={styles.bar3} />
+                  <span className={styles.hamburgerText}>Show menu</span>
+                </label>
 
-              <div className={styles.menu} onClick={this.handleMenuClose}>
-                <PageBlock>
-                  <Section header>
-                    <Text hero>Style Guide</Text>
-                  </Section>
-                  <Section slim>
-                    <Text heading strong>
-                      <Link className={styles.link} to="/">Home</Link>
-                    </Text>
+                <div className={styles.menu} onClick={this.handleMenuClose}>
+                  <PageBlock>
+                    <Section header>
+                      <Text hero>
+                        <Link className={styles.link} to="/">Home</Link>
+                      </Text>
 
-                    {
-                      demoSpecs.map(demoSpec => (
-                        <Text heading strong key={demoSpec.title}>
-                          <Link className={styles.link} to={demoSpec.route}>
-                            { demoSpec.title }
-                          </Link>
-                        </Text>
-                      ))
-                    }
-                  </Section>
-                </PageBlock>
+                      {
+                        demoSpecs.map(demoSpec => (
+                          <Text hero key={demoSpec.title}>
+                            <Link className={styles.link} to={demoSpec.route}>
+                              { demoSpec.title }
+                            </Link>
+                          </Text>
+                        ))
+                      }
+                    </Section>
+                  </PageBlock>
+                </div>
               </div>
             </div>
           </Section>
