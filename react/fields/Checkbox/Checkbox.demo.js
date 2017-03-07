@@ -41,6 +41,8 @@ class CheckboxContainer extends Component {
 }
 
 export default {
+  route: '/checkbox',
+  title: 'Checkbox',
   component: Checkbox,
   container: CheckboxContainer,
   initialProps: {

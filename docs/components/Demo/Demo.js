@@ -1,6 +1,6 @@
 import styles from './Demo.less';
 import React, { Component, PropTypes } from 'react';
-import { PageBlock, Text } from 'seek-style-guide/react';
+import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Baseline from 'react-baseline';
 import Code from './Code/Code';
 import flatten from 'lodash.flatten';
@@ -116,6 +116,7 @@ export default class Demo extends Component {
 
   render() {
     const {
+      title,
       component: DemoComponent,
       container: Container = DefaultContainer,
       options
@@ -126,6 +127,11 @@ export default class Demo extends Component {
 
     return (
       <div className={styles.root}>
+        <PageBlock>
+          <Section header>
+            <Text hero>{ title }</Text>
+          </Section>
+        </PageBlock>
         <Baseline isVisible={true} type='bar' color="#e5e5e5">
           <div className={styles.component}>
             <Container component={BoundComponent} />

@@ -4,6 +4,8 @@ import classnames from 'classnames';
 import fieldMessageOptions from '../FieldMessage/FieldMessage.demo';
 
 export default {
+  route: '/textfields',
+  title: 'Textfields',
   component: TextField,
   initialProps: {
     id: 'firstName',

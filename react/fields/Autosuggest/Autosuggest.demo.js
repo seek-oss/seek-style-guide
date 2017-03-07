@@ -49,6 +49,8 @@ class AutosuggestContainer extends Component {
 }
 
 export default {
+  route: '/autosuggest',
+  title: 'Autosuggest',
   component: Autosuggest,
   container: AutosuggestContainer,
   initialProps: {

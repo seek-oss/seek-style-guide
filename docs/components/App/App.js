@@ -1,17 +1,11 @@
-import styles from './App.less';
 import React, { PropTypes } from 'react';
-import { StyleGuideProvider, PageBlock, Section } from 'seek-style-guide/react';
-import Logo from './Logo/Logo';
+import { StyleGuideProvider } from 'seek-style-guide/react';
+import Header from './Header/Header';
 
 export default function App({ children }) {
   return (
     <StyleGuideProvider fullScreen={true} title="SEEK Style Guide">
-      <PageBlock className={styles.headerBlock}>
-        <Section>
-          <Logo svgClassName={styles.logo} />
-        </Section>
-      </PageBlock>
-
+      <Header />
       {children}
     </StyleGuideProvider>
   );

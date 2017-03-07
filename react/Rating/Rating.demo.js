@@ -1,6 +1,8 @@
 import Rating from './Rating';
 
 export default {
+  route: '/rating',
+  title: 'Rating',
   component: Rating,
   initialProps: {
     rating: 0

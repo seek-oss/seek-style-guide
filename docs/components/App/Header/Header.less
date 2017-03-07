@@ -1,0 +1,109 @@
+@import (reference) "~seek-style-guide/theme";
+
+.headerPlaceholder {
+  height: @grid-row-height * 9;
+}
+
+.headerBlock {
+  background: @sk-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 109px;
+  height: 43px;
+}
+
+.headerSection {
+  position: relative;
+}
+
+.hamburger {
+  position: absolute;
+  right: @grid-gutter-width;
+  top: @grid-row-height - 1;
+}
+
+.hamburgerText {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  text-indent: 999px;
+  position: absolute;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.bars {
+  display: block;
+  cursor: pointer;
+  width: @grid-gutter-width * 2;
+  height: (@grid-row-height * 3) + 1;
+  position: relative;
+}
+
+@barHeight: 6px;
+.bar() {
+  height: @barHeight;
+  width: 100%;
+  background: @sk-white;
+  position: absolute;
+  transition: all .1s ease;
+}
+
+.bar1 {
+  .bar();
+  top: 0;
+  .checkbox:checked ~ .bars & {
+    transform: translateY(11px) rotate(45deg);
+  }
+}
+
+.bar2 {
+  .bar();
+  top: 50%;
+  margin-top: @barHeight * -0.5;
+  .checkbox:checked ~ .bars & {
+    opacity: 0;
+  }
+}
+
+.bar3 {
+  .bar();
+  bottom: 0;
+  .checkbox:checked ~ .bars & {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}
+
+.menu {
+  background: @sk-blue;
+  color: @sk-white;
+  position: fixed;
+  z-index: 10;
+  top: @grid-row-height * 9;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: @grid-row-height * 10;
+  overflow: auto;
+  display: none;
+
+  .checkbox:checked ~ & {
+    display: block;
+  }
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
