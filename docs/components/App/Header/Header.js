@@ -30,7 +30,7 @@ export default class Header extends Component {
         <div className={styles.headerPlaceholder} />
         <PageBlock className={styles.headerBlock}>
           <Section className={styles.headerSection}>
-            <Link to="/">
+            <Link to="/" onClick={this.handleMenuClose}>
               <Logo svgClassName={styles.logo} />
             </Link>
 
