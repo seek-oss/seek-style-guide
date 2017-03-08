@@ -1,3 +1,5 @@
+const BASE_DIR = process.env.BASE_DIR || 'docs';
+
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
@@ -9,12 +11,12 @@ const appCss = new ExtractTextPlugin('app.css');
 
 // Must be absolute paths
 const appPaths = [
-  path.resolve(__dirname, 'app'),
+  path.resolve(__dirname, BASE_DIR),
   path.resolve(__dirname, 'wip_modules')
 ];
 
 const config = {
-  entry: './app/client-render',
+  entry: `./${BASE_DIR}/client-render`,
 
   output: {
     path: path.resolve(__dirname, 'dist'),

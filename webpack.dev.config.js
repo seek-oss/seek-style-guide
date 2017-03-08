@@ -1,4 +1,4 @@
-const BASE_DIR = process.env.BASE_DIR || 'app';
+const BASE_DIR = process.env.BASE_DIR || 'docs';
 
 const path = require('path');
 const webpack = require('webpack');
