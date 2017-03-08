@@ -1,0 +1,29 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  .headingText();
+  display: inline-block;
+  padding-bottom: @grid-row-height;
+  padding-left: @grid-gutter-width * 0.5;
+  padding-right: @grid-gutter-width * 0.5;
+  margin-top: @grid-row-height * 4;
+  margin-left: -(@grid-gutter-width * 0.5);
+}
+
+.root + .root {
+  margin-left: 0;
+}
+
+.selected {
+  font-weight: 600;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 2px;
+    background-color: @sk-black;
+  }
+}
