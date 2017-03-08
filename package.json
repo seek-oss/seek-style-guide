@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "BASE_HREF=/ node server",
-    "start-old": "BASE_DIR=app BASE_HREF=/ node server",
     "test": "npm run test-unit && npm run lint && npm run build",
     "test-unit": "BABEL_ENV=test jest --config ./test/jest.config.json",
     "lint": "eslint app docs react test ./*.js",
