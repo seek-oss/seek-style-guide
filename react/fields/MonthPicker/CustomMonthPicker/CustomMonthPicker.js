@@ -144,6 +144,7 @@ export default class CustomMonthPicker extends Component {
           options={months}
           className={styles.dropdown}
           valid={valid}
+          message={false}
           placeholder="Month"
           inputProps={{
             onBlur: this.handleBlur,
@@ -157,6 +158,7 @@ export default class CustomMonthPicker extends Component {
           options={years}
           className={styles.dropdown}
           valid={valid}
+          message={false}
           placeholder="Year"
           inputProps={{
             onBlur: this.handleBlur,

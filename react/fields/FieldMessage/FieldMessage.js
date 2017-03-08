@@ -105,5 +105,4 @@ export default class FieldMessage extends Component {
       </div>
     );
   }
-
 }

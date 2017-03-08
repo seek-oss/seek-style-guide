@@ -9,7 +9,7 @@ export default class Button extends Component {
 
   static propTypes = {
     color: PropTypes.oneOf([
-      'pink', 'blue', 'gray'
+      'pink', 'blue', 'gray', 'transparent'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -49,7 +49,8 @@ export default class Button extends Component {
         [styles.loading]: loading,
         [styles.root_isPink]: color === 'pink',
         [styles.root_isBlue]: color === 'blue',
-        [styles.root_isGray]: color === 'gray'
+        [styles.root_isGray]: color === 'gray',
+        [styles.root_isTransparent]: color === 'transparent'
       }),
       disabled: loading,
       ref: this.storeButtonReference,

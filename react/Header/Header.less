@@ -1,7 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
-@small-ia: ~"only screen and (max-width: 767px)";
-@large-ia: ~"only screen and (min-width: 768px)";
+@small-ia: ~"only screen and (max-width: " (@responsive-breakpoint - 1) ~")";
+@large-ia: ~"only screen and (min-width: " @responsive-breakpoint ~")";
 @classic-ia: ~"only screen and (min-width: 1025px)";
 
 .root {
@@ -139,5 +139,9 @@
   width: @divider-width;
   height: 14px;
   border-right: @divider-width solid @sk-mid-gray-dark;
-  display: inline-block;
+  display: none;
+
+  @media @large-ia {
+    display: inline-block;
+  }
 }

@@ -68,10 +68,27 @@ const specs = {
   },
   grayActive: {
     'Background color': 'darken(@sk-mid-gray-light, 5%)'
+  },
+  transparent: {
+    'Border radius': '0',
+    'Drop shadow': 'none',
+    'Background color': 'transparent',
+    'Text color': '@sk-link'
+  },
+  transparentHover: {
+    'Text decoration': 'underline'
+  },
+  transparentActive: {
+    'Transform': 'none'
+  },
+  transparentFocus: {
+    'Outline': 'auto'
   }
 };
 const propertiesToRemove = {
-  'Drop shadow': 'none'
+  'Drop shadow': 'none',
+  'Border radius': '0',
+  'Transform': 'none'
 };
 
 function getSpec(specsObj) {
@@ -167,6 +184,7 @@ export default class Buttons extends Component {
     const isPink = (color === 'pink');
     const isBlue = (color === 'blue');
     const isGray = (color === 'gray');
+    const isTransparent = (color === 'transparent');
     const className = classnames({
       [buttonStyles.rootHover]: hover,
       [buttonStyles.rootActive]: active,
@@ -185,7 +203,11 @@ export default class Buttons extends Component {
       blueActive: isBlue && active,
       gray: isGray,
       grayHover: isGray && hover,
-      grayActive: isGray && active
+      grayActive: isGray && active,
+      transparent: isTransparent,
+      transparentHover: isTransparent && hover,
+      transparentActive: isTransparent && active,
+      transparentFocus: isTransparent && focus
     });
     const iconComponent = icon ?
       React.createElement(icons[icon], { filled: true, svgClassName: styles.iconSvg }) :
@@ -282,7 +304,8 @@ export default class Buttons extends Component {
               options: [
                 { name: 'Pink', value: 'pink' },
                 { name: 'Blue', value: 'blue' },
-                { name: 'Gray', value: 'gray' }
+                { name: 'Gray', value: 'gray' },
+                { name: 'Transparent', value: 'transparent' }
               ],
               onChange: this.setColor
             }}
