@@ -16,11 +16,15 @@
 }
 
 .standard {
-  .touchableText(@standard-type-scale);
+  .touchableText(@standard-type-scale-mobile);
 
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: (@responsive-breakpoint)) {
+    .touchableText(@standard-type-scale);
+  }
 }
 
 .checkBox {
@@ -56,7 +60,7 @@
 }
 
 .button {
-  .touchableText(@standard-type-scale);
+  .touchableText(@standard-type-scale-mobile);
 
   display: flex;
   align-items: center;
@@ -66,6 +70,10 @@
   border: 1px solid @sk-mid-gray-light;
   border-radius: 2px;
   cursor: pointer;
+
+  @media only screen and (min-width: (@responsive-breakpoint)) {
+    .touchableText(@standard-type-scale);
+  }
 
   .input:checked + .label & {
     font-weight: @sk-bold;
