@@ -132,7 +132,7 @@ export default class Demo extends Component {
             <Text hero>{ title }</Text>
           </Section>
         </PageBlock>
-        <Baseline isVisible={true} type='bar' color="#e5e5e5">
+        <Baseline isVisible={true} type="bar" color="#e5e5e5">
           <div className={styles.component}>
             <Container component={BoundComponent} />
           </div>
