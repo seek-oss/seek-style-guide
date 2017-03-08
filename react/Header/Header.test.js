@@ -15,7 +15,19 @@ describe('Header:', () => {
   });
 
   it('should render when authenticated', () => {
-    expect(renderHeader({ authenticated: true, userName: 'Leeroy' }).toJSON()).toMatchSnapshot();
+    expect(renderHeader({ authenticationStatus: 'authenticated', userName: 'Leeroy' }).toJSON()).toMatchSnapshot();
+  });
+
+  it('should render when authenticated but username is not yet provided', () => {
+    expect(renderHeader({ authenticationStatus: 'authenticated', userName: '' }).toJSON()).toMatchSnapshot();
+  });
+
+  it('should render when unauthenticated', () => {
+    expect(renderHeader({ authenticationStatus: 'unauthenticated' }).toJSON()).toMatchSnapshot();
+  });
+
+  it('should render when authentication is pending', () => {
+    expect(renderHeader({ authenticationStatus: 'pending' }).toJSON()).toMatchSnapshot();
   });
 
   it('should render when activeTab is \'Profile\'', () => {
