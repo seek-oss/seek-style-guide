@@ -1,0 +1,47 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  position: relative;
+}
+
+.group {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 0;
+    @media only screen and (min-width: 500px) {
+      margin-right: @grid-gutter-width;
+    }
+    @media only screen and (min-width: 640px) {
+      margin-right: 0;
+    }
+    @media only screen and (min-width: 840px) {
+      margin-right: @grid-gutter-width;
+    }
+  }
+
+  &:last-child {
+    display: none;
+    @media only screen and (min-width: 500px) {
+      display: inline-block;
+    }
+    @media only screen and (min-width: 640px) {
+      display: none;
+    }
+    @media only screen and (min-width: 840px) {
+      display: inline-block;
+    }
+  }
+
+  > * {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: @grid-row-height;
+    }
+  }
+}
+
+.button {
+  width: @grid-gutter-width * 5;
+}

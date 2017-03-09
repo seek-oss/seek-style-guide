@@ -1,3 +1,5 @@
+const BASE_DIR = process.env.BASE_DIR || 'docs';
+
 const fs = require('fs');
 const ejs = require('ejs');
 const path = require('path');
@@ -12,14 +14,13 @@ const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8')); // eslint-
 
 // Must be absolute paths
 const appPaths = [
-  path.resolve(__dirname, 'app'),
+  path.resolve(__dirname, BASE_DIR),
   path.resolve(__dirname, 'wip_modules')
 ];
 
 const routes = [
   '/',
   '/playground',
-  '/icons',
   '/buttons',
   '/textfields',
   '/autosuggest',
@@ -32,7 +33,7 @@ const routes = [
 ];
 
 const config = {
-  entry: './app/server-render',
+  entry: `./${BASE_DIR}/server-render`,
 
   output: {
     path: path.resolve(__dirname, 'dist'),
