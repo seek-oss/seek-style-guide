@@ -18,7 +18,6 @@ export default class FieldMessage extends Component {
     helpProps: PropTypes.object,
     valid: PropTypes.bool,
     message: React.PropTypes.oneOfType([
-      React.PropTypes.string,
       React.PropTypes.oneOf([false]),
       React.PropTypes.node
     ]),
