@@ -1,0 +1,33 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.drop {
+  border-radius: 50%;
+}
+
+.hex {
+  .rawText();
+  display: flex;
+  color: @sk-mid-gray-dark;
+  margin-left: @grid-gutter-width;
+  display: none;
+  @media only screen and (min-width: 390px) {
+    display: block;
+  }
+  @media only screen and (min-width: 500px) {
+    display: none;
+  }
+  @media only screen and (min-width: 580px) {
+    display: block;
+  }
+  @media only screen and (min-width: 640px) {
+    display: none;
+  }
+  @media only screen and (min-width: 740px) {
+    display: block;
+  }
+}

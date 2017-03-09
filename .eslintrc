@@ -7,6 +7,7 @@
   },
   "parser": "babel-eslint",
   "plugins": [
+    "babel",
     "react",
     "jest"
   ],
@@ -62,7 +63,7 @@
     "no-floating-decimal": 2,
     "no-implicit-coercion": 2,
     "no-implied-eval": 2,
-    "no-invalid-this": 2,
+    "no-invalid-this": 0,
     "no-iterator": 2,
     "no-labels": 2,
     "no-lone-blocks": 2,
@@ -164,6 +165,8 @@
     "prefer-reflect": 0,
     "prefer-template": 2,
     "require-yield": 2,
+
+    "babel/no-invalid-this": 2,
 
     "react/display-name": 0,
     "react/forbid-prop-types": 0,
