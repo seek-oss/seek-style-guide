@@ -32632,7 +32632,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  help: _react2.default.PropTypes.string,
 	  helpProps: _react.PropTypes.object,
 	  valid: _react.PropTypes.bool,
-	  message: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.oneOf([false])]),
+	  message: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.oneOf([false]), _react2.default.PropTypes.node]),
 	  messageProps: _react.PropTypes.object
 	};
 	FieldMessage.defaultProps = {
