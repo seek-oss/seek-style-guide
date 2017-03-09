@@ -3,10 +3,11 @@
 exports[`Header: should render when activeTab is 'Profile' 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
@@ -285,10 +286,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
 exports[`Header: should render when authenticated 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
@@ -685,10 +687,11 @@ exports[`Header: should render when authenticated 1`] = `
 exports[`Header: should render when authenticated but username is not yet provided 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
@@ -1085,10 +1088,11 @@ exports[`Header: should render when authenticated but username is not yet provid
 exports[`Header: should render when authentication is pending 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
@@ -1367,10 +1371,11 @@ exports[`Header: should render when authentication is pending 1`] = `
 exports[`Header: should render when unauthenticated 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
@@ -1649,10 +1654,11 @@ exports[`Header: should render when unauthenticated 1`] = `
 exports[`Header: should render with locale of AU 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
@@ -1931,10 +1937,11 @@ exports[`Header: should render with locale of AU 1`] = `
 exports[`Header: should render with locale of NZ 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
@@ -2190,10 +2197,11 @@ exports[`Header: should render with locale of NZ 1`] = `
 exports[`Header: should render with no divider 1`] = `
 <header
   aria-label="Primary navigation"
+  className="root"
   role="banner"
 >
   <section
-    className="root"
+    className="content"
   >
     <div
       className="banner"
