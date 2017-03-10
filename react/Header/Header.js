@@ -16,9 +16,13 @@ const employerLinkHref = locale => locale === 'NZ' ?
   'https://talent.seek.co.nz/' :
   'https://talent.seek.com.au/';
 
+const AUTHENTICATED = 'authenticated';
+const UNAUTHENTICATED = 'unauthenticated';
+const AUTH_PENDING = 'pending';
+
 export default function Header({
   locale,
-  authenticated,
+  authenticationStatus,
   userName,
   linkRenderer,
   activeTab,
@@ -26,7 +30,8 @@ export default function Header({
 }) {
   const userClasses = classnames({
     [styles.user]: true,
-    [styles.user_isReady]: authenticated === true || authenticated === false
+    [styles.user_isReady]: authenticationStatus === UNAUTHENTICATED ||
+      (authenticationStatus === AUTHENTICATED && userName)
   });
 
   return (
@@ -47,7 +52,7 @@ export default function Header({
           <div className={styles.userWrapper}>
             <div className={userClasses}>
               {
-                authenticated ?
+                authenticationStatus === AUTHENTICATED ?
                   <UserAccount userName={userName} linkRenderer={linkRenderer} /> :
                   <SignInRegister linkRenderer={linkRenderer} />
               }
@@ -88,7 +93,11 @@ export default function Header({
 
 Header.propTypes = {
   locale: PropTypes.oneOf(['AU', 'NZ']),
-  authenticated: PropTypes.bool,
+  authenticationStatus: PropTypes.oneOf([
+    AUTHENTICATED,
+    UNAUTHENTICATED,
+    AUTH_PENDING
+  ]),
   userName: PropTypes.string,
   linkRenderer: PropTypes.func,
   activeTab: PropTypes.string,
@@ -98,7 +107,7 @@ Header.propTypes = {
 Header.defaultProps = {
   locale: 'AU',
   linkRenderer: defaultLinkRenderer,
-  authenticated: null,
+  authenticationStatus: AUTH_PENDING,
   activeTab: null,
   divider: true
 };
