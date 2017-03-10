@@ -1,7 +1,7 @@
 import styles from './PartnerSites.less';
 
 import React, { PropTypes } from 'react';
-import ScreenReaderOnly from '../../Accessibility/ScreenReaderOnly';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const linksObject = {
   AU: {

@@ -88,21 +88,23 @@
 }
 
 .loading {
+  padding-right: @grid-gutter-width * 2;
+
   &:after {
-    content: ' ';
+    content: ' \2026';
     text-align: left;
-    width: 16px;
-    height: 5px;
+    width: 0;
+    overflow-x: hidden;
     display: inline-block;
-    animation-duration: 2s;
+    position: absolute;
+    animation-duration: 0.8s;
     animation-name: loading;
     animation-iteration-count: infinite;
   }
 }
 
 @keyframes loading {
-  0% { content: ' '; }
-  25% { content: '.'; }
-  50% { content: '..'; }
-  75% { content: '...'; }
+  to {
+    width: @grid-gutter-width;
+  }
 }

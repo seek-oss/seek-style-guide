@@ -2,7 +2,7 @@ import styles from './SignInRegister.less';
 
 import React, { PropTypes } from 'react';
 
-import ScreenReaderOnly from '../../Accessibility/ScreenReaderOnly';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 export default function SignInRegister({ linkRenderer }) {
   return (
