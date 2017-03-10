@@ -9,7 +9,7 @@ import Locales from './Locales/Locales';
 import Navigation from './Navigation/Navigation';
 import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
-import ScreenReaderOnly from '../Accessibility/ScreenReaderOnly';
+import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 const defaultLinkRenderer = props => (<a {...props} />);
 const employerLinkHref = locale => locale === 'NZ' ?
