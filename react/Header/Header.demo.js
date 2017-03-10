@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Header } from 'seek-style-guide/react';
 
 export const dummyLinkRenderer = ({ href, ...props }) => (
-  <a href={`#linkHref=${href}`} {...props} />
+  <a href={`#actualHref=${href}`} {...props} />
 );
 dummyLinkRenderer.propTypes = {
   href: PropTypes.string
