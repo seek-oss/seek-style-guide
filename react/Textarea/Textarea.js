@@ -3,8 +3,8 @@ import styles from './Textarea.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import FieldMessage from '../FieldMessage/FieldMessage';
-import FieldLabel from '../FieldLabel/FieldLabel';
+import FieldMessage from '../private/FieldMessage/FieldMessage';
+import FieldLabel from '../private/FieldLabel/FieldLabel';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;

@@ -2,7 +2,7 @@ import svgMarkup from './LinkedInIcon.svg';
 import svgMarkupFilled from './LinkedInIconFilled.svg';
 
 import React, { PropTypes } from 'react';
-import Icon from '../Icon/Icon';
+import Icon from '../private/Icon/Icon';
 
 export default function LinkedInIcon({ filled, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;

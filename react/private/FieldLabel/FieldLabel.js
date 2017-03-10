@@ -3,7 +3,7 @@ import styles from './FieldLabel.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import Text from '../Text/Text';
+import Text from '../../Text/Text';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;

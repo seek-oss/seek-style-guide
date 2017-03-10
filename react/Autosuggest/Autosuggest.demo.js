@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Autosuggest from './Autosuggest';
 import styles from '../TextField/TextField.less';
 import classnames from 'classnames';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.demo';
+import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
 class AutosuggestContainer extends Component {
   static propTypes = {

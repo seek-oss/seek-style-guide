@@ -5,8 +5,8 @@ import classnames from 'classnames';
 
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
 
-import FieldMessage from '../FieldMessage/FieldMessage';
-import FieldLabel from '../FieldLabel/FieldLabel';
+import FieldMessage from '../private/FieldMessage/FieldMessage';
+import FieldLabel from '../private/FieldLabel/FieldLabel';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;

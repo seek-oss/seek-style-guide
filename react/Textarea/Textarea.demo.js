@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Textarea from './Textarea';
 import styles from './Textarea.less';
 import classnames from 'classnames';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.demo';
+import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
 class TextareaContainer extends Component {
   static propTypes = {

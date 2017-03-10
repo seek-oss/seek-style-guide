@@ -2,7 +2,7 @@ import svgMarkup from './FacebookIcon.svg';
 import svgMarkupFilled from './FacebookIconFilled.svg';
 
 import React, { PropTypes } from 'react';
-import Icon from '../Icon/Icon';
+import Icon from '../private/Icon/Icon';
 
 export default function FacebookIcon({ filled, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;

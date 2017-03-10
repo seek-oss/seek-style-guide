@@ -2,7 +2,7 @@ import svgMarkup from './TwitterIcon.svg';
 import svgMarkupFilled from './TwitterIconFilled.svg';
 
 import React, { PropTypes } from 'react';
-import Icon from '../Icon/Icon';
+import Icon from '../private/Icon/Icon';
 
 export default function TwitterIcon({ filled, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;

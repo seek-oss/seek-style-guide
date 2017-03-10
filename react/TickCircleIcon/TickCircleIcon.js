@@ -5,7 +5,7 @@ import svgMarkupFilled from './TickCircleIconFilled.svg';
 
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
-import Icon from '../Icon/Icon';
+import Icon from '../private/Icon/Icon';
 
 export default function TickCircleIcon({ filled, className, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;

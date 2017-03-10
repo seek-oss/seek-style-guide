@@ -6,8 +6,8 @@ import classnames from 'classnames';
 import CustomMonthPicker from './CustomMonthPicker/CustomMonthPicker';
 import NativeMonthPicker from './NativeMonthPicker/NativeMonthPicker';
 
-import FieldMessage from '../FieldMessage/FieldMessage';
-import FieldLabel from '../FieldLabel/FieldLabel';
+import FieldMessage from '../private/FieldMessage/FieldMessage';
+import FieldLabel from '../private/FieldLabel/FieldLabel';
 
 export default class MonthPicker extends Component {
 

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Dropdown from './Dropdown';
 import styles from './Dropdown.less';
 import classnames from 'classnames';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.demo';
+import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
 class DropdownContainer extends Component {
   static propTypes = {

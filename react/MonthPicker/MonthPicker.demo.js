@@ -1,7 +1,7 @@
 import styles from './MonthPicker.demo.less';
 import React, { Component, PropTypes } from 'react';
 import MonthPicker from './MonthPicker';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.demo';
+import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
 class MonthPickerContainer extends Component {
   static propTypes = {

@@ -3,7 +3,7 @@ import styles from './ChevronIcon.less';
 
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
-import Icon from '../Icon/Icon';
+import Icon from '../private/Icon/Icon';
 
 export default function ChevronIcon({ direction, className, ...props }) {
   const combinedProps = {

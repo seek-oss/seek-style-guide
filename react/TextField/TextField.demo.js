@@ -1,7 +1,7 @@
 import TextField from './TextField';
 import styles from './TextField.less';
 import classnames from 'classnames';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.demo';
+import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
 export default {
   route: '/textfields',

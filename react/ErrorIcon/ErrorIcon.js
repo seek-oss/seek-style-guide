@@ -2,7 +2,7 @@ import svgMarkup from './ErrorIcon.svg';
 import svgMarkupFilled from './ErrorIconFilled.svg';
 
 import React, { PropTypes } from 'react';
-import Icon from '../Icon/Icon';
+import Icon from '../private/Icon/Icon';
 
 export default function ErrorIcon({ filled, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;

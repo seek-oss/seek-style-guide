@@ -3,10 +3,10 @@ import styles from './FieldMessage.less';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ErrorIcon from '../ErrorIcon/ErrorIcon';
-import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
+import ErrorIcon from '../../ErrorIcon/ErrorIcon';
+import TickCircleIcon from '../../TickCircleIcon/TickCircleIcon';
 
-import Text from '../Text/Text';
+import Text from '../../Text/Text';
 
 export default class FieldMessage extends Component {
 

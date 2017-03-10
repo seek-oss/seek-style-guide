@@ -4,7 +4,7 @@ import React, { PropTypes } from 'react';
 
 import StarIcon from '../StarIcon/StarIcon';
 import HalfStarIcon from './HalfStarIcon.svg';
-import Icon from '../Icon/Icon';
+import Icon from '../private/Icon/Icon';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 const getPercent = (rating, position) => Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
