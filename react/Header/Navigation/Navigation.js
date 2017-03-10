@@ -3,7 +3,7 @@ import styles from './Navigation.less';
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ScreenReaderOnly from '../../Accessibility/ScreenReaderOnly';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const items = [
   {
