@@ -50,27 +50,20 @@ Wrap your app with the `StyleGuideProvider` component to use any of the style gu
 
 ```js
 render() {
+  const locale = 'AU';
+  const title = '...';
+  const meta = [
+    { name: 'description', content: '...' }
+  ];
+  const link = [
+    { rel: 'canonical', href: 'https://www.seek.com.au/' }
+  ];
 
-     const meta = {
-      meta: [
-        { name: 'description', content: 'The most stylish of SEEK pages'},
-      ],
-      link: [
-        { rel: 'canonical', href: 'https://stylish.url' }
-      ]
-    };
-    const pageTitle = 'Super Awesome SEEK Page';
-    const locale = 'en_US';
-
-    return (
-      <StyleGuideProvider title={pageTitle} meta={meta.meta} link={meta.link} locale={locale}>
-        <div className={styles.root}>
-
-          ...
-
-        </div>
-      </StyleGuideProvider>
-    );
+  return (
+    <StyleGuideProvider locale={locale} title={title} meta={meta} link={link}>
+      ...
+    </StyleGuideProvider>
+  );
 }
 ```
 
