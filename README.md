@@ -44,7 +44,45 @@ module.exports = decorateClientConfig(config, {
 
 Please note that, if your Webpack loaders aren't scoped to your local project files via the ["include" option](https://webpack.github.io/docs/configuration.html#module-loaders), the decorator will throw an error.
 
-### Setting up React
+### Optimising Imports
+
+When importing from the style guide, while it might appear that you are only importing what's needed, it's highly likely that you're actually including the entire style guide in your application bundle ([even when using tree shaking in webpack 2](https://github.com/webpack/webpack/issues/2867)).
+
+In order to help you optimise your bundle size, all components can be imported directly from their individual source files. For example, take a look at standard import statement:
+
+```js
+import { Header, Footer } from 'seek-style-guide/react';
+```
+
+This can also be expressed as separate, file-level imports:
+
+```js
+import Header from 'seek-style-guide/react/Header/Header.js';
+import Footer from 'seek-style-guide/react/Footer/Footer.js';
+```
+
+Rather than transforming this manually, it's recommended that you leverage [Babel](https://babeljs.io/) instead, with [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports) configured to match the pattern used in this style guide.
+
+To set this up, assuming you're already using Babel, first install the plugin:
+
+```bash
+npm install --save-dev babel-plugin-transform-imports
+```
+
+Then, include the following in your Babel config:
+
+```js
+"plugins": [
+  ["babel-plugin-transform-imports", {
+    "seek-style-guide/react": {
+      "transform": "seek-style-guide/react/${member}/${member}",
+      "preventFullImport": true
+    }
+  }]
+]
+```
+
+### Setting Up the Style Guide Provider
 
 Wrap your app with the `StyleGuideProvider` component to use any of the style guide components. For example:
 
