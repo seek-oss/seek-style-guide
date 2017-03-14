@@ -12,7 +12,13 @@ $ npm install --save-dev seek-style-guide
 
 ## Setup
 
-### Setting up Webpack
+### Bundler Configuration
+
+#### Webpack v2+
+
+[seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack)
+
+#### Webpack v1
 
 First, decorate your server Webpack config:
 
@@ -43,6 +49,18 @@ module.exports = decorateClientConfig(config, {
 ```
 
 Please note that, if your Webpack loaders aren't scoped to your local project files via the ["include" option](https://webpack.github.io/docs/configuration.html#module-loaders), the decorator will throw an error.
+
+#### Alternative Bundlers
+
+While webpack has first class support, this style guide will work with any bundler that can be configured to support the following:
+
+- Overloading of import statements to allow dependencies between different asset types.
+- JavaScript compilation with support for ES2015, JSX, class properties and object rest/spread.
+- Compilation of Less and CSS Modules, with the ability to generate static CSS files.
+- Handling of web fonts, with the ability to base64 encode them into CSS.
+- Importing raw file contents from SVGs.
+
+If you've successully created another bundler integration along the lines of [seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack), please open a pull request!
 
 ### Optimising Imports
 
