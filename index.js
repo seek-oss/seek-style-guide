@@ -39040,6 +39040,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	          color: 'gray'
 	        });
 	      }
+	    }, {
+	      label: 'Transparent',
+	      transformProps: function transformProps(props) {
+	        return _extends({}, props, {
+	          color: 'transparent'
+	        });
+	      }
 	    }]
 	  }, {
 	    label: 'Icon',
