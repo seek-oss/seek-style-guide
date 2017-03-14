@@ -98,6 +98,13 @@ export default {
             ...props,
             color: 'gray'
           })
+        },
+        {
+          label: 'Transparent',
+          transformProps: props => ({
+            ...props,
+            color: 'transparent'
+          })
         }
       ]
     },

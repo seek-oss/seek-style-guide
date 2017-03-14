@@ -85,6 +85,10 @@
   .activeState({
     transform: none;
   });
+
+  @media only screen and (min-width: @responsive-breakpoint) {
+    .touchableText(@standard-type-scale);
+  }
 }
 
 .loading {
