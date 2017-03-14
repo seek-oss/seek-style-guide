@@ -7,6 +7,8 @@ import MonthPicker from 'seek-style-guide/react/MonthPicker/MonthPicker.demo';
 import Checkbox from 'seek-style-guide/react/Checkbox/Checkbox.demo';
 import Dropdown from 'seek-style-guide/react/Dropdown/Dropdown.demo';
 import Rating from 'seek-style-guide/react/Rating/Rating.demo';
+import Header from 'seek-style-guide/react/Header/Header.demo';
+import Footer from 'seek-style-guide/react/Footer/Footer.demo';
 
 export default [
   Text,
@@ -17,5 +19,7 @@ export default [
   MonthPicker,
   Checkbox,
   Dropdown,
-  Rating
+  Rating,
+  Header,
+  Footer
 ];
