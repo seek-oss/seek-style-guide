@@ -1,8 +1,8 @@
 import styles from './UserAccount.less';
 import React, { PropTypes } from 'react';
 
-import ChevronIcon from '../../icons/ChevronIcon/ChevronIcon';
-import ScreenReaderOnly from '../../Accessibility/ScreenReaderOnly';
+import ChevronIcon from '../../ChevronIcon/ChevronIcon';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 
 export default function UserAccount({ userName, linkRenderer }) {

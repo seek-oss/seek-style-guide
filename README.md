@@ -12,7 +12,13 @@ $ npm install --save-dev seek-style-guide
 
 ## Setup
 
-### Setting up Webpack
+### Bundler Configuration
+
+#### Webpack v2+
+
+[seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack)
+
+#### Webpack v1
 
 First, decorate your server Webpack config:
 
@@ -44,33 +50,76 @@ module.exports = decorateClientConfig(config, {
 
 Please note that, if your Webpack loaders aren't scoped to your local project files via the ["include" option](https://webpack.github.io/docs/configuration.html#module-loaders), the decorator will throw an error.
 
-### Setting up React
+#### Alternative Bundlers
+
+While webpack has first class support, this style guide will work with any bundler that can be configured to support the following:
+
+- Overloading of import statements to allow dependencies between different asset types.
+- JavaScript compilation with support for ES2015, JSX, class properties and object rest/spread.
+- Compilation of Less and CSS Modules, with the ability to generate static CSS files.
+- Handling of web fonts, with the ability to base64 encode them into CSS.
+- Importing raw file contents from SVGs.
+
+If you've successully created another bundler integration along the lines of [seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack), please open a pull request!
+
+### Optimising Imports
+
+When importing from the style guide, while it might appear that you are only importing what's needed, it's highly likely that you're actually including the entire style guide in your application bundle ([even when using tree shaking in webpack 2](https://github.com/webpack/webpack/issues/2867)).
+
+In order to help you optimise your bundle size, all components can be imported directly from their individual source files. For example, take a look at standard import statement:
+
+```js
+import { Header, Footer } from 'seek-style-guide/react';
+```
+
+This can also be expressed as separate, file-level imports:
+
+```js
+import Header from 'seek-style-guide/react/Header/Header.js';
+import Footer from 'seek-style-guide/react/Footer/Footer.js';
+```
+
+Rather than transforming this manually, it's recommended that you leverage [Babel](https://babeljs.io/) instead, with [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports) configured to match the pattern used in this style guide.
+
+To set this up, assuming you're already using Babel, first install the plugin:
+
+```bash
+npm install --save-dev babel-plugin-transform-imports
+```
+
+Then, include the following in your Babel config:
+
+```js
+"plugins": [
+  ["babel-plugin-transform-imports", {
+    "seek-style-guide/react": {
+      "transform": "seek-style-guide/react/${member}/${member}",
+      "preventFullImport": true
+    }
+  }]
+]
+```
+
+### Setting Up the Style Guide Provider
 
 Wrap your app with the `StyleGuideProvider` component to use any of the style guide components. For example:
 
 ```js
 render() {
+  const locale = 'AU';
+  const title = '...';
+  const meta = [
+    { name: 'description', content: '...' }
+  ];
+  const link = [
+    { rel: 'canonical', href: 'https://www.seek.com.au/' }
+  ];
 
-     const meta = {
-      meta: [
-        { name: 'description', content: 'The most stylish of SEEK pages'},
-      ],
-      link: [
-        { rel: 'canonical', href: 'https://stylish.url' }
-      ]
-    };
-    const pageTitle = 'Super Awesome SEEK Page';
-    const locale = 'en_US';
-
-    return (
-      <StyleGuideProvider title={pageTitle} meta={meta.meta} link={meta.link} locale={locale}>
-        <div className={styles.root}>
-
-          ...
-
-        </div>
-      </StyleGuideProvider>
-    );
+  return (
+    <StyleGuideProvider locale={locale} title={title} meta={meta} link={link}>
+      ...
+    </StyleGuideProvider>
+  );
 }
 ```
 

@@ -3,7 +3,7 @@ import styles from './StyleGuideProvider.less';
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import Helmet from 'react-helmet';
-import ScreenReaderOnly from '../Accessibility/ScreenReaderOnly';
+import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
 const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';

@@ -1,6 +1,6 @@
 import styles from './TextLink.less';
 import React, { PropTypes } from 'react';
-import ChevronIcon from 'seek-style-guide/react/icons/ChevronIcon/ChevronIcon';
+import ChevronIcon from 'seek-style-guide/react/ChevronIcon/ChevronIcon';
 import classnames from 'classnames';
 
 const renderChevron = chevron => {

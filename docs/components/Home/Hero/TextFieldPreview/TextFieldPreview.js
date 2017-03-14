@@ -1,5 +1,5 @@
 import styles from './TextFieldPreview.less';
-import textFieldStyles from 'seek-style-guide/react/fields/TextField/TextField.less';
+import textFieldStyles from 'seek-style-guide/react/TextField/TextField.less';
 
 import React from 'react';
 import { TextField } from 'seek-style-guide/react';
