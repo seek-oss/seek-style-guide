@@ -35,8 +35,8 @@ export default function Header({
   });
 
   return (
-    <header role="banner" aria-label="Primary navigation">
-      <section className={styles.root}>
+    <header className={styles.root} role="banner" aria-label="Primary navigation">
+      <section className={styles.content}>
         <div className={styles.banner}>
           <h1 data-automation="logo" className={styles.logo}>
             <Logo svgClassName={styles.logoSvg} />
