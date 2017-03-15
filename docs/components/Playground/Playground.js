@@ -21,6 +21,7 @@ import {
   Footer
 } from 'seek-style-guide/react';
 
+import { dummyLinkRenderer } from 'seek-style-guide/react/Header/Header.demo';
 import TextLink from './Atoms/TextLink/TextLink';
 import IconButton from './Atoms/IconButton/IconButton';
 import Tab from './Atoms/Tab/Tab';
@@ -129,7 +130,7 @@ export default class Playground extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header linkRenderer={dummyLinkRenderer} />
 
         <PageBlock className={styles.header}>
           <AsidedLayout size="340px">
@@ -415,7 +416,7 @@ export default class Playground extends Component {
           </Card>
         </PageBlock>
 
-        <Footer />
+        <Footer linkRenderer={dummyLinkRenderer} />
       </div>
     );
   }

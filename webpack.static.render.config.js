@@ -18,22 +18,6 @@ const appPaths = [
   path.resolve(__dirname, 'wip_modules')
 ];
 
-const routes = [
-  '/',
-  '/playground',
-  '/buttons',
-  '/textfields',
-  '/autosuggest',
-  '/textarea',
-  '/dropdown',
-  '/checkbox',
-  '/monthpicker',
-  '/typography',
-  '/dropdown',
-  '/header',
-  '/footer'
-];
-
 const config = {
   entry: `./${BASE_DIR}/server-render`,
 
@@ -79,7 +63,14 @@ const config = {
         BASE_HREF: JSON.stringify(process.env.BASE_HREF)
       }
     }),
-    new StaticSiteGeneratorPlugin('render.js', routes, { template }),
+    new StaticSiteGeneratorPlugin({
+      crawl: true,
+      paths: [
+        '/',
+        '/playground' // Currently unreachable by crawler
+      ],
+      locals: { template }
+    }),
     new webpack.optimize.UglifyJsPlugin({
       output: {
         comments: false
