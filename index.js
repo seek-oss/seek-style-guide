@@ -40964,6 +40964,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react3 = __webpack_require__(256);
 	
+	var _Header = __webpack_require__(494);
+	
 	var _TextLink = __webpack_require__(530);
 	
 	var _TextLink2 = _interopRequireDefault(_TextLink);
@@ -41262,7 +41264,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_react3.Header, null),
+	        _react2.default.createElement(_react3.Header, { linkRenderer: _Header.dummyLinkRenderer }),
 	        _react2.default.createElement(
 	          _react3.PageBlock,
 	          { className: _Playground2.default.header },
@@ -42074,7 +42076,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            )
 	          )
 	        ),
-	        _react2.default.createElement(_react3.Footer, null)
+	        _react2.default.createElement(_react3.Footer, { linkRenderer: _Header.dummyLinkRenderer })
 	      );
 	    }
 	  }]);
