@@ -1,38 +1,60 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  @border-width: 1px;
+  background-color: @sk-blue;
+  padding: @grid-row-height 0;
 
-  background-color: @sk-white;
-  border: @border-width solid @sk-mid-gray-light;
-  border-radius: 2px;
-  padding: (@grid-row-height - @border-width) 0;
+  .aboveSmallDevice({
+    @border-width: 1px;
+
+    background-color: @sk-white;
+    border: @border-width solid @sk-mid-gray-light;
+    border-radius: 2px;
+    padding: (@grid-row-height - @border-width) 0;
+  });
 }
 
 .item {
-  .touchableText(@standard-type-scale);
+  .touchableText();
   display: flex;
-  padding: 0 (@grid-gutter-width * 2);
+  padding: 0 @grid-gutter-width;
   white-space: nowrap;
-  color: @sk-black;
+  color: @sk-white;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+  user-select: none;
 
   &:hover {
-    color: @sk-black;
-    background-color: @sk-mid-gray-light;
+    background-color: darken(@sk-blue, 5%);
+
+    .aboveSmallDevice({
+      color: @sk-black;
+      background-color: @sk-mid-gray-light;
+    });
   }
+
+  .aboveSmallDevice({
+    .touchableText(@standard-type-scale);
+    color: @sk-black;
+    padding: 0 (@grid-gutter-width * 2);
+  });
 }
 
 .subItem {
-  background-color: @sk-gray-light;
+  .aboveSmallDevice({
+    background-color: @sk-gray-light;
+  });
 }
 
 .icon {
   margin-left: @grid-gutter-width;
   width: @grid-gutter-width;
   text-align: center;
+
+  .smallDeviceOnly({
+    display: none;
+  });
 }
 
 .iconSvg {

@@ -113,14 +113,14 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -147,14 +147,14 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             </a>
           </li>
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:companies"
               href="/companies/"
             >
-              Company Reviews
+              Companies
             </a>
           </li>
           <li
@@ -372,6 +372,14 @@ exports[`Header: should render when authenticated 1`] = `
                 Show user menu
               </span>
               <span
+                className="root me"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "mock svg",
+                  }
+                }
+              />
+              <span
                 className="userName"
                 data-automation="user-account-name"
                 data-hj-masked={true}
@@ -514,14 +522,14 @@ exports[`Header: should render when authenticated 1`] = `
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -548,14 +556,14 @@ exports[`Header: should render when authenticated 1`] = `
             </a>
           </li>
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:companies"
               href="/companies/"
             >
-              Company Reviews
+              Companies
             </a>
           </li>
           <li
@@ -773,6 +781,14 @@ exports[`Header: should render when authenticated but username is not yet provid
                 Show user menu
               </span>
               <span
+                className="root me"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "mock svg",
+                  }
+                }
+              />
+              <span
                 className="userName"
                 data-automation="user-account-name"
                 data-hj-masked={true}
@@ -915,14 +931,14 @@ exports[`Header: should render when authenticated but username is not yet provid
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -949,14 +965,14 @@ exports[`Header: should render when authenticated but username is not yet provid
             </a>
           </li>
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:companies"
               href="/companies/"
             >
-              Company Reviews
+              Companies
             </a>
           </li>
           <li
@@ -1198,14 +1214,14 @@ exports[`Header: should render when authentication is pending 1`] = `
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -1232,14 +1248,14 @@ exports[`Header: should render when authentication is pending 1`] = `
             </a>
           </li>
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:companies"
               href="/companies/"
             >
-              Company Reviews
+              Companies
             </a>
           </li>
           <li
@@ -1481,14 +1497,14 @@ exports[`Header: should render when unauthenticated 1`] = `
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -1515,14 +1531,14 @@ exports[`Header: should render when unauthenticated 1`] = `
             </a>
           </li>
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:companies"
               href="/companies/"
             >
-              Company Reviews
+              Companies
             </a>
           </li>
           <li
@@ -1764,14 +1780,14 @@ exports[`Header: should render with locale of AU 1`] = `
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -1798,14 +1814,14 @@ exports[`Header: should render with locale of AU 1`] = `
             </a>
           </li>
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:companies"
               href="/companies/"
             >
-              Company Reviews
+              Companies
             </a>
           </li>
           <li
@@ -2047,14 +2063,14 @@ exports[`Header: should render with locale of NZ 1`] = `
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -2307,14 +2323,14 @@ exports[`Header: should render with no divider 1`] = `
           data-automation="nav-tabs"
         >
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:jobs"
               href="/"
             >
-              Job Search
+              Jobs
             </a>
           </li>
           <li
@@ -2341,14 +2357,14 @@ exports[`Header: should render with no divider 1`] = `
             </a>
           </li>
           <li
-            className="item"
+            className="item item_isSearch"
           >
             <a
               className="link"
               data-analytics="header:companies"
               href="/companies/"
             >
-              Company Reviews
+              Companies
             </a>
           </li>
           <li

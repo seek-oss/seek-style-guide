@@ -1,0 +1,19 @@
+@import (reference) "~seek-style-guide/theme";
+
+._invertedColours() {
+  :global {
+    .sk-logo-name { fill: @sk-white; }
+    .sk-logo-circle { fill: @sk-white; }
+    .sk-logo-dots { fill: @sk-blue; }
+  }
+}
+
+.invert {
+  ._invertedColours();
+}
+
+.root {
+  .smallDeviceOnly({
+    ._invertedColours();
+  });
+}

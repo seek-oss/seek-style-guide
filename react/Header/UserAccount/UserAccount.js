@@ -2,6 +2,7 @@ import styles from './UserAccount.less';
 import React, { PropTypes } from 'react';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
+import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 
@@ -35,6 +36,7 @@ export default function UserAccount({ userName, linkRenderer }) {
 
       <label data-automation="user-account-menu-toggle" className={styles.toggleLabel} htmlFor="user-account-menu-toggle">
         <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
+        <ProfileIcon className={styles.me} svgClassName={styles.meSvg} />
         <span className={styles.userName} data-automation="user-account-name" data-hj-masked={true}>{ userName }</span>
         <ChevronIcon direction="down" className={styles.chevron} svgClassName={styles.chevronSvg} />
       </label>

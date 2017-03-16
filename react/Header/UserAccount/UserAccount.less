@@ -1,16 +1,21 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  position: relative;
+  .aboveSmallDevice({
+    position: relative;
+  });
 }
 
 .toggleLabel {
   .touchableText();
   display: flex;
   cursor: pointer;
-  color: @sk-black;
   position: relative;
   z-index: 1;
+
+  .smallDeviceOnly({
+    color: @sk-white;
+  });
 }
 
 .toggle {
@@ -27,7 +32,15 @@
   }
 
   & ~ .menuBackdrop {
-    display: block;
+    .aboveSmallDevice({
+      display: block;
+    });
+
+    .smallDeviceOnly({
+      z-index: 1;
+      pointer-events: auto;
+      opacity: .9;
+    });
   }
 
   & ~ .toggleLabel .chevron {
@@ -45,16 +58,37 @@
   transition: opacity .25s cubic-bezier(0.020, 1.505, 0.745, 1.235), transform .25s cubic-bezier(0.020, 1.505, 0.745, 1.235);
   pointer-events: none;
   z-index: 1;
+
+  .smallDeviceOnly({
+    transform: translateY(@grid-row-height * -1);
+    transition: opacity .25s cubic-bezier(0.020, 1.505, 0.745, 1.235), transform .25s ease;
+    top: (@grid-row-height * 7); // header height
+    right: 0;
+    left: 0;
+    bottom: 0;
+  });
 }
 
 .menuBackdrop {
-  display: none;
   position: fixed;
-  z-index: 1;
   top: -999px;
   left: -999px;
   right: -999px;
   bottom: -9999px;
+
+  .aboveSmallDevice({
+    z-index: 1;
+    display: none;
+  });
+
+  .smallDeviceOnly({
+    z-index: -99;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .25s ease;
+    top: 63px;
+    background-color: darken(@sk-blue, 20%); // This overlays the top banner, need to revisit
+  });
 }
 
 .menuBackdropLabel {
@@ -63,6 +97,41 @@
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.me {
+  position: relative;
+  top: 3px;
+  width: 40px;
+  text-align: right;
+
+/* styles for profile icon in circle */
+  border-radius: 50%;
+  border: 1px solid @sk-white;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 4px;
+/* end styles for profile icon in circle */
+
+  .aboveSmallDevice({
+    display: none;
+  });
+}
+
+.meSvg {
+  height: 25px;
+  width: 25px;
+
+/* styles for profile icon in circle */
+  height: 19px;
+  width: 19px;
+  position: relative;
+  top: -2px;
+  left: 1px;
+/* end styles for profile icon in circle */
 }
 
 .userName {
@@ -89,4 +158,10 @@
 .chevronSvg {
   width: 14px;
   height: 14px;
+}
+
+.userName {
+  .smallDeviceOnly({
+    display: none;
+  });
 }

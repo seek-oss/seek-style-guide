@@ -51,6 +51,23 @@ export default {
       }))
     },
     {
+      label: 'On search homepage',
+      type: 'radio',
+      states: [
+        {
+          label: 'Not on homepage',
+          transformProps: props => props
+        },
+        {
+          label: 'On homepage',
+          transformProps: props => ({
+            ...props,
+            isHomepage: true
+          })
+        }
+      ]
+    },
+    {
       label: 'Authentication',
       type: 'radio',
       states: [

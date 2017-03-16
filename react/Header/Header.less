@@ -1,60 +1,63 @@
 @import (reference) "~seek-style-guide/theme";
 
-@small-ia: ~"only screen and (max-width: " (@responsive-breakpoint - 1) ~")";
-@large-ia: ~"only screen and (min-width: " @responsive-breakpoint ~")";
-@classic-ia: ~"only screen and (min-width: 1025px)";
-
 .root {
   .classicFontStack();
   width: 100%;
+
+  .smallDeviceOnly({
+    position: relative;
+  });
 }
 
 .content {
-  background-color: @sk-white;
+  background-color: @sk-blue;
   position: relative;
   z-index: 3;
   display: flex;
   flex-flow: row wrap;
-  @media @large-ia {
+
+  .aboveSmallDevice({
+    background-color: @sk-white;
     justify-content: center;
-  }
+  });
 }
 
 .banner {
-  order: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1 0 auto;
   padding: 0 (@grid-gutter-width / 2);
-  @media @small-ia {
+
+  .smallDeviceOnly({
     height: (@grid-row-height * 7);
-  }
-  @media @large-ia {
+  });
+  .aboveSmallDevice({
+    order: 1;
     height: (@grid-row-height * 9);
-  }
-  @media @classic-ia {
+  });
+  .classicOnly({
     flex: 0 0 @grid-container-width;
     padding: 0;
-  }
+  });
 }
 
 .topBanner {
-  @media @small-ia {
+  .smallDeviceOnly({
     display: none;
-  }
-  @media @large-ia {
+  });
+  .aboveSmallDevice({
     display: flex;
     background-color: @sk-background;
     order: 0;
     flex: 0 1 100%;
     justify-content: center;
     padding: 0 (@grid-gutter-width / 2);
-  }
-  @media @classic-ia {
+  });
+  .classicOnly({
     flex-grow: 1;
     padding: 0;
-  }
+  });
 }
 
 .topBannerContent {
@@ -62,19 +65,24 @@
   display: flex;
   flex-grow: 1;
   justify-content: center;
-  @media @classic-ia {
+
+  .classicOnly({
     flex: 0 0 @grid-container-width;
-  }
+  });
 }
 
 .navigation {
-  @media @small-ia {
-    display: none;
-  }
-  @media @large-ia {
+  .smallDeviceOnly({
+    width: 100%;
+
+    &:not(.navigation_isHomepage) {
+      display: none;
+    }
+  });
+  .aboveSmallDevice({
     flex: 1 0 100%;
     order: 2;
-  }
+  });
 }
 
 .logo {
@@ -84,10 +92,11 @@
 .logoSvg {
   height: 39px;
   width: 105px;
-  @media @large-ia {
+
+  .aboveSmallDevice({
     height: 51px;
     width: 129px;
-  }
+  });
 }
 
 .logoLink {
@@ -117,9 +126,10 @@
 .employerSite {
   display: none;
   white-space: nowrap;
-  @media @large-ia {
+
+  .aboveSmallDevice({
     display: block;
-  }
+  });
 }
 
 .employerLink {
@@ -146,7 +156,7 @@
   border-right: @divider-width solid @sk-mid-gray-dark;
   display: none;
 
-  @media @large-ia {
+  .aboveSmallDevice({
     display: inline-block;
-  }
+  });
 }

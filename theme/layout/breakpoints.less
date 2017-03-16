@@ -1,2 +1,20 @@
 // Breakpoint
 @responsive-breakpoint: 740px;
+
+.smallDeviceOnly(@rules) {
+  @media only screen and (max-width: (@responsive-breakpoint - 1)) {
+    @rules();
+  }
+}
+
+.aboveSmallDevice(@rules) {
+  @media only screen and (min-width: @responsive-breakpoint) {
+    @rules();
+  }
+}
+
+.classicOnly(@rules) {
+  @media only screen and (min-width: 1025px) {
+    @rules();
+  }
+}
