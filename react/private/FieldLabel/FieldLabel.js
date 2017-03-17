@@ -1,9 +1,9 @@
-import styles from './FieldLabel.less';
-
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 import Text from '../../Text/Text';
+import Strong from '../../Strong/Strong';
+import Secondary from '../../Secondary/Secondary';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -69,9 +69,9 @@ export default class FieldLabel extends Component {
     }
 
     return (
-      <span className={styles.secondaryLabel}>
+      <Secondary>
         {secondaryLabel}
-      </span>
+      </Secondary>
     );
   }
 
@@ -84,12 +84,12 @@ export default class FieldLabel extends Component {
 
     const { labelProps, id } = this.props;
     const allLabelProps = {
-      ...combineClassNames(labelProps, styles.label),
+      ...combineClassNames(labelProps),
       ...(id ? { htmlFor: id } : {})
     };
     return (
       <label {...allLabelProps}>
-        <Text>{label} {this.renderSecondary()}</Text>
+        <Text><Strong>{label}</Strong> {this.renderSecondary()}</Text>
       </label>
     );
   }
