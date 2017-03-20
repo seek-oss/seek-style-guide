@@ -31319,15 +31319,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  var children = _ref.children,
 	      className = _ref.className,
-	      group = _ref.group,
 	      header = _ref.header,
-	      slim = _ref.slim,
-	      restProps = _objectWithoutProperties(_ref, ['children', 'className', 'group', 'header', 'slim']);
+	      restProps = _objectWithoutProperties(_ref, ['children', 'className', 'header']);
 	
 	  return _react2.default.createElement(
 	    'div',
 	    _extends({}, restProps, {
-	      className: (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, className, className), _defineProperty(_classnames, _Section2.default.root, true), _defineProperty(_classnames, _Section2.default.group, group), _defineProperty(_classnames, _Section2.default.header, header), _defineProperty(_classnames, _Section2.default.slim, slim), _classnames)) }),
+	      className: (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, className, className), _defineProperty(_classnames, _Section2.default.root, true), _defineProperty(_classnames, _Section2.default.header, header), _classnames)) }),
 	    children
 	  );
 	}
@@ -31335,9 +31333,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Section.propTypes = {
 	  children: _react.PropTypes.node.isRequired,
 	  className: _react.PropTypes.string,
-	  group: _react.PropTypes.bool,
-	  header: _react.PropTypes.bool,
-	  slim: _react.PropTypes.bool
+	  header: _react.PropTypes.bool
 	};
 
 /***/ },
@@ -31345,7 +31341,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"root":"_39bE-2M","group":"_32yaJ2U","slim":"_3mo9U4y","header":"Otd_0aA"};
+	module.exports = {"root":"_39bE-2M","header":"Otd_0aA"};
 
 /***/ },
 /* 374 */,
@@ -40787,8 +40783,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _react3.Columns,
 	      null,
 	      _react2.default.createElement(
-	        _react3.Section,
-	        { group: true },
+	        'div',
+	        null,
 	        _react2.default.createElement(
 	          _react3.Section,
 	          null,
@@ -40847,8 +40843,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        )
 	      ),
 	      _react2.default.createElement(
-	        _react3.Section,
-	        { group: true },
+	        'div',
+	        null,
 	        _react2.default.createElement(
 	          _react3.Section,
 	          null,
@@ -40907,8 +40903,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        )
 	      ),
 	      _react2.default.createElement(
-	        _react3.Section,
-	        { group: true },
+	        'div',
+	        null,
 	        _react2.default.createElement(
 	          _react3.Section,
 	          null,
@@ -41165,43 +41161,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	      null,
 	      _react2.default.createElement(
 	        _react3.Section,
-	        { group: true },
+	        null,
 	        _react2.default.createElement(
-	          _react3.Section,
-	          null,
+	          _react3.Button,
+	          { color: 'pink', className: _Playground2.default.fullWidthTextField },
+	          'Apply for this job'
+	        ),
+	        _react2.default.createElement(
+	          _react3.Text,
+	          { secondary: true },
+	          _react2.default.createElement('br', null),
+	          'Applications for this role will take you to the advertiser\'s site.',
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement(
+	          _react3.Columns,
+	          { tight: true },
 	          _react2.default.createElement(
 	            _react3.Button,
-	            { color: 'pink', className: _Playground2.default.fullWidthTextField },
-	            'Apply for this job'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _react3.Section,
-	          null,
+	            { color: 'gray', className: _Playground2.default.fullWidthTextField },
+	            _react2.default.createElement(_react3.StarIcon, null),
+	            ' Save Job'
+	          ),
 	          _react2.default.createElement(
-	            _react3.Text,
-	            { secondary: true },
-	            'Applications for this role will take you to the advertiser\'s site.'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _react3.Section,
-	          null,
-	          _react2.default.createElement(
-	            _react3.Columns,
-	            { tight: true },
-	            _react2.default.createElement(
-	              _react3.Button,
-	              { color: 'gray', className: _Playground2.default.fullWidthTextField },
-	              _react2.default.createElement(_react3.StarIcon, null),
-	              ' Save Job'
-	            ),
-	            _react2.default.createElement(
-	              _react3.Button,
-	              { color: 'gray', className: _Playground2.default.fullWidthTextField },
-	              _react2.default.createElement(_react3.MailIcon, null),
-	              ' Send Job'
-	            )
+	            _react3.Button,
+	            { color: 'gray', className: _Playground2.default.fullWidthTextField },
+	            _react2.default.createElement(_react3.MailIcon, null),
+	            ' Send Job'
 	          )
 	        )
 	      )
@@ -41447,7 +41434,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              null,
 	              _react2.default.createElement(
 	                _react3.Section,
-	                { slim: true, className: _Playground2.default.cardHeader },
+	                { className: _Playground2.default.cardHeader },
 	                _react2.default.createElement(
 	                  _TextLink2.default,
 	                  { href: 'https://www.seek.com.au', chevron: 'right' },
@@ -41507,7 +41494,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              null,
 	              _react2.default.createElement(
 	                _react3.Section,
-	                { slim: true, className: _Playground2.default.cardHeader },
+	                { className: _Playground2.default.cardHeader },
 	                _react2.default.createElement(
 	                  _TextLink2.default,
 	                  { href: 'https://www.seek.com.au', chevron: 'right' },
@@ -41781,24 +41768,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            _react2.default.createElement(
 	              _react3.Section,
-	              { group: true },
+	              null,
 	              _react2.default.createElement(
-	                _react3.Section,
+	                _react3.Text,
 	                null,
-	                _react2.default.createElement(
-	                  _react3.Text,
-	                  null,
-	                  'Expired jobs remain on SEEK for 90 days after last advertised, or until they are removed by the advertiser.'
-	                )
+	                'Expired jobs remain on SEEK for 90 days after last advertised, or until they are removed by the advertiser.',
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null)
 	              ),
 	              _react2.default.createElement(
-	                _react3.Section,
-	                null,
-	                _react2.default.createElement(
-	                  _react3.Button,
-	                  { color: 'pink' },
-	                  'Search for another job'
-	                )
+	                _react3.Button,
+	                { color: 'pink' },
+	                'Search for another job'
 	              )
 	            )
 	          )
