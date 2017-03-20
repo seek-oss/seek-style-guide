@@ -96,19 +96,18 @@ const renderJobDetailDate = () => (
 const renderJobDetailMetadata = () => (
   <div>
     <Card>
-      <Section group>
-        <Section>
-          <Button color="pink" className={styles.fullWidthTextField}>Apply for this job</Button>
-        </Section>
-        <Section>
-          <Text secondary>{'Applications for this role will take you to the advertiser\'s site.'}</Text>
-        </Section>
-        <Section>
-          <Columns tight>
-            <Button color="gray" className={styles.fullWidthTextField}><StarIcon /> Save Job</Button>
-            <Button color="gray" className={styles.fullWidthTextField}><MailIcon /> Send Job</Button>
-          </Columns>
-        </Section>
+      <Section>
+        <Button color="pink" className={styles.fullWidthTextField}>Apply for this job</Button>
+        <Text secondary>
+          <br />
+          {'Applications for this role will take you to the advertiser\'s site.'}
+          <br />
+          <br />
+        </Text>
+        <Columns tight>
+          <Button color="gray" className={styles.fullWidthTextField}><StarIcon /> Save Job</Button>
+          <Button color="gray" className={styles.fullWidthTextField}><MailIcon /> Send Job</Button>
+        </Columns>
       </Section>
     </Card>
     <Card>
@@ -190,7 +189,7 @@ export default class Playground extends Component {
 
           <AsidedLayout reverse renderAside={renderAsideSignIn} size="360px">
             <Card>
-              <Section slim className={styles.cardHeader}>
+              <Section className={styles.cardHeader}>
                 <TextLink href="https://www.seek.com.au" chevron="right">Are you an Employer?</TextLink>
               </Section>
 
@@ -214,7 +213,7 @@ export default class Playground extends Component {
 
           <AsidedLayout reverse renderAside={renderAsideRegister} size="360px">
             <Card>
-              <Section slim className={styles.cardHeader}>
+              <Section className={styles.cardHeader}>
                 <TextLink href="https://www.seek.com.au" chevron="right">Are you an Employer?</TextLink>
               </Section>
               <Section>
@@ -323,13 +322,13 @@ export default class Playground extends Component {
             <Text hero>This job is no longer advertised</Text>
           </Section>
           <Card>
-            <Section group>
-              <Section>
-                <Text>Expired jobs remain on SEEK for 90 days after last advertised, or until they are removed by the advertiser.</Text>
-              </Section>
-              <Section>
-                <Button color="pink">Search for another job</Button>
-              </Section>
+            <Section>
+              <Text>
+                Expired jobs remain on SEEK for 90 days after last advertised, or until they are removed by the advertiser.
+                <br />
+                <br />
+              </Text>
+              <Button color="pink">Search for another job</Button>
             </Section>
           </Card>
         </PageBlock>

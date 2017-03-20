@@ -13,7 +13,7 @@ export default () => (
 
     <Columns>
 
-      <Section group>
+      <div>
         <Section>
           <Text strong>Design with empathy</Text>
           <Text>Understand our customers and end users better than they understand themselves.</Text>
@@ -33,9 +33,9 @@ export default () => (
           <Text strong>Content is king</Text>
           <Text>A person’s focus should be on their content, not on the UI. Help people work without interference.</Text>
         </Section>
-      </Section>
+      </div>
 
-      <Section group>
+      <div>
         <Section>
           <Text strong>Simplicity is powerful</Text>
           <Text>A minimalist form and function keeps users focused on their goals without distraction. It improves on-screen responsiveness as well as being suited to small-screen implementations.</Text>
@@ -55,9 +55,9 @@ export default () => (
           <Text strong>Accessibile design is good design</Text>
           <Text>In principle Seek design should be usable on all devices by all of the people in all situations. Design is simple, touch friendly and clear and aims for AA accessibility.</Text>
         </Section>
-      </Section>
+      </div>
 
-      <Section group>
+      <div>
         <Section>
           <Text strong>Make it mine</Text>
           <Text>The jobseeking experience is highly personal one that takes place over extended periods of time. The experience should align to the way that users conduct their jobseeking, allowing them to continue where they left off.</Text>
@@ -67,7 +67,7 @@ export default () => (
           <Text strong>Don’t make users think</Text>
           <Text>Observation shows that users do not read instructions. Interactions should be task focused, eliminating decision points and generally use one clear call to action.</Text>
         </Section>
-      </Section>
+      </div>
     </Columns>
   </PageBlock>
 );
