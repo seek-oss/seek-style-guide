@@ -3,6 +3,7 @@ import Dropdown from './Dropdown';
 import styles from './Dropdown.less';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
+import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 class DropdownContainer extends Component {
   static propTypes = {
@@ -85,6 +86,7 @@ export default {
         }
       ]
     },
-    ...fieldMessageOptions
+    ...fieldMessageOptions,
+    ...fieldLabelOptions
   ]
 };

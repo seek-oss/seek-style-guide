@@ -33,7 +33,7 @@ export default class Header extends Component {
             <div className={styles.sectionContent}>
               <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
                 <Logo svgClassName={styles.logo} />
-                <Text heading className={styles.title}>style guide</Text>
+                <div className={styles.title}>style guide</div>
               </Link>
 
               <div className={styles.hamburger}>

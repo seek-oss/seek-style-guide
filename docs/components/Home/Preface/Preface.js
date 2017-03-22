@@ -8,7 +8,7 @@ export default () => (
     </Section>
 
     <Section>
-      <Text heading>SEEK have developed 10 principles that describe the fundamental goals the design team consider when applying their minds to new design challenges or refining existing work. Their purpose is to enable the creation of content that will assist our users to complete tasks easily and hopefully enjoy the experience.</Text>
+      <Text subheading>SEEK have developed 10 principles that describe the fundamental goals the design team consider when applying their minds to new design challenges or refining existing work. Their purpose is to enable the creation of content that will assist our users to complete tasks easily and hopefully enjoy the experience.</Text>
     </Section>
 
     <Columns>

@@ -2,6 +2,7 @@ import TextField from './TextField';
 import styles from './TextField.less';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
+import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 export default {
   route: '/textfields',
@@ -26,6 +27,7 @@ export default {
         }
       ]
     },
-    ...fieldMessageOptions
+    ...fieldMessageOptions,
+    ...fieldLabelOptions
   ]
 };
