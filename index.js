@@ -31034,50 +31034,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames2 = __webpack_require__(262);
+	var _classnames3 = __webpack_require__(262);
 	
-	var _classnames3 = _interopRequireDefault(_classnames2);
+	var _classnames4 = _interopRequireDefault(_classnames3);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	var defaultRenderAside = function defaultRenderAside() {
 	  return null;
 	};
 	
-	var conditionallyRenderAside = function conditionallyRenderAside(condition, renderAside, size) {
+	var conditionallyRenderAside = function conditionallyRenderAside(condition, renderAside, classNameAside, size) {
+	  var _classnames;
+	
 	  return condition ? _react2.default.createElement(
 	    'div',
-	    { className: _AsidedLayout2.default.aside, style: { flexBasis: size } },
+	    {
+	      className: (0, _classnames4.default)((_classnames = {}, _defineProperty(_classnames, classNameAside, classNameAside), _defineProperty(_classnames, _AsidedLayout2.default.aside, true), _classnames)),
+	      style: { flexBasis: size } },
 	    renderAside()
 	  ) : null;
 	};
 	
 	function AsidedLayout(_ref) {
-	  var _classnames;
+	  var _classnames2;
 	
 	  var className = _ref.className,
 	      children = _ref.children,
 	      _ref$renderAside = _ref.renderAside,
 	      renderAside = _ref$renderAside === undefined ? defaultRenderAside : _ref$renderAside,
+	      classNameAside = _ref.classNameAside,
 	      size = _ref.size,
 	      reverse = _ref.reverse,
-	      restProps = _objectWithoutProperties(_ref, ['className', 'children', 'renderAside', 'size', 'reverse']);
+	      restProps = _objectWithoutProperties(_ref, ['className', 'children', 'renderAside', 'classNameAside', 'size', 'reverse']);
 	
 	  return _react2.default.createElement(
 	    'div',
 	    _extends({}, restProps, {
-	      className: (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, className, className), _defineProperty(_classnames, _AsidedLayout2.default.root, true), _defineProperty(_classnames, _AsidedLayout2.default.reverse, reverse), _classnames)) }),
-	    conditionallyRenderAside(reverse, renderAside, size),
+	      className: (0, _classnames4.default)((_classnames2 = {}, _defineProperty(_classnames2, className, className), _defineProperty(_classnames2, _AsidedLayout2.default.root, true), _defineProperty(_classnames2, _AsidedLayout2.default.reverse, reverse), _classnames2)) }),
+	    conditionallyRenderAside(reverse, renderAside, classNameAside, size),
 	    _react2.default.createElement(
 	      'div',
 	      { className: _AsidedLayout2.default.content },
 	      children
 	    ),
-	    conditionallyRenderAside(!reverse, renderAside, size)
+	    conditionallyRenderAside(!reverse, renderAside, classNameAside, size)
 	  );
 	}
 	
@@ -31085,6 +31090,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  className: _react.PropTypes.string,
 	  children: _react.PropTypes.node.isRequired,
 	  renderAside: _react.PropTypes.func,
+	  classNameAside: _react.PropTypes.string,
 	  size: _react.PropTypes.string,
 	  reverse: _react.PropTypes.bool
 	};
