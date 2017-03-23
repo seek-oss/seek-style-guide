@@ -1,7 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  background-color: @sk-blue;
   padding: @grid-row-height 0;
 
   .aboveSmallDevice({
@@ -21,8 +20,7 @@
   white-space: nowrap;
   color: @sk-white;
   text-decoration: none;
-  display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   user-select: none;
 
   &:hover {
@@ -36,6 +34,7 @@
 
   .aboveSmallDevice({
     .touchableText(@standard-type-scale);
+    justify-content: space-between;
     color: @sk-black;
     padding: 0 (@grid-gutter-width * 2);
   });
@@ -53,6 +52,19 @@
   text-align: center;
 
   .smallDeviceOnly({
+    margin-left: (@grid-gutter-width / 2);
+  });
+}
+
+.icon.profile { color: #9556B7; /* sk-purple? */ }
+.icon.saveJobs { color: @sk-pink; }
+.icon.saveSearches { color: @sk-highlight; }
+
+.iconSpacer {
+  margin-left: (@grid-gutter-width / 2);
+  width: 20px;
+
+  .aboveSmallDevice({
     display: none;
   });
 }

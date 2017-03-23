@@ -1,6 +1,7 @@
 import styles from './UserAccountMenu.less';
 
 import React, { PropTypes } from 'react';
+import classnames from 'classnames';
 
 import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import HeartIcon from '../../HeartIcon/HeartIcon';
@@ -22,7 +23,11 @@ export default function UserAccountMenu({ linkRenderer }) {
             href: '/profile/',
             children: [
               <span key="label">Your profile</span>,
-              <ProfileIcon key="icon" className={styles.icon} svgClassName={styles.iconSvg} />
+              <ProfileIcon
+                key="icon"
+                className={classnames(styles.icon, styles.profile)}
+                svgClassName={styles.iconSvg}
+              />
             ]
           })
         }
@@ -34,7 +39,11 @@ export default function UserAccountMenu({ linkRenderer }) {
             href: '/myactivity#favourite',
             children: [
               <span key="label">Saved searches</span>,
-              <HeartIcon key="icon" className={styles.icon} svgClassName={styles.iconSvg} />
+              <HeartIcon
+                key="icon"
+                className={classnames(styles.icon, styles.saveSearches)}
+                svgClassName={styles.iconSvg}
+              />
             ]
           })
         }
@@ -46,7 +55,11 @@ export default function UserAccountMenu({ linkRenderer }) {
             href: '/my-activity/saved-jobs',
             children: [
               <span key="label">Saved jobs</span>,
-              <StarIcon key="icon" className={styles.icon} svgClassName={styles.iconSvg} />
+              <StarIcon
+                key="icon"
+                className={classnames(styles.icon, styles.saveJobs)}
+                svgClassName={styles.iconSvg}
+              />
             ]
           })
         }
@@ -56,7 +69,10 @@ export default function UserAccountMenu({ linkRenderer }) {
           linkRenderer({
             className: `${styles.item} ${styles.subItem}`,
             href: '/my-activity/applied-jobs',
-            children: 'Applied jobs'
+            children: [
+              'Applied jobs',
+              <div key="iconSpacer" className={styles.iconSpacer} />
+            ]
           })
         }
       </li>
@@ -65,7 +81,10 @@ export default function UserAccountMenu({ linkRenderer }) {
           linkRenderer({
             className: styles.item,
             href: '/settings/',
-            children: 'Settings'
+            children: [
+              'Settings',
+              <div key="iconSpacer" className={styles.iconSpacer} />
+            ]
           })
         }
       </li>
@@ -75,7 +94,10 @@ export default function UserAccountMenu({ linkRenderer }) {
             className: styles.item,
             onClick: clearLocalStorage,
             href: '/Login/Logout',
-            children: 'Sign out'
+            children: [
+              'Sign out',
+              <div key="iconSpacer" className={styles.iconSpacer} />
+            ]
           })
         }
       </li>

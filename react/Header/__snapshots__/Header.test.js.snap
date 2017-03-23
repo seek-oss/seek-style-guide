@@ -410,7 +410,7 @@ exports[`Header: should render when authenticated 1`] = `
                       Your profile
                     </span>
                     <span
-                      className="root icon"
+                      className="root icon profile"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "mock svg",
@@ -428,7 +428,7 @@ exports[`Header: should render when authenticated 1`] = `
                       Saved searches
                     </span>
                     <span
-                      className="root icon"
+                      className="root icon saveSearches"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "mock svg",
@@ -446,7 +446,7 @@ exports[`Header: should render when authenticated 1`] = `
                       Saved jobs
                     </span>
                     <span
-                      className="root icon"
+                      className="root icon saveJobs"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "mock svg",
@@ -461,6 +461,9 @@ exports[`Header: should render when authenticated 1`] = `
                     href="/my-activity/applied-jobs"
                   >
                     Applied jobs
+                    <div
+                      className="iconSpacer"
+                    />
                   </a>
                 </li>
                 <li>
@@ -469,6 +472,9 @@ exports[`Header: should render when authenticated 1`] = `
                     href="/settings/"
                   >
                     Settings
+                    <div
+                      className="iconSpacer"
+                    />
                   </a>
                 </li>
                 <li>
@@ -478,6 +484,9 @@ exports[`Header: should render when authenticated 1`] = `
                     onClick={[Function]}
                   >
                     Sign out
+                    <div
+                      className="iconSpacer"
+                    />
                   </a>
                 </li>
               </ul>
@@ -819,7 +828,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       Your profile
                     </span>
                     <span
-                      className="root icon"
+                      className="root icon profile"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "mock svg",
@@ -837,7 +846,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       Saved searches
                     </span>
                     <span
-                      className="root icon"
+                      className="root icon saveSearches"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "mock svg",
@@ -855,7 +864,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       Saved jobs
                     </span>
                     <span
-                      className="root icon"
+                      className="root icon saveJobs"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "mock svg",
@@ -870,6 +879,9 @@ exports[`Header: should render when authenticated but username is not yet provid
                     href="/my-activity/applied-jobs"
                   >
                     Applied jobs
+                    <div
+                      className="iconSpacer"
+                    />
                   </a>
                 </li>
                 <li>
@@ -878,6 +890,9 @@ exports[`Header: should render when authenticated but username is not yet provid
                     href="/settings/"
                   >
                     Settings
+                    <div
+                      className="iconSpacer"
+                    />
                   </a>
                 </li>
                 <li>
@@ -887,6 +902,9 @@ exports[`Header: should render when authenticated but username is not yet provid
                     onClick={[Function]}
                   >
                     Sign out
+                    <div
+                      className="iconSpacer"
+                    />
                   </a>
                 </li>
               </ul>
