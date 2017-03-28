@@ -17,7 +17,7 @@ export default {
     userName: 'Jane Smith',
     divider: false,
     linkRenderer: dummyLinkRenderer,
-    returnUrl: 'seek-oss.github.io/seek-style-guide'
+    returnUrl: '/jobs'
   },
   options: [
     {
