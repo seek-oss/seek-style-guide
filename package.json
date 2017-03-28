@@ -7,7 +7,7 @@
     "start": "BASE_HREF=/ node server",
     "test": "npm run test-unit && npm run lint && npm run build",
     "test-unit": "BABEL_ENV=test jest --config ./test/jest.config.json",
-    "update-snapshot": "BABEL_ENV=test jest --config ./test/jest.config.json --updateSnapshot",
+    "update-snapshot": "npm run test-unit -- --updateSnapshot",
     "lint": "eslint app docs react test ./*.js",
     "compile-render": "NODE_ENV=production BASE_HREF=${BASE_HREF:-/} webpack --config webpack.static.render.config.js && rm dist/render.js",
     "compile-client": "NODE_ENV=production webpack --config webpack.static.client.config.js",
