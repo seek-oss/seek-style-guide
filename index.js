@@ -28903,7 +28903,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      userName = _ref.userName,
 	      linkRenderer = _ref.linkRenderer,
 	      activeTab = _ref.activeTab,
-	      divider = _ref.divider;
+	      divider = _ref.divider,
+	      returnUrl = _ref.returnUrl;
 	
 	  var userClasses = (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, _Header2.default.user, true), _defineProperty(_classnames, _Header2.default.user_isReady, authenticationStatus === UNAUTHENTICATED || authenticationStatus === AUTHENTICATED && userName), _classnames));
 	
@@ -28937,7 +28938,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(
 	            'div',
 	            { className: userClasses },
-	            authenticationStatus === AUTHENTICATED ? _react2.default.createElement(_UserAccount2.default, { userName: userName, linkRenderer: linkRenderer }) : _react2.default.createElement(_SignInRegister2.default, { linkRenderer: linkRenderer }),
+	            authenticationStatus === AUTHENTICATED ? _react2.default.createElement(_UserAccount2.default, { userName: userName, linkRenderer: linkRenderer }) : _react2.default.createElement(_SignInRegister2.default, { linkRenderer: linkRenderer, returnUrl: returnUrl }),
 	            _react2.default.createElement('span', { className: _Header2.default.divider })
 	          ),
 	          _react2.default.createElement(
@@ -28986,7 +28987,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  userName: _react.PropTypes.string,
 	  linkRenderer: _react.PropTypes.func,
 	  activeTab: _react.PropTypes.string,
-	  divider: _react.PropTypes.bool
+	  divider: _react.PropTypes.bool,
+	  returnUrl: _react.PropTypes.string
 	};
 	
 	Header.defaultProps = {
@@ -29402,7 +29404,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function SignInRegister(_ref) {
-	  var linkRenderer = _ref.linkRenderer;
+	  var linkRenderer = _ref.linkRenderer,
+	      returnUrl = _ref.returnUrl;
+	
+	  var urlSuffix = returnUrl ? '?returnUrl=' + encodeURIComponent(returnUrl) : '';
 	
 	  return _react2.default.createElement(
 	    'nav',
@@ -29421,7 +29426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ),
 	    linkRenderer({
 	      'data-analytics': 'sign-in',
-	      href: '/Login/Standalone',
+	      href: '/Login/Standalone' + urlSuffix,
 	      className: _SignInRegister2.default.link,
 	      title: 'Sign in',
 	      children: 'Sign in'
@@ -29429,7 +29434,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ' or ',
 	    linkRenderer({
 	      'data-analytics': 'register',
-	      href: '/Register/Standalone',
+	      href: '/Register/Standalone' + urlSuffix,
 	      className: _SignInRegister2.default.link,
 	      title: 'Register',
 	      children: 'Register'
@@ -29438,7 +29443,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	
 	SignInRegister.propTypes = {
-	  linkRenderer: _react.PropTypes.func.isRequired
+	  linkRenderer: _react.PropTypes.func.isRequired,
+	  returnUrl: _react.PropTypes.string
 	};
 
 /***/ },
@@ -40075,7 +40081,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    authenticationStatus: 'authenticated',
 	    userName: 'Jane Smith',
 	    divider: false,
-	    linkRenderer: dummyLinkRenderer
+	    linkRenderer: dummyLinkRenderer,
+	    returnUrl: '/jobs'
 	  },
 	  options: [{
 	    label: 'States',
