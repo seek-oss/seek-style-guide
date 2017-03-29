@@ -5,9 +5,8 @@ import ClearIcon from '../../ClearIcon/ClearIcon';
 
 export default function ClearField() {
   return (
-    <ClearIcon
-      className={styles.root}
-      svgClassName={styles.clearSvg}
-    />
+    <div className={styles.root}>
+      <ClearIcon svgClassName={styles.clearSvg} />
+    </div>
   );
 }
