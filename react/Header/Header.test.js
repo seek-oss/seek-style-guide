@@ -37,4 +37,8 @@ describe('Header:', () => {
   it('should render with no divider', () => {
     expect(renderHeader({ divider: false }).toJSON()).toMatchSnapshot();
   });
+
+  it('should append returnUrl to signin and register links if present', () => {
+    expect(renderHeader({ returnUrl: '/jobs' }).toJSON()).toMatchSnapshot();
+  });
 });
