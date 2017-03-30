@@ -1,12 +1,10 @@
-const BASE_DIR = process.env.BASE_DIR || 'docs';
-
 const fs = require('fs');
 const ejs = require('ejs');
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const decorateServerConfig = require('./webpack').decorateServerConfig;
-const babelConfig = require('./babel.config.js')({ reactHotLoader: false });
+const decorateServerConfig = require('../webpack').decorateServerConfig;
+const babelConfig = require('../babel.config.js')({ reactHotLoader: false });
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const templatePath = path.resolve(__dirname, 'index.ejs');
@@ -14,12 +12,12 @@ const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8')); // eslint-
 
 // Must be absolute paths
 const appPaths = [
-  path.resolve(__dirname, BASE_DIR),
+  path.resolve(__dirname, 'src'),
   path.resolve(__dirname, 'wip_modules')
 ];
 
 const config = {
-  entry: `./${BASE_DIR}/server-render`,
+  entry: path.resolve(__dirname, 'src/server-render'),
 
   output: {
     path: path.resolve(__dirname, 'dist'),
