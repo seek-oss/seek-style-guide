@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const autoprefixerConfig = require('../config/autoprefixer.config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const decorateClientConfig = require('../webpack').decorateClientConfig;
 const babelConfig = require('../babel.config.js')({ reactHotLoader: false });
@@ -48,7 +49,7 @@ const config = {
   },
 
   postcss: [
-    autoprefixer
+    autoprefixer(autoprefixerConfig)
   ],
 
   plugins: [

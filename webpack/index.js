@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const chalk = require('chalk');
+const autoprefixerConfig = require('../config/autoprefixer.config');
 
 const isProduction = () => process.env.NODE_ENV === 'production';
 
@@ -54,15 +55,7 @@ const decoratePostCss = (config, options) => {
   // Setup postcss-loader plugin packs
   // (https://github.com/postcss/postcss-loader#plugins-packs)
   const postcssPlugins = [
-    require('autoprefixer')({
-      browsers: [
-        '> 1%',
-        'Last 2 versions',
-        'ie >= 10',
-        'Safari >= 8',
-        'iOS >= 8'
-      ]
-    })
+    require('autoprefixer')(autoprefixerConfig)
   ].concat(!cssSelectorPrefix ? [] : [
     require('postcss-prefix-selector')({
       prefix: `:global(${cssSelectorPrefix})`
