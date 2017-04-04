@@ -33,6 +33,15 @@ const config = decorateClientConfig({
         include: appPaths
       },
       {
+        test: /\.js$/,
+        loader: 'babel',
+        query: {
+          babelrc: false,
+          presets: ['es2015']
+        },
+        include: /node_modules/
+      },
+      {
         test: /\.less$/,
         loader: 'style!css?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!less',
         include: appPaths
