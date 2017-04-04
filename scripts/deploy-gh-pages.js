@@ -1,6 +1,6 @@
 var path = require('path');
 var ghpages = require('gh-pages');
-var basePath = path.join(__dirname, '../dist');
+var basePath = path.join(__dirname, '../docs/dist');
 var repoUrl = require('../package.json').repository.url;
 
 var GH_PAGES_TOKEN = process.env.GH_PAGES_TOKEN;
