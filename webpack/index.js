@@ -54,7 +54,15 @@ const decoratePostCss = (config, options) => {
   // Setup postcss-loader plugin packs
   // (https://github.com/postcss/postcss-loader#plugins-packs)
   const postcssPlugins = [
-    require('autoprefixer')
+    require('autoprefixer')({
+      browsers: [
+        '> 1%',
+        'Last 2 versions',
+        'ie >= 10',
+        'Safari >= 8',
+        'iOS >= 8'
+      ]
+    })
   ].concat(!cssSelectorPrefix ? [] : [
     require('postcss-prefix-selector')({
       prefix: `:global(${cssSelectorPrefix})`
