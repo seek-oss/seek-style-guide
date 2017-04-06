@@ -371,11 +371,11 @@ These components can be viewed online in the following categories:
 
 ## Standalone Header and Footer
 
-If you're maintaining or updating a non-React app, a standalone JS + CSS package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeader` object as a fallback for older apps without a proper module system.
+If you're maintaining or updating a non-React app, a standalone JS + CSS package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
 
 First, include the following files in your app:
-- `seek-style-guide/dist/header/styles.css`
-- `seek-style-guide/dist/header/client.js`
+- `seek-style-guide/dist/header-footer/styles.css`
+- `seek-style-guide/dist/header-footer/client.js`
 
 Then, add placeholder elements to your page:
 - `<div id="header"></div>`
@@ -384,7 +384,7 @@ Then, add placeholder elements to your page:
 When the document is ready, render the header:
 
 ```js
-var header = SeekHeader.renderHeader(document.getElementById('header'), {
+var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), {
   ...initialProps
 });
 
@@ -397,7 +397,7 @@ header.updateProps({
 Finally, render the footer following a similar pattern:
 
 ```js
-var footer = SeekHeader.renderFooter(document.getElementById('footer'), {
+var footer = SeekHeaderFooter.renderFooter(document.getElementById('footer'), {
   ...initialProps
 });
 
@@ -405,6 +405,12 @@ var footer = SeekHeader.renderFooter(document.getElementById('footer'), {
 footer.updateProps({
   ...newProps
 });
+```
+
+If you need to create React elements (e.g. when providing a `linkRenderer` function), the standalone bundle also exports React's [createElement](https://facebook.github.io/react/docs/react-api.html#createelement) function so you don't need to install React separately to gain access to it:
+
+```js
+var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
 ```
 
 For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).

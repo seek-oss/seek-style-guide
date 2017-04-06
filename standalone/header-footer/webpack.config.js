@@ -18,9 +18,9 @@ const config = {
   entry: path.resolve(__dirname, 'src/client.js'),
 
   output: {
-    path: path.resolve(__dirname, '../../dist/header'),
+    path: path.resolve(__dirname, '../../dist/header-footer'),
     filename: 'client.js',
-    library: 'SeekHeader',
+    library: 'SeekHeaderFooter',
     libraryTarget: 'umd'
   },
 
