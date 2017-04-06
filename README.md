@@ -12,7 +12,11 @@ $ npm install --save-dev seek-style-guide
 
 ## Setup
 
-### Bundler Configuration
+### New Projects
+
+If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as fast as possible, while simplifying the process of keeping your development environment up to date.
+
+### Existing Webpack Projects
 
 #### Webpack v2+
 
