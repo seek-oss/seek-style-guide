@@ -39,21 +39,8 @@
   }
 
   .smallDeviceOnly({
-    &:not(.item_isSearch) {
-      display: none;
-    }
+    display: none;
   });
-}
-
-.item_isSearch {
-  .smallDeviceOnly({
-    flex-basis: 50%;
-    text-align: center;
-    .link {
-      width: auto;
-    }
-  });
-
 }
 
 .link {

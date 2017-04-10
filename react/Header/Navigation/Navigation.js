@@ -8,10 +8,8 @@ import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 const items = [
   {
     name: 'Job Search',
-    shortName: 'Jobs',
     href: '/',
-    analytics: 'header:jobs',
-    isSearch: true
+    analytics: 'header:jobs'
   },
   {
     name: '$150k+ Jobs',
@@ -27,11 +25,9 @@ const items = [
   },
   {
     name: 'Company Reviews',
-    shortName: 'Companies',
     href: '/companies/',
     analytics: 'header:companies',
-    specificLocale: 'AU',
-    isSearch: true
+    specificLocale: 'AU'
   },
   {
     name: 'Advice & Tips',
@@ -55,17 +51,12 @@ export default function Navigation({ locale, linkRenderer, activeTab, divider })
       </ScreenReaderOnly>
 
       <ul className={styles.list} data-automation="nav-tabs">
-        { items.map(({ specificLocale = locale, analytics, name, shortName, isSearch, ...restProps }, i) => (
+        { items.map(({ specificLocale = locale, analytics, name, ...restProps }, i) => (
             (specificLocale === locale) ?
-              <li
-                className={classnames({
-                  [styles.item]: true,
-                  [styles.item_isSearch]: isSearch
-                })}
-                key={i}>
+              <li className={styles.item} key={i}>
                 {
                   linkRenderer({
-                    children: isSearch ? shortName : name, // Need to show short name only on small device
+                    children: name,
                     'data-analytics': analytics,
                     className: classnames({
                       [styles.link]: true,

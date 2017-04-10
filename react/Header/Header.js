@@ -27,7 +27,6 @@ export default function Header({
   linkRenderer,
   activeTab,
   divider,
-  isHomepage,
   returnUrl
 }) {
   const userClasses = classnames({
@@ -35,9 +34,6 @@ export default function Header({
     [styles.user_isReady]: authenticationStatus === UNAUTHENTICATED ||
       (authenticationStatus === AUTHENTICATED && userName)
   });
-  const showHomepageSubNav = isHomepage &&
-    ['Job Search', 'Company Reviews'].indexOf(activeTab) > -1 &&
-    locale === 'AU';
 
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
@@ -75,11 +71,7 @@ export default function Header({
             </div>
           </div>
         </div>
-        <div
-          className={classnames({
-            [styles.navigation]: true,
-            [styles.navigation_isHomepage]: showHomepageSubNav
-          })}>
+        <div className={styles.navigation}>
           <Navigation
             locale={locale}
             linkRenderer={linkRenderer}
@@ -111,7 +103,6 @@ Header.propTypes = {
   linkRenderer: PropTypes.func,
   activeTab: PropTypes.string,
   divider: PropTypes.bool,
-  isHomepage: PropTypes.bool,
   returnUrl: PropTypes.string
 };
 
@@ -120,6 +111,5 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
-  divider: true,
-  isHomepage: false
+  divider: true
 };
