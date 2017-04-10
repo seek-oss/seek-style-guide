@@ -33,13 +33,17 @@ export default function Text({
         [styles.headline]: headline,
         [styles.heading]: heading,
         [styles.hero]: hero,
-        [styles.raw]: raw,
-        [stylesPositive.root]: positive,
-        [stylesCritical.root]: critical,
-        [stylesSecondary.root]: secondary,
-        [stylesStrong.root]: strong
+        [styles.raw]: raw
       })}>
-      {children}
+      <span
+        className={classnames({
+          [stylesPositive.root]: positive,
+          [stylesCritical.root]: critical,
+          [stylesSecondary.root]: secondary,
+          [stylesStrong.root]: strong
+        })}>
+        {children}
+      </span>
     </div>
   );
 }
