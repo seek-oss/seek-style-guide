@@ -27,7 +27,8 @@ export default function Header({
   linkRenderer,
   activeTab,
   divider,
-  isHomepage
+  isHomepage,
+  returnUrl
 }) {
   const userClasses = classnames({
     [styles.user]: true,
@@ -58,7 +59,7 @@ export default function Header({
               {
                 authenticationStatus === AUTHENTICATED ?
                   <UserAccount userName={userName} linkRenderer={linkRenderer} /> :
-                  <SignInRegister linkRenderer={linkRenderer} />
+                  <SignInRegister linkRenderer={linkRenderer} returnUrl={returnUrl} />
               }
               <span className={styles.divider} />
             </div>
@@ -110,7 +111,8 @@ Header.propTypes = {
   linkRenderer: PropTypes.func,
   activeTab: PropTypes.string,
   divider: PropTypes.bool,
-  isHomepage: PropTypes.bool
+  isHomepage: PropTypes.bool,
+  returnUrl: PropTypes.string
 };
 
 Header.defaultProps = {

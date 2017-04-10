@@ -3,15 +3,17 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
 import { createRenderer } from 'react-addons-test-utils';
-import { findAllWithClass } from 'react-shallow-testutils';
+import { findAllWithType } from 'react-shallow-testutils';
 import FieldLabel from './FieldLabel';
+import Secondary from '../../Secondary/Secondary';
+import Strong from '../../Strong/Strong';
 
 chai.use(sinonChai);
 
 const renderer = createRenderer();
 
 describe('FieldLabel', () => {
-  let element, fieldLabel, label, secondaryLabel, errors;
+  let element, fieldLabel, label, secondaryLabel, errors, labelText;
 
   beforeEach(() => {
     errors = [];
@@ -28,8 +30,9 @@ describe('FieldLabel', () => {
   function render(jsx) {
     element = jsx;
     fieldLabel = renderer.render(element);
-    label = findAllWithClass(fieldLabel, 'label')[0] || null;
-    secondaryLabel = findAllWithClass(fieldLabel, 'secondaryLabel')[0] || null;
+    label = findAllWithType(fieldLabel, 'label')[0] || null;
+    labelText = findAllWithType(fieldLabel, Strong)[0] || null;
+    secondaryLabel = findAllWithType(fieldLabel, Secondary)[0] || null;
   }
 
   it('should have a displayName', () => {
@@ -50,7 +53,7 @@ describe('FieldLabel', () => {
 
     it('should have the right text when `label` is specified', () => {
       render(<FieldLabel id="firstName" label="First Name" labelTextProps={{ className: 'text' }} />);
-      expect(label.props.children.props.children[0]).to.equal('First Name');
+      expect(labelText.props.children).to.equal('First Name');
     });
 
     it('should error if `id` is not specified but `label` is', () => {

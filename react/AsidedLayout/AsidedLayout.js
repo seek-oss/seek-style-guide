@@ -4,15 +4,20 @@ import classnames from 'classnames';
 
 const defaultRenderAside = () => null;
 
-const conditionallyRenderAside = (condition, renderAside, size) => (
+const conditionallyRenderAside = (condition, renderAside, classNameAside, size) => (
   condition ?
-    <div className={styles.aside} style={{ flexBasis: size }}>
+    <div
+      className={classnames({
+        [classNameAside]: classNameAside,
+        [styles.aside]: true
+      })}
+      style={{ flexBasis: size }}>
       {renderAside()}
     </div> :
     null
 );
 
-export default function AsidedLayout({ className, children, renderAside = defaultRenderAside, size, reverse, ...restProps }) {
+export default function AsidedLayout({ className, children, renderAside = defaultRenderAside, classNameAside, size, reverse, ...restProps }) {
   return (
     <div
       {...restProps}
@@ -21,11 +26,11 @@ export default function AsidedLayout({ className, children, renderAside = defaul
         [styles.root]: true,
         [styles.reverse]: reverse
       })}>
-      { conditionallyRenderAside(reverse, renderAside, size) }
+      { conditionallyRenderAside(reverse, renderAside, classNameAside, size) }
       <div className={styles.content}>
         {children}
       </div>
-      { conditionallyRenderAside(!reverse, renderAside, size) }
+      { conditionallyRenderAside(!reverse, renderAside, classNameAside, size) }
     </div>
   );
 }
@@ -34,6 +39,7 @@ AsidedLayout.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   renderAside: PropTypes.func,
+  classNameAside: PropTypes.string,
   size: PropTypes.string,
   reverse: PropTypes.bool
 };

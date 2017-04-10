@@ -6,6 +6,7 @@ const port = 3000;
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
+  contentBase: __dirname,
   hot: true,
   historyApiFallback: true
 }).listen(port, 'localhost', error => {

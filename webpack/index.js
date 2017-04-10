@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const chalk = require('chalk');
+const autoprefixerConfig = require('../config/autoprefixer.config');
 
 const isProduction = () => process.env.NODE_ENV === 'production';
 
@@ -48,12 +49,18 @@ const validateConfig = config => {
   });
 };
 
-const decoratePostCss = config => {
+const decoratePostCss = (config, options) => {
+  const cssSelectorPrefix = options.cssSelectorPrefix || null;
+
   // Setup postcss-loader plugin packs
   // (https://github.com/postcss/postcss-loader#plugins-packs)
   const postcssPlugins = [
-    require('autoprefixer')
-  ];
+    require('autoprefixer')(autoprefixerConfig)
+  ].concat(!cssSelectorPrefix ? [] : [
+    require('postcss-prefix-selector')({
+      prefix: `:global(${cssSelectorPrefix})`
+    })
+  ]);
 
   if (config.postcss) {
     // Keep a reference to the consumer's PostCSS plugins
@@ -147,7 +154,7 @@ const decorateConfig = (config, options) => {
 
   validateConfig(config);
 
-  config = decoratePostCss(config);
+  config = decoratePostCss(config, options);
 
   // Prepend style guide loaders
   config.module.loaders = getCommonLoaders()
@@ -217,6 +224,7 @@ const decorateServerConfig = config => decorateConfig(config, {
 
 const decorateClientConfig = (config, options) => {
   const extractTextPlugin = options && options.extractTextPlugin;
+  const cssSelectorPrefix = (options && options.cssSelectorPrefix) || null;
 
   if (extractTextPlugin === ExtractTextPlugin) {
     error(`
@@ -240,6 +248,7 @@ const decorateClientConfig = (config, options) => {
   const extractWoff2 = new ExtractTextPlugin('roboto.woff2.css');
 
   return decorateConfig(config, {
+    cssSelectorPrefix,
     loaders: [
       {
         test: /\.less$/,

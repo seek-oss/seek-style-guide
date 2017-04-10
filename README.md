@@ -12,7 +12,11 @@ $ npm install --save-dev seek-style-guide
 
 ## Setup
 
-### Bundler Configuration
+### New Projects
+
+If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as fast as possible, while simplifying the process of keeping your development environment up to date.
+
+### Existing Webpack Projects
 
 #### Webpack v2+
 
@@ -368,6 +372,52 @@ These components can be viewed online in the following categories:
 - [Monthpicker](http://seek-oss.github.io/seek-style-guide/monthpicker)
 - [Checkbox](http://seek-oss.github.io/seek-style-guide/checkbox)
 - [Dropdown](http://seek-oss.github.io/seek-style-guide/dropdown)
+
+## Standalone Header and Footer
+
+If you're maintaining or updating a non-React app, a standalone JS + CSS package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
+
+First, include the following files in your app:
+- `seek-style-guide/dist/header-footer/styles.css`
+- `seek-style-guide/dist/header-footer/client.js`
+
+Then, add placeholder elements to your page:
+- `<div id="header"></div>`
+- `<div id="footer"></div>`
+
+When the document is ready, render the header:
+
+```js
+var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), {
+  ...initialProps
+});
+
+// Update props later, if needed:
+header.updateProps({
+  ...newProps
+});
+```
+
+Finally, render the footer following a similar pattern:
+
+```js
+var footer = SeekHeaderFooter.renderFooter(document.getElementById('footer'), {
+  ...initialProps
+});
+
+// Update props later, if needed:
+footer.updateProps({
+  ...newProps
+});
+```
+
+If you need to create React elements (e.g. when providing a `linkRenderer` function), the standalone bundle also exports React's [createElement](https://facebook.github.io/react/docs/react-api.html#createelement) function so you don't need to install React separately to gain access to it:
+
+```js
+var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
+```
+
+For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
 
 ## Contributing
 

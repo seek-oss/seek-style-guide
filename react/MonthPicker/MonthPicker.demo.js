@@ -2,6 +2,7 @@ import styles from './MonthPicker.demo.less';
 import React, { Component, PropTypes } from 'react';
 import MonthPicker from './MonthPicker';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
+import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 class MonthPickerContainer extends Component {
   static propTypes = {
@@ -61,6 +62,7 @@ export default {
         }
       ]
     },
-    ...fieldMessageOptions
+    ...fieldMessageOptions,
+    ...fieldLabelOptions
   ]
 };

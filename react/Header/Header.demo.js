@@ -16,7 +16,8 @@ export default {
     authenticationStatus: 'authenticated',
     userName: 'Jane Smith',
     divider: false,
-    linkRenderer: dummyLinkRenderer
+    linkRenderer: dummyLinkRenderer,
+    returnUrl: '/jobs'
   },
   options: [
     {

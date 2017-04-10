@@ -4,7 +4,9 @@ import React, { PropTypes } from 'react';
 
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
-export default function SignInRegister({ linkRenderer }) {
+export default function SignInRegister({ linkRenderer, returnUrl }) {
+  const urlSuffix = returnUrl ? `?returnUrl=${encodeURIComponent(returnUrl)}` : '';
+
   return (
     <nav
       aria-labelledby="SignInOrRegister"
@@ -17,7 +19,7 @@ export default function SignInRegister({ linkRenderer }) {
       {
         linkRenderer({
           'data-analytics': 'sign-in',
-          href: '/Login/Standalone',
+          href: `/Login/Standalone${urlSuffix}`,
           className: styles.link,
           title: 'Sign in',
           children: 'Sign in'
@@ -27,7 +29,7 @@ export default function SignInRegister({ linkRenderer }) {
       {
         linkRenderer({
           'data-analytics': 'register',
-          href: '/Register/Standalone',
+          href: `/Register/Standalone${urlSuffix}`,
           className: styles.link,
           title: 'Register',
           children: 'Register'
@@ -38,5 +40,6 @@ export default function SignInRegister({ linkRenderer }) {
 }
 
 SignInRegister.propTypes = {
-  linkRenderer: PropTypes.func.isRequired
+  linkRenderer: PropTypes.func.isRequired,
+  returnUrl: PropTypes.string
 };
