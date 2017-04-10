@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const chalk = require('chalk');
+const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 const autoprefixerConfig = require('../config/autoprefixer.config');
 
 const isProduction = () => process.env.NODE_ENV === 'production';
@@ -115,14 +116,7 @@ const getCommonLoaders = () => ([
     include: styleGuidePaths,
     exclude: /\.raw\.js$/,
     loader: require.resolve('babel-loader'),
-    query: {
-      babelrc: false,
-      presets: ['es2015', 'react'],
-      plugins: [
-        'transform-class-properties',
-        'transform-object-rest-spread'
-      ]
-    }
+    query: babelConfig
   },
   {
     test: /\.raw\.js$/,

@@ -4,7 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const decorateServerConfig = require('../webpack').decorateServerConfig;
-const babelConfig = require('../babel.config.js')({ reactHotLoader: false });
+const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const templatePath = path.resolve(__dirname, 'index.ejs');

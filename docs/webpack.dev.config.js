@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const decorateClientConfig = require('../webpack').decorateClientConfig;
-const babelConfig = require('../babel.config.js')({ reactHotLoader: true });
+const babelConfig = require('../config/babel.config.js')({ reactHotLoader: true });
 
 // Must be absolute paths
 const appPaths = [
