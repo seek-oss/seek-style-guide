@@ -111,12 +111,37 @@
 .user {
   display: flex;
   align-items: center;
-  opacity: 0;
-  transition: opacity .3s ease;
+  .aboveSmallDevice({
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+  });
 }
 
 .user_isReady {
-  opacity: 1;
+  .aboveSmallDevice({
+    pointer-events: auto;
+    opacity: 1;
+  });
+}
+
+.userAccountWrapper {
+  .aboveSmallDevice({
+    .user_isUnauthenticated & {
+      display: none;
+    }
+  });
+}
+
+.signInRegisterWrapper {
+  .smallDeviceOnly({
+    display: none;
+  });
+  .aboveSmallDevice({
+    .user_isAuthenticated & {
+      display: none;
+    }
+  });
 }
 
 .employerSite {

@@ -5,8 +5,9 @@ import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../authStatusTypes';
 
-export default function UserAccount({ userName, linkRenderer }) {
+export default function UserAccount({ locale, authenticationStatus, userName = 'Menu', linkRenderer }) {
   return (
     <nav
       role="navigation"
@@ -42,7 +43,11 @@ export default function UserAccount({ userName, linkRenderer }) {
       </label>
 
       <div className={styles.toggleContainer}>
-        <UserAccountMenu linkRenderer={linkRenderer} />
+        <UserAccountMenu
+          locale={locale}
+          authenticationStatus={authenticationStatus}
+          linkRenderer={linkRenderer}
+        />
       </div>
 
     </nav>
@@ -50,6 +55,12 @@ export default function UserAccount({ userName, linkRenderer }) {
 }
 
 UserAccount.propTypes = {
-  userName: PropTypes.string.isRequired,
+  locale: PropTypes.oneOf(['AU', 'NZ']),
+  authenticationStatus: PropTypes.oneOf([
+    AUTHENTICATED,
+    UNAUTHENTICATED,
+    AUTH_PENDING
+  ]),
+  userName: PropTypes.string,
   linkRenderer: PropTypes.func.isRequired
 };

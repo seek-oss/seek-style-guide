@@ -10,15 +10,10 @@ import Navigation from './Navigation/Navigation';
 import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
+import employerLinkForLocale from './employerLinkForLocale';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from './authStatusTypes';
 
 const defaultLinkRenderer = props => (<a {...props} />);
-const employerLinkHref = locale => locale === 'NZ' ?
-  'https://talent.seek.co.nz/' :
-  'https://talent.seek.com.au/';
-
-const AUTHENTICATED = 'authenticated';
-const UNAUTHENTICATED = 'unauthenticated';
-const AUTH_PENDING = 'pending';
 
 export default function Header({
   locale,
@@ -29,10 +24,14 @@ export default function Header({
   divider,
   returnUrl
 }) {
+  const isAuthenticated = (authenticationStatus === AUTHENTICATED && userName);
+  const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
+
   const userClasses = classnames({
     [styles.user]: true,
-    [styles.user_isReady]: authenticationStatus === UNAUTHENTICATED ||
-      (authenticationStatus === AUTHENTICATED && userName)
+    [styles.user_isAuthenticated]: isAuthenticated,
+    [styles.user_isUnauthenticated]: isUnauthenticated,
+    [styles.user_isReady]: isUnauthenticated || isAuthenticated
   });
 
   return (
@@ -52,11 +51,17 @@ export default function Header({
           </h1>
           <div className={styles.userWrapper}>
             <div className={userClasses}>
-              {
-                authenticationStatus === AUTHENTICATED ?
-                  <UserAccount userName={userName} linkRenderer={linkRenderer} /> :
-                  <SignInRegister linkRenderer={linkRenderer} returnUrl={returnUrl} />
-              }
+              <div className={styles.userAccountWrapper}>
+                <UserAccount
+                  locale={locale}
+                  authenticationStatus={authenticationStatus}
+                  userName={userName}
+                  linkRenderer={linkRenderer}
+                />
+              </div>
+              <div className={styles.signInRegisterWrapper}>
+                <SignInRegister linkRenderer={linkRenderer} returnUrl={returnUrl} />
+              </div>
               <span className={styles.divider} />
             </div>
             <div className={styles.employerSite}>
@@ -64,7 +69,7 @@ export default function Header({
                 linkRenderer({
                   'data-analytics': 'header:employer+site',
                   className: styles.employerLink,
-                  href: employerLinkHref(locale),
+                  href: employerLinkForLocale(locale),
                   children: 'Employer site'
                 })
               }
