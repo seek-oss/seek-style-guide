@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const decorateClientConfig = require('../../webpack').decorateClientConfig;
-const babelConfig = require('../../babel.config.js')({ reactHotLoader: false });
+const babelConfig = require('../../config/babel.config.js')({ reactHotLoader: false });
 const cssSelectorPrefix = require('./cssSelectorPrefix');
 
 const headerCss = new ExtractTextPlugin('styles.css');
