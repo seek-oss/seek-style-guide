@@ -1,10 +1,10 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  @ball-size: 18px;
+  @ball-size: @grid-row-height * 2;
   @ball-spacing: 2px;
 
-  @animation-distance: 18px;
+  @animation-distance: @grid-row-height * 2;
   @animation-duration: .6s;
   @animation-delay: .07s;
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -12,8 +12,8 @@
   width: (@ball-size + (@ball-spacing * 2)) * 3;
   margin: (@grid-row-height * 7) auto;
 
-  animation:fadeIn ease-in 1;
-  animation-duration: 0.4s;
+  animation: fadeIn ease-in 1;
+  animation-duration: 0.25s;
 
   > .ball {
     background-color: @sk-mid-gray-light;
