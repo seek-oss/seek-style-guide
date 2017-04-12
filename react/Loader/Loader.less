@@ -1,0 +1,47 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  @ball-size: 18px;
+  @ball-spacing: 2px;
+
+  @animation-distance: 18px;
+  @animation-duration: .6s;
+  @animation-delay: .07s;
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+  width: (@ball-size + (@ball-spacing * 2)) * 3;
+  margin: (@grid-row-height * 7) auto;
+
+  animation:fadeIn ease-in 1;
+  animation-duration: 0.4s;
+
+  > .ball {
+    background-color: @sk-mid-gray-light;
+    width: @ball-size;
+    height: @ball-size;
+    margin: 0 @ball-spacing;
+    border-radius: 100%;
+    animation-fill-mode: both;
+    display: inline-block;
+  }
+
+  > .ball:nth-child(1) {
+    animation: bounce @animation-duration -(@animation-delay * 2) infinite ease-in-out;
+  }
+  > .ball:nth-child(2) {
+    animation: bounce @animation-duration -@animation-delay infinite ease-in-out;
+  }
+  > .ball:nth-child(3) {
+    animation: bounce @animation-duration 0s infinite ease-in-out;
+  }
+
+  @keyframes bounce {
+    33% {
+      transform: translateY(-@animation-distance);
+    }
+
+    66% {
+      transform: translateY(0);
+    }
+  }
+}
