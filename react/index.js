@@ -6,6 +6,7 @@ export { default as Logo } from './Logo/Logo';
 export { default as Rating } from './Rating/Rating';
 export { default as Header } from './Header/Header';
 export { default as Footer } from './Footer/Footer';
+export { default as Loader } from './Loader/Loader';
 
 // Typography
 export { default as Text } from './Text/Text';
