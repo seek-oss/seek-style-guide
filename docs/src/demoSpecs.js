@@ -21,7 +21,7 @@ export default [
   Checkbox,
   Dropdown,
   Rating,
+  Loader,
   Header,
-  Footer,
-  Loader
+  Footer
 ];
