@@ -92,19 +92,19 @@ exports[`Header: should append returnUrl to signin and register links if present
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Menu
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Menu
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -122,7 +122,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -616,19 +616,19 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Menu
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Menu
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -646,7 +646,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -1140,19 +1140,19 @@ exports[`Header: should render when authenticated 1`] = `
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Leeroy
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    Leeroy
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Leeroy
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -1170,7 +1170,7 @@ exports[`Header: should render when authenticated 1`] = `
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -1323,7 +1323,9 @@ exports[`Header: should render when authenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
                     <a
                       className="item"
                       href="/Login/Logout"
@@ -1676,19 +1678,19 @@ exports[`Header: should render when authenticated but username is not yet provid
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -1706,7 +1708,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -1859,7 +1861,9 @@ exports[`Header: should render when authenticated but username is not yet provid
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
                     <a
                       className="item"
                       href="/Login/Logout"
@@ -2212,19 +2216,19 @@ exports[`Header: should render when authentication is pending 1`] = `
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Menu
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Menu
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -2242,7 +2246,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -2736,19 +2740,19 @@ exports[`Header: should render when unauthenticated 1`] = `
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Menu
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    Menu
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Menu
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -2766,7 +2770,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -2918,6 +2922,18 @@ exports[`Header: should render when unauthenticated 1`] = `
                         className="iconSpacer"
                       />
                     </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <span
+                      className="item"
+                    >
+                      Sign in or Register
+                      <div
+                        className="iconSpacer"
+                      />
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -3260,19 +3276,19 @@ exports[`Header: should render with locale of AU 1`] = `
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Menu
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Menu
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -3290,7 +3306,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -3784,19 +3800,19 @@ exports[`Header: should render with locale of NZ 1`] = `
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Menu
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Menu
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -3814,7 +3830,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"
@@ -3925,19 +3941,6 @@ exports[`Header: should render with locale of NZ 1`] = `
                             "__html": "mock svg",
                           }
                         }
-                      />
-                    </a>
-                  </li>
-                  <li
-                    className="smallDeviceOnly"
-                  >
-                    <a
-                      className="item subItem"
-                      href="/companies/"
-                    >
-                      Company reviews
-                      <div
-                        className="iconSpacer"
                       />
                     </a>
                   </li>
@@ -4285,19 +4288,19 @@ exports[`Header: should render with no divider 1`] = `
                   Show user menu
                 </span>
                 <span
-                  className="root me"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "mock svg",
-                    }
-                  }
-                />
-                <span
-                  className="userName"
-                  data-automation="user-account-name"
                   data-hj-masked={true}
                 >
-                  Menu
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Menu
+                  </span>
                 </span>
                 <span
                   className="root root down chevron"
@@ -4315,7 +4318,7 @@ exports[`Header: should render with no divider 1`] = `
                   className="root"
                 >
                   <li
-                    className="smallDeviceOnly firstItemInGroup"
+                    className="smallDeviceOnly"
                   >
                     <a
                       className="item subItem"

@@ -2,12 +2,14 @@ import styles from './UserAccount.less';
 import React, { PropTypes } from 'react';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
-import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../authStatusTypes';
 
 export default function UserAccount({ locale, authenticationStatus, userName = 'Menu', linkRenderer }) {
+  const mobileMenuLabel = authenticationStatus === AUTH_PENDING ? '' : userName;
+  const desktopMenuLabel = userName;
+
   return (
     <nav
       role="navigation"
@@ -37,8 +39,10 @@ export default function UserAccount({ locale, authenticationStatus, userName = '
 
       <label data-automation="user-account-menu-toggle" className={styles.toggleLabel} htmlFor="user-account-menu-toggle">
         <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
-        <ProfileIcon className={styles.me} svgClassName={styles.meSvg} />
-        <span className={styles.userName} data-automation="user-account-name" data-hj-masked={true}>{ userName }</span>
+        <span data-hj-masked={true}>
+          <span className={styles.mobileMenuLabel}>{ mobileMenuLabel }</span>
+          <span className={styles.desktopMenuLabel} data-automation="user-account-name">{ desktopMenuLabel }</span>
+        </span>
         <ChevronIcon direction="down" className={styles.chevron} svgClassName={styles.chevronSvg} />
       </label>
 

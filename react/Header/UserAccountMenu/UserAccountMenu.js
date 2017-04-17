@@ -20,7 +20,7 @@ const clearLocalStorage = () => {
 export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer }) {
   return (
     <ul className={styles.root}>
-      <li className={`${styles.smallDeviceOnly} ${styles.firstItemInGroup}`}>
+      <li className={styles.smallDeviceOnly}>
         {
           linkRenderer({
             className: `${styles.item} ${styles.subItem}`,
@@ -112,18 +112,22 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={styles.smallDeviceOnly}>
-        {
-          linkRenderer({
-            className: `${styles.item} ${styles.subItem}`,
-            href: '/companies/',
-            children: [
-              'Company reviews',
-              <div key="iconSpacer" className={styles.iconSpacer} />
-            ]
-          })
-        }
-      </li>
+      {
+        locale === 'NZ' ? null : (
+          <li className={styles.smallDeviceOnly}>
+            {
+              linkRenderer({
+                className: `${styles.item} ${styles.subItem}`,
+                href: '/companies/',
+                children: [
+                  'Company reviews',
+                  <div key="iconSpacer" className={styles.iconSpacer} />
+                ]
+              })
+            }
+          </li>
+        )
+      }
       <li className={styles.aboveSmallDevice}>
         {
           linkRenderer({
@@ -149,8 +153,15 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
         }
       </li>
       {
-        authenticationStatus !== AUTHENTICATED ? null : (
-          <li>
+        authenticationStatus === UNAUTHENTICATED ? (
+          <li className={`${styles.smallDeviceOnly}`}>
+            <span className={styles.item}>Sign in or Register<div className={styles.iconSpacer} /></span>
+          </li>
+        ) : null
+      }
+      {
+        authenticationStatus === AUTHENTICATED ? (
+          <li className={`${styles.smallDeviceOnly}`}>
             {
               linkRenderer({
                 className: styles.item,
@@ -163,7 +174,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
               })
             }
           </li>
-        )
+        ) : null
       }
     </ul>
   );

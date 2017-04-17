@@ -14,7 +14,7 @@ export default {
   component: Header,
   initialProps: {
     authenticationStatus: 'authenticated',
-    userName: 'Jane Smith',
+    userName: 'Olivia',
     divider: false,
     linkRenderer: dummyLinkRenderer,
     returnUrl: '/jobs'

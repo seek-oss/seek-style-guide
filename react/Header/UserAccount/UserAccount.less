@@ -100,42 +100,16 @@
   bottom: 0;
 }
 
-.me {
-  position: relative;
-  top: 3px;
-  width: 40px;
+.mobileMenuLabel {
+  user-select: none;
+  min-width: 60px;
   text-align: right;
-
-/* styles for profile icon in circle */
-  border-radius: 50%;
-  border: 1px solid @sk-white;
-  height: 35px;
-  width: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 4px;
-/* end styles for profile icon in circle */
-
   .aboveSmallDevice({
     display: none;
   });
 }
 
-.meSvg {
-  height: 25px;
-  width: 25px;
-
-/* styles for profile icon in circle */
-  height: 19px;
-  width: 19px;
-  position: relative;
-  top: -2px;
-  left: 1px;
-/* end styles for profile icon in circle */
-}
-
-.userName {
+.desktopMenuLabel {
   pointer-events: none;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -146,6 +120,10 @@
   @media only screen and (min-width: 400px) {
     max-width: 200px; // ~ 20 characters
   }
+
+  .smallDeviceOnly({
+    display: none;
+  });
 }
 
 .chevron {
@@ -154,15 +132,22 @@
   transition: transform .3s ease;
   transform-origin: 50% 50%;
   pointer-events: none;
+  .smallDeviceOnly({
+    text-align: center;
+    width: 20px;
+    margin-right: (@grid-gutter-width / 2);
+  });
 }
 
 .chevronSvg {
   width: 14px;
   height: 14px;
-}
-
-.userName {
+  // Begin bold icon hacks
   .smallDeviceOnly({
-    display: none;
+    path {
+      stroke: currentColor;
+      stroke-width: 70px;
+    }
   });
+  // End bold icon hacks
 }

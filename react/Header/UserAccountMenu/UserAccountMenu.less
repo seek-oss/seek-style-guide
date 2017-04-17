@@ -60,7 +60,7 @@
 .icon.profile { color: #9556B7; /* sk-purple? */ }
 .icon.saveJobs { color: @sk-pink; }
 .icon.saveSearches { color: @sk-highlight; }
-.icon.recommendedJobs { color: @sk-green; }
+.icon.recommendedJobs { color: @sk-green-light; }
 
 .iconSpacer {
   margin-left: (@grid-gutter-width / 2);
@@ -74,6 +74,15 @@
 .iconSvg {
   width: 14px;
   height: 14px;
+  // Begin bold icon hacks
+  .smallDeviceOnly({
+    overflow: visible;
+    path {
+      stroke: currentColor;
+      stroke-width: 70px;
+    }
+  });
+  // End bold icon hacks
 }
 
 .smallDeviceOnly {
