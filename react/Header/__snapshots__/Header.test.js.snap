@@ -2929,7 +2929,27 @@ exports[`Header: should render when unauthenticated 1`] = `
                     <span
                       className="item"
                     >
-                      Sign in or Register
+                      <a
+                        className="itemLink"
+                        data-analytics="sign-in"
+                        href="/Login/Standalone"
+                        title="Sign in"
+                      >
+                        Sign in
+                      </a>
+                      <span
+                        className="secondaryItemText"
+                      >
+                         or 
+                      </span>
+                      <a
+                        className="itemLink"
+                        data-analytics="register"
+                        href="/Register/Standalone"
+                        title="Register"
+                      >
+                        Register
+                      </a>
                       <div
                         className="iconSpacer"
                       />

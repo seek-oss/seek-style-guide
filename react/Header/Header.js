@@ -57,6 +57,7 @@ export default function Header({
                   authenticationStatus={authenticationStatus}
                   userName={userName}
                   linkRenderer={linkRenderer}
+                  returnUrl={returnUrl}
                 />
               </div>
               <div className={styles.signInRegisterWrapper}>

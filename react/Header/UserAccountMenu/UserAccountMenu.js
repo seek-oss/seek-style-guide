@@ -9,6 +9,7 @@ import HeartIcon from '../../HeartIcon/HeartIcon';
 import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
 import employerLinkForLocale from '../employerLinkForLocale';
+import appendReturnUrl from '../appendReturnUrl';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../authStatusTypes';
 
 const clearLocalStorage = () => {
@@ -17,13 +18,13 @@ const clearLocalStorage = () => {
   }
 };
 
-export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer }) {
+export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl }) {
   return (
     <ul className={styles.root}>
       <li className={styles.smallDeviceOnly}>
         {
           linkRenderer({
-            className: `${styles.item} ${styles.subItem}`,
+            className: styles.item,
             href: '/',
             children: [
               <span key="label">Job search</span>,
@@ -155,7 +156,28 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       {
         authenticationStatus === UNAUTHENTICATED ? (
           <li className={`${styles.smallDeviceOnly}`}>
-            <span className={styles.item}>Sign in or Register<div className={styles.iconSpacer} /></span>
+            <span className={styles.item}>
+              {
+                linkRenderer({
+                  'data-analytics': 'sign-in',
+                  href: appendReturnUrl('/Login/Standalone', returnUrl),
+                  className: styles.itemLink,
+                  title: 'Sign in',
+                  children: 'Sign in'
+                })
+              }
+              <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
+              {
+                linkRenderer({
+                  'data-analytics': 'register',
+                  href: appendReturnUrl('/Register/Standalone', returnUrl),
+                  className: styles.itemLink,
+                  title: 'Register',
+                  children: 'Register'
+                })
+              }
+              <div className={styles.iconSpacer} />
+            </span>
           </li>
         ) : null
       }
@@ -187,5 +209,6 @@ UserAccountMenu.propTypes = {
     UNAUTHENTICATED,
     AUTH_PENDING
   ]),
-  linkRenderer: PropTypes.func.isRequired
+  linkRenderer: PropTypes.func.isRequired,
+  returnUrl: PropTypes.string
 };

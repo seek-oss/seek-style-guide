@@ -1,12 +1,9 @@
 import styles from './SignInRegister.less';
-
 import React, { PropTypes } from 'react';
-
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+import appendReturnUrl from '../appendReturnUrl';
 
 export default function SignInRegister({ linkRenderer, returnUrl }) {
-  const urlSuffix = returnUrl ? `?returnUrl=${encodeURIComponent(returnUrl)}` : '';
-
   return (
     <nav
       aria-labelledby="SignInOrRegister"
@@ -19,7 +16,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
       {
         linkRenderer({
           'data-analytics': 'sign-in',
-          href: `/Login/Standalone${urlSuffix}`,
+          href: appendReturnUrl('/Login/Standalone', returnUrl),
           className: styles.link,
           title: 'Sign in',
           children: 'Sign in'
@@ -29,7 +26,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
       {
         linkRenderer({
           'data-analytics': 'register',
-          href: `/Register/Standalone${urlSuffix}`,
+          href: appendReturnUrl('/Register/Standalone', returnUrl),
           className: styles.link,
           title: 'Register',
           children: 'Register'
