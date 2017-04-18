@@ -33,7 +33,7 @@ export default function Header({
   const userClasses = classnames({
     [styles.user]: true,
     [styles.user_isReady]: authenticationStatus === UNAUTHENTICATED ||
-      (authenticationStatus === AUTHENTICATED && userName || userEmail)
+      (authenticationStatus === AUTHENTICATED && (userName || userEmail))
   });
 
   const displayName = userName || userEmail.split('@')[0];
