@@ -24,6 +24,7 @@ export default function Header({
   locale,
   authenticationStatus,
   userName,
+  userEmail,
   linkRenderer,
   activeTab,
   divider,
@@ -32,8 +33,10 @@ export default function Header({
   const userClasses = classnames({
     [styles.user]: true,
     [styles.user_isReady]: authenticationStatus === UNAUTHENTICATED ||
-      (authenticationStatus === AUTHENTICATED && userName)
+      (authenticationStatus === AUTHENTICATED && (userName || userEmail))
   });
+
+  const displayName = userName || userEmail.split('@')[0];
 
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
@@ -54,7 +57,7 @@ export default function Header({
             <div className={userClasses}>
               {
                 authenticationStatus === AUTHENTICATED ?
-                  <UserAccount userName={userName} linkRenderer={linkRenderer} /> :
+                  <UserAccount userName={displayName} linkRenderer={linkRenderer} /> :
                   <SignInRegister linkRenderer={linkRenderer} returnUrl={returnUrl} />
               }
               <span className={styles.divider} />
@@ -100,6 +103,7 @@ Header.propTypes = {
     AUTH_PENDING
   ]),
   userName: PropTypes.string,
+  userEmail: PropTypes.string,
   linkRenderer: PropTypes.func,
   activeTab: PropTypes.string,
   divider: PropTypes.bool,
@@ -111,5 +115,6 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
-  divider: true
+  divider: true,
+  userEmail: ''
 };
