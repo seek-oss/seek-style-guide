@@ -18,16 +18,16 @@ const clearLocalStorage = () => {
   }
 };
 
-export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl }) {
+export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab }) {
   return (
     <ul className={styles.root}>
-      <li className={styles.smallDeviceOnly}>
+      <li className={classnames(styles.smallDeviceOnly, activeTab === 'Job Search' && styles.activeTab)}>
         {
           linkRenderer({
             className: styles.item,
             href: '/',
             children: [
-              <span key="label">Job search</span>,
+              <span key="label">Job Search</span>,
               <SearchIcon
                 key="icon"
                 className={classnames(styles.icon, styles.jobSearch)}
@@ -37,7 +37,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li>
+      <li className={classnames(activeTab === 'Profile' && styles.activeTab)}>
         {
           linkRenderer({
             className: styles.item,
@@ -53,13 +53,13 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={styles.aboveSmallDevice}>
+      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Saved Searches' && styles.activeTab)}>
         {
           linkRenderer({
             className: `${styles.item} ${styles.subItem}`,
             href: '/myactivity#favourite',
             children: [
-              <span key="label">Saved searches</span>,
+              <span key="label">Saved Searches</span>,
               <HeartIcon
                 key="icon"
                 className={classnames(styles.icon, styles.saveSearches)}
@@ -69,13 +69,13 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li>
+      <li className={classnames(activeTab === 'Saved & Applied Jobs' && styles.activeTab)}>
         {
           linkRenderer({
             className: `${styles.item} ${styles.subItem}`,
             href: '/my-activity/saved-jobs',
             children: [
-              <span key="label">Saved <span className={styles.smallDeviceOnly}>& applied </span>jobs</span>,
+              <span key="label">Saved <span className={styles.smallDeviceOnly}>& Applied </span>Jobs</span>,
               <StarIcon
                 key="icon"
                 className={classnames(styles.icon, styles.saveJobs)}
@@ -85,25 +85,25 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={styles.aboveSmallDevice}>
+      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Applied Jobs' && styles.activeTab)}>
         {
           linkRenderer({
             className: `${styles.item} ${styles.subItem}`,
             href: '/my-activity/applied-jobs',
             children: [
-              'Applied jobs',
+              'Applied Jobs',
               <div key="iconSpacer" className={styles.iconSpacer} />
             ]
           })
         }
       </li>
-      <li className={styles.smallDeviceOnly}>
+      <li className={classnames(styles.smallDeviceOnly, activeTab === 'Recommended Jobs' && styles.activeTab)}>
         {
           linkRenderer({
             className: `${styles.item} ${styles.subItem}`,
             href: '/recommended',
             children: [
-              <span key="label">Recommended jobs</span>,
+              <span key="label">Recommended Jobs</span>,
               <ThumbsUpIcon
                 key="icon"
                 className={classnames(styles.icon, styles.recommendedJobs)}
@@ -115,13 +115,13 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       </li>
       {
         locale === 'NZ' ? null : (
-          <li className={styles.smallDeviceOnly}>
+          <li className={classnames(styles.smallDeviceOnly, activeTab === 'Company Reviews' && styles.activeTab)}>
             {
               linkRenderer({
                 className: `${styles.item} ${styles.subItem}`,
                 href: '/companies/',
                 children: [
-                  'Company reviews',
+                  'Company Reviews',
                   <div key="iconSpacer" className={styles.iconSpacer} />
                 ]
               })
@@ -129,7 +129,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           </li>
         )
       }
-      <li className={styles.aboveSmallDevice}>
+      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Settings' && styles.activeTab)}>
         {
           linkRenderer({
             className: styles.item,
@@ -141,13 +141,13 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={`${styles.smallDeviceOnly} ${styles.firstItemInGroup}`}>
+      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, activeTab === 'Employer Site' && styles.activeTab)}>
         {
           linkRenderer({
             className: styles.item,
             href: employerLinkForLocale(locale),
             children: [
-              'Employer site',
+              'Employer Site',
               <div key="iconSpacer" className={styles.iconSpacer} />
             ]
           })
@@ -162,8 +162,8 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                   'data-analytics': 'sign-in',
                   href: appendReturnUrl('/Login/Standalone', returnUrl),
                   className: styles.itemLink,
-                  title: 'Sign in',
-                  children: 'Sign in'
+                  title: 'Sign In',
+                  children: 'Sign In'
                 })
               }
               <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
@@ -183,14 +183,14 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       }
       {
         authenticationStatus === AUTHENTICATED ? (
-          <li className={`${styles.smallDeviceOnly}`}>
+          <li className={styles.smallDeviceOnly}>
             {
               linkRenderer({
                 className: styles.item,
                 onClick: clearLocalStorage,
                 href: '/Login/Logout',
                 children: [
-                  'Sign out',
+                  'Sign Out',
                   <div key="iconSpacer" className={styles.iconSpacer} />
                 ]
               })
@@ -210,5 +210,6 @@ UserAccountMenu.propTypes = {
     AUTH_PENDING
   ]),
   linkRenderer: PropTypes.func.isRequired,
-  returnUrl: PropTypes.string
+  returnUrl: PropTypes.string,
+  activeTab: PropTypes.string
 };

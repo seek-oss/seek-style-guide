@@ -6,7 +6,7 @@ import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../authStatusTypes';
 
-export default function UserAccount({ locale, authenticationStatus, userName = 'Menu', linkRenderer, returnUrl }) {
+export default function UserAccount({ locale, authenticationStatus, userName = 'Menu', linkRenderer, returnUrl, activeTab }) {
   const mobileMenuLabel = authenticationStatus === AUTH_PENDING ? '' : userName;
   const desktopMenuLabel = userName;
 
@@ -52,6 +52,7 @@ export default function UserAccount({ locale, authenticationStatus, userName = '
           authenticationStatus={authenticationStatus}
           linkRenderer={linkRenderer}
           returnUrl={returnUrl}
+          activeTab={activeTab}
         />
       </div>
 
@@ -68,5 +69,6 @@ UserAccount.propTypes = {
   ]),
   userName: PropTypes.string,
   linkRenderer: PropTypes.func.isRequired,
-  returnUrl: PropTypes.string
+  returnUrl: PropTypes.string,
+  activeTab: PropTypes.string
 };

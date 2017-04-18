@@ -125,11 +125,11 @@ exports[`Header: should append returnUrl to signin and register links if present
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -141,7 +141,9 @@ exports[`Header: should append returnUrl to signin and register links if present
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -167,7 +169,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -179,7 +181,9 @@ exports[`Header: should append returnUrl to signin and register links if present
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -189,9 +193,9 @@ exports[`Header: should append returnUrl to signin and register links if present
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -210,7 +214,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -224,7 +228,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -243,7 +247,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -269,7 +273,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -649,11 +653,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -665,7 +669,9 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className="activeTab"
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -691,7 +697,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -703,7 +709,9 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -713,9 +721,9 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -734,7 +742,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -748,7 +756,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -767,7 +775,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -793,7 +801,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -1173,11 +1181,11 @@ exports[`Header: should render when authenticated 1`] = `
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -1189,7 +1197,9 @@ exports[`Header: should render when authenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -1215,7 +1225,7 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -1227,7 +1237,9 @@ exports[`Header: should render when authenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -1237,9 +1249,9 @@ exports[`Header: should render when authenticated 1`] = `
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -1258,7 +1270,7 @@ exports[`Header: should render when authenticated 1`] = `
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -1272,7 +1284,7 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -1291,7 +1303,7 @@ exports[`Header: should render when authenticated 1`] = `
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -1317,7 +1329,7 @@ exports[`Header: should render when authenticated 1`] = `
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -1331,7 +1343,7 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/Login/Logout"
                       onClick={[Function]}
                     >
-                      Sign out
+                      Sign Out
                       <div
                         className="iconSpacer"
                       />
@@ -1711,11 +1723,11 @@ exports[`Header: should render when authenticated but username is not yet provid
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -1727,7 +1739,9 @@ exports[`Header: should render when authenticated but username is not yet provid
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -1753,7 +1767,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -1765,7 +1779,9 @@ exports[`Header: should render when authenticated but username is not yet provid
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -1775,9 +1791,9 @@ exports[`Header: should render when authenticated but username is not yet provid
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -1796,7 +1812,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -1810,7 +1826,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -1829,7 +1845,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -1855,7 +1871,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -1869,7 +1885,7 @@ exports[`Header: should render when authenticated but username is not yet provid
                       href="/Login/Logout"
                       onClick={[Function]}
                     >
-                      Sign out
+                      Sign Out
                       <div
                         className="iconSpacer"
                       />
@@ -2249,11 +2265,11 @@ exports[`Header: should render when authentication is pending 1`] = `
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -2265,7 +2281,9 @@ exports[`Header: should render when authentication is pending 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -2291,7 +2309,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -2303,7 +2321,9 @@ exports[`Header: should render when authentication is pending 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -2313,9 +2333,9 @@ exports[`Header: should render when authentication is pending 1`] = `
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -2334,7 +2354,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -2348,7 +2368,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -2367,7 +2387,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -2393,7 +2413,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -2773,11 +2793,11 @@ exports[`Header: should render when unauthenticated 1`] = `
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -2789,7 +2809,9 @@ exports[`Header: should render when unauthenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -2815,7 +2837,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -2827,7 +2849,9 @@ exports[`Header: should render when unauthenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -2837,9 +2861,9 @@ exports[`Header: should render when unauthenticated 1`] = `
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -2858,7 +2882,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -2872,7 +2896,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -2891,7 +2915,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -2917,7 +2941,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -2933,9 +2957,9 @@ exports[`Header: should render when unauthenticated 1`] = `
                         className="itemLink"
                         data-analytics="sign-in"
                         href="/Login/Standalone"
-                        title="Sign in"
+                        title="Sign In"
                       >
-                        Sign in
+                        Sign In
                       </a>
                       <span
                         className="secondaryItemText"
@@ -3329,11 +3353,11 @@ exports[`Header: should render with locale of AU 1`] = `
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -3345,7 +3369,9 @@ exports[`Header: should render with locale of AU 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -3371,7 +3397,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -3383,7 +3409,9 @@ exports[`Header: should render with locale of AU 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -3393,9 +3421,9 @@ exports[`Header: should render with locale of AU 1`] = `
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -3414,7 +3442,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -3428,7 +3456,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -3447,7 +3475,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -3473,7 +3501,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -3853,11 +3881,11 @@ exports[`Header: should render with locale of NZ 1`] = `
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -3869,7 +3897,9 @@ exports[`Header: should render with locale of NZ 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -3895,7 +3925,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -3907,7 +3937,9 @@ exports[`Header: should render with locale of NZ 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -3917,9 +3949,9 @@ exports[`Header: should render with locale of NZ 1`] = `
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -3938,7 +3970,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -3952,7 +3984,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -3984,7 +4016,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />
@@ -4341,11 +4373,11 @@ exports[`Header: should render with no divider 1`] = `
                     className="smallDeviceOnly"
                   >
                     <a
-                      className="item subItem"
+                      className="item"
                       href="/"
                     >
                       <span>
-                        Job search
+                        Job Search
                       </span>
                       <span
                         className="root icon jobSearch"
@@ -4357,7 +4389,9 @@ exports[`Header: should render with no divider 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item"
                       href="/profile/"
@@ -4383,7 +4417,7 @@ exports[`Header: should render with no divider 1`] = `
                       href="/myactivity#favourite"
                     >
                       <span>
-                        Saved searches
+                        Saved Searches
                       </span>
                       <span
                         className="root icon saveSearches"
@@ -4395,7 +4429,9 @@ exports[`Header: should render with no divider 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className=""
+                  >
                     <a
                       className="item subItem"
                       href="/my-activity/saved-jobs"
@@ -4405,9 +4441,9 @@ exports[`Header: should render with no divider 1`] = `
                         <span
                           className="smallDeviceOnly"
                         >
-                          & applied 
+                          & Applied 
                         </span>
-                        jobs
+                        Jobs
                       </span>
                       <span
                         className="root icon saveJobs"
@@ -4426,7 +4462,7 @@ exports[`Header: should render with no divider 1`] = `
                       className="item subItem"
                       href="/my-activity/applied-jobs"
                     >
-                      Applied jobs
+                      Applied Jobs
                       <div
                         className="iconSpacer"
                       />
@@ -4440,7 +4476,7 @@ exports[`Header: should render with no divider 1`] = `
                       href="/recommended"
                     >
                       <span>
-                        Recommended jobs
+                        Recommended Jobs
                       </span>
                       <span
                         className="root icon recommendedJobs"
@@ -4459,7 +4495,7 @@ exports[`Header: should render with no divider 1`] = `
                       className="item subItem"
                       href="/companies/"
                     >
-                      Company reviews
+                      Company Reviews
                       <div
                         className="iconSpacer"
                       />
@@ -4485,7 +4521,7 @@ exports[`Header: should render with no divider 1`] = `
                       className="item"
                       href="https://talent.seek.com.au/"
                     >
-                      Employer site
+                      Employer Site
                       <div
                         className="iconSpacer"
                       />

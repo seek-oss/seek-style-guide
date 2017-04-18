@@ -58,6 +58,7 @@ export default function Header({
                   userName={userName}
                   linkRenderer={linkRenderer}
                   returnUrl={returnUrl}
+                  activeTab={activeTab}
                 />
               </div>
               <div className={styles.signInRegisterWrapper}>
@@ -107,7 +108,15 @@ Header.propTypes = {
   ]),
   userName: PropTypes.string,
   linkRenderer: PropTypes.func,
-  activeTab: PropTypes.string,
+  activeTab: PropTypes.oneOf([
+    'Job Search',
+    '$150k+ Jobs',
+    'Profile',
+    'Saved & Applied Jobs',
+    'Recommended Jobs',
+    'Company Reviews',
+    'Advice & Tips'
+  ]),
   divider: PropTypes.bool,
   returnUrl: PropTypes.string
 };

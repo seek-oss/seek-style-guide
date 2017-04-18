@@ -41,6 +41,8 @@ export default {
         'Job Search',
         '$150k+ Jobs',
         'Profile',
+        'Saved & Applied Jobs',
+        'Recommended Jobs',
         'Company Reviews',
         'Advice & Tips'
       ].map(activeTab => ({
