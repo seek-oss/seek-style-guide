@@ -3499,9 +3499,9 @@ exports[`Header: should render when unauthenticated 1`] = `
                         className="itemLink"
                         data-analytics="sign-in"
                         href="/Login/Standalone"
-                        title="Sign In"
+                        title="Sign in"
                       >
-                        Sign In
+                        Sign in
                       </a>
                       <span
                         className="secondaryItemText"

@@ -162,8 +162,8 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                   'data-analytics': 'sign-in',
                   href: appendReturnUrl('/Login/Standalone', returnUrl),
                   className: styles.itemLink,
-                  title: 'Sign In',
-                  children: 'Sign In'
+                  title: 'Sign in',
+                  children: 'Sign in'
                 })
               }
               <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
