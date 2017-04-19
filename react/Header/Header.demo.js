@@ -15,6 +15,7 @@ export default {
   initialProps: {
     authenticationStatus: 'authenticated',
     userName: 'Olivia',
+    userEmail: 'olivia.smith@example.com',
     divider: false,
     linkRenderer: dummyLinkRenderer,
     returnUrl: '/jobs'
@@ -29,6 +30,13 @@ export default {
           transformProps: props => ({
             ...props,
             divider: true
+          })
+        },
+        {
+          label: 'No User Name',
+          transformProps: props => ({
+            ...props,
+            userName: ''
           })
         }
       ]

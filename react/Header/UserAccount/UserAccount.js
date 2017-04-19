@@ -6,8 +6,20 @@ import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../authStatusTypes';
 
-export default function UserAccount({ locale, authenticationStatus, userName = 'Menu', linkRenderer, returnUrl, activeTab }) {
-  const mobileMenuLabel = authenticationStatus === AUTH_PENDING ? '' : userName;
+const calculateMobileMenuLabel = (authenticationStatus, userName) => {
+  if (authenticationStatus === AUTH_PENDING) {
+    return '';
+  }
+
+  if (authenticationStatus === AUTHENTICATED) {
+    return userName;
+  }
+
+  return 'Menu';
+};
+
+export default function UserAccount({ locale, authenticationStatus, userName, linkRenderer, returnUrl, activeTab }) {
+  const mobileMenuLabel = calculateMobileMenuLabel(authenticationStatus, userName);
   const desktopMenuLabel = userName;
 
   return (

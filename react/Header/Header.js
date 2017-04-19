@@ -19,12 +19,13 @@ export default function Header({
   locale,
   authenticationStatus,
   userName,
+  userEmail,
   linkRenderer,
   activeTab,
   divider,
   returnUrl
 }) {
-  const isAuthenticated = (authenticationStatus === AUTHENTICATED && userName);
+  const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
   const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
 
   const userClasses = classnames({
@@ -33,6 +34,8 @@ export default function Header({
     [styles.user_isUnauthenticated]: isUnauthenticated,
     [styles.user_isReady]: isUnauthenticated || isAuthenticated
   });
+
+  const displayName = userName || userEmail.split('@')[0];
 
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
@@ -55,7 +58,7 @@ export default function Header({
                 <UserAccount
                   locale={locale}
                   authenticationStatus={authenticationStatus}
-                  userName={userName}
+                  userName={displayName}
                   linkRenderer={linkRenderer}
                   returnUrl={returnUrl}
                   activeTab={activeTab}
@@ -107,6 +110,7 @@ Header.propTypes = {
     AUTH_PENDING
   ]),
   userName: PropTypes.string,
+  userEmail: PropTypes.string,
   linkRenderer: PropTypes.func,
   activeTab: PropTypes.oneOf([
     'Job Search',
@@ -126,5 +130,6 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
-  divider: true
+  divider: true,
+  userEmail: ''
 };
