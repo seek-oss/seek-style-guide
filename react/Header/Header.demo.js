@@ -1,15 +1,23 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 import { Header } from 'seek-style-guide/react';
 
-export const dummyLinkRenderer = ({ href, ...props }) => (
-  <a href={`#actualHref=${href}`} {...props} />
-);
-dummyLinkRenderer.propTypes = {
-  href: PropTypes.string
+export const makeDummyLinkRendererForPath = path => {
+  const DummyLinkRenderer = ({ href, ...props }) => (
+    <Link to={`${path}#actualHref=${href}`} {...props} />
+  );
+
+  DummyLinkRenderer.propTypes = {
+    href: PropTypes.string
+  };
+
+  return DummyLinkRenderer;
 };
 
+const ROUTE = '/header';
+
 export default {
-  route: '/header',
+  route: ROUTE,
   title: 'Header',
   component: Header,
   initialProps: {
@@ -17,7 +25,7 @@ export default {
     userName: 'Olivia',
     userEmail: 'olivia.smith@example.com',
     divider: false,
-    linkRenderer: dummyLinkRenderer,
+    linkRenderer: makeDummyLinkRendererForPath(ROUTE),
     returnUrl: '/jobs'
   },
   options: [
