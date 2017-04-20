@@ -21,7 +21,7 @@ const clearLocalStorage = () => {
 export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab }) {
   return (
     <ul className={styles.root}>
-      <li className={classnames(styles.smallDeviceOnly, activeTab === 'Job Search' && styles.activeTab)}>
+      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, activeTab === 'Job Search' && styles.activeTab)}>
         {
           linkRenderer({
             className: styles.item,

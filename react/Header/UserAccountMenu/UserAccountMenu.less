@@ -97,8 +97,8 @@
 }
 
 .iconSvg {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   // Begin bold icon hacks
   .smallDeviceOnly({
     overflow: visible;
@@ -124,11 +124,12 @@
 
 .firstItemInGroup {
   .smallDeviceOnly({
+    padding-top: @grid-row-height * 2;
     position: relative;
     &::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: @grid-row-height;
       right: 0;
       left: @grid-gutter-width;
       height: 1px;
