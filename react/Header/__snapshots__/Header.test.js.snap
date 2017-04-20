@@ -62,6 +62,7 @@ exports[`Header: should append returnUrl to signin and register links if present
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -73,6 +74,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -85,6 +87,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -117,6 +120,7 @@ exports[`Header: should append returnUrl to signin and register links if present
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -590,6 +594,7 @@ exports[`Header: should render first part of email address when username isn't p
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -601,6 +606,7 @@ exports[`Header: should render first part of email address when username isn't p
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -613,6 +619,7 @@ exports[`Header: should render first part of email address when username isn't p
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -645,6 +652,7 @@ exports[`Header: should render first part of email address when username isn't p
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -1132,6 +1140,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -1143,6 +1152,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -1155,6 +1165,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -1187,6 +1198,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -1660,6 +1672,7 @@ exports[`Header: should render when authenticated 1`] = `
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -1671,6 +1684,7 @@ exports[`Header: should render when authenticated 1`] = `
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -1683,6 +1697,7 @@ exports[`Header: should render when authenticated 1`] = `
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -1715,6 +1730,7 @@ exports[`Header: should render when authenticated 1`] = `
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -2202,6 +2218,7 @@ exports[`Header: should render when authenticated but username and email is not 
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -2213,6 +2230,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -2225,6 +2243,7 @@ exports[`Header: should render when authenticated but username and email is not 
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -2257,6 +2276,7 @@ exports[`Header: should render when authenticated but username and email is not 
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -2744,6 +2764,7 @@ exports[`Header: should render when authentication is pending 1`] = `
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -2755,6 +2776,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -2767,6 +2789,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -2799,6 +2822,7 @@ exports[`Header: should render when authentication is pending 1`] = `
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -3272,6 +3296,7 @@ exports[`Header: should render when unauthenticated 1`] = `
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -3283,6 +3308,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -3295,6 +3321,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -3327,6 +3354,7 @@ exports[`Header: should render when unauthenticated 1`] = `
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -3832,6 +3860,7 @@ exports[`Header: should render with locale of AU 1`] = `
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -3843,6 +3872,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -3855,6 +3885,7 @@ exports[`Header: should render with locale of AU 1`] = `
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -3887,6 +3918,7 @@ exports[`Header: should render with locale of AU 1`] = `
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -4360,6 +4392,7 @@ exports[`Header: should render with locale of NZ 1`] = `
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -4371,6 +4404,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -4383,6 +4417,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -4415,6 +4450,7 @@ exports[`Header: should render with locale of NZ 1`] = `
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
@@ -4852,6 +4888,7 @@ exports[`Header: should render with no divider 1`] = `
               </span>
               <input
                 autoComplete="off"
+                checked={false}
                 className="toggle"
                 id="user-account-menu-toggle"
                 type="checkbox"
@@ -4863,6 +4900,7 @@ exports[`Header: should render with no divider 1`] = `
                   className="menuBackdropLabel"
                   data-automation="user-account-menu-backdrop"
                   htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
                 >
                   <span
                     className="root"
@@ -4875,6 +4913,7 @@ exports[`Header: should render with no divider 1`] = `
                 className="toggleLabel"
                 data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
@@ -4907,6 +4946,7 @@ exports[`Header: should render with no divider 1`] = `
               </label>
               <div
                 className="toggleContainer"
+                onClick={[Function]}
               >
                 <ul
                   className="root"
