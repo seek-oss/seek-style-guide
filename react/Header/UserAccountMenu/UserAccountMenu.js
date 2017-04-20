@@ -183,7 +183,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       }
       {
         authenticationStatus === AUTHENTICATED ? (
-          <li className={styles.smallDeviceOnly}>
+          <li>
             {
               linkRenderer({
                 className: styles.item,

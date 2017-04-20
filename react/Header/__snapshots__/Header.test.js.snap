@@ -815,9 +815,7 @@ exports[`Header: should render first part of email address when username isn't p
                       />
                     </a>
                   </li>
-                  <li
-                    className="smallDeviceOnly"
-                  >
+                  <li>
                     <a
                       className="item"
                       href="/Login/Logout"
@@ -1893,9 +1891,7 @@ exports[`Header: should render when authenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <li
-                    className="smallDeviceOnly"
-                  >
+                  <li>
                     <a
                       className="item"
                       href="/Login/Logout"
@@ -2439,9 +2435,7 @@ exports[`Header: should render when authenticated but username and email is not 
                       />
                     </a>
                   </li>
-                  <li
-                    className="smallDeviceOnly"
-                  >
+                  <li>
                     <a
                       className="item"
                       href="/Login/Logout"
