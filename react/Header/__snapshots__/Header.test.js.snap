@@ -130,6 +130,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -150,6 +151,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -170,6 +172,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -190,6 +193,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -216,6 +220,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -229,6 +234,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -249,6 +255,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -262,6 +269,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -275,6 +283,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -662,6 +671,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -682,6 +692,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -702,6 +713,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -722,6 +734,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -748,6 +761,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -761,6 +775,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -781,6 +796,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -794,6 +810,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -807,6 +824,7 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -818,6 +836,7 @@ exports[`Header: should render first part of email address when username isn't p
                   <li>
                     <a
                       className="item"
+                      data-analytics="sign-out"
                       href="/Login/Logout"
                       onClick={[Function]}
                     >
@@ -1206,6 +1225,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -1226,6 +1246,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -1246,6 +1267,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -1266,6 +1288,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -1292,6 +1315,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -1305,6 +1329,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -1325,6 +1350,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -1338,6 +1364,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -1351,6 +1378,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -1738,6 +1766,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -1758,6 +1787,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -1778,6 +1808,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -1798,6 +1829,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -1824,6 +1856,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -1837,6 +1870,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -1857,6 +1891,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -1870,6 +1905,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -1883,6 +1919,7 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -1894,6 +1931,7 @@ exports[`Header: should render when authenticated 1`] = `
                   <li>
                     <a
                       className="item"
+                      data-analytics="sign-out"
                       href="/Login/Logout"
                       onClick={[Function]}
                     >
@@ -2282,6 +2320,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -2302,6 +2341,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -2322,6 +2362,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -2342,6 +2383,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -2368,6 +2410,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -2381,6 +2424,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -2401,6 +2445,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -2414,6 +2459,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -2427,6 +2473,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -2438,6 +2485,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   <li>
                     <a
                       className="item"
+                      data-analytics="sign-out"
                       href="/Login/Logout"
                       onClick={[Function]}
                     >
@@ -2826,6 +2874,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -2846,6 +2895,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -2866,6 +2916,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -2886,6 +2937,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -2912,6 +2964,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -2925,6 +2978,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -2945,6 +2999,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -2958,6 +3013,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -2971,6 +3027,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -3358,6 +3415,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -3378,6 +3436,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -3398,6 +3457,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -3418,6 +3478,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -3444,6 +3505,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -3457,6 +3519,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -3477,6 +3540,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -3490,6 +3554,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -3503,6 +3568,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -3922,6 +3988,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -3942,6 +4009,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -3962,6 +4030,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -3982,6 +4051,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -4008,6 +4078,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -4021,6 +4092,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -4041,6 +4113,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -4054,6 +4127,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -4067,6 +4141,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -4454,6 +4529,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -4474,6 +4550,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -4494,6 +4571,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -4514,6 +4592,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -4540,6 +4619,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -4553,6 +4633,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -4573,6 +4654,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -4586,6 +4668,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
@@ -4950,6 +5033,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:jobs"
                       href="/"
                     >
                       <span>
@@ -4970,6 +5054,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:profile"
                       href="/profile/"
                     >
                       <span>
@@ -4990,6 +5075,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+searches"
                       href="/myactivity#favourite"
                     >
                       <span>
@@ -5010,6 +5096,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
                       <span>
@@ -5036,6 +5123,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
@@ -5049,6 +5137,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
                       <span>
@@ -5069,6 +5158,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item subItem"
+                      data-analytics="header:companies"
                       href="/companies/"
                     >
                       Company Reviews
@@ -5082,6 +5172,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:settings"
                       href="/settings/"
                     >
                       Settings
@@ -5095,6 +5186,7 @@ exports[`Header: should render with no divider 1`] = `
                   >
                     <a
                       className="item"
+                      data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site

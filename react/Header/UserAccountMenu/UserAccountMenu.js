@@ -24,6 +24,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(styles.smallDeviceOnly, activeTab === 'Job Search' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:jobs',
             className: styles.item,
             href: '/',
             children: [
@@ -40,6 +41,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(activeTab === 'Profile' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:profile',
             className: styles.item,
             href: '/profile/',
             children: [
@@ -56,6 +58,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(styles.aboveSmallDevice, activeTab === 'Saved Searches' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:saved+searches',
             className: `${styles.item} ${styles.subItem}`,
             href: '/myactivity#favourite',
             children: [
@@ -72,6 +75,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(activeTab === 'Saved & Applied Jobs' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:saved+jobs',
             className: `${styles.item} ${styles.subItem}`,
             href: '/my-activity/saved-jobs',
             children: [
@@ -88,6 +92,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(styles.aboveSmallDevice, activeTab === 'Applied Jobs' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:applied+jobs',
             className: `${styles.item} ${styles.subItem}`,
             href: '/my-activity/applied-jobs',
             children: [
@@ -100,6 +105,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(styles.smallDeviceOnly, activeTab === 'Recommended Jobs' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:recommended+jobs',
             className: `${styles.item} ${styles.subItem}`,
             href: '/recommended',
             children: [
@@ -118,6 +124,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           <li className={classnames(styles.smallDeviceOnly, activeTab === 'Company Reviews' && styles.activeTab)}>
             {
               linkRenderer({
+                'data-analytics': 'header:companies',
                 className: `${styles.item} ${styles.subItem}`,
                 href: '/companies/',
                 children: [
@@ -132,6 +139,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(styles.aboveSmallDevice, activeTab === 'Settings' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:settings',
             className: styles.item,
             href: '/settings/',
             children: [
@@ -144,6 +152,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, activeTab === 'Employer Site' && styles.activeTab)}>
         {
           linkRenderer({
+            'data-analytics': 'header:employer+site',
             className: styles.item,
             href: employerLinkForLocale(locale),
             children: [
@@ -186,6 +195,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           <li>
             {
               linkRenderer({
+                'data-analytics': 'sign-out',
                 className: styles.item,
                 onClick: clearLocalStorage,
                 href: '/Login/Logout',
