@@ -1,10 +1,11 @@
 @import (reference) "~seek-style-guide/theme";
 
-.content {
-  max-width: @grid-container-width + (@grid-gutter-width * 2);
-  margin: 0 auto;
+@classic-ia: ~"only screen and (min-width: 1025px)";
 
-  @media only screen and (min-width: @responsive-breakpoint) {
+.content {
+  @media @classic-ia {
+    max-width: @grid-container-width + (@grid-gutter-width * 2);
+    margin: 0 auto;
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
   }
