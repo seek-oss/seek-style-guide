@@ -3,7 +3,9 @@
 
 .category {
   @media only screen @footer-vertical {
-    display: none;
+    margin-bottom: @grid-row-height * 3;
+    padding-bottom: @grid-row-height * 2;
+    border-bottom: 1px solid @sk-mid-gray;
   }
 
   @media only screen @footer-horizontal {
@@ -16,4 +18,10 @@
   .standardText();
   font-weight: @sk-bold;
   margin-bottom: (@grid-row-height * 2);
+}
+
+.secondary {
+  @media only screen @footer-vertical {
+    display: none;
+  }
 }

@@ -12,8 +12,7 @@ export default [
   {
     name: 'SEEK safely',
     href: '/safe-job-searching',
-    analytics: 'toolbar:seek+safely',
-    secondary: true
+    analytics: 'toolbar:seek+safely'
   },
   {
     name: 'Site Map',
