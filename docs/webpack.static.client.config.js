@@ -5,7 +5,7 @@ const autoprefixerConfig = require('../config/autoprefixer.config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const decorateClientConfig = require('../webpack').decorateClientConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
-const failWebpackBuildOnError = require('../scripts/fail-webpack-build-on-error');
+const failPlugin = require('webpack-fail-plugin');
 
 const appCss = new ExtractTextPlugin('app.css');
 
@@ -77,7 +77,7 @@ const config = {
         warnings: false
       }
     }),
-    failWebpackBuildOnError
+    failPlugin
   ],
 
   stats: { children: false }

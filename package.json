@@ -131,6 +131,7 @@
     "surge": "^0.18.0",
     "validate-commit-msg": "^2.8.2",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "webpack-fail-plugin": "^1.0.6"
   }
 }
