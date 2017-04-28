@@ -3,9 +3,10 @@
 
 .category {
   @media only screen @footer-vertical {
-    margin-bottom: @grid-row-height * 3;
+    @border-width: 1px;
     padding-bottom: @grid-row-height * 2;
-    border-bottom: 1px solid @sk-mid-gray;
+    margin-bottom: (@grid-row-height * 3) - @border-width;
+    border-bottom: @border-width solid @sk-mid-gray;
   }
 
   @media only screen @footer-horizontal {
