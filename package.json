@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/seek-oss/seek-style-guide#readme",
   "dependencies": {
-    "autoprefixer": "6.3.7",
+    "autoprefixer": "6.7.7",
     "babel-core": "6.10.4",
     "babel-loader": "6.2.4",
     "babel-plugin-add-react-displayname": "0.0.4",
@@ -51,7 +51,7 @@
     "base64-font-loader": "0.0.4",
     "basekick": "2.0.1",
     "chalk": "1.1.3",
-    "css-loader": "0.23.1",
+    "css-loader": "0.28.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
     "less": "2.7.1",
@@ -131,6 +131,7 @@
     "surge": "^0.18.0",
     "validate-commit-msg": "^2.8.2",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "webpack-fail-plugin": "^1.0.6"
   }
 }
