@@ -69,17 +69,6 @@ export default class Footer extends Component {
                     </ToggleContainer>
                   </FooterNav>
 
-                  <FooterNav label="Connect">
-                    { connect.map(this.renderLink) }
-                    <ToggleContainer name="SocialToggle" label="Social">
-                      { social.map(this.renderLink) }
-                    </ToggleContainer>
-                  </FooterNav>
-
-                  <FooterNav secondary label="Employers">
-                    { employers.map(this.renderLink) }
-                  </FooterNav>
-
                   <FooterNav secondary label="Company">
                     { company.map(this.renderLink) }
                     <ToggleContainer secondary name="InternationalPartnersToggle" label="International partners">
@@ -92,6 +81,17 @@ export default class Footer extends Component {
                         </ToggleContainer> :
                         null
                     }
+                  </FooterNav>
+
+                  <FooterNav label="Connect">
+                    { connect.map(this.renderLink) }
+                    <ToggleContainer name="SocialToggle" label="Social">
+                      { social.map(this.renderLink) }
+                    </ToggleContainer>
+                  </FooterNav>
+
+                  <FooterNav secondary label="Employers">
+                    { employers.map(this.renderLink) }
                   </FooterNav>
                 </div>
 

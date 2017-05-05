@@ -204,190 +204,6 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </ul>
               </nav>
               <nav
-                aria-label="Connect"
-                className="category"
-              >
-                <h1
-                  className="heading"
-                >
-                  Connect
-                </h1>
-                <ul>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:contact+us"
-                      href="/contact-us"
-                    >
-                      Contact us / FAQs
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:work+for+seek"
-                      href="/work-for-seek"
-                    >
-                      Work for SEEK
-                    </a>
-                  </li>
-                  <li
-                    className="secondary"
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:product+blog"
-                      href="http://productblog.seek.com.au"
-                    >
-                      Product & Tech Blog
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <input
-                      className="toggle"
-                      data-automation={undefined}
-                      id="SocialToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="SocialToggle"
-                    >
-                      Social
-                      <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
-                    </label>
-                    <ul
-                      className="toggleContainer"
-                    >
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:facebook"
-                          href="https://www.facebook.com/SEEK/"
-                        >
-                          Facebook
-                        </a>
-                      </li>
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:instagram"
-                          href="https://www.instagram.com/seekau/"
-                        >
-                          Instagram
-                        </a>
-                      </li>
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:twitter"
-                          href="https://twitter.com/seekjobs"
-                        >
-                          Twitter
-                        </a>
-                      </li>
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:youtube"
-                          href="https://www.youtube.com/user/SEEKJobs"
-                        >
-                          YouTube
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Employers"
-                className="category secondary"
-              >
-                <h1
-                  className="heading"
-                >
-                  Employers
-                </h1>
-                <ul>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:register+for+free"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Register for free
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Post a job ad
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:products+prices"
-                      href="https://talent.seek.com.au/Support/OurProducts"
-                    >
-                      Products & prices
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:customer+service"
-                      href="https://talent.seek.com.au/ContactUs"
-                    >
-                      Customer service
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:insight+blog"
-                      href="http://insightsresources.seek.com.au"
-                    >
-                      Insights & Resources
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <nav
                 aria-label="Company"
                 className="category secondary"
               >
@@ -752,6 +568,190 @@ exports[`Footer: should render with locale of AU 1`] = `
                   </li>
                 </ul>
               </nav>
+              <nav
+                aria-label="Connect"
+                className="category"
+              >
+                <h1
+                  className="heading"
+                >
+                  Connect
+                </h1>
+                <ul>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:contact+us"
+                      href="/contact-us"
+                    >
+                      Contact us / FAQs
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:work+for+seek"
+                      href="/work-for-seek"
+                    >
+                      Work for SEEK
+                    </a>
+                  </li>
+                  <li
+                    className="secondary"
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:product+blog"
+                      href="http://productblog.seek.com.au"
+                    >
+                      Product & Tech Blog
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <input
+                      className="toggle"
+                      data-automation={undefined}
+                      id="SocialToggle"
+                      type="checkbox"
+                    />
+                    <label
+                      className="toggleLink toggleLabel"
+                      htmlFor="SocialToggle"
+                    >
+                      Social
+                      <span
+                        className="root root down chevron"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </label>
+                    <ul
+                      className="toggleContainer"
+                    >
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:facebook"
+                          href="https://www.facebook.com/SEEK/"
+                        >
+                          Facebook
+                        </a>
+                      </li>
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:instagram"
+                          href="https://www.instagram.com/seekau/"
+                        >
+                          Instagram
+                        </a>
+                      </li>
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:twitter"
+                          href="https://twitter.com/seekjobs"
+                        >
+                          Twitter
+                        </a>
+                      </li>
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:youtube"
+                          href="https://www.youtube.com/user/SEEKJobs"
+                        >
+                          YouTube
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <nav
+                aria-label="Employers"
+                className="category secondary"
+              >
+                <h1
+                  className="heading"
+                >
+                  Employers
+                </h1>
+                <ul>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:register+for+free"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Register for free
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:post+a+job+ad"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Post a job ad
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:products+prices"
+                      href="https://talent.seek.com.au/Support/OurProducts"
+                    >
+                      Products & prices
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:customer+service"
+                      href="https://talent.seek.com.au/ContactUs"
+                    >
+                      Customer service
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:insight+blog"
+                      href="http://insightsresources.seek.com.au"
+                    >
+                      Insights & Resources
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
             <nav
               className="copyright"
@@ -994,190 +994,6 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                     </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Connect"
-                className="category"
-              >
-                <h1
-                  className="heading"
-                >
-                  Connect
-                </h1>
-                <ul>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:contact+us"
-                      href="/contact-us"
-                    >
-                      Contact us / FAQs
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:work+for+seek"
-                      href="/work-for-seek"
-                    >
-                      Work for SEEK
-                    </a>
-                  </li>
-                  <li
-                    className="secondary"
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:product+blog"
-                      href="http://productblog.seek.com.au"
-                    >
-                      Product & Tech Blog
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <input
-                      className="toggle"
-                      data-automation={undefined}
-                      id="SocialToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="SocialToggle"
-                    >
-                      Social
-                      <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
-                    </label>
-                    <ul
-                      className="toggleContainer"
-                    >
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:facebook"
-                          href="https://www.facebook.com/seeknz/"
-                        >
-                          Facebook
-                        </a>
-                      </li>
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:instagram"
-                          href="https://www.instagram.com/seeknz/"
-                        >
-                          Instagram
-                        </a>
-                      </li>
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:twitter"
-                          href="https://twitter.com/seekjobsnz"
-                        >
-                          Twitter
-                        </a>
-                      </li>
-                      <li
-                        className=""
-                      >
-                        <a
-                          className="link"
-                          data-analytics="toolbar:youtube"
-                          href="https://www.youtube.com/user/SEEKJobs"
-                        >
-                          YouTube
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Employers"
-                className="category secondary"
-              >
-                <h1
-                  className="heading"
-                >
-                  Employers
-                </h1>
-                <ul>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:register+for+free"
-                      href="https://talent.seek.co.nz/"
-                    >
-                      Register for free
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.co.nz/"
-                    >
-                      Post a job ad
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:products+prices"
-                      href="https://talent.seek.co.nz/Support/OurProducts"
-                    >
-                      Products & prices
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:customer+service"
-                      href="https://talent.seek.co.nz/ContactUs"
-                    >
-                      Customer service
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                  >
-                    <a
-                      className="link"
-                      data-analytics="toolbar:insight+blog"
-                      href="http://insightsresources.seek.co.nz"
-                    >
-                      Insights & Resources
-                    </a>
                   </li>
                 </ul>
               </nav>
@@ -1459,6 +1275,190 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </span>
                       </li>
                     </ul>
+                  </li>
+                </ul>
+              </nav>
+              <nav
+                aria-label="Connect"
+                className="category"
+              >
+                <h1
+                  className="heading"
+                >
+                  Connect
+                </h1>
+                <ul>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:contact+us"
+                      href="/contact-us"
+                    >
+                      Contact us / FAQs
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:work+for+seek"
+                      href="/work-for-seek"
+                    >
+                      Work for SEEK
+                    </a>
+                  </li>
+                  <li
+                    className="secondary"
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:product+blog"
+                      href="http://productblog.seek.com.au"
+                    >
+                      Product & Tech Blog
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <input
+                      className="toggle"
+                      data-automation={undefined}
+                      id="SocialToggle"
+                      type="checkbox"
+                    />
+                    <label
+                      className="toggleLink toggleLabel"
+                      htmlFor="SocialToggle"
+                    >
+                      Social
+                      <span
+                        className="root root down chevron"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </label>
+                    <ul
+                      className="toggleContainer"
+                    >
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:facebook"
+                          href="https://www.facebook.com/seeknz/"
+                        >
+                          Facebook
+                        </a>
+                      </li>
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:instagram"
+                          href="https://www.instagram.com/seeknz/"
+                        >
+                          Instagram
+                        </a>
+                      </li>
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:twitter"
+                          href="https://twitter.com/seekjobsnz"
+                        >
+                          Twitter
+                        </a>
+                      </li>
+                      <li
+                        className=""
+                      >
+                        <a
+                          className="link"
+                          data-analytics="toolbar:youtube"
+                          href="https://www.youtube.com/user/SEEKJobs"
+                        >
+                          YouTube
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <nav
+                aria-label="Employers"
+                className="category secondary"
+              >
+                <h1
+                  className="heading"
+                >
+                  Employers
+                </h1>
+                <ul>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:register+for+free"
+                      href="https://talent.seek.co.nz/"
+                    >
+                      Register for free
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:post+a+job+ad"
+                      href="https://talent.seek.co.nz/"
+                    >
+                      Post a job ad
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:products+prices"
+                      href="https://talent.seek.co.nz/Support/OurProducts"
+                    >
+                      Products & prices
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:customer+service"
+                      href="https://talent.seek.co.nz/ContactUs"
+                    >
+                      Customer service
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="link"
+                      data-analytics="toolbar:insight+blog"
+                      href="http://insightsresources.seek.co.nz"
+                    >
+                      Insights & Resources
+                    </a>
                   </li>
                 </ul>
               </nav>
