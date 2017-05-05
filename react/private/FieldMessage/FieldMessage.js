@@ -45,13 +45,17 @@ export default class FieldMessage extends Component {
 
     if (message) {
       const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
+      const isCritical = (valid === false && !secondary) || critical;
+      const isPositive = (valid === true && !secondary) || positive;
 
       return (
         <Text
           {...restMessageProps}
-          critical={(valid === false && !secondary) || critical}
-          positive={(valid === true && !secondary) || positive}
-          secondary={typeof valid === 'undefined' || secondary}>
+          critical={isCritical}
+          positive={isPositive}
+          secondary={typeof valid === 'undefined' || secondary}
+          role={isCritical ? 'alert' : null}
+          aria-live={isPositive ? 'polite' : null}>
           {this.renderMessageIcon()}
           {message}
         </Text>

@@ -83,6 +83,7 @@ describe('FieldMessage', () => {
           render(<FieldMessage valid={false} message="Something went wrong" messageProps={{ className: 'message' }} />);
           expect(messageIcon).not.to.equal(null);
           expect(message.props.critical).to.equal(true);
+          expect(message.props.role).to.equal('alert');
         });
       });
 
@@ -91,6 +92,7 @@ describe('FieldMessage', () => {
           render(<FieldMessage valid={true} message="Something went right" messageProps={{ className: 'message' }} />);
           expect(messageIcon).not.to.equal(null);
           expect(message.props.positive).to.equal(true);
+          expect(message.props['aria-live']).to.equal('polite');
         });
       });
     });
