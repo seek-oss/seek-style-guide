@@ -590,7 +590,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    className="secondary"
                   >
                     <a
                       className="link"
@@ -1300,7 +1300,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    className="secondary"
                   >
                     <a
                       className="link"
