@@ -88,11 +88,12 @@ export default class TextField extends Component {
   }
 
   renderInput() {
-    const { inputProps = {}, id } = this.props;
+    const { inputProps = {}, id, valid } = this.props;
     const { ref } = inputProps;
     const allInputProps = {
       ...combineClassNames(inputProps, styles.input),
       ...(id ? { id } : {}),
+      ...{ 'aria-invalid': valid === false },
       ref: attachRefs(this.storeInputReference, ref)
     };
 
