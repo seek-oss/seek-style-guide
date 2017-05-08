@@ -53,6 +53,7 @@ export default function Header({
               })
             }
           </h1>
+          <span className={styles.logoNote}>Australia’s #1 job site</span>
           <div className={styles.userWrapper}>
             <div className={userClasses}>
               {

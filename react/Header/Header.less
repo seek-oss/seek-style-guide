@@ -90,6 +90,10 @@
   }
 }
 
+.logoNote {
+  display: none;
+}
+
 .logoLink {
   position: absolute;
   top: 0;
@@ -148,5 +152,24 @@
 
   @media @large-ia {
     display: inline-block;
+  }
+}
+
+@media print {
+  .navigation,
+  .topBanner,
+  .userWrapper {
+    display: none;
+  }
+
+  .banner {
+    justify-content: flex-start;
+  }
+
+  .logoNote {
+    .standardText();
+    display: block;
+    margin-left: 0.8rem;
+    margin-bottom: 0.35rem;
   }
 }
