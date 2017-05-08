@@ -96,9 +96,17 @@ describe('TextField', () => {
 
   describe('valid', () => {
     describe('set to false', () => {
-      it('TextField should have the invalid className', () => {
+      it('TextField should have the invalid className and the aria-invalid attribute', () => {
         render(<TextField valid={false} />);
         expect(textField.props.className).to.contain('invalid');
+        expect(input.props['aria-invalid']).to.equal(true);
+      });
+    });
+    describe('set to true', () => {
+      it('TextField should have the invalid className and the aria-invalid attribute', () => {
+        render(<TextField valid={true} />);
+        expect(textField.props.className).to.not.contain('invalid');
+        expect(input.props['aria-invalid']).to.equal(false);
       });
     });
   });
