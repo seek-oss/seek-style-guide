@@ -6,8 +6,9 @@ import connect, { social } from './data/connect';
 import employers from './data/employers';
 import copyright from './data/copyright';
 
-import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import FooterNav from './FooterNav/FooterNav';
