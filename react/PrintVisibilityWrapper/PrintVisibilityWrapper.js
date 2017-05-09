@@ -1,11 +1,13 @@
 import styles from './PrintVisibilityWrapper.less';
 import classNames from 'classnames';
 
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 
-export default class PrintVisibilityWrapper extends Component {
+export default class PrintVisibilityWrapper extends PureComponent {
 
   static propTypes = {
+    className: PropTypes.string,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node
@@ -15,22 +17,24 @@ export default class PrintVisibilityWrapper extends Component {
   };
 
   static defaultProps = {
+    className: '',
     isScreenOnly: false,
     isPrintOnly: false,
   };
 
   render() {
-    const { isScreenOnly, isPrintOnly, children } = this.props;
+    const { className, isScreenOnly, isPrintOnly, children } = this.props;
 
     return (
-      <span
+      <div
         className={classNames({
+          className,
           [styles.isScreenOnly]: isScreenOnly,
           [styles.isPrintOnly]: isPrintOnly,
         })}
       >
         { children }
-      </span>
+      </div>
     );
   }
 }

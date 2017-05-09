@@ -13,6 +13,13 @@ describe('PrintVisibilityWrapper:', () => {
     ).toMatchSnapshot();
   });
 
+  it('should render with className', () => {
+    expect(
+      renderer.create(
+        <PrintVisibilityWrapper children={<div>foo</div>} className='bar' />).toJSON()
+    ).toMatchSnapshot();
+  });
+
   it('should render with isScreenOnly', () => {
     expect(
       renderer.create(
