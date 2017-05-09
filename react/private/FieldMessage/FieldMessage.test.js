@@ -112,17 +112,17 @@ describe('FieldMessage', () => {
     });
 
     describe('aria attributes passed as messageProps', () => {
-      it('will set role="alert" for invalid input if no custom aria attributes are passed in', () => {
+      it('will set role="alert" for invalid input if no custom role attribute is passed in', () => {
         render(<FieldMessage valid={false} message="Something went wrong" messageProps={{ className: 'message' }} />);
         expect(message.props.role).to.equal('alert');
       });
 
-      it('will set role="alert" for invalid input if no custom aria attributes are passed in', () => {
+      it('will set aria-live="polite" for valid input if no custom aria attributes are passed in', () => {
         render(<FieldMessage valid={true} message="Something went right" messageProps={{ className: 'message' }} />);
         expect(message.props['aria-live']).to.equal('polite');
       });
 
-      it('will set role="status" when valud is undefined input if no custom aria attributes are passed in', () => {
+      it('will set role="status" when valud is undefined input if no custom role attribute is passed in', () => {
         render(<FieldMessage message="Something went right" messageProps={{ className: 'message' }} />);
         expect(message.props.role).to.equal('status');
       });

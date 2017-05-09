@@ -55,9 +55,9 @@ export default class FieldMessage extends Component {
           critical={isCritical}
           positive={isPositive}
           secondary={isSecondary}
-          {...(isCritical && !restMessageProps.role) && { role: 'alert' }}
-          {...(isPositive && !restMessageProps['aria-live']) && { 'aria-live': 'polite' }}
-          {...(isSecondary && !restMessageProps.role) && { 'role': 'status' }}>
+          {...(isCritical && !restMessageProps.role) ? { role: 'alert' } : {}}
+          {...(isPositive && !restMessageProps['aria-live']) ? { 'aria-live': 'polite' } : {}}
+          {...(isSecondary && !restMessageProps.role) ? { 'role': 'status' } : {}}>
           {this.renderMessageIcon()}
           {message}
         </Text>
