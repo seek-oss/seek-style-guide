@@ -1,15 +1,17 @@
 import styles from './Header.less';
 
-import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import Logo from '../Logo/Logo';
-import PartnerSites from './PartnerSites/PartnerSites';
 import Locales from './Locales/Locales';
+import Logo from '../Logo/Logo';
 import Navigation from './Navigation/Navigation';
+import PartnerSites from './PartnerSites/PartnerSites';
+import PrintVisibilityWrapper from '../PrintVisibilityWrapper/PrintVisibilityWrapper';
+import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
-import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 const defaultLinkRenderer = props => (<a {...props} />);
 const employerLinkHref = locale => locale === 'NZ' ?
@@ -42,7 +44,7 @@ export default function Header({
     <header className={styles.root} role="banner" aria-label="Primary navigation">
       <section className={styles.content}>
         <div className={styles.banner}>
-          <h1 data-automation="logo" className={styles.logo}>
+          <h1 data-automation="logo">
             <Logo svgClassName={styles.logoSvg} />
             {
               linkRenderer({
@@ -53,7 +55,8 @@ export default function Header({
               })
             }
           </h1>
-          <div className={styles.userWrapper}>
+          <PrintVisibilityWrapper isPrintOnly className={styles.logoNote}>Australia’s #1 job site</PrintVisibilityWrapper>
+          <PrintVisibilityWrapper isScreenOnly className={styles.userWrapper}>
             <div className={userClasses}>
               {
                 authenticationStatus === AUTHENTICATED ?
@@ -72,24 +75,24 @@ export default function Header({
                 })
               }
             </div>
-          </div>
+          </PrintVisibilityWrapper>
         </div>
-        <div className={styles.navigation}>
+        <PrintVisibilityWrapper isScreenOnly className={styles.navigation}>
           <Navigation
             locale={locale}
             linkRenderer={linkRenderer}
             activeTab={activeTab}
             divider={divider}
           />
-        </div>
-        <div className={styles.topBanner}>
+        </PrintVisibilityWrapper>
+        <PrintVisibilityWrapper isScreenOnly className={styles.topBanner}>
           <div className={styles.topBannerContent}>
             <PartnerSites locale={locale} linkRenderer={linkRenderer} />
             <div className={styles.locale}>
               <Locales locale={locale} linkRenderer={linkRenderer} />
             </div>
           </div>
-        </div>
+        </PrintVisibilityWrapper>
       </section>
     </header>
   );

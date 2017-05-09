@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrintVisibilityWrapper: should render with children 1`] = `
+<div
+  className=""
+>
+  <div>
+    foo
+  </div>
+</div>
+`;
+
+exports[`PrintVisibilityWrapper: should render with className 1`] = `
+<div
+  className="bar"
+>
+  <div>
+    foo
+  </div>
+</div>
+`;
+
+exports[`PrintVisibilityWrapper: should render with isPrintOnly 1`] = `
+<div
+  className="isPrintOnly"
+>
+  <div>
+    foo
+  </div>
+</div>
+`;
+
+exports[`PrintVisibilityWrapper: should render with isScreenOnly 1`] = `
+<div
+  className="isScreenOnly"
+>
+  <div>
+    foo
+  </div>
+</div>
+`;
