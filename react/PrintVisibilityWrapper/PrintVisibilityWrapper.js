@@ -27,11 +27,13 @@ export default class PrintVisibilityWrapper extends PureComponent {
 
     return (
       <div
-        className={classNames({
+        className={classNames(
           className,
-          [styles.isScreenOnly]: isScreenOnly,
-          [styles.isPrintOnly]: isPrintOnly,
-        })}
+          {
+            [styles.isScreenOnly]: isScreenOnly,
+            [styles.isPrintOnly]: isPrintOnly,
+          }
+        )}
       >
         { children }
       </div>

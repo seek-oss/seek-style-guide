@@ -12,7 +12,7 @@ exports[`PrintVisibilityWrapper: should render with children 1`] = `
 
 exports[`PrintVisibilityWrapper: should render with className 1`] = `
 <div
-  className="className"
+  className="bar"
 >
   <div>
     foo
