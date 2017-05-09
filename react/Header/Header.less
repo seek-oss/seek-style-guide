@@ -37,6 +37,9 @@
     flex: 0 0 @grid-container-width;
     padding: 0;
   }
+  @media print {
+    justify-content: flex-start;
+  }
 }
 
 .topBanner {
@@ -77,8 +80,10 @@
   }
 }
 
-.logo {
-  position: relative;
+.logoNote {
+  .standardText();
+  margin-left: 0.8rem;
+  margin-bottom: 0.35rem;
 }
 
 .logoSvg {
@@ -88,10 +93,6 @@
     height: 51px;
     width: 129px;
   }
-}
-
-.logoNote {
-  display: none;
 }
 
 .logoLink {
@@ -152,24 +153,5 @@
 
   @media @large-ia {
     display: inline-block;
-  }
-}
-
-@media print {
-  .navigation,
-  .topBanner,
-  .userWrapper {
-    display: none;
-  }
-
-  .banner {
-    justify-content: flex-start;
-  }
-
-  .logoNote {
-    .standardText();
-    display: block;
-    margin-left: 0.8rem;
-    margin-bottom: 0.35rem;
   }
 }
