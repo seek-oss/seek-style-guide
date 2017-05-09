@@ -13,13 +13,13 @@ export default class PrintVisibilityWrapper extends PureComponent {
       PropTypes.node
     ]).isRequired,
     isScreenOnly: PropTypes.bool,
-    isPrintOnly: PropTypes.bool,
+    isPrintOnly: PropTypes.bool
   };
 
   static defaultProps = {
     className: '',
     isScreenOnly: false,
-    isPrintOnly: false,
+    isPrintOnly: false
   };
 
   render() {
@@ -31,10 +31,9 @@ export default class PrintVisibilityWrapper extends PureComponent {
           className,
           {
             [styles.isScreenOnly]: isScreenOnly,
-            [styles.isPrintOnly]: isPrintOnly,
+            [styles.isPrintOnly]: isPrintOnly
           }
-        )}
-      >
+        )}>
         { children }
       </div>
     );

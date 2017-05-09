@@ -3,8 +3,6 @@ import renderer from 'react-test-renderer';
 
 import PrintVisibilityWrapper from './PrintVisibilityWrapper';
 
-const renderPrintVisibilityWrapper = props => renderer.create(<PrintVisibilityWrapper {...props} />);
-
 describe('PrintVisibilityWrapper:', () => {
   it('should render with children', () => {
     expect(
