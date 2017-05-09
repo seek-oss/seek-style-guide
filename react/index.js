@@ -1,12 +1,13 @@
 // Components
-export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
-export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  // Alias for backwards compatibility
 export { default as Button } from './Button/Button';
-export { default as Logo } from './Logo/Logo';
-export { default as Rating } from './Rating/Rating';
-export { default as Header } from './Header/Header';
 export { default as Footer } from './Footer/Footer';
+export { default as Header } from './Header/Header';
 export { default as Loader } from './Loader/Loader';
+export { default as Logo } from './Logo/Logo';
+export { default as PrintVisibilityWrapper } from './PrintVisibilityWrapper/PrintVisibilityWrapper';
+export { default as Rating } from './Rating/Rating';
+export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  // Alias for backwards compatibility
+export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
 
 // Typography
 export { default as Text } from './Text/Text';
