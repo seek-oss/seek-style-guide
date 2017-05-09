@@ -57,6 +57,7 @@
     "less": "2.7.1",
     "less-loader": "2.2.3",
     "postcss-loader": "0.9.1",
+    "prop-types": "^15.5.8",
     "raw-loader": "0.5.1",
     "style-loader": "0.13.1",
     "svgo": "0.7.1",
@@ -66,15 +67,15 @@
     "webpack-node-externals": "1.2.0"
   },
   "peerDependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-helmet": "^3.2.2",
-    "react-autosuggest": "^8.0.0",
-    "react-isolated-scroll": "^0.1.0",
     "classnames": "^2.2.5",
     "lodash.omit": "^4.5.0",
     "lodash.range": "^3.2.0",
-    "pad-left": "^2.1.0"
+    "pad-left": "^2.1.0",
+    "react": "^15.3.1",
+    "react-autosuggest": "^8.0.0",
+    "react-dom": "^15.3.1",
+    "react-helmet": "^3.2.2",
+    "react-isolated-scroll": "^0.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
