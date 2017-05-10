@@ -12,6 +12,14 @@ describe('components/grid/hidden', () => {
     ).toMatchSnapshot();
   });
 
+  it('should render with classname', () => {
+    expect(
+      renderer.create(
+        <Hidden className="foo">Text</Hidden>
+      ).toJSON()
+    ).toMatchSnapshot();
+  });
+
   it('should render with screen', () => {
     expect(
       renderer.create(
