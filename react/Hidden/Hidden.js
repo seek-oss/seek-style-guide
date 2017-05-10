@@ -3,24 +3,23 @@ import classNames from 'classnames';
 
 import styles from './Hidden.less';
 
-const Hidden = ({ children, xs, sm, md, lg, df, print, screen }) => (
+const Hidden = ({ children, print, screen }) => (
   <span
     className={classNames({
       [styles.print]: print,
-      [styles.screen]: screen,
-    })}
-  >{children}</span>
+      [styles.screen]: screen
+    })}>{children}</span>
 );
 
 Hidden.propTypes = {
   children: PropTypes.node.isRequired,
   print: PropTypes.bool,
-  screen: PropTypes.bool,
+  screen: PropTypes.bool
 };
 
 Hidden.defaultProps = {
   print: false,
-  screen: false,
+  screen: false
 };
 
 export default Hidden;
