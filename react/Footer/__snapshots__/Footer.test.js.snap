@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer: should render with locale of AU 1`] = `
-<span
-  className="print"
+<footer
+  aria-labelledby="FooterHeading"
+  className="root"
+  role="contentinfo"
 >
-  <footer
-    aria-labelledby="FooterHeading"
-    className="root"
-    role="contentinfo"
+  <span
+    className="print"
   >
     <section>
       <span
@@ -689,18 +689,18 @@ exports[`Footer: should render with locale of AU 1`] = `
         </nav>
       </div>
     </section>
-  </footer>
-</span>
+  </span>
+</footer>
 `;
 
 exports[`Footer: should render with locale of NZ 1`] = `
-<span
-  className="print"
+<footer
+  aria-labelledby="FooterHeading"
+  className="root"
+  role="contentinfo"
 >
-  <footer
-    aria-labelledby="FooterHeading"
-    className="root"
-    role="contentinfo"
+  <span
+    className="print"
   >
     <section>
       <span
@@ -1289,6 +1289,6 @@ exports[`Footer: should render with locale of NZ 1`] = `
         </nav>
       </div>
     </section>
-  </footer>
-</span>
+  </span>
+</footer>
 `;
