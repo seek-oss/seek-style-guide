@@ -10,7 +10,6 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
-import Hidden from '../Hidden/Hidden';
 
 import FooterNav from './FooterNav/FooterNav';
 import FooterLink from './FooterLink/FooterLink';
@@ -52,7 +51,6 @@ export default class Footer extends Component {
     const isAU = locale === 'AU';
 
     return (
-      <Hidden print>
       <footer aria-labelledby="FooterHeading" role="contentinfo" className={styles.root}>
         <section>
           <ScreenReaderOnly>
@@ -113,7 +111,6 @@ export default class Footer extends Component {
           </div>
         </section>
       </footer>
-      </Hidden>
     );
   }
 }
