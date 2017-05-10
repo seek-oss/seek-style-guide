@@ -8,6 +8,14 @@ exports[`components/grid/hidden should render with children 1`] = `
 </span>
 `;
 
+exports[`components/grid/hidden should render with classname 1`] = `
+<span
+  className="foo"
+>
+  Text
+</span>
+`;
+
 exports[`components/grid/hidden should render with print 1`] = `
 <span
   className="print"
