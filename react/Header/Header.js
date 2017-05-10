@@ -1,8 +1,7 @@
 import styles from './Header.less';
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import Locales from './Locales/Locales';
 import Logo from '../Logo/Logo';
