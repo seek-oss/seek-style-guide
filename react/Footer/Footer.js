@@ -10,6 +10,7 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
+
 import FooterNav from './FooterNav/FooterNav';
 import FooterLink from './FooterLink/FooterLink';
 import ToggleContainer from './ToggleContainer/ToggleContainer';
