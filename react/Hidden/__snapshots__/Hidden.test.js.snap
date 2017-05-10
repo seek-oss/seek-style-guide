@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/grid/hidden should render with children 1`] = `
+<span
+  className=""
+>
+  Text
+</span>
+`;
+
+exports[`components/grid/hidden should render with lg, df 1`] = `
+<span
+  className="lg df"
+>
+  Text
+</span>
+`;
+
+exports[`components/grid/hidden should render with print 1`] = `
+<span
+  className="print"
+>
+  Text
+</span>
+`;
+
+exports[`components/grid/hidden should render with screen 1`] = `
+<span
+  className="screen"
+>
+  Text
+</span>
+`;
+
+exports[`components/grid/hidden should render with xs, sm, md 1`] = `
+<span
+  className="xs sm md"
+>
+  Text
+</span>
+`;

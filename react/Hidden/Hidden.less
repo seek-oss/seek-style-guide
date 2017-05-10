@@ -1,0 +1,47 @@
+@import (reference) "~seek-style-guide/theme";
+
+@import '../../../utils/constants/media'
+
+.df {
+  @media (min-width: @screen-lg + 1) {
+    display: none;
+  }
+}
+
+.lg {
+  @media (min-width: @screen-md + 1) and (max-width: @screen-lg) {
+    display: none;
+  }
+}
+
+.md {
+  @media (min-width: @screen-sm + 1) and (max-width: @screen-md) {
+    display: none;
+  }
+}
+
+.sm {
+  @media (min-width: @screen-xs + 1) and (max-width: @screen-sm) {
+    display: none;
+  }
+}
+
+.xs {
+  @media (max-width: @screen-xs) {
+    display: none;
+  }
+}
+
+.print {
+  @media print {
+    display: none;
+  }
+}
+
+.screen {
+  display: none;
+
+  @media print {
+    display: block;
+  }
+}
