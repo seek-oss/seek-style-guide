@@ -372,6 +372,7 @@ These components can be viewed online in the following categories:
 - [Monthpicker](http://seek-oss.github.io/seek-style-guide/monthpicker)
 - [Checkbox](http://seek-oss.github.io/seek-style-guide/checkbox)
 - [Dropdown](http://seek-oss.github.io/seek-style-guide/dropdown)
+- [SlideToggle](http://seek-oss.github.io/seek-style-guide/slide-toggle)
 
 ## Standalone Header and Footer
 
