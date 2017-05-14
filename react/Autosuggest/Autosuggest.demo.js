@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Autosuggest from './Autosuggest';
 import styles from '../TextField/TextField.less';
 import classnames from 'classnames';

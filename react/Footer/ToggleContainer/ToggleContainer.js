@@ -1,6 +1,8 @@
 import styles from './ToggleContainer.less';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 
 export default function ToggleContainer({ children, label, name, 'data-automation': dataAutomation }) {

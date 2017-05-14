@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import TextField from '../TextField/TextField';
 
 const seekEmailRegex = '^[a-zA-Z0-9_][a-zA-Z0-9!#$%&\'*+/=?_`{|}~\-]*(?:\.[a-zA-Z0-9!#$%&\';*+/=?_`{|}~\-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2,})$';

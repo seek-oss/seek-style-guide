@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Checkbox from './Checkbox';
 import demoStyles from './Checkbox.demo.less';
 import styles from './Checkbox.less';

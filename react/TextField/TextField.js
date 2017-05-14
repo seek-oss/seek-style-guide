@@ -1,7 +1,8 @@
 import styles from './TextField.less';
 
-import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import ClearField from './ClearField/ClearField';
 

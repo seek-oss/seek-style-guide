@@ -1,4 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Header } from 'seek-style-guide/react';
 
 export const dummyLinkRenderer = ({ href, ...props }) => (
