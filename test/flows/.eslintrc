@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "decision": true,
+    "flow": true,
+    "step": true,
+  },
+  "rules": {
+    "func-names": "off",
+    "import/no-unresolved": "off",
+    "prefer-arrow-callback": "off",
+  },
+}
