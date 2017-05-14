@@ -21,15 +21,14 @@ const navTabs = [
   }
 ];
 
-
-const screenshot = function () {
+const screenshot = function() {
   phantomCSS.screenshot('[data-automation="demo-component-wrapper"]');
 };
 
-exports.load = function () {
+exports.load = function() {
   casper
     .viewport(1280, 1440)
-    .thenOpen('http://localhost:3000/header', function () {
+    .thenOpen('http://localhost:3000/header', function() {
       casper.test.pass('Header page loaded');
       casper.test.assertExists('header[aria-label="Primary navigation"]');
 
@@ -37,16 +36,15 @@ exports.load = function () {
     });
 };
 
-exports.loadMobile = function () {
+exports.loadMobile = function() {
   casper
     .viewport(360, 1440)
-    .thenOpen('http://localhost:3000/header', function () {
+    .thenOpen('http://localhost:3000/header', function() {
       screenshot();
     });
 };
 
-
-exports.clickLinks = function () {
+exports.clickLinks = function() {
   phantomCSS.turnOffAnimations();
   navTabs.forEach(function(navTab) {
     casper.click(navTab.selector);

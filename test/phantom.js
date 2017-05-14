@@ -15,9 +15,9 @@ const flow = require('phantomflow').init({
   mismatchTolerance: 0.01 // A value of 0 doesn’t always pick up changes.
 });
 
-flow.run((code) => {
+flow.run(code => {
   console.log('Process exited with code %d', code); // eslint-disable-line no-console
   console.log( // eslint-disable-line no-console
     'Hint: You can see visual report by running `npm run casper-report` command.');
-  process.exit(code);
+  process.exit(code); // eslint-disable-line no-process-exit
 });

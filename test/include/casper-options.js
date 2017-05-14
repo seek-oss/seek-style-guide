@@ -11,12 +11,11 @@ casper.options.onResourceRequested = function skipResources(casper, requestData,
 
 // Make Casper track only those errors which occure in written tests
 // (not JS page warnings)
-casper.removeAllListeners('page.error')
+casper.removeAllListeners('page.error');
 
 casper.on('page.error', function(msg) {
   if (/warning/i.test(msg)) {
     return; // Reducing noise
   }
-  
   this.echo('FAIL: ' + msg, 'ERROR');
-})
+});
