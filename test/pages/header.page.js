@@ -37,6 +37,14 @@ exports.load = function () {
     });
 };
 
+exports.loadMobile = function () {
+  casper
+    .viewport(360, 1440)
+    .thenOpen('http://localhost:3000/header', function () {
+      screenshot();
+    });
+};
+
 
 exports.clickLinks = function () {
   phantomCSS.turnOffAnimations();
