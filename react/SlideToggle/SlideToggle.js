@@ -9,50 +9,48 @@ const RIGHT = 'right';
 export default class SlideToggle extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    onToggle: PropTypes.func.isRequired,
-    label: PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      position: PropTypes.oneOf([LEFT, RIGHT]),
-      hidden: PropTypes.bool
-    }),
-    children: PropTypes.element,
+    text: PropTypes.string.isRequired,
+    onToggle: PropTypes.func,
+    position: PropTypes.oneOf([LEFT, RIGHT]),
+    hideLabel: PropTypes.bool,
+    children: PropTypes.node,
     checked: PropTypes.bool
   }
 
-  static defaultProps: {
-    label: {
-      position: 'left',
-      hidden: false
-    }
+  static defaultProps = {
+    position: RIGHT,
+    hideLabel: false
   };
 
   handleChange = event => {
     const { onToggle } = this.props;
-    onToggle(event.target.checked);
+    if (onToggle) {
+      onToggle(event.target.checked);
+    }
   }
 
   renderLabel = () => {
-    const { label } = this.props;
+    const { position, text } = this.props;
     return (
       <span
         className={classnames(
           styles.label,
-          label.position === LEFT ? styles.labelLeft : styles.labelRight
-        )}>{label.text}</span>
+          position === LEFT ? styles.labelLeft : styles.labelRight
+        )}>{text}</span>
     );
   }
 
   render() {
-    const { children, id, checked, label } = this.props;
+    const { children, id, checked, position, text, hideLabel } = this.props;
     return (
       <label htmlFor={id} className={styles.root}>
-        {(label.hidden !== true && label.position === LEFT && !children) && this.renderLabel()}
-        {children}
+        {(hideLabel !== true && position === LEFT && !children) && this.renderLabel()}
+        {position === LEFT && children}
         <div className={styles.switch}>
           <input
             type="checkbox"
             id={id}
-            aria-label={label.text}
+            aria-label={text}
             className={styles.input}
             checked={checked}
             onChange={this.handleChange}
@@ -66,7 +64,8 @@ export default class SlideToggle extends Component {
             </div>
           </div>
         </div>
-        {(label.hidden !== true && label.position === RIGHT && !children) && this.renderLabel()}
+        {(hideLabel !== true && position === RIGHT && !children) && this.renderLabel()}
+        {position === RIGHT && children}
       </label>
     );
   }

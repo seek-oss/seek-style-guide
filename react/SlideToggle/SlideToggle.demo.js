@@ -2,17 +2,12 @@ import SlideToggle from './SlideToggle';
 
 export default {
   route: '/slide-toggle',
-  title: 'SlideToggle',
+  title: 'Slide toggle',
   component: SlideToggle,
   initialProps: {
-    onToggle: () => {
-      console.log('I have been toggled');
-    },
+    onToggle: () => {},
     id: 'myToggle',
-    label: {
-      position: 'right',
-      text: 'Toggle me'
-    }
+    text: 'Toggle me'
   },
   options: [
     {
@@ -30,10 +25,7 @@ export default {
           label: 'Hide label',
           transformProps: ({ className, ...props }) => ({
             ...props,
-            label: {
-              ...props.label,
-              hidden: true
-            }
+            hideLabel: true
           })
         }
       ]
@@ -46,20 +38,14 @@ export default {
           label: 'Right',
           transformProps: props => ({
             ...props,
-            label: {
-              ...props.label,
-              position: 'right'
-            }
+            position: 'right'
           })
         },
         {
           label: 'Left',
           transformProps: props => ({
             ...props,
-            label: {
-              ...props.label,
-              position: 'left'
-            }
+            position: 'left'
           })
         }
       ]
