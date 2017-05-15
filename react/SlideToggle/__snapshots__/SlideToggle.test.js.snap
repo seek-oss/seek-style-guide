@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide toggle: should render a checked state 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={true}
+      className="input"
+      id="testToggle"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <span
+    className="label labelRight"
+  >
+    Test toggle
+  </span>
+</label>
+`;
+
+exports[`Slide toggle: should render child elements 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input"
+      id="testToggle"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <span>
+    child
+  </span>
+</label>
+`;
+
+exports[`Slide toggle: should render child elements in the left position 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <span>
+    child
+  </span>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input"
+      id="testToggle"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Slide toggle: should render with default props 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input"
+      id="testToggle"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <span
+    className="label labelRight"
+  >
+    Test toggle
+  </span>
+</label>
+`;
+
+exports[`Slide toggle: should render with the label hidden 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input"
+      id="testToggle"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Slide toggle: should render with the label on the left 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <span
+    className="label labelLeft"
+  >
+    Test toggle
+  </span>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input"
+      id="testToggle"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</label>
+`;
