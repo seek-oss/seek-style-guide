@@ -1,3 +1,4 @@
+require('../docs/server');
 
 const flow = require('phantomflow').init({
   // See https://github.com/Huddle/PhantomFlow#options

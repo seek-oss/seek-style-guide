@@ -22,7 +22,7 @@
     "start": "BASE_HREF=/ node docs/server",
     "start-header-footer": "webpack-dev-server --config standalone/header-footer/webpack.config.js --content-base dist",
     "static": "opn http://localhost:1804 && superstatic docs/dist --port 1804",
-    "test": "npm run test-unit && npm run lint && npm run build",
+    "test": "npm run test-unit && npm run lint && npm run build && npm run casper",
     "test-unit": "BABEL_ENV=test jest --config ./test/jest.config.json",
     "update-snapshot": "npm run test-unit -- --updateSnapshot"
   },
