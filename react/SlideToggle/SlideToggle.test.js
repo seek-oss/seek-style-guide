@@ -5,7 +5,6 @@ import {
   findRenderedDOMComponentWithTag,
   renderIntoDocument
 } from 'react-dom/test-utils';
-import sinon from 'sinon';
 
 import SlideToggle from './SlideToggle';
 
