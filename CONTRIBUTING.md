@@ -4,7 +4,7 @@
 
 Don't post anything or commit any code that isn't ready for the entire world to see. If you're introducing new patterns, try to keep it abstract, rather than making specific reference to the features under development. While a lot of this information is probably harmless, it's better to be safe than sorry.
 
-If you work at SEEK and run into issues along the way, or even if you find some of these steps confusing or intimidating, please reach out to your friendly neighbourhood developer in the living style guide Slack channel. We'll be super excited to help out! 
+If you work at SEEK and run into issues along the way, or even if you find some of these steps confusing or intimidating, please reach out to your friendly neighbourhood developer in the living style guide Slack channel. We'll be super excited to help out!
 
 ## Setup
 
@@ -45,6 +45,8 @@ $ npm test
 
 Note that the test suite needs to pass for your changes to be accepted, so it's worth running this locally during development and before committing.
 
+Even though we'd like to automate as much as possible, a comprehensive manual test is never a bad idea, especially if you're working in an area of the codebase that's particularly business critical. Reviewers are also encouraged to put UI changes through their paces, to act as a last line of defense before merging.
+
 Once you've made the desired changes and you're ready to commit, first stage your local changes:
 
 ```bash
@@ -67,7 +69,7 @@ $ git push --set-upstream origin $(git symbolic-ref --short HEAD)
 
 Next, head over to the style guide's GitHub page and create a new pull request from your branch.
 
-In order for your pull request to be accepted, the [Travis CI](https://travis-ci.org) build needs to pass, and another contributor needs to approve your work. It's likely that you might need to make some changes for your work to be accepted, but don't take this personally! Ultimately, the aim is to make it feel like the codebase was written by a single person, but this takes a lot of work and constant review of each others' work.
+In order for your pull request to be accepted, the [Travis CI](https://travis-ci.org) build needs to pass, and **2 other contributors needs to approve your work.** GitHub will block your PR until you have your first approval, but make sure you wait for a second approval. It's likely that you might need to make some changes for your work to be accepted, but don't take this personally! Ultimately, the aim is to make it feel like the codebase was written by a single person, but this takes a lot of work and constant review of each others' work.
 
 Once your work is approved and ready to go, hit the merge button and check that your commit message and description are clean and free of cruft, removing any irrelevant messages due to review feedback. Finally, take a deep breath, hit the green "confirm" button, and we have liftoff—your work should be automatically deployed!
 
