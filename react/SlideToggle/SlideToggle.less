@@ -1,7 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  display: inline-flex;
   line-height: @grid-row-height * 3;
   height: @grid-row-height * 5;
   padding: @grid-row-height 0;
@@ -10,7 +9,7 @@
 }
 
 .switch {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
 }
 
@@ -20,22 +19,36 @@
   top: 5px;
   margin: 0;
 
-  &:focus + .slider {
+  &:focus ~ .slider {
     box-shadow: 0px 0px 10px 0px @sk-focus;
   }
 
-  &:active + .slider .slideButton {
+  &:active ~ .slider .slideButton {
     transform: scale(1.15, 0.85);
   }
 
-  &:checked + .slider .slideButton {
+  &:checked ~ .slider .slideButton {
     background-color: @sk-highlight;
     left: 21px;
   }
 
-  &:checked + .slider .slideButton svg {
+  &:checked ~ .slider .slideButton svg {
     opacity: 1;
   }
+
+  &:checked ~ .label {
+    font-weight: @sk-bold;
+  }
+}
+
+.inputLeft {
+  left: auto;
+  right: 10px;
+}
+
+.label {
+  padding: 0;
+  display: inline;
 }
 
 .labelLeft {

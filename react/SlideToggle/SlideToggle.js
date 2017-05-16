@@ -2,6 +2,7 @@ import styles from './SlideToggle.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TickIcon from '../TickIcon/TickIcon';
+import Text from '../Text/Text';
 import classnames from 'classnames';
 
 const LEFT = 'left';
@@ -30,31 +31,41 @@ export default class SlideToggle extends Component {
     }
   }
 
-  renderLabel = () => {
-    const { position, label } = this.props;
-    return (
-      <span
+  renderLabel = currentPosition => {
+    const { label, hideLabel, children, position } = this.props;
+    return hideLabel !== true && position === currentPosition && !children && (
+      <Text
+        raw
         className={classnames(
           styles.label,
           position === LEFT ? styles.labelLeft : styles.labelRight
-        )}>{label}</span>
+        )}>
+        {label}
+      </Text>
     );
   }
 
   render() {
-    const { children, id, checked, position, label, hideLabel } = this.props;
+    const { id, checked, label, position } = this.props;
+
+    const inputStyles = classnames({
+      [styles.input]: true,
+      [styles.inputLeft]: position === LEFT
+    });
+
     return (
-      <FieldLabel htmlFor={id} className={styles.root}>
-        {(hideLabel !== true && position === LEFT && !children) && this.renderLabel()}
+      <label htmlFor={id} className={styles.root}>
         <div className={styles.switch}>
           <input
+            ref={this.storeInputRef}
             type="checkbox"
             id={id}
             aria-label={label}
-            className={styles.input}
+            className={inputStyles}
             checked={checked}
             onChange={this.handleChange}
           />
+          {this.renderLabel(LEFT)}
           <div className={styles.slider}>
             <div className={styles.slideButton}>
               <TickIcon
@@ -63,8 +74,8 @@ export default class SlideToggle extends Component {
               />
             </div>
           </div>
+          {this.renderLabel(RIGHT)}
         </div>
-        {(hideLabel !== true && position === RIGHT && !children) && this.renderLabel()}
       </label>
     );
   }
