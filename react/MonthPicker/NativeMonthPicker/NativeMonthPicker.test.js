@@ -4,11 +4,11 @@ import sinonChai from 'sinon-chai';
 import React from 'react';
 import NativeMonthPicker from './NativeMonthPicker';
 import {
-  createRenderer,
   renderIntoDocument,
   Simulate,
   findRenderedDOMComponentWithClass
-} from 'react-addons-test-utils';
+} from 'react-dom/test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
 import { findAllWithClass } from 'react-shallow-testutils';
 
 chai.use(sinonChai);

@@ -3,12 +3,12 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
 import {
-  createRenderer,
   Simulate,
   renderIntoDocument,
   scryRenderedDOMComponentsWithClass,
   findRenderedDOMComponentWithClass
-} from 'react-addons-test-utils';
+} from 'react-dom/test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
 import SyntheticEvent from 'react-dom/lib/SyntheticEvent';
 import { findAllWithClass } from 'react-shallow-testutils';
 import Checkbox from './Checkbox';
