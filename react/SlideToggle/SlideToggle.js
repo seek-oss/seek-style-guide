@@ -1,5 +1,6 @@
 import styles from './SlideToggle.less';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import TickIcon from '../TickIcon/TickIcon';
 import classnames from 'classnames';
 
@@ -45,7 +46,6 @@ export default class SlideToggle extends Component {
     return (
       <label htmlFor={id} className={styles.root}>
         {(hideLabel !== true && position === LEFT && !children) && this.renderLabel()}
-        {position === LEFT && children}
         <div className={styles.switch}>
           <input
             type="checkbox"
@@ -65,7 +65,6 @@ export default class SlideToggle extends Component {
           </div>
         </div>
         {(hideLabel !== true && position === RIGHT && !children) && this.renderLabel()}
-        {position === RIGHT && children}
       </label>
     );
   }

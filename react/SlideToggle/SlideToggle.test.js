@@ -34,14 +34,6 @@ describe('Slide toggle:', () => {
     expect(renderSlideToggle({ hideLabel: true }).toJSON()).toMatchSnapshot();
   });
 
-  it('should render child elements', () => {
-    expect(renderSlideToggle(null, <span>child</span>).toJSON()).toMatchSnapshot();
-  });
-
-  it('should render child elements in the left position', () => {
-    expect(renderSlideToggle({ position: 'left' }, <span>child</span>).toJSON()).toMatchSnapshot();
-  });
-
   it('should call a passed in onToggle function when the checkbox fires a change event', () => {
     const onToggle = jest.fn();
     const slideToggle = renderIntoDocument(
