@@ -10,7 +10,7 @@ const RIGHT = 'right';
 export default class SlideToggle extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
     onToggle: PropTypes.func,
     position: PropTypes.oneOf([LEFT, RIGHT]),
     hideLabel: PropTypes.bool,
@@ -31,26 +31,26 @@ export default class SlideToggle extends Component {
   }
 
   renderLabel = () => {
-    const { position, text } = this.props;
+    const { position, label } = this.props;
     return (
       <span
         className={classnames(
           styles.label,
           position === LEFT ? styles.labelLeft : styles.labelRight
-        )}>{text}</span>
+        )}>{label}</span>
     );
   }
 
   render() {
-    const { children, id, checked, position, text, hideLabel } = this.props;
+    const { children, id, checked, position, label, hideLabel } = this.props;
     return (
-      <label htmlFor={id} className={styles.root}>
+      <FieldLabel htmlFor={id} className={styles.root}>
         {(hideLabel !== true && position === LEFT && !children) && this.renderLabel()}
         <div className={styles.switch}>
           <input
             type="checkbox"
             id={id}
-            aria-label={text}
+            aria-label={label}
             className={styles.input}
             checked={checked}
             onChange={this.handleChange}

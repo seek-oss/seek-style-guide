@@ -7,7 +7,7 @@ export default {
   initialProps: {
     onToggle: () => {},
     id: 'myToggle',
-    text: 'Toggle me'
+    label: 'Toggle me'
   },
   options: [
     {

@@ -3,14 +3,15 @@
 .root {
   display: inline-flex;
   line-height: @grid-row-height * 3;
-  height: @grid-row-height * 3;
+  height: @grid-row-height * 5;
+  padding: @grid-row-height 0;
+  cursor: pointer;
   font-size: 14px;
 }
 
 .switch {
   display: inline-block;
   position: relative;
-  cursor: pointer;
 }
 
 .input {
@@ -35,10 +36,6 @@
   &:checked + .slider .slideButton svg {
     opacity: 1;
   }
-}
-
-.label {
-
 }
 
 .labelLeft {
