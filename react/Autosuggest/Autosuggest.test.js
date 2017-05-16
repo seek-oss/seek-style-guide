@@ -3,12 +3,12 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
 import {
-  createRenderer,
   renderIntoDocument,
   scryRenderedDOMComponentsWithClass,
   findRenderedDOMComponentWithClass,
   Simulate
-} from 'react-addons-test-utils';
+} from 'react-dom/test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
 import Autosuggest from './Autosuggest';
 
 chai.use(sinonChai);
