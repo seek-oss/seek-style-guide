@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
 import Button from './Button';
 
 const renderer = createRenderer();
