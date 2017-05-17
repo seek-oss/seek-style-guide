@@ -24,13 +24,6 @@ export default class SlideToggle extends Component {
     hideLabel: false
   };
 
-  handleChange = event => {
-    const { onToggle } = this.props;
-    if (onToggle) {
-      onToggle(event.target.checked);
-    }
-  }
-
   renderLabel = currentPosition => {
     const { label, hideLabel, children, position } = this.props;
     return hideLabel !== true && position === currentPosition && !children && (
@@ -46,7 +39,7 @@ export default class SlideToggle extends Component {
   }
 
   render() {
-    const { id, checked, label, position } = this.props;
+    const { id, checked, label, position, onToggle } = this.props;
 
     const inputStyles = classnames({
       [styles.input]: true,
@@ -63,7 +56,7 @@ export default class SlideToggle extends Component {
             aria-label={label}
             className={inputStyles}
             checked={checked}
-            onChange={this.handleChange}
+            onChange={onToggle}
           />
           {this.renderLabel(LEFT)}
           <div className={styles.slider}>
