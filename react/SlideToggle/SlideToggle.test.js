@@ -11,7 +11,7 @@ import SlideToggle from './SlideToggle';
 const renderSlideToggle = (props, children) => renderer.create(
   <SlideToggle
     id="testToggle"
-    text="Test toggle"
+    label="Test toggle"
     {...props}>
     {children}
   </SlideToggle>
@@ -39,12 +39,12 @@ describe('Slide toggle:', () => {
     const slideToggle = renderIntoDocument(
       <SlideToggle
         id="testToggle"
-        text="Test toggle"
+        label="Test toggle"
         onToggle={onToggle}
       />
     );
     const input = findRenderedDOMComponentWithTag(slideToggle, 'input');
     Simulate.change(input);
-    expect(onToggle).toHaveBeenCalledWith(false);
+    expect(onToggle).toHaveBeenCalled();
   });
 });

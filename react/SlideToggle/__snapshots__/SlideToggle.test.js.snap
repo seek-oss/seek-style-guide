@@ -13,7 +13,7 @@ exports[`Slide toggle: should render a checked state 1`] = `
       checked={true}
       className="input"
       id="testToggle"
-      onChange={[Function]}
+      onChange={undefined}
       type="checkbox"
     />
     <div
@@ -32,88 +32,14 @@ exports[`Slide toggle: should render a checked state 1`] = `
         />
       </div>
     </div>
-  </div>
-  <span
-    className="label labelRight"
-  >
-    Test toggle
-  </span>
-</label>
-`;
-
-exports[`Slide toggle: should render child elements 1`] = `
-<label
-  className="root"
-  htmlFor="testToggle"
->
-  <div
-    className="switch"
-  >
-    <input
-      aria-label="Test toggle"
-      checked={undefined}
-      className="input"
-      id="testToggle"
-      onChange={[Function]}
-      type="checkbox"
-    />
     <div
-      className="slider"
+      className="root label labelRight raw"
     >
-      <div
-        className="slideButton"
+      <span
+        className=""
       >
-        <span
-          className="root icon"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "mock svg",
-            }
-          }
-        />
-      </div>
-    </div>
-  </div>
-  <span>
-    child
-  </span>
-</label>
-`;
-
-exports[`Slide toggle: should render child elements in the left position 1`] = `
-<label
-  className="root"
-  htmlFor="testToggle"
->
-  <span>
-    child
-  </span>
-  <div
-    className="switch"
-  >
-    <input
-      aria-label="Test toggle"
-      checked={undefined}
-      className="input"
-      id="testToggle"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <div
-      className="slider"
-    >
-      <div
-        className="slideButton"
-      >
-        <span
-          className="root icon"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "mock svg",
-            }
-          }
-        />
-      </div>
+        Test toggle
+      </span>
     </div>
   </div>
 </label>
@@ -132,7 +58,7 @@ exports[`Slide toggle: should render with default props 1`] = `
       checked={undefined}
       className="input"
       id="testToggle"
-      onChange={[Function]}
+      onChange={undefined}
       type="checkbox"
     />
     <div
@@ -151,12 +77,16 @@ exports[`Slide toggle: should render with default props 1`] = `
         />
       </div>
     </div>
+    <div
+      className="root label labelRight raw"
+    >
+      <span
+        className=""
+      >
+        Test toggle
+      </span>
+    </div>
   </div>
-  <span
-    className="label labelRight"
-  >
-    Test toggle
-  </span>
 </label>
 `;
 
@@ -173,7 +103,7 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
       checked={undefined}
       className="input"
       id="testToggle"
-      onChange={[Function]}
+      onChange={undefined}
       type="checkbox"
     />
     <div
@@ -201,22 +131,26 @@ exports[`Slide toggle: should render with the label on the left 1`] = `
   className="root"
   htmlFor="testToggle"
 >
-  <span
-    className="label labelLeft"
-  >
-    Test toggle
-  </span>
   <div
     className="switch"
   >
     <input
       aria-label="Test toggle"
       checked={undefined}
-      className="input"
+      className="input inputLeft"
       id="testToggle"
-      onChange={[Function]}
+      onChange={undefined}
       type="checkbox"
     />
+    <div
+      className="root label labelLeft raw"
+    >
+      <span
+        className=""
+      >
+        Test toggle
+      </span>
+    </div>
     <div
       className="slider"
     >
