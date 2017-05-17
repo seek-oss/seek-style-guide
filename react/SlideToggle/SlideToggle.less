@@ -23,13 +23,16 @@
     box-shadow: 0px 0px 10px 0px @sk-focus;
   }
 
-  &:active ~ .slider .slideButton {
+  &:active ~ .slider .slideButton:before {
     transform: scale(1.15, 0.85);
   }
 
   &:checked ~ .slider .slideButton {
-    background-color: @sk-highlight;
     left: 21px;
+
+    &:before {
+      background-color: @sk-highlight;
+    }
   }
 
   &:checked ~ .slider .slideButton svg {
@@ -71,22 +74,32 @@
 }
 
 .slideButton {
-  position: absolute;
+  position: relative;
   left: 0;
-  height: @grid-row-height * 3;
-  width: @grid-row-height * 3;
-  border-radius: 50%;
-  background-color: @sk-mid-gray;
   transition: .3s;
-  text-align: center;
+
+  &:before {
+    content: '';
+    transition: .3s;
+    position: absolute;
+    height: @grid-row-height * 3;
+    width: @grid-row-height * 3;
+    border-radius: 50%;
+    background-color: @sk-mid-gray;
+    text-align: center;
+  }
 }
 
 .icon {
-  vertical-align: sub;
+  position: absolute;
+  width: @grid-row-height * 3;
+  height: @grid-row-height * 3;
+  text-align: center;
 }
 
 .svg {
   fill: white;
   opacity: 0;
   transition: opacity 0.15s;
+  vertical-align: sub;
 }
