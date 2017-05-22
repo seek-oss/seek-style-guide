@@ -2,9 +2,7 @@ import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
-import {
-  createRenderer
-} from 'react-addons-test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
 import { findAllWithClass } from 'react-shallow-testutils';
 import FieldMessage from './FieldMessage';
 
