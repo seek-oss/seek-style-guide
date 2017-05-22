@@ -1,6 +1,8 @@
 import logoMarkup from './logo.svg';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import classnames from 'classnames';
 
 export default function Logo({ svgClassName, ...restProps }) {

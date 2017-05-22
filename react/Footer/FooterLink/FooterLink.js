@@ -1,6 +1,7 @@
 import styles from './FooterLink.less';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function FooterLink({ partner, analytics, className, linkRenderer, ...props }) {
   return (
