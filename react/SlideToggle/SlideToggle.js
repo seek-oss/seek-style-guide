@@ -12,7 +12,7 @@ export default class SlideToggle extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    onToggle: PropTypes.func,
+    onChange: PropTypes.func,
     position: PropTypes.oneOf([LEFT, RIGHT]),
     hideLabel: PropTypes.bool,
     children: PropTypes.node,
@@ -39,7 +39,7 @@ export default class SlideToggle extends Component {
   }
 
   render() {
-    const { id, checked, label, position, onToggle } = this.props;
+    const { id, checked, label, position, onChange } = this.props;
 
     const inputStyles = classnames({
       [styles.input]: true,
@@ -56,7 +56,7 @@ export default class SlideToggle extends Component {
             aria-label={label}
             className={inputStyles}
             checked={checked}
-            onChange={onToggle}
+            onChange={onChange}
           />
           {this.renderLabel(LEFT)}
           <div className={styles.slider}>

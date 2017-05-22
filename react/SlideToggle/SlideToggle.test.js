@@ -34,18 +34,18 @@ describe('Slide toggle:', () => {
     expect(renderSlideToggle({ hideLabel: true }).toJSON()).toMatchSnapshot();
   });
 
-  it('should call a passed in onToggle function when the checkbox fires a change event', () => {
-    const onToggle = jest.fn();
+  it('should call a passed in onChange function when the checkbox fires a change event', () => {
+    const onChange = jest.fn();
     const slideToggle = renderIntoDocument(
       <SlideToggle
         id="testToggle"
         label="Test toggle"
-        onToggle={onToggle}
+        onChange={onChange}
       />
     );
     const input = findRenderedDOMComponentWithTag(slideToggle, 'input');
     Simulate.change(input);
-    expect(onToggle).toHaveBeenCalledWith(expect.objectContaining({
+    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({
       target: expect.objectContaining({
         checked: false
       })

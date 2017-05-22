@@ -5,7 +5,7 @@ export default {
   title: 'Slide toggle',
   component: SlideToggle,
   initialProps: {
-    onToggle: () => {},
+    onChange: () => {},
     id: 'myToggle',
     label: 'Toggle me'
   },
