@@ -45,6 +45,6 @@ describe('Slide toggle:', () => {
     );
     const input = findRenderedDOMComponentWithTag(slideToggle, 'input');
     Simulate.change(input);
-    expect(onToggle).toHaveBeenCalled();
+    expect(onToggle).toHaveBeenCalledWith(expect.any(Object));
   });
 });
