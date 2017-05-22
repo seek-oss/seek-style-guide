@@ -1,7 +1,9 @@
 import svgMarkup from './FacebookIcon.svg';
 import svgMarkupFilled from './FacebookIconFilled.svg';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import Icon from '../private/Icon/Icon';
 
 export default function FacebookIcon({ filled, ...props }) {

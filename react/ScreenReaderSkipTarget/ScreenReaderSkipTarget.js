@@ -1,6 +1,7 @@
 import styles from './ScreenReaderSkipTarget.less';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class ScreenReaderSkipTarget extends Component {
 

@@ -1,6 +1,8 @@
-import styles from './Section.less';
-import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import styles from './Section.less';
 
 export default function Section({ children, className, header, ...restProps }) {
   return (

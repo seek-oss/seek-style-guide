@@ -3,8 +3,10 @@ import styles from './TickCircleIcon.less';
 import svgMarkup from './TickCircleIcon.svg';
 import svgMarkupFilled from './TickCircleIconFilled.svg';
 
-import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import Icon from '../private/Icon/Icon';
 
 export default function TickCircleIcon({ filled, className, ...props }) {

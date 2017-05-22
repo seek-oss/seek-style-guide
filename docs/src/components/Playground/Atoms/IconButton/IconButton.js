@@ -1,5 +1,6 @@
 import styles from './IconButton.less';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { PlusIcon, DeleteIcon } from 'seek-style-guide/react';
 

@@ -1,7 +1,9 @@
 import svgMarkup from './ChevronIcon.svg';
 import styles from './ChevronIcon.less';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import classnames from 'classnames';
 import Icon from '../private/Icon/Icon';
 
