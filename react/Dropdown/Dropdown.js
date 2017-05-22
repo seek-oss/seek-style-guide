@@ -1,6 +1,8 @@
 import styles from './Dropdown.less';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import classnames from 'classnames';
 
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
@@ -119,11 +121,12 @@ export default class Dropdown extends Component {
 
   renderChevron() {
     return (
-      <ChevronIcon
-        className={styles.chevron}
-        svgClassName={styles.chevronSvg}
-        direction="down"
-      />
+      <div className={styles.chevron}>
+        <ChevronIcon
+          svgClassName={styles.chevronSvg}
+          direction="down"
+        />
+      </div>
     );
   }
 

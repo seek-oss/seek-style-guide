@@ -1,4 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import { StyleGuideProvider } from 'seek-style-guide/react';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';

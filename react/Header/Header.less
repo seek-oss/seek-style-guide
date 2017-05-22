@@ -46,6 +46,10 @@
     flex: 0 0 @grid-container-width;
     padding: 0;
   });
+
+  @media print {
+    justify-content: flex-start;
+  }
 }
 
 .topBanner {
@@ -89,6 +93,12 @@
 
 .logo {
   position: relative;
+}
+
+.logoNote {
+  .standardText();
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .logoSvg {

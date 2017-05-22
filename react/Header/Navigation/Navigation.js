@@ -1,6 +1,8 @@
 import styles from './Navigation.less';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import classnames from 'classnames';
 
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
