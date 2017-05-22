@@ -121,11 +121,12 @@ export default class Dropdown extends Component {
 
   renderChevron() {
     return (
-      <ChevronIcon
-        className={styles.chevron}
-        svgClassName={styles.chevronSvg}
-        direction="down"
-      />
+      <div className={styles.chevron}>
+        <ChevronIcon
+          svgClassName={styles.chevronSvg}
+          direction="down"
+        />
+      </div>
     );
   }
 
