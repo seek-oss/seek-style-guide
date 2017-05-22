@@ -1,6 +1,7 @@
 import styles from './UserAccountMenu.less';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import HeartIcon from '../../HeartIcon/HeartIcon';

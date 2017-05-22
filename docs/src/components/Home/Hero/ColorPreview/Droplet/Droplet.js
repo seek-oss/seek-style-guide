@@ -1,6 +1,8 @@
 import styles from './Droplet.less';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import lessToJs from 'less-vars-to-js';
 
 import grid from '!!raw!seek-style-guide/theme/layout/grid.less';

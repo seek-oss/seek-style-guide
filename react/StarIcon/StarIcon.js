@@ -3,7 +3,9 @@ import styles from './StarIcon.less';
 import svgMarkup from './StarIcon.svg';
 import svgMarkupFilled from './StarIconFilled.svg';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import classnames from 'classnames';
 import Icon from '../private/Icon/Icon';
 
