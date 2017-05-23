@@ -105,13 +105,13 @@ exports[`Header: should append returnUrl to signin and register links if present
                   <span
                     className="mobileMenuLabel"
                   >
-                    
+
                   </span>
                   <span
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -202,11 +202,11 @@ exports[`Header: should append returnUrl to signin and register links if present
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -321,16 +321,16 @@ exports[`Header: should append returnUrl to signin and register links if present
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone?returnUrl=%2Fjobs"
+                href="/sign-in?returnUrl=%2Fjobs"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone?returnUrl=%2Fjobs"
+                href="/sign-up?returnUrl=%2Fjobs"
                 title="Register"
               >
                 Register
@@ -748,11 +748,11 @@ exports[`Header: should render first part of email address when username isn't p
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -880,16 +880,16 @@ exports[`Header: should render first part of email address when username isn't p
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -1210,13 +1210,13 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   <span
                     className="mobileMenuLabel"
                   >
-                    
+
                   </span>
                   <span
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -1307,11 +1307,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -1426,16 +1426,16 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -1853,11 +1853,11 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -1985,16 +1985,16 @@ exports[`Header: should render when authenticated 1`] = `
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -2315,13 +2315,13 @@ exports[`Header: should render when authenticated but username and email is not 
                   <span
                     className="mobileMenuLabel"
                   >
-                    
+
                   </span>
                   <span
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -2412,11 +2412,11 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -2544,16 +2544,16 @@ exports[`Header: should render when authenticated but username and email is not 
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -2874,13 +2874,13 @@ exports[`Header: should render when authentication is pending 1`] = `
                   <span
                     className="mobileMenuLabel"
                   >
-                    
+
                   </span>
                   <span
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -2971,11 +2971,11 @@ exports[`Header: should render when authentication is pending 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -3090,16 +3090,16 @@ exports[`Header: should render when authentication is pending 1`] = `
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -3426,7 +3426,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -3517,11 +3517,11 @@ exports[`Header: should render when unauthenticated 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -3621,7 +3621,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       <a
                         className="itemLink"
                         data-analytics="sign-in"
-                        href="/Login/Standalone"
+                        href="/sign-in"
                         title="Sign in"
                       >
                         Sign in
@@ -3634,7 +3634,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       <a
                         className="itemLink"
                         data-analytics="register"
-                        href="/Register/Standalone"
+                        href="/sign-up"
                         title="Register"
                       >
                         Register
@@ -3668,16 +3668,16 @@ exports[`Header: should render when unauthenticated 1`] = `
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -3998,13 +3998,13 @@ exports[`Header: should render with locale of AU 1`] = `
                   <span
                     className="mobileMenuLabel"
                   >
-                    
+
                   </span>
                   <span
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -4095,11 +4095,11 @@ exports[`Header: should render with locale of AU 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -4214,16 +4214,16 @@ exports[`Header: should render with locale of AU 1`] = `
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -4544,13 +4544,13 @@ exports[`Header: should render with locale of NZ 1`] = `
                   <span
                     className="mobileMenuLabel"
                   >
-                    
+
                   </span>
                   <span
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -4641,11 +4641,11 @@ exports[`Header: should render with locale of NZ 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -4746,16 +4746,16 @@ exports[`Header: should render with locale of NZ 1`] = `
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register
@@ -5053,13 +5053,13 @@ exports[`Header: should render with no divider 1`] = `
                   <span
                     className="mobileMenuLabel"
                   >
-                    
+
                   </span>
                   <span
                     className="desktopMenuLabel"
                     data-automation="user-account-name"
                   >
-                    
+
                   </span>
                 </span>
                 <span
@@ -5150,11 +5150,11 @@ exports[`Header: should render with no divider 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
+                        Saved
                         <span
                           className="smallDeviceOnly"
                         >
-                          & Applied 
+                          & Applied
                         </span>
                         Jobs
                       </span>
@@ -5269,16 +5269,16 @@ exports[`Header: should render with no divider 1`] = `
               <a
                 className="link"
                 data-analytics="sign-in"
-                href="/Login/Standalone"
+                href="/sign-in"
                 title="Sign in"
               >
                 Sign in
               </a>
-               or 
+               or
               <a
                 className="link"
                 data-analytics="register"
-                href="/Register/Standalone"
+                href="/sign-up"
                 title="Register"
               >
                 Register

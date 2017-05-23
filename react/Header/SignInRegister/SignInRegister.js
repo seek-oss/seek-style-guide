@@ -17,7 +17,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
       {
         linkRenderer({
           'data-analytics': 'sign-in',
-          href: appendReturnUrl('/Login/Standalone', returnUrl),
+          href: appendReturnUrl('/sign-in', returnUrl),
           className: styles.link,
           title: 'Sign in',
           children: 'Sign in'
@@ -27,7 +27,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
       {
         linkRenderer({
           'data-analytics': 'register',
-          href: appendReturnUrl('/Register/Standalone', returnUrl),
+          href: appendReturnUrl('/sign-up', returnUrl),
           className: styles.link,
           title: 'Register',
           children: 'Register'

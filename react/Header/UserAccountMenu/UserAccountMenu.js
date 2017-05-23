@@ -170,7 +170,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
               {
                 linkRenderer({
                   'data-analytics': 'sign-in',
-                  href: appendReturnUrl('/Login/Standalone', returnUrl),
+                  href: appendReturnUrl('/sign-in', returnUrl),
                   className: styles.itemLink,
                   title: 'Sign in',
                   children: 'Sign in'
@@ -180,7 +180,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
               {
                 linkRenderer({
                   'data-analytics': 'register',
-                  href: appendReturnUrl('/Register/Standalone', returnUrl),
+                  href: appendReturnUrl('/sign-up', returnUrl),
                   className: styles.itemLink,
                   title: 'Register',
                   children: 'Register'
