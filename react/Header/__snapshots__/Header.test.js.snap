@@ -36,8 +36,13 @@ exports[`Header: should append returnUrl to signin and register links if present
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user"
@@ -89,10 +94,10 @@ exports[`Header: should append returnUrl to signin and register links if present
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -170,9 +175,9 @@ exports[`Header: should append returnUrl to signin and register links if present
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -278,7 +283,7 @@ exports[`Header: should append returnUrl to signin and register links if present
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -319,8 +324,13 @@ exports[`Header: should render first part of email address when username isn't p
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user user_isReady"
@@ -490,10 +500,10 @@ exports[`Header: should render first part of email address when username isn't p
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -571,9 +581,9 @@ exports[`Header: should render first part of email address when username isn't p
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -679,7 +689,7 @@ exports[`Header: should render first part of email address when username isn't p
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -720,8 +730,13 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user"
@@ -773,10 +788,10 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -854,9 +869,9 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -962,7 +977,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -1003,8 +1018,13 @@ exports[`Header: should render when authenticated 1`] = `
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user user_isReady"
@@ -1174,10 +1194,10 @@ exports[`Header: should render when authenticated 1`] = `
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -1255,9 +1275,9 @@ exports[`Header: should render when authenticated 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -1363,7 +1383,7 @@ exports[`Header: should render when authenticated 1`] = `
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -1404,8 +1424,13 @@ exports[`Header: should render when authenticated but username and email is not 
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user"
@@ -1575,10 +1600,10 @@ exports[`Header: should render when authenticated but username and email is not 
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -1656,9 +1681,9 @@ exports[`Header: should render when authenticated but username and email is not 
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -1764,7 +1789,7 @@ exports[`Header: should render when authenticated but username and email is not 
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -1805,8 +1830,13 @@ exports[`Header: should render when authentication is pending 1`] = `
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user"
@@ -1858,10 +1888,10 @@ exports[`Header: should render when authentication is pending 1`] = `
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -1939,9 +1969,9 @@ exports[`Header: should render when authentication is pending 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -2047,7 +2077,7 @@ exports[`Header: should render when authentication is pending 1`] = `
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -2088,8 +2118,13 @@ exports[`Header: should render when unauthenticated 1`] = `
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user user_isReady"
@@ -2141,10 +2176,10 @@ exports[`Header: should render when unauthenticated 1`] = `
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -2222,9 +2257,9 @@ exports[`Header: should render when unauthenticated 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -2330,7 +2365,7 @@ exports[`Header: should render when unauthenticated 1`] = `
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -2371,8 +2406,13 @@ exports[`Header: should render with locale of AU 1`] = `
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user"
@@ -2424,10 +2464,10 @@ exports[`Header: should render with locale of AU 1`] = `
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -2505,9 +2545,9 @@ exports[`Header: should render with locale of AU 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -2613,7 +2653,7 @@ exports[`Header: should render with locale of AU 1`] = `
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -2654,8 +2694,13 @@ exports[`Header: should render with locale of NZ 1`] = `
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user"
@@ -2707,10 +2752,10 @@ exports[`Header: should render with locale of NZ 1`] = `
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -2765,9 +2810,9 @@ exports[`Header: should render with locale of NZ 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -2873,7 +2918,7 @@ exports[`Header: should render with locale of NZ 1`] = `
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;
@@ -2914,8 +2959,13 @@ exports[`Header: should render with no divider 1`] = `
           </span>
         </a>
       </h1>
-      <div
-        className="userWrapper"
+      <span
+        className="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        className="userWrapper print"
       >
         <div
           className="user"
@@ -2967,10 +3017,10 @@ exports[`Header: should render with no divider 1`] = `
             Employer site
           </a>
         </div>
-      </div>
+      </span>
     </div>
-    <div
-      className="navigation"
+    <span
+      className="navigation print"
     >
       <nav
         aria-labelledby="MainNavigation"
@@ -3048,9 +3098,9 @@ exports[`Header: should render with no divider 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-    <div
-      className="topBanner"
+    </span>
+    <span
+      className="topBanner print"
     >
       <div
         className="topBannerContent"
@@ -3156,7 +3206,7 @@ exports[`Header: should render with no divider 1`] = `
           </nav>
         </div>
       </div>
-    </div>
+    </span>
   </section>
 </header>
 `;

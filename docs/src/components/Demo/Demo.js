@@ -1,5 +1,7 @@
 import styles from './Demo.less';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Baseline from 'react-baseline';
 import Code from './Code/Code';
