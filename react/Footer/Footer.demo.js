@@ -1,12 +1,14 @@
 import { Footer } from 'seek-style-guide/react';
-import { dummyLinkRenderer } from '../Header/Header.demo';
+import { makeDummyLinkRendererForPath } from '../Header/Header.demo';
+
+const ROUTE = '/footer';
 
 export default {
   route: '/footer',
   title: 'Footer',
   component: Footer,
   initialProps: {
-    linkRenderer: dummyLinkRenderer
+    linkRenderer: makeDummyLinkRendererForPath(ROUTE)
   },
   options: [
     {

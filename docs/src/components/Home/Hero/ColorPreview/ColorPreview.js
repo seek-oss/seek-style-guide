@@ -24,7 +24,11 @@ const getSwatch = name => {
 export default function ColorPreview() {
   return (
     <div>
-      {Object.keys(brandValues).map(getSwatch)}
+      {
+        Object.keys(brandValues)
+          .slice(0, 3)
+          .map(getSwatch)
+      }
     </div>
   );
 }
