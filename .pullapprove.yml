@@ -1,0 +1,19 @@
+version: 2
+
+groups:
+  reviewers:
+    required: 2
+    users: all # all repo collaborators
+    # Enable github reviews when integration is sufficient:
+    # https://github.com/pullapprove/support/issues/98#issuecomment-256447253
+    # github_reviews:
+    #   enabled: true
+    approve_by_comment:
+      enabled: false
+    always_rejected:
+      title_regex: '(WIP|wip)'
+      explanation: 'This PR is a work in progress...'
+    reset_on_push:
+      enabled: true
+    reset_on_reopened:
+      enabled: true
