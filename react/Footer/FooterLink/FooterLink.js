@@ -1,11 +1,15 @@
 import styles from './FooterLink.less';
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-export default function FooterLink({ partner, analytics, className, linkRenderer, ...props }) {
+export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, ...props }) {
   return (
-    <li className={className}>
+    <li
+      className={classnames(
+        className,
+        { [styles.secondary]: secondary }
+      )}>
       {
         linkRenderer({
           'data-analytics': analytics,
@@ -23,6 +27,7 @@ export default function FooterLink({ partner, analytics, className, linkRenderer
 }
 
 FooterLink.propTypes = {
+  secondary: PropTypes.bool,
   analytics: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,
@@ -32,4 +37,8 @@ FooterLink.propTypes = {
     PropTypes.node
   ]),
   linkRenderer: PropTypes.func.isRequired
+};
+
+FooterLink.defaultProps = {
+  secondary: false
 };
