@@ -1,5 +1,7 @@
 import styles from './Code.less';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { Section, Text } from 'seek-style-guide/react';
 import debounce from 'lodash.debounce';
 import jsxToString from 'react-element-to-jsx-string';

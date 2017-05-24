@@ -7,7 +7,8 @@ import employers from './data/employers';
 import copyright from './data/copyright';
 
 import classnames from 'classnames';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import FooterLink from './FooterLink/FooterLink';
 import FooterNav from './FooterNav/FooterNav';

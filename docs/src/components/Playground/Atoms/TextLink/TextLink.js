@@ -1,5 +1,7 @@
 import styles from './TextLink.less';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import ChevronIcon from 'seek-style-guide/react/ChevronIcon/ChevronIcon';
 import classnames from 'classnames';
 

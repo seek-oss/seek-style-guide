@@ -1,6 +1,7 @@
 import styles from './Textarea.less';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import FieldMessage from '../private/FieldMessage/FieldMessage';
