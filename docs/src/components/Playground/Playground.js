@@ -21,10 +21,12 @@ import {
   Footer
 } from 'seek-style-guide/react';
 
-import { dummyLinkRenderer } from 'seek-style-guide/react/Header/Header.demo';
+import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
 import TextLink from './Atoms/TextLink/TextLink';
 import IconButton from './Atoms/IconButton/IconButton';
 import Tab from './Atoms/Tab/Tab';
+
+const dummyLinkRenderer = makeDummyLinkRendererForPath('/playground');
 
 const renderAsideProfile = () => (
   <Card transparent>

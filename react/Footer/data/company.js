@@ -2,22 +2,20 @@ export default [
   {
     name: 'About SEEK',
     href: '/investor/about-us',
-    analytics: 'toolbar:about+seek'
+    analytics: 'toolbar:about+seek',
+    secondary: true
   },
   {
     name: 'Media',
     href: '/investor/news-media',
-    analytics: 'toolbar:media'
-  },
-  {
-    name: 'Work for SEEK',
-    href: '/work-for-seek',
-    analytics: 'toolbar:work+for+seek'
+    analytics: 'toolbar:media',
+    secondary: true
   },
   {
     name: 'Investor centre',
     href: 'https://ir.seek.com.au',
-    analytics: 'toolbar:investor+centre'
+    analytics: 'toolbar:investor+centre',
+    secondary: true
   }
 ];
 
