@@ -1,16 +1,21 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  position: relative;
+  .aboveSmallDevice({
+    position: relative;
+  });
 }
 
 .toggleLabel {
   .touchableText();
   display: flex;
   cursor: pointer;
-  color: @sk-black;
   position: relative;
   z-index: 1;
+
+  .smallDeviceOnly({
+    color: @sk-white;
+  });
 }
 
 .toggle {
@@ -23,11 +28,20 @@
     opacity:1;
     visibility: visible;
     transform: translateY(0);
+    cursor: pointer;
     pointer-events: auto;
   }
 
   & ~ .menuBackdrop {
-    display: block;
+    .aboveSmallDevice({
+      display: block;
+    });
+
+    .smallDeviceOnly({
+      z-index: 1;
+      pointer-events: auto;
+      opacity: 1;
+    });
   }
 
   & ~ .toggleLabel .chevron {
@@ -42,19 +56,39 @@
   right: 0;
   transform-origin: 50% 0;
   transform: translateY(@grid-row-height * -3);
-  transition: opacity .25s cubic-bezier(0.020, 1.505, 0.745, 1.235), transform .25s cubic-bezier(0.020, 1.505, 0.745, 1.235);
+  transition: opacity .25s ease, transform .25s cubic-bezier(0.020, 1.505, 0.745, 1.235);
   pointer-events: none;
   z-index: 1;
+
+  .smallDeviceOnly({
+    transform: translateY(@grid-row-height * -1);
+    transition: opacity .25s ease, transform .25s ease;
+    top: (@grid-row-height * 7); // header height
+    right: 0;
+    left: 0;
+    bottom: 0;
+  });
 }
 
 .menuBackdrop {
-  display: none;
   position: fixed;
-  z-index: 1;
   top: -999px;
   left: -999px;
   right: -999px;
   bottom: -9999px;
+
+  .aboveSmallDevice({
+    z-index: 1;
+    display: none;
+  });
+
+  .smallDeviceOnly({
+    z-index: -99;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .25s ease;
+    background-color: @sk-blue;
+  });
 }
 
 .menuBackdropLabel {
@@ -65,7 +99,17 @@
   bottom: 0;
 }
 
-.userName {
+.mobileMenuLabel {
+  user-select: none;
+  display: inline-block;
+  min-width: 60px;
+  text-align: right;
+  .aboveSmallDevice({
+    display: none;
+  });
+}
+
+.desktopMenuLabel {
   pointer-events: none;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -76,6 +120,10 @@
   @media only screen and (min-width: 400px) {
     max-width: 200px; // ~ 20 characters
   }
+
+  .smallDeviceOnly({
+    display: none;
+  });
 }
 
 .chevron {
@@ -84,9 +132,22 @@
   transition: transform .3s ease;
   transform-origin: 50% 50%;
   pointer-events: none;
+  .smallDeviceOnly({
+    text-align: center;
+    width: @grid-gutter-width;
+    margin-right: (@grid-gutter-width / 2);
+  });
 }
 
 .chevronSvg {
   width: 14px;
   height: 14px;
+  // Begin bold icon hacks
+  .smallDeviceOnly({
+    path {
+      stroke: currentColor;
+      stroke-width: 70px;
+    }
+  });
+  // End bold icon hacks
 }

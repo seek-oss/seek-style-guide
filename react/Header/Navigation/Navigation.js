@@ -81,7 +81,7 @@ Navigation.propTypes = {
   locale: PropTypes.string.isRequired,
   linkRenderer: PropTypes.func.isRequired,
   divider: PropTypes.bool.isRequired,
-  activeTab: PropTypes.oneOf(items.map(({ name }) => name))
+  activeTab: PropTypes.string
 };
 
 Navigation.defaultProps = {
