@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide toggle: should render a checked state 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={true}
+      className="input"
+      id="testToggle"
+      onChange={undefined}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="root label labelRight raw"
+    >
+      <span
+        className=""
+      >
+        Test toggle
+      </span>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Slide toggle: should render with default props 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input"
+      id="testToggle"
+      onChange={undefined}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="root label labelRight raw"
+    >
+      <span
+        className=""
+      >
+        Test toggle
+      </span>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Slide toggle: should render with the label hidden 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input"
+      id="testToggle"
+      onChange={undefined}
+      type="checkbox"
+    />
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Slide toggle: should render with the label on the left 1`] = `
+<label
+  className="root"
+  htmlFor="testToggle"
+>
+  <div
+    className="switch"
+  >
+    <input
+      aria-label="Test toggle"
+      checked={undefined}
+      className="input inputLeft"
+      id="testToggle"
+      onChange={undefined}
+      type="checkbox"
+    />
+    <div
+      className="root label labelLeft raw"
+    >
+      <span
+        className=""
+      >
+        Test toggle
+      </span>
+    </div>
+    <div
+      className="slider"
+    >
+      <div
+        className="slideButton"
+      >
+        <span
+          className="root icon"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "mock svg",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</label>
+`;

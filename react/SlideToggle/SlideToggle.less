@@ -1,0 +1,104 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  line-height: @grid-row-height * 3;
+  height: @grid-row-height * 5;
+  padding: @grid-row-height 0;
+  cursor: pointer;
+}
+
+.switch {
+  display: inline-flex;
+  position: relative;
+}
+
+.input {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  margin: 0;
+
+  &:focus ~ .slider {
+    box-shadow: 0px 0px 10px 0px @sk-focus;
+  }
+
+  &:active ~ .slider .slideButton:before {
+    transform: scale(1.15, 0.85);
+  }
+
+  &:checked ~ .slider .slideButton {
+    left: 21px;
+
+    &:before {
+      background-color: @sk-highlight;
+    }
+  }
+
+  &:checked ~ .slider .slideButton svg {
+    opacity: 1;
+  }
+
+  &:checked ~ .label {
+    font-weight: @sk-bold;
+  }
+}
+
+.inputLeft {
+  left: auto;
+  right: 10px;
+}
+
+.label {
+  padding: 0;
+  display: inline;
+}
+
+.labelLeft {
+  margin-right: @grid-gutter-width / 2;
+}
+
+.labelRight {
+  margin-left: @grid-gutter-width / 2;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  left: 0;
+  width: 48px;
+  height: @grid-row-height * 3;
+  border-radius: @grid-row-height * 1.5;
+  background-color: @sk-mid-gray-light;
+  transition: .3s;
+}
+
+.slideButton {
+  position: relative;
+  left: 0;
+  transition: .3s;
+
+  &:before {
+    content: '';
+    transition: .3s;
+    position: absolute;
+    height: @grid-row-height * 3;
+    width: @grid-row-height * 3;
+    border-radius: 50%;
+    background-color: @sk-mid-gray;
+    text-align: center;
+  }
+}
+
+.icon {
+  position: absolute;
+  width: @grid-row-height * 3;
+  height: @grid-row-height * 3;
+  text-align: center;
+}
+
+.svg {
+  fill: white;
+  opacity: 0;
+  transition: opacity 0.15s;
+  vertical-align: sub;
+}
