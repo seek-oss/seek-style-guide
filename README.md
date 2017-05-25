@@ -236,6 +236,18 @@ As much as possible, colors should be directly imported from the style guide. Th
 @sk-yellow
 ```
 
+### Z-indexes
+
+To ensure correct relative elements stacking order z-index variables are provided:
+
+```less
+@z-index-header-overlay: 4;
+@z-index-header: 3;
+@z-index-page-overlay: 2;
+@z-index-inline-overlay: 1;
+@z-index-negative: -99;
+```
+
 ### Accessible Color Variants
 
 The contrast ratio of certain foreground/background color combinations don't meet the [AA accessibility standards](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) that we aim for. As a result, a suite of accessible variants have been provided:
