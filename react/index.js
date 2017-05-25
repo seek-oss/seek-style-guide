@@ -55,6 +55,7 @@ export { default as Textarea } from './Textarea/Textarea';
 export { default as Checkbox } from './Checkbox/Checkbox';
 export { default as MonthPicker } from './MonthPicker/MonthPicker';
 export { default as Dropdown } from './Dropdown/Dropdown';
+export { default as SlideToggle } from './SlideToggle/SlideToggle';
 
 // Accessibility
 export { default as ScreenReaderOnly } from './ScreenReaderOnly/ScreenReaderOnly';
