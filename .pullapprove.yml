@@ -14,6 +14,6 @@ groups:
       title_regex: '(WIP|wip)'
       explanation: 'This PR is a work in progress...'
     reset_on_push:
-      enabled: true
+      enabled: false
     reset_on_reopened:
       enabled: true
