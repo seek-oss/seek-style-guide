@@ -14,6 +14,6 @@ groups:
       title_regex: '^((?!: ).)*$'
       explanation: 'Invalid title. Please read the contribution guide: https://github.com/seek-oss/seek-style-guide/blob/master/CONTRIBUTING.md'
     reset_on_push:
-      enabled: true
+      enabled: false
     reset_on_reopened:
       enabled: true
