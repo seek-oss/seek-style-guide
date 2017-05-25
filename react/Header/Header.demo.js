@@ -1,25 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router';
 import { Header } from 'seek-style-guide/react';
 
-export const dummyLinkRenderer = ({ href, ...props }) => (
-  <a href={`#actualHref=${href}`} {...props} />
-);
-dummyLinkRenderer.propTypes = {
-  href: PropTypes.string
+export const makeDummyLinkRendererForPath = path => {
+  const DummyLinkRenderer = ({ href, ...props }) => (
+    <Link to={`${path}#actualHref=${href}`} {...props} />
+  );
+
+  DummyLinkRenderer.propTypes = {
+    href: PropTypes.string
+  };
+
+  return DummyLinkRenderer;
 };
 
+const ROUTE = '/header';
+
 export default {
-  route: '/header',
+  route: ROUTE,
   title: 'Header',
   component: Header,
   initialProps: {
     authenticationStatus: 'authenticated',
-    userName: 'Jane Smith',
-    userEmail: 'janesmith@gmail.com',
+    userName: 'Olivia',
+    userEmail: 'olivia.smith@example.com',
     divider: false,
-    linkRenderer: dummyLinkRenderer,
+    linkRenderer: makeDummyLinkRendererForPath(ROUTE),
     returnUrl: '/jobs'
   },
   options: [
@@ -51,6 +58,8 @@ export default {
         'Job Search',
         '$150k+ Jobs',
         'Profile',
+        'Saved & Applied Jobs',
+        'Recommended Jobs',
         'Company Reviews',
         'Advice & Tips'
       ].map(activeTab => ({

@@ -202,6 +202,7 @@ As much as possible, colors should be directly imported from the style guide. Th
 @sk-blue
 @sk-pink
 @sk-green
+@sk-purple
 
 // Partner brand colors
 @sk-business

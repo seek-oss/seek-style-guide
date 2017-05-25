@@ -5,9 +5,16 @@ export default [
     analytics: 'toolbar:contact+us'
   },
   {
+    name: 'Work for SEEK',
+    href: '/work-for-seek',
+    analytics: 'toolbar:work+for+seek',
+    secondary: true
+  },
+  {
     name: 'Product & Tech Blog',
     href: 'http://productblog.seek.com.au',
-    analytics: 'toolbar:product+blog'
+    analytics: 'toolbar:product+blog',
+    secondary: true
   }
 ];
 

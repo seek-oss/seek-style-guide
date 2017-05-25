@@ -47,38 +47,296 @@ exports[`Header: should append returnUrl to signin and register links if present
         <div
           className="user"
         >
-          <nav
-            aria-labelledby="SignInOrRegister"
-            className="root"
-            data-automation="sign-in-register"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="SignInOrRegister"
+              <span
+                className="root"
               >
-                Sign in or register
-              </h1>
-            </span>
-            <a
-              className="link"
-              data-analytics="sign-in"
-              href="/Login/Standalone?returnUrl=%2Fjobs"
-              title="Sign in"
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
+              >
+                <span
+                  className="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
+                  }
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              Sign in
-            </a>
-             or 
-            <a
-              className="link"
-              data-analytics="register"
-              href="/Register/Standalone?returnUrl=%2Fjobs"
-              title="Register"
-            >
-              Register
-            </a>
-          </nav>
+              <span
+                className="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in?returnUrl=%2Fjobs"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up?returnUrl=%2Fjobs"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -333,158 +591,311 @@ exports[`Header: should render first part of email address when username isn't p
         className="userWrapper print"
       >
         <div
-          className="user user_isReady"
+          className="user user_isAuthenticated user_isReady"
         >
-          <nav
-            aria-labelledby="UserMenu"
-            className="root"
-            data-automation="user-account"
-            role="navigation"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="UserMenu"
+              <span
+                className="root"
               >
-                User menu
-              </h1>
-            </span>
-            <input
-              autoComplete="off"
-              className="toggle"
-              id="user-account-menu-toggle"
-              type="checkbox"
-            />
-            <div
-              className="menuBackdrop"
-            >
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
               <label
-                className="menuBackdropLabel"
-                data-automation="user-account-menu-backdrop"
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
                 >
                   Show user menu
                 </span>
-              </label>
-            </div>
-            <label
-              className="toggleLabel"
-              data-automation="user-account-menu-toggle"
-              htmlFor="user-account-menu-toggle"
-            >
-              <span
-                className="root"
-              >
-                Show user menu
-              </span>
-              <span
-                className="userName"
-                data-automation="user-account-name"
-                data-hj-masked={true}
-              >
-                leeroybrown
-              </span>
-              <span
-                className="root root down chevron"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "mock svg",
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    leeroybrown
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    leeroybrown
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
                   }
-                }
-              />
-            </label>
-            <div
-              className="toggleContainer"
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="item"
+                      data-analytics="sign-out"
+                      href="/Login/Logout"
+                      onClick={[Function]}
+                    >
+                      Sign Out
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              <ul
+              <span
                 className="root"
               >
-                <li>
-                  <a
-                    className="item"
-                    href="/profile/"
-                  >
-                    <span>
-                      Your profile
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/myactivity#favourite"
-                  >
-                    <span>
-                      Saved searches
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/my-activity/saved-jobs"
-                  >
-                    <span>
-                      Saved jobs
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/my-activity/applied-jobs"
-                  >
-                    Applied jobs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item"
-                    href="/settings/"
-                  >
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item"
-                    href="/Login/Logout"
-                    onClick={[Function]}
-                  >
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -741,38 +1152,296 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
         <div
           className="user"
         >
-          <nav
-            aria-labelledby="SignInOrRegister"
-            className="root"
-            data-automation="sign-in-register"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="SignInOrRegister"
+              <span
+                className="root"
               >
-                Sign in or register
-              </h1>
-            </span>
-            <a
-              className="link"
-              data-analytics="sign-in"
-              href="/Login/Standalone"
-              title="Sign in"
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
+              >
+                <span
+                  className="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
+                  }
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="activeTab"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              Sign in
-            </a>
-             or 
-            <a
-              className="link"
-              data-analytics="register"
-              href="/Register/Standalone"
-              title="Register"
-            >
-              Register
-            </a>
-          </nav>
+              <span
+                className="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -1027,158 +1696,311 @@ exports[`Header: should render when authenticated 1`] = `
         className="userWrapper print"
       >
         <div
-          className="user user_isReady"
+          className="user user_isAuthenticated user_isReady"
         >
-          <nav
-            aria-labelledby="UserMenu"
-            className="root"
-            data-automation="user-account"
-            role="navigation"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="UserMenu"
+              <span
+                className="root"
               >
-                User menu
-              </h1>
-            </span>
-            <input
-              autoComplete="off"
-              className="toggle"
-              id="user-account-menu-toggle"
-              type="checkbox"
-            />
-            <div
-              className="menuBackdrop"
-            >
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
               <label
-                className="menuBackdropLabel"
-                data-automation="user-account-menu-backdrop"
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
                 >
                   Show user menu
                 </span>
-              </label>
-            </div>
-            <label
-              className="toggleLabel"
-              data-automation="user-account-menu-toggle"
-              htmlFor="user-account-menu-toggle"
-            >
-              <span
-                className="root"
-              >
-                Show user menu
-              </span>
-              <span
-                className="userName"
-                data-automation="user-account-name"
-                data-hj-masked={true}
-              >
-                Leeroy
-              </span>
-              <span
-                className="root root down chevron"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "mock svg",
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    Leeroy
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    Leeroy
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
                   }
-                }
-              />
-            </label>
-            <div
-              className="toggleContainer"
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="item"
+                      data-analytics="sign-out"
+                      href="/Login/Logout"
+                      onClick={[Function]}
+                    >
+                      Sign Out
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              <ul
+              <span
                 className="root"
               >
-                <li>
-                  <a
-                    className="item"
-                    href="/profile/"
-                  >
-                    <span>
-                      Your profile
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/myactivity#favourite"
-                  >
-                    <span>
-                      Saved searches
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/my-activity/saved-jobs"
-                  >
-                    <span>
-                      Saved jobs
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/my-activity/applied-jobs"
-                  >
-                    Applied jobs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item"
-                    href="/settings/"
-                  >
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item"
-                    href="/Login/Logout"
-                    onClick={[Function]}
-                  >
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -1435,156 +2257,309 @@ exports[`Header: should render when authenticated but username and email is not 
         <div
           className="user"
         >
-          <nav
-            aria-labelledby="UserMenu"
-            className="root"
-            data-automation="user-account"
-            role="navigation"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="UserMenu"
+              <span
+                className="root"
               >
-                User menu
-              </h1>
-            </span>
-            <input
-              autoComplete="off"
-              className="toggle"
-              id="user-account-menu-toggle"
-              type="checkbox"
-            />
-            <div
-              className="menuBackdrop"
-            >
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
               <label
-                className="menuBackdropLabel"
-                data-automation="user-account-menu-backdrop"
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
                 htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
               >
                 <span
                   className="root"
                 >
                   Show user menu
                 </span>
-              </label>
-            </div>
-            <label
-              className="toggleLabel"
-              data-automation="user-account-menu-toggle"
-              htmlFor="user-account-menu-toggle"
-            >
-              <span
-                className="root"
-              >
-                Show user menu
-              </span>
-              <span
-                className="userName"
-                data-automation="user-account-name"
-                data-hj-masked={true}
-              >
-                
-              </span>
-              <span
-                className="root root down chevron"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "mock svg",
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
                   }
-                }
-              />
-            </label>
-            <div
-              className="toggleContainer"
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="item"
+                      data-analytics="sign-out"
+                      href="/Login/Logout"
+                      onClick={[Function]}
+                    >
+                      Sign Out
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              <ul
+              <span
                 className="root"
               >
-                <li>
-                  <a
-                    className="item"
-                    href="/profile/"
-                  >
-                    <span>
-                      Your profile
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/myactivity#favourite"
-                  >
-                    <span>
-                      Saved searches
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/my-activity/saved-jobs"
-                  >
-                    <span>
-                      Saved jobs
-                    </span>
-                    <span
-                      className="root icon"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "mock svg",
-                        }
-                      }
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item subItem"
-                    href="/my-activity/applied-jobs"
-                  >
-                    Applied jobs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item"
-                    href="/settings/"
-                  >
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="item"
-                    href="/Login/Logout"
-                    onClick={[Function]}
-                  >
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -1841,38 +2816,296 @@ exports[`Header: should render when authentication is pending 1`] = `
         <div
           className="user"
         >
-          <nav
-            aria-labelledby="SignInOrRegister"
-            className="root"
-            data-automation="sign-in-register"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="SignInOrRegister"
+              <span
+                className="root"
               >
-                Sign in or register
-              </h1>
-            </span>
-            <a
-              className="link"
-              data-analytics="sign-in"
-              href="/Login/Standalone"
-              title="Sign in"
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
+              >
+                <span
+                  className="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
+                  }
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              Sign in
-            </a>
-             or 
-            <a
-              className="link"
-              data-analytics="register"
-              href="/Register/Standalone"
-              title="Register"
-            >
-              Register
-            </a>
-          </nav>
+              <span
+                className="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -2127,40 +3360,330 @@ exports[`Header: should render when unauthenticated 1`] = `
         className="userWrapper print"
       >
         <div
-          className="user user_isReady"
+          className="user user_isUnauthenticated user_isReady"
         >
-          <nav
-            aria-labelledby="SignInOrRegister"
-            className="root"
-            data-automation="sign-in-register"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="SignInOrRegister"
+              <span
+                className="root"
               >
-                Sign in or register
-              </h1>
-            </span>
-            <a
-              className="link"
-              data-analytics="sign-in"
-              href="/Login/Standalone"
-              title="Sign in"
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
+              >
+                <span
+                  className="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    Menu
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
+                  }
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <span
+                      className="item"
+                    >
+                      <a
+                        className="itemLink"
+                        data-analytics="sign-in"
+                        href="/sign-in"
+                        title="Sign in"
+                      >
+                        Sign in
+                      </a>
+                      <span
+                        className="secondaryItemText"
+                      >
+                         or 
+                      </span>
+                      <a
+                        className="itemLink"
+                        data-analytics="register"
+                        href="/sign-up"
+                        title="Register"
+                      >
+                        Register
+                      </a>
+                      <div
+                        className="iconSpacer"
+                      />
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              Sign in
-            </a>
-             or 
-            <a
-              className="link"
-              data-analytics="register"
-              href="/Register/Standalone"
-              title="Register"
-            >
-              Register
-            </a>
-          </nav>
+              <span
+                className="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -2417,38 +3940,296 @@ exports[`Header: should render with locale of AU 1`] = `
         <div
           className="user"
         >
-          <nav
-            aria-labelledby="SignInOrRegister"
-            className="root"
-            data-automation="sign-in-register"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="SignInOrRegister"
+              <span
+                className="root"
               >
-                Sign in or register
-              </h1>
-            </span>
-            <a
-              className="link"
-              data-analytics="sign-in"
-              href="/Login/Standalone"
-              title="Sign in"
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
+              >
+                <span
+                  className="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
+                  }
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              Sign in
-            </a>
-             or 
-            <a
-              className="link"
-              data-analytics="register"
-              href="/Register/Standalone"
-              title="Register"
-            >
-              Register
-            </a>
-          </nav>
+              <span
+                className="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -2705,38 +4486,282 @@ exports[`Header: should render with locale of NZ 1`] = `
         <div
           className="user"
         >
-          <nav
-            aria-labelledby="SignInOrRegister"
-            className="root"
-            data-automation="sign-in-register"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="SignInOrRegister"
+              <span
+                className="root"
               >
-                Sign in or register
-              </h1>
-            </span>
-            <a
-              className="link"
-              data-analytics="sign-in"
-              href="/Login/Standalone"
-              title="Sign in"
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
+              >
+                <span
+                  className="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
+                  }
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              Sign in
-            </a>
-             or 
-            <a
-              className="link"
-              data-analytics="register"
-              href="/Register/Standalone"
-              title="Register"
-            >
-              Register
-            </a>
-          </nav>
+              <span
+                className="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />
@@ -2747,7 +4772,7 @@ exports[`Header: should render with locale of NZ 1`] = `
           <a
             className="employerLink"
             data-analytics="header:employer+site"
-            href="https://talent.seek.co.nz/"
+            href="https://talent.seek.com.au/"
           >
             Employer site
           </a>
@@ -2970,38 +4995,296 @@ exports[`Header: should render with no divider 1`] = `
         <div
           className="user"
         >
-          <nav
-            aria-labelledby="SignInOrRegister"
-            className="root"
-            data-automation="sign-in-register"
+          <div
+            className="userAccountWrapper"
           >
-            <span
+            <nav
+              aria-labelledby="UserMenu"
               className="root"
+              data-automation="user-account"
+              role="navigation"
             >
-              <h1
-                id="SignInOrRegister"
+              <span
+                className="root"
               >
-                Sign in or register
-              </h1>
-            </span>
-            <a
-              className="link"
-              data-analytics="sign-in"
-              href="/Login/Standalone"
-              title="Sign in"
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autoComplete="off"
+                checked={false}
+                className="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                className="menuBackdrop"
+              >
+                <label
+                  className="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  htmlFor="user-account-menu-toggle"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                className="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                htmlFor="user-account-menu-toggle"
+                onClick={[Function]}
+              >
+                <span
+                  className="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked={true}
+                >
+                  <span
+                    className="mobileMenuLabel"
+                  >
+                    
+                  </span>
+                  <span
+                    className="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  >
+                    
+                  </span>
+                </span>
+                <span
+                  className="root root down chevron"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "mock svg",
+                    }
+                  }
+                />
+              </label>
+              <div
+                className="toggleContainer"
+                onClick={[Function]}
+              >
+                <ul
+                  className="root"
+                >
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        className="root icon jobSearch"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        className="root icon profile"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        className="root icon saveSearches"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/my-activity/saved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          className="smallDeviceOnly"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        className="root icon saveJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/my-activity/applied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        className="root icon recommendedJobs"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "mock svg",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly"
+                  >
+                    <a
+                      className="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="aboveSmallDevice"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    className="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      className="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        className="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            className="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              className="root"
+              data-automation="sign-in-register"
             >
-              Sign in
-            </a>
-             or 
-            <a
-              className="link"
-              data-analytics="register"
-              href="/Register/Standalone"
-              title="Register"
-            >
-              Register
-            </a>
-          </nav>
+              <span
+                className="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                className="link"
+                data-analytics="sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                className="link"
+                data-analytics="register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
           <span
             className="divider"
           />

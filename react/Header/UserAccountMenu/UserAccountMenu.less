@@ -1,41 +1,140 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  @border-width: 1px;
+  padding: @grid-row-height 0;
 
-  background-color: @sk-white;
-  border: @border-width solid @sk-mid-gray-light;
-  border-radius: 2px;
-  padding: (@grid-row-height - @border-width) 0;
+  .aboveSmallDevice({
+    @border-width: 1px;
+
+    background-color: @sk-white;
+    border: @border-width solid @sk-mid-gray-light;
+    border-radius: 2px;
+    padding: (@grid-row-height - @border-width) 0;
+  });
+}
+
+.activeTab {
+  .smallDeviceOnly({
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: @sk-white;
+    }
+  });
 }
 
 .item {
-  .touchableText(@standard-type-scale);
+  .touchableText();
   display: flex;
-  padding: 0 (@grid-gutter-width * 2);
+  padding: 0 @grid-gutter-width;
   white-space: nowrap;
-  color: @sk-black;
+  color: @sk-white;
   text-decoration: none;
-  display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  user-select: none;
 
   &:hover {
-    color: @sk-black;
-    background-color: @sk-mid-gray-light;
+    background-color: darken(@sk-blue, 5%);
+
+    .aboveSmallDevice({
+      color: @sk-black;
+      background-color: @sk-mid-gray-light;
+    });
   }
+
+  .aboveSmallDevice({
+    .touchableText(@standard-type-scale);
+    justify-content: space-between;
+    color: @sk-black;
+    padding: 0 (@grid-gutter-width * 2);
+  });
+}
+
+.itemLink {
+  .touchableText();
+  color: currentColor;
+  text-decoration: none;
+}
+
+.secondaryItemText {
+  opacity: 0.5;
 }
 
 .subItem {
-  background-color: @sk-gray-light;
+  .aboveSmallDevice({
+    background-color: @sk-gray-light;
+  });
 }
 
 .icon {
   margin-left: @grid-gutter-width;
   width: @grid-gutter-width;
   text-align: center;
+
+  .smallDeviceOnly({
+    margin-left: (@grid-gutter-width / 2);
+  });
+}
+
+.icon.jobSearch { color: @sk-highlight; }
+.icon.profile { color: @sk-purple; }
+.icon.saveJobs { color: @sk-pink; }
+.icon.saveSearches { color: @sk-highlight; }
+.icon.recommendedJobs { color: @sk-green-light; }
+
+.iconSpacer {
+  margin-left: (@grid-gutter-width / 2);
+  width: @grid-gutter-width;
+
+  .aboveSmallDevice({
+    display: none;
+  });
 }
 
 .iconSvg {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
+  // Begin bold icon hacks
+  .smallDeviceOnly({
+    overflow: visible;
+    path {
+      stroke: currentColor;
+      stroke-width: 70px;
+    }
+  });
+  // End bold icon hacks
+}
+
+.smallDeviceOnly {
+  .aboveSmallDevice({
+    display: none;
+  });
+}
+
+.aboveSmallDevice {
+  .smallDeviceOnly({
+    display: none;
+  });
+}
+
+.firstItemInGroup {
+  .smallDeviceOnly({
+    padding-top: @grid-row-height * 2;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: @grid-row-height;
+      right: 0;
+      left: @grid-gutter-width;
+      height: 1px;
+      background: @sk-white;
+      opacity: 0.2;
+    }
+  });
 }

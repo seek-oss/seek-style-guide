@@ -12,15 +12,10 @@ import Hidden from '../Hidden/Hidden';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
+import employerLinkForLocale from './employerLinkForLocale';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from './authStatusTypes';
 
 const defaultLinkRenderer = props => (<a {...props} />);
-const employerLinkHref = locale => locale === 'NZ' ?
-  'https://talent.seek.co.nz/' :
-  'https://talent.seek.com.au/';
-
-const AUTHENTICATED = 'authenticated';
-const UNAUTHENTICATED = 'unauthenticated';
-const AUTH_PENDING = 'pending';
 
 export default function Header({
   locale,
@@ -32,10 +27,14 @@ export default function Header({
   divider,
   returnUrl
 }) {
+  const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
+  const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
+
   const userClasses = classnames({
     [styles.user]: true,
-    [styles.user_isReady]: authenticationStatus === UNAUTHENTICATED ||
-      (authenticationStatus === AUTHENTICATED && (userName || userEmail))
+    [styles.user_isAuthenticated]: isAuthenticated,
+    [styles.user_isUnauthenticated]: isUnauthenticated,
+    [styles.user_isReady]: isUnauthenticated || isAuthenticated
   });
 
   const displayName = userName || userEmail.split('@')[0];
@@ -58,11 +57,19 @@ export default function Header({
           <Hidden screen className={styles.logoNote}>Australia’s #1 job site</Hidden>
           <Hidden print className={styles.userWrapper}>
             <div className={userClasses}>
-              {
-                authenticationStatus === AUTHENTICATED ?
-                  <UserAccount userName={displayName} linkRenderer={linkRenderer} /> :
-                  <SignInRegister linkRenderer={linkRenderer} returnUrl={returnUrl} />
-              }
+              <div className={styles.userAccountWrapper}>
+                <UserAccount
+                  locale={locale}
+                  authenticationStatus={authenticationStatus}
+                  userName={displayName}
+                  linkRenderer={linkRenderer}
+                  returnUrl={returnUrl}
+                  activeTab={activeTab}
+                />
+              </div>
+              <div className={styles.signInRegisterWrapper}>
+                <SignInRegister linkRenderer={linkRenderer} returnUrl={returnUrl} />
+              </div>
               <span className={styles.divider} />
             </div>
             <div className={styles.employerSite}>
@@ -70,7 +77,7 @@ export default function Header({
                 linkRenderer({
                   'data-analytics': 'header:employer+site',
                   className: styles.employerLink,
-                  href: employerLinkHref(locale),
+                  href: employerLinkForLocale(locale),
                   children: 'Employer site'
                 })
               }
@@ -108,7 +115,15 @@ Header.propTypes = {
   userName: PropTypes.string,
   userEmail: PropTypes.string,
   linkRenderer: PropTypes.func,
-  activeTab: PropTypes.string,
+  activeTab: PropTypes.oneOf([
+    'Job Search',
+    '$150k+ Jobs',
+    'Profile',
+    'Saved & Applied Jobs',
+    'Recommended Jobs',
+    'Company Reviews',
+    'Advice & Tips'
+  ]),
   divider: PropTypes.bool,
   returnUrl: PropTypes.string
 };
