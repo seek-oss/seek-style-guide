@@ -12,7 +12,7 @@ glob('**/*.sketch').then(sketchFiles => {
 
     rimraf(targetPath).then(() => {
       extractZip(sketchFile, { dir: targetPath }).then(() => {
-        rewriteFiles('**/*__sketch/**/*.json', prettyJsonTransformer).then(() => {
+        rewriteFiles('**/*__sketch/**/*.json', jsonTransformer).then(() => {
           console.log(chalk.green(`[💎 ] ${path.basename(sketchFile)} is now ready for git!`));
         });
       });
@@ -28,9 +28,19 @@ function getTargetPath(file) {
   return path.join(process.cwd(), sourcePath, targetDir);
 }
 
-function prettyJsonTransformer(fileName, contents, callback) {
+function jsonTransformer(fileName, contents, callback) {
+  // Blank out user-specific settings
+  if (/user\.json$/.test(fileName)) {
+    return callback(null, '{}');
+  }
+
   const parsedJson = JSON.parse(contents);
   const prettyJson = JSON.stringify(parsedJson, null, 2);
+
+  // Ensure document is always on first page
+  if (/document\.json$/.test(fileName) && prettyJson.currentPageIndex) {
+    prettyJson.currentPageIndex = 0;
+  }
 
   callback(null, prettyJson);
 }
