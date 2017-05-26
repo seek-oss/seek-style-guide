@@ -1,7 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 @import (reference) "./Footer.common.less";
 
-@below-classic-ia: ~"only screen and (max-width: 1024px)";
+@classic-ia: ~"only screen and (min-width: 1025px)";
 
 .root {
   .classicFontStack();
@@ -10,17 +10,15 @@
 }
 
 .content {
-  @media only screen @footer-vertical {
-    padding: (@grid-row-height * 4) 0;
-  }
+  padding: (@grid-row-height * 4) @grid-gutter-width;
 
   @media only screen @footer-horizontal {
-    padding: (@grid-row-height * 4) 0 (@grid-row-height * 5);
+    padding-bottom: (@grid-row-height * 5);
   }
 
-  @media @below-classic-ia {
-    padding-left: @grid-gutter-width;
-    padding-right: @grid-gutter-width;
+  @media @classic-ia {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
