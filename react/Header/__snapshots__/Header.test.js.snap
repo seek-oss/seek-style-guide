@@ -381,6 +381,7 @@ exports[`Header: should append returnUrl to signin and register links if present
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -393,6 +394,7 @@ exports[`Header: should append returnUrl to signin and register links if present
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -404,7 +406,8 @@ exports[`Header: should append returnUrl to signin and register links if present
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -415,7 +418,8 @@ exports[`Header: should append returnUrl to signin and register links if present
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -426,7 +430,8 @@ exports[`Header: should append returnUrl to signin and register links if present
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -940,6 +945,7 @@ exports[`Header: should render first part of email address when username isn't p
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -952,6 +958,7 @@ exports[`Header: should render first part of email address when username isn't p
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -963,7 +970,8 @@ exports[`Header: should render first part of email address when username isn't p
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -974,7 +982,8 @@ exports[`Header: should render first part of email address when username isn't p
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -985,7 +994,8 @@ exports[`Header: should render first part of email address when username isn't p
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -1486,6 +1496,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -1498,6 +1509,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -1509,7 +1521,8 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             <a
               className="link link_isActive"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -1520,7 +1533,8 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -1531,7 +1545,8 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -2045,6 +2060,7 @@ exports[`Header: should render when authenticated 1`] = `
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -2057,6 +2073,7 @@ exports[`Header: should render when authenticated 1`] = `
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -2068,7 +2085,8 @@ exports[`Header: should render when authenticated 1`] = `
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -2079,7 +2097,8 @@ exports[`Header: should render when authenticated 1`] = `
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -2090,7 +2109,8 @@ exports[`Header: should render when authenticated 1`] = `
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -2604,6 +2624,7 @@ exports[`Header: should render when authenticated but username and email is not 
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -2616,6 +2637,7 @@ exports[`Header: should render when authenticated but username and email is not 
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -2627,7 +2649,8 @@ exports[`Header: should render when authenticated but username and email is not 
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -2638,7 +2661,8 @@ exports[`Header: should render when authenticated but username and email is not 
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -2649,7 +2673,8 @@ exports[`Header: should render when authenticated but username and email is not 
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -3150,6 +3175,7 @@ exports[`Header: should render when authentication is pending 1`] = `
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -3162,6 +3188,7 @@ exports[`Header: should render when authentication is pending 1`] = `
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -3173,7 +3200,8 @@ exports[`Header: should render when authentication is pending 1`] = `
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -3184,7 +3212,8 @@ exports[`Header: should render when authentication is pending 1`] = `
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -3195,7 +3224,8 @@ exports[`Header: should render when authentication is pending 1`] = `
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -3728,6 +3758,7 @@ exports[`Header: should render when unauthenticated 1`] = `
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -3740,6 +3771,7 @@ exports[`Header: should render when unauthenticated 1`] = `
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -3751,7 +3783,8 @@ exports[`Header: should render when unauthenticated 1`] = `
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -3762,7 +3795,8 @@ exports[`Header: should render when unauthenticated 1`] = `
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -3773,7 +3807,8 @@ exports[`Header: should render when unauthenticated 1`] = `
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -4274,6 +4309,7 @@ exports[`Header: should render with locale of AU 1`] = `
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -4286,6 +4322,7 @@ exports[`Header: should render with locale of AU 1`] = `
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -4297,7 +4334,8 @@ exports[`Header: should render with locale of AU 1`] = `
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -4308,7 +4346,8 @@ exports[`Header: should render with locale of AU 1`] = `
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -4319,7 +4358,8 @@ exports[`Header: should render with locale of AU 1`] = `
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -4806,6 +4846,7 @@ exports[`Header: should render with locale of NZ 1`] = `
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -4817,7 +4858,8 @@ exports[`Header: should render with locale of NZ 1`] = `
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -4828,7 +4870,8 @@ exports[`Header: should render with locale of NZ 1`] = `
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>
@@ -5329,6 +5372,7 @@ exports[`Header: should render with no divider 1`] = `
             <a
               className="link"
               data-analytics="header:jobs"
+              data-automation="navigation-job-search-link"
               href="/"
             >
               Job Search
@@ -5341,6 +5385,7 @@ exports[`Header: should render with no divider 1`] = `
               aria-label="One fifty K jobs"
               className="link"
               data-analytics="header:high+salary"
+              data-automation="navigation-150k-jobs-link"
               href="/150kjobs"
             >
               $150k+ Jobs
@@ -5352,7 +5397,8 @@ exports[`Header: should render with no divider 1`] = `
             <a
               className="link"
               data-analytics="header:profile"
-              href="/profile/"
+              data-automation="navigation-profile-link"
+              href="/profile"
             >
               Profile
             </a>
@@ -5363,7 +5409,8 @@ exports[`Header: should render with no divider 1`] = `
             <a
               className="link"
               data-analytics="header:companies"
-              href="/companies/"
+              data-automation="navigation-companies-link"
+              href="/companies"
             >
               Company Reviews
             </a>
@@ -5374,7 +5421,8 @@ exports[`Header: should render with no divider 1`] = `
             <a
               className="link"
               data-analytics="header:advice"
-              href="/career-advice/"
+              data-automation="navigation-advice-link"
+              href="/career-advice"
             >
               Advice & Tips
             </a>

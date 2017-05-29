@@ -135,7 +135,7 @@ export default class Demo extends Component {
           </Section>
         </PageBlock>
         <Baseline isVisible={true} type="bar" color="#e5e5e5">
-          <div className={styles.component}>
+          <div className={styles.component} data-automation="demo-component-wrapper">
             <Container component={BoundComponent} />
           </div>
         </Baseline>

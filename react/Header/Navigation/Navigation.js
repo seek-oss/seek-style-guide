@@ -11,30 +11,35 @@ const items = [
   {
     name: 'Job Search',
     href: '/',
-    analytics: 'header:jobs'
+    analytics: 'header:jobs',
+    'data-automation': 'navigation-job-search-link'
   },
   {
     name: '$150k+ Jobs',
     'aria-label': 'One fifty K jobs',
     href: '/150kjobs',
     analytics: 'header:high+salary',
-    specificLocale: 'AU'
+    specificLocale: 'AU',
+    'data-automation': 'navigation-150k-jobs-link'
   },
   {
     name: 'Profile',
-    href: '/profile/',
-    analytics: 'header:profile'
+    href: '/profile',
+    analytics: 'header:profile',
+    'data-automation': 'navigation-profile-link'
   },
   {
     name: 'Company Reviews',
-    href: '/companies/',
+    href: '/companies',
     analytics: 'header:companies',
-    specificLocale: 'AU'
+    specificLocale: 'AU',
+    'data-automation': 'navigation-companies-link'
   },
   {
     name: 'Advice & Tips',
-    href: '/career-advice/',
-    analytics: 'header:advice'
+    href: '/career-advice',
+    analytics: 'header:advice',
+    'data-automation': 'navigation-advice-link'
   }
 ];
 
