@@ -31,6 +31,8 @@ Next, create a new branch for your work, with an appropriate name for your chang
 $ git checkout -b add-my-cool-new-feature
 ```
 
+### Local Development Workflow
+
 In order to see changes to the style guide during development, run the local development server:
 
 ```bash
@@ -46,6 +48,28 @@ $ npm test
 Note that the test suite needs to pass for your changes to be accepted, so it's worth running this locally during development and before committing.
 
 Even though we'd like to automate as much as possible, a comprehensive manual test is never a bad idea, especially if you're working in an area of the codebase that's particularly business critical. Reviewers are also encouraged to put UI changes through their paces, to act as a last line of defense before merging.
+
+### Local Design Workflow
+
+Some components have associated Sketch files included, but these are stored in git as plain text rather than Sketch's zip-based file format.
+
+To generate the Sketch files, run the following script, but be warned that this will overwrite any Sketch files that you've modified in your local copy of the style guide:
+
+```bash
+npm run git-to-sketch
+```
+
+Feel free to add new Sketch files or modify any existing files. Once you're ready to commit your changes, you need to decode your Sketch files back to plain text by running the inverse of the previous command:
+
+```bash
+npm run sketch-to-git
+```
+
+### Design + Code = ❤
+
+🎨🔗💻 If your code becomes out of sync with the design assets, or vice-versa, make sure you either keep them in sync yourself, or pair with a designer/developer to help you make the necessary changes. Either way, **we want to ensure that design and development assets remain in sync with every pull request.**
+
+### Committing
 
 Once you've made the desired changes and you're ready to commit, first stage your local changes:
 
