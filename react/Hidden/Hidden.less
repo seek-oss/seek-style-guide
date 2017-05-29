@@ -1,4 +1,4 @@
-// Todo: add responsive breakpoints support later in the same component
+@import (reference) "~seek-style-guide/theme";
 
 .print {
   @media print {
@@ -10,4 +10,16 @@
   @media screen {
     display: none;
   }
+}
+
+.mobile {
+  .smallDeviceOnly({
+    display: none;
+  });
+}
+
+.desktop {
+  .aboveSmallDevice({
+    display: none;
+  });
 }
