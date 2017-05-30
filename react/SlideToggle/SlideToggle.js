@@ -16,7 +16,8 @@ export default class SlideToggle extends Component {
     position: PropTypes.oneOf([LEFT, RIGHT]),
     hideLabel: PropTypes.bool,
     children: PropTypes.node,
-    checked: PropTypes.bool
+    checked: PropTypes.bool,
+    className: PropTypes.string
   }
 
   static defaultProps = {
@@ -39,7 +40,7 @@ export default class SlideToggle extends Component {
   }
 
   render() {
-    const { id, checked, label, position, onChange } = this.props;
+    const { id, checked, label, position, onChange, className } = this.props;
 
     const inputStyles = classnames({
       [styles.input]: true,
@@ -47,7 +48,7 @@ export default class SlideToggle extends Component {
     });
 
     return (
-      <label htmlFor={id} className={styles.root}>
+      <label htmlFor={id} className={classnames(styles.root, className)}>
         <div className={styles.switch}>
           <input
             ref={this.storeInputRef}
