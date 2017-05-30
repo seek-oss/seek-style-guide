@@ -1,0 +1,49 @@
+{
+  "commit": "2ac3f43dc64a2b7982dc85b584be457e7bbba129",
+  "appVersion": "43.2",
+  "build": 39069,
+  "app": "com.bohemiancoding.sketch3",
+  "pagesAndArtboards": {
+    "73D941D2-F1E2-4224-9032-0E8BD2CA5FD8": {
+      "name": "Page 1",
+      "artboards": {
+        "4D20A300-9EC0-4E35-B7BA-CFB8654BC505": {
+          "name": "Checkboxes"
+        }
+      }
+    },
+    "B59D48CA-BA8D-4D3E-B07A-C597EB43CEA6": {
+      "name": "Symbols",
+      "artboards": {
+        "C4EF53AC-E9EF-4CBE-8D43-186D325C8C7E": {
+          "name": "Checkbox/selected"
+        },
+        "BDC71724-CFB7-44CD-9C7B-AFDE6FF9CF74": {
+          "name": "Checkbox/idle"
+        },
+        "E590E00C-8760-455F-8219-42568DD58FD0": {
+          "name": "Checkbox/hover"
+        }
+      }
+    }
+  },
+  "fonts": [
+    "Roboto-Regular",
+    "Roboto-Bold",
+    "Roboto-Light"
+  ],
+  "created": {
+    "app": "com.bohemiancoding.sketch3",
+    "commit": "2ac3f43dc64a2b7982dc85b584be457e7bbba129",
+    "build": 39069,
+    "appVersion": "43.2",
+    "variant": "NONAPPSTORE",
+    "version": 88
+  },
+  "version": 88,
+  "saveHistory": [
+    "NONAPPSTORE.39069"
+  ],
+  "autosaved": 0,
+  "variant": "NONAPPSTORE"
+}
