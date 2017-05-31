@@ -4714,7 +4714,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     <a
                       className="item"
                       data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
+                      href="https://talent.seek.co.nz/"
                     >
                       Employer Site
                       <div
@@ -4772,7 +4772,7 @@ exports[`Header: should render with locale of NZ 1`] = `
           <a
             className="employerLink"
             data-analytics="header:employer+site"
-            href="https://talent.seek.com.au/"
+            href="https://talent.seek.co.nz/"
           >
             Employer site
           </a>

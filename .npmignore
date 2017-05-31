@@ -2,3 +2,5 @@ node_modules
 docs
 npm-debug.log
 yarn.lock
+*.sketch
+*__sketch
