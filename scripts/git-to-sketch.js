@@ -3,15 +3,27 @@ const glob = promisify(require('glob'));
 const zipFolder = promisify(require('zip-folder'));
 const chalk = require('chalk');
 const path = require('path');
+const fs = require('fs');
 
 glob('**/*__sketch/').then(sketchDirs => {
-  sketchDirs.forEach(sketchDir => {
+  const relativePaths = sketchDirs.map(sketchDir => {
     const targetFilePath = getTargetFilePath(sketchDir);
+    const relativeFilePath = path.relative(process.cwd(), targetFilePath);
 
     zipFolder(sketchDir, targetFilePath).then(() => {
-      console.log(chalk.green(`[💎 ] ${path.basename(targetFilePath)} is now ready for Sketch!`));
+      console.log(chalk.green(`[💎 ] ${relativeFilePath} is now ready for Sketch!`));
     });
-  })
+
+    return relativeFilePath;
+  });
+
+  const sketchManifestJson = JSON.stringify({
+    files: relativePaths
+  }, null, 2);
+
+  const sketchManifestPath = path.join(process.cwd(), 'sketch-manifest.json');
+  fs.writeFileSync(sketchManifestPath, sketchManifestJson);
+  console.log(chalk.green(`[📄 ] Wrote Sketch file manifest!`));
 });
 
 function getTargetFilePath(dir) {
