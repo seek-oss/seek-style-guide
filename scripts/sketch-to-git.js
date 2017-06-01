@@ -9,11 +9,12 @@ const path = require('path');
 glob('**/*.sketch').then(sketchFiles => {
   sketchFiles.forEach(sketchFile => {
     const targetPath = getTargetPath(sketchFile);
+    const relativePath = path.relative(process.cwd(), targetPath);
 
     rimraf(targetPath).then(() => {
       extractZip(sketchFile, { dir: targetPath }).then(() => {
         rewriteFiles('**/*__sketch/**/*.json', jsonTransformer).then(() => {
-          console.log(chalk.green(`[💎 ] ${path.basename(sketchFile)} is now ready for git!`));
+          console.log(chalk.green(`[💎 ] ${relativePath} is now ready for git!`));
         });
       });
     });
