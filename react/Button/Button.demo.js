@@ -43,6 +43,13 @@ export default {
             ...props,
             loading: true
           })
+        },
+        {
+          label: 'Full width',
+          transformProps: props => ({
+            ...props,
+            isFullWidth: true
+          })
         }
       ]
     },
