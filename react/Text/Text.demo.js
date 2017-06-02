@@ -19,6 +19,13 @@ export default {
             ...props,
             strong: true
           })
+        },
+        {
+          label: 'Condensed',
+          transformProps: props => ({
+            ...props,
+            condensed: true
+          })
         }
       ]
     },

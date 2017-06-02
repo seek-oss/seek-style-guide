@@ -1,7 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  .standardTextResponsive();
   padding-bottom: @grid-row-height;
 
   .root {
@@ -20,11 +19,19 @@
   }
 }
 
-.small { .smallTextResponsive(); }
-.subheading { .subheadingTextResponsive(); }
-.headline { .headlineTextResponsive(); }
-.heading { .headingTextResponsive(); }
-.hero { .heroTextResponsive(); }
+.root:not(.condensed) { .standardTextResponsive(); }
+.small:not(.condensed) { .smallTextResponsive(); }
+.subheading:not(.condensed) { .subheadingTextResponsive(); }
+.headline:not(.condensed) { .headlineTextResponsive(); }
+.heading:not(.condensed) { .headingTextResponsive(); }
+.hero:not(.condensed) { .heroTextResponsive(); }
+
+.root.condensed { .standardTextResponsive(@condensed: true); }
+.small.condensed { .smallTextResponsive(@condensed: true); }
+.subheading.condensed { .subheadingTextResponsive(@condensed: true); }
+.headline.condensed { .headlineTextResponsive(@condensed: true); }
+.heading.condensed { .headingTextResponsive(@condensed: true); }
+.hero.condensed { .heroTextResponsive(@condensed: true); }
 
 .raw {
   padding-bottom: 0;
