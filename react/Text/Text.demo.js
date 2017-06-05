@@ -21,10 +21,10 @@ export default {
           })
         },
         {
-          label: 'Condensed',
+          label: 'Compact',
           transformProps: props => ({
             ...props,
-            condensed: true
+            compact: true
           })
         }
       ]

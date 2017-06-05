@@ -1,7 +1,7 @@
 @import (reference) "type";
 @import (reference) "baselineType";
 
-.__responsiveType(@variant; @condensed) when (isstring(@variant)) {
+.__responsiveType(@variant; @compact) when (isstring(@variant)) {
   // Define responsive text breakpoint limits
   @max-breakpoint: (@responsive-breakpoint - 1);
   @min-breakpoint: @responsive-breakpoint;
@@ -11,8 +11,8 @@
   @row-span: "@{variant}-type-row-span";
   @weight: "@{variant}-type-weight";
 
-  .makeMobileVarSuffix() when (not(@condensed)) { @mobile-var-suffix: ""; }
-  .makeMobileVarSuffix() when (@condensed) { @mobile-var-suffix: "-condensed"; }
+  .makeMobileVarSuffix() when (not(@compact)) { @mobile-var-suffix: ""; }
+  .makeMobileVarSuffix() when (@compact) { @mobile-var-suffix: "-compact"; }
   .makeMobileVarSuffix();
 
   @mobile-type-scale: "@{type-scale}-mobile@{mobile-var-suffix}";

@@ -18,7 +18,7 @@ export default function Text({
   heading,
   hero,
   raw,
-  condensed,
+  compact,
   positive,
   critical,
   secondary,
@@ -37,7 +37,7 @@ export default function Text({
         [styles.heading]: heading,
         [styles.hero]: hero,
         [styles.raw]: raw,
-        [styles.condensed]: condensed
+        [styles.compact]: compact
       })}>
       <span
         className={classnames({
@@ -61,7 +61,7 @@ Text.propTypes = {
   heading: PropTypes.bool,
   hero: PropTypes.bool,
   raw: PropTypes.bool,
-  condensed: PropTypes.bool,
+  compact: PropTypes.bool,
   positive: PropTypes.bool,
   critical: PropTypes.bool,
   secondary: PropTypes.bool,
