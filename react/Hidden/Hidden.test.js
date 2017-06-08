@@ -35,4 +35,20 @@ describe('components/grid/hidden', () => {
       ).toJSON()
     ).toMatchSnapshot();
   });
+
+  it('should render with desktop', () => {
+    expect(
+      renderer.create(
+        <Hidden desktop>Text</Hidden>
+      ).toJSON()
+    ).toMatchSnapshot();
+  });
+
+  it('should render with mobile', () => {
+    expect(
+      renderer.create(
+        <Hidden mobile>Text</Hidden>
+      ).toJSON()
+    ).toMatchSnapshot();
+  });
 });
