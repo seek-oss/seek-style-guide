@@ -48,7 +48,7 @@ export default {
           label: 'Full width',
           transformProps: props => ({
             ...props,
-            isFullWidth: true
+            fullWidth: true
           })
         }
       ]
