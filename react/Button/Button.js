@@ -23,7 +23,7 @@ export default class Button extends Component {
       PropTypes.string
     ]),
     loading: PropTypes.bool,
-    fullWidth: PropTypes.bool,
+    fullWidth: PropTypes.bool
   };
 
   static defaultProps = {
