@@ -13,7 +13,6 @@ exports[`Slide toggle: should render a checked state 1`] = `
       checked={true}
       className="input"
       id="testToggle"
-      onChange={undefined}
       type="checkbox"
     />
     <div
@@ -22,25 +21,18 @@ exports[`Slide toggle: should render a checked state 1`] = `
       <div
         className="slideButton"
       >
-        <span
-          className="root icon"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "mock svg",
-            }
-          }
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
         />
       </div>
     </div>
-    <div
-      className="root label labelRight raw"
+    <Text
+      className="label labelRight"
+      raw={true}
     >
-      <span
-        className=""
-      >
-        Test toggle
-      </span>
-    </div>
+      Test toggle
+    </Text>
   </div>
 </label>
 `;
@@ -55,10 +47,8 @@ exports[`Slide toggle: should render with default props 1`] = `
   >
     <input
       aria-label="Test toggle"
-      checked={undefined}
       className="input"
       id="testToggle"
-      onChange={undefined}
       type="checkbox"
     />
     <div
@@ -67,25 +57,18 @@ exports[`Slide toggle: should render with default props 1`] = `
       <div
         className="slideButton"
       >
-        <span
-          className="root icon"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "mock svg",
-            }
-          }
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
         />
       </div>
     </div>
-    <div
-      className="root label labelRight raw"
+    <Text
+      className="label labelRight"
+      raw={true}
     >
-      <span
-        className=""
-      >
-        Test toggle
-      </span>
-    </div>
+      Test toggle
+    </Text>
   </div>
 </label>
 `;
@@ -100,10 +83,8 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
   >
     <input
       aria-label="Test toggle"
-      checked={undefined}
       className="input"
       id="testToggle"
-      onChange={undefined}
       type="checkbox"
     />
     <div
@@ -112,13 +93,9 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
       <div
         className="slideButton"
       >
-        <span
-          className="root icon"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "mock svg",
-            }
-          }
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
         />
       </div>
     </div>
@@ -136,34 +113,25 @@ exports[`Slide toggle: should render with the label on the left 1`] = `
   >
     <input
       aria-label="Test toggle"
-      checked={undefined}
       className="input inputLeft"
       id="testToggle"
-      onChange={undefined}
       type="checkbox"
     />
-    <div
-      className="root label labelLeft raw"
+    <Text
+      className="label labelLeft"
+      raw={true}
     >
-      <span
-        className=""
-      >
-        Test toggle
-      </span>
-    </div>
+      Test toggle
+    </Text>
     <div
       className="slider"
     >
       <div
         className="slideButton"
       >
-        <span
-          className="root icon"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "mock svg",
-            }
-          }
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
         />
       </div>
     </div>

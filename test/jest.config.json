@@ -1,6 +1,6 @@
 {
   "testPathIgnorePatterns": [
-    "<rootDir>[/\\\\](dist|node_modules)[/\\\\]"
+    "<rootDir>/(dist|node_modules)/"
   ],
   "moduleNameMapper": {
     "\\.(css|less)$": "identity-obj-proxy"
@@ -9,7 +9,7 @@
     "^.+\\.js$": "<rootDir>/test/babel.transform.js",
     "^.+\\.svg$": "<rootDir>/test/svg.transform.js"
   },
-  "transformIgnorePatterns": [
-    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+  "snapshotSerializers": [
+    "<rootDir>/node_modules/enzyme-to-json/serializer"
   ]
 }
