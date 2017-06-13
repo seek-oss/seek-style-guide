@@ -1,6 +1,6 @@
 {
   "testPathIgnorePatterns": [
-    "<rootDir>/(dist|node_modules)/"
+    "<rootDir>[/\\\\](dist|node_modules)[/\\\\]"
   ],
   "moduleNameMapper": {
     "\\.(css|less)$": "identity-obj-proxy"
