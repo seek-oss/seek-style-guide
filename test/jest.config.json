@@ -9,6 +9,9 @@
     "^.+\\.js$": "<rootDir>/test/babel.transform.js",
     "^.+\\.svg$": "<rootDir>/test/svg.transform.js"
   },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+  ],
   "snapshotSerializers": [
     "<rootDir>/node_modules/enzyme-to-json/serializer"
   ]
