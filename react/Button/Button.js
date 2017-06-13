@@ -22,12 +22,14 @@ export default class Button extends Component {
       PropTypes.func,
       PropTypes.string
     ]),
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    fullWidth: PropTypes.bool
   };
 
   static defaultProps = {
     className: '',
     loading: false,
+    fullWidth: false,
     component: 'button'
   };
 
@@ -44,11 +46,12 @@ export default class Button extends Component {
   }
 
   render() {
-    const { color, className, loading, children, component, ...restProps } = this.props;
+    const { color, className, loading, fullWidth, children, component, ...restProps } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
+        [styles.fullWidth]: fullWidth,
         [styles.root_isPink]: color === 'pink',
         [styles.root_isBlue]: color === 'blue',
         [styles.root_isGray]: color === 'gray',
