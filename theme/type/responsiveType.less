@@ -1,7 +1,7 @@
 @import (reference) "type";
 @import (reference) "baselineType";
 
-.__responsiveType(@variant) when (isstring(@variant)) {
+.__responsiveType(@variant; @compact) when (isstring(@variant)) {
   // Define responsive text breakpoint limits
   @max-breakpoint: (@responsive-breakpoint - 1);
   @min-breakpoint: @responsive-breakpoint;
@@ -10,9 +10,14 @@
   @type-scale: "@{variant}-type-scale";
   @row-span: "@{variant}-type-row-span";
   @weight: "@{variant}-type-weight";
-  @mobile-type-scale: "@{type-scale}-mobile";
-  @mobile-row-span: "@{row-span}-mobile";
-  @mobile-weight: "@{variant}-type-weight-mobile";
+
+  .makeMobileVarSuffix() when (not(@compact)) { @mobile-var-suffix: ""; }
+  .makeMobileVarSuffix() when (@compact) { @mobile-var-suffix: "-compact"; }
+  .makeMobileVarSuffix();
+
+  @mobile-type-scale: "@{type-scale}-mobile@{mobile-var-suffix}";
+  @mobile-row-span: "@{row-span}-mobile@{mobile-var-suffix}";
+  @mobile-weight: "@{variant}-type-weight-mobile@{mobile-var-suffix}";
 
   @media only screen and (max-width: @max-breakpoint) {
     .__baselineType(@@mobile-type-scale, @@mobile-row-span);

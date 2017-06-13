@@ -18,6 +18,7 @@ export default function Text({
   heading,
   hero,
   raw,
+  compact,
   positive,
   critical,
   secondary,
@@ -35,7 +36,8 @@ export default function Text({
         [styles.headline]: headline,
         [styles.heading]: heading,
         [styles.hero]: hero,
-        [styles.raw]: raw
+        [styles.raw]: raw,
+        [styles.compact]: compact
       })}>
       <span
         className={classnames({
@@ -59,6 +61,7 @@ Text.propTypes = {
   heading: PropTypes.bool,
   hero: PropTypes.bool,
   raw: PropTypes.bool,
+  compact: PropTypes.bool,
   positive: PropTypes.bool,
   critical: PropTypes.bool,
   secondary: PropTypes.bool,

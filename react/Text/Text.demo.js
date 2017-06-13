@@ -19,6 +19,13 @@ export default {
             ...props,
             strong: true
           })
+        },
+        {
+          label: 'Compact',
+          transformProps: props => ({
+            ...props,
+            compact: true
+          })
         }
       ]
     },

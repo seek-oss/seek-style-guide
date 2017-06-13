@@ -10,12 +10,12 @@
 .standardText()   { .__baselineType(@standard-type-scale, @standard-type-row-span);     }
 .smallText()      { .__baselineType(@small-type-scale, @small-type-row-span);           }
 
-.heroTextResponsive()       { .__responsiveType("hero");       }
-.headlineTextResponsive()   { .__responsiveType("headline");   }
-.headingTextResponsive()    { .__responsiveType("heading");    }
-.subheadingTextResponsive() { .__responsiveType("subheading"); }
-.standardTextResponsive()   { .__responsiveType("standard");   }
-.smallTextResponsive()      { .__responsiveType("small");      }
+.heroTextResponsive(@compact: false)       { .__responsiveType("hero"; @compact);       }
+.headlineTextResponsive(@compact: false)   { .__responsiveType("headline"; @compact);   }
+.headingTextResponsive(@compact: false)    { .__responsiveType("heading"; @compact);    }
+.subheadingTextResponsive(@compact: false) { .__responsiveType("subheading"; @compact); }
+.standardTextResponsive(@compact: false)   { .__responsiveType("standard"; @compact);   }
+.smallTextResponsive(@compact: false)      { .__responsiveType("small"; @compact);      }
 
 .touchableText(@font-scale: @interaction-type-scale) {
   .rawText(@font-scale);
