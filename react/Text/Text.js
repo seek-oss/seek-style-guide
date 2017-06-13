@@ -8,11 +8,13 @@ import stylesPositive from '../Positive/Positive.less';
 import stylesCritical from '../Critical/Critical.less';
 import stylesSecondary from '../Secondary/Secondary.less';
 import stylesStrong from '../Strong/Strong.less';
+import stylesRegular from '../Regular/Regular.less';
 
 export default function Text({
   children,
   className,
   small,
+  substandard,
   subheading,
   headline,
   heading,
@@ -22,6 +24,7 @@ export default function Text({
   critical,
   secondary,
   strong,
+  regular,
   ...restProps
 }) {
   return (
@@ -31,6 +34,7 @@ export default function Text({
         [styles.root]: true,
         [className]: className,
         [styles.small]: small,
+        [styles.substandard]: substandard,
         [styles.subheading]: subheading,
         [styles.headline]: headline,
         [styles.heading]: heading,
@@ -42,7 +46,8 @@ export default function Text({
           [stylesPositive.root]: positive,
           [stylesCritical.root]: critical,
           [stylesSecondary.root]: secondary,
-          [stylesStrong.root]: strong
+          [stylesStrong.root]: strong,
+          [stylesRegular.root]: regular
         })}>
         {children}
       </span>
@@ -54,6 +59,7 @@ Text.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   small: PropTypes.bool,
+  substandard: PropTypes.bool,
   subheading: PropTypes.bool,
   headline: PropTypes.bool,
   heading: PropTypes.bool,
@@ -62,5 +68,6 @@ Text.propTypes = {
   positive: PropTypes.bool,
   critical: PropTypes.bool,
   secondary: PropTypes.bool,
-  strong: PropTypes.bool
+  strong: PropTypes.bool,
+  regular: PropTypes.bool
 };

@@ -19,6 +19,13 @@ export default {
             ...props,
             strong: true
           })
+        },
+        {
+          label: 'Regular',
+          transformProps: props => ({
+            ...props,
+            regular: true
+          })
         }
       ]
     },
@@ -90,6 +97,14 @@ export default {
           transformProps: props => ({
             ...props,
             hero: false
+          })
+        },
+        {
+          label: 'Substandard',
+          transformProps: props => ({
+            ...props,
+            hero: false,
+            substandard: true
           })
         }
       ]

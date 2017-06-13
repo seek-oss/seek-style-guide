@@ -3,19 +3,21 @@
 @import (reference) "../type/responsiveType";
 @import (reference) "../layout/grid";
 
-.heroText()       { .__baselineType(@hero-type-scale, @hero-type-row-span);             }
-.headlineText()   { .__baselineType(@headline-type-scale, @headline-type-row-span);     }
-.headingText()    { .__baselineType(@heading-type-scale, @heading-type-row-span);       }
-.subheadingText() { .__baselineType(@subheading-type-scale, @subheading-type-row-span); }
-.standardText()   { .__baselineType(@standard-type-scale, @standard-type-row-span);     }
-.smallText()      { .__baselineType(@small-type-scale, @small-type-row-span);           }
+.heroText()        { .__baselineType(@hero-type-scale, @hero-type-row-span);               }
+.headlineText()    { .__baselineType(@headline-type-scale, @headline-type-row-span);       }
+.headingText()     { .__baselineType(@heading-type-scale, @heading-type-row-span);         }
+.subheadingText()  { .__baselineType(@subheading-type-scale, @subheading-type-row-span);   }
+.standardText()    { .__baselineType(@standard-type-scale, @standard-type-row-span);       }
+.substandardText() { .__baselineType(@substandard-type-scale, @substandard-type-row-span); }
+.smallText()       { .__baselineType(@small-type-scale, @small-type-row-span);             }
 
-.heroTextResponsive()       { .__responsiveType("hero");       }
-.headlineTextResponsive()   { .__responsiveType("headline");   }
-.headingTextResponsive()    { .__responsiveType("heading");    }
-.subheadingTextResponsive() { .__responsiveType("subheading"); }
-.standardTextResponsive()   { .__responsiveType("standard");   }
-.smallTextResponsive()      { .__responsiveType("small");      }
+.heroTextResponsive()        { .__responsiveType("hero");        }
+.headlineTextResponsive()    { .__responsiveType("headline");    }
+.headingTextResponsive()     { .__responsiveType("heading");     }
+.subheadingTextResponsive()  { .__responsiveType("subheading");  }
+.standardTextResponsive()    { .__responsiveType("standard");    }
+.substandardTextResponsive() { .__responsiveType("substandard"); }
+.smallTextResponsive()       { .__responsiveType("small");       }
 
 .touchableText(@font-scale: @interaction-type-scale) {
   .rawText(@font-scale);
