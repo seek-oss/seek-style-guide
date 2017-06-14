@@ -71,16 +71,9 @@ export default class Textarea extends Component {
   constructor() {
     super();
 
-    this.storeInputReference = this.storeInputReference.bind(this);
     this.renderCharacterLimit = this.renderCharacterLimit.bind(this);
     this.renderInput = this.renderInput.bind(this);
     this.renderCharacterCount = this.renderCharacterCount.bind(this);
-  }
-
-  storeInputReference(input) {
-    if (input !== null) {
-      this.input = input;
-    }
   }
 
   /* eslint-disable consistent-return */
@@ -125,8 +118,7 @@ export default class Textarea extends Component {
     const { inputProps, id } = this.props;
     const allInputProps = {
       ...combineClassNames(inputProps, styles.textarea),
-      ...(id ? { id } : {}),
-      ref: this.storeInputReference
+      ...(id ? { id } : {})
     };
 
     return (
