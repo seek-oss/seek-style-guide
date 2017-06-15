@@ -19,6 +19,13 @@ export default {
             ...props,
             strong: true
           })
+        },
+        {
+          label: 'Disable baseline',
+          transformProps: props => ({
+            ...props,
+            baseline: false
+          })
         }
       ]
     },
