@@ -1,14 +1,14 @@
+@import (reference) "~basekick/mixin";
+
 @import (reference) "../type/type";
-@import (reference) "../type/baselineType";
-@import (reference) "../type/responsiveType";
 @import (reference) "../layout/grid";
 
-.heroText(@baseline: true)       { .__baselineType(@hero-type-scale, @hero-type-row-span, @baseline);             }
-.headlineText(@baseline: true)   { .__baselineType(@headline-type-scale, @headline-type-row-span, @baseline);     }
-.headingText(@baseline: true)    { .__baselineType(@heading-type-scale, @heading-type-row-span, @baseline);       }
-.subheadingText(@baseline: true) { .__baselineType(@subheading-type-scale, @subheading-type-row-span, @baseline); }
-.standardText(@baseline: true)   { .__baselineType(@standard-type-scale, @standard-type-row-span, @baseline);     }
-.smallText(@baseline: true)      { .__baselineType(@small-type-scale, @small-type-row-span, @baseline);           }
+.heroText(@baseline: true)       { .__type(@hero-type-scale, @hero-type-row-span, @baseline);             }
+.headlineText(@baseline: true)   { .__type(@headline-type-scale, @headline-type-row-span, @baseline);     }
+.headingText(@baseline: true)    { .__type(@heading-type-scale, @heading-type-row-span, @baseline);       }
+.subheadingText(@baseline: true) { .__type(@subheading-type-scale, @subheading-type-row-span, @baseline); }
+.standardText(@baseline: true)   { .__type(@standard-type-scale, @standard-type-row-span, @baseline);     }
+.smallText(@baseline: true)      { .__type(@small-type-scale, @small-type-row-span, @baseline);           }
 
 .heroTextResponsive(@baseline: true)       { .__responsiveType("hero"; @baseline);       }
 .headlineTextResponsive(@baseline: true)   { .__responsiveType("headline"; @baseline);   }
@@ -23,11 +23,6 @@
   height: (@grid-row-height * @interaction-type-row-span);
 }
 
-.nonBaselineText(@font-scale, @row-span) {
-  .rawText(@font-scale);
-  line-height: (@grid-row-height * @row-span);
-}
-
 .rawText(@font-scale: @standard-type-scale) {
   font-size: unit((@font-scale * @base-font-size), px);
 }
@@ -36,4 +31,41 @@
   font-family: @classic-base-font-stack;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+
+// Private type mixins
+.__type(@type-scale; @row-span; @baseline) when (isnumber(@type-scale)) and (isnumber(@row-span)) {
+  .__baselineCheck(@baseline) when (@baseline = true) {
+    .basekick(@type-scale, @row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+  }
+  .__baselineCheck(@baseline) when (@baseline = false) {
+    .rawText(@type-scale);
+    line-height: (@grid-row-height * @row-span);
+  }
+  .__baselineCheck(@baseline);
+}
+
+.__responsiveType(@variant; @baseline) when (isstring(@variant)) {
+  // Define responsive text breakpoint limits
+  @max-breakpoint: (@responsive-breakpoint - 1);
+  @min-breakpoint: @responsive-breakpoint;
+
+  // Concatenate type hierarchy variable name
+  @type-scale: "@{variant}-type-scale";
+  @row-span: "@{variant}-type-row-span";
+  @weight: "@{variant}-type-weight";
+  @mobile-type-scale: "@{type-scale}-mobile";
+  @mobile-row-span: "@{row-span}-mobile";
+  @mobile-weight: "@{variant}-type-weight-mobile";
+
+  @media only screen and (max-width: @max-breakpoint) {
+    .__type(@@mobile-type-scale, @@mobile-row-span, @baseline);
+
+    font-weight: @@mobile-weight;
+  }
+  @media only screen and (min-width: @min-breakpoint) {
+    .__type(@@type-scale, @@row-span, @baseline);
+
+    font-weight: @@weight;
+  }
 }
