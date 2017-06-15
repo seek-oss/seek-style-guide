@@ -1,7 +1,7 @@
 @import (reference) "type";
 @import (reference) "baselineType";
 
-.__responsiveType(@variant) when (isstring(@variant)) {
+.__responsiveType(@variant; @baseline) when (isstring(@variant)) {
   // Define responsive text breakpoint limits
   @max-breakpoint: (@responsive-breakpoint - 1);
   @min-breakpoint: @responsive-breakpoint;
@@ -15,12 +15,12 @@
   @mobile-weight: "@{variant}-type-weight-mobile";
 
   @media only screen and (max-width: @max-breakpoint) {
-    .__baselineType(@@mobile-type-scale, @@mobile-row-span);
+    .__baselineType(@@mobile-type-scale, @@mobile-row-span, @baseline);
 
     font-weight: @@mobile-weight;
   }
   @media only screen and (min-width: @min-breakpoint) {
-    .__baselineType(@@type-scale, @@row-span);
+    .__baselineType(@@type-scale, @@row-span, @baseline);
 
     font-weight: @@weight;
   }

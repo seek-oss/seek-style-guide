@@ -2,11 +2,16 @@
 
 @import (reference) "../layout/grid";
 @import (reference) "type";
+@import (reference) "../mixins/type";
 
-.__baselineType(@type-scale; @row-span) when (isnumber(@type-scale)) and (isnumber(@row-span)) {
+.__baselineType(@type-scale; @row-span; @baseline) when (isnumber(@type-scale)) and (isnumber(@row-span)) and (@baseline = true) {
   .basekick(@type-scale,
             @row-span,
             @font-descender-height-scale,
             @base-font-size,
             @grid-row-height);
+}
+
+.__baselineType(@type-scale; @row-span; @baseline) when (isnumber(@type-scale)) and (isnumber(@row-span)) and (@baseline = false) {
+  .nonBaselineText(@type-scale, @row-span);
 }

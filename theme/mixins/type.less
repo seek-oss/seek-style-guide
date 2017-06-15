@@ -3,24 +3,29 @@
 @import (reference) "../type/responsiveType";
 @import (reference) "../layout/grid";
 
-.heroText()       { .__baselineType(@hero-type-scale, @hero-type-row-span);             }
-.headlineText()   { .__baselineType(@headline-type-scale, @headline-type-row-span);     }
-.headingText()    { .__baselineType(@heading-type-scale, @heading-type-row-span);       }
-.subheadingText() { .__baselineType(@subheading-type-scale, @subheading-type-row-span); }
-.standardText()   { .__baselineType(@standard-type-scale, @standard-type-row-span);     }
-.smallText()      { .__baselineType(@small-type-scale, @small-type-row-span);           }
+.heroText(@baseline: true)       { .__baselineType(@hero-type-scale, @hero-type-row-span, @baseline);             }
+.headlineText(@baseline: true)   { .__baselineType(@headline-type-scale, @headline-type-row-span, @baseline);     }
+.headingText(@baseline: true)    { .__baselineType(@heading-type-scale, @heading-type-row-span, @baseline);       }
+.subheadingText(@baseline: true) { .__baselineType(@subheading-type-scale, @subheading-type-row-span, @baseline); }
+.standardText(@baseline: true)   { .__baselineType(@standard-type-scale, @standard-type-row-span, @baseline);     }
+.smallText(@baseline: true)      { .__baselineType(@small-type-scale, @small-type-row-span, @baseline);           }
 
-.heroTextResponsive()       { .__responsiveType("hero");       }
-.headlineTextResponsive()   { .__responsiveType("headline");   }
-.headingTextResponsive()    { .__responsiveType("heading");    }
-.subheadingTextResponsive() { .__responsiveType("subheading"); }
-.standardTextResponsive()   { .__responsiveType("standard");   }
-.smallTextResponsive()      { .__responsiveType("small");      }
+.heroTextResponsive(@baseline: true)       { .__responsiveType("hero"; @baseline);       }
+.headlineTextResponsive(@baseline: true)   { .__responsiveType("headline"; @baseline);   }
+.headingTextResponsive(@baseline: true)    { .__responsiveType("heading"; @baseline);    }
+.subheadingTextResponsive(@baseline: true) { .__responsiveType("subheading"; @baseline); }
+.standardTextResponsive(@baseline: true)   { .__responsiveType("standard"; @baseline);   }
+.smallTextResponsive(@baseline: true)      { .__responsiveType("small"; @baseline);      }
 
 .touchableText(@font-scale: @interaction-type-scale) {
   .rawText(@font-scale);
   line-height: (@grid-row-height * @interaction-type-row-span);
   height: (@grid-row-height * @interaction-type-row-span);
+}
+
+.nonBaselineText(@font-scale, @row-span) {
+  .rawText(@font-scale);
+  line-height: (@grid-row-height * @row-span);
 }
 
 .rawText(@font-scale: @standard-type-scale) {
