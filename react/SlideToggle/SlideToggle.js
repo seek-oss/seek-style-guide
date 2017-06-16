@@ -27,14 +27,15 @@ export default class SlideToggle extends Component {
 
   renderLabel = currentPosition => {
     const { label, hideLabel, children, position } = this.props;
+    const labelStyle = classnames(
+      styles.label,
+      position === LEFT ? styles.labelLeft : styles.labelRight
+    );
     return hideLabel !== true && position === currentPosition && !children && (
       <Text
-        raw
-        className={classnames(
-          styles.label,
-          position === LEFT ? styles.labelLeft : styles.labelRight
-        )}>
-        {label}
+        className={labelStyle}
+        baseline={false}>
+        <span className={styles.labelText}>{label}</span>
       </Text>
     );
   }
