@@ -1,7 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  .standardTextResponsive();
   padding-bottom: @grid-row-height;
 
   .root {
@@ -20,12 +19,34 @@
   }
 }
 
-.small { .smallTextResponsive(); }
-.substandard { .substandardTextResponsive(); }
-.subheading { .subheadingTextResponsive(); }
-.headline { .headlineTextResponsive(); }
-.heading { .headingTextResponsive(); }
-.hero { .heroTextResponsive(); }
+.root {
+  &:not(.baseline) {.standardTextResponsive(@baseline: false); }
+  &.baseline { .standardTextResponsive(@baseline: true); }
+}
+.small {
+  &:not(.baseline) {.smallTextResponsive(@baseline: false); }
+  &.baseline { .smallTextResponsive(@baseline: true); }
+}
+.substandard {
+  &:not(.baseline) {.substandardTextResponsive(@baseline: false); }
+  &.baseline { .substandardTextResponsive(@baseline: true); }
+}
+.subheading {
+  &:not(.baseline) {.subheadingTextResponsive(@baseline: false); }
+  &.baseline { .subheadingTextResponsive(@baseline: true); }
+}
+.headline {
+  &:not(.baseline) {.headlineTextResponsive(@baseline: false); }
+  &.baseline { .headlineTextResponsive(@baseline: true); }
+}
+.heading {
+  &:not(.baseline) {.headingTextResponsive(@baseline: false); }
+  &.baseline { .headingTextResponsive(@baseline: true); }
+}
+.hero {
+  &:not(.baseline) {.heroTextResponsive(@baseline: false); }
+  &.baseline { .heroTextResponsive(@baseline: true); }
+}
 
 .raw {
   padding-bottom: 0;

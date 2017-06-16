@@ -25,6 +25,7 @@ export default function Text({
   secondary,
   strong,
   regular,
+  baseline,
   ...restProps
 }) {
   return (
@@ -39,7 +40,8 @@ export default function Text({
         [styles.headline]: headline,
         [styles.heading]: heading,
         [styles.hero]: hero,
-        [styles.raw]: raw
+        [styles.raw]: raw,
+        [styles.baseline]: baseline
       })}>
       <span
         className={classnames({
@@ -69,5 +71,10 @@ Text.propTypes = {
   critical: PropTypes.bool,
   secondary: PropTypes.bool,
   strong: PropTypes.bool,
-  regular: PropTypes.bool
+  regular: PropTypes.bool,
+  baseline: PropTypes.bool
+};
+
+Text.defaultProps = {
+  baseline: true
 };
