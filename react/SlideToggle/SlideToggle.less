@@ -5,6 +5,7 @@
   height: @grid-row-height * 5;
   padding: @grid-row-height 0;
   cursor: pointer;
+  display: inline-block;
 }
 
 .switch {
@@ -50,7 +51,6 @@
 
 .label {
   padding: 0;
-  display: inline;
 }
 
 .labelLeft {
@@ -59,6 +59,10 @@
 
 .labelRight {
   margin-left: @grid-gutter-width / 2;
+}
+
+.labelText {
+  line-height: @grid-row-height * 3;
 }
 
 .slider {
