@@ -21,6 +21,13 @@ export default {
           })
         },
         {
+          label: 'Regular',
+          transformProps: props => ({
+            ...props,
+            regular: true
+          })
+        },
+        {
           label: 'Disable baseline',
           transformProps: props => ({
             ...props,
@@ -97,6 +104,14 @@ export default {
           transformProps: props => ({
             ...props,
             hero: false
+          })
+        },
+        {
+          label: 'Substandard',
+          transformProps: props => ({
+            ...props,
+            hero: false,
+            substandard: true
           })
         }
       ]
