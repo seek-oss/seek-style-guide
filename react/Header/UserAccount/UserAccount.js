@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../authStatusTypes';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 
 const calculateMobileMenuLabel = (authenticationStatus, userName) => {
   if (authenticationStatus === AUTH_PENDING) {

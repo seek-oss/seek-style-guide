@@ -2,8 +2,9 @@ import styles from './FooterLink.less';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 
-export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, ...props }) {
+export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, authedHref, authenticationStatus, ...props }) {
   return (
     <li
       className={classnames(
@@ -14,6 +15,7 @@ export default function FooterLink({ secondary, partner, analytics, className, l
         linkRenderer({
           'data-analytics': analytics,
           className: styles.link,
+          href: authenticationStatus === AUTHENTICATED && authedHref || href,
           ...props
         })
       }
@@ -36,9 +38,16 @@ FooterLink.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  linkRenderer: PropTypes.func.isRequired
+  linkRenderer: PropTypes.func.isRequired,
+  authedHref: PropTypes.string,
+  authenticationStatus: PropTypes.oneOf([
+    AUTHENTICATED,
+    UNAUTHENTICATED,
+    AUTH_PENDING
+  ])
 };
 
 FooterLink.defaultProps = {
-  secondary: false
+  secondary: false,
+  authenticationStatus: AUTH_PENDING
 };

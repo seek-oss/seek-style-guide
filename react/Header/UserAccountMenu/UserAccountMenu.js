@@ -11,7 +11,7 @@ import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
 import employerLinkForLocale from '../employerLinkForLocale';
 import appendReturnUrl from '../appendReturnUrl';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../authStatusTypes';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 
 const clearLocalStorage = () => {
   if (window && window.localStorage) {
@@ -78,7 +78,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:saved+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: '/my-activity/saved-jobs',
+            href: authenticationStatus === AUTHENTICATED ? '/my-activity/saved-jobs' : '/sign-in?returnUrl=/my-activity/saved-jobs&nudge=saved',
             children: [
               <span key="label">Saved <span className={styles.smallDeviceOnly}>& Applied </span>Jobs</span>,
               <StarIcon
@@ -95,7 +95,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:applied+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: '/my-activity/applied-jobs',
+            href: authenticationStatus === AUTHENTICATED ? '/my-activity/applied-jobs' : '/sign-in?returnUrl=/my-activity/applied-jobs&nudge=applied',
             children: [
               'Applied Jobs',
               <div key="iconSpacer" className={styles.iconSpacer} />
