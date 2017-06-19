@@ -27,12 +27,6 @@
   font-size: unit((@font-scale * @base-font-size), px);
 }
 
-.classicFontStack() {
-  font-family: @classic-base-font-stack;
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
-}
-
 // Private type mixins
 .__type(@type-scale; @row-span; @baseline) when (isnumber(@type-scale)) and (isnumber(@row-span)) {
   .__baselineCheck(@baseline) when (@baseline = true) {
