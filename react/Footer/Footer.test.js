@@ -7,10 +7,10 @@ const renderFooter = props => shallow(<Footer {...props} />);
 
 describe('Footer:', () => {
   it('should render with locale of AU', () => {
-    expect(renderFooter({ locale: 'AU' })).toMatchSnapshot();
+    expect(renderFooter({ locale: 'AU' }).render()).toMatchSnapshot();
   });
 
   it('should render with locale of NZ', () => {
-    expect(renderFooter({ locale: 'NZ' })).toMatchSnapshot();
+    expect(renderFooter({ locale: 'NZ' }).render()).toMatchSnapshot();
   });
 });
