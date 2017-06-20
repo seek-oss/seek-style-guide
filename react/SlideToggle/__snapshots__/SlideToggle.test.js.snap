@@ -28,10 +28,14 @@ exports[`Slide toggle: should render a checked state 1`] = `
       </div>
     </div>
     <Text
+      baseline={false}
       className="label labelRight"
-      raw={true}
     >
-      Test toggle
+      <span
+        className="labelText"
+      >
+        Test toggle
+      </span>
     </Text>
   </div>
 </label>
@@ -64,10 +68,14 @@ exports[`Slide toggle: should render with default props 1`] = `
       </div>
     </div>
     <Text
+      baseline={false}
       className="label labelRight"
-      raw={true}
     >
-      Test toggle
+      <span
+        className="labelText"
+      >
+        Test toggle
+      </span>
     </Text>
   </div>
 </label>
@@ -118,10 +126,14 @@ exports[`Slide toggle: should render with the label on the left 1`] = `
       type="checkbox"
     />
     <Text
+      baseline={false}
       className="label labelLeft"
-      raw={true}
     >
-      Test toggle
+      <span
+        className="labelText"
+      >
+        Test toggle
+      </span>
     </Text>
     <div
       className="slider"
