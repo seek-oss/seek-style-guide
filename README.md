@@ -150,41 +150,6 @@ The `<Footer>` component accepts the following props:
 - **locale:** See above.
 - **linkRenderer:** See above.
 
-### Setting up Web Fonts
-
-Our standard web font loading strategy is to load and cache web fonts in the background, and only display them on page load if already present in the cache. This is to ensure that text is rendered as soon as possible, without the dreaded "flash of invisible text" (FOIT), or "flash of unstyled text" (FOUT), both of which are negative performance impacts commonly found with web fonts.
-
-Typically, engineering performant web fonts takes a lot of work, so we've provided a simple mechanism to hook this into your application.
-
-First, include the font bundle by requiring it in the entry point to your client code:
-
-```js
-require('seek-style-guide/fonts/bundle');
-```
-
-Then, render the font snippet and provide it to your main application template, ensuring it's rendered in the markup before your main CSS file. Note that you need to provide the base href to your static assets:
-
-```js
-import { renderFontSnippet } from 'seek-style-guide/fonts';
-
-const fontSnippet = renderFontSnippet({
-  baseHref: process.env.SEEK_STATIC_RESOURCE_PATH // (as an example)
-});
-
-// Now, pass your generated font snippet to your template.
-```
-
-If your application doesn't have a dynamic server component, you can optionally evaluate the snippet immediately:
-
-```js
-import { renderFontSnippet } from 'seek-style-guide/fonts';
-
-const fontSnippet = renderFontSnippet({
-  baseHref: process.env.SEEK_STATIC_RESOURCE_PATH,  // (as an example)
-  evaluate: true
-});
-```
-
 ## Less
 
 In any style sheet that depends on the style guide, first import the Less theme by reference.
@@ -306,19 +271,6 @@ We also expose responsive type mixins that may change scale and row span based o
 ```
 
 In particular standard text is larger on a smaller screen using `.standardTextResponsive`
-
-
-### Classic Font Stack
-
-The style guide enforces modern font styling as a default. However, some aspects of the UI may need to fall back to the classic font stack, e.g. the common header used across SEEK. This can be achieved via a simple mixin:
-
-```less
-.element {
-  .classicFontStack();
-}
-```
-
-Note that, since font styles cascade, this can be applied to a parent component in order to correctly style all children.
 
 ### Grid Variables
 
