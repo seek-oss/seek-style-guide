@@ -238,9 +238,6 @@ const decorateClientConfig = (config, options) => {
     extractTextPlugin.extract.bind(extractTextPlugin, 'style') :
     loaders => `${require.resolve('style-loader')}!${loaders}`;
 
-  const extractWoff = new ExtractTextPlugin('roboto.woff.css');
-  const extractWoff2 = new ExtractTextPlugin('roboto.woff2.css');
-
   return decorateConfig(config, {
     cssSelectorPrefix,
     loaders: [
@@ -252,32 +249,7 @@ const decorateClientConfig = (config, options) => {
           `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
           `${require.resolve('less-loader')}`
         ].join('!'))
-      },
-      {
-        test: /Roboto.woff.css$/,
-        include: styleGuidePaths,
-        loader: extractWoff.extract([
-          `${require.resolve('css-loader')}?minimize`
-        ])
-      },
-      {
-        test: /Roboto.woff2.css$/,
-        include: styleGuidePaths,
-        loader: extractWoff2.extract([
-          `${require.resolve('css-loader')}?minimize`
-        ])
-      },
-      {
-        test: /\.woff2?$/,
-        include: styleGuidePaths,
-        loaders: [
-          require.resolve('base64-font-loader')
-        ]
       }
-    ],
-    plugins: [
-      extractWoff,
-      extractWoff2
     ]
   });
 };
