@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import Header from './Header';
 
-const renderHeader = props => shallow(<Header {...props} />);
+const renderHeader = props => shallow(<Header {...props} />).render();
 
 describe('Header:', () => {
   it('should render with locale of AU', () => {
