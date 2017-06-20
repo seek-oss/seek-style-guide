@@ -1,9 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from 'enzyme';
 
 import Header from './Header';
 
-const renderHeader = props => shallow(<Header {...props} />).render();
+const renderHeader = props => render(<Header {...props} />);
 
 describe('Header:', () => {
   it('should render with locale of AU', () => {

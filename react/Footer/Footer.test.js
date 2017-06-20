@@ -1,9 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from 'enzyme';
 
 import Footer from './Footer';
 
-const renderFooter = props => shallow(<Footer {...props} />).render();
+const renderFooter = props => render(<Footer {...props} />);
 
 describe('Footer:', () => {
   it('should render with locale of AU', () => {
