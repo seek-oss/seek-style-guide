@@ -88,20 +88,15 @@ describe('Textarea', () => {
     });
   });
 
-  describe('maxCharacters', () => {
+  describe('secondaryLabel', () => {
     it('should not be rendered by default', () => {
       render(<Textarea />);
       expect(textarea.props.children[0].props.secondaryLabel).to.equal('');
     });
 
-    it('should error if \`maxCharacters\` is not a number', () => {
-      render(<Textarea maxCharacters={true} />);
-      expect(errors[0]).to.match(/Invalid prop `maxCharacters`/);
-    });
-
-    it('should pass maxCharacters message if \`maxCharacters\` is supplied to FieldLabel as secondaryLabel', () => {
-      render(<Textarea maxCharacters={300} />);
-      expect(textarea.props.children[0].props.secondaryLabel).to.equal('(300 character limit)');
+    it('should pass secondaryLabel message if \`secondaryLabel\` is supplied', () => {
+      render(<Textarea secondaryLabel="secondary" />);
+      expect(textarea.props.children[0].props.secondaryLabel).to.equal('secondary');
     });
   });
 

@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "Living style guide containing the building blocks and design principles for SEEK web applications",
   "engines": {
-    "node" : ">=6.0.0"
+    "node": ">=6.0.0"
   },
   "main": "index.js",
   "scripts": {

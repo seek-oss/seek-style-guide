@@ -45,9 +45,6 @@ export default class Textarea extends Component {
         return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
-    /* eslint-enable consistent-return */
-    maxCharacters: PropTypes.number,
-    /* eslint-disable consistent-return */
     countFeedback: (props, propName, componentName) => {
       const { inputProps = {} } = props;
       const { value } = inputProps;
@@ -59,7 +56,8 @@ export default class Textarea extends Component {
       if (props[propName] && typeof value !== 'string') {
         return new Error(`\`inputProps.value\` must be supplied if \`${propName}\` is set`);
       }
-    }
+    },
+    secondaryLabel: PropTypes.string
     /* eslint-enable consistent-return */
   };
 
@@ -71,22 +69,11 @@ export default class Textarea extends Component {
   constructor() {
     super();
 
-    this.renderCharacterLimit = this.renderCharacterLimit.bind(this);
     this.renderInput = this.renderInput.bind(this);
     this.renderCharacterCount = this.renderCharacterCount.bind(this);
   }
 
   /* eslint-disable consistent-return */
-  renderCharacterLimit() {
-    const { maxCharacters } = this.props;
-
-    if (!maxCharacters) {
-      return;
-    }
-
-    return `(${maxCharacters} character limit)`;
-  }
-
   renderCharacterCount() {
     const { countFeedback, inputProps = {} } = this.props;
     const { value } = inputProps;
@@ -135,11 +122,11 @@ export default class Textarea extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { id, label, labelProps, invalid, help, helpProps, message, messageProps } = this.props;
+    const { id, label, labelProps, invalid, help, helpProps, message, messageProps, secondaryLabel } = this.props;
 
     return (
       <div className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel: this.renderCharacterLimit() }} />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel }} />
         {this.renderInput()}
         <div className={styles.footer}>
           <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
