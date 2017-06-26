@@ -13,4 +13,16 @@ describe('Footer:', () => {
   it('should render with locale of NZ', () => {
     expect(renderFooter({ locale: 'NZ' })).toMatchSnapshot();
   });
+
+  it('should render when authenticated', () => {
+    expect(renderFooter({ authenticationStatus: 'authenticated' }).toJSON()).toMatchSnapshot();
+  });
+
+  it('should render when unauthenticated', () => {
+    expect(renderFooter({ authenticationStatus: 'unauthenticated' }).toJSON()).toMatchSnapshot();
+  });
+
+  it('should render when authentication is pending', () => {
+    expect(renderFooter({ authenticationStatus: 'pending' }).toJSON()).toMatchSnapshot();
+  });
 });

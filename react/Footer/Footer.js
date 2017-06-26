@@ -16,18 +16,25 @@ import FooterNav from './FooterNav/FooterNav';
 import Hidden from '../Hidden/Hidden';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import ToggleContainer from './ToggleContainer/ToggleContainer';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
 const defaultLinkRenderer = props => (<a {...props} />);
 
 export default class Footer extends Component {
   static propTypes = {
     locale: PropTypes.oneOf(['AU', 'NZ']),
-    linkRenderer: PropTypes.func
+    linkRenderer: PropTypes.func,
+    authenticationStatus: PropTypes.oneOf([
+      AUTHENTICATED,
+      UNAUTHENTICATED,
+      AUTH_PENDING
+    ])
   };
 
   static defaultProps = {
     locale: 'AU',
-    linkRenderer: defaultLinkRenderer
+    linkRenderer: defaultLinkRenderer,
+    authenticationStatus: AUTH_PENDING
   };
 
   constructor() {
@@ -41,10 +48,10 @@ export default class Footer extends Component {
   }
 
   renderLink({ name, specificLocale, secondary, ...restProps }, i) {
-    const { locale, linkRenderer } = this.props;
+    const { locale, linkRenderer, authenticationStatus } = this.props;
 
     return (!specificLocale || specificLocale === locale) ?
-      <FooterLink secondary={secondary} linkRenderer={linkRenderer} key={i} {...restProps}>{name}</FooterLink> :
+      <FooterLink secondary={secondary} linkRenderer={linkRenderer} authenticationStatus={authenticationStatus} key={i} {...restProps}>{name}</FooterLink> :
       null;
   }
 
