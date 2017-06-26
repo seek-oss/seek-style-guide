@@ -68,10 +68,10 @@ export default {
           })
         },
         {
-          label: 'Max Characters',
+          label: 'Secondary Label',
           transformProps: props => ({
             ...props,
-            maxCharacters: 500
+            secondaryLabel: '(secondary)'
           })
         },
         {
