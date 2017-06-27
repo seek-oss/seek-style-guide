@@ -20,12 +20,17 @@ const getAutosuggestProps = (suggestions = []) => ({
 });
 
 describe('Autosuggest', () => {
+  let spy;
+  const errors = [];
+
   beforeEach(() => {
     global.console = { error: jest.fn() };
+    spy = jest.spyOn(global.console, 'error').mockImplementation(
+      err => errors.push(err));
   });
 
   afterEach(() => {
-    jest.resetAllMocks();
+    spy.mockRestore();
   });
 
   it('should render with simple props', () => {
