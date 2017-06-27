@@ -25,7 +25,7 @@ describe('Autosuggest', () => {
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    jest.resetAllMocks();
   });
 
   it('should render with simple props', () => {
