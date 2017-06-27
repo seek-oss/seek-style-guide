@@ -21,12 +21,9 @@ const getAutosuggestProps = (suggestions = []) => ({
 
 describe('Autosuggest', () => {
   let spy;
-  const errors = [];
 
   beforeEach(() => {
-    global.console = { error: jest.fn() };
-    spy = jest.spyOn(global.console, 'error').mockImplementation(
-      err => errors.push(err));
+    spy = jest.spyOn(global.console, 'error');
   });
 
   afterEach(() => {
@@ -54,7 +51,7 @@ describe('Autosuggest', () => {
     const expectedError = expect.stringMatching(/Invalid prop `suggestionsContainerClassName` of type `boolean` supplied to `Autosuggest`, expected `string/);
     render(<Autosuggest {...getAutosuggestProps()} suggestionsContainerClassName={true} />);
 
-    expect(console.error).toBeCalledWith(expectedError);
+    expect(spy).toBeCalledWith(expectedError);
   });
 
   it('should error if `suggestionsContainerClassName` and theme with class `suggestionsContainer` are both specified', () => {
@@ -65,7 +62,7 @@ describe('Autosuggest', () => {
     const expectedError = expect.stringMatching(/`suggestionsContainerClassName` will be overridden by the `suggestionsContainer` class in autosuggestProps `theme`. Please remove it./);
 
     render(<Autosuggest {...props} suggestionsContainerClassName="TEST 2" />);
-    expect(console.error).toBeCalledWith(expectedError);
+    expect(spy).toBeCalledWith(expectedError);
   });
 
   it('should focus field when suggestion is clicked', () => {
