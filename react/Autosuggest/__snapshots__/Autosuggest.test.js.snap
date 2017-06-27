@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autosuggest should render with label 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <label
+      class=""
+      for="Foo"
+    >
+      <div
+        class="root baseline"
+      >
+        <span
+          class=""
+        >
+          <strong
+            class="root"
+          >
+            Foo
+          </strong>
+           
+        </span>
+      </div>
+    </label>
+    <input
+      aria-autocomplete="list"
+      aria-expanded="false"
+      aria-haspopup="false"
+      aria-owns="react-autowhatever-1"
+      autocomplete="off"
+      class="input"
+      id="Foo"
+      role="combobox"
+      type="text"
+      value=""
+    />
+    <span
+      class="clearField"
+    >
+      <div
+        class="root"
+      >
+        <span
+          class="root"
+        >
+          mock svg
+        </span>
+      </div>
+    </span>
+    <div
+      class="root"
+    />
+  </div>
+  <div
+    class="suggestionsContainer suggestionsContainer_withLabel"
+    id="react-autowhatever-1"
+  />
+</div>
+`;
+
+exports[`Autosuggest should render with simple props 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-expanded="false"
+      aria-haspopup="false"
+      aria-owns="react-autowhatever-1"
+      autocomplete="off"
+      class="input"
+      role="combobox"
+      type="text"
+      value=""
+    />
+    <span
+      class="clearField"
+    >
+      <div
+        class="root"
+      >
+        <span
+          class="root"
+        >
+          mock svg
+        </span>
+      </div>
+    </span>
+    <div
+      class="root"
+    />
+  </div>
+  <div
+    class="suggestionsContainer"
+    id="react-autowhatever-1"
+  />
+</div>
+`;
+
+exports[`Autosuggest should render with suggestions 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-expanded="true"
+      aria-haspopup="true"
+      aria-owns="react-autowhatever-1"
+      autocomplete="off"
+      class="input"
+      role="combobox"
+      type="text"
+      value=""
+    />
+    <span
+      class="clearField"
+    >
+      <div
+        class="root"
+      >
+        <span
+          class="root"
+        >
+          mock svg
+        </span>
+      </div>
+    </span>
+    <div
+      class="root"
+    />
+  </div>
+  <div
+    class="suggestionsContainer"
+    id="react-autowhatever-1"
+  >
+    <ul
+      role="listbox"
+    >
+      <li
+        data-suggestion-index="0"
+        id="react-autowhatever-1--item-0"
+        role="option"
+      >
+        <span
+          class="suggestion"
+        >
+          test
+        </span>
+      </li>
+      <li
+        data-suggestion-index="1"
+        id="react-autowhatever-1--item-1"
+        role="option"
+      >
+        <span
+          class="suggestion"
+        >
+          test 2
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
