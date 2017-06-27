@@ -1,54 +1,36 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 import Hidden from './Hidden';
 
 describe('components/grid/hidden', () => {
   it('should render with children', () => {
-    expect(
-      renderer.create(
-        <Hidden>Text</Hidden>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const wrapper = shallow(<Hidden>Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with classname', () => {
-    expect(
-      renderer.create(
-        <Hidden className="foo">Text</Hidden>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const wrapper = shallow(<Hidden className="foo">Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with screen', () => {
-    expect(
-      renderer.create(
-        <Hidden screen>Text</Hidden>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const wrapper = shallow(<Hidden screen>Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with print', () => {
-    expect(
-      renderer.create(
-        <Hidden print>Text</Hidden>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const wrapper = shallow(<Hidden print>Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with desktop', () => {
-    expect(
-      renderer.create(
-        <Hidden desktop>Text</Hidden>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const wrapper = shallow(<Hidden desktop>Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with mobile', () => {
-    expect(
-      renderer.create(
-        <Hidden mobile>Text</Hidden>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const wrapper = shallow(<Hidden mobile>Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
   });
 });

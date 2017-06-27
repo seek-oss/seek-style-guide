@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextLink should render with chevron 1`] = `
+<a
+  className="link"
+>
+  Google
+  <ChevronIcon
+    className="chevron"
+    direction="right"
+    svgClassName="chevronSvg"
+  />
+</a>
+`;
+
+exports[`TextLink should render with children 1`] = `
+<a
+  className="link"
+>
+  Google
+</a>
+`;
+
+exports[`TextLink should render with className 1`] = `
+<a
+  className="link foo"
+/>
+`;
+
+exports[`TextLink should render with defaults 1`] = `
+<a
+  className="link"
+/>
+`;

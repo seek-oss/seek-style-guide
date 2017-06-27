@@ -3,21 +3,21 @@
 exports[`Footer: should render with locale of AU 1`] = `
 <footer
   aria-labelledby="FooterHeading"
-  className="root"
+  class="root"
   role="contentinfo"
 >
   <span
-    className="print"
+    class="print"
   >
     <div
-      className=""
+      class=""
     >
       <div
-        className="content"
+        class="content"
       >
         <section>
           <span
-            className="root"
+            class="root"
           >
             <h1
               id="FooterHeading"
@@ -26,26 +26,26 @@ exports[`Footer: should render with locale of AU 1`] = `
             </h1>
           </span>
           <div
-            className="content"
+            class="content"
           >
             <div
-              className="columns"
+              class="columns"
             >
               <nav
                 aria-label="Tools"
-                className="category"
+                class="category"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Tools
                 </h1>
                 <ul>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:jobs"
                       href="/"
                     >
@@ -53,10 +53,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:profile"
                       href="/profile/"
                     >
@@ -64,10 +64,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:my+activity"
                       href="/myactivity#favourite"
                     >
@@ -75,10 +75,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:favourite"
                       href="/my-activity/saved-jobs"
                     >
@@ -86,10 +86,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:applied"
                       href="/my-activity/applied-jobs"
                     >
@@ -97,10 +97,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:advice+tips"
                       href="/career-advice/"
                     >
@@ -108,10 +108,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:companies"
                       href="/companies/"
                     >
@@ -119,36 +119,32 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <input
-                      className="toggle"
-                      data-automation={undefined}
+                      class="toggle"
                       id="PartnerSitesToggle"
                       type="checkbox"
                     />
                     <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="PartnerSitesToggle"
+                      class="toggleLink toggleLabel"
+                      for="PartnerSitesToggle"
                     >
                       SEEK sites
                       <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
+                        class="root root down chevron"
+                      >
+                        mock svg
+                      </span>
                     </label>
                     <ul
-                      className="toggleContainer"
+                      class="toggleContainer"
                     >
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:post+a+job+ad"
                           href="https://talent.seek.com.au/"
                         >
@@ -156,10 +152,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:nz+homepage"
                           href="https://www.seek.co.nz/"
                         >
@@ -167,10 +163,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:courses"
                           href="https://www.seeklearning.com.au/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                         >
@@ -178,10 +174,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:business+for+sale"
                           href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
                         >
@@ -189,10 +185,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:volunteering"
                           href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
                         >
@@ -205,19 +201,19 @@ exports[`Footer: should render with locale of AU 1`] = `
               </nav>
               <nav
                 aria-label="Company"
-                className="category secondary"
+                class="category secondary"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Company
                 </h1>
                 <ul>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:about+seek"
                       href="/investor/about-us"
                     >
@@ -225,10 +221,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:media"
                       href="/investor/news-media"
                     >
@@ -236,10 +232,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:investor+centre"
                       href="https://ir.seek.com.au"
                     >
@@ -247,235 +243,231 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <input
-                      className="toggle"
-                      data-automation={undefined}
+                      class="toggle"
                       id="InternationalPartnersToggle"
                       type="checkbox"
                     />
                     <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="InternationalPartnersToggle"
+                      class="toggleLink toggleLabel"
+                      for="InternationalPartnersToggle"
                     >
                       International partners
                       <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
+                        class="root root down chevron"
+                      >
+                        mock svg
+                      </span>
                     </label>
                     <ul
-                      className="toggleContainer"
+                      class="toggleContainer"
                     >
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:babajob"
                           href="http://www.babajob.com"
                         >
                           BabaJob
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — India
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:bdjobs"
                           href="http://www.bdjobs.com"
                         >
                           Bdjobs
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Bangladesh
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:brighter+monday"
                           href="https://www.brightermonday.com"
                         >
                           Brighter Monday
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — E Africa
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:catho"
                           href="http://www.catho.com.br"
                         >
                           Catho
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Brazil
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jobberman"
                           href="http://www.jobberman.com"
                         >
                           Jobberman
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — W Africa
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jobsdb"
                           href="http://www.jobsdb.com"
                         >
                           jobsDB
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — SE Asia
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jobstreet"
                           href="http://www.jobstreet.com"
                         >
                           JobStreet
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — SE Asia
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jora+int"
                           href="https://www.jora.com"
                         >
                           Jora
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Worldwide
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:manager"
                           href="http://www.manager.com.br"
                         >
                           Manager
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Brazil
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:occ+mundial"
                           href="https://www.occ.com.mx"
                         >
                           OCC Mundial
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Mexico
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:workana"
                           href="https://www.workana.com"
                         >
                           Workana
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Latin America
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:zhaopin"
                           href="http://www.zhaopin.com"
                         >
                           Zhaopin
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — China
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jora+au"
                           href="https://au.jora.com"
                         >
                           Jora
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Australia
                         </span>
@@ -483,36 +475,33 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </ul>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <input
-                      className="toggle"
+                      class="toggle"
                       data-automation="partner-services-toggle"
                       id="PartnerServicesToggle"
                       type="checkbox"
                     />
                     <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="PartnerServicesToggle"
+                      class="toggleLink toggleLabel"
+                      for="PartnerServicesToggle"
                     >
                       Partner services
                       <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
+                        class="root root down chevron"
+                      >
+                        mock svg
+                      </span>
                     </label>
                     <ul
-                      className="toggleContainer"
+                      class="toggleContainer"
                     >
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jobadder"
                           href="https://jobadder.com/au"
                         >
@@ -520,10 +509,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jora+local"
                           data-automation="jora-local-link"
                           href="http://www.joralocal.com.au"
@@ -532,10 +521,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:realestate+au"
                           href="https://www.realestate.com.au/buy"
                         >
@@ -543,10 +532,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:sidekicker"
                           href="https://www.sidekicker.com.au/"
                         >
@@ -554,10 +543,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:ximble"
                           href="https://www.ximble.com"
                         >
@@ -570,19 +559,19 @@ exports[`Footer: should render with locale of AU 1`] = `
               </nav>
               <nav
                 aria-label="Connect"
-                className="category"
+                class="category"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Connect
                 </h1>
                 <ul>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:contact+us"
                       href="/contact-us"
                     >
@@ -590,10 +579,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:work+for+seek"
                       href="/work-for-seek"
                     >
@@ -601,10 +590,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:product+blog"
                       href="http://productblog.seek.com.au"
                     >
@@ -612,36 +601,32 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <input
-                      className="toggle"
-                      data-automation={undefined}
+                      class="toggle"
                       id="SocialToggle"
                       type="checkbox"
                     />
                     <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="SocialToggle"
+                      class="toggleLink toggleLabel"
+                      for="SocialToggle"
                     >
                       Social
                       <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
+                        class="root root down chevron"
+                      >
+                        mock svg
+                      </span>
                     </label>
                     <ul
-                      className="toggleContainer"
+                      class="toggleContainer"
                     >
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:facebook"
                           href="https://www.facebook.com/SEEK/"
                         >
@@ -649,10 +634,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:instagram"
                           href="https://www.instagram.com/seekau/"
                         >
@@ -660,10 +645,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:twitter"
                           href="https://twitter.com/seekjobs"
                         >
@@ -671,10 +656,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:youtube"
                           href="https://www.youtube.com/user/SEEKJobs"
                         >
@@ -687,19 +672,19 @@ exports[`Footer: should render with locale of AU 1`] = `
               </nav>
               <nav
                 aria-label="Employers"
-                className="category secondary"
+                class="category secondary"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Employers
                 </h1>
                 <ul>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:register+for+free"
                       href="https://talent.seek.com.au/"
                     >
@@ -707,10 +692,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.com.au/"
                     >
@@ -718,10 +703,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:products+prices"
                       href="https://talent.seek.com.au/Support/OurProducts"
                     >
@@ -729,10 +714,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:customer+service"
                       href="https://talent.seek.com.au/ContactUs"
                     >
@@ -740,10 +725,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:insight+blog"
                       href="http://insightsresources.seek.com.au"
                     >
@@ -754,45 +739,45 @@ exports[`Footer: should render with locale of AU 1`] = `
               </nav>
             </div>
             <nav
-              className="copyright"
+              class="copyright"
             >
               <span
-                className="root"
+                class="root"
               >
                 <h1>
                   Additional Links
                 </h1>
               </span>
               <a
-                className="copyrightLink"
+                class="copyrightLink"
                 data-analytics="toolbar:privacy"
                 href="/privacy"
               >
                 Privacy
               </a>
               <a
-                className="copyrightLink"
+                class="copyrightLink"
                 data-analytics="toolbar:terms+conditions"
                 href="/terms"
               >
                 Terms & Conditions
               </a>
               <a
-                className="copyrightLink"
+                class="copyrightLink"
                 data-analytics="toolbar:seek+safely"
                 href="/safe-job-searching"
               >
                 SEEK safely
               </a>
               <a
-                className="copyrightLink secondaryLink"
+                class="copyrightLink secondaryLink"
                 data-analytics="toolbar:site+map"
                 href="/sitemap"
               >
                 Site Map
               </a>
               <p
-                className="copyrightMessage"
+                class="copyrightMessage"
               >
                 © SEEK. All rights reserved.
               </p>
@@ -808,21 +793,21 @@ exports[`Footer: should render with locale of AU 1`] = `
 exports[`Footer: should render with locale of NZ 1`] = `
 <footer
   aria-labelledby="FooterHeading"
-  className="root"
+  class="root"
   role="contentinfo"
 >
   <span
-    className="print"
+    class="print"
   >
     <div
-      className=""
+      class=""
     >
       <div
-        className="content"
+        class="content"
       >
         <section>
           <span
-            className="root"
+            class="root"
           >
             <h1
               id="FooterHeading"
@@ -831,26 +816,26 @@ exports[`Footer: should render with locale of NZ 1`] = `
             </h1>
           </span>
           <div
-            className="content"
+            class="content"
           >
             <div
-              className="columns"
+              class="columns"
             >
               <nav
                 aria-label="Tools"
-                className="category"
+                class="category"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Tools
                 </h1>
                 <ul>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:jobs"
                       href="/"
                     >
@@ -858,10 +843,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:profile"
                       href="/profile/"
                     >
@@ -869,10 +854,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:my+activity"
                       href="/myactivity#favourite"
                     >
@@ -880,10 +865,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:favourite"
                       href="/my-activity/saved-jobs"
                     >
@@ -891,10 +876,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:applied"
                       href="/my-activity/applied-jobs"
                     >
@@ -902,10 +887,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:advice+tips"
                       href="/career-advice/"
                     >
@@ -913,36 +898,32 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <input
-                      className="toggle"
-                      data-automation={undefined}
+                      class="toggle"
                       id="PartnerSitesToggle"
                       type="checkbox"
                     />
                     <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="PartnerSitesToggle"
+                      class="toggleLink toggleLabel"
+                      for="PartnerSitesToggle"
                     >
                       SEEK sites
                       <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
+                        class="root root down chevron"
+                      >
+                        mock svg
+                      </span>
                     </label>
                     <ul
-                      className="toggleContainer"
+                      class="toggleContainer"
                     >
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:post+a+job+ad"
                           href="https://talent.seek.co.nz/"
                         >
@@ -950,10 +931,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:au+homepage"
                           href="https://www.seek.com.au/"
                         >
@@ -961,10 +942,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:courses"
                           href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                         >
@@ -972,10 +953,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:business+for+sale"
                           href="https://www.seekbusiness.co.nz/?tracking=sk:main:nz:nav:bus"
                         >
@@ -983,10 +964,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:volunteering"
                           href="https://www.volunteer.co.nz/?tracking=SKMNZ:main+header"
                         >
@@ -999,19 +980,19 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </nav>
               <nav
                 aria-label="Company"
-                className="category secondary"
+                class="category secondary"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Company
                 </h1>
                 <ul>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:about+seek"
                       href="/investor/about-us"
                     >
@@ -1019,10 +1000,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:media"
                       href="/investor/news-media"
                     >
@@ -1030,10 +1011,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:investor+centre"
                       href="https://ir.seek.com.au"
                     >
@@ -1041,235 +1022,231 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <input
-                      className="toggle"
-                      data-automation={undefined}
+                      class="toggle"
                       id="InternationalPartnersToggle"
                       type="checkbox"
                     />
                     <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="InternationalPartnersToggle"
+                      class="toggleLink toggleLabel"
+                      for="InternationalPartnersToggle"
                     >
                       International partners
                       <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
+                        class="root root down chevron"
+                      >
+                        mock svg
+                      </span>
                     </label>
                     <ul
-                      className="toggleContainer"
+                      class="toggleContainer"
                     >
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:babajob"
                           href="http://www.babajob.com"
                         >
                           BabaJob
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — India
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:bdjobs"
                           href="http://www.bdjobs.com"
                         >
                           Bdjobs
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Bangladesh
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:brighter+monday"
                           href="https://www.brightermonday.com"
                         >
                           Brighter Monday
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — E Africa
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:catho"
                           href="http://www.catho.com.br"
                         >
                           Catho
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Brazil
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jobberman"
                           href="http://www.jobberman.com"
                         >
                           Jobberman
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — W Africa
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jobsdb"
                           href="http://www.jobsdb.com"
                         >
                           jobsDB
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — SE Asia
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jobstreet"
                           href="http://www.jobstreet.com"
                         >
                           JobStreet
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — SE Asia
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jora+int"
                           href="https://www.jora.com"
                         >
                           Jora
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Worldwide
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:manager"
                           href="http://www.manager.com.br"
                         >
                           Manager
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Brazil
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:occ+mundial"
                           href="https://www.occ.com.mx"
                         >
                           OCC Mundial
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Mexico
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:workana"
                           href="https://www.workana.com"
                         >
                           Workana
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Latin America
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:zhaopin"
                           href="http://www.zhaopin.com"
                         >
                           Zhaopin
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — China
                         </span>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:jora+au"
                           href="https://au.jora.com"
                         >
                           Jora
                         </a>
                         <span
-                          className="partnerCountry"
+                          class="partnerCountry"
                         >
                            — Australia
                         </span>
@@ -1280,19 +1257,19 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </nav>
               <nav
                 aria-label="Connect"
-                className="category"
+                class="category"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Connect
                 </h1>
                 <ul>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:contact+us"
                       href="/contact-us"
                     >
@@ -1300,10 +1277,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:work+for+seek"
                       href="/work-for-seek"
                     >
@@ -1311,10 +1288,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className="secondary"
+                    class="secondary"
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:product+blog"
                       href="http://productblog.seek.com.au"
                     >
@@ -1322,36 +1299,32 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <input
-                      className="toggle"
-                      data-automation={undefined}
+                      class="toggle"
                       id="SocialToggle"
                       type="checkbox"
                     />
                     <label
-                      className="toggleLink toggleLabel"
-                      htmlFor="SocialToggle"
+                      class="toggleLink toggleLabel"
+                      for="SocialToggle"
                     >
                       Social
                       <span
-                        className="root root down chevron"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "mock svg",
-                          }
-                        }
-                      />
+                        class="root root down chevron"
+                      >
+                        mock svg
+                      </span>
                     </label>
                     <ul
-                      className="toggleContainer"
+                      class="toggleContainer"
                     >
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:facebook"
                           href="https://www.facebook.com/seeknz/"
                         >
@@ -1359,10 +1332,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:instagram"
                           href="https://www.instagram.com/seeknz/"
                         >
@@ -1370,10 +1343,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:twitter"
                           href="https://twitter.com/seekjobsnz"
                         >
@@ -1381,10 +1354,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                         </a>
                       </li>
                       <li
-                        className=""
+                        class=""
                       >
                         <a
-                          className="link"
+                          class="link"
                           data-analytics="toolbar:youtube"
                           href="https://www.youtube.com/user/SEEKJobs"
                         >
@@ -1397,19 +1370,19 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </nav>
               <nav
                 aria-label="Employers"
-                className="category secondary"
+                class="category secondary"
               >
                 <h1
-                  className="heading"
+                  class="heading"
                 >
                   Employers
                 </h1>
                 <ul>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:register+for+free"
                       href="https://talent.seek.co.nz/"
                     >
@@ -1417,10 +1390,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.co.nz/"
                     >
@@ -1428,10 +1401,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:products+prices"
                       href="https://talent.seek.co.nz/Support/OurProducts"
                     >
@@ -1439,10 +1412,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:customer+service"
                       href="https://talent.seek.co.nz/ContactUs"
                     >
@@ -1450,10 +1423,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    className=""
+                    class=""
                   >
                     <a
-                      className="link"
+                      class="link"
                       data-analytics="toolbar:insight+blog"
                       href="http://insightsresources.seek.co.nz"
                     >
@@ -1464,45 +1437,45 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </nav>
             </div>
             <nav
-              className="copyright"
+              class="copyright"
             >
               <span
-                className="root"
+                class="root"
               >
                 <h1>
                   Additional Links
                 </h1>
               </span>
               <a
-                className="copyrightLink"
+                class="copyrightLink"
                 data-analytics="toolbar:privacy"
                 href="/privacy"
               >
                 Privacy
               </a>
               <a
-                className="copyrightLink"
+                class="copyrightLink"
                 data-analytics="toolbar:terms+conditions"
                 href="/terms"
               >
                 Terms & Conditions
               </a>
               <a
-                className="copyrightLink"
+                class="copyrightLink"
                 data-analytics="toolbar:seek+safely"
                 href="/safe-job-searching"
               >
                 SEEK safely
               </a>
               <a
-                className="copyrightLink secondaryLink"
+                class="copyrightLink secondaryLink"
                 data-analytics="toolbar:site+map"
                 href="/sitemap"
               >
                 Site Map
               </a>
               <p
-                className="copyrightMessage"
+                class="copyrightMessage"
               >
                 © SEEK. All rights reserved.
               </p>
