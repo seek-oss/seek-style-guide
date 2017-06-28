@@ -11,9 +11,7 @@
   height: @grid-row-height * 10;
   resize: vertical;
   max-height: @grid-row-height * 20;
-  // line-height: 25px was picked as 18px is too tight and 27px looks too much like page copy.
-  // It is a exception to the on grid rule as Textarea itself will be on grid.
-  line-height: 25px;
+  line-height: 25px; // Deliberate deviation to avoid looking like body copy
   color: @sk-charcoal;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
