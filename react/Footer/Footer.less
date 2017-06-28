@@ -1,23 +1,18 @@
 @import (reference) "~seek-style-guide/theme";
 @import (reference) "./Footer.common.less";
 
-@classic-ia: ~"only screen and (min-width: 1025px)";
-
 .root {
   background-color: @sk-footer;
   width: 100%;
 }
 
 .content {
-  padding: (@grid-row-height * 4) @grid-gutter-width;
+  padding: (@grid-row-height * 4) (@grid-gutter-width / 2);
+  max-width: @grid-container-width + @grid-gutter-width;
+  margin: 0 auto;
 
   @media only screen @footer-horizontal {
     padding-bottom: (@grid-row-height * 5);
-  }
-
-  @media @classic-ia {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
