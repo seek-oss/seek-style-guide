@@ -21,6 +21,14 @@ glob('**/*.sketch').then(sketchFiles => {
   });
 });
 
+const tryParse = contents => {
+  try {
+    return JSON.parse(contents);
+  } catch (err) {
+    return null;
+  }
+}
+
 function getTargetPath(file) {
   const documentName = path.basename(file, '.sketch');
   const sourcePath = path.dirname(file);
@@ -35,7 +43,12 @@ function jsonTransformer(fileName, contents, callback) {
     return callback(null, '{}');
   }
 
-  const parsedJson = JSON.parse(contents);
+  const parsedJson = tryParse(contents);
+
+  if (parsedJson === null) {
+    return callback(null, contents);
+  }
+
   const prettyJson = JSON.stringify(parsedJson, null, 2);
 
   // Ensure document is always on first page
