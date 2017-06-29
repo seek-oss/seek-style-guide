@@ -57,7 +57,7 @@
       "isFlippedVertical": false,
       "isLocked": false,
       "isVisible": true,
-      "layerListExpandedType": 0,
+      "layerListExpandedType": 1,
       "name": "Button/Grey/Hover",
       "nameIsFixed": true,
       "resizingConstraint": 63,
@@ -951,7 +951,7 @@
       },
       "includeBackgroundColorInInstance": false,
       "symbolID": "8E8889DD-A065-4A3A-992E-AE8EC9D14DB7",
-      "changeIdentifier": 1
+      "changeIdentifier": 2
     },
     {
       "_class": "symbolMaster",
@@ -1869,7 +1869,7 @@
       },
       "includeBackgroundColorInInstance": false,
       "symbolID": "48086385-AE03-4232-B6C1-729E5E3511DD",
-      "changeIdentifier": 3
+      "changeIdentifier": 2
     },
     {
       "_class": "symbolMaster",
@@ -2183,7 +2183,7 @@
       },
       "includeBackgroundColorInInstance": false,
       "symbolID": "73952A38-0C2D-4E12-A2D2-B7FA048223D3",
-      "changeIdentifier": 4
+      "changeIdentifier": 2
     },
     {
       "_class": "symbolMaster",
@@ -2417,7 +2417,7 @@
             "constrainProportions": false,
             "height": 21,
             "width": 52,
-            "x": 22.5,
+            "x": 21.5,
             "y": 12
           },
           "isFlippedHorizontal": false,
@@ -2428,7 +2428,7 @@
           "name": "Action",
           "nameIsFixed": false,
           "originalObjectID": "7DEC1536-DC76-4A4F-AA71-C6CD06B6A538",
-          "resizingConstraint": 10,
+          "resizingConstraint": 26,
           "resizingType": 2,
           "rotation": 0,
           "shouldBreakMaskChain": false,
@@ -2489,7 +2489,7 @@
       },
       "includeBackgroundColorInInstance": false,
       "symbolID": "7F59C673-82A9-4B71-86B0-5160B53AD36C",
-      "changeIdentifier": 6
+      "changeIdentifier": 2
     },
     {
       "_class": "symbolMaster",
@@ -2796,7 +2796,7 @@
       },
       "includeBackgroundColorInInstance": false,
       "symbolID": "EA83294F-C9A9-47DB-83F0-858EF7AC9DA7",
-      "changeIdentifier": 4
+      "changeIdentifier": 1
     }
   ],
   "horizontalRulerData": {
