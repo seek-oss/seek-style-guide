@@ -108,5 +108,37 @@ describe('FieldMessage', () => {
         expect(message.props.secondary).to.equal(true);
       });
     });
+
+    describe('aria attributes passed as messageProps', () => {
+      it('will set role="alert" for invalid input if no custom role attribute is passed in', () => {
+        render(<FieldMessage valid={false} message="Something went wrong" messageProps={{ className: 'message' }} />);
+        expect(message.props.role).to.equal('alert');
+      });
+
+      it('will set aria-live="polite" for valid input if no custom aria attributes are passed in', () => {
+        render(<FieldMessage valid={true} message="Something went right" messageProps={{ className: 'message' }} />);
+        expect(message.props['aria-live']).to.equal('polite');
+      });
+
+      it('will set role="status" when valud is undefined input if no custom role attribute is passed in', () => {
+        render(<FieldMessage message="Something went right" messageProps={{ className: 'message' }} />);
+        expect(message.props.role).to.equal('status');
+      });
+
+      it('will set a custom role attribute if it is passed in via messageProps and valid is false', () => {
+        render(<FieldMessage valid={false} message="Something went wrong" messageProps={{ className: 'message', role: 'testRole' }} />);
+        expect(message.props.role).to.equal('testRole');
+      });
+
+      it('will set a custom aria-live attribute if it is passed in via messageProps', () => {
+        render(<FieldMessage valid={true} message="Something went right" messageProps={{ className: 'message', 'aria-live': 'testAriaLive' }} />);
+        expect(message.props['aria-live']).to.equal('testAriaLive');
+      });
+
+      it('will set a custom role attribute if it is passed in via messageProps and valid is undefined', () => {
+        render(<FieldMessage message="Something went right" messageProps={{ className: 'message', role: 'testRole2' }} />);
+        expect(message.props.role).to.equal('testRole2');
+      });
+    });
   });
 });
