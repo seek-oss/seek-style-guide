@@ -9,6 +9,12 @@ export default [
     href: '/work-for-seek',
     analytics: 'toolbar:work+for+seek',
     secondary: true
+  },
+  {
+    name: 'Product & Tech Blog',
+    href: 'http://productblog.seek.com.au',
+    analytics: 'toolbar:product+blog',
+    secondary: true
   }
 ];
 
