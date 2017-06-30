@@ -40,6 +40,10 @@
   @media print {
     justify-content: flex-start;
   }
+
+  @media only screen and (min-width: (@grid-container-width)) { //IE11 flexbox horizontal centreing
+    flex: 0 0 @grid-container-width;
+  }
 }
 
 .topBanner {
@@ -62,6 +66,10 @@
   flex-grow: 1;
   justify-content: center;
   max-width: @grid-container-width;
+
+  @media only screen and (min-width: (@grid-container-width)) { //IE11 flexbox horizontal centreing
+    flex: 0 0 @grid-container-width;
+  }
 }
 
 .navigation {
