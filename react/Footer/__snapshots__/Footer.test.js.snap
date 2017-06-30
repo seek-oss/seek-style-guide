@@ -584,17 +584,6 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
-              >
-                <a
-                  class="link"
-                  data-analytics="toolbar:product+blog"
-                  href="http://productblog.seek.com.au"
-                >
-                  Product & Tech Blog
-                </a>
-              </li>
-              <li
                 class=""
               >
                 <input
@@ -1271,17 +1260,6 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   href="/work-for-seek"
                 >
                   Work for SEEK
-                </a>
-              </li>
-              <li
-                class="secondary"
-              >
-                <a
-                  class="link"
-                  data-analytics="toolbar:product+blog"
-                  href="http://productblog.seek.com.au"
-                >
-                  Product & Tech Blog
                 </a>
               </li>
               <li
