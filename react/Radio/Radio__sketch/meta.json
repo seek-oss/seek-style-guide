@@ -4,30 +4,30 @@
   "build": 43475,
   "app": "com.bohemiancoding.sketch3",
   "pagesAndArtboards": {
-    "DC46A22E-E2B3-4EB0-BE2E-0F2509576B85": {
+    "753F583B-A401-40DA-A579-BE5B56916275": {
       "name": "Page 1",
       "artboards": {}
     },
-    "2F50F20D-0E62-4604-8699-DA84A1A05432": {
+    "AB57CA7E-BA5B-443E-AA8F-C8212291592F": {
       "name": "Symbols",
       "artboards": {
-        "C4EF53AC-E9EF-4CBE-8D43-186D325C8C7E": {
-          "name": "Checkbox/Selected"
+        "50BEC438-7F76-4845-986A-44BED217E546": {
+          "name": "Radio/Hover"
+        },
+        "0EB2E2D4-1365-41C0-9005-3AF5D000D6A0": {
+          "name": "Radio/Selected"
         },
         "61E2E663-521F-4C61-B003-FD63B3E0B9F5": {
-          "name": "Checkbox/Button/Selected"
+          "name": "Radio/Button/Selected"
         },
         "5B6D33A3-89F3-40C5-A358-A94C5379EB10": {
-          "name": "Checkbox/Button/Hover"
+          "name": "Radio/Button/Hover"
         },
-        "BDC71724-CFB7-44CD-9C7B-AFDE6FF9CF74": {
-          "name": "Checkbox/Default"
+        "196F8B91-C511-4EA7-B7C5-D0EA7EE903AF": {
+          "name": "Radio/Default"
         },
         "72A228DE-2B16-4F79-8AAD-FF6B048F9A7D": {
-          "name": "Checkbox/Button/Default"
-        },
-        "E590E00C-8760-455F-8219-42568DD58FD0": {
-          "name": "Checkbox/Hover"
+          "name": "Radio/Button/Default"
         }
       }
     }
