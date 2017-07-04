@@ -236,6 +236,7 @@ All type should use the standard typographic mixins, e.g.
   .headlineText();
   .headingText();
   .subheadingText();
+  .superstandardText();
   .standardText();
   .substandardText();
   .smallText();
@@ -264,6 +265,7 @@ We also expose responsive type mixins that may change scale and row span based o
   .headlineTextResponsive();
   .headingTextResponsive();
   .subheadingTextResponsive();
+  .superstandardTextResponsive();
   .standardTextResponsive();
   .substandardTextResponsive();
   .smallTextResponsive();
