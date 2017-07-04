@@ -3,21 +3,23 @@
 @import (reference) "../type/type";
 @import (reference) "../layout/grid";
 
-.heroText(@baseline: true)        { .__type(@hero-type-scale, @hero-type-row-span, @baseline);             }
-.headlineText(@baseline: true)    { .__type(@headline-type-scale, @headline-type-row-span, @baseline);     }
-.headingText(@baseline: true)     { .__type(@heading-type-scale, @heading-type-row-span, @baseline);       }
-.subheadingText(@baseline: true)  { .__type(@subheading-type-scale, @subheading-type-row-span, @baseline); }
-.standardText(@baseline: true)    { .__type(@standard-type-scale, @standard-type-row-span, @baseline);     }
-.substandardText(@baseline: true) { .__type(@substandard-type-scale, @standard-type-row-span, @baseline);  }
-.smallText(@baseline: true)       { .__type(@small-type-scale, @small-type-row-span, @baseline);           }
+.heroText(@baseline: true)          { .__type(@hero-type-scale, @hero-type-row-span, @baseline);                   }
+.headlineText(@baseline: true)      { .__type(@headline-type-scale, @headline-type-row-span, @baseline);           }
+.headingText(@baseline: true)       { .__type(@heading-type-scale, @heading-type-row-span, @baseline);             }
+.subheadingText(@baseline: true)    { .__type(@subheading-type-scale, @subheading-type-row-span, @baseline);       }
+.superstandardText(@baseline: true) { .__type(@superstandard-type-scale, @superstandard-type-row-span, @baseline); }
+.standardText(@baseline: true)      { .__type(@standard-type-scale, @standard-type-row-span, @baseline);           }
+.substandardText(@baseline: true)   { .__type(@substandard-type-scale, @standard-type-row-span, @baseline);        }
+.smallText(@baseline: true)         { .__type(@small-type-scale, @small-type-row-span, @baseline);                 }
 
-.heroTextResponsive(@baseline: true)        { .__responsiveType("hero"; @baseline);        }
-.headlineTextResponsive(@baseline: true)    { .__responsiveType("headline"; @baseline);    }
-.headingTextResponsive(@baseline: true)     { .__responsiveType("heading"; @baseline);     }
-.subheadingTextResponsive(@baseline: true)  { .__responsiveType("subheading"; @baseline);  }
-.standardTextResponsive(@baseline: true)    { .__responsiveType("standard"; @baseline);    }
-.substandardTextResponsive(@baseline: true) { .__responsiveType("substandard"; @baseline); }
-.smallTextResponsive(@baseline: true)       { .__responsiveType("small"; @baseline);       }
+.heroTextResponsive(@baseline: true)          { .__responsiveType("hero"; @baseline);          }
+.headlineTextResponsive(@baseline: true)      { .__responsiveType("headline"; @baseline);      }
+.headingTextResponsive(@baseline: true)       { .__responsiveType("heading"; @baseline);       }
+.subheadingTextResponsive(@baseline: true)    { .__responsiveType("subheading"; @baseline);    }
+.superstandardTextResponsive(@baseline: true) { .__responsiveType("superstandard"; @baseline); }
+.standardTextResponsive(@baseline: true)      { .__responsiveType("standard"; @baseline);      }
+.substandardTextResponsive(@baseline: true)   { .__responsiveType("substandard"; @baseline);   }
+.smallTextResponsive(@baseline: true)         { .__responsiveType("small"; @baseline);         }
 
 .touchableText(@font-scale: @interaction-type-scale) {
   .rawText(@font-scale);
