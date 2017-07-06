@@ -22,9 +22,9 @@
   display: flex;
   align-items: center;
 
-  @media only screen and (min-width: (@responsive-breakpoint)) {
+  .aboveSmallDevice({
     .touchableText(@standard-type-scale);
-  }
+  })
 }
 
 .checkBox {
@@ -71,10 +71,6 @@
   border-radius: 2px;
   cursor: pointer;
 
-  @media only screen and (min-width: (@responsive-breakpoint)) {
-    .touchableText(@standard-type-scale);
-  }
-
   .input:checked + .label & {
     font-weight: @sk-bold;
     background-color: @sk-white;
@@ -86,4 +82,8 @@
     border-color: transparent;
     .focus();
   }
+
+  .aboveSmallDevice({
+    .touchableText(@standard-type-scale);
+  })
 }

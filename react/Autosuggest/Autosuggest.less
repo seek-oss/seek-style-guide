@@ -32,10 +32,10 @@
   @labelRowOffset: 4;
   top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
 
-  @media only screen and (min-width: (@responsive-breakpoint)) {
+  .aboveSmallDevice({
     @labelRowOffset: 3;
     top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
-  }
+  })
 }
 
 .sectionTitle {
