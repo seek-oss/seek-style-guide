@@ -3,9 +3,9 @@
 .root {
   margin-bottom: (@grid-row-height * 3);
 
-  @media only screen and (max-width: 740px) {
+  .smallDeviceOnly({
     margin-bottom: (@grid-row-height * 4);
-  }
+  });
 
    &.noMarginBottom {
     margin-bottom: 0;
