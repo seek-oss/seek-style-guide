@@ -1,6 +1,7 @@
 import styles from './Demo.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Baseline from 'react-baseline';
@@ -119,6 +120,7 @@ export default class Demo extends Component {
   render() {
     const {
       title,
+      block,
       component: DemoComponent,
       container: Container = DefaultContainer,
       options
@@ -130,25 +132,39 @@ export default class Demo extends Component {
     return (
       <div className={styles.root}>
         <PageBlock>
-          <Section header>
-            <Text hero>{ title }</Text>
-          </Section>
+          {
+            title ? (
+              <Section header>
+                <Text hero>{ title }</Text>
+              </Section>
+            ) :
+            null
+          }
         </PageBlock>
         <Baseline isVisible={true} type="bar" color="#e5e5e5">
-          <div className={styles.component}>
+          <div
+            className={classnames({
+              [styles.component]: true,
+              [styles.component_block]: block
+            })}>
             <Container component={BoundComponent} />
           </div>
         </Baseline>
-        <PageBlock className={styles.optionsBlock}>
-          <div className={styles.options}>
-            {
-              flatten(options.map(this.renderOption))
-                .map((option, i) => (
-                  <div key={i} className={styles.optionItem}>{ option }</div>
-                ))
-              }
-          </div>
-        </PageBlock>
+        {
+          options && options.length ? (
+            <PageBlock className={styles.optionsBlock}>
+              <div className={styles.options}>
+                {
+                  flatten(options.map(this.renderOption))
+                    .map((option, i) => (
+                      <div key={i} className={styles.optionItem}>{ option }</div>
+                    ))
+                  }
+              </div>
+            </PageBlock>
+          ) :
+          null
+        }
         <PageBlock className={styles.codeBlock}>
           <Code jsx={demoElement} />
         </PageBlock>
