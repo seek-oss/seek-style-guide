@@ -2,11 +2,11 @@
 
 # seek-style-guide
 
-Living style guide for [SEEK](https://github.com/seek-oss), powered by [React](https://facebook.github.io/react), [Less](http://lesscss.org/) and [CSS Modules](https://github.com/css-modules/css-modules).
+Living style guide for [SEEK](https://github.com/seek-oss), powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
 
 If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as quickly as possible, while simplifying the process of keeping your development environment up to date.
 
-If you'd instead like to work on a custom [webpack](https://webpack.js.org) project, you can use [seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack) to streamline the integration process.
+If you'd instead like to work on a custom webpack project, you can use [seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack) to streamline the integration process.
 
 ## Installation
 
