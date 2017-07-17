@@ -199,8 +199,6 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                 'data-analytics': 'sign-out',
                 className: styles.item,
                 onClick: clearLocalStorage,
-                // Both urls are existing Jobseeker urls
-                // Login/Logout is a nicer looking url so using that when we can
                 href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',
                 children: [
                   'Sign Out',
