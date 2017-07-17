@@ -10,18 +10,16 @@
 }
 
 .label {
-  input:checked + & {
+  :checked + & {
     font-weight: @sk-bold;
   }
 }
 
 .standard {
   .touchableText(@standard-type-scale-mobile);
-
   cursor: pointer;
   display: flex;
   align-items: center;
-
   .aboveSmallDevice({
     .touchableText(@standard-type-scale);
   })
@@ -61,7 +59,6 @@
 
 .button {
   .touchableText(@standard-type-scale-mobile);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,6 +67,9 @@
   border: 1px solid @sk-mid-gray-light;
   border-radius: 2px;
   cursor: pointer;
+  .aboveSmallDevice({
+    .touchableText(@standard-type-scale);
+  });
 
   .input:checked + .label & {
     font-weight: @sk-bold;
@@ -82,8 +82,4 @@
     border-color: transparent;
     .focus();
   }
-
-  .aboveSmallDevice({
-    .touchableText(@standard-type-scale);
-  })
 }

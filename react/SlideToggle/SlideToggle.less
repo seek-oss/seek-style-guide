@@ -20,22 +20,22 @@
   margin: 0;
 
   &:focus ~ .slider {
-    box-shadow: 0px 0px 10px 0px @sk-focus;
+    box-shadow: 0 0 10px 0 @sk-focus;
   }
 
-  &:active ~ .slider .slideButton:before {
+  &:active ~ .slider .slideButton::before {
     transform: scale(1.15, 0.85);
   }
 
   &:checked ~ .slider .slideButton {
     left: 21px;
 
-    &:before {
+    &::before {
       background-color: @sk-highlight;
     }
   }
 
-  &:checked ~ .slider .slideButton svg {
+  &:checked ~ .slider .slideButton :global(svg) {
     opacity: 1;
   }
 
@@ -73,17 +73,17 @@
   height: @grid-row-height * 3;
   border-radius: @grid-row-height * 1.5;
   background-color: @sk-mid-gray-light;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .slideButton {
   position: relative;
   left: 0;
-  transition: .3s;
+  transition: 0.3s;
 
-  &:before {
+  &::before {
     content: '';
-    transition: .3s;
+    transition: 0.3s;
     position: absolute;
     height: @grid-row-height * 3;
     width: @grid-row-height * 3;

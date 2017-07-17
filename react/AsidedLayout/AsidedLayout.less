@@ -1,21 +1,27 @@
 @import (reference) "~seek-style-guide/theme";
 
-.aboveSmallDevice({
-  .root {
+.root {
+  .aboveSmallDevice({
     display: flex;
-  }
+  });
+}
 
-  .reverse {
+.reverse {
+  .aboveSmallDevice({
     flex-direction: row-reverse;
-  }
+  });
+}
 
-  .content {
+.content {
+  .aboveSmallDevice({
     flex: 1 1;
-  }
+  });
+}
 
-  .aside {
+.aside {
+  .aboveSmallDevice({
     padding-left: @grid-gutter-width;
     flex-grow: 0;
     flex-shrink: 0;
-  }
-});
+  });
+}

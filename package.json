@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "Living style guide containing the building blocks and design principles for SEEK web applications",
   "engines": {
-    "node" : ">=6.0.0"
+    "node": ">=6.0.0"
   },
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,9 @@
     "test": "npm run test-unit && npm run lint && npm run build",
     "test-unit": "BABEL_ENV=test jest --config ./test/jest.config.json",
     "update-snapshot": "npm run test-unit -- --updateSnapshot",
-    "lint": "eslint app standalone/*/src docs/src react test ./*.js",
+    "lint": "npm run lint-js && npm run lint-less",
+    "lint-js": "eslint app standalone/*/src docs/src react test",
+    "lint-less": "stylelint '{theme,react,standalone,docs}/**/*.less'",
     "clean": "rm -rf dist && rm -rf docs/dist && mkdir -p dist && mkdir -p docs/dist",
     "compile": "npm run compile-render && npm run compile-client && npm run compile-header-footer",
     "compile-render": "NODE_ENV=production BASE_HREF=${BASE_HREF:-/} webpack --config docs/webpack.static.render.config.js && rm docs/dist/render.js",
@@ -138,6 +140,9 @@
     "sinon-chai": "^2.8.0",
     "static-site-generator-webpack-plugin": "^3.4.1",
     "string-replace-loader": "^1.2.0",
+    "stylelint": "^7.13.0",
+    "stylelint-config-css-modules": "^1.0.0",
+    "stylelint-config-standard": "^16.0.0",
     "superstatic": "^4.0.3",
     "surge": "^0.18.0",
     "validate-commit-msg": "^2.8.2",
