@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules"
+  ],
+  "rules": {
+    "selector-max-type": 0,
+    "rule-empty-line-before": ["always-multi-line", {
+      "ignore": ["inside-block"]
+    }],
+    "declaration-empty-line-before": null,
+    "number-leading-zero": "always",
+    "indentation": [2, {
+      "ignore": ["inside-parens"]
+    }],
+    "at-rule-empty-line-before": ["always", {
+      "except": [
+        "inside-block",
+        "blockless-after-same-name-blockless"
+      ]
+    }],
+    "color-hex-length": "long",
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["rules"]
+    }],
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": ["/^__/"]
+    }],
+    "value-list-comma-newline-after": "always"
+  }
+}

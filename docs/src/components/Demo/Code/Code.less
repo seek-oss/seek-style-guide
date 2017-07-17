@@ -6,17 +6,21 @@
 
 .code {
   .standardText();
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family:
+    Consolas,
+    Monaco,
+    'Andale Mono',
+    'Ubuntu Mono',
+    monospace;
 }
 
 .message {
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 0 .5em @grid-row-height;
+  padding: 0 0.5em @grid-row-height;
   cursor: pointer;
   opacity: 0;
-
   .root:hover & {
     opacity: 1;
   }

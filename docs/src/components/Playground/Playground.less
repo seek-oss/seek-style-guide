@@ -14,8 +14,8 @@
   background: #fbfbfb;
   color: #a8a8a8;
   font-weight: 200;
-  border: 1px solid #fff;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,.75);
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.75);
 }
 
 .cardHeader {
@@ -23,7 +23,6 @@
   text-align: right;
   padding-top: 0;
   padding-bottom: 0;
-
   @media only screen and (max-width: 740px) {
     display: none;
   }
@@ -52,7 +51,7 @@
     margin: 0 -@grid-gutter-width;
     padding: 0 @grid-gutter-width;
 
-    div {
+    :global(div) {
       line-height: (@grid-row-height * 3);
     }
   }

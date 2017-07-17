@@ -7,14 +7,11 @@
 .root {
   display: flex;
   justify-content: center;
-
   .smallDeviceOnly({
     box-shadow: inset 0 -1px rgba(255, 255, 255, .2);
   });
-
   .aboveSmallDevice({
     background-color: @sk-background;
-
     &.divider {
       border-bottom: @grid-row-height solid @sk-blue;
     }
@@ -31,7 +28,6 @@
   @media only screen and (max-width: (@nav-min-width - 1)) {
     flex-grow: 1;
   }
-
   .smallDeviceOnly({
     display: none;
   });
@@ -44,19 +40,15 @@
   display: inline-block;
   white-space: nowrap;
   text-align: center;
-
   &:hover {
     cursor: pointer;
   }
-
   .aboveSmallDevice({
     color: @sk-black;
   });
-
   @media only screen and (max-width: (@nav-min-width - 1)) {
     width: 100%;
   }
-
   @media only screen and (min-width: @nav-min-width) {
     width: @nav-item-width;
   }
@@ -65,7 +57,6 @@
 .link_isActive {
   color: @sk-white;
   background-color: @sk-blue;
-
   .smallDeviceOnly({
     box-shadow: inset 0 -2px @sk-white;
   });

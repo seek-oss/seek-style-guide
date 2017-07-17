@@ -1,5 +1,9 @@
 @import (reference) "~seek-style-guide/theme";
 
+@keyframes loading {
+  to { width: @grid-gutter-width; }
+}
+
 .hoverState(@rules) {
   &:hover,
   &.rootHover {
@@ -24,11 +28,9 @@
 .buttonColor(@color, @background-color) {
   color: @color;
   background-color: @background-color;
-
   .hoverState({
     background-color: lighten(@background-color, 5%);
   });
-
   .activeState({
     background-color: darken(@background-color, 5%);
   });
@@ -44,7 +46,9 @@
   box-shadow: 0 1px fade(@sk-black, 70%);
   border: 0;
   border-radius: 2px;
-  transition: background-color 0.2s, transform .2s cubic-bezier(0.020, 1.505, 0.745, 1.235);
+  transition:
+    background-color 0.2s,
+    transform 0.2s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
@@ -77,15 +81,12 @@
   box-shadow: none;
   padding-left: 0;
   padding-right: 0;
-
   .hoverState({
     text-decoration: underline;
   });
-
   .activeState({
     transform: none;
   });
-
   .aboveSmallDevice({
     .touchableText(@standard-type-scale);
   })
@@ -94,7 +95,7 @@
 .loading {
   padding-right: @grid-gutter-width * 2;
 
-  &:after {
+  &::after {
     content: ' \2026';
     text-align: left;
     width: 0;
@@ -109,10 +110,4 @@
 
 .fullWidth {
   width: 100%;
-}
-
-@keyframes loading {
-  to {
-    width: @grid-gutter-width;
-  }
 }
