@@ -793,7 +793,7 @@ exports[`Header: should render first part of email address when username isn't p
                     <a
                       class="item"
                       data-analytics="sign-out"
-                      href="/Login/Logout"
+                      href="/login/LogoutWithReturnUrl"
                     >
                       Sign Out
                       <div
@@ -1843,7 +1843,7 @@ exports[`Header: should render when authenticated 1`] = `
                     <a
                       class="item"
                       data-analytics="sign-out"
-                      href="/Login/Logout"
+                      href="/login/LogoutWithReturnUrl"
                     >
                       Sign Out
                       <div
@@ -2372,7 +2372,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     <a
                       class="item"
                       data-analytics="sign-out"
-                      href="/Login/Logout"
+                      href="/login/LogoutWithReturnUrl"
                     >
                       Sign Out
                       <div

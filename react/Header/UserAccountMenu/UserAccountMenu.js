@@ -199,7 +199,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                 'data-analytics': 'sign-out',
                 className: styles.item,
                 onClick: clearLocalStorage,
-                href: '/Login/Logout',
+                href: appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl),
                 children: [
                   'Sign Out',
                   <div key="iconSpacer" className={styles.iconSpacer} />
