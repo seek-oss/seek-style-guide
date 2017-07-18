@@ -100,6 +100,14 @@ export default {
           })
         },
         {
+          label: 'Superstandard',
+          transformProps: props => ({
+            ...props,
+            hero: false,
+            superstandard: true
+          })
+        },
+        {
           label: 'Standard',
           transformProps: props => ({
             ...props,

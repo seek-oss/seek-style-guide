@@ -2,7 +2,6 @@
 
 .root {
   width: 100%;
-
   .smallDeviceOnly({
     position: relative;
   });
@@ -14,7 +13,6 @@
   z-index: @z-index-header;
   display: flex;
   flex-flow: row wrap;
-
   .aboveSmallDevice({
     background-color: @sk-white;
     justify-content: center;
@@ -28,7 +26,6 @@
   flex: 1 0 auto;
   padding: 0 (@grid-gutter-width / 2);
   max-width: @grid-container-width + @grid-gutter-width;
-
   .smallDeviceOnly({
     height: (@grid-row-height * 7);
   });
@@ -36,12 +33,10 @@
     order: 1;
     height: (@grid-row-height * 9);
   });
-
   @media print {
     justify-content: flex-start;
   }
-
-  @media only screen and (min-width: (@grid-container-width)) { //IE11 flexbox horizontal centreing
+  @media only screen and (min-width: (@grid-container-width)) { //IE11 flexbox horizontal centering
     flex: 0 0 @grid-container-width;
   }
 }
@@ -66,8 +61,7 @@
   flex-grow: 1;
   justify-content: center;
   max-width: @grid-container-width;
-
-  @media only screen and (min-width: (@grid-container-width)) { //IE11 flexbox horizontal centreing
+  @media only screen and (min-width: (@grid-container-width)) { //IE11 flexbox horizontal centering
     flex: 0 0 @grid-container-width;
   }
 }
@@ -95,7 +89,6 @@
 .logoSvg {
   height: 39px;
   width: 105px;
-
   .aboveSmallDevice({
     height: 51px;
     width: 129px;
@@ -154,7 +147,6 @@
 .employerSite {
   display: none;
   white-space: nowrap;
-
   .aboveSmallDevice({
     display: block;
   });
@@ -176,14 +168,12 @@
   @divider-width: 1px;
   @divider-container-width: 35px;
   @half-width: (@divider-container-width - @divider-width) / 2;
-
   margin-left: ceil(@half-width);
   margin-right: floor(@half-width);
   width: @divider-width;
   height: 14px;
   border-right: @divider-width solid @sk-mid-gray-dark;
   display: none;
-
   .aboveSmallDevice({
     display: inline-block;
   });

@@ -2,10 +2,8 @@
 
 .root {
   padding: @grid-row-height 0;
-
   .aboveSmallDevice({
     @border-width: 1px;
-
     background-color: @sk-white;
     border: @border-width solid @sk-mid-gray-light;
     border-radius: 2px;
@@ -37,16 +35,13 @@
   text-decoration: none;
   justify-content: flex-end;
   user-select: none;
-
   &:hover {
     background-color: darken(@sk-blue, 5%);
-
     .aboveSmallDevice({
       color: @sk-black;
       background-color: @sk-mid-gray-light;
     });
   }
-
   .aboveSmallDevice({
     .touchableText(@standard-type-scale);
     justify-content: space-between;
@@ -75,7 +70,6 @@
   margin-left: @grid-gutter-width;
   width: @grid-gutter-width;
   text-align: center;
-
   .smallDeviceOnly({
     margin-left: (@grid-gutter-width / 2);
   });
@@ -90,7 +84,6 @@
 .iconSpacer {
   margin-left: (@grid-gutter-width / 2);
   width: @grid-gutter-width;
-
   .aboveSmallDevice({
     display: none;
   });
