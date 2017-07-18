@@ -8,7 +8,6 @@ import IsolatedScroll from 'react-isolated-scroll';
 import omit from 'lodash.omit';
 
 import TextField from '../TextField/TextField';
-import Hidden from '../Hidden/Hidden';
 
 export default class Autosuggest extends Component {
 
