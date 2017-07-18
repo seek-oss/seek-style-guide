@@ -7,11 +7,11 @@
   position: relative;
   display: inline-block;
   width: 100%;
+  z-index: @z-index-inline-overlay;
 }
 
 .suggestionsContainer {
   display: none;
-  z-index: @z-index-inline-overlay;
   position: absolute;
   background-color: @sk-white;
   box-shadow: 0 9px 30px rgba(0, 0, 0, 0.4);
@@ -64,4 +64,22 @@
 
 .suggestionFocused {
   background-color: @sk-mid-gray-light;
+}
+
+.backdrop {
+  display: none;
+}
+
+.containerOpen + .backdrop {
+  .smallDeviceOnly({
+    display: block;
+  });
+  position: fixed;
+  z-index: 0;
+  top: -999px;
+  left: -999px;
+  right: -999px;
+  bottom: -9999px;
+  background-color: @sk-black;
+  opacity: 0.7;
 }

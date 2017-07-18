@@ -47,6 +47,11 @@ describe('Autosuggest', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with mobile backdrop', () => {
+    const wrapper = render(<Autosuggest {...getAutosuggestProps()} id="Foo" showMobileBackdrop />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should error if `suggestionsContainerClassName` is not a string', () => {
     const expectedError = expect.stringMatching(/Invalid prop `suggestionsContainerClassName` of type `boolean` supplied to `Autosuggest`, expected `string/);
     render(<Autosuggest {...getAutosuggestProps()} suggestionsContainerClassName={true} />);

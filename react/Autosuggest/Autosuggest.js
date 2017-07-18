@@ -8,6 +8,7 @@ import IsolatedScroll from 'react-isolated-scroll';
 import omit from 'lodash.omit';
 
 import TextField from '../TextField/TextField';
+import Hidden from '../Hidden/Hidden';
 
 export default class Autosuggest extends Component {
 
@@ -19,6 +20,7 @@ export default class Autosuggest extends Component {
     label: PropTypes.string,
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
+    showMobileBackdrop: PropTypes.bool,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
       const { suggestionsContainerClassName, autosuggestProps } = props;
@@ -40,7 +42,8 @@ export default class Autosuggest extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    label: ''
+    label: '',
+    showMobileBackdrop: false
   };
 
   constructor() {
@@ -80,7 +83,7 @@ export default class Autosuggest extends Component {
   }
 
   render() {
-    const { inputProps, label, autosuggestProps, suggestionsContainerClassName } = this.props;
+    const { inputProps, label, autosuggestProps, suggestionsContainerClassName, showMobileBackdrop } = this.props;
     const { theme = {} } = autosuggestProps;
     const allAutosuggestProps = {
       renderSuggestionsContainer: this.renderSuggestionsContainer,
@@ -98,11 +101,14 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <ReactAutosuggest
-        inputProps={inputProps}
-        ref={this.storeInputReference}
-        {...allAutosuggestProps}
-      />
+      <div>
+        <ReactAutosuggest
+          inputProps={inputProps}
+          ref={this.storeInputReference}
+          {...allAutosuggestProps}
+        />
+        {showMobileBackdrop ? <div className={styles.backdrop} /> : null }
+      </div>
     );
   }
 

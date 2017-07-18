@@ -84,6 +84,13 @@ export default {
             ...props,
             className: classnames(className, styles.rootFocus)
           })
+        },
+        {
+          label: 'Show mobile backdrop',
+          transformProps: ({ ...props }) => ({
+            ...props,
+            showMobileBackdrop: true
+          })
         }
       ]
     },
