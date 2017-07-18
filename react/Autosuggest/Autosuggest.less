@@ -1,12 +1,14 @@
 @import (reference) "~seek-style-guide/theme";
 
+@suggestionContainerRowsOffset: 6;
+@suggestionFieldHeightInRows: 5;
+
 .container {
   position: relative;
   display: inline-block;
   width: 100%;
 }
 
-@suggestionContainerRowsOffset: 6;
 .suggestionsContainer {
   display: none;
   z-index: @z-index-inline-overlay;
@@ -30,10 +32,10 @@
   @labelRowOffset: 4;
   top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
 
-  @media only screen and (min-width: (@responsive-breakpoint)) {
+  .aboveSmallDevice({
     @labelRowOffset: 3;
     top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
-  }
+  })
 }
 
 .sectionTitle {
@@ -51,8 +53,8 @@
 
 .suggestion {
   .rawText();
-  line-height: (@grid-row-height * 4);
-  height: (@grid-row-height * 4);
+  line-height: (@grid-row-height * @suggestionFieldHeightInRows);
+  height: (@grid-row-height * @suggestionFieldHeightInRows);
   padding: 0 (@grid-gutter-width * 0.75);
   white-space: nowrap;
   overflow: hidden;

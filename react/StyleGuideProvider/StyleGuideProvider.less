@@ -1,6 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
 :global {
+  /* stylelint-disable selector-max-type */
   @import "./reset";
 
   html {
@@ -19,8 +20,8 @@
 
   :global {
     *,
-    *:before,
-    *:after {
+    *::before,
+    *::after {
       font-family: inherit;
       box-sizing: inherit;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -31,6 +32,7 @@
       -webkit-appearance: none;
     }
   }
+  /* stylelint-enable selector-max-type */
 }
 
 .fullScreen {

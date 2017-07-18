@@ -54,10 +54,8 @@ export default class Header extends Component {
                 <div className={styles.menu} onClick={this.handleMenuClose}>
                   <PageBlock>
                     <Section header>
-                      <Text hero>
-                        <Link className={styles.link} to="/">Home</Link>
-                      </Text>
-
+                      <Text hero><Link className={styles.link} to="/">Home</Link></Text>
+                      <Text hero><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
                       {
                         demoSpecs.map(demoSpec => (
                           <Text hero key={demoSpec.title}>

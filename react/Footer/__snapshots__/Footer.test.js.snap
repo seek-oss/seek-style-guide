@@ -9,688 +9,131 @@ exports[`Footer: should render with locale of AU 1`] = `
   <span
     class="print"
   >
-    <div
-      class=""
-    >
+    <section>
+      <span
+        class="root"
+      >
+        <h1
+          id="FooterHeading"
+        >
+          Footer
+        </h1>
+      </span>
       <div
         class="content"
       >
-        <section>
-          <span
-            class="root"
+        <div
+          class="columns"
+        >
+          <nav
+            aria-label="Tools"
+            class="category"
           >
             <h1
-              id="FooterHeading"
+              class="heading"
             >
-              Footer
+              Tools
             </h1>
-          </span>
-          <div
-            class="content"
-          >
-            <div
-              class="columns"
-            >
-              <nav
-                aria-label="Tools"
-                class="category"
+            <ul>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:jobs"
+                  href="/"
                 >
-                  Tools
-                </h1>
-                <ul>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:jobs"
-                      href="/"
-                    >
-                      Job search
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:profile"
-                      href="/profile/"
-                    >
-                      Profile
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:my+activity"
-                      href="/myactivity#favourite"
-                    >
-                      Saved searches
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:favourite"
-                      href="/my-activity/saved-jobs"
-                    >
-                      Saved jobs
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:applied"
-                      href="/my-activity/applied-jobs"
-                    >
-                      Applied jobs
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:advice+tips"
-                      href="/career-advice/"
-                    >
-                      Advice & tips
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:companies"
-                      href="/companies/"
-                    >
-                      Company reviews
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <input
-                      class="toggle"
-                      id="PartnerSitesToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      class="toggleLink toggleLabel"
-                      for="PartnerSitesToggle"
-                    >
-                      SEEK sites
-                      <span
-                        class="root root down chevron"
-                      >
-                        mock svg
-                      </span>
-                    </label>
-                    <ul
-                      class="toggleContainer"
-                    >
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:post+a+job+ad"
-                          href="https://talent.seek.com.au/"
-                        >
-                          Employer site
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:nz+homepage"
-                          href="https://www.seek.co.nz/"
-                        >
-                          SEEK NZ
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:courses"
-                          href="https://www.seeklearning.com.au/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                        >
-                          Courses
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:business+for+sale"
-                          href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                        >
-                          Business for sale
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:volunteering"
-                          href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                        >
-                          Volunteering
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Company"
-                class="category secondary"
+                  Job search
+                </a>
+              </li>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:profile"
+                  href="/profile/"
                 >
-                  Company
-                </h1>
-                <ul>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:about+seek"
-                      href="/investor/about-us"
-                    >
-                      About SEEK
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:media"
-                      href="/investor/news-media"
-                    >
-                      Media
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:investor+centre"
-                      href="https://ir.seek.com.au"
-                    >
-                      Investor centre
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <input
-                      class="toggle"
-                      id="InternationalPartnersToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      class="toggleLink toggleLabel"
-                      for="InternationalPartnersToggle"
-                    >
-                      International partners
-                      <span
-                        class="root root down chevron"
-                      >
-                        mock svg
-                      </span>
-                    </label>
-                    <ul
-                      class="toggleContainer"
-                    >
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:babajob"
-                          href="http://www.babajob.com"
-                        >
-                          BabaJob
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — India
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:bdjobs"
-                          href="http://www.bdjobs.com"
-                        >
-                          Bdjobs
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Bangladesh
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:brighter+monday"
-                          href="https://www.brightermonday.com"
-                        >
-                          Brighter Monday
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — E Africa
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:catho"
-                          href="http://www.catho.com.br"
-                        >
-                          Catho
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Brazil
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jobberman"
-                          href="http://www.jobberman.com"
-                        >
-                          Jobberman
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — W Africa
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jobsdb"
-                          href="http://www.jobsdb.com"
-                        >
-                          jobsDB
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — SE Asia
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jobstreet"
-                          href="http://www.jobstreet.com"
-                        >
-                          JobStreet
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — SE Asia
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jora+int"
-                          href="https://www.jora.com"
-                        >
-                          Jora
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Worldwide
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:manager"
-                          href="http://www.manager.com.br"
-                        >
-                          Manager
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Brazil
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:occ+mundial"
-                          href="https://www.occ.com.mx"
-                        >
-                          OCC Mundial
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Mexico
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:workana"
-                          href="https://www.workana.com"
-                        >
-                          Workana
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Latin America
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:zhaopin"
-                          href="http://www.zhaopin.com"
-                        >
-                          Zhaopin
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — China
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jora+au"
-                          href="https://au.jora.com"
-                        >
-                          Jora
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Australia
-                        </span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <input
-                      class="toggle"
-                      data-automation="partner-services-toggle"
-                      id="PartnerServicesToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      class="toggleLink toggleLabel"
-                      for="PartnerServicesToggle"
-                    >
-                      Partner services
-                      <span
-                        class="root root down chevron"
-                      >
-                        mock svg
-                      </span>
-                    </label>
-                    <ul
-                      class="toggleContainer"
-                    >
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jobadder"
-                          href="https://jobadder.com/au"
-                        >
-                          JobAdder
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jora+local"
-                          data-automation="jora-local-link"
-                          href="http://www.joralocal.com.au"
-                        >
-                          Jora Local
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:realestate+au"
-                          href="https://www.realestate.com.au/buy"
-                        >
-                          realestate.com.au
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:sidekicker"
-                          href="https://www.sidekicker.com.au/"
-                        >
-                          Sidekicker
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:ximble"
-                          href="https://www.ximble.com"
-                        >
-                          Ximble
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Connect"
-                class="category"
+                  Profile
+                </a>
+              </li>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:my+activity"
+                  href="/myactivity#favourite"
                 >
-                  Connect
-                </h1>
-                <ul>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:contact+us"
-                      href="/contact-us"
-                    >
-                      Contact us / FAQs
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:work+for+seek"
-                      href="/work-for-seek"
-                    >
-                      Work for SEEK
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:product+blog"
-                      href="http://productblog.seek.com.au"
-                    >
-                      Product & Tech Blog
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <input
-                      class="toggle"
-                      id="SocialToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      class="toggleLink toggleLabel"
-                      for="SocialToggle"
-                    >
-                      Social
-                      <span
-                        class="root root down chevron"
-                      >
-                        mock svg
-                      </span>
-                    </label>
-                    <ul
-                      class="toggleContainer"
-                    >
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:facebook"
-                          href="https://www.facebook.com/SEEK/"
-                        >
-                          Facebook
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:instagram"
-                          href="https://www.instagram.com/seekau/"
-                        >
-                          Instagram
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:twitter"
-                          href="https://twitter.com/seekjobs"
-                        >
-                          Twitter
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:youtube"
-                          href="https://www.youtube.com/user/SEEKJobs"
-                        >
-                          YouTube
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Employers"
-                class="category secondary"
+                  Saved searches
+                </a>
+              </li>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:favourite"
+                  href="/my-activity/saved-jobs"
                 >
-                  Employers
-                </h1>
-                <ul>
-                  <li
-                    class=""
+                  Saved jobs
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:applied"
+                  href="/my-activity/applied-jobs"
+                >
+                  Applied jobs
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:advice+tips"
+                  href="/career-advice/"
+                >
+                  Advice & tips
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:companies"
+                  href="/companies/"
+                >
+                  Company reviews
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <input
+                  class="toggle"
+                  id="PartnerSitesToggle"
+                  type="checkbox"
+                />
+                <label
+                  class="toggleLink toggleLabel"
+                  for="PartnerSitesToggle"
+                >
+                  SEEK sites
+                  <span
+                    class="root root down chevron"
                   >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:register+for+free"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Register for free
-                    </a>
-                  </li>
+                    mock svg
+                  </span>
+                </label>
+                <ul
+                  class="toggleContainer"
+                >
                   <li
                     class=""
                   >
@@ -699,7 +142,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.com.au/"
                     >
-                      Post a job ad
+                      Employer site
                     </a>
                   </li>
                   <li
@@ -707,10 +150,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:products+prices"
-                      href="https://talent.seek.com.au/Support/OurProducts"
+                      data-analytics="toolbar:nz+homepage"
+                      href="https://www.seek.co.nz/"
                     >
-                      Products & prices
+                      SEEK NZ
                     </a>
                   </li>
                   <li
@@ -718,10 +161,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:customer+service"
-                      href="https://talent.seek.com.au/ContactUs"
+                      data-analytics="toolbar:courses"
+                      href="https://www.seeklearning.com.au/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
-                      Customer service
+                      Courses
                     </a>
                   </li>
                   <li
@@ -729,63 +172,612 @@ exports[`Footer: should render with locale of AU 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:insight+blog"
-                      href="http://insightsresources.seek.com.au"
+                      data-analytics="toolbar:business+for+sale"
+                      href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
                     >
-                      Insights & Resources
+                      Business for sale
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:volunteering"
+                      href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                    >
+                      Volunteering
                     </a>
                   </li>
                 </ul>
-              </nav>
-            </div>
-            <nav
-              class="copyright"
+              </li>
+            </ul>
+          </nav>
+          <nav
+            aria-label="Company"
+            class="category secondary"
+          >
+            <h1
+              class="heading"
             >
-              <span
-                class="root"
+              Company
+            </h1>
+            <ul>
+              <li
+                class="secondary"
               >
-                <h1>
-                  Additional Links
-                </h1>
-              </span>
-              <a
-                class="copyrightLink"
-                data-analytics="toolbar:privacy"
-                href="/privacy"
+                <a
+                  class="link"
+                  data-analytics="toolbar:about+seek"
+                  href="/investor/about-us"
+                >
+                  About SEEK
+                </a>
+              </li>
+              <li
+                class="secondary"
               >
-                Privacy
-              </a>
-              <a
-                class="copyrightLink"
-                data-analytics="toolbar:terms+conditions"
-                href="/terms"
+                <a
+                  class="link"
+                  data-analytics="toolbar:media"
+                  href="/investor/news-media"
+                >
+                  Media
+                </a>
+              </li>
+              <li
+                class="secondary"
               >
-                Terms & Conditions
-              </a>
-              <a
-                class="copyrightLink"
-                data-analytics="toolbar:seek+safely"
-                href="/safe-job-searching"
+                <a
+                  class="link"
+                  data-analytics="toolbar:investor+centre"
+                  href="https://ir.seek.com.au"
+                >
+                  Investor centre
+                </a>
+              </li>
+              <li
+                class="secondary"
               >
-                SEEK safely
-              </a>
-              <a
-                class="copyrightLink secondaryLink"
-                data-analytics="toolbar:site+map"
-                href="/sitemap"
+                <input
+                  class="toggle"
+                  id="InternationalPartnersToggle"
+                  type="checkbox"
+                />
+                <label
+                  class="toggleLink toggleLabel"
+                  for="InternationalPartnersToggle"
+                >
+                  International partners
+                  <span
+                    class="root root down chevron"
+                  >
+                    mock svg
+                  </span>
+                </label>
+                <ul
+                  class="toggleContainer"
+                >
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:babajob"
+                      href="http://www.babajob.com"
+                    >
+                      BabaJob
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — India
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:bdjobs"
+                      href="http://www.bdjobs.com"
+                    >
+                      Bdjobs
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Bangladesh
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:brighter+monday"
+                      href="https://www.brightermonday.com"
+                    >
+                      Brighter Monday
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — E Africa
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:catho"
+                      href="http://www.catho.com.br"
+                    >
+                      Catho
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Brazil
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jobberman"
+                      href="http://www.jobberman.com"
+                    >
+                      Jobberman
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — W Africa
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jobsdb"
+                      href="http://www.jobsdb.com"
+                    >
+                      jobsDB
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — SE Asia
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jobstreet"
+                      href="http://www.jobstreet.com"
+                    >
+                      JobStreet
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — SE Asia
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jora+int"
+                      href="https://www.jora.com"
+                    >
+                      Jora
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Worldwide
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:manager"
+                      href="http://www.manager.com.br"
+                    >
+                      Manager
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Brazil
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:occ+mundial"
+                      href="https://www.occ.com.mx"
+                    >
+                      OCC Mundial
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Mexico
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:workana"
+                      href="https://www.workana.com"
+                    >
+                      Workana
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Latin America
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:zhaopin"
+                      href="http://www.zhaopin.com"
+                    >
+                      Zhaopin
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — China
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jora+au"
+                      href="https://au.jora.com"
+                    >
+                      Jora
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Australia
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="secondary"
               >
-                Site Map
-              </a>
-              <p
-                class="copyrightMessage"
+                <input
+                  class="toggle"
+                  data-automation="partner-services-toggle"
+                  id="PartnerServicesToggle"
+                  type="checkbox"
+                />
+                <label
+                  class="toggleLink toggleLabel"
+                  for="PartnerServicesToggle"
+                >
+                  Partner services
+                  <span
+                    class="root root down chevron"
+                  >
+                    mock svg
+                  </span>
+                </label>
+                <ul
+                  class="toggleContainer"
+                >
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jobadder"
+                      href="https://jobadder.com/au"
+                    >
+                      JobAdder
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jora+local"
+                      data-automation="jora-local-link"
+                      href="http://www.joralocal.com.au"
+                    >
+                      Jora Local
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:realestate+au"
+                      href="https://www.realestate.com.au/buy"
+                    >
+                      realestate.com.au
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sidekicker"
+                      href="https://www.sidekicker.com.au/"
+                    >
+                      Sidekicker
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:ximble"
+                      href="https://www.ximble.com"
+                    >
+                      Ximble
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav
+            aria-label="Connect"
+            class="category"
+          >
+            <h1
+              class="heading"
+            >
+              Connect
+            </h1>
+            <ul>
+              <li
+                class=""
               >
-                © SEEK. All rights reserved.
-              </p>
-            </nav>
-          </div>
-        </section>
+                <a
+                  class="link"
+                  data-analytics="toolbar:contact+us"
+                  href="/contact-us"
+                >
+                  Contact us / FAQs
+                </a>
+              </li>
+              <li
+                class="secondary"
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:work+for+seek"
+                  href="/work-for-seek"
+                >
+                  Work for SEEK
+                </a>
+              </li>
+              <li
+                class="secondary"
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:product+blog"
+                  href="http://productblog.seek.com.au"
+                >
+                  Product & Tech Blog
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <input
+                  class="toggle"
+                  id="SocialToggle"
+                  type="checkbox"
+                />
+                <label
+                  class="toggleLink toggleLabel"
+                  for="SocialToggle"
+                >
+                  Social
+                  <span
+                    class="root root down chevron"
+                  >
+                    mock svg
+                  </span>
+                </label>
+                <ul
+                  class="toggleContainer"
+                >
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:facebook"
+                      href="https://www.facebook.com/SEEK/"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:instagram"
+                      href="https://www.instagram.com/seekau/"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:twitter"
+                      href="https://twitter.com/seekjobs"
+                    >
+                      Twitter
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:youtube"
+                      href="https://www.youtube.com/user/SEEKJobs"
+                    >
+                      YouTube
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav
+            aria-label="Employers"
+            class="category secondary"
+          >
+            <h1
+              class="heading"
+            >
+              Employers
+            </h1>
+            <ul>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:register+for+free"
+                  href="https://talent.seek.com.au/"
+                >
+                  Register for free
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:post+a+job+ad"
+                  href="https://talent.seek.com.au/"
+                >
+                  Post a job ad
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:products+prices"
+                  href="https://talent.seek.com.au/Support/OurProducts"
+                >
+                  Products & prices
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:customer+service"
+                  href="https://talent.seek.com.au/ContactUs"
+                >
+                  Customer service
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:insight+blog"
+                  href="http://insightsresources.seek.com.au"
+                >
+                  Insights & Resources
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <nav
+          class="copyright"
+        >
+          <span
+            class="root"
+          >
+            <h1>
+              Additional Links
+            </h1>
+          </span>
+          <a
+            class="copyrightLink"
+            data-analytics="toolbar:privacy"
+            href="/privacy"
+          >
+            Privacy
+          </a>
+          <a
+            class="copyrightLink"
+            data-analytics="toolbar:terms+conditions"
+            href="/terms"
+          >
+            Terms & Conditions
+          </a>
+          <a
+            class="copyrightLink"
+            data-analytics="toolbar:seek+safely"
+            href="/safe-job-searching"
+          >
+            SEEK safely
+          </a>
+          <a
+            class="copyrightLink secondaryLink"
+            data-analytics="toolbar:site+map"
+            href="/sitemap"
+          >
+            Site Map
+          </a>
+          <p
+            class="copyrightMessage"
+          >
+            © SEEK. All rights reserved.
+          </p>
+        </nav>
       </div>
-    </div>
+    </section>
   </span>
 </footer>
 `;
@@ -799,596 +791,120 @@ exports[`Footer: should render with locale of NZ 1`] = `
   <span
     class="print"
   >
-    <div
-      class=""
-    >
+    <section>
+      <span
+        class="root"
+      >
+        <h1
+          id="FooterHeading"
+        >
+          Footer
+        </h1>
+      </span>
       <div
         class="content"
       >
-        <section>
-          <span
-            class="root"
+        <div
+          class="columns"
+        >
+          <nav
+            aria-label="Tools"
+            class="category"
           >
             <h1
-              id="FooterHeading"
+              class="heading"
             >
-              Footer
+              Tools
             </h1>
-          </span>
-          <div
-            class="content"
-          >
-            <div
-              class="columns"
-            >
-              <nav
-                aria-label="Tools"
-                class="category"
+            <ul>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:jobs"
+                  href="/"
                 >
-                  Tools
-                </h1>
-                <ul>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:jobs"
-                      href="/"
-                    >
-                      Job search
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:profile"
-                      href="/profile/"
-                    >
-                      Profile
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:my+activity"
-                      href="/myactivity#favourite"
-                    >
-                      Saved searches
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:favourite"
-                      href="/my-activity/saved-jobs"
-                    >
-                      Saved jobs
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:applied"
-                      href="/my-activity/applied-jobs"
-                    >
-                      Applied jobs
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:advice+tips"
-                      href="/career-advice/"
-                    >
-                      Advice & tips
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <input
-                      class="toggle"
-                      id="PartnerSitesToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      class="toggleLink toggleLabel"
-                      for="PartnerSitesToggle"
-                    >
-                      SEEK sites
-                      <span
-                        class="root root down chevron"
-                      >
-                        mock svg
-                      </span>
-                    </label>
-                    <ul
-                      class="toggleContainer"
-                    >
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:post+a+job+ad"
-                          href="https://talent.seek.co.nz/"
-                        >
-                          Employer site
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:au+homepage"
-                          href="https://www.seek.com.au/"
-                        >
-                          SEEK AU
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:courses"
-                          href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                        >
-                          Courses
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:business+for+sale"
-                          href="https://www.seekbusiness.co.nz/?tracking=sk:main:nz:nav:bus"
-                        >
-                          Business for sale
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:volunteering"
-                          href="https://www.volunteer.co.nz/?tracking=SKMNZ:main+header"
-                        >
-                          Volunteering
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Company"
-                class="category secondary"
+                  Job search
+                </a>
+              </li>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:profile"
+                  href="/profile/"
                 >
-                  Company
-                </h1>
-                <ul>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:about+seek"
-                      href="/investor/about-us"
-                    >
-                      About SEEK
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:media"
-                      href="/investor/news-media"
-                    >
-                      Media
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:investor+centre"
-                      href="https://ir.seek.com.au"
-                    >
-                      Investor centre
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <input
-                      class="toggle"
-                      id="InternationalPartnersToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      class="toggleLink toggleLabel"
-                      for="InternationalPartnersToggle"
-                    >
-                      International partners
-                      <span
-                        class="root root down chevron"
-                      >
-                        mock svg
-                      </span>
-                    </label>
-                    <ul
-                      class="toggleContainer"
-                    >
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:babajob"
-                          href="http://www.babajob.com"
-                        >
-                          BabaJob
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — India
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:bdjobs"
-                          href="http://www.bdjobs.com"
-                        >
-                          Bdjobs
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Bangladesh
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:brighter+monday"
-                          href="https://www.brightermonday.com"
-                        >
-                          Brighter Monday
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — E Africa
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:catho"
-                          href="http://www.catho.com.br"
-                        >
-                          Catho
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Brazil
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jobberman"
-                          href="http://www.jobberman.com"
-                        >
-                          Jobberman
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — W Africa
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jobsdb"
-                          href="http://www.jobsdb.com"
-                        >
-                          jobsDB
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — SE Asia
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jobstreet"
-                          href="http://www.jobstreet.com"
-                        >
-                          JobStreet
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — SE Asia
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jora+int"
-                          href="https://www.jora.com"
-                        >
-                          Jora
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Worldwide
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:manager"
-                          href="http://www.manager.com.br"
-                        >
-                          Manager
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Brazil
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:occ+mundial"
-                          href="https://www.occ.com.mx"
-                        >
-                          OCC Mundial
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Mexico
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:workana"
-                          href="https://www.workana.com"
-                        >
-                          Workana
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Latin America
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:zhaopin"
-                          href="http://www.zhaopin.com"
-                        >
-                          Zhaopin
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — China
-                        </span>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:jora+au"
-                          href="https://au.jora.com"
-                        >
-                          Jora
-                        </a>
-                        <span
-                          class="partnerCountry"
-                        >
-                           — Australia
-                        </span>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Connect"
-                class="category"
+                  Profile
+                </a>
+              </li>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:my+activity"
+                  href="/myactivity#favourite"
                 >
-                  Connect
-                </h1>
-                <ul>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:contact+us"
-                      href="/contact-us"
-                    >
-                      Contact us / FAQs
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:work+for+seek"
-                      href="/work-for-seek"
-                    >
-                      Work for SEEK
-                    </a>
-                  </li>
-                  <li
-                    class="secondary"
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:product+blog"
-                      href="http://productblog.seek.com.au"
-                    >
-                      Product & Tech Blog
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <input
-                      class="toggle"
-                      id="SocialToggle"
-                      type="checkbox"
-                    />
-                    <label
-                      class="toggleLink toggleLabel"
-                      for="SocialToggle"
-                    >
-                      Social
-                      <span
-                        class="root root down chevron"
-                      >
-                        mock svg
-                      </span>
-                    </label>
-                    <ul
-                      class="toggleContainer"
-                    >
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:facebook"
-                          href="https://www.facebook.com/seeknz/"
-                        >
-                          Facebook
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:instagram"
-                          href="https://www.instagram.com/seeknz/"
-                        >
-                          Instagram
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:twitter"
-                          href="https://twitter.com/seekjobsnz"
-                        >
-                          Twitter
-                        </a>
-                      </li>
-                      <li
-                        class=""
-                      >
-                        <a
-                          class="link"
-                          data-analytics="toolbar:youtube"
-                          href="https://www.youtube.com/user/SEEKJobs"
-                        >
-                          YouTube
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <nav
-                aria-label="Employers"
-                class="category secondary"
+                  Saved searches
+                </a>
+              </li>
+              <li
+                class=""
               >
-                <h1
-                  class="heading"
+                <a
+                  class="link"
+                  data-analytics="toolbar:favourite"
+                  href="/my-activity/saved-jobs"
                 >
-                  Employers
-                </h1>
-                <ul>
-                  <li
-                    class=""
+                  Saved jobs
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:applied"
+                  href="/my-activity/applied-jobs"
+                >
+                  Applied jobs
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:advice+tips"
+                  href="/career-advice/"
+                >
+                  Advice & tips
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <input
+                  class="toggle"
+                  id="PartnerSitesToggle"
+                  type="checkbox"
+                />
+                <label
+                  class="toggleLink toggleLabel"
+                  for="PartnerSitesToggle"
+                >
+                  SEEK sites
+                  <span
+                    class="root root down chevron"
                   >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:register+for+free"
-                      href="https://talent.seek.co.nz/"
-                    >
-                      Register for free
-                    </a>
-                  </li>
+                    mock svg
+                  </span>
+                </label>
+                <ul
+                  class="toggleContainer"
+                >
                   <li
                     class=""
                   >
@@ -1397,7 +913,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.co.nz/"
                     >
-                      Post a job ad
+                      Employer site
                     </a>
                   </li>
                   <li
@@ -1405,10 +921,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:products+prices"
-                      href="https://talent.seek.co.nz/Support/OurProducts"
+                      data-analytics="toolbar:au+homepage"
+                      href="https://www.seek.com.au/"
                     >
-                      Products & prices
+                      SEEK AU
                     </a>
                   </li>
                   <li
@@ -1416,10 +932,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:customer+service"
-                      href="https://talent.seek.co.nz/ContactUs"
+                      data-analytics="toolbar:courses"
+                      href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
-                      Customer service
+                      Courses
                     </a>
                   </li>
                   <li
@@ -1427,63 +943,531 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:insight+blog"
-                      href="http://insightsresources.seek.co.nz"
+                      data-analytics="toolbar:business+for+sale"
+                      href="https://www.seekbusiness.co.nz/?tracking=sk:main:nz:nav:bus"
                     >
-                      Insights & Resources
+                      Business for sale
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:volunteering"
+                      href="https://www.volunteer.co.nz/?tracking=SKMNZ:main+header"
+                    >
+                      Volunteering
                     </a>
                   </li>
                 </ul>
-              </nav>
-            </div>
-            <nav
-              class="copyright"
+              </li>
+            </ul>
+          </nav>
+          <nav
+            aria-label="Company"
+            class="category secondary"
+          >
+            <h1
+              class="heading"
             >
-              <span
-                class="root"
+              Company
+            </h1>
+            <ul>
+              <li
+                class="secondary"
               >
-                <h1>
-                  Additional Links
-                </h1>
-              </span>
-              <a
-                class="copyrightLink"
-                data-analytics="toolbar:privacy"
-                href="/privacy"
+                <a
+                  class="link"
+                  data-analytics="toolbar:about+seek"
+                  href="/investor/about-us"
+                >
+                  About SEEK
+                </a>
+              </li>
+              <li
+                class="secondary"
               >
-                Privacy
-              </a>
-              <a
-                class="copyrightLink"
-                data-analytics="toolbar:terms+conditions"
-                href="/terms"
+                <a
+                  class="link"
+                  data-analytics="toolbar:media"
+                  href="/investor/news-media"
+                >
+                  Media
+                </a>
+              </li>
+              <li
+                class="secondary"
               >
-                Terms & Conditions
-              </a>
-              <a
-                class="copyrightLink"
-                data-analytics="toolbar:seek+safely"
-                href="/safe-job-searching"
+                <a
+                  class="link"
+                  data-analytics="toolbar:investor+centre"
+                  href="https://ir.seek.com.au"
+                >
+                  Investor centre
+                </a>
+              </li>
+              <li
+                class="secondary"
               >
-                SEEK safely
-              </a>
-              <a
-                class="copyrightLink secondaryLink"
-                data-analytics="toolbar:site+map"
-                href="/sitemap"
+                <input
+                  class="toggle"
+                  id="InternationalPartnersToggle"
+                  type="checkbox"
+                />
+                <label
+                  class="toggleLink toggleLabel"
+                  for="InternationalPartnersToggle"
+                >
+                  International partners
+                  <span
+                    class="root root down chevron"
+                  >
+                    mock svg
+                  </span>
+                </label>
+                <ul
+                  class="toggleContainer"
+                >
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:babajob"
+                      href="http://www.babajob.com"
+                    >
+                      BabaJob
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — India
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:bdjobs"
+                      href="http://www.bdjobs.com"
+                    >
+                      Bdjobs
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Bangladesh
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:brighter+monday"
+                      href="https://www.brightermonday.com"
+                    >
+                      Brighter Monday
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — E Africa
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:catho"
+                      href="http://www.catho.com.br"
+                    >
+                      Catho
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Brazil
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jobberman"
+                      href="http://www.jobberman.com"
+                    >
+                      Jobberman
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — W Africa
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jobsdb"
+                      href="http://www.jobsdb.com"
+                    >
+                      jobsDB
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — SE Asia
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jobstreet"
+                      href="http://www.jobstreet.com"
+                    >
+                      JobStreet
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — SE Asia
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jora+int"
+                      href="https://www.jora.com"
+                    >
+                      Jora
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Worldwide
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:manager"
+                      href="http://www.manager.com.br"
+                    >
+                      Manager
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Brazil
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:occ+mundial"
+                      href="https://www.occ.com.mx"
+                    >
+                      OCC Mundial
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Mexico
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:workana"
+                      href="https://www.workana.com"
+                    >
+                      Workana
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Latin America
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:zhaopin"
+                      href="http://www.zhaopin.com"
+                    >
+                      Zhaopin
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — China
+                    </span>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:jora+au"
+                      href="https://au.jora.com"
+                    >
+                      Jora
+                    </a>
+                    <span
+                      class="partnerCountry"
+                    >
+                       — Australia
+                    </span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav
+            aria-label="Connect"
+            class="category"
+          >
+            <h1
+              class="heading"
+            >
+              Connect
+            </h1>
+            <ul>
+              <li
+                class=""
               >
-                Site Map
-              </a>
-              <p
-                class="copyrightMessage"
+                <a
+                  class="link"
+                  data-analytics="toolbar:contact+us"
+                  href="/contact-us"
+                >
+                  Contact us / FAQs
+                </a>
+              </li>
+              <li
+                class="secondary"
               >
-                © SEEK. All rights reserved.
-              </p>
-            </nav>
-          </div>
-        </section>
+                <a
+                  class="link"
+                  data-analytics="toolbar:work+for+seek"
+                  href="/work-for-seek"
+                >
+                  Work for SEEK
+                </a>
+              </li>
+              <li
+                class="secondary"
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:product+blog"
+                  href="http://productblog.seek.com.au"
+                >
+                  Product & Tech Blog
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <input
+                  class="toggle"
+                  id="SocialToggle"
+                  type="checkbox"
+                />
+                <label
+                  class="toggleLink toggleLabel"
+                  for="SocialToggle"
+                >
+                  Social
+                  <span
+                    class="root root down chevron"
+                  >
+                    mock svg
+                  </span>
+                </label>
+                <ul
+                  class="toggleContainer"
+                >
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:facebook"
+                      href="https://www.facebook.com/seeknz/"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:instagram"
+                      href="https://www.instagram.com/seeknz/"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:twitter"
+                      href="https://twitter.com/seekjobsnz"
+                    >
+                      Twitter
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:youtube"
+                      href="https://www.youtube.com/user/SEEKJobs"
+                    >
+                      YouTube
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav
+            aria-label="Employers"
+            class="category secondary"
+          >
+            <h1
+              class="heading"
+            >
+              Employers
+            </h1>
+            <ul>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:register+for+free"
+                  href="https://talent.seek.co.nz/"
+                >
+                  Register for free
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:post+a+job+ad"
+                  href="https://talent.seek.co.nz/"
+                >
+                  Post a job ad
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:products+prices"
+                  href="https://talent.seek.co.nz/Support/OurProducts"
+                >
+                  Products & prices
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:customer+service"
+                  href="https://talent.seek.co.nz/ContactUs"
+                >
+                  Customer service
+                </a>
+              </li>
+              <li
+                class=""
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:insight+blog"
+                  href="http://insightsresources.seek.co.nz"
+                >
+                  Insights & Resources
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <nav
+          class="copyright"
+        >
+          <span
+            class="root"
+          >
+            <h1>
+              Additional Links
+            </h1>
+          </span>
+          <a
+            class="copyrightLink"
+            data-analytics="toolbar:privacy"
+            href="/privacy"
+          >
+            Privacy
+          </a>
+          <a
+            class="copyrightLink"
+            data-analytics="toolbar:terms+conditions"
+            href="/terms"
+          >
+            Terms & Conditions
+          </a>
+          <a
+            class="copyrightLink"
+            data-analytics="toolbar:seek+safely"
+            href="/safe-job-searching"
+          >
+            SEEK safely
+          </a>
+          <a
+            class="copyrightLink secondaryLink"
+            data-analytics="toolbar:site+map"
+            href="/sitemap"
+          >
+            Site Map
+          </a>
+          <p
+            class="copyrightMessage"
+          >
+            © SEEK. All rights reserved.
+          </p>
+        </nav>
       </div>
-    </div>
+    </section>
   </span>
 </footer>
 `;

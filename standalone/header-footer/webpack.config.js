@@ -38,7 +38,7 @@ const config = {
           'css?modules&localIdentName=[name]__[local]___[hash:base64:5]',
           'postcss',
           'less',
-          `string-replace?search=CSS_SELECTOR_PREFIX&replace=${cssSelectorPrefix}`
+          `string-replace?search=__standalone_css_selector_prefix__&replace=${cssSelectorPrefix}`
         ].join('!')),
         include: appPaths
       },

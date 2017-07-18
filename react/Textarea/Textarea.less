@@ -6,12 +6,12 @@
 }
 
 .textarea {
-  .rawText();
+  .touchableText();
   width: 100%;
   height: @grid-row-height * 10;
   resize: vertical;
   max-height: @grid-row-height * 20;
-  line-height: @grid-row-height * 2;
+  line-height: 25px; // Deliberate deviation to avoid looking like body copy
   color: @sk-charcoal;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
@@ -60,5 +60,5 @@
 }
 
 .invalidCharacterCount {
-  color: @sk-pink
+  color: @sk-pink;
 }
