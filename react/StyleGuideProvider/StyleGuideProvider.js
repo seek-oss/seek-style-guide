@@ -7,10 +7,6 @@ import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
-if (window) {
-  require('smoothscroll-polyfill').polyfill();
-}
-
 const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
 const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';
 
