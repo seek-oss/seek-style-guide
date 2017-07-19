@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
-if (typeof window !== undefined) { // eslint-disable-line
+if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill();
 }
 
