@@ -88,9 +88,9 @@ export default class TextField extends Component {
     const { onClear } = this.props;
 
     if (typeof onClear === 'function') {
+      event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
       onClear(event);
       this.input.focus();
-      event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
     }
   }
 
