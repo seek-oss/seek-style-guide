@@ -115,7 +115,7 @@ export default class Autosuggest extends Component {
           ref={this.storeInputReference}
           {...allAutosuggestProps}
         />
-        {showMobileBackdrop ? <div className={styles.backdrop} /> : null }
+        {showMobileBackdrop ? <div className={styles.autosuggestBackdrop} /> : null }
       </div>
     );
   }

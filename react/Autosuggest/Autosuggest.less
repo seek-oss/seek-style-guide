@@ -66,23 +66,14 @@
   background-color: @sk-mid-gray-light;
 }
 
-.backdrop {
+.autosuggestBackdrop {
   opacity: 0;
 }
 
-.containerOpen + .backdrop {
+.containerOpen + .autosuggestBackdrop {
   .smallDeviceOnly({
-    position: fixed;
-    z-index: 0;
-    top: -999px;
-    left: -999px;
-    right: -999px;
-    bottom: -9999px;
-    background-color: @sk-black;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+    .backdrop()
   });
-
 }
 
 .containerOpen .isLabelCoveredWithBackdrop {
