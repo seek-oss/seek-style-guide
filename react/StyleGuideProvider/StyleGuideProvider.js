@@ -1,5 +1,3 @@
-require('smoothscroll-polyfill').polyfill();
-
 import styles from './StyleGuideProvider.less';
 
 import React from 'react';
@@ -8,6 +6,11 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
+import isObject from 'lodash/isObject';
+
+if (isObject(window)) {
+  require('smoothscroll-polyfill').polyfill();
+}
 
 const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
 const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';
