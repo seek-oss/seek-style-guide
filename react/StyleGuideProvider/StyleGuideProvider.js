@@ -8,7 +8,6 @@ import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 if (typeof window !== undefined) { // eslint-disable-line
-  console.log('lolo: ');
   require('smoothscroll-polyfill').polyfill();
 }
 
