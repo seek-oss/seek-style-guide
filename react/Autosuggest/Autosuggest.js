@@ -82,7 +82,6 @@ export default class Autosuggest extends Component {
   }
 
   scrollOnFocus = () => {
-    // Temporary solution till we do CSS in JS
     const getMatchMedia = invoke(window, 'matchMedia', smallDeviceOnlyMedia);
     const isMobileWidth = get(getMatchMedia, 'matches');
 
