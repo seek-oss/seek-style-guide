@@ -97,8 +97,8 @@ export default class Autosuggest extends Component {
     const allInputProps = {
       ref: this.storeTextFieldReference,
       inputProps: {
+        onFocus: this.onFocus,
         ...inputProps,
-        onFocus: this.onFocus
       },
       ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
     };
