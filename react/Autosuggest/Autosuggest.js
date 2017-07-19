@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
-import omit from 'lodash.omit';
+import { invoke, omit } from 'lodash';
 
 import TextField from '../TextField/TextField';
 
@@ -47,12 +47,19 @@ export default class Autosuggest extends Component {
     super();
 
     this.storeInputReference = this.storeInputReference.bind(this);
+    this.storeTextFieldReference = this.storeTextFieldReference.bind(this);
     this.renderInputComponent = this.renderInputComponent.bind(this);
   }
 
   storeInputReference(autosuggest) {
     if (autosuggest !== null) {
       this.input = autosuggest.input;
+    }
+  }
+
+  storeTextFieldReference(textField) {
+    if (textField !== null) {
+      this.textField = textField.container;
     }
   }
 
@@ -68,9 +75,18 @@ export default class Autosuggest extends Component {
     );
   }
 
+  onFocus = () => {
+    invoke(this.props, 'inputProps.onFocus');
+    this.textField.scrollIntoView();
+  }
+
   renderInputComponent(inputProps) {
     const allInputProps = {
-      inputProps,
+      ref: this.storeTextFieldReference,
+      inputProps: {
+        ...inputProps,
+        onFocus: this.onFocus
+      },
       ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
     };
 

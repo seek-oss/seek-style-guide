@@ -72,6 +72,12 @@ export default class TextField extends Component {
     this.handleMouseDownOnClear = this.handleMouseDownOnClear.bind(this);
   }
 
+  storeContainerReference = textField => {
+    if (textField !== null) {
+      this.container = textField;
+    }
+  }
+
   storeInputReference(input) {
     if (input !== null) {
       this.input = input;
@@ -128,7 +134,7 @@ export default class TextField extends Component {
     const { id, label, labelProps, secondaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
-      <div className={classNames}>
+      <div ref={this.storeContainerReference} className={classNames}>
         <FieldLabel {...{ id, label, labelProps, secondaryLabel }} />
         {this.renderInput()}
         {this.renderClear()}

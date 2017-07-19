@@ -24,6 +24,10 @@ class AutosuggestContainer extends Component {
     });
   };
 
+  handleFocus = () => {
+    console.log('focused');
+  };
+
   handleClear = () => {
     this.setState({
       inputValue: ''
@@ -40,6 +44,7 @@ class AutosuggestContainer extends Component {
           inputProps={{
             type: 'search',
             onChange: this.handleChange,
+            onFocus: this.handleFocus,
             value: inputValue
           }}
           onClear={this.handleClear}
