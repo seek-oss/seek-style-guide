@@ -1,3 +1,5 @@
+require('smoothscroll-polyfill').polyfill();
+
 import styles from './Autosuggest.less';
 
 import React, { Component } from 'react';
@@ -87,7 +89,7 @@ export default class Autosuggest extends Component {
     const isMobileWidth = get(getMatchMedia, 'matches');
 
     if (isMobileWidth) {
-      this.textField.scrollIntoView();
+      this.textField.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
