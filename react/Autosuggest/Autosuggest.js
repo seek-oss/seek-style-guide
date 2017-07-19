@@ -81,9 +81,7 @@ export default class Autosuggest extends Component {
     );
   }
 
-  onFocus = event => {
-    invoke(this.props, 'inputProps.onFocus', event);
-
+  scrollOnFocus = () => {
     // Temporary solution till we do CSS in JS
     const getMatchMedia = invoke(window, 'matchMedia', smallDeviceOnlyMedia);
     const isMobileWidth = get(getMatchMedia, 'matches');
@@ -94,11 +92,16 @@ export default class Autosuggest extends Component {
   }
 
   renderInputComponent(inputProps) {
+    const onFocus = () => {
+      this.scrollOnFocus();
+      inputProps.onFocus(event);
+    };
+
     const allInputProps = {
       ref: this.storeTextFieldReference,
       inputProps: {
-        onFocus: this.onFocus,
-        ...inputProps,
+        ...omit(inputProps, 'onFocus'),
+        onFocus
       },
       ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
     };
