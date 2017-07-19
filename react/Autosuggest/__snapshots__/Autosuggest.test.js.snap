@@ -68,6 +68,25 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
     <div
       class="root"
     >
+      <label
+        class="isLabelCoveredWithBackdrop LABEL_TEST_CLASS"
+        for="Foo"
+      >
+        <div
+          class="root baseline"
+        >
+          <span
+            class=""
+          >
+            <strong
+              class="root"
+            >
+              Foo
+            </strong>
+             
+          </span>
+        </div>
+      </label>
       <input
         aria-autocomplete="list"
         aria-expanded="false"
@@ -98,7 +117,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
       />
     </div>
     <div
-      class="suggestionsContainer"
+      class="suggestionsContainer suggestionsContainer_withLabel"
       id="react-autowhatever-1"
     />
   </div>

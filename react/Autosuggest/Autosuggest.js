@@ -71,8 +71,17 @@ export default class Autosuggest extends Component {
   }
 
   renderInputComponent(inputProps) {
+    const { labelProps = {} } = inputProps;
+
     const allInputProps = {
       inputProps,
+      labelProps: {
+        ...labelProps,
+        className: classnames({
+          [styles.isLabelCoveredWithBackdrop]: this.props.showMobileBackdrop,
+          [labelProps.className]: labelProps.className
+        })
+      },
       ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
     };
 

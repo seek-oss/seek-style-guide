@@ -48,7 +48,13 @@ describe('Autosuggest', () => {
   });
 
   it('should render with mobile backdrop', () => {
-    const wrapper = render(<Autosuggest {...getAutosuggestProps()} id="Foo" showMobileBackdrop />);
+    const props = getAutosuggestProps();
+    props.inputProps.labelProps = {
+      className: 'LABEL_TEST_CLASS',
+      someLabelProp: 'bar'
+    };
+
+    const wrapper = render(<Autosuggest {...props} id="Foo" label="Foo" showMobileBackdrop />);
     expect(wrapper).toMatchSnapshot();
   });
 
