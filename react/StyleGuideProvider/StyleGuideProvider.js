@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
-if (window) {
+if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill();
 }
 
