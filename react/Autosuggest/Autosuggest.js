@@ -81,8 +81,8 @@ export default class Autosuggest extends Component {
     );
   }
 
-  onFocus = () => {
-    invoke(this.props, 'inputProps.onFocus');
+  onFocus = event => {
+    invoke(this.props, 'inputProps.onFocus', event);
 
     // Temporary solution till we do CSS in JS
     const getMatchMedia = invoke(window, 'matchMedia', smallDeviceOnlyMedia);

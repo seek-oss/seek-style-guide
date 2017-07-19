@@ -24,8 +24,8 @@ class AutosuggestContainer extends Component {
     });
   };
 
-  handleFocus = () => {
-    console.log('focused');
+  handleFocus = event => {
+    console.log('Focused, event: ', event);
   };
 
   handleClear = () => {
