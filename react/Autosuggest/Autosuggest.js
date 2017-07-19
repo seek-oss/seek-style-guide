@@ -9,7 +9,6 @@ import IsolatedScroll from 'react-isolated-scroll';
 import get from 'lodash/get';
 import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
-import isObject from 'lodash/isObject';
 
 import TextField from '../TextField/TextField';
 
@@ -83,7 +82,7 @@ export default class Autosuggest extends Component {
   }
 
   scrollOnFocus = () => {
-    const getMatchMedia = isObject(window) ? invoke(window, 'matchMedia', smallDeviceOnlyMedia) : {};
+    const getMatchMedia = invoke(window, 'matchMedia', smallDeviceOnlyMedia);
     const isMobileWidth = get(getMatchMedia, 'matches');
 
     if (isMobileWidth) {

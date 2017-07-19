@@ -6,9 +6,8 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
-import isObject from 'lodash/isObject';
 
-if (isObject(window)) {
+if (window) {
   require('smoothscroll-polyfill').polyfill();
 }
 
