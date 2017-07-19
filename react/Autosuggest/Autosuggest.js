@@ -5,9 +5,12 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
-import { invoke, omit } from 'lodash';
+import { get, invoke, omit } from 'lodash';
 
 import TextField from '../TextField/TextField';
+
+const responsiveBreakpoint = '740';
+const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
 
 export default class Autosuggest extends Component {
 
@@ -77,7 +80,14 @@ export default class Autosuggest extends Component {
 
   onFocus = () => {
     invoke(this.props, 'inputProps.onFocus');
-    this.textField.scrollIntoView();
+
+    // Temporary solution till we do CSS in JS
+    const getMatchMedia = invoke(window, 'matchMedia', smallDeviceOnlyMedia);
+    const isMobileWidth = get(getMatchMedia, 'matches');
+
+    if (isMobileWidth) {
+      this.textField.scrollIntoView();
+    }
   }
 
   renderInputComponent(inputProps) {
