@@ -15,7 +15,7 @@ describe('Header:', () => {
   });
 
   it('should render when authenticated', () => {
-    expect(renderHeader({ authenticationStatus: 'authenticated', userName: 'Leeroy', userEmail: 'leeroybrown@email.com' })).toMatchSnapshot();
+    expect(renderHeader({ authenticationStatus: 'authenticated', userName: 'Leeroy', userEmail: 'leeroybrown@email.com', returnUrl: '/jobs' })).toMatchSnapshot();
   });
 
   it('should render when authenticated but username and email is not yet provided', () => {
