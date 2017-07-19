@@ -761,7 +761,7 @@ exports[`Footer: should render with locale of AU 1`] = `
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
           >
-            SEEK safely
+            Protect Yourself Online
           </a>
           <a
             class="copyrightLink secondaryLink"
@@ -1451,7 +1451,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
           >
-            SEEK safely
+            Protect Yourself Online
           </a>
           <a
             class="copyrightLink secondaryLink"
