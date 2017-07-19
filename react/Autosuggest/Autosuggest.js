@@ -1,5 +1,3 @@
-require('smoothscroll-polyfill').polyfill();
-
 import styles from './Autosuggest.less';
 
 import React, { Component } from 'react';

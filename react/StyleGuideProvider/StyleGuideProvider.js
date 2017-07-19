@@ -1,3 +1,5 @@
+require('smoothscroll-polyfill').polyfill();
+
 import styles from './StyleGuideProvider.less';
 
 import React from 'react';
