@@ -89,7 +89,7 @@ export default class TextField extends Component {
   handleMouseDownOnClear(event) {
     event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
     invoke(this.props, 'onClear', event);
-    invoke(this.input, 'focus');
+    this.input.focus();
   }
 
   renderInput() {
