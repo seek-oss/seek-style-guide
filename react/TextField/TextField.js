@@ -9,6 +9,8 @@ import ClearField from './ClearField/ClearField';
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
 
+import invoke from 'lodash.invoke';
+
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
 
@@ -85,13 +87,9 @@ export default class TextField extends Component {
   }
 
   handleMouseDownOnClear(event) {
-    const { onClear } = this.props;
-
-    if (typeof onClear === 'function') {
-      event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
-      onClear(event);
-      this.input.focus();
-    }
+    event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
+    invoke(this.props, 'onClear', event);
+    invoke(this.input, 'focus');
   }
 
   renderInput() {
@@ -112,8 +110,7 @@ export default class TextField extends Component {
     return (
       <span
         className={styles.clearField}
-        onMouseDown={this.handleMouseDownOnClear}
-        onTouchStart={this.handleMouseDownOnClear}>
+        onMouseDown={this.handleMouseDownOnClear}>
         <ClearField />
       </span>
     );
