@@ -73,13 +73,13 @@ export default () => (
           </Paragraph>
         </Section>
         <Section>
-          <Text headline>Header and Footer</Text>
+          <Text heading>Header and Footer</Text>
           <Paragraph>
             <Text superstandard>The obvious starting point is to add the <TextLink to="/header">Header</TextLink> and <TextLink to="/footer">Footer</TextLink> components to your page, both of which are fairly self explanatory and documented separately.</Text>
           </Paragraph>
         </Section>
         <Section>
-          <Text headline>Page Blocks</Text>
+          <Text heading>Page Blocks</Text>
           <Paragraph>
             <Text superstandard>Page blocks serve as the canvas for most content in your application. They are designed to break the content up into one or more horizontal bands. When used for hero content at the top of a page, they'll usually also have background colours applied to them.</Text>
           </Paragraph>
@@ -104,7 +104,7 @@ export default () => (
       <Card style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
-            <Text headline>Sections</Text>
+            <Text heading>Sections</Text>
             <Text superstandard>
               Page blocks by themselves don't provide any inner padding. This may be desirable in some cases, but you'll usually want to provide some space above and below your content, as well as providing responsive gutters on either side.
             </Text>
@@ -172,7 +172,7 @@ export default () => (
         initialProps: {
           children: (
             <Section header>
-              <Text hero>Lorem ipsum</Text>
+              <Text headline>Lorem ipsum</Text>
             </Section>
           )
         },
@@ -183,7 +183,7 @@ export default () => (
       <Card style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
-            <Text headline>Cards</Text>
+            <Text heading>Cards</Text>
             <Text superstandard>
               Once we start to add a lot of content to the page, you'll find yourself wanting to break it up into visually distinct blocks of colour. Cards make this extremely simple by providing a white background with vertical space underneath.
             </Text>
@@ -200,7 +200,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text hero>Lorem ipsum</Text>
+                <Text headline>Lorem ipsum</Text>
               </Section>
               <Card>
                 <Section>
@@ -240,7 +240,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text hero>Lorem ipsum</Text>
+                <Text headline>Lorem ipsum</Text>
               </Section>
               <Card>
                 <Section>
@@ -264,7 +264,7 @@ export default () => (
       <Card style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
-            <Text headline>Card Groups</Text>
+            <Text heading>Card Groups</Text>
             <Text superstandard>
               When multiple cards are very closely related, they can be nested within a card group to ensure that this relationship is clearly communicated.
             </Text>
@@ -281,7 +281,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text hero>Lorem ipsum</Text>
+                <Text headline>Lorem ipsum</Text>
               </Section>
               <Card group>
                 <Card>
@@ -313,7 +313,7 @@ export default () => (
       <Card style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
-            <Text headline>Asided Layouts</Text>
+            <Text heading>Asided Layouts</Text>
             <Text superstandard>
               Even though we set a maximum content width on larger screens, it results in line lengths that extend beyond comfortable reading levels. This is where our asided layout component comes in, giving us the ability to quickly and easily place content side-by-side on large screens, while responsively collapsing down to a single column on small screens.
             </Text>
@@ -391,7 +391,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text hero>Lorem ipsum</Text>
+                <Text headline>Lorem ipsum</Text>
               </Section>
               <AsidedLayout
                 size="33%"
