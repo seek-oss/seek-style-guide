@@ -3,27 +3,25 @@
 .root {
   .touchableText(@standard-type-scale);
   color: @sk-mid-gray-light;
-
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     .touchableText();
     color: @sk-mid-gray-medium;
-  });
+  }
 }
 
 .link {
   .link();
   display: inline-block;
-
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     @bottom-offset: -13px;
     @border-width: 1px;
     color: @sk-white;
     box-shadow:
-      inset 0 @bottom-offset 0px @sk-blue,
-      inset 0 (@bottom-offset - @border-width) 0px @sk-white;
+      inset 0 @bottom-offset 0 @sk-blue,
+      inset 0 (@bottom-offset - @border-width) 0 @sk-white;
     &:hover {
       text-decoration: none;
       cursor: pointer;
     }
-  });
+  }
 }

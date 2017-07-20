@@ -31,11 +31,10 @@
 .suggestionsContainer_withLabel {
   @labelRowOffset: 4;
   top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
-
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     @labelRowOffset: 3;
     top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
-  })
+  }
 }
 
 .sectionTitle {

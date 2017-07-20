@@ -20,9 +20,9 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     .touchableText(@standard-type-scale);
-  })
+  }
 }
 
 .checkBox {
@@ -67,9 +67,9 @@
   border: 1px solid @sk-mid-gray-light;
   border-radius: 2px;
   cursor: pointer;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     .touchableText(@standard-type-scale);
-  });
+  }
 
   .input:checked + .label & {
     font-weight: @sk-bold;

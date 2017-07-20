@@ -7,15 +7,15 @@
 .root {
   display: flex;
   justify-content: center;
-  .smallDeviceOnly({
-    box-shadow: inset 0 -1px rgba(255, 255, 255, .2);
-  });
-  .aboveSmallDevice({
+  @media @smallDeviceOnly {
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.2);
+  }
+  @media @aboveSmallDevice {
     background-color: @sk-background;
     &.divider {
       border-bottom: @grid-row-height solid @sk-blue;
     }
-  });
+  }
 }
 
 .list {
@@ -28,9 +28,9 @@
   @media only screen and (max-width: (@nav-min-width - 1)) {
     flex-grow: 1;
   }
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     display: none;
-  });
+  }
 }
 
 .link {
@@ -43,9 +43,9 @@
   &:hover {
     cursor: pointer;
   }
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     color: @sk-black;
-  });
+  }
   @media only screen and (max-width: (@nav-min-width - 1)) {
     width: 100%;
   }
@@ -57,7 +57,7 @@
 .link_isActive {
   color: @sk-white;
   background-color: @sk-blue;
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     box-shadow: inset 0 -2px @sk-white;
-  });
+  }
 }

@@ -87,9 +87,9 @@
   .activeState({
     transform: none;
   });
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     .touchableText(@standard-type-scale);
-  })
+  }
 }
 
 .loading {

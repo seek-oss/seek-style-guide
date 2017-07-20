@@ -2,9 +2,9 @@
 
 .root {
   width: 100%;
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     position: relative;
-  });
+  }
 }
 
 .content {
@@ -13,10 +13,10 @@
   z-index: @z-index-header;
   display: flex;
   flex-flow: row wrap;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     background-color: @sk-white;
     justify-content: center;
-  });
+  }
 }
 
 .banner {
@@ -26,13 +26,13 @@
   flex: 1 0 auto;
   padding: 0 (@grid-gutter-width / 2);
   max-width: @grid-container-width + @grid-gutter-width;
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     height: (@grid-row-height * 7);
-  });
-  .aboveSmallDevice({
+  }
+  @media @aboveSmallDevice {
     order: 1;
     height: (@grid-row-height * 9);
-  });
+  }
   @media print {
     justify-content: flex-start;
   }
@@ -42,17 +42,17 @@
 }
 
 .topBanner {
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     display: none;
-  });
-  .aboveSmallDevice({
+  }
+  @media @aboveSmallDevice {
     display: flex;
     background-color: @sk-background;
     order: 0;
     flex: 0 1 100%;
     justify-content: center;
     padding: 0 (@grid-gutter-width / 2);
-  });
+  }
 }
 
 .topBannerContent {
@@ -67,13 +67,13 @@
 }
 
 .navigation {
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     display: none;
-  });
-  .aboveSmallDevice({
+  }
+  @media @aboveSmallDevice {
     flex: 1 0 100%;
     order: 2;
-  });
+  }
 }
 
 .logo {
@@ -89,10 +89,10 @@
 .logoSvg {
   height: 39px;
   width: 105px;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     height: 51px;
     width: 129px;
-  });
+  }
 }
 
 .logoLink {
@@ -111,45 +111,45 @@
 .user {
   display: flex;
   align-items: center;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     pointer-events: none;
     opacity: 0;
-    transition: opacity .3s ease;
-  });
+    transition: opacity 0.3s ease;
+  }
 }
 
 .user_isReady {
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     pointer-events: auto;
     opacity: 1;
-  });
+  }
 }
 
 .userAccountWrapper {
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     .user_isUnauthenticated & {
       display: none;
     }
-  });
+  }
 }
 
 .signInRegisterWrapper {
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     display: none;
-  });
-  .aboveSmallDevice({
+  }
+  @media @aboveSmallDevice {
     .user_isAuthenticated & {
       display: none;
     }
-  });
+  }
 }
 
 .employerSite {
   display: none;
   white-space: nowrap;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     display: block;
-  });
+  }
 }
 
 .employerLink {
@@ -174,7 +174,7 @@
   height: 14px;
   border-right: @divider-width solid @sk-mid-gray-dark;
   display: none;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     display: inline-block;
-  });
+  }
 }

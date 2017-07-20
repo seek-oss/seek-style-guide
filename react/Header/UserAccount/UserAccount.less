@@ -1,9 +1,9 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     position: relative;
-  });
+  }
 }
 
 .toggleLabel {
@@ -12,9 +12,9 @@
   cursor: pointer;
   position: relative;
   z-index: @z-index-inline-overlay;
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     color: @sk-white;
-  });
+  }
 }
 
 .toggle {
@@ -32,14 +32,14 @@
   }
 
   & ~ .menuBackdrop {
-    .aboveSmallDevice({
+    @media @aboveSmallDevice {
       display: block;
-    });
-    .smallDeviceOnly({
+    }
+    @media @smallDeviceOnly {
       z-index: @z-index-inline-overlay;
       pointer-events: auto;
       opacity: 1;
-    });
+    }
   }
 
   & ~ .toggleLabel .chevron {
@@ -59,14 +59,16 @@
     transform 0.25s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   pointer-events: none;
   z-index: @z-index-inline-overlay;
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     transform: translateY(@grid-row-height * -1);
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
     top: (@grid-row-height * 7); // header height
     right: 0;
     left: 0;
     bottom: 0;
-  });
+  }
 }
 
 .menuBackdrop {
@@ -75,17 +77,17 @@
   left: -999px;
   right: -999px;
   bottom: -9999px;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     z-index: @z-index-inline-overlay;
     display: none;
-  });
-  .smallDeviceOnly({
+  }
+  @media @smallDeviceOnly {
     z-index: @z-index-negative;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.25s ease;
     background-color: @sk-blue;
-  });
+  }
 }
 
 .menuBackdropLabel {
@@ -101,9 +103,9 @@
   display: inline-block;
   min-width: 60px;
   text-align: right;
-  .aboveSmallDevice({
+  @media @aboveSmallDevice {
     display: none;
-  });
+  }
 }
 
 .desktopMenuLabel {
@@ -116,9 +118,9 @@
   @media only screen and (min-width: 400px) {
     max-width: 200px; // ~ 20 characters
   }
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     display: none;
-  });
+  }
 }
 
 .chevron {
@@ -127,22 +129,22 @@
   transition: transform 0.3s ease;
   transform-origin: 50% 50%;
   pointer-events: none;
-  .smallDeviceOnly({
+  @media @smallDeviceOnly {
     text-align: center;
     width: @grid-gutter-width;
     margin-right: (@grid-gutter-width / 2);
-  });
+  }
 }
 
 .chevronSvg {
   width: 14px;
   height: 14px;
   // Begin bold icon hacks
-  .smallDeviceOnly({
-    path {
+  @media @smallDeviceOnly {
+    path { // stylelint-disable-line selector-max-type
       stroke: currentColor;
       stroke-width: 70px;
     }
-  });
+  }
   // End bold icon hacks
 }
