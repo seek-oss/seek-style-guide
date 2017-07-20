@@ -13,7 +13,7 @@ import omit from 'lodash/omit';
 import TextField from '../TextField/TextField';
 import smoothScroll from '../private/smoothScroll';
 
-const responsiveBreakpoint = '740';
+const responsiveBreakpoint = 740;
 const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
 
 export default class Autosuggest extends Component {
