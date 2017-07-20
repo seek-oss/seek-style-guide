@@ -64,5 +64,4 @@ export { default as ScreenReaderSkipLink } from './ScreenReaderSkipLink/ScreenRe
 export { default as ScreenReaderSkipTarget } from './ScreenReaderSkipTarget/ScreenReaderSkipTarget';
 
 // Utils
-export { default as smoothScroll } from './SmoothScroll/SmoothScroll';
-
+export { default as smoothScroll } from './utils/smoothScroll';

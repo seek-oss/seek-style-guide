@@ -11,7 +11,7 @@ import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
 
 import TextField from '../TextField/TextField';
-import smoothScroll from '../SmoothScroll/SmoothScroll';
+import smoothScroll from '../utils/smoothScroll';
 
 const responsiveBreakpoint = '740';
 const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
