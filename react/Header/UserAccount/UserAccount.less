@@ -141,7 +141,7 @@
   height: 14px;
   // Begin bold icon hacks
   @media @smallDeviceOnly {
-    path { // stylelint-disable-line selector-max-type
+    :global(path) {
       stroke: currentColor;
       stroke-width: 70px;
     }
