@@ -145,13 +145,6 @@ describe('TextField', () => {
       expect(handleClear).to.be.calledWith(eventMatcher);
     });
 
-    it('should invoke the clear handler when touched', () => {
-      renderToDom(<TextField onClear={handleClear} />);
-      Simulate.touchStart(clearField);
-      expect(handleClear.calledOnce).to.equal(true);
-      expect(handleClear).to.be.calledWith(eventMatcher);
-    });
-
     it('should focus the input when clicked', () => {
       renderToDom(<TextField onClear={handleClear} />);
       clickClear();
