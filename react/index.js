@@ -62,3 +62,7 @@ export { default as SlideToggle } from './SlideToggle/SlideToggle';
 export { default as ScreenReaderOnly } from './ScreenReaderOnly/ScreenReaderOnly';
 export { default as ScreenReaderSkipLink } from './ScreenReaderSkipLink/ScreenReaderSkipLink';
 export { default as ScreenReaderSkipTarget } from './ScreenReaderSkipTarget/ScreenReaderSkipTarget';
+
+// Utils
+export { default as smoothScroll } from './SmoothScroll/SmoothScroll';
+

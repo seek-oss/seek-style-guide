@@ -11,6 +11,7 @@ import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
 
 import TextField from '../TextField/TextField';
+import smoothScroll from '../SmoothScroll/SmoothScroll';
 
 const responsiveBreakpoint = '740';
 const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
@@ -86,7 +87,7 @@ export default class Autosuggest extends Component {
     const isMobileWidth = get(getMatchMedia, 'matches');
 
     if (isMobileWidth) {
-      this.textField.scrollIntoView({ behavior: 'smooth' });
+      smoothScroll(this.textField);
     }
   }
 
