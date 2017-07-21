@@ -96,6 +96,13 @@ export default {
             ...props,
             disableBodyScroll: true
           })
+        },
+        {
+          label: 'Show mobile backdrop',
+          transformProps: ({ ...props }) => ({
+            ...props,
+            showMobileBackdrop: true
+          })
         }
       ]
     },

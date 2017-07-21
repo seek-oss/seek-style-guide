@@ -29,6 +29,7 @@ export default class Autosuggest extends Component {
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
     disableBodyScroll: PropTypes.bool.isRequired,
+    showMobileBackdrop: PropTypes.bool,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
       const { suggestionsContainerClassName, autosuggestProps } = props;
@@ -51,7 +52,8 @@ export default class Autosuggest extends Component {
     id: '',
     className: '',
     label: '',
-    disableBodyScroll: false
+    disableBodyScroll: false,
+    showMobileBackdrop: false
   };
 
   constructor() {
@@ -96,17 +98,30 @@ export default class Autosuggest extends Component {
   }
 
   renderInputComponent(inputProps) {
+    const { labelProps = {} } = inputProps;
+
     const onFocus = () => {
       this.scrollOnFocus();
       invoke(inputProps, 'onFocus', event);
     };
 
+    const enrichedInputProps = {
+      ...omit(inputProps, 'onFocus'),
+      onFocus
+    };
+
+    const enrichedlabelProps = {
+      ...labelProps,
+      className: classnames({
+        [styles.isLabelCoveredWithBackdrop]: this.props.showMobileBackdrop,
+        [labelProps.className]: labelProps.className
+      })
+    };
+
     const allInputProps = {
       ref: this.storeTextFieldReference,
-      inputProps: {
-        ...omit(inputProps, 'onFocus'),
-        onFocus
-      },
+      inputProps: enrichedInputProps,
+      labelProps: enrichedlabelProps,
       ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
     };
 
@@ -116,7 +131,14 @@ export default class Autosuggest extends Component {
   }
 
   render() {
-    const { disableBodyScroll, inputProps, label, autosuggestProps, suggestionsContainerClassName } = this.props;
+    const {
+      disableBodyScroll,
+      inputProps,
+      label,
+      autosuggestProps,
+      suggestionsContainerClassName,
+      showMobileBackdrop
+    } = this.props;
     const { theme = {} } = autosuggestProps;
     const allAutosuggestProps = {
       renderSuggestionsContainer: this.renderSuggestionsContainer,
@@ -134,13 +156,18 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <DisableBodyScroll isDisabled={disableBodyScroll}>
+      <div>
         <ReactAutosuggest
           inputProps={inputProps}
           ref={this.storeInputReference}
           {...allAutosuggestProps}
         />
-      </DisableBodyScroll>
+        {showMobileBackdrop ?
+          <DisableBodyScroll isDisabled={disableBodyScroll}>
+            <div className={styles.autosuggestBackdrop} />
+          </DisableBodyScroll> : null
+        }
+      </div>
     );
   }
 
