@@ -28,7 +28,7 @@ export default class Autosuggest extends Component {
     label: PropTypes.string,
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
-    disableBodyScroll: PropTypes.bool.isRequired,
+    disableBodyScrollWhenSuggestionsShown: PropTypes.bool.isRequired,
     showMobileBackdrop: PropTypes.bool,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
@@ -52,7 +52,7 @@ export default class Autosuggest extends Component {
     id: '',
     className: '',
     label: '',
-    disableBodyScroll: false,
+    disableBodyScrollWhenSuggestionsShown: false,
     showMobileBackdrop: false
   };
 
@@ -132,7 +132,7 @@ export default class Autosuggest extends Component {
 
   render() {
     const {
-      disableBodyScroll,
+      disableBodyScrollWhenSuggestionsShown, // this should be wired up to isOpen in autosuggest
       inputProps,
       label,
       autosuggestProps,
@@ -162,11 +162,11 @@ export default class Autosuggest extends Component {
           ref={this.storeInputReference}
           {...allAutosuggestProps}
         />
-        {showMobileBackdrop ?
-          <DisableBodyScroll isDisabled={disableBodyScroll}>
-            <div className={styles.autosuggestBackdrop} />
-          </DisableBodyScroll> : null
-        }
+        <DisableBodyScroll isDisabled={disableBodyScrollWhenSuggestionsShown}>
+          {showMobileBackdrop ?
+            <div className={styles.autosuggestBackdrop} /> : null
+          }
+        </DisableBodyScroll>
       </div>
     );
   }

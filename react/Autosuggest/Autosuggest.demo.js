@@ -92,9 +92,9 @@ export default {
         },
         {
           label: 'Disable body scroll',
-          transformProps: ({ disableBodyScroll, ...props }) => ({
+          transformProps: ({ disableBodyScrollWhenSuggestionsShown, ...props }) => ({
             ...props,
-            disableBodyScroll: true
+            disableBodyScrollWhenSuggestionsShown: true
           })
         },
         {
