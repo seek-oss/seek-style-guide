@@ -15,7 +15,7 @@ DisableBodyScroll.propTypes = {
   isDisabled: PropTypes.bool
 };
 
-function reducePropsToState(propsList) {
+const reducePropsToState = propsList => {
   let isDisabled;
 
   propsList.forEach(props => {
@@ -23,7 +23,7 @@ function reducePropsToState(propsList) {
   });
 
   return isDisabled;
-}
+};
 
 const handleStateChangeOnClient = isDisabled => {
   Object.assign(document.body.style, { overflow: isDisabled ? 'hidden' : 'auto' });
