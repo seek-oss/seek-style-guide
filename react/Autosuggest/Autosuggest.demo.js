@@ -89,6 +89,13 @@ export default {
             ...props,
             className: classnames(className, styles.rootFocus)
           })
+        },
+        {
+          label: 'Disable body scroll',
+          transformProps: ({ disableBodyScroll, ...props }) => ({
+            ...props,
+            disableBodyScroll: true
+          })
         }
       ]
     },

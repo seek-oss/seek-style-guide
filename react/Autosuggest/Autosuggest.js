@@ -13,6 +13,8 @@ import omit from 'lodash/omit';
 import TextField from '../TextField/TextField';
 import smoothScroll from '../private/smoothScroll';
 
+import DisableBodyScroll from '../DisableBodyScroll/DisableBodyScroll';
+
 const responsiveBreakpoint = 740;
 const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
 
@@ -26,6 +28,7 @@ export default class Autosuggest extends Component {
     label: PropTypes.string,
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
+    disableBodyScroll: PropTypes.bool.isRequired,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
       const { suggestionsContainerClassName, autosuggestProps } = props;
@@ -47,7 +50,8 @@ export default class Autosuggest extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    label: ''
+    label: '',
+    disableBodyScroll: false
   };
 
   constructor() {
@@ -112,7 +116,7 @@ export default class Autosuggest extends Component {
   }
 
   render() {
-    const { inputProps, label, autosuggestProps, suggestionsContainerClassName } = this.props;
+    const { disableBodyScroll, inputProps, label, autosuggestProps, suggestionsContainerClassName } = this.props;
     const { theme = {} } = autosuggestProps;
     const allAutosuggestProps = {
       renderSuggestionsContainer: this.renderSuggestionsContainer,
@@ -130,11 +134,13 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <ReactAutosuggest
-        inputProps={inputProps}
-        ref={this.storeInputReference}
-        {...allAutosuggestProps}
-      />
+      <DisableBodyScroll isDisabled={disableBodyScroll}>
+        <ReactAutosuggest
+          inputProps={inputProps}
+          ref={this.storeInputReference}
+          {...allAutosuggestProps}
+        />
+      </DisableBodyScroll>
     );
   }
 
