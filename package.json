@@ -73,6 +73,7 @@
     "postcss-loader": "0.9.1",
     "prop-types": "^15.5.10",
     "raw-loader": "0.5.1",
+    "react-autosuggest": "9.3.1",
     "style-loader": "0.13.1",
     "svgo": "0.7.1",
     "svgo-loader": "1.1.0",
@@ -86,7 +87,6 @@
     "lodash.range": "^3.2.0",
     "pad-left": "^2.1.0",
     "react": "^15.3.1",
-    "react-autosuggest": "9.3.1",
     "react-dom": "^15.3.1",
     "react-helmet": "^3.2.2",
     "react-isolated-scroll": "^0.1.0"
@@ -123,7 +123,6 @@
     "preact-compat": "^3.14.3",
     "react": "^15.3.1",
     "react-addons-pure-render-mixin": "^15.3.1",
-    "react-autosuggest": "9.3.1",
     "react-baseline": "^1.0.1",
     "react-copy-to-clipboard": "4.2.1",
     "react-dom": "^15.3.1",
