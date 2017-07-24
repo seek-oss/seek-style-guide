@@ -40,8 +40,8 @@
     .focus();
   }
 
-  .input:checked + .label & {
-    background-color: @sk-mid-gray-light;
+  .label & {
+    background-color: @sk-white;
   }
 }
 
@@ -49,7 +49,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  fill: @sk-black;
+  fill: @sk-focus;
   opacity: 0;
 
   .input:checked + .label & {
