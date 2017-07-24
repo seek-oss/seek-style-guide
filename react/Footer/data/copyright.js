@@ -10,7 +10,7 @@ export default [
     analytics: 'toolbar:terms+conditions'
   },
   {
-    name: 'SEEK safely',
+    name: 'Protect yourself online',
     href: '/safe-job-searching',
     analytics: 'toolbar:seek+safely'
   },
