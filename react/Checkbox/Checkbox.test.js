@@ -20,38 +20,34 @@ describe('Checkbox', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should invoke the onChange handler when touched', () => {
-    const handleChange = jest.fn();
-    const props = {
-      ...simpleProps,
-      inputProps: {
-        onChange: handleChange,
-        checked: false
-      }
-    };
-    const check = { target: { checked: true } };
-
-    const wrapper = shallow(<Checkbox {...props} />);
-
-    wrapper.find('input').simulate('change', check);
-    expect(handleChange).toBeCalledWith(check);
+  it('should render with standard checkbox style', () => {
+    const wrapper = shallow(<Checkbox {...simpleProps} type="standard" />);
+    expect(wrapper).toMatchSnapshot();
   });
 
-  describe('when type is standard', () => {
-    it('should render standard checkbox', () => {
-      const wrapper = shallow(<Checkbox {...simpleProps} type="standard" />);
-      expect(wrapper).toMatchSnapshot();
-    });
-  });
-
-  describe('when type is button', () => {
-    it('should render button checkbox', () => {
-      const wrapper = shallow(<Checkbox type="button" />);
-      expect(wrapper).toMatchSnapshot();
-    });
+  it('should render with button style', () => {
+    const wrapper = shallow(<Checkbox type="button" />);
+    expect(wrapper).toMatchSnapshot();
   });
 
   describe('inputProps', () => {
+    it('should invoke the onChange handler when touched', () => {
+      const handleChange = jest.fn();
+      const props = {
+        ...simpleProps,
+        inputProps: {
+          onChange: handleChange,
+          checked: false
+        }
+      };
+      const check = { target: { checked: true } };
+
+      const wrapper = shallow(<Checkbox {...props} />);
+
+      wrapper.find('input').simulate('change', check);
+      expect(handleChange).toBeCalledWith(check);
+    });
+
     it('should render as checked', () => {
       const wrapper = shallow(<Checkbox {...simpleProps} inputProps={{ checked: true }} />);
       expect(wrapper).toMatchSnapshot();
