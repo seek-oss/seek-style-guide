@@ -6,7 +6,7 @@ import demoStyles from './Checkbox.demo.less';
 import styles from './Checkbox.less';
 import classnames from 'classnames';
 
-const wrapperClickHandler = () => console.log('Wrapper click handler is called')
+const wrapperClickHandler = () => console.log('Wrapper click handler is called');
 
 class CheckboxContainer extends Component {
   static propTypes = {
