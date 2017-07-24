@@ -39,6 +39,9 @@
   @media only screen and (min-width: (@grid-container-width)) { //IE11 flexbox horizontal centering
     flex: 0 0 @grid-container-width;
   }
+  @media only screen and (min-width: (@grid-container-width + @grid-gutter-width)) {
+    padding: 0;
+  }
 }
 
 .topBanner {
@@ -53,6 +56,9 @@
     justify-content: center;
     padding: 0 (@grid-gutter-width / 2);
   });
+  @media only screen and (min-width: @responsive-breakpoint) and (max-width: (@grid-container-width + @grid-gutter-width)) {
+    padding: 0;
+  }
 }
 
 .topBannerContent {
@@ -162,6 +168,9 @@
 .locale {
   position: absolute;
   right: 0;
+  @media only screen and (min-width: @responsive-breakpoint) and (max-width: (@grid-container-width + @grid-gutter-width - 1)) {
+    right: (@grid-gutter-width / 2);
+  }
 }
 
 .divider {
