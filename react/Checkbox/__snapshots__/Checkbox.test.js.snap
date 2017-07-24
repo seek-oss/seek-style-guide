@@ -184,7 +184,7 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
 </div>
 `;
 
-exports[`Checkbox wrapper renderer should invoke the onChange handler when touched 1`] = `
+exports[`Checkbox should render with wrapper renderer 1`] = `
 <button
   onClick={[Function]}
 >
@@ -195,6 +195,7 @@ exports[`Checkbox wrapper renderer should invoke the onChange handler when touch
       checked={false}
       className="input"
       id="still-in-role"
+      onChange={[Function]}
       type="checkbox"
     />
     <label

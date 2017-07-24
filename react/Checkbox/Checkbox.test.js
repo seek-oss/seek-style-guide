@@ -59,25 +59,14 @@ describe('Checkbox', () => {
     });
   });
 
-  describe('wrapper renderer', () => {
-    it('should invoke the onChange handler when touched', () => {
-      const spy = jest.fn();
+  it('should render with wrapper renderer', () => {
+    const spy = jest.fn();
 
-      const props = {
-        ...simpleProps,
-        wrapperRenderer: () => <button onClick={spy} />,
-        inputProps: {
-          checked: false
-        }
-      };
-      // const check = { target: { checked: true } };
-
-      const wrapper = shallow(<Checkbox {...props} />);
-
-      expect(wrapper).toMatchSnapshot();
-
-      wrapper.simulate('click');
-      expect(spy).toHaveBeenCalled();
-    });
+    const props = {
+      ...simpleProps,
+      wrapperRenderer: someProps => <button onClick={spy} {...someProps} />
+    };
+    const wrapper = shallow(<Checkbox {...props} />);
+    expect(wrapper).toMatchSnapshot();
   });
 });
