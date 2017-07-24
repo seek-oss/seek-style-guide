@@ -70,15 +70,19 @@ exports[`Checkbox should render with button style 1`] = `
     <input
       checked={false}
       className="input"
+      id="still-in-role"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="label"
+      htmlFor="still-in-role"
     >
       <span
         className="button"
-      />
+      >
+        Still in role
+      </span>
     </label>
   </div>
 </div>
@@ -178,4 +182,37 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
     </label>
   </div>
 </div>
+`;
+
+exports[`Checkbox wrapper renderer should invoke the onChange handler when touched 1`] = `
+<button
+  onClick={[Function]}
+>
+  <div
+    className="root"
+  >
+    <input
+      checked={false}
+      className="input"
+      id="still-in-role"
+      type="checkbox"
+    />
+    <label
+      className="label"
+      htmlFor="still-in-role"
+    >
+      <div
+        className="standard"
+      >
+        <CheckMarkIcon
+          className="checkBox"
+          svgClassName="checkMark"
+        />
+        <span>
+          Still in role
+        </span>
+      </div>
+    </label>
+  </div>
+</button>
 `;

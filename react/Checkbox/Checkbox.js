@@ -28,7 +28,7 @@ export default class Checkbox extends Component {
     className: PropTypes.string,
     inputProps: PropTypes.shape({
       onChange: PropTypes.func,
-      checked: PropTypes.bool.isRequired
+      checked: PropTypes.bool
     }),
     wrapperRenderer: PropTypes.func,
     type: PropTypes.oneOf([STANDARD, BUTTON])

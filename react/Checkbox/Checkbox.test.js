@@ -26,7 +26,7 @@ describe('Checkbox', () => {
   });
 
   it('should render with button style', () => {
-    const wrapper = shallow(<Checkbox type="button" />);
+    const wrapper = shallow(<Checkbox {...simpleProps} type="button" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -56,6 +56,28 @@ describe('Checkbox', () => {
     it('should pass through other props to the input', () => {
       const wrapper = shallow(<Checkbox {...simpleProps} inputProps={{ 'data-automation': 'first-name-field' }} />);
       expect(wrapper).toMatchSnapshot();
+    });
+  });
+
+  describe('wrapper renderer', () => {
+    it('should invoke the onChange handler when touched', () => {
+      const spy = jest.fn();
+
+      const props = {
+        ...simpleProps,
+        wrapperRenderer: () => <button onClick={spy} />,
+        inputProps: {
+          checked: false
+        }
+      };
+      // const check = { target: { checked: true } };
+
+      const wrapper = shallow(<Checkbox {...props} />);
+
+      expect(wrapper).toMatchSnapshot();
+
+      wrapper.simulate('click');
+      expect(spy).toHaveBeenCalled();
     });
   });
 });
