@@ -9,6 +9,10 @@
 }
 
 .header {
-  padding-top: (@grid-row-height * 4);
-  padding-bottom: (@grid-row-height * 4);
+  padding-top: (@grid-row-height * 3);
+  padding-bottom: (@grid-row-height * 3);
+  @media only screen and (min-width: @responsive-breakpoint) {
+    padding-top: (@grid-row-height * 4);
+    padding-bottom: (@grid-row-height * 4);
+  }
 }

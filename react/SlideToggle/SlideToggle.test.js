@@ -1,14 +1,9 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import {
-  Simulate,
-  findRenderedDOMComponentWithTag,
-  renderIntoDocument
-} from 'react-dom/test-utils';
+import { shallow } from 'enzyme';
 
 import SlideToggle from './SlideToggle';
 
-const renderSlideToggle = (props, children) => renderer.create(
+const renderSlideToggle = (props, children) => shallow(
   <SlideToggle
     id="testToggle"
     label="Test toggle"
@@ -19,36 +14,27 @@ const renderSlideToggle = (props, children) => renderer.create(
 
 describe('Slide toggle:', () => {
   it('should render with default props', () => {
-    expect(renderSlideToggle().toJSON()).toMatchSnapshot();
+    expect(renderSlideToggle()).toMatchSnapshot();
   });
 
   it('should render a checked state', () => {
-    expect(renderSlideToggle({ checked: true }).toJSON()).toMatchSnapshot();
+    expect(renderSlideToggle({ checked: true })).toMatchSnapshot();
   });
 
   it('should render with the label on the left', () => {
-    expect(renderSlideToggle({ position: 'left' }).toJSON()).toMatchSnapshot();
+    expect(renderSlideToggle({ position: 'left' })).toMatchSnapshot();
   });
 
   it('should render with the label hidden', () => {
-    expect(renderSlideToggle({ hideLabel: true }).toJSON()).toMatchSnapshot();
+    expect(renderSlideToggle({ hideLabel: true })).toMatchSnapshot();
   });
 
   it('should call a passed in onChange function when the checkbox fires a change event', () => {
     const onChange = jest.fn();
-    const slideToggle = renderIntoDocument(
-      <SlideToggle
-        id="testToggle"
-        label="Test toggle"
-        onChange={onChange}
-      />
-    );
-    const input = findRenderedDOMComponentWithTag(slideToggle, 'input');
-    Simulate.change(input);
-    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({
-      target: expect.objectContaining({
-        checked: false
-      })
-    }));
+    const slideToggle = renderSlideToggle({ onChange });
+    const check = { target: { checked: true } };
+
+    slideToggle.find('input').simulate('change', check);
+    expect(onChange).toBeCalledWith(check);
   });
 });
