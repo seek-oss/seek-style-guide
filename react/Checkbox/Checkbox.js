@@ -8,6 +8,8 @@ import classnames from 'classnames';
 const STANDARD = 'standard';
 const BUTTON = 'button';
 
+const defaultWrapperRenderer = props => (<div {...props} />);
+
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
 
@@ -25,18 +27,21 @@ export default class Checkbox extends Component {
     label: PropTypes.string.isRequired,
     className: PropTypes.string,
     inputProps: PropTypes.shape({
-      onChange: PropTypes.func.isRequired,
+      onChange: PropTypes.func,
       checked: PropTypes.bool.isRequired
     }),
+    wrapperRenderer: PropTypes.func,
     type: PropTypes.oneOf([STANDARD, BUTTON])
-  }
+  };
 
   static defaultProps = {
     className: '',
     inputProps: {
+      onChange: () => {},
       checked: false
     },
-    type: STANDARD
+    type: STANDARD,
+    wrapperRenderer: defaultWrapperRenderer
   };
 
   renderButton(label) {
@@ -84,7 +89,7 @@ export default class Checkbox extends Component {
     );
   }
 
-  render() {
+  renderCheckbox() {
     const { className } = this.props;
 
     const rootClassNames = classnames({
@@ -97,6 +102,14 @@ export default class Checkbox extends Component {
         { this.renderInput() }
         { this.renderLabel() }
       </div>
+    );
+  }
+
+  render() {
+    return (
+      this.props.wrapperRenderer({
+        children: this.renderCheckbox()
+      })
     );
   }
 }

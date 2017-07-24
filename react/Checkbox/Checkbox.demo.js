@@ -6,6 +6,8 @@ import demoStyles from './Checkbox.demo.less';
 import styles from './Checkbox.less';
 import classnames from 'classnames';
 
+const wrapperClickHandler = () => console.log('Wrapper click handler is called')
+
 class CheckboxContainer extends Component {
   static propTypes = {
     component: PropTypes.func.isRequired
@@ -84,6 +86,13 @@ export default {
           transformProps: props => ({
             ...props,
             type: 'button'
+          })
+        },
+        {
+          label: 'With wrapper renderer',
+          transformProps: props => ({
+            ...props,
+            wrapperRenderer: rendererProps => (<div {...rendererProps} onClick={wrapperClickHandler} />)
           })
         }
       ]
