@@ -41,7 +41,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:jobs"
-                  href="/"
                 >
                   Job search
                 </a>
@@ -52,7 +51,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:profile"
-                  href="/profile/"
                 >
                   Profile
                 </a>
@@ -63,7 +61,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
                 >
                   Saved searches
                 </a>
@@ -96,7 +93,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:advice+tips"
-                  href="/career-advice/"
                 >
                   Advice & tips
                 </a>
@@ -107,7 +103,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:companies"
-                  href="/companies/"
                 >
                   Company reviews
                 </a>
@@ -140,7 +135,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.com.au/"
                     >
                       Employer site
                     </a>
@@ -151,7 +145,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:nz+homepage"
-                      href="https://www.seek.co.nz/"
                     >
                       SEEK NZ
                     </a>
@@ -162,7 +155,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:courses"
-                      href="https://www.seeklearning.com.au/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
                       Courses
                     </a>
@@ -173,7 +165,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:business+for+sale"
-                      href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
                     >
                       Business for sale
                     </a>
@@ -184,7 +175,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:volunteering"
-                      href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
                     >
                       Volunteering
                     </a>
@@ -209,7 +199,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
                 >
                   About SEEK
                 </a>
@@ -220,7 +209,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
                 >
                   Media
                 </a>
@@ -231,7 +219,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
                 >
                   Investor centre
                 </a>
@@ -264,7 +251,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:babajob"
-                      href="http://www.babajob.com"
                     >
                       BabaJob
                     </a>
@@ -280,7 +266,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:bdjobs"
-                      href="http://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
@@ -296,7 +281,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:brighter+monday"
-                      href="https://www.brightermonday.com"
                     >
                       Brighter Monday
                     </a>
@@ -312,7 +296,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:catho"
-                      href="http://www.catho.com.br"
                     >
                       Catho
                     </a>
@@ -328,7 +311,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobberman"
-                      href="http://www.jobberman.com"
                     >
                       Jobberman
                     </a>
@@ -344,7 +326,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobsdb"
-                      href="http://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
@@ -360,7 +341,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobstreet"
-                      href="http://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
@@ -376,7 +356,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jora+int"
-                      href="https://www.jora.com"
                     >
                       Jora
                     </a>
@@ -392,7 +371,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:manager"
-                      href="http://www.manager.com.br"
                     >
                       Manager
                     </a>
@@ -408,7 +386,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:occ+mundial"
-                      href="https://www.occ.com.mx"
                     >
                       OCC Mundial
                     </a>
@@ -424,7 +401,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:workana"
-                      href="https://www.workana.com"
                     >
                       Workana
                     </a>
@@ -440,7 +416,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:zhaopin"
-                      href="http://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
@@ -456,7 +431,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jora+au"
-                      href="https://au.jora.com"
                     >
                       Jora
                     </a>
@@ -497,7 +471,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobadder"
-                      href="https://jobadder.com/au"
                     >
                       JobAdder
                     </a>
@@ -509,7 +482,6 @@ exports[`Footer: should render when authenticated 1`] = `
                       class="link"
                       data-analytics="toolbar:jora+local"
                       data-automation="jora-local-link"
-                      href="http://www.joralocal.com.au"
                     >
                       Jora Local
                     </a>
@@ -520,7 +492,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:realestate+au"
-                      href="https://www.realestate.com.au/buy"
                     >
                       realestate.com.au
                     </a>
@@ -531,7 +502,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:sidekicker"
-                      href="https://www.sidekicker.com.au/"
                     >
                       Sidekicker
                     </a>
@@ -542,7 +512,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:ximble"
-                      href="https://www.ximble.com"
                     >
                       Ximble
                     </a>
@@ -567,7 +536,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:contact+us"
-                  href="/contact-us"
                 >
                   Contact us / FAQs
                 </a>
@@ -578,9 +546,18 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:work+for+seek"
-                  href="/work-for-seek"
                 >
                   Work for SEEK
+                </a>
+              </li>
+              <li
+                class="secondary"
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:product+blog"
+                >
+                  Product & Tech Blog
                 </a>
               </li>
               <li
@@ -611,7 +588,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:facebook"
-                      href="https://www.facebook.com/SEEK/"
                     >
                       Facebook
                     </a>
@@ -622,7 +598,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:instagram"
-                      href="https://www.instagram.com/seekau/"
                     >
                       Instagram
                     </a>
@@ -633,7 +608,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:twitter"
-                      href="https://twitter.com/seekjobs"
                     >
                       Twitter
                     </a>
@@ -644,7 +618,6 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:youtube"
-                      href="https://www.youtube.com/user/SEEKJobs"
                     >
                       YouTube
                     </a>
@@ -669,7 +642,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:register+for+free"
-                  href="https://talent.seek.com.au/"
                 >
                   Register for free
                 </a>
@@ -680,7 +652,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:post+a+job+ad"
-                  href="https://talent.seek.com.au/"
                 >
                   Post a job ad
                 </a>
@@ -691,7 +662,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:products+prices"
-                  href="https://talent.seek.com.au/Support/OurProducts"
                 >
                   Products & prices
                 </a>
@@ -702,7 +672,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:customer+service"
-                  href="https://talent.seek.com.au/ContactUs"
                 >
                   Customer service
                 </a>
@@ -713,7 +682,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:insight+blog"
-                  href="http://insightsresources.seek.com.au"
                 >
                   Insights & Resources
                 </a>
@@ -750,7 +718,7 @@ exports[`Footer: should render when authenticated 1`] = `
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
           >
-            SEEK safely
+            Protect yourself online
           </a>
           <a
             class="copyrightLink secondaryLink"
@@ -1355,6 +1323,17 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 </a>
               </li>
               <li
+                class="secondary"
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:product+blog"
+                  href="http://productblog.seek.com.au"
+                >
+                  Product & Tech Blog
+                </a>
+              </li>
+              <li
                 class=""
               >
                 <input
@@ -1521,7 +1500,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
           >
-            SEEK safely
+            Protect yourself online
           </a>
           <a
             class="copyrightLink secondaryLink"
@@ -2126,6 +2105,17 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 </a>
               </li>
               <li
+                class="secondary"
+              >
+                <a
+                  class="link"
+                  data-analytics="toolbar:product+blog"
+                  href="http://productblog.seek.com.au"
+                >
+                  Product & Tech Blog
+                </a>
+              </li>
+              <li
                 class=""
               >
                 <input
@@ -2292,7 +2282,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
           >
-            SEEK safely
+            Protect yourself online
           </a>
           <a
             class="copyrightLink secondaryLink"
