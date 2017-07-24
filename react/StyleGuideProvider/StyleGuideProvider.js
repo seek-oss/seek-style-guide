@@ -7,6 +7,8 @@ import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
+import DisableBodyScroll from '../DisableBodyScroll/DisableBodyScroll';
+
 const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
 const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';
 
@@ -21,19 +23,21 @@ export default function StyleGuideProvider({ fullScreen, children, meta, link, t
   const pageTitle = title || getLocalisedPageTitle(locale);
 
   return (
-    <div className={className}>
-      <Helmet
-        title={pageTitle}
-        meta={meta}
-        link={link}
-      />
+    <DisableBodyScroll>
+      <div className={className}>
+        <Helmet
+          title={pageTitle}
+          meta={meta}
+          link={link}
+        />
 
-      <ScreenReaderOnly>
-        <h1>{pageTitle}</h1>
-      </ScreenReaderOnly>
+        <ScreenReaderOnly>
+          <h1>{pageTitle}</h1>
+        </ScreenReaderOnly>
 
-      {children}
-    </div>
+        {children}
+      </div>
+    </DisableBodyScroll>
   );
 }
 

@@ -91,6 +91,13 @@ export default {
           })
         },
         {
+          label: 'Disable body scroll',
+          transformProps: ({ disableBodyScrollWhenSuggestionsShown, ...props }) => ({
+            ...props,
+            disableBodyScrollWhenSuggestionsShown: true
+          })
+        },
+        {
           label: 'Show mobile backdrop',
           transformProps: ({ ...props }) => ({
             ...props,

@@ -13,6 +13,8 @@ import omit from 'lodash/omit';
 import TextField from '../TextField/TextField';
 import smoothScroll from '../private/smoothScroll';
 
+import DisableBodyScroll from '../DisableBodyScroll/DisableBodyScroll';
+
 const responsiveBreakpoint = 740;
 const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
 
@@ -26,6 +28,7 @@ export default class Autosuggest extends Component {
     label: PropTypes.string,
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
+    disableBodyScrollWhenSuggestionsShown: PropTypes.bool.isRequired,
     showMobileBackdrop: PropTypes.bool,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
@@ -49,6 +52,7 @@ export default class Autosuggest extends Component {
     id: '',
     className: '',
     label: '',
+    disableBodyScrollWhenSuggestionsShown: false,
     showMobileBackdrop: false
   };
 
@@ -127,7 +131,14 @@ export default class Autosuggest extends Component {
   }
 
   render() {
-    const { inputProps, label, autosuggestProps, suggestionsContainerClassName, showMobileBackdrop } = this.props;
+    const {
+      disableBodyScrollWhenSuggestionsShown, // this should be wired up to isOpen in autosuggest
+      inputProps,
+      label,
+      autosuggestProps,
+      suggestionsContainerClassName,
+      showMobileBackdrop
+    } = this.props;
     const { theme = {} } = autosuggestProps;
     const allAutosuggestProps = {
       renderSuggestionsContainer: this.renderSuggestionsContainer,
@@ -151,7 +162,11 @@ export default class Autosuggest extends Component {
           ref={this.storeInputReference}
           {...allAutosuggestProps}
         />
-        {showMobileBackdrop ? <div className={styles.autosuggestBackdrop} /> : null }
+        <DisableBodyScroll isDisabled={disableBodyScrollWhenSuggestionsShown}>
+          {showMobileBackdrop ?
+            <div className={styles.autosuggestBackdrop} /> : null
+          }
+        </DisableBodyScroll>
       </div>
     );
   }
