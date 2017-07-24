@@ -1,5 +1,8 @@
 import styles from './Header.less';
+
 import React, { Component } from 'react';
+import classnames from 'classnames';
+
 import { Link } from 'react-router';
 import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Logo from './Logo/Logo';
@@ -25,10 +28,14 @@ export default class Header extends Component {
   render() {
     const { menuOpen } = this.state;
 
+    const headerClasses = classnames({
+      [styles.headerBlock]: true,
+      [styles.fixedHeaderBlock]: menuOpen
+    });
+
     return (
       <div>
-        <div className={styles.headerPlaceholder} />
-        <PageBlock className={styles.headerBlock}>
+        <PageBlock className={headerClasses}>
           <Section className={styles.headerSection}>
             <div className={styles.sectionContent}>
               <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
@@ -54,10 +61,8 @@ export default class Header extends Component {
                 <div className={styles.menu} onClick={this.handleMenuClose}>
                   <PageBlock>
                     <Section header>
-                      <Text hero>
-                        <Link className={styles.link} to="/">Home</Link>
-                      </Text>
-
+                      <Text hero><Link className={styles.link} to="/">Home</Link></Text>
+                      <Text hero><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
                       {
                         demoSpecs.map(demoSpec => (
                           <Text hero key={demoSpec.title}>

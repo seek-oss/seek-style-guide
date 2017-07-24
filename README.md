@@ -2,7 +2,11 @@
 
 # seek-style-guide
 
-This style guide assumes you're using [Less](http://lesscss.org/) for preprocessing CSS. For high level components, it's assumed that your application is built with [React](https://facebook.github.io/react) and compiled using [Webpack](https://webpack.github.io).
+Living style guide for [SEEK](https://github.com/seek-oss), powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
+
+If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as quickly as possible, while simplifying the process of keeping your development environment up to date.
+
+If you'd instead like to work on a custom webpack project, you can use [seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack) to streamline the integration process.
 
 ## Installation
 
@@ -12,119 +16,29 @@ $ npm install --save-dev seek-style-guide
 
 ## Setup
 
-### New Projects
-
-If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as fast as possible, while simplifying the process of keeping your development environment up to date.
-
-### Existing Webpack Projects
-
-#### Webpack v2+
-
-[seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack)
-
-#### Webpack v1
-
-First, decorate your server Webpack config:
-
-```js
-const decorateServerConfig = require('seek-style-guide/webpack').decorateServerConfig;
-
-module.exports = decorateServerConfig({
-  // Webpack config...
-});
-```
-
-Then, decorate your client Webpack config:
-
-```js
-const decorateClientConfig = require('seek-style-guide/webpack').decorateClientConfig;
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const extractCss = new ExtractTextPlugin('style.css');
-
-const config = {
-  // Webpack config...
-};
-
-module.exports = decorateClientConfig(config, {
-  // Ensure you pass your ExtractTextPlugin instance to the decorator, if required:
-  extractTextPlugin: extractCss
-});
-```
-
-Please note that, if your Webpack loaders aren't scoped to your local project files via the ["include" option](https://webpack.github.io/docs/configuration.html#module-loaders), the decorator will throw an error.
-
-#### Alternative Bundlers
-
-While webpack has first class support, this style guide will work with any bundler that can be configured to support the following:
-
-- Overloading of import statements to allow dependencies between different asset types.
-- JavaScript compilation with support for ES2015, JSX, class properties and object rest/spread.
-- Compilation of Less and CSS Modules, with the ability to generate static CSS files.
-- Handling of web fonts, with the ability to base64 encode them into CSS.
-- Importing raw file contents from SVGs.
-
-If you've successully created another bundler integration along the lines of [seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack), please open a pull request!
-
-### Optimising Imports
-
-When importing from the style guide, while it might appear that you are only importing what's needed, it's highly likely that you're actually including the entire style guide in your application bundle ([even when using tree shaking in webpack 2](https://github.com/webpack/webpack/issues/2867)).
-
-In order to help you optimise your bundle size, all components can be imported directly from their individual source files. For example, take a look at standard import statement:
-
-```js
-import { Header, Footer } from 'seek-style-guide/react';
-```
-
-This can also be expressed as separate, file-level imports:
-
-```js
-import Header from 'seek-style-guide/react/Header/Header.js';
-import Footer from 'seek-style-guide/react/Footer/Footer.js';
-```
-
-Rather than transforming this manually, it's recommended that you leverage [Babel](https://babeljs.io/) instead, with [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports) configured to match the pattern used in this style guide.
-
-To set this up, assuming you're already using Babel, first install the plugin:
-
-```bash
-npm install --save-dev babel-plugin-transform-imports
-```
-
-Then, include the following in your Babel config:
-
-```js
-"plugins": [
-  ["babel-plugin-transform-imports", {
-    "seek-style-guide/react": {
-      "transform": "seek-style-guide/react/${member}/${member}",
-      "preventFullImport": true
-    }
-  }]
-]
-```
-
-### Setting Up the Style Guide Provider
-
 Wrap your app with the `StyleGuideProvider` component to use any of the style guide components. For example:
 
 ```js
-render() {
-  const locale = 'AU';
-  const title = '...';
-  const meta = [
-    { name: 'description', content: '...' }
-  ];
-  const link = [
-    { rel: 'canonical', href: 'https://www.seek.com.au/' }
-  ];
+import React, { Component } from 'react';
 
-  return (
-    <StyleGuideProvider locale={locale} title={title} meta={meta} link={link}>
-      ...
-    </StyleGuideProvider>
-  );
-}
+export default class App extends Component {
+  render() {
+    const locale = 'AU';
+    const title = '...';
+    const meta = [
+      { name: 'description', content: '...' }
+    ];
+    const link = [
+      { rel: 'canonical', href: 'https://www.seek.com.au/' }
+    ];
+
+    return (
+      <StyleGuideProvider locale={locale} title={title} meta={meta} link={link}>
+        ...
+      </StyleGuideProvider>
+    );
+  }
+};
 ```
 
 `StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
@@ -150,7 +64,13 @@ The `<Footer>` component accepts the following props:
 - **locale:** See above.
 - **linkRenderer:** See above.
 
-## Less
+## High Level Components
+
+As much as possible, you should aim to minimise the amount of custom CSS you need to write. This is achieved by leveraging our suite of high level components, which are demonstrated on our [style guide documentation site](https://seek-oss.github.io/seek-style-guide/).
+
+## Low Level Styling
+
+For more advanced pages, if you need to drop down into Less, the style guide provides a set of mixins and variables to make it easier to stay on brand.
 
 In any style sheet that depends on the style guide, first import the Less theme by reference.
 
@@ -158,9 +78,21 @@ In any style sheet that depends on the style guide, first import the Less theme 
 @import (reference) "~seek-style-guide/theme";
 ```
 
+### Responsive Breakpoint
+
+The style guide exposes one responsive breakpoint:
+
+```less
+@responsive-breakpoint: 740px;
+```
+
+Content should otherwise be responsive within its container. The set of included components follow this model internally if you'd like to get a sense of what this looks like in practice.
+
 ### Color Variables
 
-As much as possible, colors should be directly imported from the style guide. The following colors are provided:
+As much as possible, colors should be directly imported from the style guide.
+
+The following colors are provided:
 
 ```less
 // Brand colors
@@ -201,9 +133,9 @@ As much as possible, colors should be directly imported from the style guide. Th
 @sk-yellow
 ```
 
-### Z-indexes
+### Z-Indexes
 
-To ensure correct relative elements stacking order z-index variables are provided:
+To ensure correct relative elements stacking order, z-index variables are provided:
 
 ```less
 @z-index-header-overlay
@@ -225,52 +157,6 @@ The contrast ratio of certain foreground/background color combinations don't mee
 ```
 
 Please note that this list is not exhaustive, so contributions are encouraged. To validate color combinations, we recommend the use of the web-based tool [Accessible Colors](http://accessible-colors.com) by [@moroshko](https://github.com/moroshko).
-
-### Typographic Mixins
-
-All type should use the standard typographic mixins, e.g.
-
-```less
-.element {
-  .heroText();
-  .headlineText();
-  .headingText();
-  .subheadingText();
-  .standardText();
-  .substandardText();
-  .smallText();
-  .touchableText();
-}
-```
-
-Under the hood, these mixins leverage [basekick](https://github.com/mjt01/basekick) to ensure that typography sits correctly on the baseline grid.
-
-
-### Responsive Breakpoint and Type
-
-The style guide exposes one responsive breakpoint:
-
-```less
-@responsive-breakpoint: 740px;
-```
-
-Our components use this internally, and can be expected to change presentation past this breakpoint if there is an advantage in doing so (for example the `Columns` component only presents as columns past this breakpoint).
-
-We also expose responsive type mixins that may change scale and row span based on this breakpoint:
-
-```less
-.element {
-  .heroTextResponsive();
-  .headlineTextResponsive();
-  .headingTextResponsive();
-  .subheadingTextResponsive();
-  .standardTextResponsive();
-  .substandardTextResponsive();
-  .smallTextResponsive();
-}
-```
-
-In particular standard text is larger on a smaller screen using `.standardTextResponsive`
 
 ### Grid Variables
 
@@ -311,7 +197,7 @@ When defining widths and horizontal padding/margins:
 }
 ```
 
-It's important to note that any additions to these values (e.g. borders) will need to be negated to maintain rhythm, e.g.
+It's important to note that any additions to these values (e.g. borders) will need to be negated to maintain rhythm:
 
 ```less
 .element {
@@ -320,26 +206,6 @@ It's important to note that any additions to these values (e.g. borders) will ne
   padding-bottom: @grid-row-height - @border-width;
 }
 ```
-
-## React Components
-
-A growing suite of React components are provided in this style guide. They can be imported like so:
-
-```js
-import { HeartIcon, StarIcon } from 'seek-style-guide/react';
-```
-
-These components can be viewed online in the following categories:
-
-- [Buttons](http://seek-oss.github.io/seek-style-guide/buttons)
-- [Textfields](http://seek-oss.github.io/seek-style-guide/textfields)
-- [Textarea](http://seek-oss.github.io/seek-style-guide/textarea)
-- [Icons](http://seek-oss.github.io/seek-style-guide/icons)
-- [Autosuggest](http://seek-oss.github.io/seek-style-guide/autosuggest)
-- [Monthpicker](http://seek-oss.github.io/seek-style-guide/monthpicker)
-- [Checkbox](http://seek-oss.github.io/seek-style-guide/checkbox)
-- [Dropdown](http://seek-oss.github.io/seek-style-guide/dropdown)
-- [SlideToggle](http://seek-oss.github.io/seek-style-guide/slide-toggle)
 
 ## Standalone Header and Footer
 
@@ -386,6 +252,48 @@ var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
 ```
 
 For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
+
+## Advanced Usage
+
+### Optimising Imports
+
+**Note: If you're using [sku](https://github.com/seek-oss/sku), this optimisation is already enabled.**
+
+When importing from the style guide, while it might appear that you are only importing what's needed, it's highly likely that you're actually including the entire style guide in your application bundle ([even when using tree shaking in webpack 2](https://github.com/webpack/webpack/issues/2867)).
+
+In order to help you optimise your bundle size, all components can be imported directly from their individual source files. For example, take a look at standard import statement:
+
+```js
+import { Header, Footer } from 'seek-style-guide/react';
+```
+
+This can also be expressed as separate, file-level imports:
+
+```js
+import Header from 'seek-style-guide/react/Header/Header.js';
+import Footer from 'seek-style-guide/react/Footer/Footer.js';
+```
+
+Rather than transforming this manually, it's recommended that you leverage [Babel](https://babeljs.io/) instead, with [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports) configured to match the pattern used in this style guide.
+
+To set this up, assuming you're already using Babel, first install the plugin:
+
+```bash
+npm install --save-dev babel-plugin-transform-imports
+```
+
+Then, include the following in your Babel config:
+
+```js
+"plugins": [
+  ["babel-plugin-transform-imports", {
+    "seek-style-guide/react": {
+      "transform": "seek-style-guide/react/${member}/${member}",
+      "preventFullImport": true
+    }
+  }]
+]
+```
 
 ## Contributing
 

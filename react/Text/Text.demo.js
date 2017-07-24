@@ -28,6 +28,13 @@ export default {
           })
         },
         {
+          label: 'Light',
+          transformProps: props => ({
+            ...props,
+            light: true
+          })
+        },
+        {
           label: 'Disable baseline',
           transformProps: props => ({
             ...props,
@@ -97,6 +104,14 @@ export default {
             ...props,
             hero: false,
             subheading: true
+          })
+        },
+        {
+          label: 'Superstandard',
+          transformProps: props => ({
+            ...props,
+            hero: false,
+            superstandard: true
           })
         },
         {

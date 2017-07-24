@@ -24,6 +24,10 @@ class AutosuggestContainer extends Component {
     });
   };
 
+  handleFocus = event => {
+    console.log('Focused, event: ', event);
+  };
+
   handleClear = () => {
     this.setState({
       inputValue: ''
@@ -40,6 +44,7 @@ class AutosuggestContainer extends Component {
           inputProps={{
             type: 'search',
             onChange: this.handleChange,
+            onFocus: this.handleFocus,
             value: inputValue
           }}
           onClear={this.handleClear}
@@ -83,6 +88,13 @@ export default {
           transformProps: ({ className, ...props }) => ({
             ...props,
             className: classnames(className, styles.rootFocus)
+          })
+        },
+        {
+          label: 'Show mobile backdrop',
+          transformProps: ({ ...props }) => ({
+            ...props,
+            showMobileBackdrop: true
           })
         }
       ]

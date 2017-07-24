@@ -7,11 +7,11 @@
   position: relative;
   display: inline-block;
   width: 100%;
+  z-index: @z-index-inline-overlay;
 }
 
 .suggestionsContainer {
   display: none;
-  z-index: @z-index-inline-overlay;
   position: absolute;
   background-color: @sk-white;
   box-shadow: 0 9px 30px rgba(0, 0, 0, 0.4);
@@ -32,10 +32,10 @@
   @labelRowOffset: 4;
   top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
 
-  @media only screen and (min-width: (@responsive-breakpoint)) {
+  .aboveSmallDevice({
     @labelRowOffset: 3;
     top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
-  }
+  })
 }
 
 .sectionTitle {
@@ -64,4 +64,19 @@
 
 .suggestionFocused {
   background-color: @sk-mid-gray-light;
+}
+
+.autosuggestBackdrop {
+  opacity: 0;
+}
+
+.containerOpen + .autosuggestBackdrop {
+  .smallDeviceOnly({
+    .backdrop()
+  });
+}
+
+.containerOpen .isLabelCoveredWithBackdrop {
+  display: block;
+  pointer-events: none;
 }

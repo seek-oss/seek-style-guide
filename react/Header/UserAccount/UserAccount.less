@@ -12,7 +12,6 @@
   cursor: pointer;
   position: relative;
   z-index: @z-index-inline-overlay;
-
   .smallDeviceOnly({
     color: @sk-white;
   });
@@ -25,7 +24,7 @@
 
 .toggle:checked {
   & ~ .toggleContainer {
-    opacity:1;
+    opacity: 1;
     visibility: visible;
     transform: translateY(0);
     cursor: pointer;
@@ -36,7 +35,6 @@
     .aboveSmallDevice({
       display: block;
     });
-
     .smallDeviceOnly({
       z-index: @z-index-inline-overlay;
       pointer-events: auto;
@@ -56,13 +54,14 @@
   right: 0;
   transform-origin: 50% 0;
   transform: translateY(@grid-row-height * -3);
-  transition: opacity .25s ease, transform .25s cubic-bezier(0.020, 1.505, 0.745, 1.235);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   pointer-events: none;
   z-index: @z-index-inline-overlay;
-
   .smallDeviceOnly({
     transform: translateY(@grid-row-height * -1);
-    transition: opacity .25s ease, transform .25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
     top: (@grid-row-height * 7); // header height
     right: 0;
     left: 0;
@@ -76,17 +75,15 @@
   left: -999px;
   right: -999px;
   bottom: -9999px;
-
   .aboveSmallDevice({
     z-index: @z-index-inline-overlay;
     display: none;
   });
-
   .smallDeviceOnly({
     z-index: @z-index-negative;
     pointer-events: none;
     opacity: 0;
-    transition: opacity .25s ease;
+    transition: opacity 0.25s ease;
     background-color: @sk-blue;
   });
 }
@@ -116,11 +113,9 @@
   display: inline-block;
   white-space: nowrap;
   max-width: 100px; // ~ 10 characters
-
   @media only screen and (min-width: 400px) {
     max-width: 200px; // ~ 20 characters
   }
-
   .smallDeviceOnly({
     display: none;
   });
@@ -129,7 +124,7 @@
 .chevron {
   display: inline-block;
   margin-left: (@grid-gutter-width / 2);
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   transform-origin: 50% 50%;
   pointer-events: none;
   .smallDeviceOnly({

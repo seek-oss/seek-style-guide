@@ -20,32 +20,47 @@
 }
 
 .root {
-  &:not(.baseline) {.standardTextResponsive(@baseline: false); }
+  &:not(.baseline) { .standardTextResponsive(@baseline: false); }
   &.baseline { .standardTextResponsive(@baseline: true); }
 }
+
 .small {
-  &:not(.baseline) {.smallTextResponsive(@baseline: false); }
+  &:not(.baseline) { .smallTextResponsive(@baseline: false); }
   &.baseline { .smallTextResponsive(@baseline: true); }
 }
+
 .substandard {
-  &:not(.baseline) {.substandardTextResponsive(@baseline: false); }
+  &:not(.baseline) { .substandardTextResponsive(@baseline: false); }
   &.baseline { .substandardTextResponsive(@baseline: true); }
 }
+
+.superstandard {
+  &:not(.baseline) { .superstandardTextResponsive(@baseline: false); }
+  &.baseline { .superstandardTextResponsive(@baseline: true); }
+}
+
 .subheading {
-  &:not(.baseline) {.subheadingTextResponsive(@baseline: false); }
+  &:not(.baseline) { .subheadingTextResponsive(@baseline: false); }
   &.baseline { .subheadingTextResponsive(@baseline: true); }
 }
+
 .headline {
-  &:not(.baseline) {.headlineTextResponsive(@baseline: false); }
+  &:not(.baseline) { .headlineTextResponsive(@baseline: false); }
   &.baseline { .headlineTextResponsive(@baseline: true); }
 }
+
 .heading {
-  &:not(.baseline) {.headingTextResponsive(@baseline: false); }
+  &:not(.baseline) { .headingTextResponsive(@baseline: false); }
   &.baseline { .headingTextResponsive(@baseline: true); }
 }
+
 .hero {
-  &:not(.baseline) {.heroTextResponsive(@baseline: false); }
+  &:not(.baseline) { .heroTextResponsive(@baseline: false); }
   &.baseline { .heroTextResponsive(@baseline: true); }
+}
+
+.light {
+  font-weight: @sk-light;
 }
 
 .raw {

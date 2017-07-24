@@ -15,6 +15,7 @@ export default function Text({
   className,
   small,
   substandard,
+  superstandard,
   subheading,
   headline,
   heading,
@@ -25,6 +26,7 @@ export default function Text({
   secondary,
   strong,
   regular,
+  light,
   baseline,
   ...restProps
 }) {
@@ -36,6 +38,7 @@ export default function Text({
         [className]: className,
         [styles.small]: small,
         [styles.substandard]: substandard,
+        [styles.superstandard]: superstandard,
         [styles.subheading]: subheading,
         [styles.headline]: headline,
         [styles.heading]: heading,
@@ -49,7 +52,8 @@ export default function Text({
           [stylesCritical.root]: critical,
           [stylesSecondary.root]: secondary,
           [stylesStrong.root]: strong,
-          [stylesRegular.root]: regular
+          [stylesRegular.root]: regular,
+          [styles.light]: light
         })}>
         {children}
       </span>
@@ -62,6 +66,7 @@ Text.propTypes = {
   className: PropTypes.string,
   small: PropTypes.bool,
   substandard: PropTypes.bool,
+  superstandard: PropTypes.bool,
   subheading: PropTypes.bool,
   headline: PropTypes.bool,
   heading: PropTypes.bool,
@@ -72,6 +77,7 @@ Text.propTypes = {
   secondary: PropTypes.bool,
   strong: PropTypes.bool,
   regular: PropTypes.bool,
+  light: PropTypes.bool,
   baseline: PropTypes.bool
 };
 
