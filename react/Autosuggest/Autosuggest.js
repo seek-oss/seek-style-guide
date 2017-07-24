@@ -5,9 +5,16 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
-import omit from 'lodash.omit';
+
+import get from 'lodash/get';
+import invoke from 'lodash/invoke';
+import omit from 'lodash/omit';
 
 import TextField from '../TextField/TextField';
+import smoothScroll from '../private/smoothScroll';
+
+const responsiveBreakpoint = 740;
+const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
 
 export default class Autosuggest extends Component {
 
@@ -19,6 +26,7 @@ export default class Autosuggest extends Component {
     label: PropTypes.string,
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
+    showMobileBackdrop: PropTypes.bool,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
       const { suggestionsContainerClassName, autosuggestProps } = props;
@@ -40,19 +48,27 @@ export default class Autosuggest extends Component {
   static defaultProps = {
     id: '',
     className: '',
-    label: ''
+    label: '',
+    showMobileBackdrop: false
   };
 
   constructor() {
     super();
 
     this.storeInputReference = this.storeInputReference.bind(this);
+    this.storeTextFieldReference = this.storeTextFieldReference.bind(this);
     this.renderInputComponent = this.renderInputComponent.bind(this);
   }
 
   storeInputReference(autosuggest) {
     if (autosuggest !== null) {
       this.input = autosuggest.input;
+    }
+  }
+
+  storeTextFieldReference(textField) {
+    if (textField !== null) {
+      this.textField = textField.container;
     }
   }
 
@@ -68,9 +84,40 @@ export default class Autosuggest extends Component {
     );
   }
 
+  scrollOnFocus = () => {
+    const getMatchMedia = invoke(window, 'matchMedia', smallDeviceOnlyMedia);
+    const isMobileWidth = get(getMatchMedia, 'matches');
+
+    if (isMobileWidth) {
+      smoothScroll(this.textField);
+    }
+  }
+
   renderInputComponent(inputProps) {
+    const { labelProps = {} } = inputProps;
+
+    const onFocus = () => {
+      this.scrollOnFocus();
+      invoke(inputProps, 'onFocus', event);
+    };
+
+    const enrichedInputProps = {
+      ...omit(inputProps, 'onFocus'),
+      onFocus
+    };
+
+    const enrichedlabelProps = {
+      ...labelProps,
+      className: classnames({
+        [styles.isLabelCoveredWithBackdrop]: this.props.showMobileBackdrop,
+        [labelProps.className]: labelProps.className
+      })
+    };
+
     const allInputProps = {
-      inputProps,
+      ref: this.storeTextFieldReference,
+      inputProps: enrichedInputProps,
+      labelProps: enrichedlabelProps,
       ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
     };
 
@@ -80,7 +127,7 @@ export default class Autosuggest extends Component {
   }
 
   render() {
-    const { inputProps, label, autosuggestProps, suggestionsContainerClassName } = this.props;
+    const { inputProps, label, autosuggestProps, suggestionsContainerClassName, showMobileBackdrop } = this.props;
     const { theme = {} } = autosuggestProps;
     const allAutosuggestProps = {
       renderSuggestionsContainer: this.renderSuggestionsContainer,
@@ -98,11 +145,14 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <ReactAutosuggest
-        inputProps={inputProps}
-        ref={this.storeInputReference}
-        {...allAutosuggestProps}
-      />
+      <div>
+        <ReactAutosuggest
+          inputProps={inputProps}
+          ref={this.storeInputReference}
+          {...allAutosuggestProps}
+        />
+        {showMobileBackdrop ? <div className={styles.autosuggestBackdrop} /> : null }
+      </div>
     );
   }
 

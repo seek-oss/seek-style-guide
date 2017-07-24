@@ -26,6 +26,7 @@ export default function Text({
   secondary,
   strong,
   regular,
+  light,
   baseline,
   ...restProps
 }) {
@@ -51,7 +52,8 @@ export default function Text({
           [stylesCritical.root]: critical,
           [stylesSecondary.root]: secondary,
           [stylesStrong.root]: strong,
-          [stylesRegular.root]: regular
+          [stylesRegular.root]: regular,
+          [styles.light]: light
         })}>
         {children}
       </span>
@@ -75,6 +77,7 @@ Text.propTypes = {
   secondary: PropTypes.bool,
   strong: PropTypes.bool,
   regular: PropTypes.bool,
+  light: PropTypes.bool,
   baseline: PropTypes.bool
 };
 
