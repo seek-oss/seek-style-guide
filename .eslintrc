@@ -116,6 +116,7 @@
     "no-path-concat": 2,
     "no-process-exit": 2,
     "no-restricted-modules": 2,
+    "no-restricted-globals": [ 2, "event" ],
     "no-sync": 2,
 
     "block-spacing": [2, "always"],
