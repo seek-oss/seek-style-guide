@@ -49,6 +49,15 @@ class AutosuggestContainer extends Component {
           }}
           onClear={this.handleClear}
         />
+        <DemoComponent
+          inputProps={{
+            type: 'search',
+            onChange: this.handleChange,
+            onFocus: this.handleFocus,
+            value: inputValue
+          }}
+          onClear={this.handleClear}
+        />
       </div>
     );
   }
