@@ -72,7 +72,8 @@ export default class Autosuggest extends Component {
     }
   }
 
-  renderSuggestionsContainer({ ref, ...rest }) {
+  renderSuggestionsContainer({ containerProps, children }) {
+    const { ref, ...rest } = containerProps;
     const callRef = isolatedScroll => {
       if (isolatedScroll !== null) {
         ref(isolatedScroll.component);
@@ -80,7 +81,7 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <IsolatedScroll {...rest} ref={callRef} />
+      <IsolatedScroll {...rest} ref={callRef} children={children} />
     );
   }
 

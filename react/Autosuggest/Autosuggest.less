@@ -22,10 +22,10 @@
   max-height: 385px;
   overflow-y: auto;
   top: @grid-row-height * @suggestionContainerRowsOffset;
+}
 
-  .containerOpen & {
-    display: block;
-  }
+.suggestionsContainerOpen {
+  display: block;
 }
 
 .suggestionsContainer_withLabel {
@@ -62,7 +62,7 @@
   cursor: pointer;
 }
 
-.suggestionFocused {
+.suggestionHighlighted {
   background-color: @sk-mid-gray-light;
 }
 
