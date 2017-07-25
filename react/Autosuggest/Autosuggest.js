@@ -96,8 +96,8 @@ export default class Autosuggest extends Component {
   renderInputComponent(inputProps) {
     const { labelProps = {} } = inputProps;
 
-    const onFocus = () => {
-      this.scrollOnFocus();
+    const onFocus = event => {
+      this.scrollOnFocus(event);
       invoke(inputProps, 'onFocus', event);
     };
 
