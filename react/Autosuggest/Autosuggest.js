@@ -155,7 +155,7 @@ export default class Autosuggest extends Component {
         <div
           className={classnames({
             [styles.autosuggestBackdrop]: true,
-            [styles.mobileBackdrop]: showMobileBackdrop
+            [styles.backdrop_isMobile]: showMobileBackdrop
           })}
         />
       </div>
