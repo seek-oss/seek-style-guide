@@ -75,12 +75,12 @@
 
 .containerOpen + .autosuggestBackdrop {
   .backdrop();
-}
 
-.containerOpen + .mobileBackdrop {
-  .smallDeviceOnly({
-    opacity: @backdrop-opacity;
-  });
+  &.mobileBackdrop {
+    .smallDeviceOnly({
+      opacity: @backdrop-opacity;
+    });
+  }
 }
 
 .containerOpen .isLabelCoveredWithBackdrop {
