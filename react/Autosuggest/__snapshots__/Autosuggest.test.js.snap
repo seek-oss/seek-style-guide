@@ -125,7 +125,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
     />
   </div>
   <div
-    class="autosuggestBackdrop mobileBackdrop"
+    class="autosuggestBackdrop backdrop_isMobile"
   />
 </div>
 `;
