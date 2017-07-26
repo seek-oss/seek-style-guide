@@ -1,6 +1,9 @@
 import styles from './UserAccount.less';
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ScrollLock from 'react-scrolllock';
+
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
@@ -64,6 +67,8 @@ export default class UserAccount extends Component {
         <ScreenReaderOnly>
           <h1 id="UserMenu">User menu</h1>
         </ScreenReaderOnly>
+
+        {this.state.menuOpen ? <ScrollLock /> : null }
 
         <input
           id="user-account-menu-toggle"
