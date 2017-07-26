@@ -8,8 +8,9 @@ new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   contentBase: __dirname,
   hot: true,
-  historyApiFallback: true
-}).listen(port, 'localhost', error => {
+  historyApiFallback: true,
+  disableHostCheck: true
+}).listen(port, '0.0.0.0', error => {
   if (error) {
     console.log(error); // eslint-disable-line no-console
   } else {
