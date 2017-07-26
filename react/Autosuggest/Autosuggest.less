@@ -74,11 +74,11 @@
 }
 
 .containerOpen + .autosuggestBackdrop {
-  .transparrentBackdrop();
+  .transparentBackdrop();
 
   &.mobileBackdrop {
     .smallDeviceOnly({
-      opacity: @backdrop-opacity;
+      .shadedBackdrop();
     });
   }
 }

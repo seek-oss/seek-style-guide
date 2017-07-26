@@ -1,6 +1,4 @@
-@backdrop-opacity: 0.7;
-
-.transparrentBackdrop() {
+.transparentBackdrop() {
   position: fixed;
   top: -999px;
   left: -999px;
@@ -9,4 +7,9 @@
   background-color: @sk-black;
   transition: opacity 0.3s;
   z-index: @z-index-inline-overlay;
+}
+
+.shadedBackdrop() {
+  .transparentBackdrop();
+  opacity: 0.7;
 }
