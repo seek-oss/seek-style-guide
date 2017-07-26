@@ -1,12 +1,17 @@
 [![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
-# seek-style-guide
+# WIP #
 
-Living style guide for [SEEK](https://github.com/seek-oss), powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
+This is a fresh fork of the SEEK living style guide, in the assumption that the fundamentals and primitives are equally applicable to a SEEK Asia project, even if the brand is not.
+
+- References to seek and the seek style guide are temporary and will be removed for SEEK Asia equivalents
+- This repo does not yet have the mature build pipeline/workflow of its parent.
+
+# seek-asia-style-guide
+
+Living style guide for SEEK ASIA, based on the [SEEK style guide][https://github.com/seek-oss/seek-style-guide] powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
 
 If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as quickly as possible, while simplifying the process of keeping your development environment up to date.
-
-If you'd instead like to work on a custom webpack project, you can use [seek-style-guide-webpack](https://github.com/seek-oss/seek-style-guide-webpack) to streamline the integration process.
 
 ## Installation
 
