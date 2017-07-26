@@ -80,12 +80,7 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <IsolatedScroll {...rest} ref={callRef}>
-        {children}
-        {children !== null ?
-          <ScrollLock /> : null
-        }
-      </IsolatedScroll>
+      <IsolatedScroll {...rest} ref={callRef} children={children} />
     );
   }
 
