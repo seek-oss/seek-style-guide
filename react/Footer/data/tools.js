@@ -16,14 +16,14 @@ export default [
   },
   {
     name: 'Saved jobs',
-    href: '/sign-in?returnUrl=/my-activity/saved-jobs&nudge=saved',
-    authedHref: '/my-activity/saved-jobs',
+    href: '/my-activity/saved-jobs',
+    authedHref: true,
     analytics: 'toolbar:favourite'
   },
   {
     name: 'Applied jobs',
-    href: '/sign-in?returnUrl=/my-activity/applied-jobs&nudge=applied',
-    authedHref: '/my-activity/applied-jobs',
+    href: '/my-activity/applied-jobs',
+    authedHref: true,
     analytics: 'toolbar:applied'
   },
   {

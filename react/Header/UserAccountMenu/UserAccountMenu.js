@@ -78,7 +78,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:saved+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: authenticationStatus === AUTHENTICATED ? '/my-activity/saved-jobs' : '/sign-in?returnUrl=/my-activity/saved-jobs&nudge=saved',
+            href: authenticationStatus !== AUTHENTICATED ? '/sign-in?returnUrl=/my-activity/saved-jobs' : '/my-activity/saved-jobs',
             children: [
               <span key="label">Saved <span className={styles.smallDeviceOnly}>& Applied </span>Jobs</span>,
               <StarIcon
@@ -95,7 +95,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:applied+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: authenticationStatus === AUTHENTICATED ? '/my-activity/applied-jobs' : '/sign-in?returnUrl=/my-activity/applied-jobs&nudge=applied',
+            href: authenticationStatus !== AUTHENTICATED ? '/sign-in?returnUrl=/my-activity/applied-jobs' : '/my-activity/applied-jobs',
             children: [
               'Applied Jobs',
               <div key="iconSpacer" className={styles.iconSpacer} />

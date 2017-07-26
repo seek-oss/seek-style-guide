@@ -15,7 +15,7 @@ export default function FooterLink({ secondary, partner, analytics, className, l
         linkRenderer({
           'data-analytics': analytics,
           className: styles.link,
-          href: authenticationStatus === AUTHENTICATED ? authedHref : href,
+          href: authenticationStatus !== AUTHENTICATED && authedHref ? `/sign-in?returnUrl=${href}`: href,
           ...props
         })
       }
@@ -39,7 +39,7 @@ FooterLink.propTypes = {
     PropTypes.node
   ]),
   linkRenderer: PropTypes.func.isRequired,
-  authedHref: PropTypes.string,
+  authedHref: PropTypes.bool,
   authenticationStatus: PropTypes.oneOf([
     AUTHENTICATED,
     UNAUTHENTICATED,
