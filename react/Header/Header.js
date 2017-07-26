@@ -92,7 +92,7 @@ export default function Header({
             divider={divider}
           />
         </Hidden>
-        <Hidden print className={styles.topBanner}>
+        <Hidden print mobile className={styles.topBanner}>
           <div className={styles.topBannerContent}>
             <PartnerSites locale={locale} linkRenderer={linkRenderer} />
             <div className={styles.locale}>
