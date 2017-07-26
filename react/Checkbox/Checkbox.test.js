@@ -1,126 +1,72 @@
-import chai, { expect } from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
 import React from 'react';
-import {
-  Simulate,
-  renderIntoDocument,
-  scryRenderedDOMComponentsWithClass,
-  findRenderedDOMComponentWithClass
-} from 'react-dom/test-utils';
-import { createRenderer } from 'react-test-renderer/shallow';
-import SyntheticEvent from 'react-dom/lib/SyntheticEvent';
-import { findAllWithClass } from 'react-shallow-testutils';
+import { shallow } from 'enzyme';
+
 import Checkbox from './Checkbox';
 
-chai.use(sinonChai);
-
-const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
-
-const renderer = createRenderer();
-
 describe('Checkbox', () => {
-  let element, checkbox, rootElement, input, label, errors, standard, button;
+  const simpleProps = {
+    id: 'still-in-role',
+    label: 'Still in role'
+  };
 
-  beforeEach(() => {
-    errors = [];
-
-    sinon.stub(console, 'error', errorMessage => {
-      errors.push(errorMessage);
-    });
+  it('should render with simple props', () => {
+    const wrapper = shallow(<Checkbox {...simpleProps} />);
+    expect(wrapper).toMatchSnapshot();
   });
 
-  afterEach(() => {
-    console.error.restore();
+  it('should render with className', () => {
+    const className = 'testClassname';
+    const wrapper = shallow(<Checkbox {...simpleProps} className={className} />);
+    expect(wrapper).toMatchSnapshot();
   });
 
-  function render(jsx) {
-    element = jsx;
-    checkbox = renderer.render(element);
-    input = findAllWithClass(checkbox, 'input')[0] || null;
-    label = findAllWithClass(checkbox, 'label')[0] || null;
-    standard = findAllWithClass(checkbox, 'standard')[0] || null;
-    button = findAllWithClass(checkbox, 'button')[0] || null;
-  }
-
-  function renderToDom(jsx) {
-    element = jsx;
-    checkbox = renderIntoDocument(element);
-    rootElement = scryRenderedDOMComponentsWithClass(checkbox, 'root')[0];
-    label = scryRenderedDOMComponentsWithClass(checkbox, 'label')[0];
-    input = findRenderedDOMComponentWithClass(checkbox, 'input');
-  }
-
-  it('should have a displayName', () => {
-    render(<Checkbox />);
-    expect(element.type.displayName).to.equal('Checkbox');
+  it('should render with standard checkbox style', () => {
+    const wrapper = shallow(<Checkbox {...simpleProps} type="standard" />);
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it('should pass through id', () => {
-    const id = 'test';
-    renderToDom(<Checkbox id={id} />);
-    expect(input.id).to.equal(id);
-  });
-
-  it('should pass through className', () => {
-    const className = 'test';
-    renderToDom(<Checkbox className={className} />);
-    expect(rootElement.classList.contains('test')).to.equal(true);
-  });
-
-  it('should have `htmlFor` equal to `id` when `label` is specified', () => {
-    render(<Checkbox id="still-in-role" label="Still in role" />);
-    expect(label.props).to.contain.keys({ htmlFor: 'still-in-role' });
-  });
-
-  describe('when type is not set', () => {
-    it('should render standard checkbox', () => {
-      render(<Checkbox />);
-      expect(standard).to.not.equal(null);
-    });
-  });
-
-  describe('when type is standard', () => {
-    it('should render standard checkbox', () => {
-      render(<Checkbox type="standard" />);
-      expect(standard).to.not.equal(null);
-    });
-  });
-
-  describe('when type is button', () => {
-    it('should render button checkbox', () => {
-      render(<Checkbox type="button" />);
-      expect(button).to.not.equal(null);
-    });
+  it('should render with button style', () => {
+    const wrapper = shallow(<Checkbox {...simpleProps} type="button" />);
+    expect(wrapper).toMatchSnapshot();
   });
 
   describe('inputProps', () => {
     it('should invoke the onChange handler when touched', () => {
-      const handleChange = sinon.spy();
-      handleChange.reset();
+      const handleChange = jest.fn();
       const props = {
-        id: 'still-in-role',
-        label: 'still in role',
+        ...simpleProps,
         inputProps: {
           onChange: handleChange,
           checked: false
         }
       };
-      renderToDom(<Checkbox {...props} />);
+      const check = { target: { checked: true } };
 
-      Simulate.change(input, { 'target': { 'checked': true } });
-      expect(handleChange.calledOnce).to.equal(true);
-      expect(handleChange).to.be.calledWith(eventMatcher);
+      const wrapper = shallow(<Checkbox {...props} />);
+
+      wrapper.find('input').simulate('change', check);
+      expect(handleChange).toBeCalledWith(check);
     });
 
-    it('should pass through className', () => {
-      renderToDom(<Checkbox id='test' inputProps={{ checked: true }} />);
-      expect(input.checked).to.equal(true);
+    it('should render as checked', () => {
+      const wrapper = shallow(<Checkbox {...simpleProps} inputProps={{ checked: true }} />);
+      expect(wrapper).toMatchSnapshot();
     });
 
     it('should pass through other props to the input', () => {
-      render(<Checkbox inputProps={{ 'data-automation': 'first-name-field' }} />);
-      expect(input.props['data-automation']).to.equal('first-name-field');
+      const wrapper = shallow(<Checkbox {...simpleProps} inputProps={{ 'data-automation': 'first-name-field' }} />);
+      expect(wrapper).toMatchSnapshot();
     });
+  });
+
+  it('should render with wrapper renderer', () => {
+    const spy = jest.fn();
+
+    const props = {
+      ...simpleProps,
+      wrapperRenderer: someProps => <button onClick={spy} {...someProps} />
+    };
+    const wrapper = shallow(<Checkbox {...props} />);
+    expect(wrapper).toMatchSnapshot();
   });
 });
