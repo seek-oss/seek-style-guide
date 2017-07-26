@@ -70,10 +70,12 @@
 }
 
 .autosuggestBackdrop {
+  visibility: hidden;
   opacity: 0;
 }
 
 .containerOpen + .autosuggestBackdrop {
+  visibility: visible;
   .transparentBackdrop();
 
   &.backdrop_isMobile {
