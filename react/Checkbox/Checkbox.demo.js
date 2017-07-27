@@ -68,6 +68,13 @@ export default {
             ...props,
             className: classnames(className, styles.rootFocus)
           })
+        },
+        {
+          label: 'Active',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            className: classnames(className, styles.rootActive)
+          })
         }
       ]
     },

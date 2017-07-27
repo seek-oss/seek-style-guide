@@ -1,5 +1,16 @@
 @import (reference) "~seek-style-guide/theme";
 
+.activeFocusReset() {
+  .rootActive &,
+  .rootFocus &,
+  .input:not([readonly]):not([disabled]):focus + .label &,
+  .input:not([readonly]):not([disabled]):active + .label & {
+    outline: none;
+    border-color: transparent;
+    .focus();
+  }
+}
+
 .root {
   display: inline-block;
 }
@@ -26,6 +37,8 @@
 }
 
 .checkBox {
+  .activeFocusReset();
+
   background-color: @sk-white;
   width: @grid-row-height * 3;
   height: @grid-row-height * 3;
@@ -34,12 +47,6 @@
   margin-right: @field-gutter-width;
   padding: @field-border-radius;
   fill: @sk-pink;
-
-  .input:not([readonly]):not([disabled]):focus + .label &, .rootFocus & {
-    outline: none;
-    border-color: transparent;
-    .focus();
-  }
 }
 
 .checkMark {
@@ -55,6 +62,7 @@
 }
 
 .button {
+  .activeFocusReset();
   .touchableText(@standard-type-scale-mobile);
   display: flex;
   align-items: center;
@@ -72,11 +80,5 @@
     font-weight: @sk-bold;
     background-color: @sk-white;
     border-bottom: 1px solid @sk-pink;
-  }
-
-  .input:not([readonly]):not([disabled]):focus + .label &, .rootFocus & {
-    outline: none;
-    border-color: transparent;
-    .focus();
   }
 }
