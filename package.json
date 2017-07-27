@@ -133,7 +133,7 @@
     "sinon-chai": "^2.8.0",
     "static-site-generator-webpack-plugin": "^3.4.1",
     "string-replace-loader": "^1.2.0",
-    "stylelint": "^7.13.0",
+    "stylelint": "8.0.0",
     "stylelint-config-css-modules": "^1.0.0",
     "stylelint-config-standard": "^16.0.0",
     "superstatic": "^4.0.3",
