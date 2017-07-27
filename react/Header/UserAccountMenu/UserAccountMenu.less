@@ -1,4 +1,5 @@
 @import (reference) "~seek-style-guide/theme";
+@import (reference) "../Header.less";
 
 .root {
   padding: @grid-row-height 0;
@@ -8,6 +9,10 @@
     border: @border-width solid @sk-mid-gray-light;
     border-radius: 2px;
     padding: (@grid-row-height - @border-width) 0;
+  });
+  .smallDeviceOnly({
+    overflow: auto;
+    height: ~"calc(100vh - @{headerHeightMobile})";
   });
 }
 
