@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Baseline from 'react-baseline';
 import Code from './Code/Code';
-import flatten from 'lodash.flatten';
+import flatten from 'lodash/flatten';
 
 const DefaultContainer = ({ component: DemoComponent }) => <DemoComponent />;
 DefaultContainer.propTypes = {
