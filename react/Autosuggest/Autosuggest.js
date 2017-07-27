@@ -26,7 +26,6 @@ export default class Autosuggest extends Component {
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
     showMobileBackdrop: PropTypes.bool,
-    lockScrollOnMobileWhenOpen: PropTypes.bool,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
       const { suggestionsContainerClassName, autosuggestProps } = props;
@@ -49,8 +48,7 @@ export default class Autosuggest extends Component {
     id: '',
     className: '',
     label: '',
-    showMobileBackdrop: false,
-    lockScrollOnMobileWhenOpen: false
+    showMobileBackdrop: false
   };
 
   constructor() {
@@ -75,7 +73,7 @@ export default class Autosuggest extends Component {
 
   renderSuggestionsContainer = ({ containerProps, children }) => {
     const { ref, ...rest } = containerProps;
-    const { lockScrollOnMobileWhenOpen } = this.props;
+    const { showMobileBackdrop } = this.props;
     const areSuggestionsShown = children !== null;
     const callRef = isolatedScroll => {
       if (isolatedScroll !== null) {
@@ -89,7 +87,7 @@ export default class Autosuggest extends Component {
         {
           areSuggestionsShown &&
           smallDeviceOnly() &&
-          lockScrollOnMobileWhenOpen ?
+          showMobileBackdrop ?
             <ScrollLock /> : null
         }
       </IsolatedScroll>
