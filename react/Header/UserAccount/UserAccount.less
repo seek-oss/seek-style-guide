@@ -1,4 +1,5 @@
 @import (reference) "~seek-style-guide/theme";
+@import (reference) "../Header.less";
 
 .root {
   .aboveSmallDevice({
@@ -62,7 +63,7 @@
   .smallDeviceOnly({
     transform: translateY(@grid-row-height * -1);
     transition: opacity 0.25s ease, transform 0.25s ease;
-    top: (@grid-row-height * 7); // header height
+    top: @headerHeightMobile;
     right: 0;
     left: 0;
     bottom: 0;
