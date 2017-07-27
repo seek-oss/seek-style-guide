@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
-import range from 'lodash.range';
+import range from 'lodash/range';
 
 import Dropdown from '../../Dropdown/Dropdown';
 
