@@ -12,7 +12,7 @@
 }
 
 .activeTab {
-  @media @smallDeviceOnly {
+  @media @mobile {
     position: relative;
     &::after {
       content: '';
@@ -70,7 +70,7 @@
   margin-left: @grid-gutter-width;
   width: @grid-gutter-width;
   text-align: center;
-  @media @smallDeviceOnly {
+  @media @mobile {
     margin-left: (@grid-gutter-width / 2);
   }
 }
@@ -93,7 +93,7 @@
   width: 15px;
   height: 15px;
   // Begin bold icon hacks
-  @media @smallDeviceOnly {
+  @media @mobile {
     overflow: visible;
     :global(path) {
       stroke: currentColor;
@@ -110,13 +110,13 @@
 }
 
 .aboveSmallDevice {
-  @media @smallDeviceOnly {
+  @media @mobile {
     display: none;
   }
 }
 
 .firstItemInGroup {
-  @media @smallDeviceOnly {
+  @media @mobile {
     padding-top: @grid-row-height * 2;
     position: relative;
     &::before {

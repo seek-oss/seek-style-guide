@@ -1,6 +1,18 @@
 // Breakpoint
 @responsive-breakpoint: 740px;
 
-@smallDeviceOnly: %(~"only screen and (max-width: %s)", (@responsive-breakpoint - 1));
+@mobile: %(~"only screen and (max-width: %s)", (@responsive-breakpoint - 1));
 
 @aboveSmallDevice: %(~"only screen and (min-width: %s)", @responsive-breakpoint);
+
+.smallDeviceOnly(@rules) {
+  @media only screen and (max-width: (@responsive-breakpoint - 1)) {
+    @rules();
+  }
+}
+
+.aboveSmallDevice(@rules) {
+  @media only screen and (min-width: @responsive-breakpoint) {
+    @rules();
+  }
+}

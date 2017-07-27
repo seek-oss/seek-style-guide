@@ -12,7 +12,7 @@
   cursor: pointer;
   position: relative;
   z-index: @z-index-inline-overlay;
-  @media @smallDeviceOnly {
+  @media @mobile {
     color: @sk-white;
   }
 }
@@ -35,7 +35,7 @@
     @media @aboveSmallDevice {
       display: block;
     }
-    @media @smallDeviceOnly {
+    @media @mobile {
       z-index: @z-index-inline-overlay;
       pointer-events: auto;
       opacity: 1;
@@ -59,7 +59,7 @@
     transform 0.25s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   pointer-events: none;
   z-index: @z-index-inline-overlay;
-  @media @smallDeviceOnly {
+  @media @mobile {
     transform: translateY(@grid-row-height * -1);
     transition:
       opacity 0.25s ease,
@@ -81,7 +81,7 @@
     z-index: @z-index-inline-overlay;
     display: none;
   }
-  @media @smallDeviceOnly {
+  @media @mobile {
     z-index: @z-index-negative;
     pointer-events: none;
     opacity: 0;
@@ -118,7 +118,7 @@
   @media only screen and (min-width: 400px) {
     max-width: 200px; // ~ 20 characters
   }
-  @media @smallDeviceOnly {
+  @media @mobile {
     display: none;
   }
 }
@@ -129,7 +129,7 @@
   transition: transform 0.3s ease;
   transform-origin: 50% 50%;
   pointer-events: none;
-  @media @smallDeviceOnly {
+  @media @mobile {
     text-align: center;
     width: @grid-gutter-width;
     margin-right: (@grid-gutter-width / 2);
@@ -140,7 +140,7 @@
   width: 14px;
   height: 14px;
   // Begin bold icon hacks
-  @media @smallDeviceOnly {
+  @media @mobile {
     :global(path) {
       stroke: currentColor;
       stroke-width: 70px;

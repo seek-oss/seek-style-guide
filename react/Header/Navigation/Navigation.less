@@ -7,7 +7,7 @@
 .root {
   display: flex;
   justify-content: center;
-  @media @smallDeviceOnly {
+  @media @mobile {
     box-shadow: inset 0 -1px rgba(255, 255, 255, 0.2);
   }
   @media @aboveSmallDevice {
@@ -28,7 +28,7 @@
   @media only screen and (max-width: (@nav-min-width - 1)) {
     flex-grow: 1;
   }
-  @media @smallDeviceOnly {
+  @media @mobile {
     display: none;
   }
 }
@@ -57,7 +57,7 @@
 .link_isActive {
   color: @sk-white;
   background-color: @sk-blue;
-  @media @smallDeviceOnly {
+  @media @mobile {
     box-shadow: inset 0 -2px @sk-white;
   }
 }
