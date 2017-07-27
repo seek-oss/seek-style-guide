@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 
-export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, authedHref, authenticationStatus, ...props }) {
+export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, authRequired, authenticationStatus, ...props }) {
   return (
     <li
       className={classnames(
@@ -15,7 +15,7 @@ export default function FooterLink({ secondary, partner, analytics, className, l
         linkRenderer({
           'data-analytics': analytics,
           className: styles.link,
-          href: authenticationStatus !== AUTHENTICATED && authedHref ? `/sign-in?returnUrl=${href}` : href,
+          href: authenticationStatus !== AUTHENTICATED && authRequired ? `/sign-in?returnUrl=${href}` : href,
           ...props
         })
       }
@@ -39,7 +39,7 @@ FooterLink.propTypes = {
     PropTypes.node
   ]),
   linkRenderer: PropTypes.func.isRequired,
-  authedHref: PropTypes.bool,
+  authRequired: PropTypes.bool,
   authenticationStatus: PropTypes.oneOf([
     AUTHENTICATED,
     UNAUTHENTICATED,
