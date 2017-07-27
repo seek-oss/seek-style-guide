@@ -59,26 +59,6 @@ export default {
   },
   options: [
     {
-      label: 'States',
-      type: 'checklist',
-      states: [
-        {
-          label: 'Focus',
-          transformProps: ({ className, ...props }) => ({
-            ...props,
-            className: classnames(className, styles.rootFocus)
-          })
-        },
-        {
-          label: 'Active',
-          transformProps: ({ className, ...props }) => ({
-            ...props,
-            className: classnames(className, styles.rootActive)
-          })
-        }
-      ]
-    },
-    {
       label: 'Type',
       type: 'radio',
       states: [

@@ -1,8 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
 
 .activeFocusReset() {
-  .rootActive &,
-  .rootFocus &,
   .input:not([readonly]):not([disabled]):focus + .label &,
   .input:not([readonly]):not([disabled]):active + .label & {
     outline: none;
