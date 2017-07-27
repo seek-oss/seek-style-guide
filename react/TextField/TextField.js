@@ -9,6 +9,8 @@ import ClearField from './ClearField/ClearField';
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
 
+import invoke from 'lodash/invoke';
+
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
 
@@ -72,6 +74,12 @@ export default class TextField extends Component {
     this.handleMouseDownOnClear = this.handleMouseDownOnClear.bind(this);
   }
 
+  storeContainerReference = textField => {
+    if (textField !== null) {
+      this.container = textField;
+    }
+  }
+
   storeInputReference(input) {
     if (input !== null) {
       this.input = input;
@@ -79,13 +87,9 @@ export default class TextField extends Component {
   }
 
   handleMouseDownOnClear(event) {
-    const { onClear } = this.props;
-
-    if (typeof onClear === 'function') {
-      onClear(event);
-      this.input.focus();
-      event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
-    }
+    event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
+    invoke(this.props, 'onClear', event);
+    this.input.focus();
   }
 
   renderInput() {
@@ -106,8 +110,7 @@ export default class TextField extends Component {
     return (
       <span
         className={styles.clearField}
-        onMouseDown={this.handleMouseDownOnClear}
-        onTouchStart={this.handleMouseDownOnClear}>
+        onMouseDown={this.handleMouseDownOnClear}>
         <ClearField />
       </span>
     );
@@ -128,7 +131,7 @@ export default class TextField extends Component {
     const { id, label, labelProps, secondaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
-      <div className={classNames}>
+      <div ref={this.storeContainerReference} className={classNames}>
         <FieldLabel {...{ id, label, labelProps, secondaryLabel }} />
         {this.renderInput()}
         {this.renderClear()}

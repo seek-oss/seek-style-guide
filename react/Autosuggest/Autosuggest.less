@@ -9,9 +9,12 @@
   width: 100%;
 }
 
+.containerOpen {
+  z-index: @z-index-page-overlay;
+}
+
 .suggestionsContainer {
   display: none;
-  z-index: @z-index-inline-overlay;
   position: absolute;
   background-color: @sk-white;
   box-shadow: 0 9px 30px rgba(0, 0, 0, 0.4);
@@ -22,10 +25,10 @@
   max-height: 385px;
   overflow-y: auto;
   top: @grid-row-height * @suggestionContainerRowsOffset;
+}
 
-  .containerOpen & {
-    display: block;
-  }
+.suggestionsContainerOpen {
+  display: block;
 }
 
 .suggestionsContainer_withLabel {
@@ -61,6 +64,21 @@
   cursor: pointer;
 }
 
-.suggestionFocused {
+.suggestionHighlighted {
   background-color: @sk-mid-gray-light;
+}
+
+.autosuggestBackdrop {
+  opacity: 0;
+}
+
+.containerOpen + .autosuggestBackdrop {
+  .smallDeviceOnly({
+    .backdrop()
+  });
+}
+
+.containerOpen .isLabelCoveredWithBackdrop {
+  display: block;
+  pointer-events: none;
 }

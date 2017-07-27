@@ -1,9 +1,5 @@
 @import (reference) "~seek-style-guide/theme";
 
-@nav-item-width: (@grid-column-width * 3);
-@number-nav-items: 5;
-@nav-min-width: (@nav-item-width * @number-nav-items);
-
 .root {
   display: flex;
   justify-content: center;
@@ -20,14 +16,16 @@
 
 .list {
   display: flex;
+  justify-content: space-around;
   flex-grow: 1;
   max-width: @grid-container-width;
+  .aboveSmallDevice({
+    flex: 0 1 @grid-container-width;
+  });
 }
 
 .item {
-  @media only screen and (max-width: (@nav-min-width - 1)) {
-    flex-grow: 1;
-  }
+  flex: 1 1 20%;
   @media @mobile {
     display: none;
   }
@@ -40,17 +38,12 @@
   display: inline-block;
   white-space: nowrap;
   text-align: center;
+  width: 100%;
   &:hover {
     cursor: pointer;
   }
   @media @aboveSmallDevice {
     color: @sk-black;
-  }
-  @media only screen and (max-width: (@nav-min-width - 1)) {
-    width: 100%;
-  }
-  @media only screen and (min-width: @nav-min-width) {
-    width: @nav-item-width;
   }
 }
 
