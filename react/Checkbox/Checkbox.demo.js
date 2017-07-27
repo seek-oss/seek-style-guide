@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import Checkbox from './Checkbox';
 import demoStyles from './Checkbox.demo.less';
-import styles from './Checkbox.less';
-import classnames from 'classnames';
 
 class CheckboxContainer extends Component {
   static propTypes = {
@@ -58,19 +56,6 @@ export default {
     }
   },
   options: [
-    {
-      label: 'States',
-      type: 'checklist',
-      states: [
-        {
-          label: 'Focus',
-          transformProps: ({ className, ...props }) => ({
-            ...props,
-            className: classnames(className, styles.rootFocus)
-          })
-        }
-      ]
-    },
     {
       label: 'Type',
       type: 'radio',

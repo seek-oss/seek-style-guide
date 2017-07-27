@@ -1,5 +1,8 @@
 @import (reference) "~seek-style-guide/theme";
 
+@headerHeightDesktop: @grid-row-height * 9;
+@headerHeightMobile: @grid-row-height * 7;
+
 .root {
   width: 100%;
   .smallDeviceOnly({
@@ -27,11 +30,11 @@
   padding: 0 (@grid-gutter-width / 2);
   max-width: @grid-container-width + @grid-gutter-width;
   .smallDeviceOnly({
-    height: (@grid-row-height * 7);
+    height: @headerHeightMobile;
   });
   .aboveSmallDevice({
     order: 1;
-    height: (@grid-row-height * 9);
+    height: @headerHeightDesktop;
   });
   @media print {
     justify-content: flex-start;
