@@ -70,13 +70,18 @@
 }
 
 .autosuggestBackdrop {
-  opacity: 0;
+  visibility: hidden;
+  .transparentBackdrop();
 }
 
 .containerOpen + .autosuggestBackdrop {
-  .smallDeviceOnly({
-    .backdrop()
-  });
+  visibility: visible;
+
+  &.backdrop_isMobile {
+    .smallDeviceOnly({
+      .backdrop();
+    });
+  }
 }
 
 .containerOpen .isLabelCoveredWithBackdrop {
