@@ -16,7 +16,7 @@
   z-index: @z-index-header;
   display: flex;
   flex-flow: row wrap;
-  @media @aboveSmallDevice {
+  @media @desktop {
     background-color: @sk-white;
     justify-content: center;
   }
@@ -32,7 +32,7 @@
   @media @mobile {
     height: @headerHeightMobile;
   }
-  @media @aboveSmallDevice {
+  @media @desktop {
     order: 1;
     height: @headerHeightDesktop;
   }
@@ -61,7 +61,7 @@
   @media @mobile {
     display: none;
   }
-  @media @aboveSmallDevice {
+  @media @desktop {
     flex: 1 0 100%;
     order: 2;
   }
@@ -80,7 +80,7 @@
 .logoSvg {
   height: 39px;
   width: 105px;
-  @media @aboveSmallDevice {
+  @media @desktop {
     height: 51px;
     width: 129px;
   }
@@ -102,7 +102,7 @@
 .user {
   display: flex;
   align-items: center;
-  @media @aboveSmallDevice {
+  @media @desktop {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -110,14 +110,14 @@
 }
 
 .user_isReady {
-  @media @aboveSmallDevice {
+  @media @desktop {
     pointer-events: auto;
     opacity: 1;
   }
 }
 
 .userAccountWrapper {
-  @media @aboveSmallDevice {
+  @media @desktop {
     .user_isUnauthenticated & {
       display: none;
     }
@@ -128,7 +128,7 @@
   @media @mobile {
     display: none;
   }
-  @media @aboveSmallDevice {
+  @media @desktop {
     .user_isAuthenticated & {
       display: none;
     }
@@ -138,7 +138,7 @@
 .employerSite {
   display: none;
   white-space: nowrap;
-  @media @aboveSmallDevice {
+  @media @desktop {
     display: block;
   }
 }
@@ -165,7 +165,7 @@
   height: 14px;
   border-right: @divider-width solid @sk-mid-gray-dark;
   display: none;
-  @media @aboveSmallDevice {
+  @media @desktop {
     display: inline-block;
   }
 }

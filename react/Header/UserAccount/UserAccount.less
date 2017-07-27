@@ -2,7 +2,7 @@
 @import (reference) "../Header.less";
 
 .root {
-  @media @aboveSmallDevice {
+  @media @desktop {
     position: relative;
   }
 }
@@ -33,7 +33,7 @@
   }
 
   & ~ .menuBackdrop {
-    @media @aboveSmallDevice {
+    @media @desktop {
       display: block;
     }
     @media @mobile {
@@ -78,7 +78,7 @@
   left: -999px;
   right: -999px;
   bottom: -9999px;
-  @media @aboveSmallDevice {
+  @media @desktop {
     z-index: @z-index-inline-overlay;
     display: none;
   }
@@ -104,7 +104,7 @@
   display: inline-block;
   min-width: 60px;
   text-align: right;
-  @media @aboveSmallDevice {
+  @media @desktop {
     display: none;
   }
 }
