@@ -9,7 +9,7 @@ import ClearField from './ClearField/ClearField';
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
 
-import invoke from 'lodash.invoke';
+import invoke from 'lodash/invoke';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
