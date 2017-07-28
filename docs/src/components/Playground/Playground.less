@@ -29,9 +29,9 @@
 }
 
 .marketing {
-  .aboveSmallDevice({
+  @media @desktop {
     border: 1px solid @sk-gray-medium;
-  })
+  }
 }
 
 .fullWidthTextField {
@@ -39,9 +39,9 @@
 }
 
 .activityPanel {
-  .aboveSmallDevice({
+  @media @desktop {
     padding-top: @grid-row-height;
-  })
+  }
 }
 
 .activityMobileCustom {
@@ -55,10 +55,9 @@
       line-height: (@grid-row-height * 3);
     }
   }
-
-  .aboveSmallDevice({
+  @media @desktop {
     padding-top: @grid-row-height;
-  })
+  }
 }
 
 .touchable {
