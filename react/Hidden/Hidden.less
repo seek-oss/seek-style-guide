@@ -13,13 +13,13 @@
 }
 
 .mobile {
-  .smallDeviceOnly({
+  @media @mobile {
     display: none;
-  });
+  }
 }
 
 .desktop {
-  .aboveSmallDevice({
+  @media @desktop {
     display: none;
-  });
+  }
 }
