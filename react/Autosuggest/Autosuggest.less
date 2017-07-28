@@ -3,6 +3,9 @@
 @suggestionContainerRowsOffset: 6;
 @suggestionFieldHeightInRows: 5;
 
+@sectionTitleHeight: @grid-row-height * 4;
+@containerHeight: @touchableTextHeight + @sectionTitleHeight;
+
 .container {
   position: relative;
   display: inline-block;
@@ -25,6 +28,10 @@
   max-height: 385px;
   overflow-y: auto;
   top: @grid-row-height * @suggestionContainerRowsOffset;
+
+  .smallDeviceOnly({
+    max-height: ~"calc(100vh - @{containerHeight})";
+  });
 }
 
 .suggestionsContainerOpen {
@@ -43,8 +50,8 @@
 
 .sectionTitle {
   .rawText(1);
-  line-height: (@grid-row-height * 4);
-  height: (@grid-row-height * 4);
+  line-height: @sectionTitleHeight;
+  height: @sectionTitleHeight;
   margin: @grid-row-height (@grid-gutter-width * 0.75) 0;
   color: darken(@sk-highlight, 10%);
   font-weight: @sk-bold;
