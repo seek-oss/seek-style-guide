@@ -96,13 +96,6 @@ export default {
             ...props,
             showMobileBackdrop: true
           })
-        },
-        {
-          label: 'Lock scroll on mobile when open',
-          transformProps: ({ ...props }) => ({
-            ...props,
-            lockScrollOnMobileWhenOpen: true
-          })
         }
       ]
     },
