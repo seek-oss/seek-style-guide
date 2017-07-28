@@ -85,9 +85,9 @@ export default class Autosuggest extends Component {
       <IsolatedScroll {...rest} ref={callRef}>
         {children}
         {
+          showMobileBackdrop &&
           areSuggestionsShown &&
-          smallDeviceOnly() &&
-          showMobileBackdrop ?
+          smallDeviceOnly() ?
             <ScrollLock /> : null
         }
       </IsolatedScroll>
