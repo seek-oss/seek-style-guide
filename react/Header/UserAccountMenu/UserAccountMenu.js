@@ -10,8 +10,9 @@ import HeartIcon from '../../HeartIcon/HeartIcon';
 import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
 import employerLinkForLocale from '../employerLinkForLocale';
-import appendReturnUrl from '../appendReturnUrl';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
+import appendReturnUrl from '../../private/appendReturnUrl';
+import urlForAuthStatus from '../../private/urlForAuthStatus';
 
 const clearLocalStorage = () => {
   if (window && window.localStorage) {
@@ -78,7 +79,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:saved+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: authenticationStatus !== AUTHENTICATED ? '/sign-in?returnUrl=/my-activity/saved-jobs' : '/my-activity/saved-jobs',
+            href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
             children: [
               <span key="label">Saved <span className={styles.smallDeviceOnly}>& Applied </span>Jobs</span>,
               <StarIcon
@@ -95,7 +96,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:applied+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: authenticationStatus !== AUTHENTICATED ? '/sign-in?returnUrl=/my-activity/applied-jobs' : '/my-activity/applied-jobs',
+            href: urlForAuthStatus(authenticationStatus, '/my-activity/applied-jobs'),
             children: [
               'Applied Jobs',
               <div key="iconSpacer" className={styles.iconSpacer} />

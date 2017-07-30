@@ -856,7 +856,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                 >
                   Saved jobs
                 </a>
@@ -867,7 +867,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                 >
                   Applied jobs
                 </a>
@@ -1638,7 +1638,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                 >
                   Saved jobs
                 </a>
@@ -1649,7 +1649,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                 >
                   Applied jobs
                 </a>
@@ -2420,7 +2420,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                 >
                   Saved jobs
                 </a>
@@ -2431,7 +2431,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                 >
                   Applied jobs
                 </a>
@@ -3202,7 +3202,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                 >
                   Saved jobs
                 </a>
@@ -3213,7 +3213,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                 >
                   Applied jobs
                 </a>

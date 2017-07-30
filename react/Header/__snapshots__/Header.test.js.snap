@@ -176,7 +176,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     <a
                       class="item subItem"
                       data-analytics="header:saved+jobs"
-                      href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
                         Saved 
@@ -200,7 +200,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     <a
                       class="item subItem"
                       data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
                       <div
@@ -1226,7 +1226,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+jobs"
-                      href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
                         Saved 
@@ -1250,7 +1250,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
                       <div
@@ -2805,7 +2805,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+jobs"
-                      href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
                         Saved 
@@ -2829,7 +2829,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
                       <div
@@ -3324,7 +3324,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+jobs"
-                      href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
                         Saved 
@@ -3348,7 +3348,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
                       <div
@@ -3873,7 +3873,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+jobs"
-                      href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
                         Saved 
@@ -3897,7 +3897,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
                       <div
@@ -4390,7 +4390,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+jobs"
-                      href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
                         Saved 
@@ -4414,7 +4414,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
                       <div
@@ -4870,7 +4870,7 @@ exports[`Header: should render with no divider 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+jobs"
-                      href="/sign-in?returnUrl=/my-activity/saved-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
                         Saved 
@@ -4894,7 +4894,7 @@ exports[`Header: should render with no divider 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=/my-activity/applied-jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
                       <div

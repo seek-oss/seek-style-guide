@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
+import urlForAuthStatus from '../../private/urlForAuthStatus';
 
 export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, authRequired, authenticationStatus, ...props }) {
   return (
@@ -15,7 +16,7 @@ export default function FooterLink({ secondary, partner, analytics, className, l
         linkRenderer({
           'data-analytics': analytics,
           className: styles.link,
-          href: authenticationStatus !== AUTHENTICATED && authRequired ? `/sign-in?returnUrl=${href}` : href,
+          href: authRequired ? urlForAuthStatus(authenticationStatus, href) : href,
           ...props
         })
       }
