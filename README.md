@@ -11,7 +11,7 @@ If you'd instead like to work on a custom webpack project, you can use [seek-sty
 ## Installation
 
 ```bash
-$ npm install --save-dev seek-style-guide
+$ npm install --save seek-style-guide
 ```
 
 ## Setup
