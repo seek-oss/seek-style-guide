@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from './Autosuggest';
 import styles from '../TextField/TextField.less';
+import demoStyles from './Autosuggest.demo.less';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
@@ -62,6 +63,7 @@ export default {
   initialProps: {
     id: 'jobTitles',
     label: 'Job Titles',
+    labelProps: { className: demoStyles.listItemLabel },
     autosuggestProps: {
       suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer'],
       onSuggestionsFetchRequested: () => {},
