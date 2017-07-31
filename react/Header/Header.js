@@ -13,7 +13,7 @@ import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
 import employerLinkForLocale from './employerLinkForLocale';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from './authStatusTypes';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
 const defaultLinkRenderer = props => (<a {...props} />);
 
