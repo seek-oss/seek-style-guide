@@ -103,6 +103,7 @@ export default class Autosuggest extends Component {
   }
 
   renderInputComponent(inputProps) {
+    const { labelProps } = this.props;
 
     const onFocus = event => {
       this.scrollOnFocus();
@@ -113,7 +114,6 @@ export default class Autosuggest extends Component {
       ...omit(inputProps, 'onFocus'),
       onFocus
     };
-    const { labelProps } = this.props;
 
     const enrichedLabelProps = {
       ...labelProps,
