@@ -59,8 +59,6 @@ export default class UserAccount extends Component {
     const mobileMenuLabel = calculateMobileMenuLabel(authenticationStatus, userName);
     const desktopMenuLabel = userName;
 
-    const menuContainer = typeof document !== 'undefined' && document.getElementById('userAccountMenuContainer');
-
     return (
       <nav
         role="navigation"
