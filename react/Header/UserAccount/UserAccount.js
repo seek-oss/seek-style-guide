@@ -59,6 +59,8 @@ export default class UserAccount extends Component {
     const mobileMenuLabel = calculateMobileMenuLabel(authenticationStatus, userName);
     const desktopMenuLabel = userName;
 
+    const menuContainer = typeof document !== 'undefined' && document.getElementById('userAccountMenuContainer');
+
     return (
       <nav
         role="navigation"
@@ -70,7 +72,7 @@ export default class UserAccount extends Component {
           <h1 id="UserMenu">User menu</h1>
         </ScreenReaderOnly>
 
-        {this.state.menuOpen && smallDeviceOnly() ? <ScrollLock /> : null }
+        {this.state.menuOpen && smallDeviceOnly() ? <ScrollLock scrollTarget={menuContainer} /> : null }
 
         <input
           id="user-account-menu-toggle"
@@ -103,7 +105,7 @@ export default class UserAccount extends Component {
           <ChevronIcon direction="down" className={styles.chevron} svgClassName={styles.chevronSvg} />
         </label>
 
-        <div onClick={this.handleMenuClick} className={styles.toggleContainer}>
+        <div id="userAccountMenuContainer" onClick={this.handleMenuClick} className={styles.toggleContainer}>
           <UserAccountMenu
             locale={locale}
             authenticationStatus={authenticationStatus}

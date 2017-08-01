@@ -81,6 +81,8 @@ export default class Autosuggest extends Component {
       }
     };
 
+    const suggestionsContainer = document.getElementById(containerProps.id);
+
     return (
       <IsolatedScroll {...rest} ref={callRef}>
         {children}
@@ -88,7 +90,7 @@ export default class Autosuggest extends Component {
           showMobileBackdrop &&
           areSuggestionsShown &&
           smallDeviceOnly() ?
-            <ScrollLock /> : null
+            <ScrollLock scrollTarget={suggestionsContainer} /> : null
         }
       </IsolatedScroll>
     );
