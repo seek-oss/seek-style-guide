@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollLock should not touch-scroll within children 1`] = `
+<div>
+  Children
+  <Component
+    scrollTarget={null}
+  />
+</div>
+`;
+
+exports[`ScrollLock should render with body lock 1`] = `
+<div>
+  Children
+  <Component />
+</div>
+`;
+
+exports[`ScrollLock should render with children 1`] = `
+<div>
+  <p>
+    Children
+  </p>
+</div>
+`;
+
+exports[`ScrollLock should render without props 1`] = `<div />`;
