@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
-import ScrollLock from 'react-scrolllock';
 
 import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
 
 import TextField from '../TextField/TextField';
+import ScrollLock from '../ScrollLock/ScrollLock';
 
 import smoothScroll from '../private/smoothScroll';
 import smallDeviceOnly from '../private/smallDeviceOnly';
@@ -81,17 +81,12 @@ export default class Autosuggest extends Component {
       }
     };
 
-    const suggestionsContainer = typeof document !== 'undefined' && document.getElementById(containerProps.id);
-
     return (
       <IsolatedScroll {...rest} ref={callRef}>
-        {children}
-        {
-          showMobileBackdrop &&
-          areSuggestionsShown &&
-          smallDeviceOnly() ?
-            <ScrollLock scrollTarget={suggestionsContainer} /> : null
-        }
+        <ScrollLock
+          shouldLockBody={showMobileBackdrop && areSuggestionsShown && smallDeviceOnly()}>
+          {children}
+        </ScrollLock>
       </IsolatedScroll>
     );
   }
