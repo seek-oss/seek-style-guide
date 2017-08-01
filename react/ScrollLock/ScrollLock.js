@@ -7,7 +7,6 @@ export default class ScrollLock extends Component {
 
   static propTypes = {
     shouldLockBody: PropTypes.bool,
-    shouldScrollInside: PropTypes.bool,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node
@@ -16,7 +15,6 @@ export default class ScrollLock extends Component {
 
   static defaultProps = {
     shouldLockBody: false,
-    shouldScrollInside: true,
     children: null
   };
 
@@ -27,12 +25,12 @@ export default class ScrollLock extends Component {
   }
 
   render() {
-    const { shouldLockBody, shouldScrollInside, children } = this.props;
+    const { shouldLockBody, children } = this.props;
 
     return (
       <div ref={this.storeContainerReference}>
         {children}
-        {shouldLockBody ? <ReactScrollLock scrollTarget={shouldScrollInside ? this.container : null} /> : null }
+        {shouldLockBody ? <ReactScrollLock scrollTarget={this.container} /> : null }
       </div>
     );
   }

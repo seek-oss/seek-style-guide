@@ -18,9 +18,4 @@ describe('ScrollLock', () => {
     const wrapper = shallow(<ScrollLock children="Children" shouldLockBody />);
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should not touch-scroll within children', () => {
-    const wrapper = shallow(<ScrollLock children="Children" shouldLockBody shouldScrollInside={false} />);
-    expect(wrapper).toMatchSnapshot();
-  });
 });
