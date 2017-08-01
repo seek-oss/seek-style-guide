@@ -10,7 +10,7 @@ import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
 
 import TextField from '../TextField/TextField';
-import ScrollLock from '../ScrollLock/ScrollLock';
+import DisableScrollOutside from '../DisableScrollOutside/DisableScrollOutside';
 
 import smoothScroll from '../private/smoothScroll';
 import smallDeviceOnly from '../private/smallDeviceOnly';
@@ -83,10 +83,10 @@ export default class Autosuggest extends Component {
 
     return (
       <IsolatedScroll {...rest} ref={callRef}>
-        <ScrollLock
+        <DisableScrollOutside
           shouldLockBody={showMobileBackdrop && areSuggestionsShown && smallDeviceOnly()}>
           {children}
-        </ScrollLock>
+        </DisableScrollOutside>
       </IsolatedScroll>
     );
   }

@@ -1,21 +1,21 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import ScrollLock from './ScrollLock';
+import DisableScrollOutside from './DisableScrollOutside';
 
-describe('ScrollLock', () => {
+describe('DisableScrollOutside', () => {
   it('should render without props', () => {
-    const wrapper = shallow(<ScrollLock />);
+    const wrapper = shallow(<DisableScrollOutside />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with children', () => {
-    const wrapper = shallow(<ScrollLock children={<p>Children</p>} />);
+    const wrapper = shallow(<DisableScrollOutside children={<p>Children</p>} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with body lock', () => {
-    const wrapper = shallow(<ScrollLock children="Children" shouldLockBody />);
+    const wrapper = shallow(<DisableScrollOutside children="Children" shouldLockBody />);
     expect(wrapper).toMatchSnapshot();
   });
 });

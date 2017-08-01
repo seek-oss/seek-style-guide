@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import ReactScrollLock from 'react-scrolllock';
 
-export default class ScrollLock extends Component {
+export default class DisableScrollOutside extends Component {
 
   static propTypes = {
     shouldLockBody: PropTypes.bool,

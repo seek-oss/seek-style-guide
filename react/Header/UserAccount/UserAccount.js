@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
-import ScrollLock from '../../ScrollLock/ScrollLock';
+import DisableScrollOutside from '../../DisableScrollOutside/DisableScrollOutside';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 
@@ -102,7 +102,7 @@ export default class UserAccount extends Component {
         </label>
 
         <div onClick={this.handleMenuClick} className={styles.toggleContainer}>
-          <ScrollLock shouldLockBody={this.state.menuOpen && smallDeviceOnly()}>
+          <DisableScrollOutside shouldLockBody={this.state.menuOpen && smallDeviceOnly()}>
             <UserAccountMenu
               locale={locale}
               authenticationStatus={authenticationStatus}
@@ -110,7 +110,7 @@ export default class UserAccount extends Component {
               returnUrl={returnUrl}
               activeTab={activeTab}
             />
-          </ScrollLock>
+          </DisableScrollOutside>
         </div>
 
       </nav>
