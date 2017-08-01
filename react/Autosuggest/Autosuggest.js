@@ -81,7 +81,7 @@ export default class Autosuggest extends Component {
       }
     };
 
-    const suggestionsContainer = document.getElementById(containerProps.id);
+    const suggestionsContainer = typeof document !== 'undefined' && document.getElementById(containerProps.id);
 
     return (
       <IsolatedScroll {...rest} ref={callRef}>
