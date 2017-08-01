@@ -101,7 +101,7 @@ export default class UserAccount extends Component {
           <ChevronIcon direction="down" className={styles.chevron} svgClassName={styles.chevronSvg} />
         </label>
 
-        <div id="userAccountMenuContainer" onClick={this.handleMenuClick} className={styles.toggleContainer}>
+        <div onClick={this.handleMenuClick} className={styles.toggleContainer}>
           <ScrollLock shouldLockBody={this.state.menuOpen && smallDeviceOnly()}>
             <UserAccountMenu
               locale={locale}
