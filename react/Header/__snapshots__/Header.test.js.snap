@@ -112,7 +112,6 @@ exports[`Header: should append returnUrl to signin and register links if present
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -636,7 +635,6 @@ exports[`Header: should render first part of email address when username isn't p
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -1168,7 +1166,6 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -1692,7 +1689,6 @@ exports[`Header: should render when authenticated 1`] = `
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -2224,7 +2220,6 @@ exports[`Header: should render when authenticated but username and email is not 
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -2756,7 +2751,6 @@ exports[`Header: should render when authentication is pending 1`] = `
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -3278,7 +3272,6 @@ exports[`Header: should render when unauthenticated 1`] = `
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -3830,7 +3823,6 @@ exports[`Header: should render with locale of AU 1`] = `
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -4350,7 +4342,6 @@ exports[`Header: should render with locale of NZ 1`] = `
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul
@@ -4833,7 +4824,6 @@ exports[`Header: should render with no divider 1`] = `
               </label>
               <div
                 class="toggleContainer"
-                id="userAccountMenuContainer"
               >
                 <div>
                   <ul

@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScrollLock should not touch-scroll within children 1`] = `
-<div>
-  Children
-  <Component
-    scrollTarget={null}
-  />
-</div>
-`;
-
 exports[`ScrollLock should render with body lock 1`] = `
 <div>
   Children
