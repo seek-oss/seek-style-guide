@@ -2,10 +2,10 @@ import styles from './UserAccount.less';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ScrollLock from 'react-scrolllock';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+import ScrollLock from '../../ScrollLock/ScrollLock';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 
@@ -72,8 +72,6 @@ export default class UserAccount extends Component {
           <h1 id="UserMenu">User menu</h1>
         </ScreenReaderOnly>
 
-        {this.state.menuOpen && smallDeviceOnly() ? <ScrollLock scrollTarget={menuContainer} /> : null }
-
         <input
           id="user-account-menu-toggle"
           autoComplete="off"
@@ -106,13 +104,15 @@ export default class UserAccount extends Component {
         </label>
 
         <div id="userAccountMenuContainer" onClick={this.handleMenuClick} className={styles.toggleContainer}>
-          <UserAccountMenu
-            locale={locale}
-            authenticationStatus={authenticationStatus}
-            linkRenderer={linkRenderer}
-            returnUrl={returnUrl}
-            activeTab={activeTab}
-          />
+          <ScrollLock shouldLockBody={this.state.menuOpen && smallDeviceOnly()}>
+            <UserAccountMenu
+              locale={locale}
+              authenticationStatus={authenticationStatus}
+              linkRenderer={linkRenderer}
+              returnUrl={returnUrl}
+              activeTab={activeTab}
+            />
+          </ScrollLock>
         </div>
 
       </nav>
