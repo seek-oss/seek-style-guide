@@ -43,7 +43,7 @@ export default class Footer extends Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    return this.props.locale !== nextProps.locale;
+    return this.props.locale !== nextProps.locale || this.props.authenticationStatus !== nextProps.authenticationStatus;
   }
 
   renderLink({ name, specificLocale, secondary, ...restProps }, i) {
