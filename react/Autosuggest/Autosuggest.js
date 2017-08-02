@@ -7,7 +7,6 @@ import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
 import ScrollLock from 'react-scrolllock';
 
-import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
 
 import TextField from '../TextField/TextField';
@@ -53,21 +52,23 @@ export default class Autosuggest extends Component {
     showMobileBackdrop: false
   };
 
-  constructor() {
-    super();
-
-    this.storeInputReference = this.storeInputReference.bind(this);
-    this.storeTextFieldReference = this.storeTextFieldReference.bind(this);
-    this.renderInputComponent = this.renderInputComponent.bind(this);
+  state = {
+    areSuggestionsShown: false
   }
 
-  storeInputReference(autosuggest) {
+  componentWillUpdate(nextProps, nextState) {
+    if (!this.state.areSuggestionsShown && nextState.areSuggestionsShown && smallDeviceOnly()) {
+      smoothScroll(this.textField);
+    }
+  }
+
+  storeInputReference = autosuggest => {
     if (autosuggest !== null) {
       this.input = autosuggest.input;
     }
   }
 
-  storeTextFieldReference(textField) {
+  storeTextFieldReference = textField => {
     if (textField !== null) {
       this.textField = textField.container;
     }
@@ -77,6 +78,11 @@ export default class Autosuggest extends Component {
     const { ref, ...rest } = containerProps;
     const { showMobileBackdrop } = this.props;
     const areSuggestionsShown = children !== null;
+
+    if (this.state.areSuggestionsShown !== areSuggestionsShown) {
+      this.setState({ areSuggestionsShown });
+    }
+
     const callRef = isolatedScroll => {
       if (isolatedScroll !== null) {
         ref(isolatedScroll.component);
@@ -96,24 +102,8 @@ export default class Autosuggest extends Component {
     );
   }
 
-  scrollOnFocus = () => {
-    if (smallDeviceOnly()) {
-      smoothScroll(this.textField);
-    }
-  }
-
-  renderInputComponent(inputProps) {
+  renderInputComponent = inputProps => {
     const { labelProps } = this.props;
-
-    const onFocus = event => {
-      this.scrollOnFocus();
-      invoke(inputProps, 'onFocus', event);
-    };
-
-    const enrichedInputProps = {
-      ...omit(inputProps, 'onFocus'),
-      onFocus
-    };
 
     const enrichedLabelProps = {
       ...labelProps,
@@ -124,10 +114,10 @@ export default class Autosuggest extends Component {
     };
 
     const textFieldProps = {
-      ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ]),
       ref: this.storeTextFieldReference,
-      inputProps: enrichedInputProps,
-      labelProps: enrichedLabelProps
+      inputProps,
+      labelProps: enrichedLabelProps,
+      ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ])
     };
 
     return (
