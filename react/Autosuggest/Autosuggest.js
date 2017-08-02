@@ -123,7 +123,7 @@ export default class Autosuggest extends Component {
       })
     };
 
-    const allInputProps = {
+    const textFieldProps = {
       ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ]),
       ref: this.storeTextFieldReference,
       inputProps: enrichedInputProps,
@@ -131,7 +131,7 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <TextField {...allInputProps} />
+      <TextField {...textFieldProps} />
     );
   }
 
