@@ -4,29 +4,29 @@ import { shallow } from 'enzyme';
 import Checkbox from './Checkbox';
 
 describe('Checkbox', () => {
-  const simpleProps = {
+  const requiredProps = {
     id: 'still-in-role',
     label: 'Still in role'
   };
 
   it('should render with simple props', () => {
-    const wrapper = shallow(<Checkbox {...simpleProps} />);
+    const wrapper = shallow(<Checkbox {...requiredProps} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with className', () => {
     const className = 'testClassname';
-    const wrapper = shallow(<Checkbox {...simpleProps} className={className} />);
+    const wrapper = shallow(<Checkbox {...requiredProps} className={className} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with standard checkbox style', () => {
-    const wrapper = shallow(<Checkbox {...simpleProps} type="standard" />);
+    const wrapper = shallow(<Checkbox {...requiredProps} type="standard" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with button style', () => {
-    const wrapper = shallow(<Checkbox {...simpleProps} type="button" />);
+    const wrapper = shallow(<Checkbox {...requiredProps} type="button" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -34,7 +34,7 @@ describe('Checkbox', () => {
     it('should invoke the onChange handler when touched', () => {
       const handleChange = jest.fn();
       const props = {
-        ...simpleProps,
+        ...requiredProps,
         inputProps: {
           onChange: handleChange,
           checked: false
@@ -49,12 +49,12 @@ describe('Checkbox', () => {
     });
 
     it('should render as checked', () => {
-      const wrapper = shallow(<Checkbox {...simpleProps} inputProps={{ checked: true }} />);
+      const wrapper = shallow(<Checkbox {...requiredProps} inputProps={{ checked: true }} />);
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should pass through other props to the input', () => {
-      const wrapper = shallow(<Checkbox {...simpleProps} inputProps={{ 'data-automation': 'first-name-field' }} />);
+      const wrapper = shallow(<Checkbox {...requiredProps} inputProps={{ 'data-automation': 'first-name-field' }} />);
       expect(wrapper).toMatchSnapshot();
     });
   });
