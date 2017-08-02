@@ -70,6 +70,14 @@ export default {
             ...props,
             type: 'button'
           })
+        },
+        {
+          label: 'Multiline',
+          transformProps: props => ({
+            ...props,
+            isMultiline: true,
+            label: 'All Information & Communication Technology'
+          })
         }
       ]
     }
