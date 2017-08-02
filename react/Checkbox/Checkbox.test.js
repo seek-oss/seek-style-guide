@@ -40,12 +40,12 @@ describe('Checkbox', () => {
           checked: false
         }
       };
-      const check = { target: { checked: true } };
+      const checkedEvent = { target: { checked: true } };
 
       const wrapper = shallow(<Checkbox {...props} />);
 
-      wrapper.find('input').simulate('change', check);
-      expect(handleChange).toBeCalledWith(check);
+      wrapper.find('input').simulate('change', checkedEvent);
+      expect(handleChange).toBeCalledWith(checkedEvent);
     });
 
     it('should render as checked', () => {
