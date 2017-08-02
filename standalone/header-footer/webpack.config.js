@@ -51,13 +51,7 @@ const config = {
   },
 
   resolve: {
-    modulesDirectories: ['node_modules', 'components'],
-    alias: {
-      // Use Preact to dramatically reduce bundle size
-      // since consumers don't already have React.
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
+    modulesDirectories: ['node_modules', 'components']
   },
 
   postcss: [
