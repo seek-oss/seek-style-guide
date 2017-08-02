@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox inputProps should pass through other props to the input 1`] = `
+<div
+  className="root"
+>
+  <input
+    className="input"
+    data-automation="first-name-field"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
+        className="checkBox"
+        svgClassName="checkMark"
+      />
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox inputProps should render as checked 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={true}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
+        className="checkBox"
+        svgClassName="checkMark"
+      />
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render with button style 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <span
+      className="button"
+    >
+      Still in role
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render with className 1`] = `
+<div
+  className="root testClassname"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
+        className="checkBox"
+        svgClassName="checkMark"
+      />
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render with simple props 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
+        className="checkBox"
+        svgClassName="checkMark"
+      />
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render with standard checkbox style 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
+        className="checkBox"
+        svgClassName="checkMark"
+      />
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
