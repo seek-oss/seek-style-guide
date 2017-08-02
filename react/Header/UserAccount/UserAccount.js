@@ -2,7 +2,7 @@ import styles from './UserAccount.less';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ScrollLock from 'react-scrolllock';
+import ScrollLockOutside from 'scroll-lock-outside';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
@@ -70,8 +70,6 @@ export default class UserAccount extends Component {
           <h1 id="UserMenu">User menu</h1>
         </ScreenReaderOnly>
 
-        {this.state.menuOpen && smallDeviceOnly() ? <ScrollLock /> : null }
-
         <input
           id="user-account-menu-toggle"
           autoComplete="off"
@@ -104,13 +102,15 @@ export default class UserAccount extends Component {
         </label>
 
         <div onClick={this.handleMenuClick} className={styles.toggleContainer}>
-          <UserAccountMenu
-            locale={locale}
-            authenticationStatus={authenticationStatus}
-            linkRenderer={linkRenderer}
-            returnUrl={returnUrl}
-            activeTab={activeTab}
-          />
+          <ScrollLockOutside isEnabled={this.state.menuOpen && smallDeviceOnly()}>
+            <UserAccountMenu
+              locale={locale}
+              authenticationStatus={authenticationStatus}
+              linkRenderer={linkRenderer}
+              returnUrl={returnUrl}
+              activeTab={activeTab}
+            />
+          </ScrollLockOutside>
         </div>
 
       </nav>

@@ -57,7 +57,9 @@ exports[`Autosuggest should render with label 1`] = `
     <div
       class="suggestionsContainer suggestionsContainer_withLabel"
       id="react-autowhatever-1"
-    />
+    >
+      <div />
+    </div>
   </div>
   <div
     class="autosuggestBackdrop"
@@ -122,7 +124,9 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
     <div
       class="suggestionsContainer suggestionsContainer_withLabel"
       id="react-autowhatever-1"
-    />
+    >
+      <div />
+    </div>
   </div>
   <div
     class="autosuggestBackdrop backdrop_isMobile"
@@ -167,7 +171,9 @@ exports[`Autosuggest should render with simple props 1`] = `
     <div
       class="suggestionsContainer"
       id="react-autowhatever-1"
-    />
+    >
+      <div />
+    </div>
   </div>
   <div
     class="autosuggestBackdrop"
@@ -213,32 +219,34 @@ exports[`Autosuggest should render with suggestions 1`] = `
       class="suggestionsContainer"
       id="react-autowhatever-1"
     >
-      <ul
-        role="listbox"
-      >
-        <li
-          data-suggestion-index="0"
-          id="react-autowhatever-1--item-0"
-          role="option"
+      <div>
+        <ul
+          role="listbox"
         >
-          <span
-            class="suggestion"
+          <li
+            data-suggestion-index="0"
+            id="react-autowhatever-1--item-0"
+            role="option"
           >
-            test
-          </span>
-        </li>
-        <li
-          data-suggestion-index="1"
-          id="react-autowhatever-1--item-1"
-          role="option"
-        >
-          <span
-            class="suggestion"
+            <span
+              class="suggestion"
+            >
+              test
+            </span>
+          </li>
+          <li
+            data-suggestion-index="1"
+            id="react-autowhatever-1--item-1"
+            role="option"
           >
-            test 2
-          </span>
-        </li>
-      </ul>
+            <span
+              class="suggestion"
+            >
+              test 2
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <div

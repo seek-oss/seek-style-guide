@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
-import ScrollLock from 'react-scrolllock';
+import ScrollLockOutside from 'scroll-lock-outside';
 
 import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
@@ -83,13 +83,10 @@ export default class Autosuggest extends Component {
 
     return (
       <IsolatedScroll {...rest} ref={callRef}>
-        {children}
-        {
-          showMobileBackdrop &&
-          areSuggestionsShown &&
-          smallDeviceOnly() ?
-            <ScrollLock /> : null
-        }
+        <ScrollLockOutside
+          isEnabled={showMobileBackdrop && areSuggestionsShown && smallDeviceOnly()}>
+          {children}
+        </ScrollLockOutside>
       </IsolatedScroll>
     );
   }
