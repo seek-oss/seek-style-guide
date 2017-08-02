@@ -2,10 +2,10 @@ import styles from './UserAccount.less';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ScrollLockOutside from 'scroll-lock-outside';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
-import ScrollLockOutside from 'scroll-lock-outside';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 
