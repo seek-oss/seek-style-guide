@@ -2,7 +2,7 @@ import styles from './SignInRegister.less';
 import React from 'react';
 import PropTypes from 'prop-types';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
-import appendReturnUrl from '../appendReturnUrl';
+import appendReturnUrl from '../../private/appendReturnUrl';
 
 export default function SignInRegister({ linkRenderer, returnUrl }) {
   return (

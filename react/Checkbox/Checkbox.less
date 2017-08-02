@@ -1,5 +1,14 @@
 @import (reference) "~seek-style-guide/theme";
 
+.activeFocusReset() {
+  .input:not([readonly]):not([disabled]):focus + .label &,
+  .input:not([readonly]):not([disabled]):active + .label & {
+    outline: none;
+    border-color: transparent;
+    .focus();
+  }
+}
+
 .root {
   display: inline-block;
 }
@@ -20,12 +29,15 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  .aboveSmallDevice({
+  @media @desktop {
     .touchableText(@standard-type-scale);
-  })
+  }
 }
 
 .checkBox {
+  .activeFocusReset();
+
+  background-color: @sk-white;
   width: @grid-row-height * 3;
   height: @grid-row-height * 3;
   border: @field-border-width solid @sk-mid-gray-light;
@@ -33,23 +45,13 @@
   margin-right: @field-gutter-width;
   padding: @field-border-radius;
   fill: @sk-pink;
-
-  .input:not([readonly]):not([disabled]):focus + .label &, .rootFocus & {
-    outline: none;
-    border-color: transparent;
-    .focus();
-  }
-
-  .input:checked + .label & {
-    background-color: @sk-mid-gray-light;
-  }
 }
 
 .checkMark {
   display: block;
   width: 100%;
   height: 100%;
-  fill: @sk-black;
+  fill: @sk-form-accent;
   opacity: 0;
 
   .input:checked + .label & {
@@ -58,6 +60,7 @@
 }
 
 .button {
+  .activeFocusReset();
   .touchableText(@standard-type-scale-mobile);
   display: flex;
   align-items: center;
@@ -67,19 +70,13 @@
   border: 1px solid @sk-mid-gray-light;
   border-radius: 2px;
   cursor: pointer;
-  .aboveSmallDevice({
+  @media @desktop {
     .touchableText(@standard-type-scale);
-  });
+  }
 
   .input:checked + .label & {
     font-weight: @sk-bold;
     background-color: @sk-white;
     border-bottom: 1px solid @sk-pink;
-  }
-
-  .input:not([readonly]):not([disabled]):focus + .label &, .rootFocus & {
-    outline: none;
-    border-color: transparent;
-    .focus();
   }
 }

@@ -5,16 +5,15 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
+import ScrollLock from 'react-scrolllock';
 
-import get from 'lodash/get';
 import invoke from 'lodash/invoke';
 import omit from 'lodash/omit';
 
 import TextField from '../TextField/TextField';
-import smoothScroll from '../private/smoothScroll';
 
-const responsiveBreakpoint = 740;
-const smallDeviceOnlyMedia = `(max-width: ${responsiveBreakpoint - 1}px)`;
+import smoothScroll from '../private/smoothScroll';
+import smallDeviceOnly from '../private/smallDeviceOnly';
 
 export default class Autosuggest extends Component {
 
@@ -72,8 +71,10 @@ export default class Autosuggest extends Component {
     }
   }
 
-  renderSuggestionsContainer({ containerProps, children }) {
+  renderSuggestionsContainer = ({ containerProps, children }) => {
     const { ref, ...rest } = containerProps;
+    const { showMobileBackdrop } = this.props;
+    const areSuggestionsShown = children !== null;
     const callRef = isolatedScroll => {
       if (isolatedScroll !== null) {
         ref(isolatedScroll.component);
@@ -81,15 +82,20 @@ export default class Autosuggest extends Component {
     };
 
     return (
-      <IsolatedScroll {...rest} ref={callRef} children={children} />
+      <IsolatedScroll {...rest} ref={callRef}>
+        {children}
+        {
+          showMobileBackdrop &&
+          areSuggestionsShown &&
+          smallDeviceOnly() ?
+            <ScrollLock /> : null
+        }
+      </IsolatedScroll>
     );
   }
 
   scrollOnFocus = () => {
-    const getMatchMedia = invoke(window, 'matchMedia', smallDeviceOnlyMedia);
-    const isMobileWidth = get(getMatchMedia, 'matches');
-
-    if (isMobileWidth) {
+    if (smallDeviceOnly()) {
       smoothScroll(this.textField);
     }
   }
@@ -152,7 +158,12 @@ export default class Autosuggest extends Component {
           ref={this.storeInputReference}
           {...allAutosuggestProps}
         />
-        {showMobileBackdrop ? <div className={styles.autosuggestBackdrop} /> : null }
+        <div
+          className={classnames({
+            [styles.autosuggestBackdrop]: true,
+            [styles.backdrop_isMobile]: showMobileBackdrop
+          })}
+        />
       </div>
     );
   }
