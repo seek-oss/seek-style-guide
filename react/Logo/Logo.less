@@ -8,11 +8,20 @@
   }
 }
 
+._defaultColors() {
+  :global {
+    .sk-logo-name { fill: @sk-black; }
+    .sk-logo-circle { fill: @sk-blue; }
+    .sk-logo-dots { fill: @sk-white; }
+  }
+}
+
 .invert {
   ._invertedColours();
 }
 
 .root {
+  ._defaultColors();
   @media @mobile {
     ._invertedColours();
   }
