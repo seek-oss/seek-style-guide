@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactAutosuggest from 'react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
-import ScrollLock from 'react-scrolllock';
 
 import omit from 'lodash/omit';
 
@@ -22,6 +21,7 @@ export default class Autosuggest extends Component {
     id: PropTypes.string,
     inputProps: PropTypes.object.isRequired,
     label: PropTypes.string,
+    labelProps: PropTypes.object,
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
     showMobileBackdrop: PropTypes.bool,
@@ -47,6 +47,7 @@ export default class Autosuggest extends Component {
     id: '',
     className: '',
     label: '',
+    labelProps: {},
     showMobileBackdrop: false
   };
 
@@ -74,7 +75,6 @@ export default class Autosuggest extends Component {
 
   renderSuggestionsContainer = ({ containerProps, children }) => {
     const { ref, ...rest } = containerProps;
-    const { showMobileBackdrop } = this.props;
     const areSuggestionsShown = children !== null;
 
     if (this.state.areSuggestionsShown !== areSuggestionsShown) {
@@ -90,20 +90,14 @@ export default class Autosuggest extends Component {
     return (
       <IsolatedScroll {...rest} ref={callRef}>
         {children}
-        {
-          showMobileBackdrop &&
-          areSuggestionsShown &&
-          smallDeviceOnly() ?
-            <ScrollLock /> : null
-        }
       </IsolatedScroll>
     );
   }
 
   renderInputComponent = inputProps => {
-    const { labelProps = {} } = inputProps;
+    const { labelProps } = this.props;
 
-    const enrichedlabelProps = {
+    const enrichedLabelProps = {
       ...labelProps,
       className: classnames({
         [styles.isLabelCoveredWithBackdrop]: this.props.showMobileBackdrop,
@@ -111,15 +105,15 @@ export default class Autosuggest extends Component {
       })
     };
 
-    const allInputProps = {
+    const textFieldProps = {
       ref: this.storeTextFieldReference,
       inputProps,
-      labelProps: enrichedlabelProps,
-      ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
+      labelProps: enrichedLabelProps,
+      ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ])
     };
 
     return (
-      <TextField {...allInputProps} />
+      <TextField {...textFieldProps} />
     );
   }
 
