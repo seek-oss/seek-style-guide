@@ -21,6 +21,7 @@ export default class Autosuggest extends Component {
     id: PropTypes.string,
     inputProps: PropTypes.object.isRequired,
     label: PropTypes.string,
+    labelProps: PropTypes.object,
     className: PropTypes.string,
     autosuggestProps: PropTypes.object.isRequired,
     showMobileBackdrop: PropTypes.bool,
@@ -46,6 +47,7 @@ export default class Autosuggest extends Component {
     id: '',
     className: '',
     label: '',
+    labelProps: {},
     showMobileBackdrop: false
   };
 
@@ -93,9 +95,9 @@ export default class Autosuggest extends Component {
   }
 
   renderInputComponent = inputProps => {
-    const { labelProps = {} } = inputProps;
+    const { labelProps } = this.props;
 
-    const enrichedlabelProps = {
+    const enrichedLabelProps = {
       ...labelProps,
       className: classnames({
         [styles.isLabelCoveredWithBackdrop]: this.props.showMobileBackdrop,
@@ -103,15 +105,15 @@ export default class Autosuggest extends Component {
       })
     };
 
-    const allInputProps = {
+    const textFieldProps = {
       ref: this.storeTextFieldReference,
       inputProps,
-      labelProps: enrichedlabelProps,
-      ...omit(this.props, [ 'inputProps', 'autosuggestProps' ])
+      labelProps: enrichedLabelProps,
+      ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ])
     };
 
     return (
-      <TextField {...allInputProps} />
+      <TextField {...textFieldProps} />
     );
   }
 
