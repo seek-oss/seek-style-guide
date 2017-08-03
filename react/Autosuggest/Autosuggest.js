@@ -87,11 +87,7 @@ export default class Autosuggest extends Component {
       }
     };
 
-    return (
-      <IsolatedScroll {...rest} ref={callRef}>
-        {children}
-      </IsolatedScroll>
-    );
+    return <IsolatedScroll {...rest} ref={callRef} children={children} />;
   }
 
   renderInputComponent = inputProps => {
