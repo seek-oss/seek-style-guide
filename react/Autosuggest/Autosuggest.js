@@ -87,11 +87,7 @@ export default class Autosuggest extends Component {
       }
     };
 
-    return (
-      <IsolatedScroll {...rest} ref={callRef}>
-        {children}
-      </IsolatedScroll>
-    );
+    return <IsolatedScroll {...rest} ref={callRef} children={children} />;
   }
 
   renderInputComponent = inputProps => {
@@ -120,6 +116,7 @@ export default class Autosuggest extends Component {
   render() {
     const { inputProps, label, autosuggestProps, suggestionsContainerClassName, showMobileBackdrop } = this.props;
     const { theme = {} } = autosuggestProps;
+
     const allAutosuggestProps = {
       renderSuggestionsContainer: this.renderSuggestionsContainer,
       renderInputComponent: this.renderInputComponent,
