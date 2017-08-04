@@ -1,19 +1,37 @@
 @import (reference) "~seek-style-guide/theme";
 
-._invertedColours() {
-  :global {
-    .sk-logo-name { fill: @sk-white; }
-    .sk-logo-circle { fill: @sk-white; }
-    .sk-logo-dots { fill: @sk-blue; }
+._mobileFill(@color) {
+  @media @mobile {
+    fill: @color;
+  }
+}
+
+.root {
+  background-color: @sk-white;
+  @media @mobile {
+    background-color: @sk-blue;
   }
 }
 
 .invert {
-  ._invertedColours();
+  background-color: @sk-blue;
 }
 
-.root {
-  @media @mobile {
-    ._invertedColours();
-  }
+.logoText {
+  fill: @sk-black;
+  ._mobileFill(@sk-white);
 }
+
+.logoIcon {
+  fill: @sk-blue;
+  ._mobileFill(@sk-white);
+}
+
+.invertedLogoText {
+  fill: @sk-white;
+}
+
+.invertedLogoIcon {
+  fill: @sk-white;
+}
+

@@ -49,7 +49,7 @@ describe('Autosuggest', () => {
 
   it('should render with mobile backdrop', () => {
     const props = getAutosuggestProps();
-    props.inputProps.labelProps = {
+    props.labelProps = {
       className: 'LABEL_TEST_CLASS',
       someLabelProp: 'bar'
     };
