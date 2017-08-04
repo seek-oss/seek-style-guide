@@ -1,5 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
+@checkboxSize: @grid-row-height * 3;
+
 .activeFocusReset() {
   .input:not([readonly]):not([disabled]):focus + .label &,
   .input:not([readonly]):not([disabled]):active + .label & {
@@ -20,6 +22,7 @@
 
 .label {
   display: block;
+  height: 100%;
 
   :checked + & {
     font-weight: @sk-bold;
@@ -34,18 +37,20 @@
   @media @desktop {
     .touchableText(@standard-type-scale);
   }
-}
 
-.isMultiline {
-  .standardText();
+  &.isMultiline {
+    .standardText();
+    align-items: start;
+  }
 }
 
 .checkBox {
   .activeFocusReset();
 
   background-color: @sk-white;
-  width: @grid-row-height * 3;
-  height: @grid-row-height * 3;
+  width: @checkboxSize;
+  min-width: @checkboxSize;
+  height: @checkboxSize;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   margin-right: @field-gutter-width;
