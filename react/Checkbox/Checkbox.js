@@ -57,7 +57,7 @@ export default class Checkbox extends Component {
           [styles.isMultiline]: this.props.isMultiline
         })}>
         <CheckMarkIcon svgClassName={styles.checkMark} className={styles.checkBox} />
-        <span>{label}</span>
+        <span className={styles.labelContainer}>{label}</span>
       </div>
     );
   }
