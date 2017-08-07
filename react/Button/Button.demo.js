@@ -9,7 +9,7 @@ export default {
   component: Button,
   initialProps: {
     children: 'Hello world',
-    color: 'pink'
+    color: 'primary'
   },
   options: [
     {
@@ -86,24 +86,24 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Pink',
+          label: 'Primary',
           transformProps: props => ({
             ...props,
-            color: 'pink'
+            color: 'primary'
           })
         },
         {
-          label: 'Blue',
+          label: 'Default',
           transformProps: props => ({
             ...props,
-            color: 'blue'
+            color: 'default'
           })
         },
         {
-          label: 'Gray',
+          label: 'Success',
           transformProps: props => ({
             ...props,
-            color: 'gray'
+            color: 'success'
           })
         },
         {
