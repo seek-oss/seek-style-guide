@@ -1,8 +1,9 @@
-Based on the nature of your change, please use the relevant template below and modify to suit your needs.
+IMPORTANT
+=========
 
-Please ensure you copy the completed "Commit Message For Review" section below into your final commit body when merging to master. This allows us to validate that the generated release notes are clear enough for consumers to follow.
+Please ensure that, when eventually merging this PR to master, you copy the completed "Commit Message For Review" section below into your final commit body. This allows us to review our release notes, validating that they're clear enough for consumers to follow.
 
-Don't forget that what's written here forms the upgrade guide for consumers, and upgrading can easily become a long and arduous process. To counter this, please be as descriptive as possible, explaining the reasoning behind the change. Since there are many different consumers, changes should be documented from the perspective of the style guide itself, so avoid making specific reference to the application you're working on.
+Don't forget that what's written here forms the upgrade guide for consumers, and upgrading can easily become a long and arduous process. To counter this, please be as descriptive as possible, explaining the reasoning behind the change, and showing a clear usage example or migration guide where appropriate. Since there are many different consumers, changes should be documented from the perspective of the style guide itself, so avoid making specific reference to the application you're working on.
 
 
 Major release template
@@ -68,6 +69,7 @@ REASON FOR CHANGE:
 
 Non-release template
 ====================
+
 
 ## Commit Message For Review
 
