@@ -18,6 +18,10 @@ BREAKING CHANGE:
 
 {{ Description of breaking API change }}
 
+RFC URL:
+
+{{ URL of associated RFC }}
+
 REASON FOR CHANGE:
 
 {{ Reason for change }}
@@ -44,6 +48,10 @@ Minor release template
 ## Commit Message For Review
 
 {{ Optional description of change }}
+
+RFC URL:
+
+{{ URL of associated RFC }}
 
 REASON FOR CHANGE:
 
