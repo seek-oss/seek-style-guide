@@ -4,6 +4,9 @@ NOTE: This template is also available at https://github.com/seek-oss/seek-style-
 RFC TEMPLATE
 ============
 
+NOTE: For complete examples, have a look at Yarn's list of accepted RFCs - https://github.com/yarnpkg/rfcs/tree/master/accepted
+
+
 Issue title:
 
 RFC: {{ Name of proposal }}
