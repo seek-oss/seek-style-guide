@@ -1,47 +1,69 @@
 let tenant = process.env.SKU_TENANT;
-const saWhite = '#FFF';
-const jsCallToAction = '#FFF200';
 
-//default SeekAsia colors
-let primary = '#0D3880';
-let secondary = '#E60278';
-let tempDefault = '#D6D6D6';
-let success = '#157E00';
+//brand colors
+const dbBlue 		= '#0C4B85';
+const jsBlue 		= '#1C3F94';
+const saBlue 		= '#0D3880';
 
-let btnTextPrimary = saWhite;
-let btnTextSecondary = saWhite;
-let btnTextTempDefault = '#666';
-let btnTextSuccess = saWhite;
+//Action colors
+const actionYellow 		= '#FFF200';
+const actionOrange 		= '#FF9000';
+const actionBlue 		= '#298EB9';
+const actionGreen 		= '#63B209';
+const actionRed 		= '#FF4B4B';
+const actionPastelBlue	= '#DDF1FA';
 
-let headerBackgroundColor = primary;
-let headerFontColor = saWhite;
+//Neutrals
+const saBlack 		= '#000000';
+const saGrey1		= '#333333';
+const saGrey2		= '#666666';
+const saGrey3		= '#999999';
+const saGrey4		= '#CCCCCC';
+const saGrey5		= '#EEEEEE';
+const saWhite 		= '#FFFFFF';
 
+//Set default Call to Aciton button
+let callToActionColor = actionOrange;
+let callToActionFontColor = saWhite;
+
+//Set default header background color
+let headerBackgroundColor = saBlue;
+
+//set brand specific color
 if(tenant === 'jobStreet') {
-	primary = jsCallToAction;
-	secondary = '#1C3F94';
-	tempDefault = '#DDDDDD';
-	success = '#18CA6C';
-
-	headerBackgroundColor = secondary;
-	headerFontColor = saWhite;
+	headerBackgroundColor = jsBlue;
+	callToActionColor = actionYellow;
+	callToActionFontColor = saGrey2;
 } else if(tenant === 'jobsDB') {
-	primary = '#FF9000';
-	secondary = '#298EB9';
-	tempDefault = '#DDDDDD';
-	success = '#63B209';
-
-	headerBackgroundColor = '#1e3688';
-	headerFontColor = saWhite;
+	headerBackgroundColor = dbBlue;
 }
 
 
-export const buttonPrimary = primary;
-export const buttonDefault = tempDefault;
-export const buttonSuccess = success;
+/*--------------------EXPORT--------------------*/
+//header
+export const header = {
+	background: headerBackgroundColor,
+	color: saWhite
+};
 
-export const buttonTextPrimary = btnTextPrimary;
-export const buttonTextDefault = btnTextTempDefault;
-export const buttonTextSuccess = btnTextSuccess;
-
-export const headerBackground = headerBackgroundColor;
-export const headerColor = headerFontColor;
+//buttons
+export const buttonCallToAction = {
+	background: callToActionColor,
+	color: callToActionFontColor
+};
+export const buttonHyperlink = {
+	background: actionBlue,
+	color: saWhite
+};
+export const buttonCompletion = {
+	background: actionGreen,
+	color: saWhite
+};
+export const buttonAlert = {
+	background: actionRed,
+	color: saWhite
+};
+export const buttonHighlight = {
+	background: actionPastelBlue,
+	color: saGrey2
+};

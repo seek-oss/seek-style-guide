@@ -1,21 +1,19 @@
-import {headerBackground, headerColor} from '../../../../../theme/palette/palette.js';
+import {header} from '../../../../../theme/palette/palette.js';
 
 export default {
 	'.headerBlock': {
-		backgroundColor: headerBackground,
+		backgroundColor: header.background,
 		borderBottomWidth: '1px',
-		borderBottomColor: headerColor,
+		borderBottomColor: header.color,
 		borderBottomStyle: 'solid',
 	},
 	'.title': {
-		color: headerColor,
+		color: header.color,
 		width: '220px',
-		height: '36px',
-		position: 'initial',
 		textTransform: 'capitalize'
 	},
 	'.bar': {
-		backgroundColor: headerColor
+		backgroundColor: header.color
 	},
 	'.logoLink': {
 		textDecoration: 'none'

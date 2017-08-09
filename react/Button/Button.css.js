@@ -1,17 +1,25 @@
-import {buttonPrimary, buttonDefault, buttonSuccess, buttonTextPrimary, buttonTextDefault, buttonTextSuccess} from '../../theme/palette/palette.js';
+import {buttonCallToAction, buttonHyperlink, buttonCompletion, buttonAlert, buttonHighlight} from '../../theme/palette/palette.js';
 
 export default {
-	'.primary': {
-		backgroundColor: buttonPrimary,
-		color:buttonTextPrimary 
+	'.callToAction': {
+		backgroundColor: buttonCallToAction.background,
+		color:buttonCallToAction.color 
 	},
-	'.default': {
-		backgroundColor: buttonDefault,
-		color:buttonTextDefault
+	'.hyperlink': {
+		backgroundColor: buttonHyperlink.background,
+		color:buttonHyperlink.color
 	},
-	'.success': {
-		backgroundColor: buttonSuccess,
-		color:buttonTextSuccess
+	'.completion': {
+		backgroundColor: buttonCompletion.background,
+		color:buttonCompletion.color
+	},
+	'.alert': {
+		backgroundColor: buttonAlert.background,
+		color:buttonAlert.color
+	},
+	'.highlight': {
+		backgroundColor: buttonHighlight.background,
+		color:buttonHighlight.color
 	}
 
 }
