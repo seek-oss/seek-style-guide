@@ -1,3 +1,5 @@
+ARE YOU PLANNING TO CHANGE THE STYLE GUIDE'S PUBLIC API? If so, please make sure you've first gone through the RFC approval process by opening a new issue and using the provided template.
+
 IMPORTANT
 =========
 
