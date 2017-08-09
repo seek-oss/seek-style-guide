@@ -1,3 +1,5 @@
+ARE YOU PLANNING TO CHANGE THE STYLE GUIDE'S PUBLIC API? If so, please make sure you've first gone through the RFC approval process by opening a new issue and using the provided template.
+
 IMPORTANT
 =========
 
@@ -15,6 +17,10 @@ Major release template
 BREAKING CHANGE:
 
 {{ Description of breaking API change }}
+
+RFC URL:
+
+{{ URL of associated RFC }}
 
 REASON FOR CHANGE:
 
@@ -42,6 +48,10 @@ Minor release template
 ## Commit Message For Review
 
 {{ Optional description of change }}
+
+RFC URL:
+
+{{ URL of associated RFC }}
 
 REASON FOR CHANGE:
 
