@@ -1,8 +1,8 @@
+NOTE: This template is also available at https://github.com/seek-oss/seek-style-guide/blob/master/.github/ISSUE_TEMPLATE.md if you'd like to refer to it later.
+
+
 RFC TEMPLATE
 ============
-
-(NOTE: This template is also available at https://github.com/seek-oss/seek-style-guide/blob/master/RFC_TEMPLATE.md if you'd like to refer to it later)
-
 
 Issue title:
 

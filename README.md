@@ -299,7 +299,7 @@ Then, include the following in your Babel config:
 
 Refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-If you're planning to change the public API, please [open a new issue](https://github.com/seek-oss/seek-style-guide/issues/new) and follow the provided [RFC template](RFC_TEMPLATE.md).
+If you're planning to change the public API, please [open a new issue](https://github.com/seek-oss/seek-style-guide/issues/new) and follow the provided RFC template in the [GitHub issue template](.github/ISSUE_TEMPLATE.md).
 
 ## License
 
