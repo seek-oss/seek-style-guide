@@ -1,5 +1,6 @@
 import logoMarkup from './logo.svg';
 import jobsDBLogoMarkup from './jobsdb_logo.svg';
+import jobStreetLogoMarkup from './jobstreet_logo.svg';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,6 +12,9 @@ export default function Logo({ svgClassName, tenant, ...restProps }) {
   let brandedlogoMarkup = logoMarkup;
   if (tenant === 'jobsDB'){
     brandedlogoMarkup = jobsDBLogoMarkup;
+  }
+  else if (tenant === 'jobStreet'){
+    brandedlogoMarkup = jobStreetLogoMarkup;
   }
   const svgWithClasses = brandedlogoMarkup
     .replace('<svg ', `<svg class="${classnames(svgClassName)}" `);

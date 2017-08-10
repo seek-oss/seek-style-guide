@@ -4,7 +4,7 @@ export default {
 	'.headerBlock': {
 		backgroundColor: header.background,
 		borderBottomWidth: '1px',
-		borderBottomColor: header.color,
+		borderBottomColor: header.borderColor,
 		borderBottomStyle: 'solid',
 	},
 	'.title': {
@@ -17,5 +17,8 @@ export default {
 	},
 	'.logoLink': {
 		textDecoration: 'none'
+	},
+	'.logo': {
+		width: 'auto'
 	}
 }

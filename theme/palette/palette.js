@@ -28,14 +28,22 @@ let callToActionFontColor = saWhite;
 
 //Set default header background color
 let headerBackgroundColor = saBlue;
+let headerColor = saWhite;
+let headerBorderColor = saBlue;
 
 //set brand specific color
 if(tenant === 'jobStreet') {
-	headerBackgroundColor = jsBlue;
+	headerBackgroundColor = saWhite;
 	callToActionColor = actionYellow;
-	callToActionFontColor = saGrey2;
+	callToActionFontColor = saWhite;
+	headerColor = saGrey3;
+	headerBorderColor = saGrey4;
 } else if(tenant === 'jobsDB') {
-	headerBackgroundColor = dbBlue;
+	headerBackgroundColor = saWhite;
+	callToActionColor = actionOrange;
+	callToActionFontColor = saWhite;
+	headerColor = saGrey3;
+	headerBorderColor = saGrey4;
 }
 
 
@@ -43,7 +51,8 @@ if(tenant === 'jobStreet') {
 //header
 export const header = {
 	background: headerBackgroundColor,
-	color: saWhite
+	color: headerColor,
+	borderColor: headerBorderColor
 };
 
 //buttons
