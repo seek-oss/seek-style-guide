@@ -205,6 +205,16 @@ const decorateServerConfig = config => decorateConfig(config, {
 
   loaders: [
     {
+      test: /\.css\.js$/,
+      include: styleGuidePaths,
+      loaders: [
+        `${require.resolve('css-loader/locals')}?modules&localIdentName=${getLocalIdentName()}`,
+        `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
+        `${require.resolve('css-in-js-loader')}`,
+        `${require.resolve('babel-loader')}?` + JSON.stringify(babelConfig)
+      ]
+    },
+    {
       test: /\.less$/,
       include: styleGuidePaths,
       loaders: [
@@ -241,6 +251,16 @@ const decorateClientConfig = (config, options) => {
   return decorateConfig(config, {
     cssSelectorPrefix,
     loaders: [
+      {
+        test: /\.css\.js$/,
+        include: styleGuidePaths,
+        loader: decorateStyleLoaders([
+          `${require.resolve('css-loader')}?modules&${isProduction() ? 'minimize&' : ''}localIdentName=${getLocalIdentName()}`,
+          `${require.resolve('postcss-loader')}?pack=${POSTCSS_STYLE_GUIDE_PACK}`,
+          `${require.resolve('css-in-js-loader')}`,
+          `${require.resolve('babel-loader')}?` + JSON.stringify(babelConfig)
+        ].join('!'))
+      },
       {
         test: /\.less$/,
         include: styleGuidePaths,

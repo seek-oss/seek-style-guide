@@ -1,4 +1,5 @@
 import styles from './Button.less';
+import brandStyles from './Button.css.js';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -11,7 +12,7 @@ export default class Button extends Component {
 
   static propTypes = {
     color: PropTypes.oneOf([
-      'pink', 'blue', 'gray', 'transparent'
+      'primary', 'default', 'success', 'transparent'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -52,15 +53,16 @@ export default class Button extends Component {
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
         [styles.fullWidth]: fullWidth,
-        [styles.root_isPink]: color === 'pink',
-        [styles.root_isBlue]: color === 'blue',
-        [styles.root_isGray]: color === 'gray',
+        [brandStyles.primary]: color === 'primary',
+        [brandStyles.default]: color === 'default',
+        [brandStyles.success]: color === 'success',
         [styles.root_isTransparent]: color === 'transparent'
       }),
       disabled: loading,
       ref: this.storeButtonReference,
       ...restProps
     };
+
 
     return React.createElement(component, combinedProps, children);
   }
