@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobCard should render with default props 1`] = `
+<PageBlock
+  className="demoHack"
+>
+  <Card
+    className="root"
+  >
+    <Section>
+      <Text
+        baseline={true}
+      >
+        SEEK Asia
+      </Text>
+      <Text
+        baseline={true}
+        heading={true}
+      >
+        Developer
+      </Text>
+    </Section>
+    <Section>
+      <Text
+        baseline={true}
+        className="location"
+      >
+        <HeartIcon
+          className=""
+          filled={false}
+        />
+         
+        Kuala Lumpur
+      </Text>
+      <div
+        className="footer"
+      >
+        <Text
+          baseline={true}
+          className="salary"
+        >
+          RM999999999 - RM999999999999
+        </Text>
+        <Text
+          baseline={true}
+          className="postingDuration"
+        >
+          1h
+        </Text>
+      </div>
+    </Section>
+  </Card>
+</PageBlock>
+`;
+
+exports[`JobCard should render with description props 1`] = `
+<PageBlock
+  className="demoHack"
+>
+  <Card
+    className="root"
+  >
+    <Section>
+      <Text
+        baseline={true}
+      >
+        SEEK Asia
+      </Text>
+      <Text
+        baseline={true}
+        heading={true}
+      >
+        Developer
+      </Text>
+    </Section>
+    <Section
+      className="bodyDescription"
+    >
+      <Text
+        baseline={true}
+      >
+        Hello world
+      </Text>
+    </Section>
+    <Section>
+      <Text
+        baseline={true}
+        className="location"
+      >
+        <HeartIcon
+          className=""
+          filled={false}
+        />
+         
+        Kuala Lumpur
+      </Text>
+      <div
+        className="footer"
+      >
+        <Text
+          baseline={true}
+          className="salary"
+        >
+          RM999999999 - RM999999999999
+        </Text>
+        <Text
+          baseline={true}
+          className="postingDuration"
+        >
+          1h
+        </Text>
+      </div>
+    </Section>
+  </Card>
+</PageBlock>
+`;
