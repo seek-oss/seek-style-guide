@@ -28,7 +28,8 @@ export default class Checkbox extends Component {
       onChange: PropTypes.func,
       checked: PropTypes.bool.isRequired
     }),
-    type: PropTypes.oneOf([STANDARD, BUTTON])
+    type: PropTypes.oneOf([STANDARD, BUTTON]),
+    isMultiline: PropTypes.bool
   }
 
   static defaultProps = {
@@ -36,7 +37,8 @@ export default class Checkbox extends Component {
     inputProps: {
       checked: false
     },
-    type: STANDARD
+    type: STANDARD,
+    isMultiline: false
   };
 
   renderButton(label) {
@@ -49,9 +51,13 @@ export default class Checkbox extends Component {
 
   renderStandard(label) {
     return (
-      <div className={styles.standard}>
+      <div
+        className={classnames({
+          [styles.standard]: true,
+          [styles.isMultiline]: this.props.isMultiline
+        })}>
         <CheckMarkIcon svgClassName={styles.checkMark} className={styles.checkBox} />
-        <span>{label}</span>
+        <span className={styles.labelContainer}>{label}</span>
       </div>
     );
   }

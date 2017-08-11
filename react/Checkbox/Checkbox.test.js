@@ -25,6 +25,11 @@ describe('Checkbox', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with multiline variant', () => {
+    const wrapper = shallow(<Checkbox {...requiredProps} isMultiline />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render with button style', () => {
     const wrapper = shallow(<Checkbox {...requiredProps} type="button" />);
     expect(wrapper).toMatchSnapshot();

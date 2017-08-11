@@ -21,7 +21,9 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
         className="checkBox"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="labelContainer"
+      >
         Still in role
       </span>
     </div>
@@ -50,7 +52,9 @@ exports[`Checkbox inputProps should render as checked 1`] = `
         className="checkBox"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="labelContainer"
+      >
         Still in role
       </span>
     </div>
@@ -102,7 +106,40 @@ exports[`Checkbox should render with className 1`] = `
         className="checkBox"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="labelContainer"
+      >
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render with multiline variant 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard isMultiline"
+    >
+      <CheckMarkIcon
+        className="checkBox"
+        svgClassName="checkMark"
+      />
+      <span
+        className="labelContainer"
+      >
         Still in role
       </span>
     </div>
@@ -131,7 +168,9 @@ exports[`Checkbox should render with simple props 1`] = `
         className="checkBox"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="labelContainer"
+      >
         Still in role
       </span>
     </div>
@@ -160,7 +199,9 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
         className="checkBox"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="labelContainer"
+      >
         Still in role
       </span>
     </div>
