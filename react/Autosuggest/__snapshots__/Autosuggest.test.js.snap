@@ -10,7 +10,7 @@ exports[`Autosuggest should render with label 1`] = `
         class=""
         for="Foo"
       >
-        <div
+        <span
           class="root baseline"
         >
           <span
@@ -23,7 +23,7 @@ exports[`Autosuggest should render with label 1`] = `
             </strong>
              
           </span>
-        </div>
+        </span>
       </label>
       <input
         aria-autocomplete="list"
@@ -75,7 +75,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
         class="isLabelCoveredWithBackdrop LABEL_TEST_CLASS"
         for="Foo"
       >
-        <div
+        <span
           class="root baseline"
         >
           <span
@@ -88,7 +88,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
             </strong>
              
           </span>
-        </div>
+        </span>
       </label>
       <input
         aria-autocomplete="list"
