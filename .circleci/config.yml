@@ -39,6 +39,8 @@ workflows:
             branches:
               ignore: master
       - deploy:
+          requires:
+            - build
           filters:
             branches:
               ignore: master
