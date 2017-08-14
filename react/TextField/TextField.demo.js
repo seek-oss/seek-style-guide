@@ -9,7 +9,8 @@ import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 class TextFieldContainer extends Component {
   static propTypes = {
-    component: PropTypes.func.isRequired
+    component: PropTypes.func.isRequired,
+    componentProps: PropTypes.object.isRequired
   };
 
   constructor() {
@@ -33,12 +34,13 @@ class TextFieldContainer extends Component {
   };
 
   render() {
-    const { component: DemoComponent } = this.props;
+    const { component: DemoComponent, componentProps } = this.props;
     const { inputValue } = this.state;
 
     return (
       <div style={{ width: '300px' }}>
         <DemoComponent
+          {...componentProps}
           inputProps={{
             onChange: this.handleChange,
             value: inputValue

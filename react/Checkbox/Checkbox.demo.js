@@ -6,7 +6,8 @@ import demoStyles from './Checkbox.demo.less';
 
 class CheckboxContainer extends Component {
   static propTypes = {
-    component: PropTypes.func.isRequired
+    component: PropTypes.func.isRequired,
+    componentProps: PropTypes.object.isRequired
   };
 
   constructor() {
@@ -24,12 +25,13 @@ class CheckboxContainer extends Component {
   };
 
   render() {
-    const { component: DemoComponent } = this.props;
+    const { component: DemoComponent, componentProps } = this.props;
     const { checked } = this.state;
 
     return (
       <div className={demoStyles.root}>
         <DemoComponent
+          {...componentProps}
           inputProps={{
             checked,
             onChange: this.handleChange

@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { PageBlock, AsidedLayout, Card, Section, Paragraph, Text, TextLink, Strong } from 'seek-style-guide/react';
 import Demo from '../Demo/Demo';
 
-const BackgroundContainer = ({ component: DemoComponent }) => (
+const BackgroundContainer = ({ component: DemoComponent, componentProps }) => (
   <div style={{ backgroundColor: '#eeeeee', padding: 0.1 }}>
-    <DemoComponent />
+    <DemoComponent {...componentProps} />
   </div>
 );
 BackgroundContainer.propTypes = {
-  component: PropTypes.any
+  component: PropTypes.any,
+  componentProps: PropTypes.object.isRequired
 };
 
 const MockContent = ({ text = 'Lorem ipsum' }) => (
