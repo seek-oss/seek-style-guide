@@ -10,19 +10,22 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-
       - run: npm install
-      - run: npm test
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-  build-deploy:
+  deploy:
     docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - status-check
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: npm install
       - run: git config --global user.name "Circle-CI";
       - run: git config --global user.email "srp-dev@seekasia.com";
       - run: npm run build-gh-pages  
@@ -34,14 +37,16 @@ workflows:
       - build:
           filters:
             branches:
-              ignore:
-                - master
+              ignore: master
   deploy-ghpages:
     jobs:
-      - build-deploy:
-        filters:
-          branches:
-            only:
-              - master
-
-        
+      - build:
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
