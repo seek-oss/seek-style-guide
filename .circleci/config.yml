@@ -15,12 +15,11 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-  build-deploy:
+  deploy:
     docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - build
       - run: git config --global user.name "Circle-CI";
       - run: git config --global user.email "srp-dev@seekasia.com";
       - run: npm run build-gh-pages  
@@ -35,7 +34,11 @@ workflows:
               ignore: master
   deploy-ghpages:
     jobs:
-      - build-deploy:
+      - build:
+          filters:
+            branches:
+              ignore: master
+      - deploy:
           filters:
             branches:
               ignore: master
