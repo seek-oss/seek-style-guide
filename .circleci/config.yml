@@ -31,4 +31,4 @@ workflows:
   version: 2
   deploy-ghpages:
     jobs:
-      - build-deploy:
+      - build-deploy
