@@ -34,14 +34,10 @@ workflows:
       - build:
           filters:
             branches:
-              ignore:
-                - master
+              ignore: master
   deploy-ghpages:
     jobs:
       - build-deploy:
-        filters:
-          branches:
-            only:
-              - master
-
-        
+          filters:
+            branches:
+              only: master
