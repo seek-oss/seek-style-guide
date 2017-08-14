@@ -20,6 +20,8 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run: git config --global user.name "Circle-CI";
+      - run: git config --global user.email "srp-dev@seekasia.com";
       - run: npm run build-gh-pages  
       - run: npm run deploy-gh-pages  
 workflows:
