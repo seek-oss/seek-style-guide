@@ -4,7 +4,7 @@ groups:
   reviewers:
     required: 2
     teams:
-      - seek-style-guide-contributors
+      - seek-asia-style-guide-contributors
     # Enable github reviews when integration is sufficient:
     # https://github.com/pullapprove/support/issues/98#issuecomment-256447253
     # github_reviews:
