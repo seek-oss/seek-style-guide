@@ -41,29 +41,22 @@ if(tenant === 'jobStreet') {
 
 /*--------------------EXPORT--------------------*/
 //header
-export const header = {
-	background: headerBackgroundColor,
-	color: saWhite
-};
+export const headerBackground = headerBackgroundColor;
+export const headerColor = saWhite;
+
 
 //buttons
-export const buttonCallToAction = {
-	background: callToActionColor,
-	color: callToActionFontColor
-};
-export const buttonHyperlink = {
-	background: actionBlue,
-	color: saWhite
-};
-export const buttonCompletion = {
-	background: actionGreen,
-	color: saWhite
-};
-export const buttonAlert = {
-	background: actionRed,
-	color: saWhite
-};
-export const buttonHighlight = {
-	background: actionPastelBlue,
-	color: saGrey2
-};
+export const buttonCallToActionBackground = callToActionColor;
+export const buttonCallToActionColor = callToActionFontColor;
+
+export const buttonHyperlinkBackground = actionBlue;
+export const buttonHyperlinkColor = saWhite;
+
+export const buttonCompletionBackground = actionGreen;
+export const buttonCompletionColor = saWhite;
+
+export const buttonAlertBackground = actionRed;
+export const buttonAlertColor = saWhite;
+
+export const buttonHighlightBackground = actionPastelBlue;
+export const buttonHighlightColor = saGrey2;
