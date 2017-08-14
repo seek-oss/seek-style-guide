@@ -20,8 +20,12 @@ jobs:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - run: ls -la
       - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: npm install
       - run: git config --global user.name "Circle-CI";
       - run: git config --global user.email "srp-dev@seekasia.com";
       - run: npm run build-gh-pages  
