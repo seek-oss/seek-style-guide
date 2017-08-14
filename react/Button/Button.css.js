@@ -1,36 +1,44 @@
 import {
-	buttonCallToActionBackground, 
-	buttonCallToActionColor,
-	buttonHyperlinkBackground,
-	buttonHyperlinkColor,
-	buttonCompletionBackground,
-	buttonCompletionColor,
-	buttonAlertBackground,
-	buttonAlertColor,
-	buttonHighlightBackground,
-	buttonHighlightColor
+	actionOrange,
+	actionYellow,
+	actionBlue,
+	actionGreen,
+	actionRed,
+	actionPastelBlue,
+	saWhite,
+	saGrey2
 } from '../../theme/palette/palette.js';
+
+let tenant = process.env.SKU_TENANT;
+
+let callToActionBackgroundColor = actionOrange;
+
+if(tenant === 'jobStreet') {
+	callToActionBackgroundColor = actionYellow;
+} else if(tenant === 'jobsDB') {
+	callToActionBackgroundColor = actionOrange;
+}
 
 export default {
 	'.callToAction': {
-		backgroundColor: buttonCallToActionBackground,
-		color:buttonCallToActionColor 
+		backgroundColor: callToActionBackgroundColor,
+		color:saWhite 
 	},
 	'.hyperlink': {
-		backgroundColor: buttonHyperlinkBackground,
-		color:buttonHyperlinkColor
+		backgroundColor: actionBlue,
+		color:saWhite
 	},
 	'.completion': {
-		backgroundColor: buttonCompletionBackground,
-		color:buttonCompletionColor
+		backgroundColor: actionGreen,
+		color:saWhite
 	},
 	'.alert': {
-		backgroundColor: buttonAlertBackground,
-		color:buttonAlertColor
+		backgroundColor: actionRed,
+		color:saWhite
 	},
 	'.highlight': {
-		backgroundColor: buttonHighlightBackground,
-		color:buttonHighlightColor
+		backgroundColor: actionPastelBlue,
+		color:saGrey2
 	}
 
 }
