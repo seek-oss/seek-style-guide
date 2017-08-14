@@ -43,10 +43,10 @@ workflows:
       - build:
           filters:
             branches:
-              ignore: master
+              only: master
       - deploy:
           requires:
             - build
           filters:
             branches:
-              ignore: master
+              only: master
