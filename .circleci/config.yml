@@ -20,7 +20,7 @@ jobs:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - status-check
+      - build
       - run: git config --global user.name "Circle-CI";
       - run: git config --global user.email "srp-dev@seekasia.com";
       - run: npm run build-gh-pages  
@@ -38,4 +38,4 @@ workflows:
       - build-deploy:
           filters:
             branches:
-              only: master
+              ignore: master
