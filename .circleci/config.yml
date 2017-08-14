@@ -26,9 +26,6 @@ jobs:
       - run: npm run deploy-gh-pages  
 workflows:
   version: 2
-  commit-build:
+  deploy-ghpages:
     jobs:
       - build-deploy:
-          filters:
-            branches:
-              ignore: master
