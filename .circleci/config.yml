@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  status-check:
+  build:
     docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
@@ -29,6 +29,19 @@ jobs:
       - run: npm run deploy-gh-pages  
 workflows:
   version: 2
+  status-check:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
   deploy-ghpages:
     jobs:
-      - build-deploy
+      - build-deploy:
+        filters:
+          branches:
+            only:
+              - master
+
+        
