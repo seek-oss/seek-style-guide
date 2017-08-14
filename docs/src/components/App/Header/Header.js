@@ -40,8 +40,7 @@ export default class Header extends Component {
           <Section className={styles.headerSection}>
             <div className={styles.sectionContent}>
               <Link className={classnames([styles.logoLink, brandStyle.logoLink])} to="/" onClick={this.handleMenuClose}>
-                <Logo svgClassName={styles.logo} tenant={this.props.tenant}/>
-                <div className={classnames([styles.title, brandStyle.title])}>{this.props.tenant} style guide</div>
+                <Logo svgClassName={classnames([styles.logo, brandStyle.logo])} tenant={this.props.tenant}/>
               </Link>
 
               <div className={styles.hamburger}>

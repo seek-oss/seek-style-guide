@@ -1,10 +1,10 @@
-import {headerBackground, headerColor} from '../../../../../theme/palette/palette.js';
+import {headerBackground, headerColor, headerBorderColor} from '../../../../../theme/palette/palette.js';
 
 export default {
 	'.headerBlock': {
 		backgroundColor: headerBackground,
 		borderBottomWidth: '1px',
-		borderBottomColor: headerColor,
+		borderBottomColor: headerBorderColor,
 		borderBottomStyle: 'solid',
 	},
 	'.title': {
@@ -17,5 +17,8 @@ export default {
 	},
 	'.logoLink': {
 		textDecoration: 'none'
+	},
+	'.logo': {
+		width: 'auto'
 	}
 }
