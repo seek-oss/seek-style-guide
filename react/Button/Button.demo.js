@@ -9,7 +9,7 @@ export default {
   component: Button,
   initialProps: {
     children: 'Hello world',
-    color: 'primary'
+    color: 'callToAction'
   },
   options: [
     {
@@ -86,24 +86,38 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Primary',
+          label: 'Call To Action',
           transformProps: props => ({
             ...props,
-            color: 'primary'
+            color: 'callToAction'
           })
         },
         {
-          label: 'Default',
+          label: 'Hyperlink',
           transformProps: props => ({
             ...props,
-            color: 'default'
+            color: 'hyperlink'
           })
         },
         {
-          label: 'Success',
+          label: 'Completion',
           transformProps: props => ({
             ...props,
-            color: 'success'
+            color: 'completion'
+          })
+        },
+        {
+          label: 'Alert',
+          transformProps: props => ({
+            ...props,
+            color: 'alert'
+          })
+        },
+        {
+          label: 'Highlight',
+          transformProps: props => ({
+            ...props,
+            color: 'highlight'
           })
         },
         {

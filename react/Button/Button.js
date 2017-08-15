@@ -12,7 +12,7 @@ export default class Button extends Component {
 
   static propTypes = {
     color: PropTypes.oneOf([
-      'primary', 'default', 'success', 'transparent'
+      'callToAction', 'hyperlink', 'completion', 'alert', 'highlight', 'transparent'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -53,9 +53,11 @@ export default class Button extends Component {
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
         [styles.fullWidth]: fullWidth,
-        [brandStyles.primary]: color === 'primary',
-        [brandStyles.default]: color === 'default',
-        [brandStyles.success]: color === 'success',
+        [brandStyles.callToAction]: color === 'callToAction',
+        [brandStyles.hyperlink]: color === 'hyperlink',
+        [brandStyles.completion]: color === 'completion',
+        [brandStyles.alert]: color === 'alert',
+        [brandStyles.highlight]: color === 'highlight',
         [styles.root_isTransparent]: color === 'transparent'
       }),
       disabled: loading,
