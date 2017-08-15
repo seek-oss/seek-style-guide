@@ -4,8 +4,8 @@ import styles from './Button.less';
 import classnames from 'classnames';
 
 export default {
-  route: '/buttons',
-  title: 'Buttons',
+  route: '/button',
+  title: 'Button',
   component: Button,
   initialProps: {
     children: 'Hello world',
