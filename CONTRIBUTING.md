@@ -16,6 +16,10 @@ After cloning the project, install the dependencies:
 $ npm install
 ```
 
+## Before Starting
+
+If you're planning to change the public API, please [open a new issue](https://github.com/seek-oss/seek-style-guide/issues/new) and follow the provided RFC template.
+
 ## Workflow
 
 Before starting your work, first ensure you're in the `master` branch and that you've pulled down the latest changes:
