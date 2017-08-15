@@ -1,8 +1,8 @@
 import Text from './Text';
 
 export default {
-  route: '/typography',
-  title: 'Typography',
+  route: '/text',
+  title: 'Text',
   component: Text,
   initialProps: {
     children: 'Living Style Guide',

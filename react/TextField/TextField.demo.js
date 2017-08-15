@@ -53,8 +53,8 @@ class TextFieldContainer extends Component {
 }
 
 export default {
-  route: '/textfields',
-  title: 'Textfields',
+  route: '/textfield',
+  title: 'Text Field',
   component: TextField,
   container: TextFieldContainer,
   initialProps: {

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 
 import { Link } from 'react-router';
-import { PageBlock, Section, Text } from 'seek-style-guide/react';
+import { PageBlock, Card, Section, Text, ScreenReaderOnly } from 'seek-style-guide/react';
 import Logo from './Logo/Logo';
 import demoSpecs from '../../../demoSpecs';
 
@@ -40,7 +40,7 @@ export default class Header extends Component {
             <div className={styles.sectionContent}>
               <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
                 <Logo svgClassName={styles.logo} />
-                <div className={styles.title}>style guide</div>
+                <h1 className={styles.title}><ScreenReaderOnly>Seek </ScreenReaderOnly>Style Guide</h1>
               </Link>
 
               <div className={styles.hamburger}>
@@ -61,17 +61,35 @@ export default class Header extends Component {
                 <div className={styles.menu} onClick={this.handleMenuClose}>
                   <PageBlock>
                     <Section header>
-                      <Text hero><Link className={styles.link} to="/">Home</Link></Text>
-                      <Text hero><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
-                      {
-                        demoSpecs.map(demoSpec => (
-                          <Text hero key={demoSpec.title}>
-                            <Link className={styles.link} to={demoSpec.route}>
-                              { demoSpec.title }
-                            </Link>
-                          </Text>
-                        ))
-                      }
+                      <Card transparent>
+                        <Text headline regular><Link className={styles.link} to="/">Home</Link></Text>
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text h2 headline>Guides</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        <Text headline regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text headline>Components</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        {
+                          demoSpecs.map(demoSpec => (
+                            <Text headline regular key={demoSpec.title}>
+                              <Link className={styles.link} to={demoSpec.route}>
+                                { demoSpec.title }
+                              </Link>
+                            </Text>
+                          ))
+                        }
+                      </Card>
                     </Section>
                   </PageBlock>
                 </div>
