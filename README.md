@@ -14,6 +14,10 @@ If you'd instead like to work on a custom webpack project, you can use [seek-sty
 $ npm install --save seek-style-guide
 ```
 
+## Upgrading
+
+Consumers can stay up to date by following our [release notes](https://github.com/seek-oss/seek-style-guide/releases), which are published automatically whenever a new release is published to [npm](https://www.npmjs.com/package/seek-style-guide).
+
 ## Setup
 
 Wrap your app with the `StyleGuideProvider` component to use any of the style guide components. For example:
