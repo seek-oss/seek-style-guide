@@ -67,7 +67,7 @@ export default class Header extends Component {
 
                       <Card transparent>
                         <h2>
-                          <Text h2 headline>Guides</Text>
+                          <Text headline>Guides</Text>
                         </h2>
                       </Card>
                       <Card transparent>
