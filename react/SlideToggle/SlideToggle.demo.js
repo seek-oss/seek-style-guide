@@ -1,8 +1,8 @@
 import SlideToggle from './SlideToggle';
 
 export default {
-  route: '/slide-toggle',
-  title: 'Slide toggle',
+  route: '/slidetoggle',
+  title: 'Slide Toggle',
   component: SlideToggle,
   initialProps: {
     onChange: () => {},

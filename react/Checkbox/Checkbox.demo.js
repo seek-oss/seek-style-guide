@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 
 import Checkbox from './Checkbox';
 import demoStyles from './Checkbox.demo.less';
-import styles from './Checkbox.less';
-import classnames from 'classnames';
 
 class CheckboxContainer extends Component {
   static propTypes = {
-    component: PropTypes.func.isRequired
+    component: PropTypes.func.isRequired,
+    componentProps: PropTypes.object.isRequired
   };
 
   constructor() {
@@ -26,12 +25,13 @@ class CheckboxContainer extends Component {
   };
 
   render() {
-    const { component: DemoComponent } = this.props;
+    const { component: DemoComponent, componentProps } = this.props;
     const { checked } = this.state;
 
     return (
       <div className={demoStyles.root}>
         <DemoComponent
+          {...componentProps}
           inputProps={{
             checked,
             onChange: this.handleChange
@@ -58,19 +58,6 @@ export default {
     }
   },
   options: [
-    {
-      label: 'States',
-      type: 'checklist',
-      states: [
-        {
-          label: 'Focus',
-          transformProps: ({ className, ...props }) => ({
-            ...props,
-            className: classnames(className, styles.rootFocus)
-          })
-        }
-      ]
-    },
     {
       label: 'Type',
       type: 'radio',

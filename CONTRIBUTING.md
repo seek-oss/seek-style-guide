@@ -16,6 +16,10 @@ After cloning the project, install the dependencies:
 $ npm install
 ```
 
+## Before Starting
+
+If you're planning to change the public API, please [open a new issue](https://github.com/seek-oss/seek-style-guide/issues/new) and follow the provided RFC template.
+
 ## Workflow
 
 Before starting your work, first ensure you're in the `master` branch and that you've pulled down the latest changes:
@@ -95,10 +99,18 @@ Once you've committed your work, push your changes to a branch of the same name 
 $ git push --set-upstream origin $(git symbolic-ref --short HEAD)
 ```
 
-Next, head over to the style guide's GitHub page and create a new pull request from your branch.
+Next, head over to the style guide's GitHub page and create a new pull request from your branch. You'll be presented with a pull request template, which provides separate outlines for major, minor, patch and non-release branches. Please follow this guide carefully, but raise any questions and concerns along the way if anything is unclear.
 
 In order for your pull request to be accepted, the [Travis CI](https://travis-ci.org) build needs to pass, and **2 other contributors needs to approve your work.** GitHub will block your PR until you have your first approval, but make sure you wait for a second approval. It's likely that you might need to make some changes for your work to be accepted, but don't take this personally! Ultimately, the aim is to make it feel like the codebase was written by a single person, but this takes a lot of work and constant review of each others' work.
 
-Once your work is approved and ready to go, hit the merge button and check that your commit message and description are clean and free of cruft, removing any irrelevant messages due to review feedback. Finally, take a deep breath, hit the green "confirm" button, and we have liftoff—your work should be automatically deployed!
+### Merging
+
+Once your work is approved and ready to go, follow these steps:
+
+1) Hit the merge button
+2) Ensure the commit message matches the title of the PR (it may have been edited!)
+3) Copy and paste the text under **"Commit Message For Review"** into the commit body (again, it may have been edited!)
+
+Finally, take a deep breath, hit the green "confirm" button, and we have liftoff—your work should be automatically deployed!
 
 🎨📦🚀

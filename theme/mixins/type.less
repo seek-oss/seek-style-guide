@@ -52,10 +52,12 @@
   .__responsiveType("small"; @baseline);
 }
 
+@touchableTextHeight: @grid-row-height * @interaction-type-row-span;
+
 .touchableText(@font-scale: @interaction-type-scale) {
   .rawText(@font-scale);
-  line-height: (@grid-row-height * @interaction-type-row-span);
-  height: (@grid-row-height * @interaction-type-row-span);
+  line-height: @touchableTextHeight;
+  height: @touchableTextHeight;
 }
 
 .rawText(@font-scale: @standard-type-scale) {

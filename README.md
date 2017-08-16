@@ -16,8 +16,12 @@ If you're creating a new project from scratch, consider using [sku](https://gith
 ## Installation
 
 ```bash
-$ npm install --save-dev seek-style-guide
+$ npm install --save seek-style-guide
 ```
+
+## Upgrading
+
+Consumers can stay up to date by following our [release notes](https://github.com/seek-oss/seek-style-guide/releases), which are published automatically whenever a new release is published to [npm](https://www.npmjs.com/package/seek-style-guide).
 
 ## Setup
 
@@ -303,6 +307,8 @@ Then, include the following in your Babel config:
 ## Contributing
 
 Refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+If you're planning to change the public API, please [open a new issue](https://github.com/seek-oss/seek-style-guide/issues/new) and follow the provided RFC template in the [GitHub issue template](.github/ISSUE_TEMPLATE.md).
 
 ## License
 
