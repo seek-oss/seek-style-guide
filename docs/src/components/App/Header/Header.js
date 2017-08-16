@@ -1,4 +1,5 @@
 import styles from './Header.less';
+import brandStyle from './Header.css.js';
 
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -29,7 +30,7 @@ export default class Header extends Component {
     const { menuOpen } = this.state;
 
     const headerClasses = classnames({
-      [styles.headerBlock]: true,
+      [brandStyle.headerBlock]: true,
       [styles.fixedHeaderBlock]: menuOpen
     });
 
@@ -38,9 +39,8 @@ export default class Header extends Component {
         <PageBlock className={headerClasses}>
           <Section className={styles.headerSection}>
             <div className={styles.sectionContent}>
-              <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
-                <Logo svgClassName={styles.logo} />
-                <h1 className={styles.title}><ScreenReaderOnly>SEEK </ScreenReaderOnly>Style Guide</h1>
+              <Link className={classnames([styles.logoLink, brandStyle.logoLink])} to="/" onClick={this.handleMenuClose}>
+                <Logo svgClassName={classnames([styles.logo, brandStyle.logo])} tenant={this.props.tenant}/>
               </Link>
 
               <div className={styles.hamburger}>
@@ -52,9 +52,9 @@ export default class Header extends Component {
                   className={styles.checkbox}
                 />
                 <label htmlFor="hamburgerCheckbox" className={styles.bars}>
-                  <div className={styles.bar1} />
-                  <div className={styles.bar2} />
-                  <div className={styles.bar3} />
+                  <div className={classnames([styles.bar1, brandStyle.bar])} />
+                  <div className={classnames([styles.bar2, brandStyle.bar])} />
+                  <div className={classnames([styles.bar3, brandStyle.bar])} />
                   <span className={styles.hamburgerText}>Show menu</span>
                 </label>
 

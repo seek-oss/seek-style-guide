@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![CircleCI](https://circleci.com/gh/seekinternational/seek-asia-style-guide.svg?style=svg)](https://circleci.com/gh/seekinternational/seek-asia-style-guide)
 
 # WIP #
 
@@ -9,7 +9,7 @@ This is a fresh fork of the SEEK living style guide, in the assumption that the 
 
 # seek-asia-style-guide
 
-Living style guide for SEEK ASIA, based on the [SEEK style guide][https://github.com/seek-oss/seek-style-guide] powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
+Living style guide for SEEK ASIA, based on the [SEEK Asia style guide][https://github.com/seekinternational/seek-asia-style-guide] powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
 
 If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as quickly as possible, while simplifying the process of keeping your development environment up to date.
 
@@ -57,7 +57,7 @@ export default class App extends Component {
 The standard header and footer are provided as React components:
 
 ```js
-import { Header, Footer } from 'seek-style-guide/react';
+import { Header, Footer } from 'seek-asia-style-guide/react';
 ```
 
 The `<Header>` component accepts the following props:
@@ -75,7 +75,7 @@ The `<Footer>` component accepts the following props:
 
 ## High Level Components
 
-As much as possible, you should aim to minimise the amount of custom CSS you need to write. This is achieved by leveraging our suite of high level components, which are demonstrated on our [style guide documentation site](https://seek-oss.github.io/seek-style-guide/).
+As much as possible, you should aim to minimise the amount of custom CSS you need to write. This is achieved by leveraging our suite of high level components, which are demonstrated on our [style guide documentation site](https://seekinternational.github.io/seek-style-guide/).
 
 ## Low Level Styling
 
@@ -221,8 +221,8 @@ It's important to note that any additions to these values (e.g. borders) will ne
 If you're maintaining or updating a non-React app, a standalone JS + CSS package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
 
 First, include the following files in your app:
-- `seek-style-guide/dist/header-footer/styles.css`
-- `seek-style-guide/dist/header-footer/client.js`
+- `seek-asia-style-guide/dist/header-footer/styles.css`
+- `seek-asia-style-guide/dist/header-footer/client.js`
 
 Then, add placeholder elements to your page:
 - `<div id="header"></div>`
@@ -273,14 +273,14 @@ When importing from the style guide, while it might appear that you are only imp
 In order to help you optimise your bundle size, all components can be imported directly from their individual source files. For example, take a look at standard import statement:
 
 ```js
-import { Header, Footer } from 'seek-style-guide/react';
+import { Header, Footer } from 'seek-asia-style-guide/react';
 ```
 
 This can also be expressed as separate, file-level imports:
 
 ```js
-import Header from 'seek-style-guide/react/Header/Header.js';
-import Footer from 'seek-style-guide/react/Footer/Footer.js';
+import Header from 'seek-asia-style-guide/react/Header/Header.js';
+import Footer from 'seek-asia-style-guide/react/Footer/Footer.js';
 ```
 
 Rather than transforming this manually, it's recommended that you leverage [Babel](https://babeljs.io/) instead, with [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports) configured to match the pattern used in this style guide.
@@ -296,8 +296,8 @@ Then, include the following in your Babel config:
 ```js
 "plugins": [
   ["babel-plugin-transform-imports", {
-    "seek-style-guide/react": {
-      "transform": "seek-style-guide/react/${member}/${member}",
+    "seek-asia-style-guide/react": {
+      "transform": "seek-asia-style-guide/react/${member}/${member}",
       "preventFullImport": true
     }
   }]
