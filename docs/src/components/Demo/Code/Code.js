@@ -53,12 +53,12 @@ export default class Code extends Component {
       })
       .replace(/\={true}/ig, '')
       .replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
-      .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}');
+      .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}')
+      .replace('<MockContent />', 'Lorem ipsum');
 
       const componentNames = uniq(
         (componentCode.match(/<([A-Z]\w*)(?=[\s>])/g) || [])
           .map(x => x.replace('<', ''))
-          .filter(x => !/mock/i.test(x))
       );
 
       code = `import {\n  ${componentNames.join(',\n  ')}\n} from 'seek-style-guide/react';\n\n\n${componentCode}`;
