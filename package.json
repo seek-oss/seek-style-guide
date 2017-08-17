@@ -118,7 +118,7 @@
     "react-baseline": "^1.0.1",
     "react-copy-to-clipboard": "4.2.1",
     "react-dom": "^15.3.1",
-    "react-element-to-jsx-string": "^6.2.0",
+    "react-element-to-jsx-string": "^12.0.0",
     "react-helmet": "^3.2.2",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-isolated-scroll": "^0.1.0",
