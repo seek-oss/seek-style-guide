@@ -8,7 +8,8 @@ import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 class MonthPickerContainer extends Component {
   static propTypes = {
-    component: PropTypes.func.isRequired
+    component: PropTypes.func.isRequired,
+    componentProps: PropTypes.object.isRequired
   };
 
   constructor() {
@@ -24,11 +25,12 @@ class MonthPickerContainer extends Component {
   };
 
   render() {
-    const { component: DemoComponent } = this.props;
+    const { component: DemoComponent, componentProps } = this.props;
     const { value } = this.state;
 
     return (
       <DemoComponent
+        {...componentProps}
         className={styles.root}
         onChange={this.handleChange}
         value={value}
@@ -39,7 +41,7 @@ class MonthPickerContainer extends Component {
 
 export default {
   route: '/monthpicker',
-  title: 'Month picker',
+  title: 'Month Picker',
   component: MonthPicker,
   container: MonthPickerContainer,
   initialProps: {

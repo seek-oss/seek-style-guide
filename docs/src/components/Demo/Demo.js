@@ -6,11 +6,14 @@ import classnames from 'classnames';
 import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Baseline from 'react-baseline';
 import Code from './Code/Code';
-import flatten from 'lodash.flatten';
+import flatten from 'lodash/flatten';
 
-const DefaultContainer = ({ component: DemoComponent }) => <DemoComponent />;
+const DefaultContainer = ({ component: DemoComponent, componentProps }) => (
+  <DemoComponent {...componentProps} />
+);
 DefaultContainer.propTypes = {
-  component: PropTypes.func.isRequired
+  component: PropTypes.func.isRequired,
+  componentProps: PropTypes.object.isRequired
 };
 
 export default class Demo extends Component {
@@ -126,8 +129,7 @@ export default class Demo extends Component {
       options
     } = this.props.spec;
 
-    const demoElement = <DemoComponent {...this.calculateProps()} />;
-    const BoundComponent = props => <DemoComponent {...this.calculateProps()} {...props} />;
+    const codeElement = <DemoComponent {...this.calculateProps()} />;
 
     return (
       <div className={styles.root}>
@@ -147,7 +149,7 @@ export default class Demo extends Component {
               [styles.component]: true,
               [styles.component_block]: block
             })}>
-            <Container component={BoundComponent} />
+            <Container component={DemoComponent} componentProps={this.calculateProps()} />
           </div>
         </Baseline>
         {
@@ -166,7 +168,7 @@ export default class Demo extends Component {
           null
         }
         <PageBlock className={styles.codeBlock}>
-          <Code jsx={demoElement} />
+          <Code jsx={codeElement} />
         </PageBlock>
       </div>
     );

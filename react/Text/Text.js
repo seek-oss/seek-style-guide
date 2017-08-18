@@ -31,7 +31,7 @@ export default function Text({
   ...restProps
 }) {
   return (
-    <div
+    <span
       {...restProps}
       className={classnames({
         [styles.root]: true,
@@ -57,7 +57,7 @@ export default function Text({
         })}>
         {children}
       </span>
-    </div>
+    </span>
   );
 }
 
