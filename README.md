@@ -158,6 +158,8 @@ The contrast ratio of certain foreground/background color combinations don't mee
 @sk-pink-on-gray-light
 @sk-learning-dark-on-gray-light
 @sk-business-on-gray-light
+@sk-link-on-mid-gray-light
+@sk-mid-gray-dark-on-gray-medium
 ```
 
 Please note that this list is not exhaustive, so contributions are encouraged. To validate color combinations, we recommend the use of the web-based tool [Accessible Colors](http://accessible-colors.com) by [@moroshko](https://github.com/moroshko).
