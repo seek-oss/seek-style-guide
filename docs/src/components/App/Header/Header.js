@@ -71,6 +71,7 @@ export default class Header extends Component {
                         </h2>
                       </Card>
                       <Card transparent>
+                        <Text headline regular><Link className={styles.link} to="/typography">Typography</Link></Text>
                         <Text headline regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
                       </Card>
 
