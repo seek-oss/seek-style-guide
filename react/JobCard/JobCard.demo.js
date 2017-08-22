@@ -1,10 +1,19 @@
 import React from 'react';
-import { JobCard } from 'seek-style-guide/react';
+import { JobCard, PageBlock } from 'seek-style-guide/react';
+
+const JobCardContainer = ({ component: DemoComponent }) => {
+    return (
+        <PageBlock style={{ width: '75%' }}>
+            <DemoComponent />
+        </PageBlock>
+    )
+};
 
 export default {
     route: '/jobCard',
     title: 'Job Card',
     component: JobCard,
+    container: JobCardContainer,
     initialProps: {
         job: {
             company: 'SEEK Asia',

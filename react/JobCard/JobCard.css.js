@@ -1,7 +1,4 @@
 export default {
-    '.demoHack': {
-        width: '75%'
-    },
     '.root': {
         width: '100%'
     },

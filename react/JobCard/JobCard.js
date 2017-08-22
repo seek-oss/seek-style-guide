@@ -11,26 +11,24 @@ import styles from './JobCard.css';
 
 const JobCard = ({ job }) => {
   return (
-      <PageBlock className={styles.demoHack}>
-        <Card className={styles.root}>
-          <Section>
-            <Text>{job.company}</Text>
-            <Text heading>{job.jobTitle}</Text>
+    <Card className={styles.root}>
+      <Section>
+        <Text>{job.company}</Text>
+        <Text heading>{job.jobTitle}</Text>
+      </Section>
+      { job.description && (
+          <Section className={styles.bodyDescription}>
+            <Text>{job.description}</Text>
           </Section>
-          { job.description && (
-              <Section className={styles.bodyDescription}>
-                <Text>{job.description}</Text>
-              </Section>
-          )}
-          <Section>
-            <Text className={styles.location}><HeartIcon /> {job.location}</Text>
-            <div className={styles.footer}>
-              <Text className={styles.salary}>{ job.salary }</Text>
-              <Text className={styles.postingDuration}>{job.postingDuration}</Text>
-            </div>
-          </Section>
-        </Card>
-      </PageBlock>
+      )}
+      <Section>
+        <Text className={styles.location}><HeartIcon /> {job.location}</Text>
+        <div className={styles.footer}>
+          <Text className={styles.salary}>{ job.salary }</Text>
+          <Text className={styles.postingDuration}>{job.postingDuration}</Text>
+        </div>
+      </Section>
+    </Card>
   )
 };
 
