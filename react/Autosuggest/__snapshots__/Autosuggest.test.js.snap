@@ -10,7 +10,7 @@ exports[`Autosuggest should render with label 1`] = `
         class=""
         for="Foo"
       >
-        <div
+        <span
           class="root baseline"
         >
           <span
@@ -23,69 +23,7 @@ exports[`Autosuggest should render with label 1`] = `
             </strong>
              
           </span>
-        </div>
-      </label>
-      <input
-        aria-autocomplete="list"
-        aria-expanded="false"
-        aria-haspopup="false"
-        aria-owns="react-autowhatever-1"
-        autocomplete="off"
-        class="input"
-        id="Foo"
-        role="combobox"
-        type="text"
-        value=""
-      />
-      <span
-        class="clearField"
-      >
-        <div
-          class="root"
-        >
-          <span
-            class="root"
-          >
-            mock svg
-          </span>
-        </div>
-      </span>
-      <div
-        class="root"
-      />
-    </div>
-    <div
-      class="suggestionsContainer suggestionsContainer_withLabel"
-      id="react-autowhatever-1"
-    />
-  </div>
-</div>
-`;
-
-exports[`Autosuggest should render with mobile backdrop 1`] = `
-<div>
-  <div>
-    <div
-      class="root"
-    >
-      <label
-        class="isLabelCoveredWithBackdrop LABEL_TEST_CLASS"
-        for="Foo"
-      >
-        <div
-          class="root baseline"
-        >
-          <span
-            class=""
-          >
-            <strong
-              class="root"
-            >
-              Foo
-            </strong>
-             
-          </span>
-        </div>
+        </span>
       </label>
       <input
         aria-autocomplete="list"
@@ -123,6 +61,71 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
   </div>
   <div
     class="autosuggestBackdrop"
+  />
+</div>
+`;
+
+exports[`Autosuggest should render with mobile backdrop 1`] = `
+<div>
+  <div>
+    <div
+      class="root"
+    >
+      <label
+        class="isLabelCoveredWithBackdrop LABEL_TEST_CLASS"
+        for="Foo"
+      >
+        <span
+          class="root baseline"
+        >
+          <span
+            class=""
+          >
+            <strong
+              class="root"
+            >
+              Foo
+            </strong>
+             
+          </span>
+        </span>
+      </label>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-haspopup="false"
+        aria-owns="react-autowhatever-1"
+        autocomplete="off"
+        class="input"
+        id="Foo"
+        role="combobox"
+        type="text"
+        value=""
+      />
+      <span
+        class="clearField"
+      >
+        <div
+          class="root"
+        >
+          <span
+            class="root"
+          >
+            mock svg
+          </span>
+        </div>
+      </span>
+      <div
+        class="root"
+      />
+    </div>
+    <div
+      class="suggestionsContainer suggestionsContainer_withLabel"
+      id="react-autowhatever-1"
+    />
+  </div>
+  <div
+    class="autosuggestBackdrop backdrop_isMobile"
   />
 </div>
 `;
@@ -166,6 +169,9 @@ exports[`Autosuggest should render with simple props 1`] = `
       id="react-autowhatever-1"
     />
   </div>
+  <div
+    class="autosuggestBackdrop"
+  />
 </div>
 `;
 
@@ -235,5 +241,8 @@ exports[`Autosuggest should render with suggestions 1`] = `
       </ul>
     </div>
   </div>
+  <div
+    class="autosuggestBackdrop"
+  />
 </div>
 `;

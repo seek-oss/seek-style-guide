@@ -8,6 +8,7 @@ export default {
   title: 'Footer',
   component: Footer,
   initialProps: {
+    authenticationStatus: 'authenticated',
     linkRenderer: makeDummyLinkRendererForPath(ROUTE)
   },
   options: [
@@ -24,6 +25,30 @@ export default {
           transformProps: props => ({
             ...props,
             locale: 'NZ'
+          })
+        }
+      ]
+    },
+    {
+      label: 'Authentication',
+      type: 'radio',
+      states: [
+        {
+          label: 'Authenticated',
+          transformProps: props => props
+        },
+        {
+          label: 'Unauthenticated',
+          transformProps: props => ({
+            ...props,
+            authenticationStatus: 'unauthenticated'
+          })
+        },
+        {
+          label: 'Pending',
+          transformProps: props => ({
+            ...props,
+            authenticationStatus: 'pending'
           })
         }
       ]

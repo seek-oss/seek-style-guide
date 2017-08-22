@@ -17,11 +17,13 @@ export default [
   {
     name: 'Saved jobs',
     href: '/my-activity/saved-jobs',
+    authRequired: true,
     analytics: 'toolbar:favourite'
   },
   {
     name: 'Applied jobs',
     href: '/my-activity/applied-jobs',
+    authRequired: true,
     analytics: 'toolbar:applied'
   },
   {

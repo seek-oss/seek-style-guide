@@ -1,31 +1,67 @@
 import styles from './Logo.less';
-import logoMarkup from './logo.svg';
+import LogoText from './LogoText';
+import LogoIcon from './LogoIcon';
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-export default function Logo({ svgClassName, invert, ...restProps }) {
+const viewportDimensions = type => ({
+  default: { height: 68.031, width: 170.079 },
+  compact: { height: 68.031, width: 68.031 }
+})[type];
+
+const getViewPortDimension = (type, dimension) => viewportDimensions(type)[dimension];
+
+export default function Logo({
+  svgClassName,
+  invert,
+  compact,
+  textClass,
+  iconClass,
+  ...restProps }) {
   const svgClasses = classnames(svgClassName, {
     [styles.root]: true,
     [styles.invert]: invert
   });
-  const svgWithClasses = logoMarkup
-    .replace('<svg ', `<svg class="${svgClasses}" `);
+  const type = compact && 'compact' || 'default';
+  const height = getViewPortDimension(type, 'height');
+  const width = getViewPortDimension(type, 'width');
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: svgWithClasses }} {...restProps} /> // eslint-disable-line react/no-danger
+    <div {...restProps}>
+      <svg
+        className={svgClasses}
+        id="sk-logo-pos"
+        xmlns="http://www.w3.org/2000/svg"
+        height={`${height}`}
+        viewBox={`0 0 ${width} ${height}`}
+        width={`${width}px`}
+        y="0px"
+        x="0px">
+        { !compact ?
+          <LogoText textClass={invert && styles.invertedLogoText || textClass} /> :
+          null
+        }
+        <LogoIcon iconClass={invert && styles.invertedLogoIcon || iconClass} />
+      </svg>
+    </div>
   );
 }
 
 Logo.propTypes = {
   svgClassName: PropTypes.string,
   invert: PropTypes.bool,
-  className: PropTypes.string
+  compact: PropTypes.bool,
+  className: PropTypes.string,
+  textClass: PropTypes.string,
+  iconClass: PropTypes.string
 };
 
 Logo.defaultProps = {
   svgClassName: '',
-  className: ''
+  className: '',
+  textClass: styles.logoText,
+  iconClass: styles.logoIcon
 };

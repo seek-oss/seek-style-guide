@@ -7,7 +7,8 @@ import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
 class AutosuggestContainer extends Component {
   static propTypes = {
-    component: PropTypes.func.isRequired
+    component: PropTypes.func.isRequired,
+    componentProps: PropTypes.object.isRequired
   };
 
   constructor() {
@@ -35,12 +36,13 @@ class AutosuggestContainer extends Component {
   };
 
   render() {
-    const { component: DemoComponent } = this.props;
+    const { component: DemoComponent, componentProps } = this.props;
     const { inputValue } = this.state;
 
     return (
       <div style={{ width: '300px' }}>
         <DemoComponent
+          {...componentProps}
           inputProps={{
             type: 'search',
             onChange: this.handleChange,

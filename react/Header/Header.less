@@ -1,10 +1,13 @@
 @import (reference) "~seek-style-guide/theme";
 
+@headerHeightDesktop: @grid-row-height * 9;
+@headerHeightMobile: @grid-row-height * 7;
+
 .root {
   width: 100%;
-  .smallDeviceOnly({
+  @media @mobile {
     position: relative;
-  });
+  }
 }
 
 .content {
@@ -13,10 +16,10 @@
   z-index: @z-index-header;
   display: flex;
   flex-flow: row wrap;
-  .aboveSmallDevice({
+  @media @desktop {
     background-color: @sk-white;
     justify-content: center;
-  });
+  }
 }
 
 .banner {
@@ -26,13 +29,13 @@
   width: 100%;
   padding: 0 (@grid-gutter-width / 2);
   max-width: @grid-container-width + @grid-gutter-width;
-  .smallDeviceOnly({
-    height: (@grid-row-height * 7);
-  });
-  .aboveSmallDevice({
+  @media @mobile {
+    height: @headerHeightMobile;
+  }
+  @media @desktop {
     order: 1;
-    height: (@grid-row-height * 9);
-  });
+    height: @headerHeightDesktop;
+  }
   @media print {
     justify-content: flex-start;
   }
@@ -55,13 +58,13 @@
 }
 
 .navigation {
-  .smallDeviceOnly({
+  @media @mobile {
     display: none;
-  });
-  .aboveSmallDevice({
+  }
+  @media @desktop {
     flex: 1 0 100%;
     order: 2;
-  });
+  }
 }
 
 .logo {
@@ -77,10 +80,10 @@
 .logoSvg {
   height: 39px;
   width: 105px;
-  .aboveSmallDevice({
+  @media @desktop {
     height: 51px;
     width: 129px;
-  });
+  }
 }
 
 .logoLink {
@@ -99,45 +102,45 @@
 .user {
   display: flex;
   align-items: center;
-  .aboveSmallDevice({
+  @media @desktop {
     pointer-events: none;
     opacity: 0;
-    transition: opacity .3s ease;
-  });
+    transition: opacity 0.3s ease;
+  }
 }
 
 .user_isReady {
-  .aboveSmallDevice({
+  @media @desktop {
     pointer-events: auto;
     opacity: 1;
-  });
+  }
 }
 
 .userAccountWrapper {
-  .aboveSmallDevice({
+  @media @desktop {
     .user_isUnauthenticated & {
       display: none;
     }
-  });
+  }
 }
 
 .signInRegisterWrapper {
-  .smallDeviceOnly({
+  @media @mobile {
     display: none;
-  });
-  .aboveSmallDevice({
+  }
+  @media @desktop {
     .user_isAuthenticated & {
       display: none;
     }
-  });
+  }
 }
 
 .employerSite {
   display: none;
   white-space: nowrap;
-  .aboveSmallDevice({
+  @media @desktop {
     display: block;
-  });
+  }
 }
 
 .employerLink {
@@ -162,7 +165,7 @@
   height: 14px;
   border-right: @divider-width solid @sk-mid-gray-dark;
   display: none;
-  .aboveSmallDevice({
+  @media @desktop {
     display: inline-block;
-  });
+  }
 }

@@ -2,9 +2,9 @@
 
 .root {
   margin-bottom: (@grid-row-height * 3);
-  .smallDeviceOnly({
+  @media @mobile {
     margin-bottom: (@grid-row-height * 4);
-  });
+  }
   &.noMarginBottom {
     margin-bottom: 0;
   }

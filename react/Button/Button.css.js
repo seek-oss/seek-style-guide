@@ -1,13 +1,44 @@
-import {buttonPrimary, buttonDefault, buttonSuccess} from '../../theme/palette/palette.js';
+import {
+	actionOrange,
+	actionYellow,
+	actionBlue,
+	actionGreen,
+	actionRed,
+	actionPastelBlue,
+	saWhite,
+	saGrey2
+} from '../../theme/palette/palette.js';
+
+let tenant = process.env.SKU_TENANT;
+
+let callToActionBackgroundColor = actionOrange;
+
+if(tenant === 'jobStreet') {
+	callToActionBackgroundColor = actionYellow;
+} else if(tenant === 'jobsDB') {
+	callToActionBackgroundColor = actionOrange;
+}
 
 export default {
-	'.primary': {
-		backgroundColor: buttonPrimary
+	'.callToAction': {
+		backgroundColor: callToActionBackgroundColor,
+		color:saWhite 
 	},
-	'.default': {
-		backgroundColor: buttonDefault
+	'.hyperlink': {
+		backgroundColor: actionBlue,
+		color:saWhite
 	},
-	'.success': {
-		backgroundColor: buttonSuccess
+	'.completion': {
+		backgroundColor: actionGreen,
+		color:saWhite
+	},
+	'.alert': {
+		backgroundColor: actionRed,
+		color:saWhite
+	},
+	'.highlight': {
+		backgroundColor: actionPastelBlue,
+		color:saGrey2
 	}
+
 }

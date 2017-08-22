@@ -9,8 +9,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: (@grid-row-height * 3) 0 (@grid-row-height * 2);
-
-  .aboveSmallDevice({
+  @media @desktop {
     padding: (@grid-row-height * 5) 0 (@grid-row-height * 4);
-  })
+  }
 }
