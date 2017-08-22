@@ -17,7 +17,7 @@ const MockContent = ({ text = 'Lorem ipsum' }) => (
   <div
     style={{
       background: 'blue',
-      height: 150,
+      height: (17 * 9),
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'
