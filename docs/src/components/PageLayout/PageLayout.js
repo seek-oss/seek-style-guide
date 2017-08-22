@@ -17,7 +17,7 @@ const MockContent = ({ text = 'Lorem ipsum' }) => (
   <div
     style={{
       background: 'blue',
-      height: 150,
+      height: (17 * 9),
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'
@@ -64,7 +64,7 @@ export default () => (
       <Section header>
         <Text hero>Page Layout</Text>
       </Section>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text superstandard>When creating a new page, figuring out how to get started can be quite a daunting task. To make this process as streamlined as possible, we provide a suite of composable layout components that can be combined in different ways to create our most common designs.</Text>
@@ -102,7 +102,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text heading>Sections</Text>
@@ -129,7 +129,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text superstandard>
@@ -155,7 +155,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text superstandard>
@@ -181,7 +181,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text heading>Cards</Text>
@@ -222,7 +222,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text superstandard>
@@ -262,7 +262,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text heading>Card Groups</Text>
@@ -311,7 +311,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text heading>Asided Layouts</Text>
@@ -342,7 +342,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text superstandard>
@@ -373,7 +373,7 @@ export default () => (
       }}
     />
     <PageBlock>
-      <Card style={{ maxWidth: 720 }}>
+      <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
             <Text superstandard>
