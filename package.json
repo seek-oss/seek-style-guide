@@ -70,6 +70,7 @@
     "less": "2.7.1",
     "less-loader": "2.2.3",
     "lodash": "4.17.4",
+    "postcss-js": "^1.0.0",
     "postcss-loader": "0.9.1",
     "prop-types": "^15.5.10",
     "raw-loader": "0.5.1",
