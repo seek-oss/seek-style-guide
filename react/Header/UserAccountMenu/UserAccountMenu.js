@@ -151,6 +151,51 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
+
+      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup)}>
+        {(() => {
+          switch(authenticationStatus) {
+            case UNAUTHENTICATED: return (
+              <span className={styles.item}>
+                {
+                  linkRenderer({
+                    'data-analytics': 'sign-in',
+                    href: appendReturnUrl('/sign-in', returnUrl),
+                    className: styles.itemLink,
+                    title: 'Sign in',
+                    children: 'Sign in'
+                  })
+                }
+                <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
+                {
+                  linkRenderer({
+                    'data-analytics': 'register',
+                    href: appendReturnUrl('/sign-up', returnUrl),
+                    className: styles.itemLink,
+                    title: 'Register',
+                    children: 'Register'
+                  })
+                }
+                <div className={styles.iconSpacer} />
+              </span>
+            );
+            case AUTHENTICATED: return linkRenderer({
+              'data-analytics': 'sign-out',
+              className: styles.item,
+              onClick: clearLocalStorage,
+              href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',
+              children: [
+                'Sign Out',
+                <div key="iconSpacer" className={styles.iconSpacer} />
+              ]
+            });
+            default: return (
+              <span className={styles.item}></span>
+            );
+          }
+        })()}
+      </li>
+
       <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, activeTab === 'Employer Site' && styles.activeTab)}>
         {
           linkRenderer({
@@ -165,36 +210,8 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
         }
       </li>
       {
-        authenticationStatus === UNAUTHENTICATED ? (
-          <li className={`${styles.smallDeviceOnly}`}>
-            <span className={styles.item}>
-              {
-                linkRenderer({
-                  'data-analytics': 'sign-in',
-                  href: appendReturnUrl('/sign-in', returnUrl),
-                  className: styles.itemLink,
-                  title: 'Sign in',
-                  children: 'Sign in'
-                })
-              }
-              <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
-              {
-                linkRenderer({
-                  'data-analytics': 'register',
-                  href: appendReturnUrl('/sign-up', returnUrl),
-                  className: styles.itemLink,
-                  title: 'Register',
-                  children: 'Register'
-                })
-              }
-              <div className={styles.iconSpacer} />
-            </span>
-          </li>
-        ) : null
-      }
-      {
         authenticationStatus === AUTHENTICATED ? (
-          <li>
+          <li className={`${styles.aboveSmallDevice}`}>
             {
               linkRenderer({
                 'data-analytics': 'sign-out',

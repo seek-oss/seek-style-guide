@@ -287,6 +287,13 @@ exports[`Header: should append returnUrl to signin and register links if present
                   <li
                     class="smallDeviceOnly firstItemInGroup"
                   >
+                    <span
+                      class="item"
+                    />
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
                     <a
                       class="item"
                       data-analytics="header:employer+site"
@@ -840,6 +847,20 @@ exports[`Header: should render first part of email address when username isn't p
                   >
                     <a
                       class="item"
+                      data-analytics="sign-out"
+                      href="/Login/Logout"
+                    >
+                      Sign Out
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      class="item"
                       data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
@@ -849,7 +870,9 @@ exports[`Header: should render first part of email address when username isn't p
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    class="aboveSmallDevice"
+                  >
                     <a
                       class="item"
                       data-analytics="sign-out"
@@ -1393,6 +1416,13 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                         class="iconSpacer"
                       />
                     </a>
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
+                    <span
+                      class="item"
+                    />
                   </li>
                   <li
                     class="smallDeviceOnly firstItemInGroup"
@@ -1950,6 +1980,20 @@ exports[`Header: should render when authenticated 1`] = `
                   >
                     <a
                       class="item"
+                      data-analytics="sign-out"
+                      href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                    >
+                      Sign Out
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      class="item"
                       data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
@@ -1959,7 +2003,9 @@ exports[`Header: should render when authenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    class="aboveSmallDevice"
+                  >
                     <a
                       class="item"
                       data-analytics="sign-out"
@@ -2509,6 +2555,20 @@ exports[`Header: should render when authenticated but username and email is not 
                   >
                     <a
                       class="item"
+                      data-analytics="sign-out"
+                      href="/Login/Logout"
+                    >
+                      Sign Out
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      class="item"
                       data-analytics="header:employer+site"
                       href="https://talent.seek.com.au/"
                     >
@@ -2518,7 +2578,9 @@ exports[`Header: should render when authenticated but username and email is not 
                       />
                     </a>
                   </li>
-                  <li>
+                  <li
+                    class="aboveSmallDevice"
+                  >
                     <a
                       class="item"
                       data-analytics="sign-out"
@@ -3062,6 +3124,13 @@ exports[`Header: should render when authentication is pending 1`] = `
                         class="iconSpacer"
                       />
                     </a>
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
+                    <span
+                      class="item"
+                    />
                   </li>
                   <li
                     class="smallDeviceOnly firstItemInGroup"
@@ -3615,20 +3684,6 @@ exports[`Header: should render when unauthenticated 1`] = `
                   <li
                     class="smallDeviceOnly firstItemInGroup"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
                     <span
                       class="item"
                     >
@@ -3657,6 +3712,20 @@ exports[`Header: should render when unauthenticated 1`] = `
                         class="iconSpacer"
                       />
                     </span>
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -4194,6 +4263,13 @@ exports[`Header: should render with locale of AU 1`] = `
                   <li
                     class="smallDeviceOnly firstItemInGroup"
                   >
+                    <span
+                      class="item"
+                    />
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
                     <a
                       class="item"
                       data-analytics="header:employer+site"
@@ -4727,6 +4803,13 @@ exports[`Header: should render with locale of NZ 1`] = `
                   <li
                     class="smallDeviceOnly firstItemInGroup"
                   >
+                    <span
+                      class="item"
+                    />
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
                     <a
                       class="item"
                       data-analytics="header:employer+site"
@@ -5247,6 +5330,13 @@ exports[`Header: should render with no divider 1`] = `
                         class="iconSpacer"
                       />
                     </a>
+                  </li>
+                  <li
+                    class="smallDeviceOnly firstItemInGroup"
+                  >
+                    <span
+                      class="item"
+                    />
                   </li>
                   <li
                     class="smallDeviceOnly firstItemInGroup"
