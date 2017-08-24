@@ -63,7 +63,6 @@ export default {
   container: AutosuggestContainer,
   initialProps: {
     id: 'jobTitles',
-    label: 'Job Titles',
     autosuggestProps: {
       suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer'],
       onSuggestionsFetchRequested: () => {},
