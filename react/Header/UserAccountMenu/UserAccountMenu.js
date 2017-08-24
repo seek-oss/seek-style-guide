@@ -196,7 +196,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
         })()}
       </li>
 
-      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, activeTab === 'Employer Site' && styles.activeTab)}>
+      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup)}>
         {
           linkRenderer({
             'data-analytics': 'header:employer+site',
