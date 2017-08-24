@@ -154,7 +154,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
 
       <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup)}>
         {(() => {
-          switch(authenticationStatus) {
+          switch (authenticationStatus) {
             case UNAUTHENTICATED: return (
               <span className={styles.item}>
                 {
@@ -190,7 +190,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
               ]
             });
             default: return (
-              <span className={styles.item}></span>
+              <span className={styles.item} />
             );
           }
         })()}
