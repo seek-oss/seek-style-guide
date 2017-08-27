@@ -11,6 +11,7 @@ import Rating from 'seek-style-guide/react/Rating/Rating.demo';
 import Header from 'seek-style-guide/react/Header/Header.demo';
 import Footer from 'seek-style-guide/react/Footer/Footer.demo';
 import Loader from 'seek-style-guide/react/Loader/Loader.demo';
+import JobCard from 'seek-style-guide/react/JobCard/JobCard.demo';
 import Logo from 'seek-style-guide/react/Logo/Logo.demo';
 
 export default [
@@ -27,5 +28,6 @@ export default [
   Loader,
   Logo,
   Header,
-  Footer
+  Footer,
+  JobCard
 ];

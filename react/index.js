@@ -9,6 +9,8 @@ export { default as Loader } from './Loader/Loader';
 export { default as Logo } from './Logo/Logo';
 export { default as Rating } from './Rating/Rating';
 
+export { default as JobCard } from './JobCard/JobCard';
+
 // Typography
 export { default as Critical } from './Critical/Critical';
 export { default as Paragraph } from './Paragraph/Paragraph';
