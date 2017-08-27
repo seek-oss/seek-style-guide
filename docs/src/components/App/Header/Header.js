@@ -1,10 +1,11 @@
 import styles from './Header.less';
+import brandStyle from './Header.css.js';
 
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
 import { Link } from 'react-router';
-import { PageBlock, Section, Text } from 'seek-style-guide/react';
+import { PageBlock, Card, Section, Text, ScreenReaderOnly } from 'seek-style-guide/react';
 import Logo from './Logo/Logo';
 import demoSpecs from '../../../demoSpecs';
 
@@ -29,7 +30,7 @@ export default class Header extends Component {
     const { menuOpen } = this.state;
 
     const headerClasses = classnames({
-      [styles.headerBlock]: true,
+      [brandStyle.headerBlock]: true,
       [styles.fixedHeaderBlock]: menuOpen
     });
 
@@ -38,9 +39,8 @@ export default class Header extends Component {
         <PageBlock className={headerClasses}>
           <Section className={styles.headerSection}>
             <div className={styles.sectionContent}>
-              <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
-                <Logo svgClassName={styles.logo} />
-                <div className={styles.title}>style guide</div>
+              <Link className={classnames([styles.logoLink, brandStyle.logoLink])} to="/" onClick={this.handleMenuClose}>
+                <Logo svgClassName={classnames([styles.logo, brandStyle.logo])} tenant={this.props.tenant}/>
               </Link>
 
               <div className={styles.hamburger}>
@@ -52,26 +52,44 @@ export default class Header extends Component {
                   className={styles.checkbox}
                 />
                 <label htmlFor="hamburgerCheckbox" className={styles.bars}>
-                  <div className={styles.bar1} />
-                  <div className={styles.bar2} />
-                  <div className={styles.bar3} />
+                  <div className={classnames([styles.bar1, brandStyle.bar])} />
+                  <div className={classnames([styles.bar2, brandStyle.bar])} />
+                  <div className={classnames([styles.bar3, brandStyle.bar])} />
                   <span className={styles.hamburgerText}>Show menu</span>
                 </label>
 
                 <div className={styles.menu} onClick={this.handleMenuClose}>
                   <PageBlock>
                     <Section header>
-                      <Text hero><Link className={styles.link} to="/">Home</Link></Text>
-                      <Text hero><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
-                      {
-                        demoSpecs.map(demoSpec => (
-                          <Text hero key={demoSpec.title}>
-                            <Link className={styles.link} to={demoSpec.route}>
-                              { demoSpec.title }
-                            </Link>
-                          </Text>
-                        ))
-                      }
+                      <Card transparent>
+                        <Text headline regular><Link className={styles.link} to="/">Home</Link></Text>
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text headline>Guides</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        <Text headline regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text headline>Components</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        {
+                          demoSpecs.map(demoSpec => (
+                            <Text headline regular key={demoSpec.title}>
+                              <Link className={styles.link} to={demoSpec.route}>
+                                { demoSpec.title }
+                              </Link>
+                            </Text>
+                          ))
+                        }
+                      </Card>
                     </Section>
                   </PageBlock>
                 </div>

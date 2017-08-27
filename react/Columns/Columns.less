@@ -1,13 +1,13 @@
 @import (reference) "~seek-style-guide/theme";
 
 .columns {
-  .aboveSmallDevice({
+  @media @desktop {
     display: flex;
-  })
+  }
 }
 
 .column {
-  .aboveSmallDevice({
+  @media @desktop {
     flex-basis: 0;
     flex-grow: 1;
     padding: 0 (@grid-gutter-width / 2);
@@ -20,5 +20,5 @@
     &:last-child {
       padding-right: 0 !important;
     }
-  })
+  }
 }

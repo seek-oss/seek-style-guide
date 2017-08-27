@@ -22,10 +22,10 @@ export default class Checkbox extends Component {
 
   static propTypes = {
     id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     className: PropTypes.string,
     inputProps: PropTypes.shape({
-      onChange: PropTypes.func.isRequired,
+      onChange: PropTypes.func,
       checked: PropTypes.bool.isRequired
     }),
     type: PropTypes.oneOf([STANDARD, BUTTON])

@@ -9,7 +9,8 @@ import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 class DropdownContainer extends Component {
   static propTypes = {
-    component: PropTypes.func.isRequired
+    component: PropTypes.func.isRequired,
+    componentProps: PropTypes.object.isRequired
   };
 
   constructor() {
@@ -27,11 +28,12 @@ class DropdownContainer extends Component {
   };
 
   render() {
-    const { component: DemoComponent } = this.props;
+    const { component: DemoComponent, componentProps } = this.props;
     const { value } = this.state;
 
     return (
       <DemoComponent
+        {...componentProps}
         inputProps={{
           value,
           onChange: this.handleChange
