@@ -20,7 +20,7 @@ exports[`Button: color variants: should render primary button 1`] = `
 
 exports[`Button: color variants: should render success button 1`] = `
 <button
-  className="root undefined"
+  className="root"
   disabled={false}
 >
   SEEK
@@ -89,7 +89,7 @@ exports[`Button: should render with array of nodes 1`] = `
 
 exports[`Button: should render with className 1`] = `
 <button
-  className="root foo undefined"
+  className="root foo"
   disabled={false}
 >
   SEEK
