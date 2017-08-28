@@ -3,7 +3,7 @@
     "<rootDir>[/\\\\](dist|node_modules)[/\\\\]"
   ],
   "moduleNameMapper": {
-    "\\.(css|less)$": "identity-obj-proxy"
+    "\\.(css|less|css.js)$": "identity-obj-proxy"
   },
   "transform": {
     "^.+\\.js$": "<rootDir>/test/babel.transform.js",

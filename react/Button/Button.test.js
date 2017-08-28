@@ -4,18 +4,28 @@ import Button from './Button';
 
 describe('Button:', () => {
   describe('color variants:', () => {
-    it('should render primary button', () => {
-      const wrapper = shallow(<Button color="primary">SEEK</Button>);
+    it('should render callToAction button', () => {
+      const wrapper = shallow(<Button color="callToAction">SEEK</Button>);
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('should render default button', () => {
-      const wrapper = shallow(<Button color="default">SEEK</Button>);
+    it('should render hyperlink color button', () => {
+      const wrapper = shallow(<Button color="hyperlink">SEEK</Button>);
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('should render success button', () => {
-      const wrapper = shallow(<Button color="success">SEEK</Button>);
+    it('should render completion button', () => {
+      const wrapper = shallow(<Button color="completion">SEEK</Button>);
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render alert button', () => {
+      const wrapper = shallow(<Button color="alert">SEEK</Button>);
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render highlight button', () => {
+      const wrapper = shallow(<Button color="highlight">SEEK</Button>);
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -26,22 +36,22 @@ describe('Button:', () => {
   });
 
   it('should render with node', () => {
-    const wrapper = shallow(<Button color="primary"><h5>SEEK</h5></Button>);
+    const wrapper = shallow(<Button color="callToAction"><h5>SEEK</h5></Button>);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with array of nodes', () => {
-    const wrapper = shallow(<Button color="primary"><span>SEEK</span><span>AU</span></Button>);
+    const wrapper = shallow(<Button color="callToAction"><span>SEEK</span><span>AU</span></Button>);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render as an anchor with href="https://www.seek.com.au"', () => {
-    const wrapper = shallow(<Button color="default" component="a" href="https://www.seek.com.au">SEEK</Button>);
+    const wrapper = shallow(<Button color="hyperlink" component="a" href="https://www.seek.com.au">SEEK</Button>);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with className', () => {
-    const wrapper = shallow(<Button color="success" className="foo">SEEK</Button>);
+    const wrapper = shallow(<Button color="callToAction" className="foo">SEEK</Button>);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -51,13 +61,13 @@ describe('Button:', () => {
   });
 
   it('should render as loading', () => {
-    const wrapper = shallow(<Button color="primary" loading>SEEK</Button>);
+    const wrapper = shallow(<Button color="callToAction" loading>SEEK</Button>);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render custom component based on it’s reference', () => {
     const CustomComponent = props => <a {...props} someProp="kraken" />;
-    const wrapper = shallow(<Button color="default" component={CustomComponent}>SEEK</Button>);
+    const wrapper = shallow(<Button color="callToAction" component={CustomComponent}>SEEK</Button>);
     expect(wrapper).toMatchSnapshot();
   });
 });
