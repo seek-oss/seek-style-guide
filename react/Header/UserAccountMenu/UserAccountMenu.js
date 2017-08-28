@@ -152,7 +152,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
         }
       </li>
 
-      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup)}>
+      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, styles.mobileSigninSignout)}>
         {(() => {
           switch (authenticationStatus) {
             case UNAUTHENTICATED: return (
@@ -190,7 +190,13 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
               ]
             });
             default: return (
-              <span className={styles.item} />
+              <span className={styles.item}>
+                <div className={styles.authLoader}>
+                  <div className={styles.ball} />
+                  <div className={styles.ball} />
+                  <div className={styles.ball} />
+                </div>
+              </span>
             );
           }
         })()}
