@@ -9,6 +9,8 @@ import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import HeartIcon from '../../HeartIcon/HeartIcon';
 import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
+import Hidden from '../../Hidden/Hidden';
+import Loader from '../../Loader/Loader';
 import employerLinkForLocale from '../employerLinkForLocale';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import appendReturnUrl from '../../private/appendReturnUrl';
@@ -23,23 +25,26 @@ const clearLocalStorage = () => {
 export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab }) {
   return (
     <ul className={styles.root}>
-      <li className={classnames(styles.smallDeviceOnly, activeTab === 'Job Search' && styles.activeTab)}>
-        {
-          linkRenderer({
-            'data-analytics': 'header:jobs',
-            className: styles.item,
-            href: '/',
-            children: [
-              <span key="label">Job Search</span>,
-              <SearchIcon
-                key="icon"
-                className={classnames(styles.icon, styles.jobSearch)}
-                svgClassName={styles.iconSvg}
-              />
-            ]
-          })
-        }
-      </li>
+      <Hidden desktop>
+        <li className={classnames(activeTab === 'Job Search' && styles.activeTab)}>
+          {
+            linkRenderer({
+              'data-analytics': 'header:jobs',
+              className: styles.item,
+              href: '/',
+              children: [
+                <span key="label">Job Search</span>,
+                <SearchIcon
+                  key="icon"
+                  className={classnames(styles.icon, styles.jobSearch)}
+                  svgClassName={styles.iconSvg}
+                />
+              ]
+            })
+          }
+        </li>
+      </Hidden>
+
       <li className={classnames(activeTab === 'Profile' && styles.activeTab)}>
         {
           linkRenderer({
@@ -57,23 +62,27 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Saved Searches' && styles.activeTab)}>
-        {
-          linkRenderer({
-            'data-analytics': 'header:saved+searches',
-            className: `${styles.item} ${styles.subItem}`,
-            href: '/myactivity#favourite',
-            children: [
-              <span key="label">Saved Searches</span>,
-              <HeartIcon
-                key="icon"
-                className={classnames(styles.icon, styles.saveSearches)}
-                svgClassName={styles.iconSvg}
-              />
-            ]
-          })
-        }
-      </li>
+
+      <Hidden mobile>
+        <li className={classnames(activeTab === 'Saved Searches' && styles.activeTab)}>
+          {
+            linkRenderer({
+              'data-analytics': 'header:saved+searches',
+              className: `${styles.item} ${styles.subItem}`,
+              href: '/myactivity#favourite',
+              children: [
+                <span key="label">Saved Searches</span>,
+                <HeartIcon
+                  key="icon"
+                  className={classnames(styles.icon, styles.saveSearches)}
+                  svgClassName={styles.iconSvg}
+                />
+              ]
+            })
+          }
+        </li>
+      </Hidden>
+
       <li className={classnames(activeTab === 'Saved & Applied Jobs' && styles.activeTab)}>
         {
           linkRenderer({
@@ -81,7 +90,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             className: `${styles.item} ${styles.subItem}`,
             href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
             children: [
-              <span key="label">Saved <span className={styles.smallDeviceOnly}>& Applied </span>Jobs</span>,
+              <span key="label">Saved <Hidden desktop>& Applied </Hidden>Jobs</span>,
               <StarIcon
                 key="icon"
                 className={classnames(styles.icon, styles.saveJobs)}
@@ -91,135 +100,105 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Applied Jobs' && styles.activeTab)}>
-        {
-          linkRenderer({
-            'data-analytics': 'header:applied+jobs',
-            className: `${styles.item} ${styles.subItem}`,
-            href: urlForAuthStatus(authenticationStatus, '/my-activity/applied-jobs'),
-            children: [
-              'Applied Jobs',
-              <div key="iconSpacer" className={styles.iconSpacer} />
-            ]
-          })
-        }
-      </li>
-      <li className={classnames(styles.smallDeviceOnly, activeTab === 'Recommended Jobs' && styles.activeTab)}>
-        {
-          linkRenderer({
-            'data-analytics': 'header:recommended+jobs',
-            className: `${styles.item} ${styles.subItem}`,
-            href: '/recommended',
-            children: [
-              <span key="label">Recommended Jobs</span>,
-              <ThumbsUpIcon
-                key="icon"
-                className={classnames(styles.icon, styles.recommendedJobs)}
-                svgClassName={styles.iconSvg}
-              />
-            ]
-          })
-        }
-      </li>
-      {
-        locale === 'NZ' ? null : (
-          <li className={classnames(styles.smallDeviceOnly, activeTab === 'Company Reviews' && styles.activeTab)}>
-            {
-              linkRenderer({
-                'data-analytics': 'header:companies',
-                className: `${styles.item} ${styles.subItem}`,
-                href: '/companies/',
-                children: [
-                  'Company Reviews',
-                  <div key="iconSpacer" className={styles.iconSpacer} />
-                ]
-              })
-            }
-          </li>
-        )
-      }
-      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Settings' && styles.activeTab)}>
-        {
-          linkRenderer({
-            'data-analytics': 'header:settings',
-            className: styles.item,
-            href: '/settings/',
-            children: [
-              'Settings',
-              <div key="iconSpacer" className={styles.iconSpacer} />
-            ]
-          })
-        }
-      </li>
 
-      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, styles.mobileSigninSignout)}>
-        {(() => {
-          switch (authenticationStatus) {
-            case UNAUTHENTICATED: return (
-              <span className={styles.item}>
-                {
-                  linkRenderer({
-                    'data-analytics': 'sign-in',
-                    href: appendReturnUrl('/sign-in', returnUrl),
-                    className: styles.itemLink,
-                    title: 'Sign in',
-                    children: 'Sign in'
-                  })
-                }
-                <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
-                {
-                  linkRenderer({
-                    'data-analytics': 'register',
-                    href: appendReturnUrl('/sign-up', returnUrl),
-                    className: styles.itemLink,
-                    title: 'Register',
-                    children: 'Register'
-                  })
-                }
-                <div className={styles.iconSpacer} />
-              </span>
-            );
-            case AUTHENTICATED: return linkRenderer({
-              'data-analytics': 'sign-out',
-              className: styles.item,
-              onClick: clearLocalStorage,
-              href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',
+      <Hidden mobile>
+        <li className={classnames(activeTab === 'Applied Jobs' && styles.activeTab)}>
+          {
+            linkRenderer({
+              'data-analytics': 'header:applied+jobs',
+              className: `${styles.item} ${styles.subItem}`,
+              href: urlForAuthStatus(authenticationStatus, '/my-activity/applied-jobs'),
               children: [
-                'Sign Out',
+                'Applied Jobs',
                 <div key="iconSpacer" className={styles.iconSpacer} />
               ]
-            });
-            default: return (
-              <span className={styles.item}>
-                <div className={styles.authLoader}>
-                  <div className={styles.ball} />
-                  <div className={styles.ball} />
-                  <div className={styles.ball} />
-                </div>
-              </span>
-            );
+            })
           }
-        })()}
-      </li>
+        </li>
+      </Hidden>
 
-      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup)}>
+      <Hidden desktop>
+        <li className={classnames(activeTab === 'Recommended Jobs' && styles.activeTab)}>
+          {
+            linkRenderer({
+              'data-analytics': 'header:recommended+jobs',
+              className: `${styles.item} ${styles.subItem}`,
+              href: '/recommended',
+              children: [
+                <span key="label">Recommended Jobs</span>,
+                <ThumbsUpIcon
+                  key="icon"
+                  className={classnames(styles.icon, styles.recommendedJobs)}
+                  svgClassName={styles.iconSvg}
+                />
+              ]
+            })
+          }
+        </li>
         {
-          linkRenderer({
-            'data-analytics': 'header:employer+site',
-            className: styles.item,
-            href: employerLinkForLocale(locale),
-            children: [
-              'Employer Site',
-              <div key="iconSpacer" className={styles.iconSpacer} />
-            ]
-          })
+          locale === 'NZ' ? null : (
+            <li className={classnames(activeTab === 'Company Reviews' && styles.activeTab)}>
+              {
+                linkRenderer({
+                  'data-analytics': 'header:companies',
+                  className: `${styles.item} ${styles.subItem}`,
+                  href: '/companies/',
+                  children: [
+                    'Company Reviews',
+                    <div key="iconSpacer" className={styles.iconSpacer} />
+                  ]
+                })
+              }
+            </li>
+          )
         }
-      </li>
-      {
-        authenticationStatus === AUTHENTICATED ? (
-          <li className={`${styles.aboveSmallDevice}`}>
-            {
-              linkRenderer({
+      </Hidden>
+
+      <Hidden mobile>
+        <li className={classnames(activeTab === 'Settings' && styles.activeTab)}>
+          {
+            linkRenderer({
+              'data-analytics': 'header:settings',
+              className: styles.item,
+              href: '/settings/',
+              children: [
+                'Settings',
+                <div key="iconSpacer" className={styles.iconSpacer} />
+              ]
+            })
+          }
+        </li>
+      </Hidden>
+
+      <Hidden desktop>
+        <li className={classnames(styles.firstItemInGroup, styles.mobileSigninSignout)}>
+          {(() => {
+            switch (authenticationStatus) {
+              case UNAUTHENTICATED: return (
+                <span className={styles.item}>
+                  {
+                    linkRenderer({
+                      'data-analytics': 'sign-in',
+                      href: appendReturnUrl('/sign-in', returnUrl),
+                      className: styles.itemLink,
+                      title: 'Sign in',
+                      children: 'Sign in'
+                    })
+                  }
+                  <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
+                  {
+                    linkRenderer({
+                      'data-analytics': 'register',
+                      href: appendReturnUrl('/sign-up', returnUrl),
+                      className: styles.itemLink,
+                      title: 'Register',
+                      children: 'Register'
+                    })
+                  }
+                  <div className={styles.iconSpacer} />
+                </span>
+              );
+              case AUTHENTICATED: return linkRenderer({
                 'data-analytics': 'sign-out',
                 className: styles.item,
                 onClick: clearLocalStorage,
@@ -228,11 +207,51 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                   'Sign Out',
                   <div key="iconSpacer" className={styles.iconSpacer} />
                 ]
-              })
+              });
+              default: return (
+                <span className={classnames(styles.item, styles.pendingAuth)}>
+                  <Loader inline />
+                  <div key="iconSpacer" className={styles.iconSpacer} />
+                </span>
+              );
             }
-          </li>
-        ) : null
-      }
+          })()}
+        </li>
+        <li className={styles.firstItemInGroup}>
+          {
+            linkRenderer({
+              'data-analytics': 'header:employer+site',
+              className: styles.item,
+              href: employerLinkForLocale(locale),
+              children: [
+                'Employer Site',
+                <div key="iconSpacer" className={styles.iconSpacer} />
+              ]
+            })
+          }
+        </li>
+      </Hidden>
+
+      <Hidden mobile>
+        {
+          authenticationStatus === AUTHENTICATED ? (
+            <li>
+              {
+                linkRenderer({
+                  'data-analytics': 'sign-out',
+                  className: styles.item,
+                  onClick: clearLocalStorage,
+                  href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',
+                  children: [
+                    'Sign Out',
+                    <div key="iconSpacer" className={styles.iconSpacer} />
+                  ]
+                })
+              }
+            </li>
+          ) : null
+        }
+      </Hidden>
     </ul>
   );
 }

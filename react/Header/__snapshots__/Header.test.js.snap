@@ -146,24 +146,28 @@ exports[`Header: should append returnUrl to signin and register links if present
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -182,24 +186,28 @@ exports[`Header: should append returnUrl to signin and register links if present
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -211,7 +219,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -224,101 +232,123 @@ exports[`Header: should append returnUrl to signin and register links if present
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                      >
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Recommended Jobs
-                      </span>
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  >
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
+                  >
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
+                    >
                       <span
-                        class="root icon recommendedJobs"
+                        class="item pendingAuth"
                       >
-                        mock svg
+                        <div
+                          class="root inline"
+                        >
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                        </div>
+                        <div
+                          class="iconSpacer"
+                        />
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    </li>
+                    <li
+                      class="firstItemInGroup"
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
-                    >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
-                  >
-                    <span
-                      class="item"
-                    >
-                      <div
-                        class="authLoader"
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
                       >
+                        Employer Site
                         <div
-                          class="ball"
+                          class="iconSpacer"
                         />
-                        <div
-                          class="ball"
-                        />
-                        <div
-                          class="ball"
-                        />
-                      </div>
-                    </span>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  />
                 </ul>
               </div>
             </nav>
@@ -718,24 +748,28 @@ exports[`Header: should render first part of email address when username isn't p
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -754,24 +788,28 @@ exports[`Header: should render first part of email address when username isn't p
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -783,7 +821,7 @@ exports[`Header: should render first part of email address when username isn't p
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -796,108 +834,126 @@ exports[`Header: should render first part of email address when username isn't p
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/my-activity/applied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
-                    >
-                      <span>
-                        Recommended Jobs
-                      </span>
-                      <span
-                        class="root icon recommendedJobs"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/my-activity/applied-jobs"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    <li
+                      class=""
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
+                    <li
+                      class=""
                     >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="sign-out"
-                      href="/Login/Logout"
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
                     >
-                      Sign Out
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
+                      <a
+                        class="item"
+                        data-analytics="sign-out"
+                        href="/Login/Logout"
+                      >
+                        Sign Out
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                    <li
+                      class="firstItemInGroup"
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer Site
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="sign-out"
-                      href="/Login/Logout"
-                    >
-                      Sign Out
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                    <li>
+                      <a
+                        class="item"
+                        data-analytics="sign-out"
+                        href="/Login/Logout"
+                      >
+                        Sign Out
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
                 </ul>
               </div>
             </nav>
@@ -1293,24 +1349,28 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class="activeTab"
                   >
@@ -1329,24 +1389,28 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -1358,7 +1422,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -1371,101 +1435,123 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                      >
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Recommended Jobs
-                      </span>
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  >
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
+                  >
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
+                    >
                       <span
-                        class="root icon recommendedJobs"
+                        class="item pendingAuth"
                       >
-                        mock svg
+                        <div
+                          class="root inline"
+                        >
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                        </div>
+                        <div
+                          class="iconSpacer"
+                        />
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    </li>
+                    <li
+                      class="firstItemInGroup"
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
-                    >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
-                  >
-                    <span
-                      class="item"
-                    >
-                      <div
-                        class="authLoader"
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
                       >
+                        Employer Site
                         <div
-                          class="ball"
+                          class="iconSpacer"
                         />
-                        <div
-                          class="ball"
-                        />
-                        <div
-                          class="ball"
-                        />
-                      </div>
-                    </span>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  />
                 </ul>
               </div>
             </nav>
@@ -1865,24 +1951,28 @@ exports[`Header: should render when authenticated 1`] = `
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -1901,24 +1991,28 @@ exports[`Header: should render when authenticated 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -1930,7 +2024,7 @@ exports[`Header: should render when authenticated 1`] = `
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -1943,108 +2037,126 @@ exports[`Header: should render when authenticated 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/my-activity/applied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
-                    >
-                      <span>
-                        Recommended Jobs
-                      </span>
-                      <span
-                        class="root icon recommendedJobs"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/my-activity/applied-jobs"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    <li
+                      class=""
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
+                    <li
+                      class=""
                     >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="sign-out"
-                      href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
                     >
-                      Sign Out
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
+                      <a
+                        class="item"
+                        data-analytics="sign-out"
+                        href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                      >
+                        Sign Out
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                    <li
+                      class="firstItemInGroup"
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer Site
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="sign-out"
-                      href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
-                    >
-                      Sign Out
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                    <li>
+                      <a
+                        class="item"
+                        data-analytics="sign-out"
+                        href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                      >
+                        Sign Out
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
                 </ul>
               </div>
             </nav>
@@ -2440,24 +2552,28 @@ exports[`Header: should render when authenticated but username and email is not 
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -2476,24 +2592,28 @@ exports[`Header: should render when authenticated but username and email is not 
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -2505,7 +2625,7 @@ exports[`Header: should render when authenticated but username and email is not 
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -2518,108 +2638,126 @@ exports[`Header: should render when authenticated but username and email is not 
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/my-activity/applied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
-                    >
-                      <span>
-                        Recommended Jobs
-                      </span>
-                      <span
-                        class="root icon recommendedJobs"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/my-activity/applied-jobs"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    <li
+                      class=""
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
+                    <li
+                      class=""
                     >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="sign-out"
-                      href="/Login/Logout"
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
                     >
-                      Sign Out
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
+                      <a
+                        class="item"
+                        data-analytics="sign-out"
+                        href="/Login/Logout"
+                      >
+                        Sign Out
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                    <li
+                      class="firstItemInGroup"
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer Site
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="sign-out"
-                      href="/Login/Logout"
-                    >
-                      Sign Out
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                    <li>
+                      <a
+                        class="item"
+                        data-analytics="sign-out"
+                        href="/Login/Logout"
+                      >
+                        Sign Out
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
                 </ul>
               </div>
             </nav>
@@ -3015,24 +3153,28 @@ exports[`Header: should render when authentication is pending 1`] = `
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -3051,24 +3193,28 @@ exports[`Header: should render when authentication is pending 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -3080,7 +3226,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -3093,101 +3239,123 @@ exports[`Header: should render when authentication is pending 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                      >
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Recommended Jobs
-                      </span>
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  >
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
+                  >
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
+                    >
                       <span
-                        class="root icon recommendedJobs"
+                        class="item pendingAuth"
                       >
-                        mock svg
+                        <div
+                          class="root inline"
+                        >
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                        </div>
+                        <div
+                          class="iconSpacer"
+                        />
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    </li>
+                    <li
+                      class="firstItemInGroup"
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
-                    >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
-                  >
-                    <span
-                      class="item"
-                    >
-                      <div
-                        class="authLoader"
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
                       >
+                        Employer Site
                         <div
-                          class="ball"
+                          class="iconSpacer"
                         />
-                        <div
-                          class="ball"
-                        />
-                        <div
-                          class="ball"
-                        />
-                      </div>
-                    </span>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  />
                 </ul>
               </div>
             </nav>
@@ -3585,24 +3753,28 @@ exports[`Header: should render when unauthenticated 1`] = `
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -3621,24 +3793,28 @@ exports[`Header: should render when unauthenticated 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -3650,7 +3826,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -3663,112 +3839,131 @@ exports[`Header: should render when unauthenticated 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
-                    >
-                      <span>
-                        Recommended Jobs
-                      </span>
-                      <span
-                        class="root icon recommendedJobs"
-                      >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
-                    >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
-                    >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
-                  >
-                    <span
-                      class="item"
+                    <li
+                      class=""
                     >
                       <a
-                        class="itemLink"
-                        data-analytics="sign-in"
-                        href="/sign-in"
-                        title="Sign in"
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                       >
-                        Sign in
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
                       </a>
-                      <span
-                        class="secondaryItemText"
-                      >
-                         or 
-                      </span>
-                      <a
-                        class="itemLink"
-                        data-analytics="register"
-                        href="/sign-up"
-                        title="Register"
-                      >
-                        Register
-                      </a>
-                      <div
-                        class="iconSpacer"
-                      />
-                    </span>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
+                    <li
+                      class=""
                     >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  >
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
+                  >
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
+                    >
+                      <span
+                        class="item"
+                      >
+                        <a
+                          class="itemLink"
+                          data-analytics="sign-in"
+                          href="/sign-in"
+                          title="Sign in"
+                        >
+                          Sign in
+                        </a>
+                        <span
+                          class="secondaryItemText"
+                        >
+                           or 
+                        </span>
+                        <a
+                          class="itemLink"
+                          data-analytics="register"
+                          href="/sign-up"
+                          title="Register"
+                        >
+                          Register
+                        </a>
+                        <div
+                          class="iconSpacer"
+                        />
+                      </span>
+                    </li>
+                    <li
+                      class="firstItemInGroup"
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer Site
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  />
                 </ul>
               </div>
             </nav>
@@ -4164,24 +4359,28 @@ exports[`Header: should render with locale of AU 1`] = `
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -4200,24 +4399,28 @@ exports[`Header: should render with locale of AU 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -4229,7 +4432,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -4242,101 +4445,123 @@ exports[`Header: should render with locale of AU 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                      >
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Recommended Jobs
-                      </span>
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  >
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
+                  >
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
+                    >
                       <span
-                        class="root icon recommendedJobs"
+                        class="item pendingAuth"
                       >
-                        mock svg
+                        <div
+                          class="root inline"
+                        >
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                        </div>
+                        <div
+                          class="iconSpacer"
+                        />
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    </li>
+                    <li
+                      class="firstItemInGroup"
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
-                    >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
-                  >
-                    <span
-                      class="item"
-                    >
-                      <div
-                        class="authLoader"
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
                       >
+                        Employer Site
                         <div
-                          class="ball"
+                          class="iconSpacer"
                         />
-                        <div
-                          class="ball"
-                        />
-                        <div
-                          class="ball"
-                        />
-                      </div>
-                    </span>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  />
                 </ul>
               </div>
             </nav>
@@ -4732,24 +4957,28 @@ exports[`Header: should render with locale of NZ 1`] = `
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -4768,24 +4997,28 @@ exports[`Header: should render with locale of NZ 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -4797,7 +5030,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -4810,87 +5043,109 @@ exports[`Header: should render with locale of NZ 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                      >
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Recommended Jobs
-                      </span>
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  >
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
+                  >
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
+                    >
                       <span
-                        class="root icon recommendedJobs"
+                        class="item pendingAuth"
                       >
-                        mock svg
+                        <div
+                          class="root inline"
+                        >
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                        </div>
+                        <div
+                          class="iconSpacer"
+                        />
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
+                    </li>
+                    <li
+                      class="firstItemInGroup"
                     >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
-                  >
-                    <span
-                      class="item"
-                    >
-                      <div
-                        class="authLoader"
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.co.nz/"
                       >
+                        Employer Site
                         <div
-                          class="ball"
+                          class="iconSpacer"
                         />
-                        <div
-                          class="ball"
-                        />
-                        <div
-                          class="ball"
-                        />
-                      </div>
-                    </span>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.co.nz/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  />
                 </ul>
               </div>
             </nav>
@@ -5263,24 +5518,28 @@ exports[`Header: should render with no divider 1`] = `
                 <ul
                   class="root"
                 >
-                  <li
-                    class="smallDeviceOnly"
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item"
-                      data-analytics="header:jobs"
-                      href="/"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Job Search
-                      </span>
-                      <span
-                        class="root icon jobSearch"
+                      <a
+                        class="item"
+                        data-analytics="header:jobs"
+                        href="/"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Job Search
+                        </span>
+                        <span
+                          class="root icon jobSearch"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -5299,24 +5558,28 @@ exports[`Header: should render with no divider 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Saved Searches
-                      </span>
-                      <span
-                        class="root icon saveSearches"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:saved+searches"
+                        href="/myactivity#favourite"
                       >
-                        mock svg
-                      </span>
-                    </a>
-                  </li>
+                        <span>
+                          Saved Searches
+                        </span>
+                        <span
+                          class="root icon saveSearches"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                  </span>
                   <li
                     class=""
                   >
@@ -5328,7 +5591,7 @@ exports[`Header: should render with no divider 1`] = `
                       <span>
                         Saved 
                         <span
-                          class="smallDeviceOnly"
+                          class="desktop"
                         >
                           & Applied 
                         </span>
@@ -5341,101 +5604,123 @@ exports[`Header: should render with no divider 1`] = `
                       </span>
                     </a>
                   </li>
-                  <li
-                    class="aboveSmallDevice"
+                  <span
+                    class="mobile"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    <li
+                      class=""
                     >
-                      Applied Jobs
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
+                      <a
+                        class="item subItem"
+                        data-analytics="header:applied+jobs"
+                        href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                      >
+                        Applied Jobs
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
                   >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                    <li
+                      class=""
                     >
-                      <span>
-                        Recommended Jobs
-                      </span>
+                      <a
+                        class="item subItem"
+                        data-analytics="header:recommended+jobs"
+                        href="/recommended"
+                      >
+                        <span>
+                          Recommended Jobs
+                        </span>
+                        <span
+                          class="root icon recommendedJobs"
+                        >
+                          mock svg
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item subItem"
+                        data-analytics="header:companies"
+                        href="/companies/"
+                      >
+                        Company Reviews
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  >
+                    <li
+                      class=""
+                    >
+                      <a
+                        class="item"
+                        data-analytics="header:settings"
+                        href="/settings/"
+                      >
+                        Settings
+                        <div
+                          class="iconSpacer"
+                        />
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="desktop"
+                  >
+                    <li
+                      class="firstItemInGroup mobileSigninSignout"
+                    >
                       <span
-                        class="root icon recommendedJobs"
+                        class="item pendingAuth"
                       >
-                        mock svg
+                        <div
+                          class="root inline"
+                        >
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                          <div
+                            class="ball"
+                          />
+                        </div>
+                        <div
+                          class="iconSpacer"
+                        />
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly"
-                  >
-                    <a
-                      class="item subItem"
-                      data-analytics="header:companies"
-                      href="/companies/"
+                    </li>
+                    <li
+                      class="firstItemInGroup"
                     >
-                      Company Reviews
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="aboveSmallDevice"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:settings"
-                      href="/settings/"
-                    >
-                      Settings
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup mobileSigninSignout"
-                  >
-                    <span
-                      class="item"
-                    >
-                      <div
-                        class="authLoader"
+                      <a
+                        class="item"
+                        data-analytics="header:employer+site"
+                        href="https://talent.seek.com.au/"
                       >
+                        Employer Site
                         <div
-                          class="ball"
+                          class="iconSpacer"
                         />
-                        <div
-                          class="ball"
-                        />
-                        <div
-                          class="ball"
-                        />
-                      </div>
-                    </span>
-                  </li>
-                  <li
-                    class="smallDeviceOnly firstItemInGroup"
-                  >
-                    <a
-                      class="item"
-                      data-analytics="header:employer+site"
-                      href="https://talent.seek.com.au/"
-                    >
-                      Employer Site
-                      <div
-                        class="iconSpacer"
-                      />
-                    </a>
-                  </li>
+                      </a>
+                    </li>
+                  </span>
+                  <span
+                    class="mobile"
+                  />
                 </ul>
               </div>
             </nav>

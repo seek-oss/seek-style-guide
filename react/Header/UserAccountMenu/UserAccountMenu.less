@@ -108,18 +108,6 @@
   // End bold icon hacks
 }
 
-.smallDeviceOnly {
-  @media @desktop {
-    display: none;
-  }
-}
-
-.aboveSmallDevice {
-  @media @mobile {
-    display: none;
-  }
-}
-
 .firstItemInGroup {
   @media @mobile {
     padding-top: @grid-row-height * 3;
@@ -139,10 +127,9 @@
 .mobileSigninSignout {
   margin-top: @grid-row-height;
   height: @grid-row-height * 9;
-
 }
 
-.authLoader {
-  .loader(4px, 3px, -4px (@grid-gutter-width * 1.5) 0 0);
-  opacity: 0.5;
+.pendingAuth {
+  opacity: .5;
+  margin-top: -3px;
 }
