@@ -6,21 +6,18 @@ import classNames from 'classnames';
 import styles from './Hidden.less';
 
 const Hidden = ({ children, component, className, print, screen, mobile, desktop, ...restprops }) => {
-  const Component = component ? component : 'span';
+  const props = {
+    ...restprops,
+    className: classNames({
+      [className]: className,
+      [styles.desktop]: desktop,
+      [styles.mobile]: mobile,
+      [styles.print]: print,
+      [styles.screen]: screen
+    })
+  };
 
-  return (
-    <Component
-      {...restprops}
-      className={classNames({
-        [className]: className,
-        [styles.desktop]: desktop,
-        [styles.mobile]: mobile,
-        [styles.print]: print,
-        [styles.screen]: screen
-      })}>
-      {children}
-    </Component>
-  );
+  return React.createElement(component, props, children);
 };
 
 Hidden.propTypes = {
