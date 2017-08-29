@@ -5,7 +5,7 @@ import Hidden from './Hidden';
 
 describe('components/grid/hidden', () => {
   it('should render without children', () => {
-    const wrapper = shallow(<Hidden/>);
+    const wrapper = shallow(<Hidden />);
     expect(wrapper).toMatchSnapshot();
   });
 
