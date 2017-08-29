@@ -24,7 +24,7 @@ const Hidden = ({ children, component, className, print, screen, mobile, desktop
 };
 
 Hidden.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   component: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.string

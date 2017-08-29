@@ -4,6 +4,11 @@ import { shallow } from 'enzyme';
 import Hidden from './Hidden';
 
 describe('components/grid/hidden', () => {
+  it('should render without children', () => {
+    const wrapper = shallow(<Hidden/>);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render with children', () => {
     const wrapper = shallow(<Hidden>Text</Hidden>);
     expect(wrapper).toMatchSnapshot();

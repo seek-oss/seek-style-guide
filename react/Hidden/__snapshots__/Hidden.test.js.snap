@@ -64,3 +64,9 @@ exports[`components/grid/hidden should render with screen 1`] = `
   Text
 </span>
 `;
+
+exports[`components/grid/hidden should render without children 1`] = `
+<span
+  className=""
+/>
+`;
