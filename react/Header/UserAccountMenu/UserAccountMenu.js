@@ -171,7 +171,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
       </Hidden>
 
       <Hidden desktop>
-        <li className={classnames(styles.firstItemInGroup, styles.mobileSigninSignout)}>
+        <li className={styles.firstItemInGroup}>
           {(() => {
             switch (authenticationStatus) {
               case UNAUTHENTICATED: return (

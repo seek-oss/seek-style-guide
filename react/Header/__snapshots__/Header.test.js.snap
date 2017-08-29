@@ -308,7 +308,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <span
                         class="item pendingAuth"
@@ -910,7 +910,7 @@ exports[`Header: should render first part of email address when username isn't p
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <a
                         class="item"
@@ -1511,7 +1511,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <span
                         class="item pendingAuth"
@@ -2113,7 +2113,7 @@ exports[`Header: should render when authenticated 1`] = `
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <a
                         class="item"
@@ -2714,7 +2714,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <a
                         class="item"
@@ -3315,7 +3315,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <span
                         class="item pendingAuth"
@@ -3915,7 +3915,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <span
                         class="item"
@@ -4521,7 +4521,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <span
                         class="item pendingAuth"
@@ -5105,7 +5105,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <span
                         class="item pendingAuth"
@@ -5680,7 +5680,7 @@ exports[`Header: should render with no divider 1`] = `
                     class="desktop"
                   >
                     <li
-                      class="firstItemInGroup mobileSigninSignout"
+                      class="firstItemInGroup"
                     >
                       <span
                         class="item pendingAuth"

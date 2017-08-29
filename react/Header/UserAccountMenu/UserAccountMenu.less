@@ -110,12 +110,12 @@
 
 .firstItemInGroup {
   @media @mobile {
-    padding-top: @grid-row-height * 3;
+    padding-top: @grid-row-height * 4;
     position: relative;
     &::before {
       content: '';
       position: absolute;
-      top: @grid-row-height;
+      top: @grid-row-height * 2;
       width: 100%;
       height: 1px;
       background: @sk-white;
@@ -124,12 +124,11 @@
   }
 }
 
-.mobileSigninSignout {
-  margin-top: @grid-row-height;
-  height: @grid-row-height * 9;
-}
-
 .pendingAuth {
-  opacity: .5;
-  margin-top: -3px;
+  opacity: 0.5;
+  position: relative;
+  top: -3px;
+  &:hover {
+    background-color: none;
+  }
 }

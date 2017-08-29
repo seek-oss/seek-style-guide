@@ -2,14 +2,13 @@
 
 .__coreLoader(@ball-size, @margin, @background-color) {
   @ball-spacing: 2px;
-
-  width: (@ball-size + (@ball-spacing * 2)) * 3;
-  margin: @margin;
-
   @keyframes bounce {
     33% { transform: translateY(-@ball-size); }
     66% { transform: translateY(0); }
   }
+
+  width: (@ball-size + (@ball-spacing * 2)) * 3;
+  margin: @margin;
 
   > .ball {
     background-color: @background-color;
@@ -21,12 +20,10 @@
 
 .root {
   .__coreLoader(@grid-row-height * 2, (@grid-row-height * 7) auto, @sk-mid-gray-light);
-
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  
   @animation-duration: 0.6s;
   @animation-delay: 0.07s;
 
@@ -51,6 +48,6 @@
 }
 
 .root.inline {
-  .__coreLoader(4px, 0, @sk-white);
+  .__coreLoader(4px, 0, currentColor);
   display: inline;
 }
