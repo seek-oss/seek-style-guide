@@ -19,6 +19,11 @@ describe('components/grid/hidden', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with props', () => {
+    const wrapper = shallow(<Hidden data-automation="foo">Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render with screen', () => {
     const wrapper = shallow(<Hidden screen>Text</Hidden>);
     expect(wrapper).toMatchSnapshot();

@@ -48,6 +48,15 @@ exports[`components/grid/hidden should render with print 1`] = `
 </span>
 `;
 
+exports[`components/grid/hidden should render with props 1`] = `
+<span
+  className=""
+  data-automation="foo"
+>
+  Text
+</span>
+`;
+
 exports[`components/grid/hidden should render with screen 1`] = `
 <span
   className="screen"
