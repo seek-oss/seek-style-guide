@@ -14,6 +14,11 @@ describe('components/grid/hidden', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with component', () => {
+    const wrapper = shallow(<Hidden component="li">Text</Hidden>);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render with screen', () => {
     const wrapper = shallow(<Hidden screen>Text</Hidden>);
     expect(wrapper).toMatchSnapshot();

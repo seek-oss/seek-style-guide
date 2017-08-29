@@ -16,6 +16,14 @@ exports[`components/grid/hidden should render with classname 1`] = `
 </span>
 `;
 
+exports[`components/grid/hidden should render with component 1`] = `
+<li
+  className=""
+>
+  Text
+</li>
+`;
+
 exports[`components/grid/hidden should render with desktop 1`] = `
 <span
   className="desktop"
