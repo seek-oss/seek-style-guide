@@ -65,7 +65,6 @@ export default class Button extends Component {
       ...restProps
     };
 
-
     return React.createElement(component, combinedProps, children);
   }
 

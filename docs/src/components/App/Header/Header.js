@@ -3,9 +3,10 @@ import brandStyle from './Header.css.js';
 
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 import { Link } from 'react-router';
-import { PageBlock, Card, Section, Text, ScreenReaderOnly } from 'seek-style-guide/react';
+import { PageBlock, Card, Section, Text } from 'seek-style-guide/react';
 import Logo from './Logo/Logo';
 import demoSpecs from '../../../demoSpecs';
 
@@ -40,7 +41,7 @@ export default class Header extends Component {
           <Section className={styles.headerSection}>
             <div className={styles.sectionContent}>
               <Link className={classnames([styles.logoLink, brandStyle.logoLink])} to="/" onClick={this.handleMenuClose}>
-                <Logo svgClassName={classnames([styles.logo, brandStyle.logo])} tenant={this.props.tenant}/>
+                <Logo svgClassName={classnames([styles.logo, brandStyle.logo])} tenant={this.props.tenant} />
               </Link>
 
               <div className={styles.hamburger}>
@@ -101,3 +102,7 @@ export default class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  tenant: PropTypes.string
+};
