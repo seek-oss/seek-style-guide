@@ -128,7 +128,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </Hidden>
-      
+
       {
         locale === 'NZ' ? null : (
           <Hidden desktop component="li" className={classnames(activeTab === 'Company Reviews' && styles.activeTab)}>
