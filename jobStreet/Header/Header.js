@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Text from 'seek-asia-style-guide/react/Text/Text';
 import MenuIcon from 'seek-asia-style-guide/react/ChevronIcon/ChevronIcon';
-import Nav from 'Nav/Nav';
+import Nav from './components/Nav/Nav';
 import styles from './header.less';
 //import logo from './logo.png';
 import links from './links';
