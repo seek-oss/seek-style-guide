@@ -16,7 +16,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
       </ScreenReaderOnly>
       {
         linkRenderer({
-          'data-analytics': 'sign-in',
+          'data-analytics': 'header:sign-in',
           href: appendReturnUrl('/sign-in', returnUrl),
           className: styles.link,
           title: 'Sign in',
@@ -26,7 +26,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
       {' or '}
       {
         linkRenderer({
-          'data-analytics': 'register',
+          'data-analytics': 'header:register',
           href: appendReturnUrl('/sign-up', returnUrl),
           className: styles.link,
           title: 'Register',
