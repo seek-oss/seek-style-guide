@@ -35,15 +35,6 @@ export default {
     label: 'Description',
     type: 'radio',
     states: [{
-      label: 'No Description',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          description: null
-        }
-      })
-    }, {
       label: 'Description present',
       transformProps: ({ ...props }) => ({
         ...props,
@@ -52,27 +43,36 @@ export default {
           description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...'
         }
       })
+    }, {
+      label: 'No Description',
+      transformProps: ({ ...props }) => ({
+        ...props,
+        job: {
+          ...props.job,
+          description: null
+        }
+      })
     }]
   },
   {
     label: 'Company Logo',
     type: 'radio',
     states: [{
-      label: 'No Logo',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          companyLogoUrl: null
-        }
-      })
-    }, {
       label: 'Logo present',
       transformProps: ({ ...props }) => ({
         ...props,
         job: {
           ...props.job,
           companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png'
+        }
+      })
+    }, {
+      label: 'No Logo',
+      transformProps: ({ ...props }) => ({
+        ...props,
+        job: {
+          ...props.job,
+          companyLogoUrl: null
         }
       })
     }]

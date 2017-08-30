@@ -13,19 +13,19 @@ const JobCard = ({ job }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text className={styles.company}>{job.company}</Text>
+        <Text substandard className={styles.company}>{job.company}</Text>
         <Text heading>{job.jobTitle}</Text>
       </Section>
       { job.description && (
         <Section className={styles.bodyDescription}>
-          <Text>{job.description}</Text>
+          <Text substandard>{job.description}</Text>
         </Section>
       )}
       <Section className={styles.footer}>
         <div>
-          <Text><LocationIcon /> {job.location}</Text>
-          <Text><MoneyIcon /> {job.salary}</Text>
-          <Text><TimeIcon /> {job.postingDuration}</Text>
+          <Text substandard><LocationIcon /> {job.location}</Text>
+          <Text substandard><MoneyIcon /> {job.salary}</Text>
+          <Text substandard><TimeIcon /> {job.postingDuration}</Text>
         </div>
         { job.companyLogoUrl && (
         <div className={styles.companyLogo}>
