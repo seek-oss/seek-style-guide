@@ -1,10 +1,10 @@
 import React from 'react';
 import { JobCard, PageBlock } from 'seek-style-guide/react';
 
-const JobCardContainer = ({component: DemoComponent, componentsProps }) => {
+const JobCardContainer = ({component: DemoComponent, componentProps }) => {
     return (
         <PageBlock style={{ width: '75%' }}>
-            <DemoComponent { ...componentsProps } />
+            <DemoComponent { ...componentProps } />
         </PageBlock>
     )
 };
