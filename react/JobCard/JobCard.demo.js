@@ -25,7 +25,9 @@ export default {
       company: 'SEEK Asia',
       jobTitle: 'Developer',
       location: 'Kuala Lumpur',
-      salary: 'RM999999999 - RM999999999999',
+      description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...',
+      companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png',
+      salary: 'RM99999 - RM999999',
       postingDuration: '1h'
     }
   },
@@ -33,6 +35,15 @@ export default {
     label: 'Description',
     type: 'radio',
     states: [{
+      label: 'Description present',
+      transformProps: ({ ...props }) => ({
+        ...props,
+        job: {
+          ...props.job,
+          description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...'
+        }
+      })
+    }, {
       label: 'No Description',
       transformProps: ({ ...props }) => ({
         ...props,
@@ -41,13 +52,27 @@ export default {
           description: null
         }
       })
-    }, {
-      label: 'Description present',
+    }]
+  },
+  {
+    label: 'Company Logo',
+    type: 'radio',
+    states: [{
+      label: 'Logo present',
       transformProps: ({ ...props }) => ({
         ...props,
         job: {
           ...props.job,
-          description: 'Hello world'
+          companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png'
+        }
+      })
+    }, {
+      label: 'No Logo',
+      transformProps: ({ ...props }) => ({
+        ...props,
+        job: {
+          ...props.job,
+          companyLogoUrl: null
         }
       })
     }]
