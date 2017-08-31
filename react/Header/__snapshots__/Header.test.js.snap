@@ -291,7 +291,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       class="item pendingAuth"
                     >
                       <div
-                        class="root inline"
+                        class="root _small"
                       >
                         <div
                           class="ball"
@@ -1441,7 +1441,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       class="item pendingAuth"
                     >
                       <div
-                        class="root inline"
+                        class="root _small"
                       >
                         <div
                           class="ball"
@@ -3166,7 +3166,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       class="item pendingAuth"
                     >
                       <div
-                        class="root inline"
+                        class="root _small"
                       >
                         <div
                           class="ball"
@@ -4318,7 +4318,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       class="item pendingAuth"
                     >
                       <div
-                        class="root inline"
+                        class="root _small"
                       >
                         <div
                           class="ball"
@@ -4875,7 +4875,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       class="item pendingAuth"
                     >
                       <div
-                        class="root inline"
+                        class="root _small"
                       >
                         <div
                           class="ball"
@@ -5423,7 +5423,7 @@ exports[`Header: should render with no divider 1`] = `
                       class="item pendingAuth"
                     >
                       <div
-                        class="root inline"
+                        class="root _small"
                       >
                         <div
                           class="ball"
