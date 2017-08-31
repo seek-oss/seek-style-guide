@@ -3,10 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import Text from 'seek-asia-style-guide/react/Text/Text';
-import MenuIcon from 'seek-asia-style-guide/react/ChevronIcon/ChevronIcon';
+import MenuIcon from 'seek-asia-style-guide/react/HamburgerIcon/HamburgerIcon';
 import Nav from './components/Nav/Nav';
 import styles from './header.less';
-//import logo from './logo.png';
 import links from './links';
 
 class Header extends Component {
@@ -50,7 +49,7 @@ class Header extends Component {
                         }
                     }}
                 >
-                <MenuIcon direction={"down"}/>
+                    <MenuIcon />
                 </button>
                 <div
                     className={styles.navWrapper}
