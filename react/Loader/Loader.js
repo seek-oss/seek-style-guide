@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './Loader.less';
 import classnames from 'classnames';
 
-export default function Loader({ inline }) {
+export default function Loader({ _small }) {
   return (
-    <div className={classnames(styles.root, { [styles.inline]: inline })}>
+    <div className={classnames(styles.root, { [styles._small]: _small })}>
       <div className={styles.ball} />
       <div className={styles.ball} />
       <div className={styles.ball} />
@@ -14,9 +14,9 @@ export default function Loader({ inline }) {
 }
 
 Loader.propTypes = {
-  inline: PropTypes.bool.isRequired
+  _small: PropTypes.bool
 };
 
 Loader.defaultProps = {
-  inline: false
+  _small: false
 };

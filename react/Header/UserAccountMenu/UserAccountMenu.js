@@ -200,7 +200,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             });
             default: return (
               <span className={classnames(styles.item, styles.pendingAuth)}>
-                <Loader inline />
+                <Loader _small />
                 <div key="iconSpacer" className={styles.iconSpacer} />
               </span>
             );
