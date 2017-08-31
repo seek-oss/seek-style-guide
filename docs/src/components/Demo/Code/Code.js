@@ -54,7 +54,7 @@ export default class Code extends Component {
 
       code = `import { ${jsx.type.displayName || jsx.type.name} } from 'seek-asia-style-guide/react';\n\n\n${componentCode}`;
     } else if (less) {
-      code = `@import (reference) "~seek-asia-style-guide/theme";\n\n\n.element {\n  .${less}\n}`;
+      code = `@import (reference) "~seek-style-guide/theme";\n\n\n.element {\n  .${less}\n}`;
     }
 
     return (
