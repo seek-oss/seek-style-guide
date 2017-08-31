@@ -49,6 +49,9 @@ export { default as ThumbsUpIcon } from './ThumbsUpIcon/ThumbsUpIcon';
 export { default as TickCircleIcon } from './TickCircleIcon/TickCircleIcon';
 export { default as TickIcon } from './TickIcon/TickIcon';
 export { default as TwitterIcon } from './TwitterIcon/TwitterIcon';
+export { default as LocationIcon } from './LocationIcon/LocationIcon';
+export { default as TimeIcon } from './TimeIcon/TimeIcon';
+export { default as MoneyIcon } from './MoneyIcon/MoneyIcon';
 
 // Fields
 export { default as Autosuggest } from './Autosuggest/Autosuggest';
