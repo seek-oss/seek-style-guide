@@ -16,7 +16,7 @@ export default {
   '.footer span': {
     verticalAlign: 'middle'
   },
-  '.logo': {
+  '.companyLogo': {
     maxWidth: '100px'
   },
   '.company': {
