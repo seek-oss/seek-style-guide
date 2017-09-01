@@ -16,8 +16,11 @@ export default {
   '.footer span': {
     verticalAlign: 'middle'
   },
-  '.companyLogo': {
+  '.companyLogoWrapper': {
     maxWidth: '100px'
+  },
+  '.companyLogo': {
+    width: '100%'
   },
   '.company': {
     padding: 0
