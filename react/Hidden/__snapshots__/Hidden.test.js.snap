@@ -16,6 +16,14 @@ exports[`components/grid/hidden should render with classname 1`] = `
 </span>
 `;
 
+exports[`components/grid/hidden should render with component 1`] = `
+<li
+  className=""
+>
+  Text
+</li>
+`;
+
 exports[`components/grid/hidden should render with desktop 1`] = `
 <span
   className="desktop"
@@ -40,10 +48,25 @@ exports[`components/grid/hidden should render with print 1`] = `
 </span>
 `;
 
+exports[`components/grid/hidden should render with props 1`] = `
+<span
+  className=""
+  data-automation="foo"
+>
+  Text
+</span>
+`;
+
 exports[`components/grid/hidden should render with screen 1`] = `
 <span
   className="screen"
 >
   Text
 </span>
+`;
+
+exports[`components/grid/hidden should render without children 1`] = `
+<span
+  className=""
+/>
 `;

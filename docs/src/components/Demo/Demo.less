@@ -1,23 +1,26 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  padding-bottom: @grid-row-height * 6;
+  padding-bottom: @grid-row-height * 4;
 }
 
 .component {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: (@grid-row-height * 8) 0;
   position: relative;
   z-index: 1;
+  &:not(.component_block) {
+    padding: (@grid-row-height * 8) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   &.component_block {
+    padding: (@grid-row-height * 5) 0;
     display: block;
   }
 }
 
 .optionsBlock {
-  background: #e5e5e5;
+  background: #e8e8e8;
 }
 
 .options {
