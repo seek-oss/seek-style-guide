@@ -51,7 +51,7 @@ export { default as TwitterIcon } from './TwitterIcon/TwitterIcon';
 // Fields
 export { default as Autosuggest } from './Autosuggest/Autosuggest';
 export { default as Checkbox } from './Checkbox/Checkbox';
-export { default as ClearField } from './TextField/ClearField/ClearField';
+export { default as ClearField } from './ClearField/ClearField';
 export { default as Dropdown } from './Dropdown/Dropdown';
 export { default as EmailField } from './EmailField/EmailField';
 export { default as MonthPicker } from './MonthPicker/MonthPicker';
