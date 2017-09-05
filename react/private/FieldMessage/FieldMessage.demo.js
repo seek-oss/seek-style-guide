@@ -17,8 +17,18 @@ export default [
     type: 'radio',
     states: [
       {
+        label: 'No message',
+        transformProps: props => ({
+          ...props,
+          message: false
+        })
+      },
+      {
         label: 'Help text',
-        transformProps: props => props
+        transformProps: props => ({
+          ...props,
+          message: 'Help message'
+        })
       },
       {
         label: 'Critical message',
@@ -34,13 +44,6 @@ export default [
           ...props,
           valid: true,
           message: 'Looking good!'
-        })
-      },
-      {
-        label: 'No message',
-        transformProps: props => ({
-          ...props,
-          message: false
         })
       }
     ]

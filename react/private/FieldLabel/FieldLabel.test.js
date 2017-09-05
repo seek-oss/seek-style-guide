@@ -3,17 +3,18 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
 import { createRenderer } from 'react-test-renderer/shallow';
-import { findAllWithType } from 'react-shallow-testutils';
+import { findAllWithType, findAllWithClass } from 'react-shallow-testutils';
 import FieldLabel from './FieldLabel';
 import Secondary from '../../Secondary/Secondary';
 import Strong from '../../Strong/Strong';
+import TextLink from '../../TextLink/TextLink';
 
 chai.use(sinonChai);
 
 const renderer = createRenderer();
 
 describe('FieldLabel', () => {
-  let element, fieldLabel, label, secondaryLabel, errors, labelText;
+  let element, fieldLabel, label, secondaryLabel, tertiaryLabel, errors, labelText;
 
   beforeEach(() => {
     errors = [];
@@ -33,6 +34,7 @@ describe('FieldLabel', () => {
     label = findAllWithType(fieldLabel, 'label')[0] || null;
     labelText = findAllWithType(fieldLabel, Strong)[0] || null;
     secondaryLabel = findAllWithType(fieldLabel, Secondary)[0] || null;
+    tertiaryLabel = findAllWithClass(fieldLabel, 'tertiary')[0] || null;
   }
 
   it('should have a displayName', () => {
@@ -71,6 +73,25 @@ describe('FieldLabel', () => {
     it('should have the right text when `secondaryLabel` is specified', () => {
       render(<FieldLabel id="firstName" label="First Name" secondaryLabel="Hint Message" />);
       expect(secondaryLabel.props.children).to.equal('Hint Message');
+    });
+  });
+
+  describe('tertiaryLabel', () => {
+    it('should not be rendered by default', () => {
+      render(<FieldLabel />);
+
+      expect(tertiaryLabel).to.equal(null);
+    });
+
+    it('should have the right text when `tertiaryLabel` is specified', () => {
+      render(<FieldLabel id="firstName" label="First Name" tertiaryLabel="Test Tertiary Label" />);
+      expect(tertiaryLabel.props.children).to.equal('Test Tertiary Label');
+    });
+
+    it('should be able to pass a node to `tertiaryLabel`', () => {
+      render(<FieldLabel id="firstName" label="First Name" tertiaryLabel={<TextLink>Tertiary TextLink</TextLink>} />);
+      expect(tertiaryLabel.props.children.type.displayName).to.equal('TextLink');
+      expect(tertiaryLabel.props.children.props.children).to.equal('Tertiary TextLink');
     });
   });
 
