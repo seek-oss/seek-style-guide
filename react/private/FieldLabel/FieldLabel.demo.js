@@ -17,7 +17,7 @@ export default [
         label: 'Tertiary label',
         transformProps: props => ({
           ...props,
-          tertiaryLabel: <TextLink>Tertiary TextLink</TextLink>
+          tertiaryLabel: <TextLink>Help?</TextLink>
         })
       }
     ]
