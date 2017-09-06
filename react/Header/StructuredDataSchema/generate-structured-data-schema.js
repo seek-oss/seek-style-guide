@@ -18,7 +18,7 @@ const nzOrgSchema = {
   url: 'https://www.seek.co.nz/'
 };
 
-const sharedSocialLinks = [
+const commonSocialLinks = [
   'https://www.facebook.com/SEEK/',
   'https://en.wikipedia.org/wiki/Seek_Limited',
   'https://www.youtube.com/user/SEEKJobs',
@@ -34,7 +34,7 @@ const generateOrgSchema = (locale = 'AU') => {
     legalName: 'Seek Limited',
     logo: 'https://www.seek.com.au/content/images/logos/seek-logo-positive.svg',
     sameAs: [
-      ...sharedSocialLinks,
+      ...commonSocialLinks,
       ...socialLinks
     ],
     contactPoint: [
