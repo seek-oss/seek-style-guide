@@ -45,4 +45,8 @@ describe('Header:', () => {
   it('should append returnUrl to signin and register links if present', () => {
     expect(renderHeader({ returnUrl: '/jobs' })).toMatchSnapshot();
   });
+
+  it('should append custom schema', () => {
+    expect(renderHeader({ structuredDataSchema: { org: 'SEEK' } })).toMatchSnapshot();
+  });
 });

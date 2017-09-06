@@ -40,9 +40,14 @@ export default function Header({
 
   const displayName = userName || userEmail.split('@')[0];
 
-  /* eslint-disable react/no-danger */
+  const schema = structuredDataSchema ? JSON.stringify(structuredDataSchema) : JSON.stringify(generateStructureDataSchema(locale));
+
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schema }} // eslint-disable-line react/no-danger
+      />
       <section className={styles.content}>
         <div className={styles.banner}>
           <h1 data-automation="logo" className={styles.logo}>
@@ -105,7 +110,6 @@ export default function Header({
       </section>
     </header>
   );
-  /* eslint-disable react/no-danger */
 }
 
 Header.propTypes = {
