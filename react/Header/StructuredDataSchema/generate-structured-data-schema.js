@@ -27,6 +27,7 @@ const commonSocialLinks = [
 
 const generateOrgSchema = (locale = 'AU') => {
   const { telephone, socialLinks, url } = locale === 'NZ' ? nzOrgSchema : auOrgSchema;
+
   return {
     '@context': 'http://schema.org',
     '@type': 'Organization',
@@ -48,5 +49,5 @@ const generateOrgSchema = (locale = 'AU') => {
   };
 };
 
-export default generateOrgSchema;
+export default generateStructureDataSchema;
 
