@@ -1,7 +1,5 @@
-import concat from 'lodash/concat';
-
 const auOrgSchema = {
-  sameAs: [
+  socialLinks: [
     'https://www.instagram.com/seekau/',
     'https://twitter.com/seekjobs',
     'https://plus.google.com/+seekau'
@@ -11,7 +9,7 @@ const auOrgSchema = {
 };
 
 const nzOrgSchema = {
-  sameAs: [
+  socialLinks: [
     'https://www.instagram.com/seeknz/',
     'https://twitter.com/seekjobsnz',
     'https://plus.google.com/+seeknz'
@@ -20,20 +18,25 @@ const nzOrgSchema = {
   url: 'https://www.seek.co.nz/'
 };
 
+const sharedSocialLinks = [
+  'https://www.facebook.com/SEEK/',
+  'https://en.wikipedia.org/wiki/Seek_Limited',
+  'https://www.youtube.com/user/SEEKJobs',
+  'https://au.linkedin.com/company/seek'
+];
+
 const generateOrgSchema = (locale = 'AU') => {
-  const { telephone, sameAs, url } = locale === 'NZ' ? nzOrgSchema : auOrgSchema;
+  const { telephone, socialLinks, url } = locale === 'NZ' ? nzOrgSchema : auOrgSchema;
   return {
     '@context': 'http://schema.org',
     '@type': 'Organization',
     url,
     legalName: 'Seek Limited',
     logo: 'https://www.seek.com.au/content/images/logos/seek-logo-positive.svg',
-    sameAs: concat([
-      'https://www.facebook.com/SEEK/',
-      'https://en.wikipedia.org/wiki/Seek_Limited',
-      'https://www.youtube.com/user/SEEKJobs',
-      'https://au.linkedin.com/company/seek'
-    ], sameAs),
+    sameAs: [
+      ...sharedSocialLinks,
+      ...socialLinks
+    ],
     contactPoint: [
       {
         '@type': 'ContactPoint',
