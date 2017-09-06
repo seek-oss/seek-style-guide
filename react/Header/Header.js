@@ -13,8 +13,9 @@ import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
 import employerLinkForLocale from './employerLinkForLocale';
+import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
-import generateStructureDataSchema from './StructuredData/structured-data-schema';
+
 const defaultLinkRenderer = props => (<a {...props} />);
 
 export default function Header({
@@ -25,8 +26,7 @@ export default function Header({
   linkRenderer,
   activeTab,
   divider,
-  returnUrl,
-  structuredDataSchema
+  returnUrl
 }) {
   const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
   const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
@@ -40,14 +40,9 @@ export default function Header({
 
   const displayName = userName || userEmail.split('@')[0];
 
-  const schema = structuredDataSchema ? JSON.stringify(structuredDataSchema) : JSON.stringify(generateStructureDataSchema(locale));
-
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: schema }} // eslint-disable-line react/no-danger
-      />
+      <StructuredDataSchema locale={locale} />
       <section className={styles.content}>
         <div className={styles.banner}>
           <h1 data-automation="logo" className={styles.logo}>
@@ -132,8 +127,7 @@ Header.propTypes = {
     'Advice & Tips'
   ]),
   divider: PropTypes.bool,
-  returnUrl: PropTypes.string,
-  structuredDataSchema: PropTypes.object
+  returnUrl: PropTypes.string
 };
 
 Header.defaultProps = {

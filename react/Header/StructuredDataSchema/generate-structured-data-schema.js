@@ -27,7 +27,7 @@ const generateOrgSchema = (locale = 'AU') => {
     '@type': 'Organization',
     url,
     legalName: 'Seek Limited',
-    logo: 'https://seekcdn.com/search/houston/1.0.2162/seek-icon-logo.png',
+    logo: 'https://www.seek.com.au/content/images/logos/seek-logo-positive.svg',
     sameAs: concat([
       'https://www.facebook.com/SEEK/',
       'https://en.wikipedia.org/wiki/Seek_Limited',

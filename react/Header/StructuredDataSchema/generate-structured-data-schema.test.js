@@ -1,4 +1,4 @@
-import generateOrgSchema from './structured-data-schema';
+import generateOrgSchema from './generate-structured-data-schema';
 
 test('should generate default (AU) organisation schema', () => {
   expect(generateOrgSchema()).toEqual({
@@ -6,7 +6,7 @@ test('should generate default (AU) organisation schema', () => {
     '@type': 'Organization',
     url: 'https://www.seek.com.au',
     legalName: 'Seek Limited',
-    logo: 'https://seekcdn.com/search/houston/1.0.2162/seek-icon-logo.png',
+    logo: 'https://www.seek.com.au/content/images/logos/seek-logo-positive.svg',
     sameAs: [
       'https://www.facebook.com/SEEK/',
       'https://en.wikipedia.org/wiki/Seek_Limited',
@@ -33,7 +33,7 @@ test('should generate default (AU) organisation schema', () => {
     '@type': 'Organization',
     url: 'https://www.seek.co.nz/',
     legalName: 'Seek Limited',
-    logo: 'https://seekcdn.com/search/houston/1.0.2162/seek-icon-logo.png',
+    logo: 'https://www.seek.com.au/content/images/logos/seek-logo-positive.svg',
     sameAs: [
       'https://www.facebook.com/SEEK/',
       'https://en.wikipedia.org/wiki/Seek_Limited',
