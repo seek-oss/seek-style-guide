@@ -1,0 +1,55 @@
+import generateOrgSchema from './structured-data-schema';
+
+test('should generate default (AU) organisation schema', () => {
+  expect(generateOrgSchema()).toEqual({
+    '@context': 'http://schema.org',
+    '@type': 'Organization',
+    url: 'https://www.seek.com.au',
+    legalName: 'Seek Limited',
+    logo: 'https://seekcdn.com/search/houston/1.0.2162/seek-icon-logo.png',
+    sameAs: [
+      'https://www.facebook.com/SEEK/',
+      'https://en.wikipedia.org/wiki/Seek_Limited',
+      'https://www.youtube.com/user/SEEKJobs',
+      'https://au.linkedin.com/company/seek',
+      'https://www.instagram.com/seekau/',
+      'https://twitter.com/seekjobs',
+      'https://plus.google.com/+seekau'
+    ],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+61-1300-658-700',
+        contactType: 'customer service',
+        contactOption: 'TollFree'
+      }
+    ]
+  });
+});
+
+test('should generate default (AU) organisation schema', () => {
+  expect(generateOrgSchema('NZ')).toEqual({
+    '@context': 'http://schema.org',
+    '@type': 'Organization',
+    url: 'https://www.seek.co.nz/',
+    legalName: 'Seek Limited',
+    logo: 'https://seekcdn.com/search/houston/1.0.2162/seek-icon-logo.png',
+    sameAs: [
+      'https://www.facebook.com/SEEK/',
+      'https://en.wikipedia.org/wiki/Seek_Limited',
+      'https://www.youtube.com/user/SEEKJobs',
+      'https://au.linkedin.com/company/seek',
+      'https://www.instagram.com/seeknz/',
+      'https://twitter.com/seekjobsnz',
+      'https://plus.google.com/+seeknz'
+    ],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+64-0508-733-569',
+        contactType: 'customer service',
+        contactOption: 'TollFree'
+      }
+    ]
+  });
+});

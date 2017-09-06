@@ -14,7 +14,7 @@ import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
 import employerLinkForLocale from './employerLinkForLocale';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
-
+import generateStructureDataSchema from './StructuredData/structured-data-schema';
 const defaultLinkRenderer = props => (<a {...props} />);
 
 export default function Header({
@@ -25,7 +25,8 @@ export default function Header({
   linkRenderer,
   activeTab,
   divider,
-  returnUrl
+  returnUrl,
+  structuredDataSchema
 }) {
   const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
   const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
@@ -39,6 +40,7 @@ export default function Header({
 
   const displayName = userName || userEmail.split('@')[0];
 
+  /* eslint-disable react/no-danger */
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
       <section className={styles.content}>
@@ -103,6 +105,7 @@ export default function Header({
       </section>
     </header>
   );
+  /* eslint-disable react/no-danger */
 }
 
 Header.propTypes = {
@@ -125,7 +128,8 @@ Header.propTypes = {
     'Advice & Tips'
   ]),
   divider: PropTypes.bool,
-  returnUrl: PropTypes.string
+  returnUrl: PropTypes.string,
+  structuredDataSchema: PropTypes.object
 };
 
 Header.defaultProps = {
