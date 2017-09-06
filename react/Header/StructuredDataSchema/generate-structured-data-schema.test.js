@@ -1,7 +1,7 @@
-import generateOrgSchema from './generate-structured-data-schema';
+import generateStructureDataSchema from './generate-structured-data-schema';
 
 test('should generate default (AU) organisation schema', () => {
-  expect(generateOrgSchema()).toEqual({
+  expect(generateStructureDataSchema()).toEqual({
     '@context': 'http://schema.org',
     '@type': 'Organization',
     url: 'https://www.seek.com.au',
@@ -28,7 +28,7 @@ test('should generate default (AU) organisation schema', () => {
 });
 
 test('should generate default (AU) organisation schema', () => {
-  expect(generateOrgSchema('NZ')).toEqual({
+  expect(generateStructureDataSchema('NZ')).toEqual({
     '@context': 'http://schema.org',
     '@type': 'Organization',
     url: 'https://www.seek.co.nz/',

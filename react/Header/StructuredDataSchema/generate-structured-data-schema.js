@@ -25,7 +25,7 @@ const commonSocialLinks = [
   'https://au.linkedin.com/company/seek'
 ];
 
-const generateOrgSchema = (locale = 'AU') => {
+const generateStructureDataSchema = (locale = 'AU') => {
   const { telephone, socialLinks, url } = locale === 'NZ' ? nzOrgSchema : auOrgSchema;
 
   return {
@@ -50,4 +50,3 @@ const generateOrgSchema = (locale = 'AU') => {
 };
 
 export default generateStructureDataSchema;
-
