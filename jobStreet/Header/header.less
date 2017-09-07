@@ -1,0 +1,105 @@
+
+.container {
+    background: #fff;
+    position: relative;
+    z-index:2;
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: auto;
+}
+
+.bannerWrapper {
+    border-bottom: 1px solid #ddd;
+    @media(min-width: 769px) {
+        background: #fff;
+    }
+}
+.bannerContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.banner {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
+
+    @media(min-width: 769px) {
+        position: static;
+        width: 100%;
+        height: 60px;
+        justify-content: space-between;
+    }
+}
+.link {
+    display: none;
+    color: #1c3f94;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: #79C8EC;
+        text-decoration: underline;
+    }
+    @media(min-width: 769px) {
+        display: inline-block;
+        font-weight: bold;
+    }
+}
+.toggle {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    padding:0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #1c3f94;
+
+    @media(min-width: 769px) {
+        display: none;
+    }
+}
+.navWrapper {
+    @media(min-width: 769px) {
+        background: #1c3f94;
+    }
+}
+.navContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow:hidden;
+    padding-top: 50px;
+    transition: max-height 125ms ease-out;
+    max-height:1000px;
+
+    @media(min-width: 769px) {
+        height: 50px;
+        overflow:visible;
+        padding-top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: none;
+    }
+}
+
+.navContainerHideOnMobile {
+    max-height: 0;
+    @media(min-width: 769px) {
+        max-height: 50px;
+    }
+}
+
+
+.employerLink {
+    color: #00a950;
+    font-weight: bold;
+}

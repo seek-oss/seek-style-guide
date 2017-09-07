@@ -52,6 +52,7 @@ export { default as TwitterIcon } from './TwitterIcon/TwitterIcon';
 export { default as LocationIcon } from './LocationIcon/LocationIcon';
 export { default as TimeIcon } from './TimeIcon/TimeIcon';
 export { default as MoneyIcon } from './MoneyIcon/MoneyIcon';
+export { default as HamburgerIcon } from './HamburgerIcon/HamburgerIcon';
 
 // Fields
 export { default as Autosuggest } from './Autosuggest/Autosuggest';

@@ -28,8 +28,8 @@ const JobCard = ({ job }) => {
           <Text substandard><TimeIcon /> {job.postingDuration}</Text>
         </div>
         { job.companyLogoUrl && (
-        <div className={styles.companyLogo}>
-          <img src={job.companyLogoUrl} />
+        <div className={styles.companyLogoWrapper}>
+          <img className={styles.companyLogo} src={job.companyLogoUrl} />
         </div>
         )}
       </Section>

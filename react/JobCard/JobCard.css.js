@@ -1,4 +1,4 @@
-import { saGrey2 } from '../../theme/palette/palette.js';
+import { saGrey4 } from '../../theme/palette/palette.js';
 
 export default {
   '.root': {
@@ -6,7 +6,7 @@ export default {
     marginBottom: 0,
     borderStyle: 'solid',
     borderBottomWidth: '1px',
-    borderColor: saGrey2
+    borderColor: saGrey4
   },
   '.footer': {
     display: 'flex',
@@ -16,8 +16,11 @@ export default {
   '.footer span': {
     verticalAlign: 'middle'
   },
-  '.logo': {
+  '.companyLogoWrapper': {
     maxWidth: '100px'
+  },
+  '.companyLogo': {
+    width: '100%'
   },
   '.company': {
     padding: 0
