@@ -27,7 +27,7 @@ test('should generate default (AU) organisation schema', () => {
   });
 });
 
-test('should generate default (AU) organisation schema', () => {
+test('should generate default (NZ) organisation schema', () => {
   expect(generateStructureDataSchema('NZ')).toEqual({
     '@context': 'http://schema.org',
     '@type': 'Organization',
