@@ -4,6 +4,7 @@ import Autosuggest from './Autosuggest';
 import styles from '../TextField/TextField.less';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
+import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 class AutosuggestContainer extends Component {
   static propTypes = {
@@ -101,6 +102,7 @@ export default {
         }
       ]
     },
-    ...fieldMessageOptions
+    ...fieldMessageOptions,
+    ...fieldLabelOptions
   ]
 };

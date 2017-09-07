@@ -37,6 +37,7 @@ export { default as ErrorIcon } from './ErrorIcon/ErrorIcon';
 export { default as FacebookIcon } from './FacebookIcon/FacebookIcon';
 export { default as HeartIcon } from './HeartIcon/HeartIcon';
 export { default as HelpIcon } from './HelpIcon/HelpIcon';
+export { default as InfoIcon } from './InfoIcon/InfoIcon';
 export { default as LinkedInIcon } from './LinkedInIcon/LinkedInIcon';
 export { default as MailIcon } from './MailIcon/MailIcon';
 export { default as PlusIcon } from './PlusIcon/PlusIcon';
