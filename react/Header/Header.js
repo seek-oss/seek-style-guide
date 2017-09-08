@@ -13,6 +13,7 @@ import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
 import employerLinkForLocale from './employerLinkForLocale';
+import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
 const defaultLinkRenderer = props => (<a {...props} />);
@@ -41,6 +42,7 @@ export default function Header({
 
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
+      <StructuredDataSchema locale={locale} />
       <section className={styles.content}>
         <div className={styles.banner}>
           <h1 data-automation="logo" className={styles.logo}>
