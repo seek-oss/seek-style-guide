@@ -38,7 +38,7 @@ test('should generate default (NZ) organisation schema', () => {
       'https://www.facebook.com/SEEK/',
       'https://en.wikipedia.org/wiki/Seek_Limited',
       'https://www.youtube.com/user/SEEKJobs',
-      'https://au.linkedin.com/company/seek',
+      'https://nz.linkedin.com/company/seek',
       'https://www.instagram.com/seeknz/',
       'https://twitter.com/seekjobsnz',
       'https://plus.google.com/+seeknz'
