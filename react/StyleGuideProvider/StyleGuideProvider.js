@@ -28,7 +28,7 @@ export default function StyleGuideProvider({ fullScreen, children, meta, link, t
         link={link}
       />
 
-      <ScreenReaderOnly>
+      <ScreenReaderOnly component="div">
         <h1>{pageTitle}</h1>
       </ScreenReaderOnly>
 

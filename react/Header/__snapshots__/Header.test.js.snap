@@ -321,7 +321,7 @@ exports[`Header: should append returnUrl to signin and register links if present
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in?returnUrl=%2Fjobs"
                 title="Sign in"
               >
@@ -330,7 +330,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up?returnUrl=%2Fjobs"
                 title="Register"
               >
@@ -852,7 +852,7 @@ exports[`Header: should render first part of email address when username isn't p
                   <li>
                     <a
                       class="item"
-                      data-analytics="sign-out"
+                      data-analytics="header:sign-out"
                       href="/Login/Logout"
                     >
                       Sign Out
@@ -884,7 +884,7 @@ exports[`Header: should render first part of email address when username isn't p
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -893,7 +893,7 @@ exports[`Header: should render first part of email address when username isn't p
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
@@ -1431,7 +1431,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -1440,7 +1440,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
@@ -1962,7 +1962,7 @@ exports[`Header: should render when authenticated 1`] = `
                   <li>
                     <a
                       class="item"
-                      data-analytics="sign-out"
+                      data-analytics="header:sign-out"
                       href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
                     >
                       Sign Out
@@ -1994,7 +1994,7 @@ exports[`Header: should render when authenticated 1`] = `
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in?returnUrl=%2Fjobs"
                 title="Sign in"
               >
@@ -2003,7 +2003,7 @@ exports[`Header: should render when authenticated 1`] = `
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up?returnUrl=%2Fjobs"
                 title="Register"
               >
@@ -2521,7 +2521,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   <li>
                     <a
                       class="item"
-                      data-analytics="sign-out"
+                      data-analytics="header:sign-out"
                       href="/Login/Logout"
                     >
                       Sign Out
@@ -2553,7 +2553,7 @@ exports[`Header: should render when authenticated but username and email is not 
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -2562,7 +2562,7 @@ exports[`Header: should render when authenticated but username and email is not 
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
@@ -3100,7 +3100,7 @@ exports[`Header: should render when authentication is pending 1`] = `
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -3109,7 +3109,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
@@ -3634,7 +3634,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     >
                       <a
                         class="itemLink"
-                        data-analytics="sign-in"
+                        data-analytics="header:sign-in"
                         href="/sign-in"
                         title="Sign in"
                       >
@@ -3647,7 +3647,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                       </span>
                       <a
                         class="itemLink"
-                        data-analytics="register"
+                        data-analytics="header:register"
                         href="/sign-up"
                         title="Register"
                       >
@@ -3681,7 +3681,7 @@ exports[`Header: should render when unauthenticated 1`] = `
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -3690,7 +3690,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
@@ -4228,7 +4228,7 @@ exports[`Header: should render with locale of AU 1`] = `
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -4237,7 +4237,7 @@ exports[`Header: should render with locale of AU 1`] = `
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
@@ -4761,7 +4761,7 @@ exports[`Header: should render with locale of NZ 1`] = `
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -4770,7 +4770,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
@@ -5285,7 +5285,7 @@ exports[`Header: should render with no divider 1`] = `
               </span>
               <a
                 class="link"
-                data-analytics="sign-in"
+                data-analytics="header:sign-in"
                 href="/sign-in"
                 title="Sign in"
               >
@@ -5294,7 +5294,7 @@ exports[`Header: should render with no divider 1`] = `
                or 
               <a
                 class="link"
-                data-analytics="register"
+                data-analytics="header:register"
                 href="/sign-up"
                 title="Register"
               >
