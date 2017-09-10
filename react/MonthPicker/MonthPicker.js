@@ -74,11 +74,11 @@ export default class MonthPicker extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { id, label, labelProps, secondaryLabel, invalid, help, helpProps, valid, message, messageProps } = this.props;
+    const { id, label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, valid, message, messageProps } = this.props;
 
     return (
       <div className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel }} />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderInput()}
         <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
       </div>
