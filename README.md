@@ -11,6 +11,12 @@ If you'd instead like to work on a custom webpack project, you can use [seek-sty
 ## Installation
 
 ```bash
+$ npm install --save seek-style-guide react react-dom react-helmet
+```
+
+Optionally, if not making use of the React components, you can install seek-style-guide by itself:
+
+```bash
 $ npm install --save seek-style-guide
 ```
 
