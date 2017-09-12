@@ -4027,6 +4027,545 @@ exports[`Header: should render when unauthenticated 1`] = `
 </header>
 `;
 
+exports[`Header: should render with a custom logo 1`] = `
+<header
+  aria-label="Primary navigation"
+  class="root"
+  role="banner"
+>
+  <section
+    class="content"
+  >
+    <div
+      class="banner"
+    >
+      <h1
+        class="logo"
+        data-automation="logo"
+      >
+        <div>
+          Custom Logo
+        </div>
+        <a
+          class="logoLink"
+          data-analytics="header:jobs"
+          href="/"
+        >
+          <span
+            class="root"
+          >
+            SEEK
+          </span>
+        </a>
+      </h1>
+      <span
+        class="logoNote screen"
+      >
+        Australia’s #1 job site
+      </span>
+      <span
+        class="userWrapper print"
+      >
+        <div
+          class="user"
+        >
+          <div
+            class="userAccountWrapper"
+          >
+            <nav
+              aria-labelledby="UserMenu"
+              class="root"
+              data-automation="user-account"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="UserMenu"
+                >
+                  User menu
+                </h1>
+              </span>
+              <input
+                autocomplete="off"
+                class="toggle"
+                id="user-account-menu-toggle"
+                type="checkbox"
+              />
+              <div
+                class="menuBackdrop"
+              >
+                <label
+                  class="menuBackdropLabel"
+                  data-automation="user-account-menu-backdrop"
+                  for="user-account-menu-toggle"
+                >
+                  <span
+                    class="root"
+                  >
+                    Show user menu
+                  </span>
+                </label>
+              </div>
+              <label
+                class="toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
+              >
+                <span
+                  class="root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
+                >
+                  <span
+                    class="mobileMenuLabel"
+                  />
+                  <span
+                    class="desktopMenuLabel"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="root root down chevron"
+                >
+                  mock svg
+                </span>
+              </label>
+              <div
+                class="toggleContainer"
+              >
+                <ul
+                  class="root"
+                >
+                  <li
+                    class="desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:jobs"
+                      href="/"
+                    >
+                      <span>
+                        Job Search
+                      </span>
+                      <span
+                        class="root icon jobSearch"
+                      >
+                        mock svg
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:profile"
+                      href="/profile/"
+                    >
+                      <span>
+                        Profile
+                      </span>
+                      <span
+                        class="root icon profile"
+                      >
+                        mock svg
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="mobile"
+                  >
+                    <a
+                      class="item subItem"
+                      data-analytics="header:saved+searches"
+                      href="/myactivity#favourite"
+                    >
+                      <span>
+                        Saved Searches
+                      </span>
+                      <span
+                        class="root icon saveSearches"
+                      >
+                        mock svg
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="item subItem"
+                      data-analytics="header:saved+jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                    >
+                      <span>
+                        Saved 
+                        <span
+                          class="desktop"
+                        >
+                          & Applied 
+                        </span>
+                        Jobs
+                      </span>
+                      <span
+                        class="root icon saveJobs"
+                      >
+                        mock svg
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="mobile"
+                  >
+                    <a
+                      class="item subItem"
+                      data-analytics="header:applied+jobs"
+                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    >
+                      Applied Jobs
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
+                  >
+                    <a
+                      class="item subItem"
+                      data-analytics="header:recommended+jobs"
+                      href="/recommended"
+                    >
+                      <span>
+                        Recommended Jobs
+                      </span>
+                      <span
+                        class="root icon recommendedJobs"
+                      >
+                        mock svg
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
+                  >
+                    <a
+                      class="item subItem"
+                      data-analytics="header:companies"
+                      href="/companies/"
+                    >
+                      Company Reviews
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="mobile"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:settings"
+                      href="/settings/"
+                    >
+                      Settings
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="firstItemInGroup desktop"
+                  >
+                    <span
+                      class="item pendingAuth"
+                    >
+                      <div
+                        class="root _small"
+                      >
+                        <div
+                          class="ball"
+                        />
+                        <div
+                          class="ball"
+                        />
+                        <div
+                          class="ball"
+                        />
+                      </div>
+                      <div
+                        class="iconSpacer"
+                      />
+                    </span>
+                  </li>
+                  <li
+                    class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:employer+site"
+                      href="https://talent.seek.com.au/"
+                    >
+                      Employer Site
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div
+            class="signInRegisterWrapper"
+          >
+            <nav
+              aria-labelledby="SignInOrRegister"
+              class="root"
+              data-automation="sign-in-register"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="SignInOrRegister"
+                >
+                  Sign in or register
+                </h1>
+              </span>
+              <a
+                class="link"
+                data-analytics="header:sign-in"
+                href="/sign-in"
+                title="Sign in"
+              >
+                Sign in
+              </a>
+               or 
+              <a
+                class="link"
+                data-analytics="header:register"
+                href="/sign-up"
+                title="Register"
+              >
+                Register
+              </a>
+            </nav>
+          </div>
+          <span
+            class="divider"
+          />
+        </div>
+        <div
+          class="employerSite"
+        >
+          <a
+            class="employerLink"
+            data-analytics="header:employer+site"
+            href="https://talent.seek.com.au/"
+          >
+            Employer site
+          </a>
+        </div>
+      </span>
+    </div>
+    <span
+      class="navigation print"
+    >
+      <nav
+        aria-labelledby="MainNavigation"
+        class="root divider"
+        role="navigation"
+      >
+        <span
+          class="root"
+        >
+          <h1
+            id="MainNavigation"
+          >
+            Primary Links
+          </h1>
+        </span>
+        <ul
+          class="list"
+          data-automation="nav-tabs"
+        >
+          <li
+            class="item"
+          >
+            <a
+              class="link"
+              data-analytics="header:jobs"
+              href="/"
+            >
+              Job Search
+            </a>
+          </li>
+          <li
+            class="item"
+          >
+            <a
+              aria-label="One fifty K jobs"
+              class="link"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
+            >
+              $150k+ Jobs
+            </a>
+          </li>
+          <li
+            class="item"
+          >
+            <a
+              class="link"
+              data-analytics="header:profile"
+              href="/profile/"
+            >
+              Profile
+            </a>
+          </li>
+          <li
+            class="item"
+          >
+            <a
+              class="link"
+              data-analytics="header:companies"
+              href="/companies/"
+            >
+              Company Reviews
+            </a>
+          </li>
+          <li
+            class="item"
+          >
+            <a
+              class="link"
+              data-analytics="header:advice"
+              href="/career-advice/"
+            >
+              Advice & Tips
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </span>
+    <span
+      class="topBanner mobile print"
+    >
+      <div
+        class="topBannerContent"
+      >
+        <nav
+          aria-labelledby="PartnerSites"
+          role="navigation"
+        >
+          <span
+            class="root"
+          >
+            <h1
+              id="PartnerSites"
+            >
+              Partner Sites
+            </h1>
+          </span>
+          <ul
+            class="list"
+          >
+            <li>
+              <span
+                class="link link_isJobs"
+                title="SEEK Jobs"
+              >
+                Jobs
+              </span>
+            </li>
+            <li>
+              <a
+                class="link link_isLearning"
+                data-analytics="header:courses"
+                href="https://www.seeklearning.com.au/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                title="SEEK Learning"
+              >
+                Courses
+              </a>
+            </li>
+            <li>
+              <a
+                class="link link_isBusiness"
+                data-analytics="header:business+for+sale"
+                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                title="SEEK Business"
+              >
+                Businesses for sale
+              </a>
+            </li>
+            <li>
+              <a
+                class="link link_isVolunteering"
+                data-analytics="header:volunteering"
+                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                title="SEEK Volunteer"
+              >
+                Volunteering
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="locale"
+        >
+          <nav
+            aria-labelledby="Locales"
+            class="root"
+            role="navigation"
+          >
+            <span
+              class="root"
+            >
+              <h1
+                id="Locales"
+              >
+                Select your country
+              </h1>
+            </span>
+            <ul
+              class="list"
+            >
+              <li
+                class="listItem"
+              >
+                <span
+                  class="locale_isActive"
+                >
+                  AU
+                </span>
+              </li>
+              <li
+                class="listItem"
+              >
+                <a
+                  class="localeLink"
+                  data-analytics="header:nz+homepage"
+                  href="https://www.seek.co.nz"
+                  title="SEEK New Zealand"
+                >
+                  NZ
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </span>
+  </section>
+</header>
+`;
+
 exports[`Header: should render with locale of AU 1`] = `
 <header
   aria-label="Primary navigation"

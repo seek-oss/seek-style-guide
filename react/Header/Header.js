@@ -1,7 +1,7 @@
 import styles from './Header.less';
 
 import classnames from 'classnames';
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Locales from './Locales/Locales';
@@ -19,6 +19,7 @@ import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authSta
 const defaultLinkRenderer = props => (<a {...props} />);
 
 export default function Header({
+  logoComponent: LogoComponent,
   locale,
   authenticationStatus,
   userName,
@@ -46,7 +47,7 @@ export default function Header({
       <section className={styles.content}>
         <div className={styles.banner}>
           <h1 data-automation="logo" className={styles.logo}>
-            <Logo svgClassName={styles.logoSvg} />
+            <LogoComponent svgClassName={styles.logoSvg} />
             {
               linkRenderer({
                 'data-analytics': 'header:jobs',
@@ -109,6 +110,10 @@ export default function Header({
 
 Header.propTypes = {
   locale: PropTypes.oneOf(['AU', 'NZ']),
+  logoComponent: PropTypes.oneOfType([
+    PropTypes.instanceOf(Component),
+    PropTypes.func
+  ]),
   authenticationStatus: PropTypes.oneOf([
     AUTHENTICATED,
     UNAUTHENTICATED,
@@ -132,6 +137,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   locale: 'AU',
+  logoComponent: Logo,
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
