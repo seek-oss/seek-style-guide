@@ -128,6 +128,7 @@
     "react-element-to-jsx-string": "^6.2.0",
     "react-helmet": "^3.2.2",
     "react-hot-loader": "^3.0.0-beta.2",
+    "react-intl": "^2.4.0",
     "react-isolated-scroll": "^0.1.0",
     "react-router": "^2.5.2",
     "react-shallow-testutils": "^2.0.0",
