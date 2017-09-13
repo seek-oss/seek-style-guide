@@ -12,7 +12,7 @@ export default (Component, defaultProps) => (el, initialProps) => {
   render(
     <StandaloneProvider
       component={Component}
-      initialProps={{...defaultProps, ...initialProps }}
+      initialProps={{ ...defaultProps, ...initialProps }}
       registerPropsUpdater={registerPropsUpdater}
     />
   , el);
