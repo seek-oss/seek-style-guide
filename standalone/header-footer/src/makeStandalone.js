@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import StandaloneProvider from './StandaloneProvider/StandaloneProvider';
 
-export default (Component, defaultProps) => (el, initialProps) => {
+export default (Component, defaultProps = {}) => (el, initialProps) => {
   let updateProps;
 
   const registerPropsUpdater = propsUpdater => {
