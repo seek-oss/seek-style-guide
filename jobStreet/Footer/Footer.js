@@ -4,11 +4,11 @@ import styles from './footer.less';
 import PropTypes from 'prop-types';
 
 import FooterLinks from './components/FooterLinks/FooterLinks';
-import localisation from './localisation';
+import localization from './localization';
 
 const Footer = ({ language, country }) => {
     const year = new Date().getFullYear();
-    const messages = localisation[`${language}-${country}`];
+    const messages = localization[`${language}-${country}`];
 
     return (
       <IntlProvider locale={language} messages={messages}>
