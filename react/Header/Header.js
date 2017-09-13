@@ -47,7 +47,7 @@ export default function Header({
       <section className={styles.content}>
         <div className={styles.banner}>
           <h1 data-automation="logo" className={styles.logo}>
-            <LogoComponent svgClassName={styles.logoSvg} />
+            <LogoComponent locale={locale} svgClassName={styles.logoSvg} />
             {
               linkRenderer({
                 'data-analytics': 'header:jobs',
