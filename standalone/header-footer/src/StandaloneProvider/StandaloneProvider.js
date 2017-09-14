@@ -20,7 +20,7 @@ export default class StandaloneProvider extends Component {
   }
 
   updateProps(componentProps) {
-    this.setState({ componentProps });
+    this.setState({ componentProps: { ...this.state.componentProps, ...componentProps } });
   }
 
   render() {

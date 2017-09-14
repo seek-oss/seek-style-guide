@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import { Header, Text } from 'seek-style-guide/react';
+import { Header } from 'seek-style-guide/react';
+import LogoRainbow from '../LogoRainbow/LogoRainbow';
 
 export const makeDummyLinkRendererForPath = path => {
   const DummyLinkRenderer = ({ href, ...props }) => (
@@ -14,8 +15,6 @@ export const makeDummyLinkRendererForPath = path => {
 
   return DummyLinkRenderer;
 };
-
-const CustomLogo = props => <Text heading {...props}>Custom Logo</Text>;
 
 const ROUTE = '/header';
 
@@ -54,7 +53,7 @@ export default {
           label: 'Custom Logo',
           transformProps: props => ({
             ...props,
-            logoComponent: CustomLogo
+            logoComponent: LogoRainbow
           })
         }
       ]
