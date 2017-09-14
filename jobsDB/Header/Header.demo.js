@@ -19,6 +19,7 @@ const ROUTE = '/header';
 
 export default {
   route: ROUTE,
+  tenantPath: 'jobsDB',
   title: 'Header',
   component: Header,
   initialProps: {

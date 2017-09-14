@@ -2,6 +2,7 @@ import Logo from './Logo';
 
 export default {
   route: '/logo',
+  tenantPath: 'jobStreet',
   title: 'Logo',
   component: Logo,
   initialProps: {},

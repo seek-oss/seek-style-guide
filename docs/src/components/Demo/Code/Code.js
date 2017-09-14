@@ -11,7 +11,8 @@ export default class Code extends Component {
 
   static propTypes = {
     jsx: PropTypes.element,
-    less: PropTypes.string
+    less: PropTypes.string,
+    tenantPath: PropTypes.string
   };
 
   constructor() {
@@ -40,7 +41,7 @@ export default class Code extends Component {
 
   render() {
     const { copiedToClipboard } = this.state;
-    const { jsx, less } = this.props;
+    const { jsx, less, tenantPath } = this.props;
 
     let code = '';
 
@@ -52,7 +53,7 @@ export default class Code extends Component {
       }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
       .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}');
 
-      code = `import { ${jsx.type.displayName || jsx.type.name} } from 'seek-asia-style-guide/react';\n\n\n${componentCode}`;
+      code = `import { ${jsx.type.displayName || jsx.type.name} } from 'seek-asia-style-guide/${tenantPath}';\n\n\n${componentCode}`;
     } else if (less) {
       code = `@import (reference) "~seek-asia-style-guide/theme";\n\n\n.element {\n  .${less}\n}`;
     }

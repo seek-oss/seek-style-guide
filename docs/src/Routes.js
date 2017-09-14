@@ -15,7 +15,7 @@ export default (
     {
       demoSpecs.map(demoSpec => {
         const DemoRoute = () => <Demo spec={demoSpec} />;
-        return <Route key={demoSpec.title} path={demoSpec.route} component={DemoRoute} />;
+        return <Route key={demoSpec.title} path={demoSpec.route} tenantPath={demoSpec.tenantPath} component={DemoRoute} />;
       })
     }
   </Route>
