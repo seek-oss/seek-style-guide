@@ -8,6 +8,7 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="company"
+      substandard={true}
     >
       SEEK Asia
     </Text>
@@ -24,6 +25,7 @@ exports[`JobCard should render with default props 1`] = `
     <div>
       <Text
         baseline={true}
+        substandard={true}
       >
         <LocationIcon />
          
@@ -31,6 +33,7 @@ exports[`JobCard should render with default props 1`] = `
       </Text>
       <Text
         baseline={true}
+        substandard={true}
       >
         <MoneyIcon />
          
@@ -38,6 +41,7 @@ exports[`JobCard should render with default props 1`] = `
       </Text>
       <Text
         baseline={true}
+        substandard={true}
       >
         <TimeIcon />
          
@@ -56,6 +60,7 @@ exports[`JobCard should render with description props 1`] = `
     <Text
       baseline={true}
       className="company"
+      substandard={true}
     >
       SEEK Asia
     </Text>
@@ -71,6 +76,7 @@ exports[`JobCard should render with description props 1`] = `
   >
     <Text
       baseline={true}
+      substandard={true}
     >
       Hello world
     </Text>
@@ -81,6 +87,7 @@ exports[`JobCard should render with description props 1`] = `
     <div>
       <Text
         baseline={true}
+        substandard={true}
       >
         <LocationIcon />
          
@@ -88,6 +95,7 @@ exports[`JobCard should render with description props 1`] = `
       </Text>
       <Text
         baseline={true}
+        substandard={true}
       >
         <MoneyIcon />
          
@@ -95,6 +103,7 @@ exports[`JobCard should render with description props 1`] = `
       </Text>
       <Text
         baseline={true}
+        substandard={true}
       >
         <TimeIcon />
          

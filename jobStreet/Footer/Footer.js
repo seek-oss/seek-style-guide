@@ -1,5 +1,4 @@
 import React from 'react';
-import { IntlProvider, FormattedMessage } from 'react-intl';
 import styles from './footer.less';
 import PropTypes from 'prop-types';
 
@@ -11,12 +10,10 @@ const Footer = ({ language, country }) => {
     const messages = localization[`${language}-${country}`];
 
     return (
-      <IntlProvider locale={language} messages={messages}>
-          <footer className={styles.container}>
-            <FooterLinks />
-            <p className={styles.copyright}><FormattedMessage id="footer.copyright" values={{ year }} /></p>
-          </footer>
-      </IntlProvider>
+        <footer className={styles.container}>
+          <FooterLinks messages={ messages } />
+          <p className={styles.copyright}>{ messages['footer.copyright'].replace('{year}', year) }</p>
+        </footer>
     );
 };
 

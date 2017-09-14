@@ -1,54 +1,54 @@
 import React from 'react';
-import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import styles from './FooterLinks.less';
 
-const FooterLinks = ({ intl }) => {
+const FooterLinks = ({ messages }) => {
   return (
     <ul className={styles.list}>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.link' })}>
-          <FormattedMessage id="footer.linkText" />
+        <a className={styles.link} href={ messages['footer.link'] }>
+          { messages['footer.linkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.siteMapLink' })}>
-          <FormattedMessage id="footer.siteMapLinkText" />
+        <a className={styles.link} href={ messages['footer.siteMapLink'] }>
+          { messages['footer.siteMapLinkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.aboutLink' })}>
-          <FormattedMessage id="footer.aboutLinkText" />
+        <a className={styles.link} href={ messages['footer.aboutLink'] }>
+          { messages['footer.aboutLinkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.profilesLink' })}>
-          <FormattedMessage id="footer.profilesLinkText" />
+        <a className={styles.link} href={ messages['footer.profilesLink'] }>
+          { messages['footer.profilesLinkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.termsLink' })}>
-          <FormattedMessage id="footer.termsLinkText" />
+        <a className={styles.link} href={ messages['footer.termsLink'] }>
+          { messages['footer.termsLinkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.privacyLink' })}>
-          <FormattedMessage id="footer.privacyLinkText" />
+        <a className={styles.link} href={ messages['footer.privacyLink'] }>
+          { messages['footer.privacyLinkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.safeLink' })}>
-          <FormattedMessage id="footer.safeLinkText" />
+        <a className={styles.link} href={ messages['footer.safeLink'] }>
+          { messages['footer.safeLinkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.helpLink' })}>
-          <FormattedMessage id="footer.helpLinkText" />
+        <a className={styles.link} href={ messages['footer.helpLink'] }>
+          { messages['footer.helpLinkText'] }
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={intl.formatMessage({ id: 'footer.feedbackLink' })}>
-          <FormattedMessage id="footer.feedbackLinkText" />
+        <a className={styles.link} href={ messages['footer.feedbackLink'] }>
+          { messages['footer.feedbackLinkText'] }
         </a>
       </li>
     </ul>
@@ -56,7 +56,7 @@ const FooterLinks = ({ intl }) => {
 };
 
 FooterLinks.propTypes = {
-  intl: intlShape.isRequired,
+  messages: PropTypes.object.isRequired
 };
 
-export default injectIntl(FooterLinks);
+export default FooterLinks;
