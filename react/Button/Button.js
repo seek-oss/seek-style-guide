@@ -10,9 +10,13 @@ export default class Button extends Component {
   static displayName = 'Button';
 
   static propTypes = {
-    color: PropTypes.oneOf([
-      'pink', 'blue', 'gray', 'transparent'
-    ]).isRequired,
+    /* eslint-disable consistent-return */
+    color: (props, propName, componentName) => {
+      if (!props.group && ['pink', 'blue', 'gray', 'transparent'].indexOf(props.color) === -1) {
+        return new Error(`When ${componentName} doesn't not have \`group\`, it should have an \`color\`.`);
+      }
+    },
+    /* eslint-enable consistent-return */
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node
@@ -23,7 +27,8 @@ export default class Button extends Component {
       PropTypes.string
     ]),
     loading: PropTypes.bool,
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    group: PropTypes.bool
   };
 
   static defaultProps = {
@@ -46,7 +51,11 @@ export default class Button extends Component {
   }
 
   render() {
-    const { color, className, loading, fullWidth, children, component, ...restProps } = this.props;
+    const { color, className, loading, fullWidth, children, component, group, ...restProps } = this.props;
+
+    if (group) {
+      return <div className={styles.group}>{children}</div>;
+    }
 
     const combinedProps = {
       className: classnames(styles.root, className, {

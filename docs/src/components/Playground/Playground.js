@@ -133,6 +133,65 @@ export default class Playground extends Component {
       <div>
         <Header linkRenderer={dummyLinkRenderer} />
 
+        <PageBlock>
+          <Section header>
+            <Text hero>Button Groups</Text>
+          </Section>
+          <AsidedLayout reverse size="340px">
+            <Card>
+              <Section>
+                <Button group>
+                  <Button color="pink">Sign In</Button>
+                </Button>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Button group>
+                  <Button color="pink">Create a Profile</Button>
+                  <Button color="transparent">Cancel</Button>
+                </Button>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Button group>
+                  <Button color="grey">Save job</Button>
+                  <Button color="grey">Send job</Button>
+                </Button>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Button group>
+                  <Button color="pink">Save</Button>
+                  <Button color="transparent">Clear</Button>
+                  <Button color="transparent">Cancel</Button>
+                </Button>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Button group>
+                  <Button color="pink">Save</Button>
+                  <Button color="grey">Clear</Button>
+                  <Button color="grey">Cancel</Button>
+                </Button>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <Button group>
+                  <Button color="pink">Save</Button>
+                  <Button color="grey">Clear</Button>
+                  <Button color="grey">Cancel</Button>
+                  <Button color="grey">Button Four Is Longer</Button>
+                </Button>
+              </Section>
+            </Card>
+          </AsidedLayout>
+        </PageBlock>
+
         <PageBlock className={styles.header}>
           <AsidedLayout size="340px">
             <Section>

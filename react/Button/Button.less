@@ -111,3 +111,46 @@
 .fullWidth {
   width: 100%;
 }
+
+.group {
+  display: flex;
+
+  .root {
+    overflow: visible;
+
+    & + .root {
+      margin-left: @grid-gutter-width / 2;
+    }
+
+    & + .root_isTransparent {
+      margin-left: 0;
+    }
+  }
+
+  .root_isTransparent {
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+  }
+  @media only screen and (max-width: 960px) {
+    .root {
+      flex: 33.33% 0;
+    }
+
+    .root_isTransparent {
+      flex: 20% 0;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    flex-wrap: wrap;
+
+    .root {
+      width: 100%;
+      flex: none;
+
+      & + .root {
+        margin-left: 0;
+        margin-top: @grid-row-height;
+      }
+    }
+  }
+}

@@ -36,6 +36,30 @@ exports[`Button: color variants: should render transparent button 1`] = `
 </button>
 `;
 
+exports[`Button: group: should render a button group 1`] = `
+<div
+  className="group"
+/>
+`;
+
+exports[`Button: group: should render with node 1`] = `
+<div
+  className="group"
+>
+  <Button
+    className=""
+    color="blue"
+    component="button"
+    fullWidth={false}
+    loading={false}
+  >
+    <h5>
+      SEEK
+    </h5>
+  </Button>
+</div>
+`;
+
 exports[`Button: should render as an anchor with href="https://www.seek.com.au" 1`] = `
 <a
   className="root root_isPink"

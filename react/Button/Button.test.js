@@ -60,4 +60,16 @@ describe('Button:', () => {
     const wrapper = shallow(<Button color="pink" component={CustomComponent}>SEEK</Button>);
     expect(wrapper).toMatchSnapshot();
   });
+
+  describe('group:', () => {
+    it('should render a button group', () => {
+      const wrapper = shallow(<Button group />);
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render with node', () => {
+      const wrapper = shallow(<Button group><Button color="blue"><h5>SEEK</h5></Button></Button>);
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
 });
