@@ -135,7 +135,7 @@ export default class Playground extends Component {
     return (
       <div>
         <JobStreetHeader user={{}} />
-        <JobStreetFooter />
+        <JobStreetFooter language="vi" country="vn" />
         <Header linkRenderer={dummyLinkRenderer} />
 
         <PageBlock className={styles.header}>

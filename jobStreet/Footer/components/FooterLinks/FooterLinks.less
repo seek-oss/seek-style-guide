@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding:45px 10px 35px;
+  border-bottom: 1px solid #ccc;
+}
+.item {
+  &:after {
+    font-size: 1.1rem;
+    content: '|';
+    display: inline-block;
+    color: #999;
+  }
+  &:last-child:after {
+    display:none;
+  }
+}
+.link {
+  display: inline-block;
+  padding:0 10px 10px;
+  text-decoration: none;
+  color: #1c3f94;
+}
