@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterLinks component should render supplied messages 1`] = `
+<ul
+  className="list"
+>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://www.jobstreet.com"
+    >
+      JobStreet International
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/sitemap.htm"
+    >
+      Site Map
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/about-us/"
+    >
+      About Us
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/career/JobStreet.htm"
+    >
+      Work With Us
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/about-us/terms-of-use/"
+    >
+      Term of Use
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/about-us/privacy-policy/"
+    >
+      Privacy Policy
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/about-us/safe-job-search-guide/"
+    >
+      Safe Job Search Guide
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/user/"
+    >
+      Help
+    </a>
+  </li>
+  <li
+    className="item"
+  >
+    <a
+      className="link"
+      href="https://myjobstreet.jobstreet.com.my/home/feedback.php?site=my&sub=feedback"
+    >
+      Send Feedback
+    </a>
+  </li>
+</ul>
+`;

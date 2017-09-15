@@ -39,6 +39,7 @@ export { default as ErrorIcon } from './ErrorIcon/ErrorIcon';
 export { default as FacebookIcon } from './FacebookIcon/FacebookIcon';
 export { default as HeartIcon } from './HeartIcon/HeartIcon';
 export { default as HelpIcon } from './HelpIcon/HelpIcon';
+export { default as InfoIcon } from './InfoIcon/InfoIcon';
 export { default as LinkedInIcon } from './LinkedInIcon/LinkedInIcon';
 export { default as MailIcon } from './MailIcon/MailIcon';
 export { default as PlusIcon } from './PlusIcon/PlusIcon';
@@ -57,7 +58,7 @@ export { default as HamburgerIcon } from './HamburgerIcon/HamburgerIcon';
 // Fields
 export { default as Autosuggest } from './Autosuggest/Autosuggest';
 export { default as Checkbox } from './Checkbox/Checkbox';
-export { default as ClearField } from './TextField/ClearField/ClearField';
+export { default as ClearField } from './ClearField/ClearField';
 export { default as Dropdown } from './Dropdown/Dropdown';
 export { default as EmailField } from './EmailField/EmailField';
 export { default as MonthPicker } from './MonthPicker/MonthPicker';

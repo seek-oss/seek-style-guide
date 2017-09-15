@@ -8,26 +8,29 @@ import Checkbox from 'seek-style-guide/react/Checkbox/Checkbox.demo';
 import SlideToggle from 'seek-style-guide/react/SlideToggle/SlideToggle.demo';
 import Dropdown from 'seek-style-guide/react/Dropdown/Dropdown.demo';
 import Rating from 'seek-style-guide/react/Rating/Rating.demo';
-import HeaderDefault from 'seek-style-guide/react/Header/Header.demo';
-import HeaderJobStreet from 'seek-style-guide/jobStreet/Header/Header.demo';
-import HeaderJobsDB from 'seek-style-guide/jobsDB/Header/Header.demo';
-import Footer from 'seek-style-guide/react/Footer/Footer.demo';
+import DefaultHeader from 'seek-style-guide/react/Header/Header.demo';
+import JobStreetHeader from 'seek-style-guide/jobStreet/Header/Header.demo';
+import JobsDBHeader from 'seek-style-guide/jobsDB/Header/Header.demo';
+import DefaultFooter from 'seek-style-guide/react/Footer/Footer.demo';
+import JobStreetFooter from 'seek-style-guide/jobStreet/Footer/Footer.demo';
 import Loader from 'seek-style-guide/react/Loader/Loader.demo';
 import JobCard from 'seek-style-guide/react/JobCard/JobCard.demo';
-import LogoDefault from 'seek-style-guide/react/Logo/Logo.demo';
-import LogoJobStreet from 'seek-style-guide/jobStreet/Logo/Logo.demo';
-import LogoJobsDB from 'seek-style-guide/jobsDB/Logo/Logo.demo';
+import DefaultLogo from 'seek-style-guide/react/Logo/Logo.demo';
+import JobStreetLogo from 'seek-style-guide/jobStreet/Logo/Logo.demo';
+import JobsDBLogo from 'seek-style-guide/jobsDB/Logo/Logo.demo';
 
 const tenant = process.env.SKU_TENANT;
 
-let Header = HeaderDefault;
-let Logo = LogoDefault;
+let Header = DefaultHeader;
+let Logo = DefaultLogo;
+let Footer = DefaultFooter;
 if (tenant === 'jobStreet'){
-  Header = HeaderJobStreet;
-  Logo = LogoJobStreet;
+  Header = JobStreetHeader;
+  Logo = JobStreetLogo;
+  Footer = JobStreetFooter;
 }else if (tenant === 'jobsDB'){
-  Header = HeaderJobsDB;
-  Logo = LogoJobsDB;
+  Header = JobsDBHeader;
+  Logo = JobsDBLogo;
 }
 
 export default [
