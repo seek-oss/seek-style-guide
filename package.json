@@ -97,6 +97,7 @@
     "chai": "^3.5.0",
     "classnames": "^2.2.5",
     "commitizen": "^2.9.5",
+    "condition-circle": "^1.5.0",
     "cz-conventional-changelog": "^2.0.0",
     "ejs": "^2.4.2",
     "es6-promisify": "^5.0.0",
@@ -135,7 +136,7 @@
     "react-test-renderer": "^15.4.2",
     "rewrite-files": "^1.0.1",
     "rimraf": "^2.6.1",
-    "semantic-release": "^6.3.2",
+    "semantic-release": "^7.0.2",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "static-site-generator-webpack-plugin": "^3.4.1",
@@ -150,5 +151,8 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-fail-plugin": "^1.0.6",
     "zip-folder": "^1.0.0"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   }
 }
