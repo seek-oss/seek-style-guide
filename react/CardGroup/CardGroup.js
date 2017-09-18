@@ -2,16 +2,14 @@ import Card from '../Card/Card';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function CardGroup({ className, children, transparent, ...restProps }) {
+export default function CardGroup({ children, ...restProps }) {
   return (
-    <Card {...restProps} group className={className} transparent={transparent}>
+    <Card {...restProps} group>
       {children}
     </Card>
   );
 }
 
 CardGroup.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  transparent: PropTypes.bool
+  children: PropTypes.node.isRequired
 };
