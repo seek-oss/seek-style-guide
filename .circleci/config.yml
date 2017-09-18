@@ -15,6 +15,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run deploy-surge -- -d seek-asia-style-guide--$CIRCLE_SHA1.surge.sh
   deploy:
     docker:
       - image: circleci/node:8.5
