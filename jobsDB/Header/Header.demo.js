@@ -24,54 +24,11 @@ export default {
   component: Header,
   initialProps: {
     authenticationStatus: 'authenticated',
-    userName: 'Olivia',
     user: {},
-    userEmail: 'olivia.smith@example.com',
-    divider: false,
     linkRenderer: makeDummyLinkRendererForPath(ROUTE),
     returnUrl: '/jobs'
   },
   options: [
-    {
-      label: 'States',
-      type: 'checklist',
-      states: [
-        {
-          label: 'Divider',
-          transformProps: props => ({
-            ...props,
-            divider: true
-          })
-        },
-        {
-          label: 'No User Name',
-          transformProps: props => ({
-            ...props,
-            userName: ''
-          })
-        }
-      ]
-    },
-    {
-      label: 'Active Tab',
-      type: 'radio',
-      states: [
-        null,
-        'Job Search',
-        '$150k+ Jobs',
-        'Profile',
-        'Saved & Applied Jobs',
-        'Recommended Jobs',
-        'Company Reviews',
-        'Advice & Tips'
-      ].map(activeTab => ({
-        label: activeTab || 'No active tab',
-        transformProps: props => ({
-          ...props,
-          activeTab
-        })
-      }))
-    },
     {
       label: 'Authentication',
       type: 'radio',
@@ -92,23 +49,6 @@ export default {
           transformProps: ({ userName, ...props }) => ({
             ...props,
             authenticationStatus: 'pending'
-          })
-        }
-      ]
-    },
-    {
-      label: 'Locale',
-      type: 'radio',
-      states: [
-        {
-          label: 'AU',
-          transformProps: props => props
-        },
-        {
-          label: 'NZ',
-          transformProps: props => ({
-            ...props,
-            locale: 'NZ'
           })
         }
       ]

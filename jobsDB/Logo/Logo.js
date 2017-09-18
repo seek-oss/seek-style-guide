@@ -4,12 +4,6 @@ import classnames from 'classnames';
 import styles from './Logo.less';
 import LogoIcon from './LogoIcon';
 
-const viewportDimensions = type => ({
-  default: { height: 44, width: 200 }
-})[type];
-
-const getViewPortDimension = (type, dimension) => viewportDimensions(type)[dimension];
-
 export default function Logo({
   svgClassName,
   invert,
@@ -19,9 +13,9 @@ export default function Logo({
     [styles.root]: true,
     [styles.invert]: invert
   });
-  const type = 'default';
-  const height = getViewPortDimension(type, 'height');
-  const width = getViewPortDimension(type, 'width');
+  
+  const height = 44;
+  const width = 200;
 
   return (
     <div {...restProps}>

@@ -38,8 +38,7 @@ class Header extends Component {
         const { user } = this.props;
         const { isNavActive } = this.state;
         const userLinks = links.getUserLinks(user.candidate);
-        console.log(user);
-
+        
         return (
         <header className={styles.root} role="banner" aria-label="Primary navigation">
           <section className={styles.content}>
