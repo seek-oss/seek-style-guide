@@ -13,7 +13,6 @@ import {
   AsidedLayout,
   Columns,
   Card,
-  CardGroup,
   Text,
   Positive,
   Critical,
@@ -303,7 +302,7 @@ export default class Playground extends Component {
           </Section>
 
           <AsidedLayout reverse renderAside={renderAsideRecommendedJobs} size="240px">
-            <CardGroup>
+            <Card group>
               {
                 [0, 1, 2, 3].map(n => (
                   <Card key={n}>
@@ -315,7 +314,7 @@ export default class Playground extends Component {
                   </Card>
                 ))
               }
-            </CardGroup>
+            </Card>
           </AsidedLayout>
         </PageBlock>
 
@@ -326,7 +325,7 @@ export default class Playground extends Component {
             <Tab>Applied</Tab>
           </Section>
 
-          <CardGroup>
+          <Card group>
             {
               [0, 1, 2, 3].map(n => (
                 <Card key={n}>
@@ -348,7 +347,7 @@ export default class Playground extends Component {
                 </Card>
               ))
             }
-          </CardGroup>
+          </Card>
         </PageBlock>
 
         <PageBlock>
@@ -361,7 +360,7 @@ export default class Playground extends Component {
           </Section>
 
           <AsidedLayout reverse renderAside={renderJobDetailMetadata} size="360px">
-            <CardGroup>
+            <Card group>
               <Card>
                 <Section>
                   <Text>
@@ -376,7 +375,7 @@ export default class Playground extends Component {
                   <Text>You must have the <Strong>right to live and work</Strong> in this location to apply for this job.</Text>
                 </Section>
               </Card>
-            </CardGroup>
+            </Card>
           </AsidedLayout>
         </PageBlock>
 
@@ -456,7 +455,7 @@ export default class Playground extends Component {
           <Section header>
             <Text hero>Text variants</Text>
           </Section>
-          <CardGroup>
+          <Card group>
             <Card>
               <Section>
                 <Text heading>Text component modifiers</Text>
@@ -475,7 +474,7 @@ export default class Playground extends Component {
                 <Text><Strong>Strong text</Strong></Text>
               </Section>
             </Card>
-          </CardGroup>
+          </Card>
         </PageBlock>
 
         <Footer linkRenderer={dummyLinkRenderer} />

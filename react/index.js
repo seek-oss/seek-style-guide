@@ -23,7 +23,6 @@ export { default as TextLink } from './TextLink/TextLink';
 // Layout
 export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';
 export { default as Card } from './Card/Card';
-export { default as CardGroup } from './CardGroup/CardGroup';
 export { default as Columns } from './Columns/Columns';
 export { default as Hidden } from './Hidden/Hidden';
 export { default as PageBlock } from './PageBlock/PageBlock';
