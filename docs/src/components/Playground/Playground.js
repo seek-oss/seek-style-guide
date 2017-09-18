@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import {
   TextField,
   Button,
+  ButtonGroup,
   StarIcon,
   MailIcon,
   PageBlock,
@@ -140,53 +141,53 @@ export default class Playground extends Component {
           <AsidedLayout reverse size="340px">
             <Card>
               <Section>
-                <Button group>
+                <ButtonGroup>
                   <Button color="pink">Sign In</Button>
-                </Button>
+                </ButtonGroup>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Button group>
+                <ButtonGroup>
                   <Button color="pink">Create a Profile</Button>
                   <Button color="transparent">Cancel</Button>
-                </Button>
+                </ButtonGroup>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Button group>
+                <ButtonGroup>
                   <Button color="grey">Save job</Button>
                   <Button color="grey">Send job</Button>
-                </Button>
+                </ButtonGroup>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Button group>
+                <ButtonGroup>
                   <Button color="pink">Save</Button>
                   <Button color="transparent">Clear</Button>
                   <Button color="transparent">Cancel</Button>
-                </Button>
+                </ButtonGroup>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Button group>
+                <ButtonGroup>
                   <Button color="pink">Save</Button>
                   <Button color="grey">Clear</Button>
                   <Button color="grey">Cancel</Button>
-                </Button>
+                </ButtonGroup>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Button group>
+                <ButtonGroup>
                   <Button color="pink">Save</Button>
                   <Button color="grey">Clear</Button>
                   <Button color="grey">Cancel</Button>
                   <Button color="grey">Button Four Is Longer</Button>
-                </Button>
+                </ButtonGroup>
               </Section>
             </Card>
           </AsidedLayout>

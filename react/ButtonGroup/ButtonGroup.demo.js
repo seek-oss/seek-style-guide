@@ -1,12 +1,11 @@
 import React from 'react';
-import { Button } from 'seek-style-guide/react';
+import { ButtonGroup, Button } from 'seek-style-guide/react';
 
 export default {
   route: '/button-group',
   title: 'Button Group',
-  component: Button,
+  component: ButtonGroup,
   initialProps: {
-    group: true,
     children: <Button color="pink">Create a Profile</Button>
   },
   options: [
