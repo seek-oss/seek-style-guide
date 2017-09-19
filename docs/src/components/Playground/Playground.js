@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import {
   TextField,
   Button,
+  ButtonGroup,
   StarIcon,
   MailIcon,
   PageBlock,
@@ -133,6 +134,55 @@ export default class Playground extends Component {
     return (
       <div>
         <Header linkRenderer={dummyLinkRenderer} />
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Button Groups</Text>
+          </Section>
+          <AsidedLayout reverse size="340px">
+            <Card>
+              <Section>
+                <ButtonGroup>
+                  <Button color="pink">Sign In</Button>
+                </ButtonGroup>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <ButtonGroup>
+                  <Button color="pink">Create a Profile</Button>
+                  <Button color="transparent">Cancel</Button>
+                </ButtonGroup>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <ButtonGroup>
+                  <Button color="grey">Save job</Button>
+                  <Button color="grey">Send job</Button>
+                </ButtonGroup>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <ButtonGroup>
+                  <Button color="pink">Save</Button>
+                  <Button color="transparent">Clear</Button>
+                  <Button color="transparent">Cancel</Button>
+                </ButtonGroup>
+              </Section>
+            </Card>
+            <Card>
+              <Section>
+                <ButtonGroup>
+                  <Button color="pink">Save</Button>
+                  <Button color="grey">Clear</Button>
+                  <Button color="grey">Cancel</Button>
+                </ButtonGroup>
+              </Section>
+            </Card>
+          </AsidedLayout>
+        </PageBlock>
 
         <PageBlock className={styles.header}>
           <AsidedLayout size="340px">
