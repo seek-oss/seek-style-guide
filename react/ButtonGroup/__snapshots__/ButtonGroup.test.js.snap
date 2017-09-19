@@ -1,12 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonGroup: should render a button group 1`] = `
+exports[`ButtonGroup: should combine className when passed in 1`] = `
 <div
-  className="group"
-/>
+  className="combineMe group"
+>
+  <Button
+    className=""
+    color="blue"
+    component="button"
+    fullWidth={false}
+    loading={false}
+  >
+    <h5>
+      SEEK
+    </h5>
+  </Button>
+</div>
 `;
 
-exports[`ButtonGroup: should render with node 1`] = `
+exports[`ButtonGroup: should render a button group with node 1`] = `
 <div
   className="group"
 >
