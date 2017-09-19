@@ -40,18 +40,6 @@ export default {
               <Button key="3" color="transparent">Cancel</Button>
             ]
           })
-        },
-        {
-          label: 'Four Buttons',
-          transformProps: props => ({
-            ...props,
-            children: [
-              <Button key="1" color="gray">Send</Button>,
-              <Button key="2" color="gray">Print</Button>,
-              <Button key="3" color="gray">Clear</Button>,
-              <Button key="4" color="gray">Cancel</Button>
-            ]
-          })
         }
       ]
     }

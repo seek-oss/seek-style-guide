@@ -180,16 +180,6 @@ export default class Playground extends Component {
                 </ButtonGroup>
               </Section>
             </Card>
-            <Card>
-              <Section>
-                <ButtonGroup>
-                  <Button color="pink">Save</Button>
-                  <Button color="grey">Clear</Button>
-                  <Button color="grey">Cancel</Button>
-                  <Button color="grey">Button Four Is Longer</Button>
-                </ButtonGroup>
-              </Section>
-            </Card>
           </AsidedLayout>
         </PageBlock>
 
