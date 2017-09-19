@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PageBlock, AsidedLayout, Card, Section, Paragraph, Text, TextLink, Strong } from 'seek-style-guide/react';
+import { PageBlock, AsidedLayout, Card, CardGroup, Section, Paragraph, Text, TextLink, Strong } from 'seek-style-guide/react';
 import Demo from '../Demo/Demo';
 
 const BackgroundContainer = ({ component: DemoComponent, componentProps }) => (
@@ -284,7 +284,7 @@ export default () => (
               <Section header>
                 <Text headline>Lorem ipsum</Text>
               </Section>
-              <Card group>
+              <CardGroup>
                 <Card>
                   <Section>
                     <Text heading>Lorem ipsum</Text>
@@ -303,7 +303,7 @@ export default () => (
                     <Text>{loremIpsum}</Text>
                   </Section>
                 </Card>
-              </Card>
+              </CardGroup>
             </div>
           )
         },
