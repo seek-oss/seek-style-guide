@@ -1,15 +1,8 @@
 import Card from '../Card/Card';
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function CardGroup({ children, ...restProps }) {
+export default function CardGroup(props) {
   return (
-    <Card {...restProps} group>
-      {children}
-    </Card>
+    <Card group {...props} />
   );
 }
-
-CardGroup.propTypes = {
-  children: PropTypes.node.isRequired
-};
