@@ -1,10 +1,25 @@
 import React from 'react';
-import { ButtonGroup, Button } from 'seek-style-guide/react';
+import PropTypes from 'prop-types';
+import { ButtonGroup, Button, PageBlock, Section } from 'seek-style-guide/react';
+
+const ButtonGroupContainer = ({ component: DemoComponent, componentProps }) => (
+  <PageBlock>
+    <Section>
+      <DemoComponent {...componentProps} />
+    </Section>
+  </PageBlock>
+);
+ButtonGroupContainer.propTypes = {
+  component: PropTypes.any,
+  componentProps: PropTypes.object.isRequired
+};
 
 export default {
   route: '/button-group',
   title: 'Button Group',
   component: ButtonGroup,
+  container: ButtonGroupContainer,
+  block: true,
   initialProps: {
     children: <Button color="pink">Create a Profile</Button>
   },
