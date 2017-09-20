@@ -85,6 +85,13 @@ export default {
               count: 500 - value.length
             })
           })
+        },
+        {
+          label: 'Description',
+          transformProps: props => ({
+            ...props,
+            description: 'Describe a descriptive description descriptively'
+          })
         }
       ]
     },

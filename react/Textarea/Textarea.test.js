@@ -100,6 +100,18 @@ describe('Textarea', () => {
     });
   });
 
+  describe('description', () => {
+    it('should not be rendered by default', () => {
+      render(<Textarea />);
+      expect(textarea.props.children[1]).to.equal(null);
+    });
+
+    it('should render description when specified', () => {
+      render(<Textarea description="test" />);
+      expect(textarea.props.children[1].props.children).to.equal('test');
+    });
+  });
+
   describe('characterCount', () => {
     it('should not be rendered by default', () => {
       render(<Textarea />);
