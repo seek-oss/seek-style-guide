@@ -15,6 +15,19 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+  surge:
+     docker:
+       - image: circleci/node:8.5
+     working_directory: ~/repo
+     steps:
+       - checkout
+       - restore_cache:
+           keys:
+           - v1-dependencies-{{ checksum "package.json" }}
+           - v1-dependencies-
+       - run: npm install
+       - run: npm run build
+       - run: npm run deploy-surge -- -d seek-asia-style-guide--$CIRCLE_SHA1.surge.sh
   deploy:
     docker:
       - image: circleci/node:8.5
@@ -36,6 +49,12 @@ workflows:
   status-check:
     jobs:
       - build:
+          filters:
+            branches:
+              ignore: master
+      - surge:
+          requires:
+            - build
           filters:
             branches:
               ignore: master
