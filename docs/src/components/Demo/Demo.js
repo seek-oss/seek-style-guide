@@ -104,7 +104,7 @@ export default class Demo extends Component {
   };
 
   calculateProps = () => {
-    const { spec: { initialProps, options } } = this.props;
+    const { spec: { initialProps, options} } = this.props;
     const { activeStates } = this.state;
 
     return options.reduce((outerProps, option) => {
@@ -126,9 +126,9 @@ export default class Demo extends Component {
       block,
       component: DemoComponent,
       container: Container = DefaultContainer,
-      options
+      options,
+      tenantPath
     } = this.props.spec;
-
     const codeElement = <DemoComponent {...this.calculateProps()} />;
 
     return (
@@ -168,7 +168,7 @@ export default class Demo extends Component {
           null
         }
         <PageBlock className={styles.codeBlock}>
-          <Code jsx={codeElement} />
+          <Code jsx={codeElement} tenantPath={tenantPath?tenantPath:'react'}/>
         </PageBlock>
       </div>
     );

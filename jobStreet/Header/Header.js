@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import Logo from '../Logo/Logo';
 import Text from 'seek-asia-style-guide/react/Text/Text';
 import MenuIcon from 'seek-asia-style-guide/react/HamburgerIcon/HamburgerIcon';
 import Nav from './components/Nav/Nav';
@@ -12,7 +13,7 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isNavActive: false,
+            isNavActive: false
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -38,6 +39,8 @@ class Header extends Component {
         const userLinks = links.getUserLinks(user.candidate);
 
         return (
+        <header className={styles.root} role="banner" aria-label="Primary navigation">
+          <section className={styles.content}>
             <div
                 className={styles.container}
             >
@@ -70,14 +73,8 @@ class Header extends Component {
                 <div className={styles.bannerWrapper}>
                     <div className={styles.bannerContainer}>
                         <div className={styles.banner}>
-                            <a className={styles.logoLink} href="/">
-                                <img
-                                    src={"https://cdn.companyreview.co/1.0.38/jobstreet-cpp/img/jobstreet-my.png"}
-                                    className={styles.logo}
-                                    alt={"JobStreet"}
-                                    width="150"
-                                    height="28.5"
-                                />
+                            <a className={styles.logoLink} href="/" alt={"JobStreet"}>
+                                <Logo svgClassName={styles.logoSvg}/>                                
                             </a>
                             <a
                                 className={styles.link}
@@ -89,6 +86,8 @@ class Header extends Component {
                     </div>
                 </div>
             </div>
+        </section>
+        </header>
         );
     }
 }
