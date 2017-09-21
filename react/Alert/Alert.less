@@ -1,0 +1,48 @@
+@import (reference) "~seek-style-guide/theme";
+
+@light-purple: #f9f6fb;
+@dark-purple: #9556b7;
+@icon-width: @grid-row-height * 3;
+@gutter-adjustment: 100px;
+
+.root {
+  position: relative;
+  // margin: 0 -@gutter-adjustment @grid-row-height * 3 -@gutter-adjustment;
+  padding: (@grid-row-height * 2) @grid-gutter-width;
+  background-color: @light-purple;
+  color: @dark-purple;
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: round(@icon-width / 2) solid transparent;
+    border-right: round(@icon-width / 2) solid transparent;
+    border-bottom: @icon-width - 10 solid @light-purple;
+    left: @grid-gutter-width;
+    top: -@icon-width + 10;
+  }
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: ~"calc(100% - (@{icon-width} + @{grid-gutter-width}))";
+}
+
+.icon {
+  vertical-align: middle;
+  text-align: center;
+  width: @icon-width;
+  height: @icon-width;
+  margin-right: @grid-gutter-width;
+  @media @mobile {
+    vertical-align: top;
+  }
+}
+
+.iconSvg {
+  width: @icon-width;
+  height: @icon-width;
+}

@@ -9,6 +9,7 @@ import Checkbox from 'seek-style-guide/react/Checkbox/Checkbox.demo';
 import SlideToggle from 'seek-style-guide/react/SlideToggle/SlideToggle.demo';
 import Dropdown from 'seek-style-guide/react/Dropdown/Dropdown.demo';
 import Rating from 'seek-style-guide/react/Rating/Rating.demo';
+import Alert from 'seek-style-guide/react/Alert/Alert.demo';
 import Header from 'seek-style-guide/react/Header/Header.demo';
 import Footer from 'seek-style-guide/react/Footer/Footer.demo';
 import Loader from 'seek-style-guide/react/Loader/Loader.demo';
@@ -26,6 +27,7 @@ export default [
   SlideToggle,
   Dropdown,
   Rating,
+  Alert,
   Loader,
   Logo,
   Header,
