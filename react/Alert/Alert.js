@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import Text from '../Text/Text';
 import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
 import InfoIcon from '../InfoIcon/InfoIcon';
-import ErrorIcon from '../ErrorIcon/ErrorIcon';
+import CriticalIcon from '../CriticalIcon/CriticalIcon';
 import HelpIcon from '../HelpIcon/HelpIcon';
 
 export const TYPE = {
@@ -26,7 +26,7 @@ export const LEVEL = {
 const ICONS = {
   [TYPE.POSITIVE]: TickCircleIcon,
   [TYPE.INFO]: InfoIcon,
-  [TYPE.CRITICAL]: ErrorIcon,
+  [TYPE.CRITICAL]: CriticalIcon,
   [TYPE.HELP]: HelpIcon
 };
 

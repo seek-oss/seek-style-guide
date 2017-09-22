@@ -34,6 +34,7 @@ export { default as Section } from './Section/Section';
 export { default as ChevronIcon } from './ChevronIcon/ChevronIcon';
 export { default as ClearIcon } from './ClearIcon/ClearIcon';
 export { default as CloseIcon } from './CloseIcon/CloseIcon';
+export { default as CriticalIcon } from './CriticalIcon/CriticalIcon';
 export { default as CrossIcon } from './CrossIcon/CrossIcon';
 export { default as DeleteIcon } from './DeleteIcon/DeleteIcon';
 export { default as DownRightArrowIcon } from './DownRightArrowIcon/DownRightArrowIcon';
