@@ -1,7 +1,14 @@
 @import (reference) "~seek-style-guide/theme";
 
-@light-purple: #f9f6fb;
-@dark-purple: #9556b7;
+@positive-light: #f3f9f2;
+@positive: #169400;
+@info-light: #f9f6fb;
+@info: #9556b7;
+@critical-light: @sk-white;
+@critical: @sk-pink;
+@help-light: @sk-off-white;
+@help: @sk-charcoal;
+
 @icon-width: @grid-row-height * 3;
 @gutter-adjustment: 100px;
 
@@ -9,19 +16,73 @@
   position: relative;
   // margin: 0 -@gutter-adjustment @grid-row-height * 3 -@gutter-adjustment;
   padding: (@grid-row-height * 2) @grid-gutter-width;
-  background-color: @light-purple;
-  color: @dark-purple;
+}
 
-  &::before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-left: round(@icon-width / 2) solid transparent;
-    border-right: round(@icon-width / 2) solid transparent;
-    border-bottom: @icon-width - 10 solid @light-purple;
-    left: @grid-gutter-width;
-    top: -@icon-width + 10;
+// .triangle {
+//   &::before {
+//     content: '';
+//     width: 0;
+//     height: 0;
+//     position: absolute;
+//     border-left: round(@icon-width / 2) solid transparent;
+//     border-right: round(@icon-width / 2) solid transparent;
+//     border-bottom: @icon-width - 10 solid @light-purple;
+//     left: @grid-gutter-width;
+//     top: -@icon-width + 10;
+//   }
+// }
+
+.positive {
+  &.primary {
+    background-color: @positive;
+    color: @sk-white;
+  }
+
+  &.secondary {
+    background-color: @positive-light;
+    color: @positive;
+  }
+
+  &.tertiary {
+    color: @positive;
+  }
+}
+
+.info {
+  &.primary {
+    background-color: @info;
+    color: @sk-white;
+  }
+
+  &.secondary {
+    background-color: @info-light;
+    color: @info;
+  }
+
+  &.tertiary {
+    color: @info;
+  }
+}
+
+.critical {
+  &.secondary {
+    background-color: @critical-light;
+    color: @critical;
+  }
+
+  &.tertiary {
+    color: @critical;
+  }
+}
+
+.help {
+  &.secondary {
+    background-color: @help-light;
+    color: @help;
+  }
+
+  &.tertiary {
+    color: @help;
   }
 }
 
@@ -40,9 +101,9 @@
   @media @mobile {
     vertical-align: top;
   }
-}
 
-.iconSvg {
-  width: @icon-width;
-  height: @icon-width;
+  svg { // stylelint-disable-line selector-max-type
+    width: @icon-width;
+    height: @icon-width;
+  }
 }
