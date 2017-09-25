@@ -3,6 +3,7 @@ export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  /
 
 // Components
 export { default as Button } from './Button/Button';
+export { default as ButtonGroup } from './ButtonGroup/ButtonGroup';
 export { default as Footer } from './Footer/Footer';
 export { default as Header } from './Header/Header';
 export { default as Loader } from './Loader/Loader';
@@ -22,6 +23,7 @@ export { default as TextLink } from './TextLink/TextLink';
 // Layout
 export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';
 export { default as Card } from './Card/Card';
+export { default as CardGroup } from './CardGroup/CardGroup';
 export { default as Columns } from './Columns/Columns';
 export { default as Hidden } from './Hidden/Hidden';
 export { default as PageBlock } from './PageBlock/PageBlock';

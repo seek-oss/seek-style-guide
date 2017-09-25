@@ -111,3 +111,33 @@
 .fullWidth {
   width: 100%;
 }
+
+.group {
+  width: 100%;
+
+  .root {
+    vertical-align: top;
+    @media only screen and (max-width: 500px) {
+      width: 100%;
+    }
+    &:not(.root_isTransparent) {
+      @media @mobile {
+        padding-left: @grid-gutter-width * 2;
+        padding-right: @grid-gutter-width * 2;
+      }
+    }
+    & + .root {
+      margin-left: @grid-gutter-width / 2;
+      @media only screen and (max-width: 500px) {
+        margin-top: @grid-row-height;
+        margin-left: 0;
+      }
+    }
+    & + .root_isTransparent {
+      margin-left: @grid-gutter-width * 2;
+      @media only screen and (max-width: 500px) {
+        margin-left: 0;
+      }
+    }
+  }
+}

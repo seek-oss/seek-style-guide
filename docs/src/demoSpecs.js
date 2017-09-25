@@ -1,5 +1,6 @@
 import Text from 'seek-style-guide/react/Text/Text.demo';
 import Button from 'seek-style-guide/react/Button/Button.demo';
+import ButtonGroup from 'seek-style-guide/react/ButtonGroup/ButtonGroup.demo';
 import TextField from 'seek-style-guide/react/TextField/TextField.demo';
 import Autosuggest from 'seek-style-guide/react/Autosuggest/Autosuggest.demo';
 import Textarea from 'seek-style-guide/react/Textarea/Textarea.demo';
@@ -16,6 +17,7 @@ import Logo from 'seek-style-guide/react/Logo/Logo.demo';
 export default [
   Text,
   Button,
+  ButtonGroup,
   TextField,
   Autosuggest,
   Textarea,
