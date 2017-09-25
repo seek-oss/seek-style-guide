@@ -126,6 +126,10 @@
     width: @icon-width;
     height: @icon-width;
   }
+
+  .primary & {
+    opacity: 0.8;
+  }
 }
 
 .close {
@@ -137,4 +141,13 @@
   color: currentColor;
   margin-left: @alert-gutter;
   vertical-align: middle;
+
+  .primary & {
+    opacity: 0.8;
+  }
+
+  .secondary & {
+    color: @sk-black;
+    opacity: 0.5;
+  }
 }
