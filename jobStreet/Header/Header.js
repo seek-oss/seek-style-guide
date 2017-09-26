@@ -10,9 +10,9 @@ import styles from './header.less';
 import links from './links';
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+  constructor(props) {
+    super(props);
+     this.state = {
             isNavActive: false
         };
         this.handleClick = this.handleClick.bind(this);
@@ -74,13 +74,13 @@ class Header extends Component {
                     <div className={styles.bannerContainer}>
                         <div className={styles.banner}>
                             <a className={styles.logoLink} href="/" alt={"JobStreet"}>
-                                <Logo svgClassName={styles.logoSvg}/>                                
+                                <Logo svgClassName={styles.logoSvg}/>
                             </a>
                             <a
                                 className={styles.link}
                                 href={"https://www.jobstreet.com.my/en/cms/employer"}
                             >
-                                <Text className={styles.employerLink}>Employers</Text>
+                              <Text className={styles.employerLink} strong>Employers</Text>
                             </a>
                         </div>
                     </div>
