@@ -31,6 +31,16 @@ describe('Checkbox', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with checkbox on left hand side', () => {
+    const wrapper = shallow(<Checkbox {...requiredProps} position="left" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render with checkbox on right hand side', () => {
+    const wrapper = shallow(<Checkbox {...requiredProps} position="right" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe('inputProps', () => {
     it('should invoke the onChange handler when touched', () => {
       const handleChange = jest.fn();
