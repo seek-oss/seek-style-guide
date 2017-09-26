@@ -71,13 +71,6 @@ export default {
           })
         },
         {
-          label: 'Secondary Label',
-          transformProps: props => ({
-            ...props,
-            secondaryLabel: '(secondary)'
-          })
-        },
-        {
           label: 'Show Count',
           transformProps: props => ({
             ...props,
