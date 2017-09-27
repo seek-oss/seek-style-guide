@@ -74,6 +74,26 @@ export default {
           })
         }
       ]
+    },
+    {
+      label: 'Checkbox position',
+      type: 'radio',
+      states: [
+        {
+          label: 'Left',
+          transformProps: props => ({
+            ...props,
+            position: 'left'
+          })
+        },
+        {
+          label: 'Right',
+          transformProps: props => ({
+            ...props,
+            position: 'right'
+          })
+        }
+      ]
     }
   ]
 };

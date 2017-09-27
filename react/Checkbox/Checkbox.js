@@ -7,6 +7,8 @@ import classnames from 'classnames';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
+const LEFT = 'left';
+const RIGHT = 'right';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -28,7 +30,8 @@ export default class Checkbox extends Component {
       onChange: PropTypes.func,
       checked: PropTypes.bool.isRequired
     }),
-    type: PropTypes.oneOf([STANDARD, BUTTON])
+    type: PropTypes.oneOf([STANDARD, BUTTON]),
+    position: PropTypes.oneOf([LEFT, RIGHT])
   }
 
   static defaultProps = {
@@ -36,7 +39,8 @@ export default class Checkbox extends Component {
     inputProps: {
       checked: false
     },
-    type: STANDARD
+    type: STANDARD,
+    position: LEFT
   };
 
   renderButton(label) {
@@ -50,9 +54,22 @@ export default class Checkbox extends Component {
   renderStandard(label) {
     return (
       <div className={styles.standard}>
-        <CheckMarkIcon svgClassName={styles.checkMark} className={styles.checkBox} />
-        <span>{label}</span>
+        { this.renderCheckBox(LEFT) }
+        <span>{label}</span>        
+        { this.renderCheckBox(RIGHT) }
       </div>
+    );
+  }
+
+  renderCheckBox(currentPosition) {
+    const { position } = this.props;
+    const checkBoxStyle = classnames(
+      styles.checkBox,
+      position === LEFT ? styles.checkBoxLeft : styles.checkBoxRight
+    );
+
+    return position === currentPosition && (
+      <CheckMarkIcon svgClassName={styles.checkMark} className={checkBoxStyle} />
     );
   }
 

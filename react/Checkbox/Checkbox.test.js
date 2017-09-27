@@ -6,7 +6,8 @@ import Checkbox from './Checkbox';
 describe('Checkbox', () => {
   const requiredProps = {
     id: 'still-in-role',
-    label: 'Still in role'
+    label: 'Still in role',
+    inputProps: { checked: false }
   };
 
   it('should render with simple props', () => {
@@ -27,6 +28,16 @@ describe('Checkbox', () => {
 
   it('should render with button style', () => {
     const wrapper = shallow(<Checkbox {...requiredProps} type="button" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render with checkbox on left hand side', () => {
+    const wrapper = shallow(<Checkbox {...requiredProps} position="left" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render with checkbox on right hand side', () => {
+    const wrapper = shallow(<Checkbox {...requiredProps} position="right" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -54,7 +65,7 @@ describe('Checkbox', () => {
     });
 
     it('should pass through other props to the input', () => {
-      const wrapper = shallow(<Checkbox {...requiredProps} inputProps={{ 'data-automation': 'first-name-field' }} />);
+      const wrapper = shallow(<Checkbox {...requiredProps} inputProps={{ checked: false, 'data-automation': 'first-name-field' }} />);
       expect(wrapper).toMatchSnapshot();
     });
   });
