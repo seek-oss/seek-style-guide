@@ -119,7 +119,9 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -243,7 +245,9 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -476,7 +480,9 @@ exports[`Footer: should render when authenticated 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -601,7 +607,9 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -901,7 +909,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -1025,7 +1035,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -1258,7 +1270,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -1383,7 +1397,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -1683,7 +1699,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -1807,7 +1825,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -2040,7 +2060,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -2165,7 +2187,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -2465,7 +2489,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -2589,7 +2615,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -2822,7 +2850,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -2947,7 +2977,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -3236,7 +3268,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -3360,7 +3394,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -3637,7 +3673,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                />
+                >
+                  
+                </input>
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"

@@ -9,13 +9,10 @@ import {
   scryRenderedDOMComponentsWithClass
 } from 'react-dom/test-utils';
 import { createRenderer } from 'react-test-renderer/shallow';
-import SyntheticEvent from 'react-dom/lib/SyntheticEvent';
 import { findAllWithClass } from 'react-shallow-testutils';
 import TextField from './TextField';
 
 chai.use(sinonChai);
-
-const eventMatcher = sinon.match.instanceOf(SyntheticEvent);
 
 const renderer = createRenderer();
 
@@ -142,7 +139,6 @@ describe('TextField', () => {
       renderToDom(<TextField onClear={handleClear} />);
       clickClear();
       expect(handleClear.calledOnce).to.equal(true);
-      expect(handleClear).to.be.calledWith(eventMatcher);
     });
 
     it('should focus the input when clicked', () => {
