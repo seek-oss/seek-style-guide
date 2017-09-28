@@ -1,6 +1,11 @@
 import React from 'react';
-import { Router, browserHistory } from 'react-router';
+import { Router } from 'react-router';
+import { createHistory } from 'history';
 import routes from './Routes';
+
+const browserHistory = createHistory({
+  basename: process.env.BASE_HREF
+});
 
 export default function RouterComponent() {
   return (

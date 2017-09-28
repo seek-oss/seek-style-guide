@@ -102,6 +102,7 @@
     "gh-pages": "^0.11.0",
     "glob": "^7.1.1",
     "hex-rgb": "^1.0.0",
+    "history": "^3.3.0",
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.12.0",
     "identity-obj-proxy": "^3.0.0",
