@@ -1,11 +1,11 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Router from './Router';
 
 const appElement = document.getElementById('app');
 
-render(
+hydrate(
   <AppContainer>
     <Router />
   </AppContainer>,
