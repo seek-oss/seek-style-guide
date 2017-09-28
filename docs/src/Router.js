@@ -1,9 +1,9 @@
 import React from 'react';
 import { Router } from 'react-router';
-import { createHistory } from 'history';
+import { createHistory, useBasename } from 'history';
 import routes from './Routes';
 
-const browserHistory = createHistory({
+const browserHistory = useBasename(createHistory)({
   basename: process.env.BASE_HREF
 });
 
