@@ -57,10 +57,8 @@ const config = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-        BASE_HREF: JSON.stringify(process.env.BASE_HREF)
-      }
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     }),
     new StaticSiteGeneratorPlugin({
       crawl: true,
