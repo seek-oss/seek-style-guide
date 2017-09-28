@@ -1,27 +1,26 @@
 [![CircleCI](https://circleci.com/gh/seekinternational/seek-asia-style-guide.svg?style=svg)](https://circleci.com/gh/seekinternational/seek-asia-style-guide)
 
-# WIP #
-
-This is a fresh fork of the SEEK living style guide, in the assumption that the fundamentals and primitives are equally applicable to a SEEK Asia project, even if the brand is not.
-
-- References to seek and the seek style guide are temporary and will be removed for SEEK Asia equivalents
-- This repo does not yet have the mature build pipeline/workflow of its parent.
-
 # seek-asia-style-guide
 
-Living style guide for SEEK ASIA, based on the [SEEK Asia style guide][https://github.com/seekinternational/seek-asia-style-guide] powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
+Living style guide for SEEK ASIA, powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
 
 If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as quickly as possible, while simplifying the process of keeping your development environment up to date.
+
+## Demo site
+
+The easiest way to explore the components offered by the style guide is browsing the [demo site](https://seekinternational.github.io/seek-asia-style-guide/) - use the hamburger menu to access the goodies.
+
+You can also run the demo site locally by checking out this repo and running `npm start`
 
 ## Installation
 
 ```bash
-$ npm install --save seek-style-guide
+$ npm install --save seek-asia-style-guide
 ```
 
 ## Upgrading
 
-Consumers can stay up to date by following our [release notes](https://github.com/seek-oss/seek-style-guide/releases), which are published automatically whenever a new release is published to [npm](https://www.npmjs.com/package/seek-style-guide).
+Consumers can stay up to date by following our [release notes](https://github.com/seekinternational/seek-asia-style-guide/releases), which are published automatically whenever a new release is published to [npm](https://www.npmjs.com/package/seek-asia-style-guide).
 
 ## Setup
 
@@ -32,17 +31,16 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   render() {
-    const locale = 'AU';
     const title = '...';
     const meta = [
       { name: 'description', content: '...' }
     ];
     const link = [
-      { rel: 'canonical', href: 'https://www.seek.com.au/' }
+      { rel: 'canonical', href: 'https://www.seekasia.com/' }
     ];
 
     return (
-      <StyleGuideProvider locale={locale} title={title} meta={meta} link={link}>
+      <StyleGuideProvider title={title} meta={meta} link={link}>
         ...
       </StyleGuideProvider>
     );
@@ -52,30 +50,10 @@ export default class App extends Component {
 
 `StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
 
-### Applying the Standard Header and Footer
-
-The standard header and footer are provided as React components:
-
-```js
-import { Header, Footer } from 'seek-asia-style-guide/react';
-```
-
-The `<Header>` component accepts the following props:
-
-- **locale:** `'AU'` (default) or `'NZ'`
-- **authenticated:** `null/undefined` (default, authentication pending), `true` or `false`
-- **userName:** User's display name, when authenticated
-- **activeTab:** Text of the active tab, e.g. `'Job Search'`
-- **divider:** `true` (default, renders a blue divider below the navigation tabs) or `false`
-- **linkRenderer:** Function to allow custom rendering of links. The default implementation simply renders a standard link, spreading all props: `props => <a {...props} />`
-
-The `<Footer>` component accepts the following props:
-- **locale:** See above.
-- **linkRenderer:** See above.
-
 ## High Level Components
 
 As much as possible, you should aim to minimise the amount of custom CSS you need to write. This is achieved by leveraging our suite of high level components, which are demonstrated on our [style guide documentation site](https://seekinternational.github.io/seek-style-guide/).
+
 
 ## Low Level Styling
 
@@ -84,7 +62,7 @@ For more advanced pages, if you need to drop down into Less, the style guide pro
 In any style sheet that depends on the style guide, first import the Less theme by reference.
 
 ```less
-@import (reference) "~seek-style-guide/theme";
+@import (reference) "~seek-asia-style-guide/theme";
 ```
 
 ### Responsive Breakpoint
@@ -97,51 +75,6 @@ The style guide exposes one responsive breakpoint:
 
 Content should otherwise be responsive within its container. The set of included components follow this model internally if you'd like to get a sense of what this looks like in practice.
 
-### Color Variables
-
-As much as possible, colors should be directly imported from the style guide.
-
-The following colors are provided:
-
-```less
-// Brand colors
-@sk-blue
-@sk-pink
-@sk-green
-@sk-purple
-
-// Partner brand colors
-@sk-business
-@sk-volunteer
-@sk-learning-light
-@sk-learning-medium
-@sk-learning-dark
-
-// Grays
-@sk-black
-@sk-charcoal
-@sk-mid-gray-dark
-@sk-mid-gray-medium
-@sk-mid-gray
-@sk-mid-gray-light
-@sk-gray-light
-@sk-gray-lightest
-@sk-off-white
-@sk-white
-
-// Element colors
-@sk-link
-@sk-link-visited
-@sk-focus
-@sk-highlight
-@sk-green-light
-@sk-yellow
-@sk-yellow-light
-@sk-footer
-@sk-background
-@sk-yellow
-```
-
 ### Z-Indexes
 
 To ensure correct relative elements stacking order, z-index variables are provided:
@@ -153,21 +86,6 @@ To ensure correct relative elements stacking order, z-index variables are provid
 @z-index-inline-overlay
 @z-index-negative
 ```
-
-### Accessible Color Variants
-
-The contrast ratio of certain foreground/background color combinations don't meet the [AA accessibility standards](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) that we aim for. As a result, a suite of accessible variants have been provided:
-
-```less
-@sk-mid-gray-on-white
-@sk-pink-on-gray-light
-@sk-learning-dark-on-gray-light
-@sk-business-on-gray-light
-@sk-link-on-mid-gray-light
-@sk-mid-gray-dark-on-gray-light
-```
-
-Please note that this list is not exhaustive, so contributions are encouraged. To validate color combinations, we recommend the use of the web-based tool [Accessible Colors](http://accessible-colors.com) by [@moroshko](https://github.com/moroshko).
 
 ### Grid Variables
 
@@ -218,71 +136,23 @@ It's important to note that any additions to these values (e.g. borders) will ne
 }
 ```
 
-## Standalone Header and Footer
-
-If you're maintaining or updating a non-React app, a standalone JS + CSS package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
-
-First, include the following files in your app:
-- `seek-asia-style-guide/dist/header-footer/styles.css`
-- `seek-asia-style-guide/dist/header-footer/client.js`
-
-Then, add placeholder elements to your page:
-- `<div id="header"></div>`
-- `<div id="footer"></div>`
-
-When the document is ready, render the header:
-
-```js
-var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), {
-  ...initialProps
-});
-
-// Update props later, if needed:
-header.updateProps({
-  ...newProps
-});
-```
-
-Finally, render the footer following a similar pattern:
-
-```js
-var footer = SeekHeaderFooter.renderFooter(document.getElementById('footer'), {
-  ...initialProps
-});
-
-// Update props later, if needed:
-footer.updateProps({
-  ...newProps
-});
-```
-
-If you need to create React elements (e.g. when providing a `linkRenderer` function), the standalone bundle also exports React's [createElement](https://facebook.github.io/react/docs/react-api.html#createelement) function so you don't need to install React separately to gain access to it:
-
-```js
-var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
-```
-
-For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
-
 ## Advanced Usage
 
 ### Optimising Imports
-
-**Note: If you're using [sku](https://github.com/seek-oss/sku), this optimisation is already enabled.**
 
 When importing from the style guide, while it might appear that you are only importing what's needed, it's highly likely that you're actually including the entire style guide in your application bundle ([even when using tree shaking in webpack 2](https://github.com/webpack/webpack/issues/2867)).
 
 In order to help you optimise your bundle size, all components can be imported directly from their individual source files. For example, take a look at standard import statement:
 
 ```js
-import { Header, Footer } from 'seek-asia-style-guide/react';
+import { Section, Card } from 'seek-asia-style-guide/react';
 ```
 
 This can also be expressed as separate, file-level imports:
 
 ```js
-import Header from 'seek-asia-style-guide/react/Header/Header.js';
-import Footer from 'seek-asia-style-guide/react/Footer/Footer.js';
+import Section from 'seek-asia-style-guide/react/Section/Section.js';
+import Card from 'seek-asia-style-guide/react/Card/Card.js';
 ```
 
 Rather than transforming this manually, it's recommended that you leverage [Babel](https://babeljs.io/) instead, with [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports) configured to match the pattern used in this style guide.
@@ -306,11 +176,19 @@ Then, include the following in your Babel config:
 ]
 ```
 
+## SEEK Style Guide
+
+This is a fork of [seek-style-guide](https://github.com/seek-oss/seek-style-guide), and we are still taking upstream merges to take advantage of the rapid pace of that project.  This gives us an elevated starting point, at the cost of quite a lot of SEEK ANZ specific branding styles remaining in the repo.
+
+## WIP
+
+`seek-asia-style-guide` is rapidly accumulating SEEK Asia, JobsDB and JobStreet branding but does not yet offer a simple and canonical way to consume them (and avoid any SEEK ANZ remainders).  This is a high priority to improve the accessibility of the repo for consuming apps.
+
 ## Contributing
 
-Refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
+Refer to [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-If you're planning to change the public API, please [open a new issue](https://github.com/seek-oss/seek-style-guide/issues/new) and follow the provided RFC template in the [GitHub issue template](.github/ISSUE_TEMPLATE.md).
+If you're planning to change the public API, please [open a new issue](https://github.com/seekinternational/seek-asia-style-guide/issues/new) and follow the provided RFC template in the [GitHub issue template](.github/ISSUE_TEMPLATE.md).
 
 ## License
 
