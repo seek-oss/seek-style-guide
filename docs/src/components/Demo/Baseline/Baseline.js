@@ -4,6 +4,11 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 
+import lessToJs from 'less-vars-to-js';
+import grid from '!!raw!seek-style-guide/theme/layout/grid.less';
+const gridValues = lessToJs(grid);
+const rowHeight = parseInt(gridValues['@grid-row-height'], 10);
+
 function calculateBackground(type, lineHeight, color) {
   if (type === 'line') {
     const percentage = (lineHeight - 1) / lineHeight * 100;
@@ -56,7 +61,7 @@ Baseline.propTypes = {
 Baseline.defaultProps = {
   isVisible: true,
   type: 'line',
-  lineHeight: 9,
+  lineHeight: rowHeight,
   color: 'rgba(0, 0, 0, 0.15)',
   style: {}
 };
