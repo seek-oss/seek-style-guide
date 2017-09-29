@@ -2,7 +2,7 @@
 
 exports[`Button: color variants: should render alert button 1`] = `
 <button
-  className="root alert"
+  className="root root_alert"
   disabled={false}
 >
   SEEK
@@ -11,7 +11,7 @@ exports[`Button: color variants: should render alert button 1`] = `
 
 exports[`Button: color variants: should render callToAction button 1`] = `
 <button
-  className="root callToAction"
+  className="root root_callToAction"
   disabled={false}
 >
   SEEK
@@ -20,7 +20,7 @@ exports[`Button: color variants: should render callToAction button 1`] = `
 
 exports[`Button: color variants: should render completion button 1`] = `
 <button
-  className="root completion"
+  className="root root_completion"
   disabled={false}
 >
   SEEK
@@ -29,7 +29,7 @@ exports[`Button: color variants: should render completion button 1`] = `
 
 exports[`Button: color variants: should render highlight button 1`] = `
 <button
-  className="root highlight"
+  className="root root_highlight"
   disabled={false}
 >
   SEEK
@@ -38,7 +38,7 @@ exports[`Button: color variants: should render highlight button 1`] = `
 
 exports[`Button: color variants: should render hyperlink color button 1`] = `
 <button
-  className="root hyperlink"
+  className="root root_hyperlink"
   disabled={false}
 >
   SEEK
@@ -56,7 +56,7 @@ exports[`Button: color variants: should render transparent button 1`] = `
 
 exports[`Button: should render as an anchor with href="https://www.seek.com.au" 1`] = `
 <a
-  className="root hyperlink"
+  className="root root_hyperlink"
   disabled={false}
   href="https://www.seek.com.au"
 >
@@ -66,7 +66,7 @@ exports[`Button: should render as an anchor with href="https://www.seek.com.au" 
 
 exports[`Button: should render as loading 1`] = `
 <button
-  className="root loading callToAction"
+  className="root loading root_callToAction"
   disabled={true}
 >
   SEEK
@@ -75,7 +75,7 @@ exports[`Button: should render as loading 1`] = `
 
 exports[`Button: should render custom component based on it’s reference 1`] = `
 <CustomComponent
-  className="root callToAction"
+  className="root root_callToAction"
   disabled={false}
 >
   SEEK
@@ -93,7 +93,7 @@ exports[`Button: should render fullwidth button 1`] = `
 
 exports[`Button: should render with array of nodes 1`] = `
 <button
-  className="root callToAction"
+  className="root root_callToAction"
   disabled={false}
 >
   <span>
@@ -107,7 +107,7 @@ exports[`Button: should render with array of nodes 1`] = `
 
 exports[`Button: should render with className 1`] = `
 <button
-  className="root foo callToAction"
+  className="root foo root_callToAction"
   disabled={false}
 >
   SEEK
@@ -116,7 +116,7 @@ exports[`Button: should render with className 1`] = `
 
 exports[`Button: should render with node 1`] = `
 <button
-  className="root callToAction"
+  className="root root_callToAction"
   disabled={false}
 >
   <h5>

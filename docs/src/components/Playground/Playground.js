@@ -21,6 +21,9 @@ import {
   Footer
 } from 'seek-style-guide/react';
 
+import JobStreetHeader from 'seek-style-guide/jobStreet/Header/Header';
+import JobStreetFooter from 'seek-style-guide/jobStreet/Footer/Footer';
+
 import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
 import TextLink from './Atoms/TextLink/TextLink';
 import IconButton from './Atoms/IconButton/IconButton';
@@ -131,6 +134,8 @@ export default class Playground extends Component {
   render() {
     return (
       <div>
+        <JobStreetHeader user={{}} />
+        <JobStreetFooter language="vi" country="vn" />
         <Header linkRenderer={dummyLinkRenderer} />
 
         <PageBlock className={styles.header}>

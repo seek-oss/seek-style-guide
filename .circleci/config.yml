@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:8.5
     working_directory: ~/repo
     steps:
       - checkout
@@ -15,9 +15,22 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+  surge:
+     docker:
+       - image: circleci/node:8.5
+     working_directory: ~/repo
+     steps:
+       - checkout
+       - restore_cache:
+           keys:
+           - v1-dependencies-{{ checksum "package.json" }}
+           - v1-dependencies-
+       - run: npm install
+       - run: npm run build
+       - run: npm run deploy-surge -- -d seek-asia-style-guide--$CIRCLE_SHA1.surge.sh
   deploy:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:8.5
     working_directory: ~/repo
     steps:
       - checkout
@@ -29,12 +42,19 @@ jobs:
       - run: git config --global user.name "Circle-CI";
       - run: git config --global user.email "srp-dev@seekasia.com";
       - run: npm run build-gh-pages  
-      - run: npm run deploy-gh-pages  
+      - run: npm run deploy-gh-pages
+      - run: npm run semantic-release
 workflows:
   version: 2
   status-check:
     jobs:
       - build:
+          filters:
+            branches:
+              ignore: master
+      - surge:
+          requires:
+            - build
           filters:
             branches:
               ignore: master

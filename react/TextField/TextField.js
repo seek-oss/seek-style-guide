@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import ClearField from './ClearField/ClearField';
+import ClearField from '../ClearField/ClearField';
 
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
@@ -128,11 +128,11 @@ export default class TextField extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { id, label, labelProps, secondaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
+    const { id, label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
       <div ref={this.storeContainerReference} className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel }} />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderInput()}
         {this.renderClear()}
         <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />

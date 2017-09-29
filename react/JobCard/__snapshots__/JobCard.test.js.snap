@@ -7,6 +7,8 @@ exports[`JobCard should render with default props 1`] = `
   <Section>
     <Text
       baseline={true}
+      className="company"
+      substandard={true}
     >
       SEEK Asia
     </Text>
@@ -17,31 +19,32 @@ exports[`JobCard should render with default props 1`] = `
       Developer
     </Text>
   </Section>
-  <Section>
-    <Text
-      baseline={true}
-      className="location"
-    >
-      <HeartIcon
-        className=""
-        filled={false}
-      />
-       
-      Kuala Lumpur
-    </Text>
-    <div
-      className="footer"
-    >
+  <Section
+    className="footer"
+  >
+    <div>
       <Text
         baseline={true}
-        className="salary"
+        substandard={true}
       >
+        <LocationIcon />
+         
+        Kuala Lumpur
+      </Text>
+      <Text
+        baseline={true}
+        substandard={true}
+      >
+        <MoneyIcon />
+         
         RM999999999 - RM999999999999
       </Text>
       <Text
         baseline={true}
-        className="postingDuration"
+        substandard={true}
       >
+        <TimeIcon />
+         
         1h
       </Text>
     </div>
@@ -56,6 +59,8 @@ exports[`JobCard should render with description props 1`] = `
   <Section>
     <Text
       baseline={true}
+      className="company"
+      substandard={true}
     >
       SEEK Asia
     </Text>
@@ -71,35 +76,37 @@ exports[`JobCard should render with description props 1`] = `
   >
     <Text
       baseline={true}
+      substandard={true}
     >
       Hello world
     </Text>
   </Section>
-  <Section>
-    <Text
-      baseline={true}
-      className="location"
-    >
-      <HeartIcon
-        className=""
-        filled={false}
-      />
-       
-      Kuala Lumpur
-    </Text>
-    <div
-      className="footer"
-    >
+  <Section
+    className="footer"
+  >
+    <div>
       <Text
         baseline={true}
-        className="salary"
+        substandard={true}
       >
+        <LocationIcon />
+         
+        Kuala Lumpur
+      </Text>
+      <Text
+        baseline={true}
+        substandard={true}
+      >
+        <MoneyIcon />
+         
         RM999999999 - RM999999999999
       </Text>
       <Text
         baseline={true}
-        className="postingDuration"
+        substandard={true}
       >
+        <TimeIcon />
+         
         1h
       </Text>
     </div>

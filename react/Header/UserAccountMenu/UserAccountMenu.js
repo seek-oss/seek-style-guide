@@ -170,7 +170,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             <span className={styles.item}>
               {
                 linkRenderer({
-                  'data-analytics': 'sign-in',
+                  'data-analytics': 'header:sign-in',
                   href: appendReturnUrl('/sign-in', returnUrl),
                   className: styles.itemLink,
                   title: 'Sign in',
@@ -180,7 +180,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
               <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
               {
                 linkRenderer({
-                  'data-analytics': 'register',
+                  'data-analytics': 'header:register',
                   href: appendReturnUrl('/sign-up', returnUrl),
                   className: styles.itemLink,
                   title: 'Register',
@@ -197,7 +197,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           <li>
             {
               linkRenderer({
-                'data-analytics': 'sign-out',
+                'data-analytics': 'header:sign-out',
                 className: styles.item,
                 onClick: clearLocalStorage,
                 href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',

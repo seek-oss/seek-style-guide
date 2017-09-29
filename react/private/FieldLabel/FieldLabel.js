@@ -1,3 +1,4 @@
+import styles from './FieldLabel.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -49,12 +50,14 @@ export default class FieldLabel extends Component {
       }
     },
     /* eslint-enable consistent-return */
-    secondaryLabel: PropTypes.string
+    secondaryLabel: PropTypes.string,
+    tertiaryLabel: PropTypes.node
   };
 
   static defaultProps = {
     label: '',
-    secondaryLabel: ''
+    secondaryLabel: '',
+    tertiaryLabel: ''
   };
 
   constructor() {
@@ -77,6 +80,20 @@ export default class FieldLabel extends Component {
     );
   }
 
+  renderTertiary() {
+    const { tertiaryLabel } = this.props;
+
+    if (!tertiaryLabel) {
+      return null;
+    }
+
+    return (
+      <span className={styles.tertiary}>
+        {tertiaryLabel}
+      </span>
+    );
+  }
+
   render() {
     const { label } = this.props;
 
@@ -91,7 +108,7 @@ export default class FieldLabel extends Component {
     };
     return (
       <label {...allLabelProps}>
-        <Text><Strong>{label}</Strong> {this.renderSecondary()}</Text>
+        <Text><Strong>{label}</Strong> {this.renderSecondary()}{this.renderTertiary()}</Text>
       </label>
     );
   }

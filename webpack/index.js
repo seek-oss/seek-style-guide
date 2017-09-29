@@ -9,12 +9,15 @@ const isProduction = () => process.env.NODE_ENV === 'production';
 
 const styleGuidePaths = [
   path.resolve(__dirname, '../react'),
+  path.resolve(__dirname, '../jobStreet'),
+  path.resolve(__dirname, '../jobsDB'),
   path.resolve(__dirname, '../theme'),
   path.resolve(__dirname, '../fonts')
 ];
 
 const resolveAliases = {
-  'seek-style-guide': path.resolve(__dirname, '..')
+  'seek-style-guide': path.resolve(__dirname, '..'),
+  'seek-asia-style-guide': path.resolve(__dirname, '..')
 };
 
 const POSTCSS_STYLE_GUIDE_PACK = 'seek-style-guide';

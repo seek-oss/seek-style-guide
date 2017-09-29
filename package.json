@@ -58,7 +58,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
-    "basekick": "2.0.1",
+    "basekick": "3.0.0",
     "chalk": "1.1.3",
     "command-line-args": "^4.0.6",
     "css-in-js-loader": "^0.1.2",
@@ -97,6 +97,7 @@
     "chai": "^3.5.0",
     "classnames": "^2.2.5",
     "commitizen": "^2.9.5",
+    "condition-circle": "^1.5.0",
     "cz-conventional-changelog": "^2.0.0",
     "ejs": "^2.4.2",
     "es6-promisify": "^5.0.0",
@@ -118,13 +119,14 @@
     "opn": "^4.0.1",
     "opn-cli": "^3.1.0",
     "pad-left": "^2.1.0",
+    "postcss-js": "^1.0.0",
     "postcss-prefix-selector": "^1.6.0",
     "react": "^15.3.1",
     "react-addons-pure-render-mixin": "^15.3.1",
     "react-baseline": "^1.0.1",
     "react-copy-to-clipboard": "4.2.1",
     "react-dom": "^15.3.1",
-    "react-element-to-jsx-string": "^6.2.0",
+    "react-element-to-jsx-string": "^12.0.0",
     "react-helmet": "^3.2.2",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-isolated-scroll": "^0.1.0",
@@ -133,7 +135,7 @@
     "react-test-renderer": "^15.4.2",
     "rewrite-files": "^1.0.1",
     "rimraf": "^2.6.1",
-    "semantic-release": "^6.3.2",
+    "semantic-release": "^7.0.2",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "static-site-generator-webpack-plugin": "^3.4.1",
@@ -148,5 +150,8 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-fail-plugin": "^1.0.6",
     "zip-folder": "^1.0.0"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   }
 }

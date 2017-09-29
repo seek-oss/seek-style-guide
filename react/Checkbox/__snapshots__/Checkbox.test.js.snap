@@ -5,6 +5,7 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
   className="root"
 >
   <input
+    checked={false}
     className="input"
     data-automation="first-name-field"
     id="still-in-role"
@@ -18,7 +19,7 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
       className="standard"
     >
       <CheckMarkIcon
-        className="checkBox"
+        className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
       <span>
@@ -47,7 +48,7 @@ exports[`Checkbox inputProps should render as checked 1`] = `
       className="standard"
     >
       <CheckMarkIcon
-        className="checkBox"
+        className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
       <span>
@@ -81,6 +82,64 @@ exports[`Checkbox should render with button style 1`] = `
 </div>
 `;
 
+exports[`Checkbox should render with checkbox on left hand side 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
+        className="checkBox checkBoxLeft"
+        svgClassName="checkMark"
+      />
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render with checkbox on right hand side 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <span>
+        Still in role
+      </span>
+      <CheckMarkIcon
+        className="checkBox checkBoxRight"
+        svgClassName="checkMark"
+      />
+    </div>
+  </label>
+</div>
+`;
+
 exports[`Checkbox should render with className 1`] = `
 <div
   className="root testClassname"
@@ -99,7 +158,7 @@ exports[`Checkbox should render with className 1`] = `
       className="standard"
     >
       <CheckMarkIcon
-        className="checkBox"
+        className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
       <span>
@@ -128,7 +187,7 @@ exports[`Checkbox should render with simple props 1`] = `
       className="standard"
     >
       <CheckMarkIcon
-        className="checkBox"
+        className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
       <span>
@@ -157,7 +216,7 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
       className="standard"
     >
       <CheckMarkIcon
-        className="checkBox"
+        className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
       <span>

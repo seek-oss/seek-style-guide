@@ -84,48 +84,40 @@ export default {
         },
         {
           label: 'Headline',
-          transformProps: props => ({
+          transformProps: ({ hero, ...props }) => ({
             ...props,
-            hero: false,
             headline: true
           })
         },
         {
           label: 'Heading',
-          transformProps: props => ({
+          transformProps: ({ hero, ...props }) => ({
             ...props,
-            hero: false,
             heading: true
           })
         },
         {
           label: 'Subheading',
-          transformProps: props => ({
+          transformProps: ({ hero, ...props }) => ({
             ...props,
-            hero: false,
             subheading: true
           })
         },
         {
           label: 'Superstandard',
-          transformProps: props => ({
+          transformProps: ({ hero, ...props }) => ({
             ...props,
-            hero: false,
             superstandard: true
           })
         },
         {
           label: 'Standard',
-          transformProps: props => ({
-            ...props,
-            hero: false
-          })
+          transformProps: ({ hero, ...props }) => props
         },
         {
           label: 'Substandard',
-          transformProps: props => ({
+          transformProps: ({ hero, ...props }) => ({
             ...props,
-            hero: false,
             substandard: true
           })
         }

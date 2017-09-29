@@ -5,6 +5,7 @@ import Textarea from './Textarea';
 import styles from './Textarea.less';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
+import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
 
 class TextareaContainer extends Component {
   static propTypes = {
@@ -87,6 +88,7 @@ export default {
         }
       ]
     },
-    ...fieldMessageOptions
+    ...fieldMessageOptions,
+    ...fieldLabelOptions
   ]
 };

@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import (reference) "~seek-asia-style-guide/theme";
 
 @keyframes loading {
   to { width: @grid-gutter-width; }
@@ -29,11 +29,8 @@
   color: @color;
   background-color: @background-color;
   .hoverState({
-    background-color: lighten(@background-color, 5%);
-  });
-  .activeState({
     background-color: darken(@background-color, 5%);
-  });
+  });  
 }
 
 .root {
@@ -42,25 +39,51 @@
   text-decoration: none;
   user-select: none;
   text-align: center;
-  padding: 0 @grid-gutter-width;
-  box-shadow: 0 1px fade(@sk-black, 70%);
+  padding: 0 @grid-gutter-width;  
   border: 0;
-  border-radius: 2px;
+  border-radius: 3px;
   transition:
     background-color 0.2s,
     transform 0.2s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;  
+  font-weight: bold;  
   .activeState({
-    box-shadow: none;
     outline: none;
-    transform: scale(0.95);
   });
   .focusState({
     .focus();
+    box-shadow:none;
   });
+  @media @desktop {
+    .touchableText(@standard-type-scale);
+    line-height: 38px;
+    height: 38px;
+  }
+}
+
+.root_callToAction{
+  .buttonColor(@sk-white, @saBlue);
+}
+.jobStreet.root_callToAction{
+  .buttonColor(@sk-black, @actionYellow);  
+}
+.jobsDB.root_callToAction{
+  .buttonColor(@sk-white, @actionOrange);
+}
+.root_hyperlink{
+  .buttonColor(@sk-white, @actionBlue);
+}
+.root_completion{
+  .buttonColor(@sk-white, @actionGreen);
+}
+.root_alert{
+  .buttonColor(@sk-white, @actionRed);
+}
+.root_highlight{
+  .buttonColor(@saGrey2, @actionPastelBlue);
 }
 
 .root_isPink {
