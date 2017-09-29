@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Section, Text } from 'seek-style-guide/react';
 import debounce from 'lodash/debounce';
+import uniq from 'lodash/uniq';
 import jsxToString from 'react-element-to-jsx-string';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
@@ -11,7 +12,8 @@ export default class Code extends Component {
 
   static propTypes = {
     jsx: PropTypes.element,
-    less: PropTypes.string
+    less: PropTypes.string,
+    tenantPath: PropTypes.string
   };
 
   constructor() {
@@ -40,19 +42,27 @@ export default class Code extends Component {
 
   render() {
     const { copiedToClipboard } = this.state;
-    const { jsx, less } = this.props;
+    const { jsx, less, tenantPath } = this.props;
 
     let code = '';
 
     if (jsx) {
       const componentCode = jsxToString(jsx, {
         showDefaultProps: false,
-        filterProps: ['className'],
+        filterProps: ['className', 'style'],
         useBooleanShorthandSyntax: false
-      }).replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
-      .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}');
+      })
+      .replace(/\={true}/ig, '')
+      .replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
+      .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}')
+      .replace('<MockContent />', 'Lorem ipsum');
 
-      code = `import { ${jsx.type.displayName || jsx.type.name} } from 'seek-asia-style-guide/react';\n\n\n${componentCode}`;
+      const componentNames = uniq(
+        (componentCode.match(/<([A-Z]\w*)(?=[\s>])/g) || [])
+          .map(x => x.replace('<', ''))
+      );
+
+      code = `import {\n  ${componentNames.join(',\n  ')}\n} from 'seek-asia-style-guide/${tenantPath}';\n\n\n${componentCode}`;
     } else if (less) {
       code = `@import (reference) "~seek-asia-style-guide/theme";\n\n\n.element {\n  .${less}\n}`;
     }

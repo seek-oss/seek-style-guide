@@ -1,10 +1,13 @@
 import styles from './Button.less';
-import brandStyles from './Button.css.js';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
+
+const tenant = process.env.SKU_TENANT;
+const isJobStreet = tenant === 'jobStreet';
+const isJobsDB = tenant === 'jobsDB';
 
 export default class Button extends Component {
 
@@ -12,7 +15,8 @@ export default class Button extends Component {
 
   static propTypes = {
     color: PropTypes.oneOf([
-      'callToAction', 'hyperlink', 'completion', 'alert', 'highlight', 'transparent'
+      'callToAction', 'hyperlink', 'completion', 'alert', 'highlight', 'transparent',
+      'blue', 'pink'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -23,6 +27,8 @@ export default class Button extends Component {
       PropTypes.func,
       PropTypes.string
     ]),
+    isJobsDB: PropTypes.bool,
+    isJobStreet: PropTypes.bool,
     loading: PropTypes.bool,
     fullWidth: PropTypes.bool
   };
@@ -53,11 +59,13 @@ export default class Button extends Component {
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
         [styles.fullWidth]: fullWidth,
-        [brandStyles.callToAction]: color === 'callToAction',
-        [brandStyles.hyperlink]: color === 'hyperlink',
-        [brandStyles.completion]: color === 'completion',
-        [brandStyles.alert]: color === 'alert',
-        [brandStyles.highlight]: color === 'highlight',
+        [styles.jobsDB]: isJobsDB,
+        [styles.jobStreet]: isJobStreet,
+        [styles.root_callToAction]: color === 'callToAction',
+        [styles.root_hyperlink]: color === 'hyperlink',
+        [styles.root_completion]: color === 'completion',
+        [styles.root_alert]: color === 'alert',
+        [styles.root_highlight]: color === 'highlight',
         [styles.root_isTransparent]: color === 'transparent'
       }),
       disabled: loading,
