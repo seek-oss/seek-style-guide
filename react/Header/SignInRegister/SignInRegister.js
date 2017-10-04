@@ -18,6 +18,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
         linkRenderer({
           'data-analytics': 'header:sign-in',
           href: appendReturnUrl('/sign-in', returnUrl),
+          rel: 'nofollow',
           className: styles.link,
           title: 'Sign in',
           children: 'Sign in'
@@ -28,6 +29,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
         linkRenderer({
           'data-analytics': 'header:register',
           href: appendReturnUrl('/sign-up', returnUrl),
+          rel: 'nofollow',
           className: styles.link,
           title: 'Register',
           children: 'Register'
