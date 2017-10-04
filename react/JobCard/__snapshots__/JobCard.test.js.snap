@@ -5,48 +5,43 @@ exports[`JobCard should render with default props 1`] = `
   className="root"
 >
   <Section>
-    <Text
-      baseline={true}
+    <h2
       className="company"
-      substandard={true}
     >
       SEEK Asia
-    </Text>
-    <Text
-      baseline={true}
-      heading={true}
+    </h2>
+    <h1
+      className="jobTitle"
     >
       Developer
-    </Text>
+    </h1>
+  </Section>
+  <Section
+    className="bodyDescription"
+  >
+    <p
+      className="bodyDescriptionText"
+    />
   </Section>
   <Section
     className="footer"
   >
-    <div>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
+    <div
+      className="footerInfo"
+    >
+      <p>
         <LocationIcon />
          
         Kuala Lumpur
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
+      </p>
+      <p>
         <MoneyIcon />
          
         RM999999999 - RM999999999999
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
-        <TimeIcon />
-         
+      </p>
+      <p>
         1h
-      </Text>
+      </p>
     </div>
   </Section>
 </Card>
@@ -57,58 +52,45 @@ exports[`JobCard should render with description props 1`] = `
   className="root"
 >
   <Section>
-    <Text
-      baseline={true}
+    <h2
       className="company"
-      substandard={true}
     >
       SEEK Asia
-    </Text>
-    <Text
-      baseline={true}
-      heading={true}
+    </h2>
+    <h1
+      className="jobTitle"
     >
       Developer
-    </Text>
+    </h1>
   </Section>
   <Section
     className="bodyDescription"
   >
-    <Text
-      baseline={true}
-      substandard={true}
+    <p
+      className="bodyDescriptionText"
     >
       Hello world
-    </Text>
+    </p>
   </Section>
   <Section
     className="footer"
   >
-    <div>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
+    <div
+      className="footerInfo"
+    >
+      <p>
         <LocationIcon />
          
         Kuala Lumpur
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
+      </p>
+      <p>
         <MoneyIcon />
          
         RM999999999 - RM999999999999
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
-        <TimeIcon />
-         
+      </p>
+      <p>
         1h
-      </Text>
+      </p>
     </div>
   </Section>
 </Card>
