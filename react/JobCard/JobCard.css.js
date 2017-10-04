@@ -1,4 +1,4 @@
-import { saGrey4 } from '../../theme/palette/palette.js';
+import { saGrey4, saGrey2, saGrey1, linkBlue } from '../../theme/palette/palette.js';
 
 export default {
   '.root': {
@@ -8,24 +8,52 @@ export default {
     borderBottomWidth: '1px',
     borderColor: saGrey4
   },
+  '.company': {
+    paddingBottom: 0,
+    lineHeight: '14px !important',
+    color: saGrey1
+  },
+  '.positionTitle': {
+    fontSize: '16px !important',
+    lineHeight: '19px !important',
+    color: linkBlue
+  },
+  '.sellingPoints': {
+    '& ul': {
+      listStyleType: 'disc'
+    }
+  },
   '.footer': {
     display: 'flex',
     justifyContent: 'space-between',
     paddingTop: 0
   },
   '.footer span': {
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   },
   '.companyLogoWrapper': {
-    maxWidth: '100px'
+    border: `1px ${saGrey4} solid`,
+    marginLeft: '15px',
+    width: '76px',
+    height: '64px',
+    display: 'flex',
+    alignItems: 'center',
+    alignSelf: 'flex-end'
   },
   '.companyLogo': {
     width: '100%'
   },
-  '.company': {
-    padding: 0
-  },
   '.bodyDescription': {
     paddingTop: 0
+  },
+  '.postingDuration': {
+    color: saGrey2
+  },
+  '.jobInfo': {
+    flexBasis: 'auto',
+    overflow: 'hidden'
   }
 };

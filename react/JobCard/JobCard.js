@@ -13,19 +13,28 @@ const JobCard = ({ job }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text substandard className={styles.company}>{job.company}</Text>
-        <Text heading>{job.jobTitle}</Text>
+        <Text small className={styles.company}>{job.company}</Text>
+        <Text heading className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
+      { job.sellingPoints && 
+        <Section className={styles.sellingPoints}> 
+          <ul>
+            {job.sellingPoints.map((sellingPoint) => {return (
+              <li><Text small>{sellingPoint}</Text></li>
+            );})}
+          </ul>
+        </Section>
+      }
       { job.description && (
         <Section className={styles.bodyDescription}>
-          <Text substandard>{job.description}</Text>
+          <Text small>{job.description}</Text>
         </Section>
       )}
       <Section className={styles.footer}>
-        <div>
-          <Text substandard><LocationIcon /> {job.location}</Text>
-          <Text substandard><MoneyIcon /> {job.salary}</Text>
-          <Text substandard><TimeIcon /> {job.postingDuration}</Text>
+        <div className={styles.jobInfo}>
+          <Text small><LocationIcon /> {job.location}</Text>
+          <Text small><MoneyIcon /> {job.salary}</Text>
+          <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
         </div>
         { job.companyLogoUrl && (
         <div className={styles.companyLogoWrapper}>
@@ -40,8 +49,10 @@ const JobCard = ({ job }) => {
 export default JobCard;
 JobCard.propTypes = {
   job: PropTypes.shape({
-    jobTitle: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string.isRequired,
+    jobAdUrl: PropTypes.string.isRequired,
+    sellingPoints: PropTypes.arrayOf(PropTypes.string),
     companyLogoUrl: PropTypes.string,
     description: PropTypes.string,
     location: PropTypes.string.isRequired,

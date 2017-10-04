@@ -8,7 +8,7 @@ const defaultJob = {
   jobTitle: 'Developer',
   location: 'Kuala Lumpur',
   salary: 'RM999999999 - RM999999999999',
-  postingDuration: '1h'
+  postingDuration: '1 hour ago'
 };
 
 describe('JobCard', () => {

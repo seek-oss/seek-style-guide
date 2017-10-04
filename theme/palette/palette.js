@@ -19,3 +19,5 @@ export const saGrey3		= '#999999';
 export const saGrey4		= '#CCCCCC';
 export const saGrey5		= '#EEEEEE';
 export const saWhite 		= '#FFFFFF';
+
+export const linkBlue = '#2E4191';
