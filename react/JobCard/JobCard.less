@@ -8,57 +8,91 @@
     border-color: @saGrey4;
     font-size: 12px;
 }
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0;
-}
-.footerInfo p{
+
+.company {
+    line-height: 14px !important;
+    padding-bottom: 0;
     color: @saGrey1;
-    line-height: 16px;
-    display: flex;
+    text-overflow: ellipsis;
+    whitespace: nowrap;
+    overflow: hidden;
 }
-.positionTitle{
-    color: @saBlue;
-    font-size: 16px;
-}
-.company{
-    font-size: 12px;
-    padding-bottom: 3px;
-}
-.greyLabel{
+
+.greyLabel {
     padding: 0 5px;
     margin-right: 5px;
     background-color: @saGrey5;
     color: @saGrey2;
 }
-.companyLogoWrapper {
-    width: 76px;
-    height: 64px;
-    border: 1px solid @saGrey5;
-    position: relative;
+
+.positionTitle {
+    color: @linkBlue;
+    font-size: 16px !important;
+    line-height: 16px !important;
+    padding-bottom: 0;
 }
-.companyLogo {
-    padding: 0;
-    max-width:100%;
-    height:auto;
-    margin: auto;
-    display: inline-block;
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    bottom: 0; 
-    right: 0;;
-}
-.bodyDescription {
-    padding-top: 0;
-}
-.sellingPoints{
+
+.sellingPoints {
     list-style: disc outside;
     padding-left:16px;
     color: @saGrey2;
-    padding-bottom:12px;
+
+    & span {
+        line-height: 16px !important;
+        padding-bottom: 0;
+    }
 }
+
+.jobDescriptionSection, .sellingPointsSection {
+    padding-top: 0;
+}
+
 .bodyDescriptionText {
+    line-height: 14px !important;
     color: @saGrey3; 
+    padding-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.jobInfoSection {
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobInfo {
+    flex-basis: auto;
+    overflow: hidden;
+}
+
+.jobInfo span{
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    whitespace: nowrap;
+    overflow: hidden;
+    color: @saGrey1;
+    line-height: 16px;
+    display: flex;
+}
+
+.postingDuration span {
+    color: @saGrey3;
+}
+
+.companyLogoWrapper {
+    width: 76px;
+    height: 64px;
+    margin-left: 15px;
+    border: 1px solid @saGrey4;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.companyLogo {
+    width: 100%;
 }

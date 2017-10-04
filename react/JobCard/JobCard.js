@@ -20,8 +20,8 @@ const JobCard = ({ job }) => {
         <Text heading className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
       { job.sellingPoints && 
-        <Section className={styles.sellingPoints}> 
-          <ul>
+        <Section className={styles.sellingPointsSection}> 
+          <ul className={styles.sellingPoints}>
             {job.sellingPoints.map((sellingPoint, i) => {return (
               <li key={i}><Text small>{sellingPoint}</Text></li>
             );})}
@@ -29,11 +29,11 @@ const JobCard = ({ job }) => {
         </Section>
       }
       { job.description && (
-        <Section className={styles.bodyDescription}>
-          <Text small>{job.description}</Text>
+        <Section className={styles.jobDescriptionSection}>
+          <Text small className={styles.bodyDescriptionText}>{job.description}</Text>
         </Section>
       )}
-      <Section className={styles.footer}>
+      <Section className={styles.jobInfoSection}>
         <div className={styles.jobInfo}>
           <Text small><LocationIcon /> {job.location}</Text>
           <Text small><MoneyIcon /> {job.salary}</Text>
