@@ -24,7 +24,7 @@ export default {
     job: {
       company: 'SEEK Asia',
       jobTitle: 'Developer',
-      jobAdUrl: 'https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J',
+      jobUrl: 'https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J',
       location: 'Kuala Lumpur',
       sellingPoints: [
         'We practice a vibrant & energetic office culture',
@@ -38,32 +38,6 @@ export default {
     }
   },
   options: [{
-    label: 'Selling Points',
-    type: 'radio',
-    states: [{
-      label: 'Selling points present',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          sellingPoints: [
-            'We practice a vibrant & energetic office culture',
-            'Our company supports a fun yet balanced working environment',
-            'We support a safe environment for our employees'
-          ]
-        }
-      })
-    }, {
-      label: 'No Selling Point',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          sellingPoints: null
-        }
-      })
-    }]
-  },{
     label: 'Description',
     type: 'radio',
     states: [{
@@ -87,26 +61,54 @@ export default {
     }]
   },
   {
-    label: 'Company Logo',
-    type: 'radio',
-    states: [{
-      label: 'Logo present',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png'
-        }
-      })
-    }, {
-      label: 'No Logo',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          companyLogoUrl: null
-        }
-      })
-    }]
-  }]
+    label: 'States',
+    type: 'checklist',
+    states: [
+      {
+        label: 'Company Confidential',
+        transformProps: ({ className, ...props }) => ({
+          ...props,
+          job: {
+            ...props.job,
+            company: ''
+          }
+        })
+      },
+      {
+        label: 'Classified',
+        transformProps: ({ className, ...props }) => ({
+          ...props,
+          job: {
+            ...props.job,
+            classified: true
+          }
+        })
+      },
+      {
+        label: 'No Logo',
+        transformProps: props => ({
+          ...props,
+          job: {
+            ...props.job,
+            companyLogoUrl: ''
+          }
+        })
+      },
+      {
+        label: 'Selling Points',
+        transformProps: ({ className, ...props }) => ({
+          ...props,
+          job: {
+            ...props.job,
+            sellingPoints: [
+              'We practice a vibrant & energetic office culture',
+              'Our company supports a fun yet balanced working environment',
+              'We support a safe environment for our employees'
+            ],
+          }
+        })
+      }
+    ]
+  }
+  ]
 };
