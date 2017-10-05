@@ -21,3 +21,4 @@ export const saGrey5		= '#EEEEEE';
 export const saWhite 		= '#FFFFFF';
 
 export const linkBlue = '#2E4191';
+export const panelPink  = '#FF0072';

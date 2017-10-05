@@ -14,8 +14,9 @@ const JobCard = ({ job }) => {
     <Card className={styles.root}>
       <Section>
         <Text small className={styles.company}>
-          {job.classified && (<span className={styles.greyLabel}>Classifieds</span>)}
-          {job.company ? job.company : <span className={styles.greyLabel}>Company Confidential</span>}
+          {job.pinkLabel && (<span className={styles.pinkLabel}>{job.pinkLabel}</span>)}
+          {job.greyLabel && (<span className={styles.greyLabel}>{job.greyLabel}</span>)}
+          {job.company}
         </Text>
         <Text heading className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
@@ -60,7 +61,7 @@ JobCard.propTypes = {
     description: PropTypes.string,
     location: PropTypes.string.isRequired,
     postingDuration: PropTypes.string.isRequired,
-    classified: PropTypes.bool,
-    sellingPoints: PropTypes.array
+    greyLabel: PropTypes.string,
+    pinkLabel: PropTypes.string
   }).isRequired
 };

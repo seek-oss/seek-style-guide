@@ -10,11 +10,10 @@
 }
 
 .company {
-    line-height: 14px !important;
     padding-bottom: 0;
     color: @saGrey1;
     text-overflow: ellipsis;
-    whitespace: nowrap;
+    white-space: nowrap;
     overflow: hidden;
 }
 
@@ -25,6 +24,13 @@
     color: @saGrey2;
 }
 
+.pinkLabel {
+    padding: 0 5px;
+    margin-right: 5px;
+    background-color: @panelPink;
+    color: @saWhite;
+}
+
 .positionTitle {
     color: @linkBlue;
     font-size: 16px !important;
@@ -33,7 +39,7 @@
 }
 
 .sellingPoints {
-    list-style: disc outside;
+    list-style: disc;
     padding-left:16px;
     color: @saGrey2;
 
@@ -67,16 +73,15 @@
 .jobInfo {
     flex-basis: auto;
     overflow: hidden;
-}
-
-.jobInfo span{
-    vertical-align: middle;
-    text-overflow: ellipsis;
-    whitespace: nowrap;
-    overflow: hidden;
-    color: @saGrey1;
-    line-height: 16px;
-    display: flex;
+    span{
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        whitespace: nowrap;
+        overflow: hidden;
+        color: @saGrey1;
+        line-height: 16px;
+        display: flex;
+    }
 }
 
 .postingDuration span {
