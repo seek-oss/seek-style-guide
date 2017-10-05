@@ -30,7 +30,7 @@ export default [
     analytics: 'toolbar:applied'
   },
   {
-    name: 'quick-search-employer-link & tips',
+    name: 'Advice & tips',
     href: '/career-advice/',
     analytics: 'toolbar:advice+tips'
   },
