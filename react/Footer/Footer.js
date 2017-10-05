@@ -107,10 +107,11 @@ export default class Footer extends Component {
                 </ScreenReaderOnly>
 
                 {
-                  copyright.map(({ name, analytics, href, secondary }, key) => (
+                  copyright.map(({ name, analytics, href, rel, secondary }, key) => (
                     linkRenderer({
                       children: name,
                       href,
+                      rel,
                       'data-analytics': analytics,
                       key,
                       className: classnames({

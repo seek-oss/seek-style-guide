@@ -12,17 +12,20 @@ export default [
   {
     name: 'Saved searches',
     href: '/myactivity#favourite',
+    rel: 'nofollow',
     analytics: 'toolbar:my+activity'
   },
   {
     name: 'Saved jobs',
     href: '/my-activity/saved-jobs',
+    rel: 'nofollow',
     authRequired: true,
     analytics: 'toolbar:favourite'
   },
   {
     name: 'Applied jobs',
     href: '/my-activity/applied-jobs',
+    rel: 'nofollow',
     authRequired: true,
     analytics: 'toolbar:applied'
   },
