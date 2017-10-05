@@ -28,33 +28,11 @@ export default {
       location: 'Kuala Lumpur',
       description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...',
       companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png',
-      salary: 'RM99999 - RM999999',
-      postingDuration: '1 hour ago'
+      postingDuration: '1 hour ago',
+      salary: 'RM99999 - RM999999'
     }
   },
-  options: [{
-    label: 'Description',
-    type: 'radio',
-    states: [{
-      label: 'Description present',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...'
-        }
-      })
-    }, {
-      label: 'No Description',
-      transformProps: ({ ...props }) => ({
-        ...props,
-        job: {
-          ...props.job,
-          description: null
-        }
-      })
-    }]
-  },
+  options: [
   {
     label: 'States',
     type: 'checklist',
@@ -91,16 +69,6 @@ export default {
         })
       },
       {
-        label: 'No Logo',
-        transformProps: props => ({
-          ...props,
-          job: {
-            ...props.job,
-            companyLogoUrl: ''
-          }
-        })
-      },
-      {
         label: 'Selling Points',
         transformProps: ({ className, ...props }) => ({
           ...props,
@@ -111,6 +79,36 @@ export default {
               'Our company supports a fun yet balanced working environment',
               'We support a safe environment for our employees'
             ],
+          }
+        })
+      },
+      {
+        label: 'No Description',
+        transformProps: ({ className, ...props }) => ({
+          ...props,
+          job: {
+            ...props.job,
+            description: null
+          }
+        })
+      },
+      {
+        label: 'No Salary',
+        transformProps: ({ className, ...props }) => ({
+          ...props,
+          job: {
+            ...props.job,
+            salary: null
+          }
+        })
+      },
+      {
+        label: 'No Logo',
+        transformProps: props => ({
+          ...props,
+          job: {
+            ...props.job,
+            companyLogoUrl: null
           }
         })
       }

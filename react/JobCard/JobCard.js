@@ -34,11 +34,15 @@ const JobCard = ({ job }) => {
           <Text small className={styles.bodyDescriptionText}>{job.description}</Text>
         </Section>
       )}
-      <Section className={styles.jobInfoSection}>
-        <div className={styles.jobInfo}>
-          <Text small><LocationIcon /> {job.location}</Text>
-          <Text small><MoneyIcon /> {job.salary}</Text>
-          <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
+      <Section className={styles.footerSection}>
+        <div className={styles.footerLeft}>
+          <div className={styles.jobInfo}>
+            <Text small><LocationIcon /> {job.location}</Text>
+            { job.salary && (<Text small><MoneyIcon /> {job.salary}</Text>)}
+          </div>
+          <div>
+            <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
+          </div>
         </div>
         {job.companyLogoUrl && (
           <div className={styles.companyLogoWrapper}>
@@ -55,11 +59,12 @@ JobCard.propTypes = {
   job: PropTypes.shape({
     company: PropTypes.string.isRequired,
     jobTitle: PropTypes.string.isRequired,
-    jobAdUrl: PropTypes.string.isRequired,
+    jobUrl: PropTypes.string.isRequired,
     sellingPoints: PropTypes.arrayOf(PropTypes.string),
     companyLogoUrl: PropTypes.string,
     description: PropTypes.string,
     location: PropTypes.string.isRequired,
+    salary: PropTypes.string,
     postingDuration: PropTypes.string.isRequired,
     greyLabel: PropTypes.string,
     pinkLabel: PropTypes.string
