@@ -6,6 +6,7 @@ import JobCard from './JobCard';
 const defaultJob = {
   company: 'SEEK Asia',
   jobTitle: 'Developer',
+  jobUrl: 'https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J',
   location: 'Kuala Lumpur',
   salary: 'RM999999999 - RM999999999999',
   postingDuration: '1 hour ago'

@@ -5,43 +5,56 @@ exports[`JobCard should render with default props 1`] = `
   className="root"
 >
   <Section>
-    <h2
+    <Text
+      baseline={true}
       className="company"
+      small={true}
     >
       SEEK Asia
-    </h2>
-    <h1
-      className="jobTitle"
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+      heading={true}
     >
       Developer
-    </h1>
+    </Text>
   </Section>
   <Section
-    className="bodyDescription"
-  >
-    <p
-      className="bodyDescriptionText"
-    />
-  </Section>
-  <Section
-    className="footer"
+    className="footerSection"
   >
     <div
-      className="footerInfo"
+      className="footerLeft"
     >
-      <p>
-        <LocationIcon />
-         
-        Kuala Lumpur
-      </p>
-      <p>
-        <MoneyIcon />
-         
-        RM999999999 - RM999999999999
-      </p>
-      <p>
-        1h
-      </p>
+      <div
+        className="jobInfo"
+      >
+        <Text
+          baseline={true}
+          small={true}
+        >
+          <LocationIcon />
+           
+          Kuala Lumpur
+        </Text>
+        <Text
+          baseline={true}
+          small={true}
+        >
+          <MoneyIcon />
+           
+          RM999999999 - RM999999999999
+        </Text>
+      </div>
+      <div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          small={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
     </div>
   </Section>
 </Card>
@@ -52,45 +65,67 @@ exports[`JobCard should render with description props 1`] = `
   className="root"
 >
   <Section>
-    <h2
+    <Text
+      baseline={true}
       className="company"
+      small={true}
     >
       SEEK Asia
-    </h2>
-    <h1
-      className="jobTitle"
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+      heading={true}
     >
       Developer
-    </h1>
+    </Text>
   </Section>
   <Section
-    className="bodyDescription"
+    className="jobDescriptionSection"
   >
-    <p
+    <Text
+      baseline={true}
       className="bodyDescriptionText"
+      small={true}
     >
       Hello world
-    </p>
+    </Text>
   </Section>
   <Section
-    className="footer"
+    className="footerSection"
   >
     <div
-      className="footerInfo"
+      className="footerLeft"
     >
-      <p>
-        <LocationIcon />
-         
-        Kuala Lumpur
-      </p>
-      <p>
-        <MoneyIcon />
-         
-        RM999999999 - RM999999999999
-      </p>
-      <p>
-        1h
-      </p>
+      <div
+        className="jobInfo"
+      >
+        <Text
+          baseline={true}
+          small={true}
+        >
+          <LocationIcon />
+           
+          Kuala Lumpur
+        </Text>
+        <Text
+          baseline={true}
+          small={true}
+        >
+          <MoneyIcon />
+           
+          RM999999999 - RM999999999999
+        </Text>
+      </div>
+      <div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          small={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
     </div>
   </Section>
 </Card>
