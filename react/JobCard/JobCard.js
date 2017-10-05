@@ -35,14 +35,10 @@ const JobCard = ({ job }) => {
         </Section>
       )}
       <Section className={styles.footerSection}>
-        <div className={styles.footerLeft}>
-          <div className={styles.jobInfo}>
-            <Text small><LocationIcon /> {job.location}</Text>
-            { job.salary && (<Text small><MoneyIcon /> {job.salary}</Text>)}
-          </div>
-          <div>
-            <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
-          </div>
+        <div className={styles.jobInfo}>
+          <Text small><LocationIcon /> {job.location}</Text>
+          { job.salary && (<Text small><MoneyIcon /> {job.salary}</Text>)}
+          <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
         </div>
         {job.companyLogoUrl && (
           <div className={styles.companyLogoWrapper}>

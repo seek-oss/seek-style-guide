@@ -70,32 +70,29 @@
     justify-content: space-between;
 }
 
-.footerLeft {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .jobInfo {
     flex-basis: auto;
     overflow: hidden;
     span{
         vertical-align: middle;
         text-overflow: ellipsis;
-        whitespace: nowrap;
+        white-space: nowrap;
         overflow: hidden;
         color: @saGrey1;
         line-height: 16px;
-        display: flex;
     }
 }
 
-.postingDuration span {
-    color: @saGrey3;
+.postingDuration { 
+    padding-bottom: 3px;
+    span {
+        color: @saGrey3;
+    }
 }
 
 .companyLogoWrapper {
     width: 76px;
+    min-width: 76px;
     height: 64px;
     margin-left: 15px;
     border: 1px solid @saGrey4;

@@ -22,10 +22,10 @@ export default {
   container: JobCardContainer,
   initialProps: {
     job: {
-      company: 'SEEK Asia SEEK Asia SEEK Asia SEEK Asia SEEK Asia',
+      company: 'SEEK Asia',
       jobTitle: 'Senior Software Engineer (6 months Contract)',
       jobUrl: 'https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J',
-      location: 'Kuala Lumpur',
+      location: 'Kuala Lumpur Senior Software Engineer (6 months Contract)',
       description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...',
       companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png',
       postingDuration: '1 hour ago',
@@ -78,7 +78,7 @@ export default {
               'We practice a vibrant & energetic office culture',
               'Our company supports a fun yet balanced working environment',
               'We support a safe environment for our employees'
-            ],
+            ]
           }
         })
       },
