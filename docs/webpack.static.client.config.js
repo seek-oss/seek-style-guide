@@ -8,7 +8,6 @@ const autoprefixerConfig = require('../config/autoprefixer.config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const decorateClientConfig = require('seek-style-guide-webpack').decorateClientConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
-const failPlugin = require('webpack-fail-plugin');
 
 const appCss = new ExtractTextPlugin('app.css');
 
@@ -105,8 +104,7 @@ const config = {
       compress: {
         warnings: false
       }
-    }),
-    failPlugin
+    })
   ],
 
   stats: { children: false }

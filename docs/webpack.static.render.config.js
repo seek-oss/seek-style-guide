@@ -9,7 +9,6 @@ const autoprefixer = require('autoprefixer');
 const decorateServerConfig = require('seek-style-guide-webpack').decorateServerConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-const failPlugin = require('webpack-fail-plugin');
 
 const templatePath = path.resolve(__dirname, 'index.ejs');
 const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8')); // eslint-disable-line no-sync
@@ -100,8 +99,7 @@ const config = {
       compress: {
         warnings: false
       }
-    }),
-    failPlugin
+    })
   ]
 };
 
