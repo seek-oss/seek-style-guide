@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LogoText = ({ textClass }) => (
+const RainbowLogoText = ({ textClass }) => (
   <g className={textClass}>
     <path
       d="M86.641,45.601c-3.697,0-7.037-0.408-10.012-3.385l3.834-3.833c1.942,1.938,4.467,2.208,6.269,2.208
@@ -29,8 +29,8 @@ const LogoText = ({ textClass }) => (
   </g>
 );
 
-LogoText.propTypes = {
+RainbowLogoText.propTypes = {
   textClass: PropTypes.string
 };
 
-export default LogoText;
+export default RainbowLogoText;

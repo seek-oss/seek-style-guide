@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import { PageBlock, Section, Text } from 'seek-style-guide/react';
-import Baseline from 'react-baseline';
+import Baseline from './Baseline/Baseline';
 import Code from './Code/Code';
 import flatten from 'lodash/flatten';
 

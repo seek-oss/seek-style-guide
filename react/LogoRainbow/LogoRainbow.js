@@ -1,6 +1,7 @@
-import styles from './Logo.less';
-import LogoText from './LogoText';
-import LogoIcon from './LogoIcon';
+import styles from './LogoRainbow.less';
+import LogoRainbowText from './LogoRainbowText';
+import LogoRainbowIcon from './LogoRainbowIcon';
+import Logo from '../Logo/Logo';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -14,14 +15,28 @@ const viewportDimensions = type => ({
 
 const getViewPortDimension = (type, dimension) => viewportDimensions(type)[dimension];
 
-export default function Logo({
+export default function LogoRainbow({
   locale,
   svgClassName,
   invert,
   compact,
   textClass,
-  iconClass,
   ...restProps }) {
+  if (locale === 'NZ') {
+    return (
+      <Logo
+        {...{
+          locale,
+          svgClassName,
+          invert,
+          compact,
+          textClass,
+          ...restProps
+        }}
+      />
+    );
+  }
+
   const svgClasses = classnames(svgClassName, {
     [styles.root]: true,
     [styles.invert]: invert
@@ -42,29 +57,27 @@ export default function Logo({
         y="0px"
         x="0px">
         { !compact ?
-          <LogoText textClass={invert && styles.invertedLogoText || textClass} /> :
+          <LogoRainbowText textClass={invert && styles.invertedLogoText || textClass} /> :
           null
         }
-        <LogoIcon iconClass={invert && styles.invertedLogoIcon || iconClass} />
+        <LogoRainbowIcon />
       </svg>
     </div>
   );
 }
 
-Logo.propTypes = {
+LogoRainbow.propTypes = {
   locale: PropTypes.oneOf(['AU', 'NZ']),
   svgClassName: PropTypes.string,
   invert: PropTypes.bool,
   compact: PropTypes.bool,
   className: PropTypes.string,
-  textClass: PropTypes.string,
-  iconClass: PropTypes.string
+  textClass: PropTypes.string
 };
 
-Logo.defaultProps = {
+LogoRainbow.defaultProps = {
   locale: 'AU',
   svgClassName: '',
   className: '',
-  textClass: styles.logoText,
-  iconClass: styles.logoIcon
+  textClass: styles.logoText
 };
