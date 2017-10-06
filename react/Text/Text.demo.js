@@ -6,7 +6,7 @@ export default {
   component: Text,
   initialProps: {
     children: 'Living Style Guide',
-    hero: true
+    screaming: true
   },
   options: [
     {
@@ -79,46 +79,67 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Hero',
+          label: 'Screaming',
           transformProps: props => props
         },
         {
-          label: 'Headline',
-          transformProps: ({ hero, ...props }) => ({
+          label: 'Yelling',
+          transformProps: ({ screaming, ...props }) => ({
             ...props,
-            headline: true
+            yelling: true
           })
         },
         {
-          label: 'Heading',
-          transformProps: ({ hero, ...props }) => ({
+          label: 'Shouting',
+          transformProps: ({ screaming, ...props }) => ({
             ...props,
-            heading: true
+            shouting: true
           })
         },
         {
-          label: 'Subheading',
-          transformProps: ({ hero, ...props }) => ({
+          label: 'Waving',
+          transformProps: ({ screaming, ...props }) => ({
             ...props,
-            subheading: true
+            waving: true
           })
         },
         {
-          label: 'Superstandard',
-          transformProps: ({ hero, ...props }) => ({
+          label: 'Whistling',
+          transformProps: ({ screaming, ...props }) => ({
             ...props,
-            superstandard: true
+            whistling: true
           })
         },
         {
-          label: 'Standard',
-          transformProps: ({ hero, ...props }) => props
+          label: 'Whispering (Title)',
+          transformProps: ({ screaming, ...props }) => ({
+            ...props,
+            whisperingTitle: true
+          })
         },
         {
-          label: 'Substandard',
-          transformProps: ({ hero, ...props }) => ({
+          label: 'Loud',
+          transformProps: ({ screaming, ...props }) => ({
             ...props,
-            substandard: true
+            loud: true
+          })
+        },
+        {
+          label: 'Conversational',
+          transformProps: ({ screaming, ...props }) => props
+        },
+        {
+          label: 'Intimate',
+          transformProps: ({ screaming, ...props }) => ({
+            ...props,
+            intimate: true
+          })
+        },
+        {
+          label: 'Whispering',
+          transformProps: ({ screaming, ...props }) => ({
+            ...props,
+            whispering: true
           })
         }
       ]

@@ -63,28 +63,28 @@ export default class Header extends Component {
                   <PageBlock>
                     <Section header>
                       <Card transparent>
-                        <Text headline regular><Link className={styles.link} to="/">Home</Link></Text>
+                        <Text yelling regular><Link className={styles.link} to="/">Home</Link></Text>
                       </Card>
 
                       <Card transparent>
                         <h2>
-                          <Text headline>Guides</Text>
+                          <Text yelling>Guides</Text>
                         </h2>
                       </Card>
                       <Card transparent>
-                        <Text headline regular><Link className={styles.link} to="/typography">Typography</Link></Text>
-                        <Text headline regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
+                        <Text yelling regular><Link className={styles.link} to="/typography">Typography</Link></Text>
+                        <Text yelling regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
                       </Card>
 
                       <Card transparent>
                         <h2>
-                          <Text headline>Components</Text>
+                          <Text yelling>Components</Text>
                         </h2>
                       </Card>
                       <Card transparent>
                         {
                           demoSpecs.map(demoSpec => (
-                            <Text headline regular key={demoSpec.title}>
+                            <Text yelling regular key={demoSpec.title}>
                               <Link className={styles.link} to={demoSpec.route}>
                                 { demoSpec.title }
                               </Link>

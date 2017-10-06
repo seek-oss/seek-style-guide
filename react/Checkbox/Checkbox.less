@@ -27,12 +27,12 @@
 }
 
 .standard {
-  .touchableText(@standard-type-scale-mobile);
+  .touchableText(@conversational-type-scale-mobile);
   cursor: pointer;
   display: flex;
   align-items: center;
   @media @desktop {
-    .touchableText(@standard-type-scale);
+    .touchableText(@conversational-type-scale);
   }
 }
 
@@ -70,7 +70,7 @@
 
 .button {
   .activeFocusReset();
-  .touchableText(@standard-type-scale-mobile);
+  .touchableText(@conversational-type-scale-mobile);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@
   border-radius: 2px;
   cursor: pointer;
   @media @desktop {
-    .touchableText(@standard-type-scale);
+    .touchableText(@conversational-type-scale);
   }
 
   .input:checked + .label & {

@@ -137,7 +137,7 @@ export default class Demo extends Component {
           {
             title ? (
               <Section header>
-                <Text hero>{ title }</Text>
+                <Text screaming>{ title }</Text>
               </Section>
             ) :
             null

@@ -2,54 +2,35 @@
 @import (reference) "../type/type";
 @import (reference) "../layout/grid";
 
-.heroText(@baseline: true) {
-  .__type(@hero-type-scale, @hero-type-row-span, @baseline);
+.screamingTextResponsive(@baseline: true) {
+  .__responsiveType("screaming"; @baseline);
 }
-.headlineText(@baseline: true) {
-  .__type(@headline-type-scale, @headline-type-row-span, @baseline);
+.yellingTextResponsive(@baseline: true) {
+  .__responsiveType("yelling"; @baseline);
 }
-.headingText(@baseline: true) {
-  .__type(@heading-type-scale, @heading-type-row-span, @baseline);
+.shoutingTextResponsive(@baseline: true) {
+  .__responsiveType("shouting"; @baseline);
 }
-.subheadingText(@baseline: true) {
-  .__type(@subheading-type-scale, @subheading-type-row-span, @baseline);
+.wavingTextResponsive(@baseline: true) {
+  .__responsiveType("waving"; @baseline);
 }
-.superstandardText(@baseline: true) {
-  .__type(@superstandard-type-scale, @superstandard-type-row-span, @baseline);
+.whistlingTextResponsive(@baseline: true) {
+  .__responsiveType("whistling"; @baseline);
 }
-.standardText(@baseline: true) {
-  .__type(@standard-type-scale, @standard-type-row-span, @baseline);
+.whisperingTitleTextResponsive(@baseline: true) {
+  .__responsiveType("whispering-title"; @baseline);
 }
-.substandardText(@baseline: true) {
-  .__type(@substandard-type-scale, @substandard-type-row-span, @baseline);
+.loudTextResponsive(@baseline: true) {
+  .__responsiveType("loud"; @baseline);
 }
-.smallText(@baseline: true) {
-  .__type(@small-type-scale, @small-type-row-span, @baseline);
+.conversationalTextResponsive(@baseline: true) {
+  .__responsiveType("conversational"; @baseline);
 }
-
-.heroTextResponsive(@baseline: true) {
-  .__responsiveType("hero"; @baseline);
+.intimateTextResponsive(@baseline: true) {
+  .__responsiveType("intimate"; @baseline);
 }
-.headlineTextResponsive(@baseline: true) {
-  .__responsiveType("headline"; @baseline);
-}
-.headingTextResponsive(@baseline: true) {
-  .__responsiveType("heading"; @baseline);
-}
-.subheadingTextResponsive(@baseline: true) {
-  .__responsiveType("subheading"; @baseline);
-}
-.superstandardTextResponsive(@baseline: true) {
-  .__responsiveType("superstandard"; @baseline);
-}
-.standardTextResponsive(@baseline: true) {
-  .__responsiveType("standard"; @baseline);
-}
-.substandardTextResponsive(@baseline: true) {
-  .__responsiveType("substandard"; @baseline);
-}
-.smallTextResponsive(@baseline: true) {
-  .__responsiveType("small"; @baseline);
+.whisperingTextResponsive(@baseline: true) {
+  .__responsiveType("whispering"; @baseline);
 }
 
 @touchableTextHeight: @grid-row-height * @interaction-type-row-span;
@@ -60,7 +41,7 @@
   height: @touchableTextHeight;
 }
 
-.rawText(@font-scale: @standard-type-scale) {
+.rawText(@font-scale: @conversational-type-scale) {
   font-size: unit((@font-scale * @base-font-size), px);
 }
 
