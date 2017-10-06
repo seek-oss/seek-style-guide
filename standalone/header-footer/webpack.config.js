@@ -62,7 +62,8 @@ const config = {
             {
               loader: 'string-replace-loader',
               options: {
-                search: `__standalone_css_selector_prefix__&replace=${cssSelectorPrefix}`
+                search: '__standalone_css_selector_prefix__',
+                replace: cssSelectorPrefix
               }
             }
           ]
