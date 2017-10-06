@@ -10,6 +10,11 @@ import Playground from 'Playground/Playground';
 import Demo from 'Demo/Demo';
 import demoSpecs from '../../demoSpecs';
 
+const demoRoutes = demoSpecs.map(demoSpec => {
+  const DemoRoute = () => <Demo spec={demoSpec} />;
+  return <Route key={demoSpec.title} path={demoSpec.route} component={DemoRoute} />;
+});
+
 export default () => (
   <StyleGuideProvider fullScreen={true} title="SEEK Style Guide">
     <Header />
@@ -17,12 +22,7 @@ export default () => (
     <Route path="/typography" component={Typography} />
     <Route path="/page-layout" component={PageLayout} />
     <Route path="/playground" component={Playground} />
-    {
-      demoSpecs.map(demoSpec => {
-        const DemoRoute = () => <Demo spec={demoSpec} />;
-        return <Route key={demoSpec.title} path={demoSpec.route} component={DemoRoute} />;
-      })
-    }
+    { demoRoutes }
     <Footer />
   </StyleGuideProvider>
 );
