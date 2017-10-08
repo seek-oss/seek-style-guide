@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const autoprefixerConfig = require('../../config/autoprefixer.config');
 const decorateClientConfig = require('seek-style-guide-webpack').decorateClientConfig;
 const babelConfig = require('../../config/babel.config.js')({ reactHotLoader: false });
 const cssSelectorPrefix = require('./cssSelectorPrefix');
@@ -53,7 +54,7 @@ const config = {
             {
               loader: 'postcss-loader',
               options: {
-                plugins: [autoprefixer]
+                plugins: [autoprefixer(autoprefixerConfig)]
               }
             },
             {

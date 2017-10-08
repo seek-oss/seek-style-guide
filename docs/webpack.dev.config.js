@@ -4,6 +4,7 @@ require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '..'))
 
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const autoprefixerConfig = require('../config/autoprefixer.config');
 const decorateClientConfig = require('seek-style-guide-webpack').decorateClientConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: true });
 
@@ -65,7 +66,7 @@ const config = decorateClientConfig({
           {
             loader: 'postcss-loader',
             options: {
-              plugins: [autoprefixer]
+              plugins: [autoprefixer(autoprefixerConfig)]
             }
           },
           {
