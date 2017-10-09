@@ -43,7 +43,7 @@ export default {
           ...props,
           job: {
             ...props.job,
-            pinkLabel: 'Featured'
+            featuredLabel: 'Featured'
           }
         })
       },
@@ -54,7 +54,7 @@ export default {
           job: {
             ...props.job,
             company: '',
-            greyLabel: 'Company Confidential'
+            confidentialLabel: 'Company Confidential'
           }
         })
       },
@@ -64,7 +64,7 @@ export default {
           ...props,
           job: {
             ...props.job,
-            greyLabel: 'Classified'
+            classifiedLabel: 'Classified'
           }
         })
       },

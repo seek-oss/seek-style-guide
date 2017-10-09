@@ -6,7 +6,6 @@
     border-style: solid;
     border-bottom-width: 1px;
     border-color: @saGrey4;
-    font-size: 12px;
 }
 
 .company {
@@ -24,7 +23,15 @@
     color: @saGrey2;
 }
 
-.pinkLabel {
+.classifiedLabel {
+    &:extend(.greyLabel);
+}
+
+.confidentialLabel {
+    &:extend(.greyLabel);
+}
+
+.featuredLabel {
     padding: 0 5px;
     margin-right: 5px;
     background-color: @panelPink;
