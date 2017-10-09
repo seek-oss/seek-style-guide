@@ -20,10 +20,10 @@ describe('JobCard', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render with feature label', () => {
+  it('should render with featured label', () => {
     const descriptionJob = {
       ...defaultJob,
-      pinkLabel: 'Feature'
+      featuredLabel: 'Feature'
     };
 
     const wrapper = shallow(<JobCard job={descriptionJob} />);
@@ -33,7 +33,7 @@ describe('JobCard', () => {
   it('should render with company confidential in grey label', () => {
     const descriptionJob = {
       ...defaultJob,
-      greyLabel: 'Company Confidential',
+      confidentialLabel: 'Company Confidential',
       company: null
     };
 
@@ -44,7 +44,7 @@ describe('JobCard', () => {
   it('should render with Classified in grey label', () => {
     const descriptionJob = {
       ...defaultJob,
-      greyLabel: 'Classified'
+      classifiedLabel: 'Classified'
     };
 
     const wrapper = shallow(<JobCard job={descriptionJob} />);

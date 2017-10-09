@@ -11,7 +11,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
       small={true}
     >
       <span
-        className="greyLabel"
+        className="classifiedLabel"
       >
         Classified
       </span>
@@ -43,11 +43,12 @@ exports[`JobCard should render with Classified in grey label 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfo"
+        className="jobInfoList"
       >
         <div>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <LocationIcon />
@@ -56,6 +57,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
           </Text>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <MoneyIcon />
@@ -95,7 +97,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
       small={true}
     >
       <span
-        className="greyLabel"
+        className="confidentialLabel"
       >
         Company Confidential
       </span>
@@ -126,11 +128,12 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfo"
+        className="jobInfoList"
       >
         <div>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <LocationIcon />
@@ -139,6 +142,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
           </Text>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <MoneyIcon />
@@ -205,11 +209,12 @@ exports[`JobCard should render with default props 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfo"
+        className="jobInfoList"
       >
         <div>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <LocationIcon />
@@ -218,6 +223,7 @@ exports[`JobCard should render with default props 1`] = `
           </Text>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <MoneyIcon />
@@ -246,7 +252,7 @@ exports[`JobCard should render with default props 1`] = `
 </Card>
 `;
 
-exports[`JobCard should render with feature label 1`] = `
+exports[`JobCard should render with featured label 1`] = `
 <Card
   className="root"
 >
@@ -257,7 +263,7 @@ exports[`JobCard should render with feature label 1`] = `
       small={true}
     >
       <span
-        className="pinkLabel"
+        className="featuredLabel"
       >
         Feature
       </span>
@@ -289,11 +295,12 @@ exports[`JobCard should render with feature label 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfo"
+        className="jobInfoList"
       >
         <div>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <LocationIcon />
@@ -302,6 +309,7 @@ exports[`JobCard should render with feature label 1`] = `
           </Text>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <MoneyIcon />
@@ -354,11 +362,12 @@ exports[`JobCard should render with selling points props 1`] = `
     className="sellingPointsSection"
   >
     <ul
-      className="sellingPoints"
+      className="sellingPointsList"
     >
       <li>
         <Text
           baseline={true}
+          className="sellingPoint"
           small={true}
         >
           We practice a vibrant & energetic office culture
@@ -367,6 +376,7 @@ exports[`JobCard should render with selling points props 1`] = `
       <li>
         <Text
           baseline={true}
+          className="sellingPoint"
           small={true}
         >
           Our company supports a fun yet balanced working environment
@@ -375,6 +385,7 @@ exports[`JobCard should render with selling points props 1`] = `
       <li>
         <Text
           baseline={true}
+          className="sellingPoint"
           small={true}
         >
           We support a safe environment for our employees
@@ -400,11 +411,12 @@ exports[`JobCard should render with selling points props 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfo"
+        className="jobInfoList"
       >
         <div>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <LocationIcon />
@@ -413,6 +425,7 @@ exports[`JobCard should render with selling points props 1`] = `
           </Text>
           <Text
             baseline={true}
+            className="jobInfo"
             small={true}
           >
             <MoneyIcon />
