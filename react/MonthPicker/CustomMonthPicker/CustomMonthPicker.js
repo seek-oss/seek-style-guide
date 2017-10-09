@@ -39,7 +39,6 @@ const months = [
 const years = getYearOptions();
 
 export default class CustomMonthPicker extends Component {
-
   static displayName = 'CustomMonthPicker';
 
   static propTypes = {

@@ -139,8 +139,7 @@ export default class Demo extends Component {
               <Section header>
                 <Text hero>{ title }</Text>
               </Section>
-            ) :
-            null
+            ) : null
           }
         </PageBlock>
         <Baseline isVisible={true} type="bar" color="#e8e8e8">
@@ -161,11 +160,10 @@ export default class Demo extends Component {
                     .map((option, i) => (
                       <div key={i} className={styles.optionItem}>{ option }</div>
                     ))
-                  }
+                }
               </div>
             </PageBlock>
-          ) :
-          null
+          ) : null
         }
         <PageBlock className={styles.codeBlock}>
           <Code jsx={codeElement} />

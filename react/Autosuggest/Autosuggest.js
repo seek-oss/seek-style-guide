@@ -14,7 +14,6 @@ import smoothScroll from '../private/smoothScroll';
 import smallDeviceOnly from '../private/smallDeviceOnly';
 
 export default class Autosuggest extends Component {
-
   static displayName = 'Autosuggest';
 
   static propTypes = {
@@ -148,5 +147,4 @@ export default class Autosuggest extends Component {
       </div>
     );
   }
-
 }

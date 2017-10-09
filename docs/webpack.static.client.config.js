@@ -43,7 +43,7 @@ const config = {
           loader: 'babel-loader',
           options: {
             babelrc: false,
-            presets: ['es2015']
+            presets: ['env']
           }
         }
       },
