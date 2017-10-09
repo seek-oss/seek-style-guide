@@ -1,5 +1,176 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`JobCard should render with Classified in grey label 1`] = `
+<Card
+  className="root"
+>
+  <Section>
+    <Text
+      baseline={true}
+      className="company"
+      small={true}
+    >
+      <span
+        className="classifiedLabel"
+      >
+        Classified
+      </span>
+      SEEK Asia
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+      heading={true}
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
+  </Section>
+  <Section
+    className="jobDescriptionSection"
+  >
+    <Text
+      baseline={true}
+      className="bodyDescriptionText"
+      small={true}
+    >
+      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+    </Text>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoList"
+      >
+        <div>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <LocationIcon />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <MoneyIcon />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          small={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
+    </div>
+  </Section>
+</Card>
+`;
+
+exports[`JobCard should render with company confidential in grey label 1`] = `
+<Card
+  className="root"
+>
+  <Section>
+    <Text
+      baseline={true}
+      className="company"
+      small={true}
+    >
+      <span
+        className="confidentialLabel"
+      >
+        Company Confidential
+      </span>
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+      heading={true}
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
+  </Section>
+  <Section
+    className="jobDescriptionSection"
+  >
+    <Text
+      baseline={true}
+      className="bodyDescriptionText"
+      small={true}
+    >
+      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+    </Text>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoList"
+      >
+        <div>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <LocationIcon />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <MoneyIcon />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          small={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
+    </div>
+  </Section>
+</Card>
+`;
+
 exports[`JobCard should render with default props 1`] = `
 <Card
   className="root"
@@ -8,51 +179,80 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="company"
-      substandard={true}
+      small={true}
     >
       SEEK Asia
     </Text>
     <Text
       baseline={true}
+      className="positionTitle"
       heading={true}
     >
-      Developer
+      Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="footer"
+    className="jobDescriptionSection"
   >
-    <div>
-      <Text
-        baseline={true}
-        substandard={true}
+    <Text
+      baseline={true}
+      className="bodyDescriptionText"
+      small={true}
+    >
+      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+    </Text>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoList"
       >
-        <LocationIcon />
-         
-        Kuala Lumpur
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
-        <MoneyIcon />
-         
-        RM999999999 - RM999999999999
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
-        <TimeIcon />
-         
-        1h
-      </Text>
+        <div>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <LocationIcon />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <MoneyIcon />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          small={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
     </div>
   </Section>
 </Card>
 `;
 
-exports[`JobCard should render with description props 1`] = `
+exports[`JobCard should render with featured label 1`] = `
 <Card
   className="root"
 >
@@ -60,55 +260,195 @@ exports[`JobCard should render with description props 1`] = `
     <Text
       baseline={true}
       className="company"
-      substandard={true}
+      small={true}
+    >
+      <span
+        className="featuredLabel"
+      >
+        Feature
+      </span>
+      SEEK Asia
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+      heading={true}
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
+  </Section>
+  <Section
+    className="jobDescriptionSection"
+  >
+    <Text
+      baseline={true}
+      className="bodyDescriptionText"
+      small={true}
+    >
+      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+    </Text>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoList"
+      >
+        <div>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <LocationIcon />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <MoneyIcon />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          small={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
+    </div>
+  </Section>
+</Card>
+`;
+
+exports[`JobCard should render with selling points props 1`] = `
+<Card
+  className="root"
+>
+  <Section>
+    <Text
+      baseline={true}
+      className="company"
+      small={true}
     >
       SEEK Asia
     </Text>
     <Text
       baseline={true}
+      className="positionTitle"
       heading={true}
     >
-      Developer
+      Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="bodyDescription"
+    className="sellingPointsSection"
+  >
+    <ul
+      className="sellingPointsList"
+    >
+      <li>
+        <Text
+          baseline={true}
+          className="sellingPoint"
+          small={true}
+        >
+          We practice a vibrant & energetic office culture
+        </Text>
+      </li>
+      <li>
+        <Text
+          baseline={true}
+          className="sellingPoint"
+          small={true}
+        >
+          Our company supports a fun yet balanced working environment
+        </Text>
+      </li>
+      <li>
+        <Text
+          baseline={true}
+          className="sellingPoint"
+          small={true}
+        >
+          We support a safe environment for our employees
+        </Text>
+      </li>
+    </ul>
+  </Section>
+  <Section
+    className="jobDescriptionSection"
   >
     <Text
       baseline={true}
-      substandard={true}
+      className="bodyDescriptionText"
+      small={true}
     >
-      Hello world
+      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
     </Text>
   </Section>
   <Section
-    className="footer"
+    className="footerSection"
   >
-    <div>
-      <Text
-        baseline={true}
-        substandard={true}
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoList"
       >
-        <LocationIcon />
-         
-        Kuala Lumpur
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
-        <MoneyIcon />
-         
-        RM999999999 - RM999999999999
-      </Text>
-      <Text
-        baseline={true}
-        substandard={true}
-      >
-        <TimeIcon />
-         
-        1h
-      </Text>
+        <div>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <LocationIcon />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            small={true}
+          >
+            <MoneyIcon />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          small={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
     </div>
   </Section>
 </Card>

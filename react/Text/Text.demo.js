@@ -120,6 +120,13 @@ export default {
             ...props,
             substandard: true
           })
+        },
+        {
+          label: 'Small',
+          transformProps: ({ hero, ...props }) => ({
+            ...props,
+            small: true
+          })
         }
       ]
     }
