@@ -1,12 +1,14 @@
+// Alias 'seek-style-guide' so 'seek-style-guide-webpack' works correctly
+const path = require('path');
+require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '..'));
+
 const fs = require('fs');
 const ejs = require('ejs');
-const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const decorateServerConfig = require('../webpack').decorateServerConfig;
+const decorateServerConfig = require('seek-style-guide-webpack').decorateServerConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-const failPlugin = require('webpack-fail-plugin');
 
 const templatePath = path.resolve(__dirname, 'index.ejs');
 const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8')); // eslint-disable-line no-sync
@@ -27,33 +29,55 @@ const config = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        query: babelConfig,
-        include: appPaths
+        include: appPaths,
+        use: {
+          loader: 'babel-loader',
+          options: babelConfig
+        }
       },
       {
         test: /\.less$/,
-        loader: 'css/locals?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!less',
-        include: appPaths
+        include: appPaths,
+        use: [
+          {
+            loader: 'css-loader/locals',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer]
+            }
+          },
+          {
+            loader: 'less-loader'
+          }
+        ]
       },
       {
         test: /\.svg$/,
-        loader: 'raw!svgo',
-        include: appPaths
+        include: appPaths,
+        use: [
+          {
+            loader: 'raw-loader'
+          },
+          {
+            loader: 'svgo-loader'
+          }
+        ]
       }
     ]
   },
 
   resolve: {
-    modulesDirectories: ['node_modules', 'wip_modules', 'components']
+    modules: ['node_modules', 'wip_modules', 'components']
   },
-
-  postcss: [
-    autoprefixer
-  ],
 
   plugins: [
     new webpack.DefinePlugin({
@@ -75,8 +99,7 @@ const config = {
       compress: {
         warnings: false
       }
-    }),
-    failPlugin
+    })
   ]
 };
 
