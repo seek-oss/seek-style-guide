@@ -71,19 +71,19 @@ export default {
           })
         },
         {
-          label: 'Secondary Label',
-          transformProps: props => ({
-            ...props,
-            secondaryLabel: '(secondary)'
-          })
-        },
-        {
           label: 'Show Count',
           transformProps: props => ({
             ...props,
             countFeedback: value => ({
               count: 500 - value.length
             })
+          })
+        },
+        {
+          label: 'Description',
+          transformProps: props => ({
+            ...props,
+            description: 'Describe a descriptive description descriptively'
           })
         }
       ]

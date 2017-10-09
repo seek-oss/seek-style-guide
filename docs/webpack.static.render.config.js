@@ -29,10 +29,15 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /(?!\.css)\.js$/,
         loader: 'babel',
         query: babelConfig,
         include: appPaths
+      },
+      {
+        test: /\.css\.js$/,
+        include: appPaths,
+        loader: 'css/locals?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!css-in-js!babel?' + JSON.stringify(babelConfig)
       },
       {
         test: /\.less$/,
@@ -57,10 +62,8 @@ const config = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-        BASE_HREF: JSON.stringify(process.env.BASE_HREF)
-      }
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     }),
     new StaticSiteGeneratorPlugin({
       crawl: true,

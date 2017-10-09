@@ -51,13 +51,15 @@ export default class FieldLabel extends Component {
     },
     /* eslint-enable consistent-return */
     secondaryLabel: PropTypes.string,
-    tertiaryLabel: PropTypes.node
+    tertiaryLabel: PropTypes.node,
+    raw: PropTypes.bool
   };
 
   static defaultProps = {
     label: '',
     secondaryLabel: '',
-    tertiaryLabel: ''
+    tertiaryLabel: '',
+    raw: false
   };
 
   constructor() {
@@ -95,7 +97,7 @@ export default class FieldLabel extends Component {
   }
 
   render() {
-    const { label } = this.props;
+    const { label, raw } = this.props;
 
     if (!label) {
       return null;
@@ -108,7 +110,7 @@ export default class FieldLabel extends Component {
     };
     return (
       <label {...allLabelProps}>
-        <Text><Strong>{label}</Strong> {this.renderSecondary()}{this.renderTertiary()}</Text>
+        <Text raw={raw}><Strong>{label}</Strong> {this.renderSecondary()}{this.renderTertiary()}</Text>
       </label>
     );
   }
