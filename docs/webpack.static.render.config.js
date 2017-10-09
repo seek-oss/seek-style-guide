@@ -29,10 +29,15 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /(?!\.css)\.js$/,
         loader: 'babel',
         query: babelConfig,
         include: appPaths
+      },
+      {
+        test: /\.css\.js$/,
+        include: appPaths,
+        loader: 'css/locals?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!css-in-js!babel?' + JSON.stringify(babelConfig)
       },
       {
         test: /\.less$/,
