@@ -1,0 +1,34 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.item{
+  &:after {
+    content: '|';
+    display: inline-block;
+    color: @saWhite;
+  }
+  &:last-child:after {
+    display:none;
+  }
+  @media @mobile{
+    display: none;
+  }
+}
+.itemMobile{
+  display: inline-block;
+  @media @desktop{
+    display: none;
+  }
+}
+.link {
+  display: inline-block;
+  padding:0 5px;
+  text-decoration: none;
+  color: @saWhite;
+  font-size: 0.75rem;
+}

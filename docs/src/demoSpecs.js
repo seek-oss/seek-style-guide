@@ -13,6 +13,7 @@ import JobStreetHeader from 'seek-style-guide/jobStreet/Header/Header.demo';
 import JobsDBHeader from 'seek-style-guide/jobsDB/Header/Header.demo';
 import DefaultFooter from 'seek-style-guide/react/Footer/Footer.demo';
 import JobStreetFooter from 'seek-style-guide/jobStreet/Footer/Footer.demo';
+import JobsDBFooter from 'seek-style-guide/jobsDB/Footer/Footer.demo';
 import Loader from 'seek-style-guide/react/Loader/Loader.demo';
 import JobCard from 'seek-style-guide/react/JobCard/JobCard.demo';
 import DefaultLogo from 'seek-style-guide/react/Logo/Logo.demo';
@@ -24,13 +25,14 @@ const tenant = process.env.SKU_TENANT;
 let Header = DefaultHeader;
 let Logo = DefaultLogo;
 let Footer = DefaultFooter;
-if (tenant === 'jobStreet'){
+if (tenant === 'jobStreet') {
   Header = JobStreetHeader;
   Logo = JobStreetLogo;
   Footer = JobStreetFooter;
-}else if (tenant === 'jobsDB'){
+} else if (tenant === 'jobsDB') {
   Header = JobsDBHeader;
   Logo = JobsDBLogo;
+  Footer = JobsDBFooter;
 }
 
 export default [

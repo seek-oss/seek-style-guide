@@ -55,7 +55,7 @@ export default class Checkbox extends Component {
     return (
       <div className={styles.standard}>
         { this.renderCheckBox(LEFT) }
-        <span>{label}</span>        
+        <span>{label}</span>
         { this.renderCheckBox(RIGHT) }
       </div>
     );
