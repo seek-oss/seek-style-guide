@@ -27,7 +27,7 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /(?!\.css)\.js$/,
         loader: 'babel',
         query: babelConfig,
         include: appPaths
@@ -40,6 +40,11 @@ const config = {
           presets: ['es2015']
         },
         include: /node_modules/
+      },
+      {
+        test: /\.css\.js$/,
+        include: appPaths,
+        loader: appCss.extract('style', 'css?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!css-in-js!babel?' + JSON.stringify(babelConfig))
       },
       {
         test: /\.less$/,
