@@ -23,9 +23,9 @@ const JobCard = ({ job }) => {
       </Section>
       { job.sellingPoints && 
         <Section className={styles.sellingPointsSection}> 
-          <ul className={styles.sellingPoints}>
+          <ul className={styles.sellingPointsList}>
             {job.sellingPoints.map((sellingPoint, i) => {return (
-              <li key={i}><Text small>{sellingPoint}</Text></li>
+              <li key={i}><Text small className={styles.sellingPoint}>{sellingPoint}</Text></li>
             );})}
           </ul>
         </Section>
@@ -37,10 +37,10 @@ const JobCard = ({ job }) => {
       )}
       <Section className={styles.footerSection}>
         <div className={styles.footerLeft}>
-          <div className={styles.jobInfo}>
+          <div className={styles.jobInfoList}>
             <div>
-              <Text small><LocationIcon /> {job.location}</Text>
-              { job.salary && (<Text small><MoneyIcon /> {job.salary}</Text>)}
+              <Text small className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
+              { job.salary && (<Text small className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
             </div>
             <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>

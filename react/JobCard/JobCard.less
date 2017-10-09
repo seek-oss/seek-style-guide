@@ -1,4 +1,10 @@
 @import (reference) "~seek-asia-style-guide/theme";
+@job-card-section-space: 0;
+@job-card-label-indent: 5px;
+@job-card-list-indent: 14px;
+@job-card-text-space: 0;
+@job-card-bottom-text-space: 3px;
+@job-card-logo-indent: 15px;
 
 .root {
   width: 100%;
@@ -9,7 +15,7 @@
 }
 
 .company {
-  padding-bottom: 0;
+  padding-bottom: @job-card-text-space;
   color: @saGrey1;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -17,8 +23,8 @@
 }
 
 .greyLabel {
-  padding: 0 5px;
-  margin-right: 5px;
+  padding: @job-card-text-space @job-card-label-indent;
+  margin-right: @job-card-label-indent;
   background-color: @saGrey5;
   color: @saGrey2;
 }
@@ -32,38 +38,34 @@
 }
 
 .featuredLabel {
-  padding: 0 5px;
-  margin-right: 5px;
+  padding: @job-card-text-space @job-card-label-indent;
+  margin-right: @job-card-label-indent;
   background-color: @panelPink;
   color: @saWhite;
 }
 
 .positionTitle {
   color: @linkBlue;
-  font-size: 16px !important;
-  line-height: 16px !important;
-  padding-bottom: 0;
+  padding-bottom: @job-card-text-space;
 }
 
-.sellingPoints {
+.sellingPointsList {
   list-style: disc;
-  padding-left:16px;
+  padding-left: @job-card-list-indent;
   color: @saGrey2;
+}
 
-  & span {
-    line-height: 16px !important;
-    padding-bottom: 0;
-  }
+.sellingPoint {
+  padding-bottom: @job-card-text-space;
 }
 
 .jobDescriptionSection, .sellingPointsSection {
-  padding-top: 0;
+  padding-top: @job-card-section-space;
 }
 
 .bodyDescriptionText {
-  line-height: 14px !important;
   color: @saGrey3; 
-  padding-bottom: 0;
+  padding-bottom: @job-card-text-space;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -72,7 +74,7 @@
 }
 
 .footerSection {
-  padding-top: 0;
+  padding-top: @job-card-section-space;
   display: flex;
   justify-content: space-between;
 }
@@ -82,33 +84,34 @@
   overflow: hidden;
 }
 
-.jobInfo {    
+.jobInfoList {    
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  span{
+}
+
+.jobInfo {
+  padding-bottom: @job-card-text-space;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: @saGrey1;\
+  & span {
     vertical-align: middle;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    color: @saGrey1;
-    line-height: 16px;
   }
 }
 
 .postingDuration { 
-  padding-bottom: 3px;
-  span {
-    color: @saGrey3;
-  }
+  padding-bottom: @job-card-bottom-text-space;
+  color: @saGrey3;
 }
 
 .companyLogoWrapper {
   width: 76px;
   min-width: 76px;
   height: 64px;
-  margin-left: 15px;
+  margin-left: @job-card-logo-indent;
   border: 1px solid @saGrey4;
   display: flex;
   align-items: center;
