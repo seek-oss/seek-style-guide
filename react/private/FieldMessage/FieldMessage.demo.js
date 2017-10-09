@@ -1,18 +1,5 @@
 export default [
   {
-    label: 'Secondary',
-    type: 'checklist',
-    states: [
-      {
-        label: 'Secondary message',
-        transformProps: props => ({
-          ...props,
-          messageProps: { secondary: true }
-        })
-      }
-    ]
-  },
-  {
     label: 'Message',
     type: 'radio',
     states: [

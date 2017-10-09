@@ -6,6 +6,7 @@ import classnames from 'classnames';
 
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
+import Text from '../Text/Text';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -32,6 +33,7 @@ export default class Textarea extends Component {
     /* eslint-enable consistent-return */
     className: PropTypes.string,
     valid: PropTypes.bool,
+    description: PropTypes.string,
     /* eslint-disable consistent-return */
     inputProps: (props, propName, componentName) => {
       const { id, inputProps } = props;
@@ -63,7 +65,8 @@ export default class Textarea extends Component {
 
   static defaultProps = {
     id: '',
-    className: ''
+    className: '',
+    description: ''
   };
 
   constructor() {
@@ -122,11 +125,15 @@ export default class Textarea extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { id, label, labelProps, invalid, help, helpProps, message, messageProps, secondaryLabel, tertiaryLabel } = this.props;
+    const { id, label, labelProps, invalid, help, helpProps, message, messageProps, secondaryLabel, tertiaryLabel, description } = this.props;
+    const hasDescription = description.length > 0;
 
     return (
       <div className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel, raw: hasDescription }} />
+        {
+          hasDescription ? <Text secondary>{description}</Text> : null
+        }
         {this.renderInput()}
         <div className={styles.footer}>
           <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />

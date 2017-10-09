@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Text from 'seek-asia-style-guide/react/Text/Text';
 import FbIcon from 'seek-asia-style-guide/react/FacebookIcon/FacebookIcon';

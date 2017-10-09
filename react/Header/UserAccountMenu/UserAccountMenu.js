@@ -9,6 +9,8 @@ import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import HeartIcon from '../../HeartIcon/HeartIcon';
 import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
+import Hidden from '../../Hidden/Hidden';
+import Loader from '../../Loader/Loader';
 import employerLinkForLocale from '../employerLinkForLocale';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import appendReturnUrl from '../../private/appendReturnUrl';
@@ -23,7 +25,7 @@ const clearLocalStorage = () => {
 export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab }) {
   return (
     <ul className={styles.root}>
-      <li className={classnames(styles.smallDeviceOnly, activeTab === 'Job Search' && styles.activeTab)}>
+      <Hidden desktop component="li" className={classnames(activeTab === 'Job Search' && styles.activeTab)}>
         {
           linkRenderer({
             'data-analytics': 'header:jobs',
@@ -39,7 +41,8 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             ]
           })
         }
-      </li>
+      </Hidden>
+
       <li className={classnames(activeTab === 'Profile' && styles.activeTab)}>
         {
           linkRenderer({
@@ -57,7 +60,8 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Saved Searches' && styles.activeTab)}>
+
+      <Hidden mobile component="li" className={classnames(activeTab === 'Saved Searches' && styles.activeTab)}>
         {
           linkRenderer({
             'data-analytics': 'header:saved+searches',
@@ -73,7 +77,8 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             ]
           })
         }
-      </li>
+      </Hidden>
+
       <li className={classnames(activeTab === 'Saved & Applied Jobs' && styles.activeTab)}>
         {
           linkRenderer({
@@ -81,7 +86,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             className: `${styles.item} ${styles.subItem}`,
             href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
             children: [
-              <span key="label">Saved <span className={styles.smallDeviceOnly}>& Applied </span>Jobs</span>,
+              <span key="label">Saved <Hidden desktop>& Applied </Hidden>Jobs</span>,
               <StarIcon
                 key="icon"
                 className={classnames(styles.icon, styles.saveJobs)}
@@ -91,7 +96,8 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           })
         }
       </li>
-      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Applied Jobs' && styles.activeTab)}>
+
+      <Hidden mobile component="li" className={classnames(activeTab === 'Applied Jobs' && styles.activeTab)}>
         {
           linkRenderer({
             'data-analytics': 'header:applied+jobs',
@@ -103,8 +109,9 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             ]
           })
         }
-      </li>
-      <li className={classnames(styles.smallDeviceOnly, activeTab === 'Recommended Jobs' && styles.activeTab)}>
+      </Hidden>
+
+      <Hidden desktop component="li" className={classnames(activeTab === 'Recommended Jobs' && styles.activeTab)}>
         {
           linkRenderer({
             'data-analytics': 'header:recommended+jobs',
@@ -120,10 +127,11 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             ]
           })
         }
-      </li>
+      </Hidden>
+
       {
         locale === 'NZ' ? null : (
-          <li className={classnames(styles.smallDeviceOnly, activeTab === 'Company Reviews' && styles.activeTab)}>
+          <Hidden desktop component="li" className={classnames(activeTab === 'Company Reviews' && styles.activeTab)}>
             {
               linkRenderer({
                 'data-analytics': 'header:companies',
@@ -135,10 +143,11 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                 ]
               })
             }
-          </li>
+          </Hidden>
         )
       }
-      <li className={classnames(styles.aboveSmallDevice, activeTab === 'Settings' && styles.activeTab)}>
+
+      <Hidden mobile component="li" className={classnames(activeTab === 'Settings' && styles.activeTab)}>
         {
           linkRenderer({
             'data-analytics': 'header:settings',
@@ -150,8 +159,56 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             ]
           })
         }
-      </li>
-      <li className={classnames(styles.smallDeviceOnly, styles.firstItemInGroup, activeTab === 'Employer Site' && styles.activeTab)}>
+      </Hidden>
+
+      <Hidden desktop component="li" className={styles.firstItemInGroup}>
+        {(() => {
+          switch (authenticationStatus) {
+            case UNAUTHENTICATED: return (
+              <span className={styles.item}>
+                {
+                  linkRenderer({
+                    'data-analytics': 'header:sign-in',
+                    href: appendReturnUrl('/sign-in', returnUrl),
+                    className: styles.itemLink,
+                    title: 'Sign in',
+                    children: 'Sign in'
+                  })
+                }
+                <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
+                {
+                  linkRenderer({
+                    'data-analytics': 'header:register',
+                    href: appendReturnUrl('/sign-up', returnUrl),
+                    className: styles.itemLink,
+                    title: 'Register',
+                    children: 'Register'
+                  })
+                }
+                <div className={styles.iconSpacer} />
+              </span>
+            );
+            case AUTHENTICATED: return linkRenderer({
+              'data-analytics': 'header:sign-out',
+              className: styles.item,
+              onClick: clearLocalStorage,
+              href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',
+              children: [
+                'Sign Out',
+                <div key="iconSpacer" className={styles.iconSpacer} />
+              ]
+            });
+            default: return (
+              <span className={classnames(styles.item, styles.pendingAuth)}>
+                <Loader _small />
+                <div key="iconSpacer" className={styles.iconSpacer} />
+              </span>
+            );
+          }
+        })()}
+      </Hidden>
+
+      <Hidden desktop component="li" className={styles.firstItemInGroup}>
         {
           linkRenderer({
             'data-analytics': 'header:employer+site',
@@ -163,38 +220,11 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             ]
           })
         }
-      </li>
-      {
-        authenticationStatus === UNAUTHENTICATED ? (
-          <li className={`${styles.smallDeviceOnly}`}>
-            <span className={styles.item}>
-              {
-                linkRenderer({
-                  'data-analytics': 'header:sign-in',
-                  href: appendReturnUrl('/sign-in', returnUrl),
-                  className: styles.itemLink,
-                  title: 'Sign in',
-                  children: 'Sign in'
-                })
-              }
-              <span className={styles.secondaryItemText}>&nbsp;or&nbsp;</span>
-              {
-                linkRenderer({
-                  'data-analytics': 'header:register',
-                  href: appendReturnUrl('/sign-up', returnUrl),
-                  className: styles.itemLink,
-                  title: 'Register',
-                  children: 'Register'
-                })
-              }
-              <div className={styles.iconSpacer} />
-            </span>
-          </li>
-        ) : null
-      }
+      </Hidden>
+
       {
         authenticationStatus === AUTHENTICATED ? (
-          <li>
+          <Hidden mobile component="li">
             {
               linkRenderer({
                 'data-analytics': 'header:sign-out',
@@ -207,7 +237,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                 ]
               })
             }
-          </li>
+          </Hidden>
         ) : null
       }
     </ul>

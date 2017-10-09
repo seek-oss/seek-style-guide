@@ -45,4 +45,9 @@ describe('Header:', () => {
   it('should append returnUrl to signin and register links if present', () => {
     expect(renderHeader({ returnUrl: '/jobs' })).toMatchSnapshot();
   });
+
+  const CustomLogo = () => <div>Custom Logo</div>;
+  it('should render with a custom logo', () => {
+    expect(renderHeader({ logoComponent: CustomLogo })).toMatchSnapshot();
+  });
 });

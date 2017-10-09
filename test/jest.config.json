@@ -14,5 +14,9 @@
   ],
   "snapshotSerializers": [
     "<rootDir>/node_modules/enzyme-to-json/serializer"
-  ]
+  ],
+  "setupFiles": [
+    "<rootDir>/test/setupPolyfills.js"
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/test/setupTestFramework.js"
 }
