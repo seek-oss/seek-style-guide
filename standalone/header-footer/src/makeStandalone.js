@@ -14,8 +14,8 @@ export default (Component, defaultProps = {}) => (el, initialProps) => {
       component={Component}
       initialProps={{ ...defaultProps, ...initialProps }}
       registerPropsUpdater={registerPropsUpdater}
-    />
-  , el);
+    />,
+    el);
 
   return { updateProps };
 };

@@ -6,7 +6,6 @@ import TextField from '../TextField/TextField';
 const seekEmailRegex = '^[a-zA-Z0-9_][a-zA-Z0-9!#$%&\'*+/=?_`{|}~\-]*(?:\.[a-zA-Z0-9!#$%&\';*+/=?_`{|}~\-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2,})$';
 
 export default class EmailField extends Component {
-
   static displayName = 'EmailField';
 
   static propTypes = {
@@ -39,5 +38,4 @@ export default class EmailField extends Component {
 
     return <TextField {...props} ref={this.storeInputReference} inputProps={combinedInputProps} />;
   }
-
 }

@@ -12,7 +12,6 @@ import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
 
 export default class MonthPicker extends Component {
-
   static displayName = 'MonthPicker';
 
   static propTypes = {
@@ -84,5 +83,4 @@ export default class MonthPicker extends Component {
       </div>
     );
   }
-
 }
