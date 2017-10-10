@@ -111,6 +111,7 @@ The following colors are provided:
 @sk-pink
 @sk-green
 @sk-purple
+@sk-teal
 
 // Partner brand colors
 @sk-business
