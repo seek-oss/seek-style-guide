@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, HeartIcon, StarIcon } from 'seek-style-guide/react';
+import { Button, HeartIcon, StarIcon } from 'seek-asia-style-guide/react';
 import styles from './Button.less';
 import classnames from 'classnames';
 
