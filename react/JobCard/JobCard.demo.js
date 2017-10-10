@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { JobCard, PageBlock } from 'seek-style-guide/react';
+import { JobCard, PageBlock } from 'seek-asia-style-guide/react';
 
 const JobCardContainer = ({ component: DemoComponent, componentProps }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonGroup, Button, PageBlock, Section } from 'seek-style-guide/react';
+import { ButtonGroup, Button, PageBlock, Section } from 'seek-asia-style-guide/react';
 
 const ButtonGroupContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>

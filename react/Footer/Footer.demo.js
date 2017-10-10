@@ -1,4 +1,4 @@
-import { Footer } from 'seek-style-guide/react';
+import { Footer } from 'seek-asia-style-guide/react';
 import { makeDummyLinkRendererForPath } from '../Header/Header.demo';
 
 const ROUTE = '/footer';
