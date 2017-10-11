@@ -8,12 +8,13 @@ const renderColumn = (el, index) => (
   <div key={index} className={styles.column}>{el}</div>
 );
 
-export default function Columns({ children, tight }) {
+export default function Columns({ children, tight, flexible }) {
   return (
     <div
       className={classnames({
         [styles.columns]: true,
-        [styles.columns_tight]: tight
+        [styles.columns_tight]: tight,
+        [styles.columns_flexible]: flexible
       })}>
       {children.map(renderColumn)}
     </div>
@@ -22,5 +23,6 @@ export default function Columns({ children, tight }) {
 
 Columns.propTypes = {
   children: PropTypes.array.isRequired,
-  tight: PropTypes.bool
+  tight: PropTypes.bool,
+  flexible: PropTypes.bool
 };
