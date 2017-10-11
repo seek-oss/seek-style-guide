@@ -28,6 +28,7 @@ Wrap your app with the `StyleGuideProvider` component to use any of the style gu
 
 ```js
 import React, { Component } from 'react';
+import { StyleGuideProvider } from 'seek-asia-style-guide/react';
 
 export default class App extends Component {
   render() {

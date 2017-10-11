@@ -52,7 +52,7 @@ export default () => (
         </Section>
 
         <Section>
-          <Text strong>Accessibile design is good design</Text>
+          <Text strong>Accessible design is good design</Text>
           <Text>In principle Seek design should be usable on all devices by all of the people in all situations. Design is simple, touch friendly and clear and aims for AA accessibility.</Text>
         </Section>
       </div>

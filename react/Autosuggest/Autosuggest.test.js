@@ -50,8 +50,7 @@ describe('Autosuggest', () => {
   it('should render with mobile backdrop', () => {
     const props = getAutosuggestProps();
     props.labelProps = {
-      className: 'LABEL_TEST_CLASS',
-      someLabelProp: 'bar'
+      className: 'LABEL_TEST_CLASS'
     };
 
     const wrapper = render(<Autosuggest {...props} id="Foo" label="Foo" showMobileBackdrop />);

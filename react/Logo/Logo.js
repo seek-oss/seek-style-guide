@@ -15,6 +15,7 @@ const viewportDimensions = type => ({
 const getViewPortDimension = (type, dimension) => viewportDimensions(type)[dimension];
 
 export default function Logo({
+  locale,
   svgClassName,
   invert,
   compact,
@@ -51,6 +52,7 @@ export default function Logo({
 }
 
 Logo.propTypes = {
+  locale: PropTypes.oneOf(['AU', 'NZ']),
   svgClassName: PropTypes.string,
   invert: PropTypes.bool,
   compact: PropTypes.bool,
@@ -60,6 +62,7 @@ Logo.propTypes = {
 };
 
 Logo.defaultProps = {
+  locale: 'AU',
   svgClassName: '',
   className: '',
   textClass: styles.logoText,

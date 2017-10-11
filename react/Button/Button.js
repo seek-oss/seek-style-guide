@@ -1,5 +1,4 @@
 import styles from './Button.less';
-import brandStyles from './Button.css.js';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -53,7 +52,7 @@ export default class Button extends Component {
     }
   }
 
-  render() {       
+  render() {
     const { color, className, loading, fullWidth, children, component, ...restProps } = this.props;
 
     const combinedProps = {
@@ -62,7 +61,7 @@ export default class Button extends Component {
         [styles.fullWidth]: fullWidth,
         [styles.jobsDB]: isJobsDB,
         [styles.jobStreet]: isJobStreet,
-        [styles.root_callToAction] : color === 'callToAction',            
+        [styles.root_callToAction]: color === 'callToAction',
         [styles.root_hyperlink]: color === 'hyperlink',
         [styles.root_completion]: color === 'completion',
         [styles.root_alert]: color === 'alert',

@@ -1,0 +1,28 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+._mobileFill(@color) {
+  @media @mobile {
+    fill: @color;
+  }
+}
+
+.root {
+  background-color: @sk-white;
+  @media @mobile {
+    background-color: @sk-blue;
+  }
+}
+
+.invert {
+  background-color: @sk-blue;
+}
+
+.logoText {
+  fill: @sk-black;
+  ._mobileFill(@sk-white);
+}
+
+.invertedLogoText {
+  fill: @sk-white;
+}
+

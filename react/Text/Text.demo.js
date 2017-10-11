@@ -141,6 +141,13 @@ export default {
             ...props,
             whispering: true
           })
+        },
+        {
+          label: 'Small',
+          transformProps: ({ hero, ...props }) => ({
+            ...props,
+            small: true
+          })
         }
       ]
     }

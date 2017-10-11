@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './StandaloneProvider.less';
 import cssSelectorPrefix from '../../cssSelectorPrefix';
 
@@ -20,7 +22,7 @@ export default class StandaloneProvider extends Component {
   }
 
   updateProps(componentProps) {
-    this.setState({ componentProps });
+    this.setState({ componentProps: { ...this.state.componentProps, ...componentProps } });
   }
 
   render() {

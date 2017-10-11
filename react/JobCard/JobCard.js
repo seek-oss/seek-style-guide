@@ -7,30 +7,48 @@ import Section from '../Section/Section';
 import LocationIcon from '../LocationIcon/LocationIcon';
 import MoneyIcon from '../MoneyIcon/MoneyIcon';
 import TimeIcon from '../TimeIcon/TimeIcon';
-import styles from './JobCard.css';
+import styles from './JobCard.less';
 
 const JobCard = ({ job }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text intimate className={styles.company}>{job.company}</Text>
-        <Text yelling>{job.jobTitle}</Text>
+        <Text small className={styles.company}>
+          {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
+          {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
+          {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
+          {job.company}
+        </Text>
+        <Text heading className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
+      { job.sellingPoints && 
+        <Section className={styles.sellingPointsSection}> 
+          <ul className={styles.sellingPointsList}>
+            {job.sellingPoints.map((sellingPoint, i) => {return (
+              <li key={i}><Text small className={styles.sellingPoint}>{sellingPoint}</Text></li>
+            );})}
+          </ul>
+        </Section>
+      }
       { job.description && (
-        <Section className={styles.bodyDescription}>
-          <Text intimate>{job.description}</Text>
+        <Section className={styles.jobDescriptionSection}>
+          <Text small className={styles.bodyDescriptionText}>{job.description}</Text>
         </Section>
       )}
-      <Section className={styles.footer}>
-        <div>
-          <Text intimate><LocationIcon /> {job.location}</Text>
-          <Text intimate><MoneyIcon /> {job.salary}</Text>
-          <Text intimate><TimeIcon /> {job.postingDuration}</Text>
+      <Section className={styles.footerSection}>
+        <div className={styles.footerLeft}>
+          <div className={styles.jobInfoList}>
+            <div>
+              <Text small className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
+              { job.salary && (<Text small className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
+            </div>
+            <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
+          </div>
         </div>
-        { job.companyLogoUrl && (
-        <div className={styles.companyLogoWrapper}>
-          <img className={styles.companyLogo} src={job.companyLogoUrl} />
-        </div>
+        {job.companyLogoUrl && (
+          <div className={styles.companyLogoWrapper}>
+            <img className={styles.companyLogo} src={job.companyLogoUrl} />
+          </div>
         )}
       </Section>
     </Card>
@@ -40,11 +58,17 @@ const JobCard = ({ job }) => {
 export default JobCard;
 JobCard.propTypes = {
   job: PropTypes.shape({
-    jobTitle: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string.isRequired,
+    jobUrl: PropTypes.string.isRequired,
+    sellingPoints: PropTypes.arrayOf(PropTypes.string),
     companyLogoUrl: PropTypes.string,
     description: PropTypes.string,
     location: PropTypes.string.isRequired,
-    postingDuration: PropTypes.string.isRequired
+    salary: PropTypes.string,
+    postingDuration: PropTypes.string.isRequired,
+    featuredLabel: PropTypes.string,
+    classifiedLabel: PropTypes.string,
+    confidentialLabel: PropTypes.string
   }).isRequired
 };
