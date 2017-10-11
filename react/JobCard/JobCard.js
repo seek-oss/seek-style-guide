@@ -13,13 +13,13 @@ const JobCard = ({ job }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text small className={styles.company}>
+        <Text whispering className={styles.company}>
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
           {job.company}
         </Text>
-        <Text heading className={styles.positionTitle}>{job.jobTitle}</Text>
+        <Text yelling className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
       { job.sellingPoints && 
         <Section className={styles.sellingPointsSection}> 
@@ -32,17 +32,17 @@ const JobCard = ({ job }) => {
       }
       { job.description && (
         <Section className={styles.jobDescriptionSection}>
-          <Text small className={styles.bodyDescriptionText}>{job.description}</Text>
+          <Text whispering className={styles.bodyDescriptionText}>{job.description}</Text>
         </Section>
       )}
       <Section className={styles.footerSection}>
         <div className={styles.footerLeft}>
           <div className={styles.jobInfoList}>
             <div>
-              <Text small className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
+              <Text whispering className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
               { job.salary && (<Text small className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
             </div>
-            <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
+            <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>
         </div>
         {job.companyLogoUrl && (
