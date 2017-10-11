@@ -6,9 +6,9 @@
 }
 
 .root {
-  @ball-size: @grid-row-height * 2;
+  @ball-size: @grid-row-height * 4;
   @ball-spacing: 2px;
-  @animation-distance: @grid-row-height * 2;
+  @animation-distance: @grid-row-height * 4;
   @animation-duration: 0.6s;
   @animation-delay: 0.07s;
   @keyframes bounce {
@@ -17,7 +17,7 @@
   }
 
   width: (@ball-size + (@ball-spacing * 2)) * 3;
-  margin: (@grid-row-height * 7) auto;
+  margin: (@grid-row-height * 14) auto;
   animation: fadeIn ease-in 1;
   animation-duration: 0.25s;
 

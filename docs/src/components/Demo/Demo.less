@@ -1,20 +1,20 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  padding-bottom: @grid-row-height * 4;
+  padding-bottom: @grid-row-height * 8;
 }
 
 .component {
   position: relative;
   z-index: 1;
   &:not(.component_block) {
-    padding: (@grid-row-height * 8) 0;
+    padding: (@grid-row-height * 16) 0;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &.component_block {
-    padding: (@grid-row-height * 5) 0;
+    padding: (@grid-row-height * 10) 0;
     display: block;
   }
 }
@@ -24,9 +24,9 @@
 }
 
 .options {
-  padding: @grid-row-height @grid-gutter-width (@grid-row-height * 2) @grid-gutter-width;
+  padding: (@grid-row-height * 2) @grid-gutter-width (@grid-row-height * 4) @grid-gutter-width;
   @media @desktop {
-    height: @grid-row-height * 7;
+    height: @grid-row-height * 14;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,7 +35,7 @@
 }
 
 .optionItem {
-  padding-bottom: @grid-row-height;
+  padding-bottom: @grid-row-height * 2;
   @media @desktop {
     flex-grow: 1;
     display: flex;
@@ -50,12 +50,12 @@
   background: @sk-white;
   border: 0;
   font-size: 18px;
-  height: @grid-row-height * 4;
+  height: @grid-row-height * 8;
   width: 100%;
-  margin: @grid-row-height 0;
+  margin: @grid-row-height * 2 0;
   @media @desktop {
     font-size: 14px;
-    height: @grid-row-height * 3;
+    height: @grid-row-height * 6;
     width: auto;
     min-width: 130px;
   }
