@@ -364,7 +364,9 @@ exports[`JobCard should render with selling points props 1`] = `
     <ul
       className="sellingPointsList"
     >
-      <li>
+      <li
+        key="0"
+      >
         <Text
           baseline={true}
           className="sellingPoint"
@@ -373,7 +375,9 @@ exports[`JobCard should render with selling points props 1`] = `
           We practice a vibrant & energetic office culture
         </Text>
       </li>
-      <li>
+      <li
+        key="1"
+      >
         <Text
           baseline={true}
           className="sellingPoint"
@@ -382,7 +386,9 @@ exports[`JobCard should render with selling points props 1`] = `
           Our company supports a fun yet balanced working environment
         </Text>
       </li>
-      <li>
+      <li
+        key="2"
+      >
         <Text
           baseline={true}
           className="sellingPoint"
