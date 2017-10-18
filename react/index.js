@@ -57,6 +57,7 @@ export { default as LocationIcon } from './LocationIcon/LocationIcon';
 export { default as TimeIcon } from './TimeIcon/TimeIcon';
 export { default as MoneyIcon } from './MoneyIcon/MoneyIcon';
 export { default as HamburgerIcon } from './HamburgerIcon/HamburgerIcon';
+export { default as JobFunctionIcon } from './JobFunctionIcon/JobFunctionIcon';
 
 // Fields
 export { default as Autosuggest } from './Autosuggest/Autosuggest';
