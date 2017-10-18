@@ -36,7 +36,7 @@ describe('TextField', () => {
       expect(spy).toBeCalledWith(expectedError);
     });
 
-    it('should error if if `inputProps`\'s `id` is specifiedt', () => {
+    it('should error if `id` is specified in `inputProps`', () => {
       const expectedError = expect.stringMatching(
         /`inputProps.id` will be overridden by `id`/
       );
