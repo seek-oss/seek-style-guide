@@ -58,7 +58,7 @@ const JobCard = ({ job }) => {
 export default JobCard;
 JobCard.propTypes = {
   job: PropTypes.shape({
-    company: PropTypes.string.isRequired,
+    company: PropTypes.string,
     jobTitle: PropTypes.string.isRequired,
     jobUrl: PropTypes.string.isRequired,
     sellingPoints: PropTypes.arrayOf(PropTypes.string),
