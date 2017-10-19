@@ -1,4 +1,6 @@
 import Text from 'seek-style-guide/react/Text/Text.demo';
+import Card from 'seek-style-guide/react/Card/Card.demo';
+import CardGroup from 'seek-style-guide/react/CardGroup/CardGroup.demo';
 import Button from 'seek-style-guide/react/Button/Button.demo';
 import ButtonGroup from 'seek-style-guide/react/ButtonGroup/ButtonGroup.demo';
 import TextField from 'seek-style-guide/react/TextField/TextField.demo';
@@ -16,6 +18,8 @@ import Logo from 'seek-style-guide/react/Logo/Logo.demo';
 
 export default [
   Text,
+  Card,
+  CardGroup,
   Button,
   ButtonGroup,
   TextField,
