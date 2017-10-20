@@ -212,7 +212,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -223,9 +223,9 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -234,9 +234,9 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -1001,7 +1001,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -1012,9 +1012,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -1023,9 +1023,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -1790,7 +1790,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -1801,9 +1801,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -1812,9 +1812,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -2579,7 +2579,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -2590,9 +2590,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -2601,9 +2601,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -3357,7 +3357,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -3368,9 +3368,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -3379,9 +3379,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
