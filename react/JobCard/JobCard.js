@@ -13,36 +13,36 @@ const JobCard = ({ job }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text small className={styles.company}>
+        <Text whispering className={styles.company}>
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
           {job.company}
         </Text>
-        <Text heading className={styles.positionTitle}>{job.jobTitle}</Text>
+        <Text yelling className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
       { job.sellingPoints && 
         <Section className={styles.sellingPointsSection}> 
           <ul className={styles.sellingPointsList}>
             {job.sellingPoints.map((sellingPoint, i) => {return (
-              <li key={i}><Text small className={styles.sellingPoint}>{sellingPoint}</Text></li>
+              <li key={i}><Text whispering className={styles.sellingPoint}>{sellingPoint}</Text></li>
             );})}
           </ul>
         </Section>
       }
       { job.description && (
         <Section className={styles.jobDescriptionSection}>
-          <Text small className={styles.bodyDescriptionText}>{job.description}</Text>
+          <Text whispering className={styles.bodyDescriptionText}>{job.description}</Text>
         </Section>
       )}
       <Section className={styles.footerSection}>
         <div className={styles.footerLeft}>
           <div className={styles.jobInfoList}>
             <div>
-              <Text small className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
-              { job.salary && (<Text small className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
+              <Text whispering className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
+              { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
             </div>
-            <Text small className={styles.postingDuration}>{job.postingDuration}</Text>
+            <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>
         </div>
         {job.companyLogoUrl && (

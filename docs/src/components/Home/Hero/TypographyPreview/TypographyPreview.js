@@ -3,8 +3,8 @@ import styles from './TypographyPreview.less';
 import React from 'react';
 
 const items = [
-  'hero',
-  'headline'
+  'screaming',
+  'yelling'
 ];
 
 const sampleText = <span>AaBb<span className={styles.cc}>Cc</span></span>;

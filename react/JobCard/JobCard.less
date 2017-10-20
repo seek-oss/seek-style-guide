@@ -1,10 +1,10 @@
 @import (reference) "~seek-asia-style-guide/theme";
 @job-card-section-space: 0;
-@job-card-label-indent: 5px;
-@job-card-list-indent: 14px;
+@job-card-label-indent: @grid-base;
+@job-card-list-indent: @grid-gutter-width;
 @job-card-text-space: 0;
-@job-card-bottom-text-space: 3px;
-@job-card-logo-indent: 15px;
+@job-card-bottom-text-space: @grid-base;
+@job-card-logo-indent: @grid-gutter-width;
 
 .root {
   width: 100%;
@@ -108,9 +108,9 @@
 }
 
 .companyLogoWrapper {
-  width: 76px;
-  min-width: 76px;
-  height: 64px;
+  width: @grid-base * 20;
+  min-width: @grid-base * 20;
+  height: @grid-base * 16;
   margin-left: @job-card-logo-indent;
   border: 1px solid @saGrey4;
   display: flex;

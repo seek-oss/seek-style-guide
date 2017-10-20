@@ -2,13 +2,13 @@
 @import (reference) "../Header.less";
 
 .root {
-  padding: @grid-row-height 0;
+  padding: (@grid-row-height * 2) 0;
   @media @desktop {
     @border-width: 1px;
     background-color: @sk-white;
     border: @border-width solid @sk-mid-gray-light;
     border-radius: 2px;
-    padding: (@grid-row-height - @border-width) 0;
+    padding: ((@grid-row-height * 2) - @border-width) 0;
   }
   @media @mobile {
     overflow: auto;
@@ -48,7 +48,7 @@
     }
   }
   @media @desktop {
-    .touchableText(@standard-type-scale);
+    .touchableText(@conversational-type-scale);
     justify-content: space-between;
     color: @sk-black;
     padding: 0 (@grid-gutter-width * 2);
@@ -116,7 +116,8 @@
       content: '';
       position: absolute;
       top: @grid-row-height * 2;
-      width: 100%;
+      right: 0;
+      left: @grid-gutter-width;
       height: 1px;
       background: @sk-white;
       opacity: 0.2;

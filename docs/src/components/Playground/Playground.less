@@ -40,7 +40,7 @@
 
 .activityPanel {
   @media @desktop {
-    padding-top: @grid-row-height;
+    padding-top: @grid-row-height * 2;
   }
 }
 
@@ -52,16 +52,16 @@
     padding: 0 @grid-gutter-width;
 
     :global(div) {
-      line-height: (@grid-row-height * 3);
+      line-height: (@grid-row-height * 6);
     }
   }
   @media @desktop {
-    padding-top: @grid-row-height;
+    padding-top: @grid-row-height * 2;
   }
 }
 
 .touchable {
-  .touchableText(@standard-type-scale);
+  .touchableText(@conversational-type-scale);
 }
 
 .borderBottom {
