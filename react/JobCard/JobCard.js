@@ -25,7 +25,7 @@ const JobCard = ({ job }) => {
         <Section className={styles.sellingPointsSection}> 
           <ul className={styles.sellingPointsList}>
             {job.sellingPoints.map((sellingPoint, i) => {return (
-              <li key={i}><Text small className={styles.sellingPoint}>{sellingPoint}</Text></li>
+              <li key={i}><Text whispering className={styles.sellingPoint}>{sellingPoint}</Text></li>
             );})}
           </ul>
         </Section>
@@ -40,7 +40,7 @@ const JobCard = ({ job }) => {
           <div className={styles.jobInfoList}>
             <div>
               <Text whispering className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
-              { job.salary && (<Text small className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
+              { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
             </div>
             <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>
