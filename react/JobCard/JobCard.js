@@ -6,7 +6,6 @@ import Card from '../Card/Card';
 import Section from '../Section/Section';
 import LocationIcon from '../LocationIcon/LocationIcon';
 import MoneyIcon from '../MoneyIcon/MoneyIcon';
-import TimeIcon from '../TimeIcon/TimeIcon';
 import styles from './JobCard.less';
 
 const JobCard = ({ job }) => {
@@ -21,12 +20,14 @@ const JobCard = ({ job }) => {
         </Text>
         <Text yelling className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
-      { job.sellingPoints && 
-        <Section className={styles.sellingPointsSection}> 
-          <ul className={styles.sellingPointsList}>
-            {job.sellingPoints.map((sellingPoint, i) => {return (
-              <li key={i}><Text whispering className={styles.sellingPoint}>{sellingPoint}</Text></li>
-            );})}
+      {job.sellingPoints &&
+        <Section className={styles.sellingPointsSection} >
+          <ul className={styles.sellingPointsList} >
+            {job.sellingPoints.map((sellingPoint, i) => {
+              return (
+                <li key={i}><Text whispering className={styles.sellingPoint}>{sellingPoint}</Text></li>
+              );
+            })}
           </ul>
         </Section>
       }

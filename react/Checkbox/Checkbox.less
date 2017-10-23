@@ -20,10 +20,6 @@
 
 .label {
   display: block;
-
-  :checked + & {
-    font-weight: @sk-bold;
-  }
 }
 
 .standard {
@@ -54,7 +50,7 @@
 
 .checkBoxRight {
   margin-left: @field-gutter-width;
-}  
+}
 
 .checkMark {
   display: block;
@@ -74,9 +70,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: @sk-gray-light;
-  color: @sk-charcoal;
-  border: 1px solid @sk-mid-gray-light;
+  background-color: @saWhite;
+  color: @saGrey2;
   border-radius: 2px;
   cursor: pointer;
   @media @desktop {
@@ -84,8 +79,7 @@
   }
 
   .input:checked + .label & {
-    font-weight: @sk-bold;
-    background-color: @sk-white;
-    border-bottom: 1px solid @sk-pink;
+    color: @saWhite;
+    background-color: @saBlue;
   }
 }
