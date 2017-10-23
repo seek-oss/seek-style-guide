@@ -18,7 +18,7 @@ const JobCard = ({ job }) => {
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
           {job.company}
         </Text>
-        <Text yelling className={styles.positionTitle}>{job.jobTitle}</Text>
+        <Text strong className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
       {job.sellingPoints &&
         <Section className={styles.sellingPointsSection} >
