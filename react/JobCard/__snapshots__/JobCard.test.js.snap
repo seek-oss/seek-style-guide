@@ -20,7 +20,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      strong={true}
+      yelling={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -105,7 +105,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      strong={true}
+      yelling={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -186,7 +186,7 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      strong={true}
+      yelling={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -272,7 +272,7 @@ exports[`JobCard should render with featured label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      strong={true}
+      yelling={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -353,7 +353,7 @@ exports[`JobCard should render with selling points props 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      strong={true}
+      yelling={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
