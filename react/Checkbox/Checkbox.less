@@ -20,19 +20,15 @@
 
 .label {
   display: block;
-
-  :checked + & {
-    font-weight: @sk-bold;
-  }
 }
 
 .standard {
-  .touchableText(@standard-type-scale-mobile);
+  .touchableText(@conversational-type-scale-mobile);
   cursor: pointer;
   display: flex;
   align-items: center;
   @media @desktop {
-    .touchableText(@standard-type-scale);
+    .touchableText(@conversational-type-scale);
   }
 }
 
@@ -40,8 +36,8 @@
   .activeFocusReset();
 
   background-color: @sk-white;
-  width: @grid-row-height * 3;
-  height: @grid-row-height * 3;
+  width: @grid-row-height * 6;
+  height: @grid-row-height * 6;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   padding: @field-border-radius;
@@ -54,7 +50,7 @@
 
 .checkBoxRight {
   margin-left: @field-gutter-width;
-}  
+}
 
 .checkMark {
   display: block;
@@ -70,22 +66,20 @@
 
 .button {
   .activeFocusReset();
-  .touchableText(@standard-type-scale-mobile);
+  .touchableText(@conversational-type-scale-mobile);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: @sk-gray-light;
-  color: @sk-charcoal;
-  border: 1px solid @sk-mid-gray-light;
+  background-color: @saWhite;
+  color: @saGrey2;
   border-radius: 2px;
   cursor: pointer;
   @media @desktop {
-    .touchableText(@standard-type-scale);
+    .touchableText(@conversational-type-scale);
   }
 
   .input:checked + .label & {
-    font-weight: @sk-bold;
-    background-color: @sk-white;
-    border-bottom: 1px solid @sk-pink;
+    color: @saWhite;
+    background-color: @saBlue;
   }
 }

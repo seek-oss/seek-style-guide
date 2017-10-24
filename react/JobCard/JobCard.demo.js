@@ -33,86 +33,86 @@ export default {
     }
   },
   options: [
-  {
-    label: 'States',
-    type: 'checklist',
-    states: [
-      {
-        label: 'Featured',
-        transformProps: ({ className, ...props }) => ({
-          ...props,
-          job: {
-            ...props.job,
-            featuredLabel: 'Featured'
-          }
-        })
-      },
-      {
-        label: 'Company Confidential',
-        transformProps: ({ className, ...props }) => ({
-          ...props,
-          job: {
-            ...props.job,
-            company: '',
-            confidentialLabel: 'Company Confidential'
-          }
-        })
-      },
-      {
-        label: 'Classified',
-        transformProps: ({ className, ...props }) => ({
-          ...props,
-          job: {
-            ...props.job,
-            classifiedLabel: 'Classified'
-          }
-        })
-      },
-      {
-        label: 'Selling Points',
-        transformProps: ({ className, ...props }) => ({
-          ...props,
-          job: {
-            ...props.job,
-            sellingPoints: [
-              'We practice a vibrant & energetic office culture',
-              'Our company supports a fun yet balanced working environment',
-              'We support a safe environment for our employees'
-            ]
-          }
-        })
-      },
-      {
-        label: 'No Description',
-        transformProps: ({ className, ...props }) => ({
-          ...props,
-          job: {
-            ...props.job,
-            description: null
-          }
-        })
-      },
-      {
-        label: 'No Salary',
-        transformProps: ({ className, ...props }) => ({
-          ...props,
-          job: {
-            ...props.job,
-            salary: null
-          }
-        })
-      },
-      {
-        label: 'No Logo',
-        transformProps: props => ({
-          ...props,
-          job: {
-            ...props.job,
-            companyLogoUrl: null
-          }
-        })
-      }
-    ]
-  }
+    {
+      label: 'States',
+      type: 'checklist',
+      states: [
+        {
+          label: 'Featured',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              featuredLabel: 'Featured'
+            }
+          })
+        },
+        {
+          label: 'Company Confidential',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              company: '',
+              confidentialLabel: 'Company Confidential'
+            }
+          })
+        },
+        {
+          label: 'Classified',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              classifiedLabel: 'Classified'
+            }
+          })
+        },
+        {
+          label: 'Selling Points',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              sellingPoints: [
+                'We practice a vibrant & energetic office culture',
+                'Our company supports a fun yet balanced working environment',
+                'We support a safe environment for our employees'
+              ]
+            }
+          })
+        },
+        {
+          label: 'No Description',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              description: null
+            }
+          })
+        },
+        {
+          label: 'No Salary',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              salary: null
+            }
+          })
+        },
+        {
+          label: 'No Logo',
+          transformProps: props => ({
+            ...props,
+            job: {
+              ...props.job,
+              companyLogoUrl: null
+            }
+          })
+        }
+      ]
+    }
   ]
 };

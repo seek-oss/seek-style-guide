@@ -137,13 +137,13 @@ export default class Demo extends Component {
           {
             title ? (
               <Section header>
-                <Text hero>{ title }</Text>
+                <Text screaming>{ title }</Text>
               </Section>
             ) :
             null
           }
         </PageBlock>
-        <Baseline isVisible={true} type="bar" color="#e8e8e8">
+        <Baseline lineHeight={4} isVisible={true} type="bar" color="#e8e8e8">
           <div
             className={classnames({
               [styles.component]: true,

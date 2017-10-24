@@ -7,11 +7,11 @@
 }
 
 .content {
-  padding: (@grid-row-height * 4) @grid-gutter-width;
+  padding: (@grid-row-height * 8) @grid-gutter-width;
   max-width: @grid-container-width + (@grid-gutter-width * 2);
   margin: 0 auto;
   @media only screen @footer-horizontal {
-    padding-bottom: (@grid-row-height * 5);
+    padding-bottom: (@grid-row-height * 10);
   }
 }
 
@@ -29,7 +29,7 @@
     justify-content: flex-start;
   }
   @media only screen @footer-horizontal {
-    margin-top: (@grid-row-height * 3);
+    margin-top: (@grid-row-height * 6);
   }
 }
 
@@ -52,6 +52,6 @@
     display: inline-block;
   }
   @media only screen @footer-vertical {
-    .touchableText(@standard-type-scale);
+    .touchableText(@conversational-type-scale);
   }
 }

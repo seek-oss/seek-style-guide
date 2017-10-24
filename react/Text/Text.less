@@ -1,7 +1,7 @@
 @import (reference) "~seek-asia-style-guide/theme";
 
 .root {
-  padding-bottom: @grid-row-height;
+  padding-bottom: @grid-row-height * 2;
   display: block;
 
   .root {
@@ -21,43 +21,53 @@
 }
 
 .root {
-  &:not(.baseline) { .standardTextResponsive(@baseline: false); }
-  &.baseline { .standardTextResponsive(@baseline: true); }
+  &:not(.baseline) { .conversationalTextResponsive(@baseline: false); }
+  &.baseline { .conversationalTextResponsive(@baseline: true); }
 }
 
-.small {
-  &:not(.baseline) { .smallTextResponsive(@baseline: false); }
-  &.baseline { .smallTextResponsive(@baseline: true); }
+.screaming {
+  &:not(.baseline) { .screamingTextResponsive(@baseline: false); }
+  &.baseline { .screamingTextResponsive(@baseline: true); }
 }
 
-.substandard {
-  &:not(.baseline) { .substandardTextResponsive(@baseline: false); }
-  &.baseline { .substandardTextResponsive(@baseline: true); }
+.yelling {
+  &:not(.baseline) { .yellingTextResponsive(@baseline: false); }
+  &.baseline { .yellingTextResponsive(@baseline: true); }
 }
 
-.superstandard {
-  &:not(.baseline) { .superstandardTextResponsive(@baseline: false); }
-  &.baseline { .superstandardTextResponsive(@baseline: true); }
+.shouting {
+  &:not(.baseline) { .shoutingTextResponsive(@baseline: false); }
+  &.baseline { .shoutingTextResponsive(@baseline: true); }
 }
 
-.subheading {
-  &:not(.baseline) { .subheadingTextResponsive(@baseline: false); }
-  &.baseline { .subheadingTextResponsive(@baseline: true); }
+.waving {
+  &:not(.baseline) { .wavingTextResponsive(@baseline: false); }
+  &.baseline { .wavingTextResponsive(@baseline: true); }
 }
 
-.headline {
-  &:not(.baseline) { .headlineTextResponsive(@baseline: false); }
-  &.baseline { .headlineTextResponsive(@baseline: true); }
+.whistling {
+  &:not(.baseline) { .whistlingTextResponsive(@baseline: false); }
+  &.baseline { .whistlingTextResponsive(@baseline: true); }
 }
 
-.heading {
-  &:not(.baseline) { .headingTextResponsive(@baseline: false); }
-  &.baseline { .headingTextResponsive(@baseline: true); }
+.whisperingTitle {
+  &:not(.baseline) { .whisperingTitleTextResponsive(@baseline: false); }
+  &.baseline { .whisperingTitleTextResponsive(@baseline: true); }
 }
 
-.hero {
-  &:not(.baseline) { .heroTextResponsive(@baseline: false); }
-  &.baseline { .heroTextResponsive(@baseline: true); }
+.loud {
+  &:not(.baseline) { .loudTextResponsive(@baseline: false); }
+  &.baseline { .loudTextResponsive(@baseline: true); }
+}
+
+.intimate {
+  &:not(.baseline) { .intimateTextResponsive(@baseline: false); }
+  &.baseline { .intimateTextResponsive(@baseline: true); }
+}
+
+.whispering {
+  &:not(.baseline) { .whisperingTextResponsive(@baseline: false); }
+  &.baseline { .whisperingTextResponsive(@baseline: true); }
 }
 
 .light {
