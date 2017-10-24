@@ -3,10 +3,11 @@ import styles from './Header.less';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { PageBlock, Card, Section, Text, ScreenReaderOnly } from 'seek-style-guide/react';
 import Logo from './Logo/Logo';
-import demoSpecs from '../../../demoSpecs';
+import demoSpecExports from '../../../../../react/*/*.demo.js';
+const demoSpecs = demoSpecExports.map(x => x.default);
 
 export default class Header extends Component {
   constructor() {

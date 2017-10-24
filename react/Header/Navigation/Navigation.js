@@ -53,7 +53,8 @@ export default function Navigation({ locale, linkRenderer, activeTab, divider })
       </ScreenReaderOnly>
 
       <ul className={styles.list} data-automation="nav-tabs">
-        { items.map(({ specificLocale = locale, analytics, name, ...restProps }, i) => (
+        {
+          items.map(({ specificLocale = locale, analytics, name, ...restProps }, i) => (
             (specificLocale === locale) ?
               <li className={styles.item} key={i}>
                 {

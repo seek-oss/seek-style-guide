@@ -11,17 +11,16 @@ import TickCircleIcon from '../../TickCircleIcon/TickCircleIcon';
 import Text from '../../Text/Text';
 
 export default class FieldMessage extends Component {
-
   static displayName = 'FieldMessage';
 
   static propTypes = {
     invalid: PropTypes.bool,
-    help: React.PropTypes.string,
+    help: PropTypes.string,
     helpProps: PropTypes.object,
     valid: PropTypes.bool,
-    message: React.PropTypes.oneOfType([
-      React.PropTypes.oneOf([false]),
-      React.PropTypes.node
+    message: PropTypes.oneOfType([
+      PropTypes.oneOf([false]),
+      PropTypes.node
     ]),
     messageProps: PropTypes.object
   };

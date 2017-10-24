@@ -64,6 +64,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:my+activity"
                   href="/myactivity#favourite"
+                  rel="nofollow"
                 >
                   Saved searches
                 </a>
@@ -75,6 +76,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:favourite"
                   href="/my-activity/saved-jobs"
+                  rel="nofollow"
                 >
                   Saved jobs
                 </a>
@@ -86,6 +88,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:applied"
                   href="/my-activity/applied-jobs"
+                  rel="nofollow"
                 >
                   Applied jobs
                 </a>
@@ -681,6 +684,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
+                  rel="nofollow"
                 >
                   Register for free
                 </a>
@@ -746,6 +750,7 @@ exports[`Footer: should render when authenticated 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
+            rel="nofollow"
           >
             Privacy
           </a>
@@ -753,6 +758,7 @@ exports[`Footer: should render when authenticated 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
+            rel="nofollow"
           >
             Terms & Conditions
           </a>
@@ -760,6 +766,7 @@ exports[`Footer: should render when authenticated 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
+            rel="nofollow"
           >
             Protect yourself online
           </a>
@@ -846,6 +853,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="link"
                   data-analytics="toolbar:my+activity"
                   href="/myactivity#favourite"
+                  rel="nofollow"
                 >
                   Saved searches
                 </a>
@@ -857,6 +865,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                  rel="nofollow"
                 >
                   Saved jobs
                 </a>
@@ -868,6 +877,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                  rel="nofollow"
                 >
                   Applied jobs
                 </a>
@@ -1463,6 +1473,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
+                  rel="nofollow"
                 >
                   Register for free
                 </a>
@@ -1528,6 +1539,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
+            rel="nofollow"
           >
             Privacy
           </a>
@@ -1535,6 +1547,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
+            rel="nofollow"
           >
             Terms & Conditions
           </a>
@@ -1542,6 +1555,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
+            rel="nofollow"
           >
             Protect yourself online
           </a>
@@ -1628,6 +1642,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:my+activity"
                   href="/myactivity#favourite"
+                  rel="nofollow"
                 >
                   Saved searches
                 </a>
@@ -1639,6 +1654,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                  rel="nofollow"
                 >
                   Saved jobs
                 </a>
@@ -1650,6 +1666,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                  rel="nofollow"
                 >
                   Applied jobs
                 </a>
@@ -2245,6 +2262,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
+                  rel="nofollow"
                 >
                   Register for free
                 </a>
@@ -2310,6 +2328,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
+            rel="nofollow"
           >
             Privacy
           </a>
@@ -2317,6 +2336,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
+            rel="nofollow"
           >
             Terms & Conditions
           </a>
@@ -2324,6 +2344,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
+            rel="nofollow"
           >
             Protect yourself online
           </a>
@@ -2410,6 +2431,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="link"
                   data-analytics="toolbar:my+activity"
                   href="/myactivity#favourite"
+                  rel="nofollow"
                 >
                   Saved searches
                 </a>
@@ -2421,6 +2443,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                  rel="nofollow"
                 >
                   Saved jobs
                 </a>
@@ -2432,6 +2455,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                  rel="nofollow"
                 >
                   Applied jobs
                 </a>
@@ -3027,6 +3051,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
+                  rel="nofollow"
                 >
                   Register for free
                 </a>
@@ -3092,6 +3117,7 @@ exports[`Footer: should render with locale of AU 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
+            rel="nofollow"
           >
             Privacy
           </a>
@@ -3099,6 +3125,7 @@ exports[`Footer: should render with locale of AU 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
+            rel="nofollow"
           >
             Terms & Conditions
           </a>
@@ -3106,6 +3133,7 @@ exports[`Footer: should render with locale of AU 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
+            rel="nofollow"
           >
             Protect yourself online
           </a>
@@ -3192,6 +3220,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="link"
                   data-analytics="toolbar:my+activity"
                   href="/myactivity#favourite"
+                  rel="nofollow"
                 >
                   Saved searches
                 </a>
@@ -3203,6 +3232,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                  rel="nofollow"
                 >
                   Saved jobs
                 </a>
@@ -3214,6 +3244,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                  rel="nofollow"
                 >
                   Applied jobs
                 </a>
@@ -3717,6 +3748,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.co.nz/"
+                  rel="nofollow"
                 >
                   Register for free
                 </a>
@@ -3782,6 +3814,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
+            rel="nofollow"
           >
             Privacy
           </a>
@@ -3789,6 +3822,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
+            rel="nofollow"
           >
             Terms & Conditions
           </a>
@@ -3796,6 +3830,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
             class="copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
+            rel="nofollow"
           >
             Protect yourself online
           </a>

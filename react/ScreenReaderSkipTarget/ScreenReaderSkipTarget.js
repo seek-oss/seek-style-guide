@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class ScreenReaderSkipTarget extends Component {
-
   static propTypes = {
     name: PropTypes.string.isRequired,
     children: PropTypes.oneOfType([
@@ -20,5 +19,4 @@ export default class ScreenReaderSkipTarget extends Component {
       </div>
     );
   }
-
 }

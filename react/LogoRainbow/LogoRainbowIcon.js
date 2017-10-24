@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const RainbowLogoIcon = () => (
   <g transform="translate(2.5,2.5), scale(1.02)">

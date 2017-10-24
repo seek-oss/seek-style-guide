@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![Greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/) [![David](https://img.shields.io/david/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide) [![David](https://img.shields.io/david/dev/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide?type=dev) [![David](https://img.shields.io/david/peer/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide?type=peer) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
 # seek-style-guide
 
@@ -30,6 +30,7 @@ Wrap your app with the `StyleGuideProvider` component to use any of the style gu
 
 ```js
 import React, { Component } from 'react';
+import { StyleGuideProvider } from 'seek-style-guide/react';
 
 export default class App extends Component {
   render() {
@@ -110,6 +111,7 @@ The following colors are provided:
 @sk-pink
 @sk-green
 @sk-purple
+@sk-teal
 
 // Partner brand colors
 @sk-business

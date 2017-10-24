@@ -29,7 +29,6 @@ const attachRefs = (...refs) => ref => {
 };
 
 export default class TextField extends Component {
-
   static displayName = 'TextField';
 
   static propTypes = {
@@ -139,5 +138,4 @@ export default class TextField extends Component {
       </div>
     );
   }
-
 }

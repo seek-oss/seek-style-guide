@@ -2,12 +2,14 @@ export default [
   {
     name: 'Register for free',
     href: 'https://talent.seek.com.au/',
+    rel: 'nofollow',
     analytics: 'toolbar:register+for+free',
     specificLocale: 'AU'
   },
   {
     name: 'Register for free',
     href: 'https://talent.seek.co.nz/',
+    rel: 'nofollow',
     analytics: 'toolbar:register+for+free',
     specificLocale: 'NZ'
   },

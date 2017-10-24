@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import { PageBlock, Section, Text } from 'seek-style-guide/react';
-import Baseline from 'react-baseline';
+import Baseline from './Baseline/Baseline';
 import Code from './Code/Code';
 import flatten from 'lodash/flatten';
 
@@ -139,8 +139,7 @@ export default class Demo extends Component {
               <Section header>
                 <Text hero>{ title }</Text>
               </Section>
-            ) :
-            null
+            ) : null
           }
         </PageBlock>
         <Baseline isVisible={true} type="bar" color="#e8e8e8">
@@ -161,11 +160,10 @@ export default class Demo extends Component {
                     .map((option, i) => (
                       <div key={i} className={styles.optionItem}>{ option }</div>
                     ))
-                  }
+                }
               </div>
             </PageBlock>
-          ) :
-          null
+          ) : null
         }
         <PageBlock className={styles.codeBlock}>
           <Code jsx={codeElement} />

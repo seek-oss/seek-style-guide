@@ -23,7 +23,7 @@ exports[`Header: should append returnUrl to signin and register links if present
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -347,6 +347,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in?returnUrl=%2Fjobs"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -356,6 +357,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up?returnUrl=%2Fjobs"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -594,7 +596,7 @@ exports[`Header: should render first part of email address when username isn't p
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -926,6 +928,7 @@ exports[`Header: should render first part of email address when username isn't p
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -935,6 +938,7 @@ exports[`Header: should render first part of email address when username isn't p
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -1173,7 +1177,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -1497,6 +1501,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -1506,6 +1511,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -1744,7 +1750,7 @@ exports[`Header: should render when authenticated 1`] = `
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -2076,6 +2082,7 @@ exports[`Header: should render when authenticated 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in?returnUrl=%2Fjobs"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -2085,6 +2092,7 @@ exports[`Header: should render when authenticated 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up?returnUrl=%2Fjobs"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -2323,7 +2331,7 @@ exports[`Header: should render when authenticated but username and email is not 
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -2651,6 +2659,7 @@ exports[`Header: should render when authenticated but username and email is not 
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -2660,6 +2669,7 @@ exports[`Header: should render when authenticated but username and email is not 
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -2898,7 +2908,7 @@ exports[`Header: should render when authentication is pending 1`] = `
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -3222,6 +3232,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -3231,6 +3242,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -3469,7 +3481,7 @@ exports[`Header: should render when unauthenticated 1`] = `
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -3803,6 +3815,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -3812,6 +3825,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -4342,6 +4356,7 @@ exports[`Header: should render with a custom logo 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -4351,6 +4366,7 @@ exports[`Header: should render with a custom logo 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -4589,7 +4605,7 @@ exports[`Header: should render with locale of AU 1`] = `
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -4913,6 +4929,7 @@ exports[`Header: should render with locale of AU 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -4922,6 +4939,7 @@ exports[`Header: should render with locale of AU 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -5160,7 +5178,7 @@ exports[`Header: should render with locale of NZ 1`] = `
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -5470,6 +5488,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -5479,6 +5498,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register
@@ -5694,7 +5714,7 @@ exports[`Header: should render with no divider 1`] = `
             class="logoSvg root"
             height="68.031"
             id="sk-logo-pos"
-            viewbox="0 0 170.079 68.031"
+            viewBox="0 0 170.079 68.031"
             width="170.079px"
             x="0px"
             xmlns="http://www.w3.org/2000/svg"
@@ -6018,6 +6038,7 @@ exports[`Header: should render with no divider 1`] = `
                 class="link"
                 data-analytics="header:sign-in"
                 href="/sign-in"
+                rel="nofollow"
                 title="Sign in"
               >
                 Sign in
@@ -6027,6 +6048,7 @@ exports[`Header: should render with no divider 1`] = `
                 class="link"
                 data-analytics="header:register"
                 href="/sign-up"
+                rel="nofollow"
                 title="Register"
               >
                 Register

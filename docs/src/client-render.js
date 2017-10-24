@@ -1,24 +1,24 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import Router from './Router';
+import BrowserRouter from './BrowserRouter';
 
 const appElement = document.getElementById('app');
 
-render(
+hydrate(
   <AppContainer>
-    <Router />
+    <BrowserRouter />
   </AppContainer>,
   appElement
 );
 
 if (module.hot) {
-  module.hot.accept('./Router', () => {
-    const NextRouter = require('./Router').default;
+  module.hot.accept('./BrowserRouter', () => {
+    const NextBrowserRouter = require('./BrowserRouter').default;
 
     render(
       <AppContainer>
-        <NextRouter />
+        <NextBrowserRouter />
       </AppContainer>,
       appElement
     );
