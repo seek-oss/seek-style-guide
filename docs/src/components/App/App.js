@@ -8,7 +8,8 @@ import PageLayout from 'PageLayout/PageLayout';
 import Typography from 'Typography/Typography';
 import Playground from 'Playground/Playground';
 import Demo from 'Demo/Demo';
-import demoSpecs from '../../demoSpecs';
+import demoSpecExports from '../../../../react/*/*.demo.js';
+const demoSpecs = demoSpecExports.map(x => x.default);
 
 const demoRoutes = demoSpecs.map(demoSpec => {
   const DemoRoute = () => <Demo spec={demoSpec} />;

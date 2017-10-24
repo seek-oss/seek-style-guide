@@ -29,6 +29,14 @@ const config = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        include: appPaths,
+        use: {
+          loader: 'import-glob'
+        }
+      },
+      {
         test: /\.js$/,
         include: appPaths,
         use: {

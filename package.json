@@ -94,6 +94,7 @@
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
+    "import-glob": "^1.5.0",
     "jest": "^21.2.1",
     "json-loader": "^0.5.7",
     "jsx-to-string": "^1.1.0",
