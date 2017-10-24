@@ -111,6 +111,16 @@ export default {
               companyLogoUrl: null
             }
           })
+        },
+        {
+          label: 'Highlight Keyword',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job
+            },
+            keyword: 'senior engineer'
+          })
         }
       ]
     }

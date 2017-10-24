@@ -47,6 +47,7 @@
 .positionTitle {
   color: @linkBlue;
   padding-bottom: @job-card-text-space;
+  display: inline;
 }
 
 .sellingPointsList {
@@ -64,7 +65,7 @@
 }
 
 .bodyDescriptionText {
-  color: @saGrey3; 
+  color: @saGrey3;
   padding-bottom: @job-card-text-space;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -84,7 +85,7 @@
   overflow: hidden;
 }
 
-.jobInfoList {    
+.jobInfoList {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -102,7 +103,7 @@
   }
 }
 
-.postingDuration { 
+.postingDuration {
   padding-bottom: @job-card-bottom-text-space;
   color: @saGrey3;
 }
@@ -122,4 +123,8 @@
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
+}
+
+.positionTitle.highlight {
+  font-weight: @sk-bold;
 }

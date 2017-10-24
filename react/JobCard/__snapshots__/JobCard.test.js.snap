@@ -20,10 +20,123 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
+      regular={true}
       yelling={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
+  </Section>
+  <Section
+    className="jobDescriptionSection"
+  >
+    <Text
+      baseline={true}
+      className="bodyDescriptionText"
+      whispering={true}
+    >
+      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+    </Text>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoList"
+      >
+        <div>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <LocationIcon />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <MoneyIcon />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          whispering={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
+    </div>
+  </Section>
+</Card>
+`;
+
+exports[`JobCard should render with bold keyword 1`] = `
+<Card
+  className="root"
+>
+  <Section>
+    <Text
+      baseline={true}
+      className="company"
+      whispering={true}
+    >
+      SEEK Asia
+    </Text>
+    <div>
+      <Text
+        baseline={true}
+        className="positionTitle highlight"
+        key="0"
+        regular={false}
+        yelling={true}
+      >
+        Senior
+      </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        key="1"
+        regular={true}
+        yelling={true}
+      >
+         Software 
+      </Text>
+      <Text
+        baseline={true}
+        className="positionTitle highlight"
+        key="2"
+        regular={false}
+        yelling={true}
+      >
+        Engineer
+      </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        key="3"
+        regular={true}
+        yelling={true}
+      >
+         (6 months Contract)
+      </Text>
+    </div>
   </Section>
   <Section
     className="jobDescriptionSection"
@@ -105,6 +218,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
+      regular={true}
       yelling={true}
     >
       Senior Software Engineer (6 months Contract)
@@ -186,6 +300,7 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
+      regular={true}
       yelling={true}
     >
       Senior Software Engineer (6 months Contract)
@@ -272,6 +387,7 @@ exports[`JobCard should render with featured label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
+      regular={true}
       yelling={true}
     >
       Senior Software Engineer (6 months Contract)
@@ -353,6 +469,7 @@ exports[`JobCard should render with selling points props 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
+      regular={true}
       yelling={true}
     >
       Senior Software Engineer (6 months Contract)
