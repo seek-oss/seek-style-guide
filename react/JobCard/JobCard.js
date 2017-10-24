@@ -13,7 +13,7 @@ const JobCard = ({ job }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text small className={styles.company}>
+        <Text className={styles.company}>
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
