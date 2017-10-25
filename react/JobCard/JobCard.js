@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import Text from '../Text/Text';
 import Card from '../Card/Card';
@@ -20,9 +19,14 @@ const JobCard = ({ job, keyword = '' }) => {
       <div>
         {
           parts.map((part, index) => {
-            const className = classnames({ [styles.positionTitle]: true, [styles.highlight]: part.highlight });
             return (
-              <Text regular={!part.highlight} yelling className={className} key={index}>{part.text}</Text>
+              <Text
+                strong={part.highlight}
+                regular={!part.highlight}
+                yelling
+                className={styles.positionTitle}
+                key={index}>{part.text}
+              </Text>
             );
           })
         }

@@ -102,9 +102,10 @@ exports[`JobCard should render with bold keyword 1`] = `
     <div>
       <Text
         baseline={true}
-        className="positionTitle highlight"
+        className="positionTitle"
         key="0"
         regular={false}
+        strong={true}
         yelling={true}
       >
         Senior
@@ -114,15 +115,17 @@ exports[`JobCard should render with bold keyword 1`] = `
         className="positionTitle"
         key="1"
         regular={true}
+        strong={false}
         yelling={true}
       >
          Software 
       </Text>
       <Text
         baseline={true}
-        className="positionTitle highlight"
+        className="positionTitle"
         key="2"
         regular={false}
+        strong={true}
         yelling={true}
       >
         Engineer
@@ -132,6 +135,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         className="positionTitle"
         key="3"
         regular={true}
+        strong={false}
         yelling={true}
       >
          (6 months Contract)
