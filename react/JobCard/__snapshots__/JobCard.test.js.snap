@@ -8,7 +8,6 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
     >
       <span
         className="classifiedLabel"
@@ -21,7 +20,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
       baseline={true}
       className="positionTitle"
       regular={true}
-      yelling={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -32,7 +31,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <Text
       baseline={true}
       className="bodyDescriptionText"
-      whispering={true}
+      intimate={true}
     >
       Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
     </Text>
@@ -52,7 +51,9 @@ exports[`JobCard should render with Classified in grey label 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <LocationIcon />
+            <LocationIcon
+              className="jobInfoIcon"
+            />
              
             Kuala Lumpur
           </Text>
@@ -61,7 +62,9 @@ exports[`JobCard should render with Classified in grey label 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <MoneyIcon />
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
              
             RM99999 - RM999999
           </Text>
@@ -95,7 +98,6 @@ exports[`JobCard should render with bold keyword 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
     >
       SEEK Asia
     </Text>
@@ -105,8 +107,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         className="positionTitle"
         key="0"
         regular={false}
-        strong={true}
-        yelling={true}
+        waving={true}
       >
         Senior
       </Text>
@@ -115,8 +116,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         className="positionTitle"
         key="1"
         regular={true}
-        strong={false}
-        yelling={true}
+        waving={true}
       >
          Software 
       </Text>
@@ -125,8 +125,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         className="positionTitle"
         key="2"
         regular={false}
-        strong={true}
-        yelling={true}
+        waving={true}
       >
         Engineer
       </Text>
@@ -135,8 +134,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         className="positionTitle"
         key="3"
         regular={true}
-        strong={false}
-        yelling={true}
+        waving={true}
       >
          (6 months Contract)
       </Text>
@@ -148,7 +146,7 @@ exports[`JobCard should render with bold keyword 1`] = `
     <Text
       baseline={true}
       className="bodyDescriptionText"
-      whispering={true}
+      intimate={true}
     >
       Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
     </Text>
@@ -168,7 +166,9 @@ exports[`JobCard should render with bold keyword 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <LocationIcon />
+            <LocationIcon
+              className="jobInfoIcon"
+            />
              
             Kuala Lumpur
           </Text>
@@ -177,7 +177,9 @@ exports[`JobCard should render with bold keyword 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <MoneyIcon />
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
              
             RM99999 - RM999999
           </Text>
@@ -211,7 +213,6 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
     >
       <span
         className="confidentialLabel"
@@ -223,7 +224,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
       baseline={true}
       className="positionTitle"
       regular={true}
-      yelling={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -234,7 +235,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <Text
       baseline={true}
       className="bodyDescriptionText"
-      whispering={true}
+      intimate={true}
     >
       Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
     </Text>
@@ -254,7 +255,9 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <LocationIcon />
+            <LocationIcon
+              className="jobInfoIcon"
+            />
              
             Kuala Lumpur
           </Text>
@@ -263,7 +266,9 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <MoneyIcon />
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
              
             RM99999 - RM999999
           </Text>
@@ -297,7 +302,6 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
     >
       SEEK Asia
     </Text>
@@ -305,7 +309,7 @@ exports[`JobCard should render with default props 1`] = `
       baseline={true}
       className="positionTitle"
       regular={true}
-      yelling={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -316,7 +320,7 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="bodyDescriptionText"
-      whispering={true}
+      intimate={true}
     >
       Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
     </Text>
@@ -336,7 +340,9 @@ exports[`JobCard should render with default props 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <LocationIcon />
+            <LocationIcon
+              className="jobInfoIcon"
+            />
              
             Kuala Lumpur
           </Text>
@@ -345,7 +351,9 @@ exports[`JobCard should render with default props 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <MoneyIcon />
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
              
             RM99999 - RM999999
           </Text>
@@ -379,7 +387,6 @@ exports[`JobCard should render with featured label 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
     >
       <span
         className="featuredLabel"
@@ -392,7 +399,7 @@ exports[`JobCard should render with featured label 1`] = `
       baseline={true}
       className="positionTitle"
       regular={true}
-      yelling={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -403,7 +410,7 @@ exports[`JobCard should render with featured label 1`] = `
     <Text
       baseline={true}
       className="bodyDescriptionText"
-      whispering={true}
+      intimate={true}
     >
       Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
     </Text>
@@ -423,7 +430,9 @@ exports[`JobCard should render with featured label 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <LocationIcon />
+            <LocationIcon
+              className="jobInfoIcon"
+            />
              
             Kuala Lumpur
           </Text>
@@ -432,7 +441,9 @@ exports[`JobCard should render with featured label 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <MoneyIcon />
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
              
             RM99999 - RM999999
           </Text>
@@ -466,7 +477,6 @@ exports[`JobCard should render with selling points props 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
     >
       SEEK Asia
     </Text>
@@ -474,7 +484,7 @@ exports[`JobCard should render with selling points props 1`] = `
       baseline={true}
       className="positionTitle"
       regular={true}
-      yelling={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -491,7 +501,7 @@ exports[`JobCard should render with selling points props 1`] = `
         <Text
           baseline={true}
           className="sellingPoint"
-          whispering={true}
+          intimate={true}
         >
           We practice a vibrant & energetic office culture
         </Text>
@@ -502,7 +512,7 @@ exports[`JobCard should render with selling points props 1`] = `
         <Text
           baseline={true}
           className="sellingPoint"
-          whispering={true}
+          intimate={true}
         >
           Our company supports a fun yet balanced working environment
         </Text>
@@ -513,7 +523,7 @@ exports[`JobCard should render with selling points props 1`] = `
         <Text
           baseline={true}
           className="sellingPoint"
-          whispering={true}
+          intimate={true}
         >
           We support a safe environment for our employees
         </Text>
@@ -526,7 +536,7 @@ exports[`JobCard should render with selling points props 1`] = `
     <Text
       baseline={true}
       className="bodyDescriptionText"
-      whispering={true}
+      intimate={true}
     >
       Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
     </Text>
@@ -546,7 +556,9 @@ exports[`JobCard should render with selling points props 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <LocationIcon />
+            <LocationIcon
+              className="jobInfoIcon"
+            />
              
             Kuala Lumpur
           </Text>
@@ -555,7 +567,9 @@ exports[`JobCard should render with selling points props 1`] = `
             className="jobInfo"
             whispering={true}
           >
-            <MoneyIcon />
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
              
             RM99999 - RM999999
           </Text>

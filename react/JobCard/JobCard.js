@@ -63,8 +63,8 @@ const JobCard = ({ job, keyword = '' }) => {
         <div className={styles.footerLeft}>
           <div className={styles.jobInfoList}>
             <div>
-              <Text whispering className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
-              { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
+              <Text whispering className={styles.jobInfo}><LocationIcon className={styles.jobInfoIcon} /> {job.location}</Text>
+              { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /> {job.salary}</Text>)}
             </div>
             <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>
