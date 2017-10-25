@@ -10,6 +10,7 @@ export { default as Loader } from './Loader/Loader';
 export { default as Logo } from './Logo/Logo';
 export { default as LogoRainbow } from './LogoRainbow/LogoRainbow';
 export { default as Rating } from './Rating/Rating';
+export { default as NavigationBar } from './NavigationBar/NavigationBar';
 
 export { default as JobCard } from './JobCard/JobCard';
 
