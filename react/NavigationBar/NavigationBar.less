@@ -3,9 +3,6 @@
 .root{
     width:100%;
     background: @saWhite;
-    @media (min-width: 768px){
-        height: 90px;
-    }
     clear: both;
 }
 .container { 
@@ -15,7 +12,7 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: auto;   
     margin: 0 auto; 
-    min-height: 50px;
+    min-height: 48px;
     clear: both;
     @media (min-width: 768px){
         width: 750px;
@@ -29,17 +26,14 @@
 }
 .toggle {
     position: absolute;
-    top:0;
-    left:0;
+    top: 12px;
+    left: 16px;
     z-index:2;
     padding:0;
-    width: 50px;
-    height: 50px;
+    width: 24px;
+    height: 24px;
     border: none;
     background: none;
     cursor: pointer;
     color: #1c3f94;
-    // @media(min-width: 769px) {
-    //     display: none;
-    // }
 }

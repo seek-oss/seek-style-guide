@@ -2,10 +2,9 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import NavigationBar from './NavigationBar';
 
-const renderNavigationBar = (props) => shallow(
-    <NavigationBar {...props}>
-    </NavigationBar>
-  );
+const renderNavigationBar = props => shallow(
+  <NavigationBar {...props} />
+);
 
 describe('NavigationBar', () => {
   it('should render with defaults', () => {
