@@ -12,20 +12,20 @@ const JobCard = ({ job }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text whispering className={styles.company}>
+        <Text className={styles.company}>
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
           {job.company}
         </Text>
-        <Text strong className={styles.positionTitle}>{job.jobTitle}</Text>
+        <Text waving className={styles.positionTitle}>{job.jobTitle}</Text>
       </Section>
       {job.sellingPoints &&
         <Section className={styles.sellingPointsSection} >
           <ul className={styles.sellingPointsList} >
             {job.sellingPoints.map((sellingPoint, i) => {
               return (
-                <li key={i}><Text whispering className={styles.sellingPoint}>{sellingPoint}</Text></li>
+                <li key={i}><Text intimate className={styles.sellingPoint}>{sellingPoint}</Text></li>
               );
             })}
           </ul>
@@ -33,7 +33,7 @@ const JobCard = ({ job }) => {
       }
       { job.description && (
         <Section className={styles.jobDescriptionSection}>
-          <Text whispering className={styles.bodyDescriptionText}>{job.description}</Text>
+          <Text intimate className={styles.bodyDescriptionText}>{job.description}</Text>
         </Section>
       )}
       <Section className={styles.footerSection}>
