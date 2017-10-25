@@ -21,7 +21,7 @@ const JobCard = ({ job, keyword = '' }) => {
           parts.map((part, index) => {
             return (
               <Text
-                regular={part.highlight}
+                regular={!part.highlight}
                 waving
                 className={styles.positionTitle}
                 key={index}>{part.text}
