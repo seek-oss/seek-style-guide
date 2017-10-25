@@ -30,7 +30,7 @@
   background-color: @background-color;
   .hoverState({
     background-color: darken(@background-color, 5%);
-  });  
+  });
 }
 
 .root {
@@ -39,7 +39,7 @@
   text-decoration: none;
   user-select: none;
   text-align: center;
-  padding: 0 @grid-gutter-width;  
+  padding: 0 @grid-gutter-width;
   border: 0;
   border-radius: 3px;
   transition:
@@ -48,8 +48,8 @@
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;  
-  font-weight: bold;  
+  text-overflow: ellipsis;
+  font-weight: bold;
   .activeState({
     outline: none;
   });
@@ -64,25 +64,31 @@
   }
 }
 
-.root_callToAction{
+.root_callToAction {
   .buttonColor(@sk-white, @saBlue);
 }
-.jobStreet.root_callToAction{
-  .buttonColor(@sk-black, @actionYellow);  
+
+.jobStreet.root_callToAction {
+  .buttonColor(@sk-black, @actionYellow);
 }
-.jobsDB.root_callToAction{
+
+.jobsDB.root_callToAction {
   .buttonColor(@sk-white, @actionOrange);
 }
-.root_hyperlink{
+
+.root_hyperlink {
   .buttonColor(@sk-white, @actionBlue);
 }
-.root_completion{
+
+.root_completion {
   .buttonColor(@sk-white, @actionGreen);
 }
-.root_alert{
+
+.root_alert {
   .buttonColor(@sk-white, @actionRed);
 }
-.root_highlight{
+
+.root_highlight {
   .buttonColor(@saGrey2, @actionPastelBlue);
 }
 

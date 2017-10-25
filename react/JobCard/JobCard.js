@@ -7,8 +7,32 @@ import Section from '../Section/Section';
 import LocationIcon from '../LocationIcon/LocationIcon';
 import MoneyIcon from '../MoneyIcon/MoneyIcon';
 import styles from './JobCard.less';
+import match from 'autosuggest-highlight/match';
+import parse from 'autosuggest-highlight/parse';
 
-const JobCard = ({ job }) => {
+const JobCard = ({ job, keyword = '' }) => {
+  let title = <Text regular yelling className={styles.positionTitle}>{job.jobTitle}</Text>;
+  if (keyword) {
+    const matches = match(job.jobTitle, keyword);
+    const parts = parse(job.jobTitle, matches);
+    title = (
+      <div>
+        {
+          parts.map((part, index) => {
+            return (
+              <Text
+                strong={part.highlight}
+                regular={!part.highlight}
+                yelling
+                className={styles.positionTitle}
+                key={index}>{part.text}
+              </Text>
+            );
+          })
+        }
+      </div>
+    );
+  }
   return (
     <Card className={styles.root}>
       <Section>
@@ -18,7 +42,7 @@ const JobCard = ({ job }) => {
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
           {job.company}
         </Text>
-        <Text strong className={styles.positionTitle}>{job.jobTitle}</Text>
+        {title}
       </Section>
       {job.sellingPoints &&
         <Section className={styles.sellingPointsSection} >
@@ -58,6 +82,7 @@ const JobCard = ({ job }) => {
 
 export default JobCard;
 JobCard.propTypes = {
+  keyword: PropTypes.string,
   job: PropTypes.shape({
     company: PropTypes.string,
     jobTitle: PropTypes.string.isRequired,
