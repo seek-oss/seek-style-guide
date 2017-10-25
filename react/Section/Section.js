@@ -4,7 +4,29 @@ import React from 'react';
 
 import styles from './Section.less';
 
-export default function Section({ children, className, header, breakout, ...restProps }) {
+export const TYPE = {
+  POSITIVE: 'positive',
+  INFO: 'info',
+  CRITICAL: 'critical',
+  HELP: 'help'
+};
+
+export const LEVEL = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  TERTIARY: 'tertiary'
+};
+
+export default function Section({
+  children,
+  className,
+  header,
+  pullout,
+  slim,
+  type,
+  level,
+  ...restProps
+}) {
   return (
     <div
       {...restProps}
@@ -12,7 +34,10 @@ export default function Section({ children, className, header, breakout, ...rest
         [className]: className,
         [styles.root]: true,
         [styles.header]: header,
-        [styles.breakout]: breakout
+        [styles.pullout]: pullout,
+        [styles.slim]: slim,
+        [styles[type]]: type,
+        [styles[level]]: level
       })}>
       {children}
     </div>
@@ -23,11 +48,15 @@ Section.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   header: PropTypes.bool,
-  breakout: PropTypes.bool
+  pullout: PropTypes.bool,
+  slim: PropTypes.bool,
+  type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP]),
+  level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY])
 };
 
 Section.defaultProps = {
   className: '',
   header: false,
-  breakout: false
+  pullout: false,
+  slim: false
 };

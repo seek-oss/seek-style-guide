@@ -1,95 +1,36 @@
 @import (reference) "~seek-style-guide/theme";
 
-@positive-light: #f3f9f2;
-@positive: #169400;
-@info-light: #f9f6fb;
-@info: #9556b7;
-@critical-light: @sk-white;
-@critical: @sk-pink;
-@help-light: @sk-off-white;
-@help: @sk-charcoal;
-
 @icon-width: @grid-row-height * 3;
 @gutter-adjustment: 100px;
 @alert-gutter: @grid-gutter-width * 0.75;
 
 .root {
   position: relative;
-  padding: (@grid-row-height * 2) @alert-gutter;
+}
 
-  &.tertiary {
-    padding: 0;
+.alert {
+  display: flex;
+  align-items: center;
+
+  &.hideIcon.showCloseButton {
+    justify-content: space-between;
   }
 }
 
-// .triangle {
-//   &::before {
-//     content: '';
-//     width: 0;
-//     height: 0;
-//     position: absolute;
-//     border-left: round(@icon-width / 2) solid transparent;
-//     border-right: round(@icon-width / 2) solid transparent;
-//     border-bottom: @icon-width - 10 solid @light-purple;
-//     left: @grid-gutter-width;
-//     top: -@icon-width + 10;
-//   }
-// }
-
 .positive {
-  &.primary {
-    background-color: @positive;
-    color: @sk-white;
-  }
-
-  &.secondary {
-    background-color: @positive-light;
-    color: @positive;
-  }
-
-  &.tertiary {
-    color: @positive;
-  }
+  color: @positive;
 }
 
 .info {
-  &.primary {
-    background-color: @info;
-    color: @sk-white;
-  }
-
-  &.secondary {
-    background-color: @info-light;
-    color: @info;
-  }
-
-  &.tertiary {
-    color: @info;
-  }
+  color: @info;
 }
 
 .critical {
-  &.primary,
-  &.secondary {
-    background-color: @critical-light;
-    color: @critical;
-  }
-
-  &.tertiary {
-    color: @critical;
-  }
+  color: @critical;
 }
 
 .help {
-  &.primary,
-  &.secondary {
-    background-color: @help-light;
-    color: @help;
-  }
-
-  &.tertiary {
-    color: @help;
-  }
+  color: @help;
 
   .icon {
     position: relative;

@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import Section from '../Section/Section';
 import Text from '../Text/Text';
 import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
 import InfoIcon from '../InfoIcon/InfoIcon';
@@ -11,18 +12,7 @@ import CriticalIcon from '../CriticalIcon/CriticalIcon';
 import HelpIcon from '../HelpIcon/HelpIcon';
 import CrossIcon from '../CrossIcon/CrossIcon';
 
-export const TYPE = {
-  POSITIVE: 'positive',
-  INFO: 'info',
-  CRITICAL: 'critical',
-  HELP: 'help'
-};
-
-export const LEVEL = {
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-  TERTIARY: 'tertiary'
-};
+import { TYPE, LEVEL } from '../Section/Section';
 
 const ICONS = {
   [TYPE.POSITIVE]: TickCircleIcon,
@@ -32,13 +22,13 @@ const ICONS = {
 };
 
 export default class Alert extends Component {
-
   static displayName = 'Alert';
 
   static propTypes = {
     type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP]),
     level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY, LEVEL.TERTIARY]),
     message: PropTypes.string.isRequired,
+    pullout: PropTypes.bool,
     hideIcon: PropTypes.bool,
     showCloseButton: PropTypes.bool,
     onClose: PropTypes.func
@@ -46,28 +36,21 @@ export default class Alert extends Component {
 
   static defaultProps = {
     type: TYPE.INFO,
-    level: LEVEL.SECONDARY,
+    level: LEVEL.TERTIARY,
     hideIcon: false,
-    showCloseButton: false
+    showCloseButton: false,
+    pullout: false
   };
 
   handleClose = event => this.props.onClose(event);
 
-  render() {
-    const { message, type, level, hideIcon, showCloseButton } = this.props;
-
-    const rootClasses = classnames({
-      [styles.root]: true,
-      [styles[type]]: true,
-      [styles[level]]: true,
-      [styles.hideIcon]: hideIcon,
-      [styles.showCloseButton]: showCloseButton
-    });
+  renderContents = () => {
+    const { type, message, hideIcon, showCloseButton } = this.props;
 
     const Icon = ICONS[type];
 
     return (
-      <div className={rootClasses}>
+      <div className={styles.alert}>
         {!hideIcon && <Icon className={styles.icon} />}
         <div className={styles.text}>
           <Text raw baseline={false}>{message}</Text>
@@ -81,4 +64,30 @@ export default class Alert extends Component {
     );
   }
 
+  render() {
+    const { hideIcon, showCloseButton, type, level, pullout } = this.props;
+
+    const isTertiary = level === LEVEL.TERTIARY;
+
+    const rootClasses = classnames({
+      [styles.root]: true,
+      [styles.hideIcon]: hideIcon,
+      [styles.showCloseButton]: showCloseButton,
+      [styles[type]]: isTertiary
+    });
+
+    return isTertiary ? (
+      <div className={rootClasses}>
+        {this.renderContents()}
+      </div>
+    ) : (
+      <Section
+        type={type}
+        level={level}
+        pullout={pullout}
+        className={rootClasses}>
+        {this.renderContents()}
+      </Section>
+    );
+  }
 }

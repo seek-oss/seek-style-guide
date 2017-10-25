@@ -3,19 +3,72 @@
 @gutter-adjustment: 100px;
 
 .root {
+  overflow-x: hidden;
   padding: (@grid-row-height * 2) @grid-gutter-width;
   @media only screen and (min-width: (@grid-container-width + (@grid-gutter-width * 2))) {
     padding-left: (@grid-gutter-width * 1.5);
     padding-right: (@grid-gutter-width * 1.5);
   }
 
-  &.breakout {
-    margin: 0 -@gutter-adjustment - @grid-gutter-width;
-    padding: 0 @gutter-adjustment;
+  &.pullout {
+    margin: 0 (-@gutter-adjustment - @grid-gutter-width);
+    padding-left: (@grid-gutter-width + @gutter-adjustment);
+    padding-right: (@grid-gutter-width + @gutter-adjustment);
     @media only screen and (min-width: (@grid-container-width + (@grid-gutter-width * 2))) {
-      margin: 0 -@gutter-adjustment - @grid-gutter-width * 1.5;
+      margin: 0 (-@gutter-adjustment - @grid-gutter-width * 1.5);
     }
   }
+
+  &.positive {
+    color: @positive;
+
+    &.primary {
+      background-color: @positive;
+      color: @sk-white;
+    }
+
+    &.secondary {
+      background-color: @positive-light;
+    }
+  }
+
+  &.info {
+    color: @info;
+
+    &.primary {
+      background-color: @info;
+      color: @sk-white;
+    }
+
+    &.secondary {
+      background-color: @info-light;
+    }
+  }
+
+  .critical {
+    color: @critical;
+
+    &.primary,
+    &.secondary {
+      background-color: @critical-light;
+      color: @critical;
+    }
+  }
+
+  .help {
+    color: @help;
+
+    &.primary,
+    &.secondary {
+      background-color: @help-light;
+      color: @help;
+    }
+  }
+
+  // &.slim {
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  // }
 }
 
 .header {

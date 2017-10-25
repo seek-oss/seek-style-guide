@@ -1,18 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert, Card, Section } from 'seek-style-guide/react';
-import { LEVEL, TYPE } from './Alert';
+import { LEVEL, TYPE } from '../Section/Section';
 
 const Container = ({ component: DemoComponent, componentProps }) => (
   <Card style={{ width: '500px' }}>
     <Section>
-      {componentProps.breakout ? (
-        <Section breakout>
-          <DemoComponent {...componentProps} />
-        </Section>
-      ) : (
-        <DemoComponent {...componentProps} />
-      )}
+      <DemoComponent {...componentProps} />
     </Section>
   </Card>
 );
@@ -54,10 +48,10 @@ export default {
           })
         },
         {
-          label: 'Breakout',
-          transformProps: ({ breakout, ...props }) => ({
+          label: 'Pullout',
+          transformProps: ({ pullout, ...props }) => ({
             ...props,
-            breakout: !breakout
+            pullout: !pullout
           })
         }
       ]
