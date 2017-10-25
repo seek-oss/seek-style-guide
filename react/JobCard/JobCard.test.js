@@ -64,4 +64,12 @@ describe('JobCard', () => {
     const wrapper = shallow(<JobCard job={descriptionJob} />);
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render with bold keyword', () => {
+    const descriptionJob = {
+      ...defaultJob
+    };
+    const keyword = 'Senior Engineer';
+    const wrapper = shallow(<JobCard job={descriptionJob} keyword={keyword} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
