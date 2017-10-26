@@ -11,7 +11,7 @@ import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 
 const JobCard = ({ job, keyword = '' }) => {
-  let title = <Text regular yelling className={styles.positionTitle}>{job.jobTitle}</Text>;
+  let title = <Text regular waving className={styles.positionTitle}>{job.jobTitle}</Text>;
   if (keyword) {
     const matches = match(job.jobTitle, keyword);
     const parts = parse(job.jobTitle, matches);
@@ -21,9 +21,8 @@ const JobCard = ({ job, keyword = '' }) => {
           parts.map((part, index) => {
             return (
               <Text
-                strong={part.highlight}
                 regular={!part.highlight}
-                yelling
+                waving
                 className={styles.positionTitle}
                 key={index}>{part.text}
               </Text>
@@ -36,7 +35,7 @@ const JobCard = ({ job, keyword = '' }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text whispering className={styles.company}>
+        <Text className={styles.company}>
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
@@ -49,7 +48,7 @@ const JobCard = ({ job, keyword = '' }) => {
           <ul className={styles.sellingPointsList} >
             {job.sellingPoints.map((sellingPoint, i) => {
               return (
-                <li key={i}><Text whispering className={styles.sellingPoint}>{sellingPoint}</Text></li>
+                <li key={i}><Text intimate className={styles.sellingPoint}>{sellingPoint}</Text></li>
               );
             })}
           </ul>
@@ -57,15 +56,15 @@ const JobCard = ({ job, keyword = '' }) => {
       }
       { job.description && (
         <Section className={styles.jobDescriptionSection}>
-          <Text whispering className={styles.bodyDescriptionText}>{job.description}</Text>
+          <Text intimate className={styles.bodyDescriptionText}>{job.description}</Text>
         </Section>
       )}
       <Section className={styles.footerSection}>
         <div className={styles.footerLeft}>
           <div className={styles.jobInfoList}>
             <div>
-              <Text whispering className={styles.jobInfo}><LocationIcon /> {job.location}</Text>
-              { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon /> {job.salary}</Text>)}
+              <Text whispering className={styles.jobInfo}><LocationIcon className={styles.jobInfoIcon} /> {job.location}</Text>
+              { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /> {job.salary}</Text>)}
             </div>
             <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>
