@@ -120,7 +120,7 @@
     "react-test-renderer": "^16.0.0",
     "rewrite-files": "^1.0.1",
     "rimraf": "^2.6.2",
-    "seek-style-guide-webpack": "^2.1.0",
+    "seek-style-guide-webpack": "^2.1.1",
     "semantic-release": "^8.1.2",
     "sinon": "^4.0.1",
     "sinon-chai": "^2.14.0",
