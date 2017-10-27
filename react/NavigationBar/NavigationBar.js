@@ -1,14 +1,14 @@
 import React from 'react';
-import MenuIcon from 'seek-asia-style-guide/react/LeftArrowIcon/LeftArrowIcon';
+import LeftArrowIcon from 'seek-asia-style-guide/react/LeftArrowIcon/LeftArrowIcon';
 import styles from './NavigationBar.less';
 import PropTypes from 'prop-types';
 
 const NavigationBar = ({ handleClick }) => (
   <header className={styles.root} role="banner" aria-label="Primary navigation">
-    <section className={styles.content}>
+    <section>
       <div className={styles.container}>
         <button className={styles.toggle} onClick={handleClick}>
-          <MenuIcon />
+          <LeftArrowIcon />
         </button>
       </div>
     </section>
