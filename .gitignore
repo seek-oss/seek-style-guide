@@ -5,3 +5,4 @@ yarn.lock
 *.sketch
 sketch-manifest.json
 package-lock.json
+.idea

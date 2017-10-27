@@ -11,7 +11,7 @@ import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 
 const JobCard = ({ job, keyword = '' }) => {
-  let title = <Text regular waving className={styles.positionTitle}>{job.jobTitle}</Text>;
+  let title = <Text className={styles.positionTitle}>{job.jobTitle}</Text>;
   if (keyword) {
     const matches = match(job.jobTitle, keyword);
     const parts = parse(job.jobTitle, matches);
@@ -21,8 +21,7 @@ const JobCard = ({ job, keyword = '' }) => {
           parts.map((part, index) => {
             return (
               <Text
-                regular={!part.highlight}
-                waving
+                strong={part.highlight}
                 className={styles.positionTitle}
                 key={index}>{part.text}
               </Text>
@@ -35,7 +34,7 @@ const JobCard = ({ job, keyword = '' }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text className={styles.company}>
+        <Text whispering className={styles.company}>
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
