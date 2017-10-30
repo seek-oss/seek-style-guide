@@ -8,6 +8,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <Text
       baseline={true}
       className="company"
+      whispering={true}
     >
       <span
         className="classifiedLabel"
@@ -19,8 +20,6 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      regular={true}
-      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -98,6 +97,7 @@ exports[`JobCard should render with bold keyword 1`] = `
     <Text
       baseline={true}
       className="company"
+      whispering={true}
     >
       SEEK Asia
     </Text>
@@ -106,8 +106,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         baseline={true}
         className="positionTitle"
         key="0"
-        regular={false}
-        waving={true}
+        strong={true}
       >
         Senior
       </Text>
@@ -115,8 +114,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         baseline={true}
         className="positionTitle"
         key="1"
-        regular={true}
-        waving={true}
+        strong={false}
       >
          Software 
       </Text>
@@ -124,8 +122,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         baseline={true}
         className="positionTitle"
         key="2"
-        regular={false}
-        waving={true}
+        strong={true}
       >
         Engineer
       </Text>
@@ -133,8 +130,7 @@ exports[`JobCard should render with bold keyword 1`] = `
         baseline={true}
         className="positionTitle"
         key="3"
-        regular={true}
-        waving={true}
+        strong={false}
       >
          (6 months Contract)
       </Text>
@@ -213,6 +209,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <Text
       baseline={true}
       className="company"
+      whispering={true}
     >
       <span
         className="confidentialLabel"
@@ -223,8 +220,6 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      regular={true}
-      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -302,14 +297,13 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="company"
+      whispering={true}
     >
       SEEK Asia
     </Text>
     <Text
       baseline={true}
       className="positionTitle"
-      regular={true}
-      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -387,6 +381,7 @@ exports[`JobCard should render with featured label 1`] = `
     <Text
       baseline={true}
       className="company"
+      whispering={true}
     >
       <span
         className="featuredLabel"
@@ -398,8 +393,6 @@ exports[`JobCard should render with featured label 1`] = `
     <Text
       baseline={true}
       className="positionTitle"
-      regular={true}
-      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
@@ -477,14 +470,13 @@ exports[`JobCard should render with selling points props 1`] = `
     <Text
       baseline={true}
       className="company"
+      whispering={true}
     >
       SEEK Asia
     </Text>
     <Text
       baseline={true}
       className="positionTitle"
-      regular={true}
-      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
