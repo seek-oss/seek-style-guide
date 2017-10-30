@@ -131,7 +131,7 @@
     "stylelint-config-css-modules": "^1.1.0",
     "stylelint-config-standard": "^17.0.0",
     "surge": "^0.19.0",
-    "svgo": "^0.7.2",
+    "svgo": "^1.0.0",
     "svgo-loader": "^1.2.1",
     "validate-commit-msg": "^2.14.0",
     "webpack": "^3.6.0",
