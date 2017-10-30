@@ -100,9 +100,17 @@ describe('Dropdown', () => {
   });
 
   describe('placeholder', () => {
-    it('should render placeholder as first option in list ', () => {
+    it('should render placeholder as first option and disabled in list ', () => {
       render(<Dropdown inputProps={{ value: '' }} options={options} placeholder="test" />);
       expect(placeholderText()).to.equal('test');
+      expect(placeholder.props.disabled).to.equal(true);
+    });
+  });
+
+  describe('placeholder', () => {
+    it('should render placeholder as first option and selectable in list ', () => {
+      render(<Dropdown inputProps={{ value: '' }} options={options} placeholder="test" placeholderSelectable={true} />);
+      expect(placeholder.props.disabled).to.equal(false);
     });
   });
 

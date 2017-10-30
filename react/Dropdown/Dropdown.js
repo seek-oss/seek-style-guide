@@ -65,14 +65,16 @@ export default class Dropdown extends Component {
         label: PropTypes.string
       })
     ),
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    placeholderSelectable: PropTypes.bool
   };
 
   static defaultProps = {
     id: '',
     className: '',
     placeholder: '',
-    options: []
+    options: [],
+    placeholderSelectable: false
   };
 
   constructor() {
@@ -104,7 +106,7 @@ export default class Dropdown extends Component {
       <select {...allInputProps}>
         <option
           value=""
-          disabled={true}>
+          disabled={!this.props.placeholderSelectable}>
           { placeholder }
         </option>
         {

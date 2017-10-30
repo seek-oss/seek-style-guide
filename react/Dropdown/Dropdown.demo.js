@@ -87,6 +87,13 @@ export default {
             ...props,
             className: classnames(className, styles.rootFocus)
           })
+        },
+        {
+          label: 'Placeholder selectable',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            placeholderSelectable: !props.placeholderSelectable
+          })
         }
       ]
     },
