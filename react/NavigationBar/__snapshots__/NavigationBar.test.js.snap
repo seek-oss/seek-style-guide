@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationBar should render with defaults 1`] = `
+<header
+  aria-label="Primary navigation"
+  className="root"
+  role="banner"
+>
+  <section
+    className="content"
+  >
+    <div
+      className="container"
+    >
+      <button
+        className="toggle"
+      >
+        <HamburgerIcon />
+      </button>
+    </div>
+  </section>
+</header>
+`;

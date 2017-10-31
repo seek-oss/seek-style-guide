@@ -20,6 +20,7 @@ import JobCard from 'seek-style-guide/react/JobCard/JobCard.demo';
 import DefaultLogo from 'seek-style-guide/react/Logo/Logo.demo';
 import JobStreetLogo from 'seek-style-guide/jobStreet/Logo/Logo.demo';
 import JobsDBLogo from 'seek-style-guide/jobsDB/Logo/Logo.demo';
+import NavigationBar from 'seek-style-guide/react/NavigationBar/NavigationBar.demo';
 
 const tenant = process.env.SKU_TENANT;
 
@@ -52,5 +53,6 @@ export default [
   Logo,
   Header,
   Footer,
+  NavigationBar,
   JobCard
 ];
