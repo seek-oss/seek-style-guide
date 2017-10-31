@@ -60,8 +60,8 @@ const JobCard = ({ job, keyword = '' }) => {
       )}
       <Section className={styles.footerSection}>
         <div className={styles.footerLeft}>
-          <div className={styles.jobInfoList}>
-            <div>
+          <div className={styles.jobInfoContainer}>
+            <div className={styles.jobInfoList}>
               <Text whispering className={styles.jobInfo}><LocationIcon className={styles.jobInfoIcon} /> {job.location}</Text>
               { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /> {job.salary}</Text>)}
             </div>

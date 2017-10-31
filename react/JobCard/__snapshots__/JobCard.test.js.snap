@@ -42,9 +42,11 @@ exports[`JobCard should render with Classified in grey label 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfoList"
+        className="jobInfoContainer"
       >
-        <div>
+        <div
+          className="jobInfoList"
+        >
           <Text
             baseline={true}
             className="jobInfo"
@@ -154,9 +156,11 @@ exports[`JobCard should render with bold keyword 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfoList"
+        className="jobInfoContainer"
       >
-        <div>
+        <div
+          className="jobInfoList"
+        >
           <Text
             baseline={true}
             className="jobInfo"
@@ -242,9 +246,11 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfoList"
+        className="jobInfoContainer"
       >
-        <div>
+        <div
+          className="jobInfoList"
+        >
           <Text
             baseline={true}
             className="jobInfo"
@@ -326,9 +332,11 @@ exports[`JobCard should render with default props 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfoList"
+        className="jobInfoContainer"
       >
-        <div>
+        <div
+          className="jobInfoList"
+        >
           <Text
             baseline={true}
             className="jobInfo"
@@ -415,9 +423,11 @@ exports[`JobCard should render with featured label 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfoList"
+        className="jobInfoContainer"
       >
-        <div>
+        <div
+          className="jobInfoList"
+        >
           <Text
             baseline={true}
             className="jobInfo"
@@ -540,9 +550,11 @@ exports[`JobCard should render with selling points props 1`] = `
       className="footerLeft"
     >
       <div
-        className="jobInfoList"
+        className="jobInfoContainer"
       >
-        <div>
+        <div
+          className="jobInfoList"
+        >
           <Text
             baseline={true}
             className="jobInfo"
