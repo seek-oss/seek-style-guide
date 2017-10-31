@@ -15,6 +15,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+           name: Run lint
+           command: npm run lint
+      - run:
+         name: Run unit test
+         command: npm run test-unit
   surge:
      docker:
        - image: circleci/node:8.5
@@ -41,7 +47,7 @@ jobs:
       - run: npm install
       - run: git config --global user.name "Circle-CI";
       - run: git config --global user.email "srp-dev@seekasia.com";
-      - run: npm run build-gh-pages  
+      - run: npm run build-gh-pages
       - run: npm run deploy-gh-pages
       - run: npm run semantic-release
 workflows:
