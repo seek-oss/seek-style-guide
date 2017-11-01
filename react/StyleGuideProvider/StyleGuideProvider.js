@@ -6,19 +6,28 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
+import jobsDBLocalization from './localization/jobsdb';
+import jobStreetLocalization from './localization/jobstreet';
 
-const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
-const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';
+const defaultPageTitle = 'SEEK Asia';
 
-const getLocalisedPageTitle = locale => locale === 'AU' ? defaultPageTitleAU : defaultPageTitleNZ;
+const getLocalisedPageTitle = (country, language, tenant) => {
+  const brandLocalization = tenant === 'jobstreet' ? jobStreetLocalization : jobsDBLocalization;
+  const localeCode = language + '-' + country;
 
-export default function StyleGuideProvider({ fullScreen, children, meta, link, title, locale }) {
+  if (brandLocalization && brandLocalization[localeCode]) {
+    return brandLocalization[localeCode]['meta.title'];
+  }
+  return defaultPageTitle;
+};
+
+export default function StyleGuideProvider({ fullScreen, children, meta, link, title, country, language, tenant }) {
   const className = classnames({
     [styles.root]: true,
     [styles.fullScreen]: fullScreen
   });
 
-  const pageTitle = title || getLocalisedPageTitle(locale);
+  const pageTitle = title || getLocalisedPageTitle(country, language, tenant);
 
   return (
     <div className={className}>
@@ -43,7 +52,8 @@ StyleGuideProvider.propTypes = {
   title: PropTypes.string,
   meta: PropTypes.array,
   link: PropTypes.array,
-  locale: PropTypes.oneOf(['AU', 'NZ'])
+  country: PropTypes.string,
+  language: PropTypes.string
 };
 
 StyleGuideProvider.defaultProps = {

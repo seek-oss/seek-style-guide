@@ -4,7 +4,7 @@ import { PageBlock, Section, Columns, Text } from 'seek-style-guide/react';
 export default () => (
   <PageBlock>
     <Section header>
-      <Text hero>A principled design process</Text>
+      <Text screaming>A principled design process</Text>
     </Section>
 
     <Section>
