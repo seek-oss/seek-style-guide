@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JobCard should render with Classified in grey label 1`] = `
+exports[`JobCard should render company with bold keyword 1`] = `
 <Card
   className="root"
 >
@@ -10,12 +10,20 @@ exports[`JobCard should render with Classified in grey label 1`] = `
       className="company"
       whispering={true}
     >
-      <span
-        className="classifiedLabel"
-      >
-        Classified
+      <span>
+        <span
+          className="highlight"
+          key="0"
+        >
+          SEEK
+        </span>
+        <span
+          className={null}
+          key="1"
+        >
+           Asia
+        </span>
       </span>
-      SEEK Asia
     </Text>
     <Text
       baseline={true}
@@ -91,7 +99,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
 </Card>
 `;
 
-exports[`JobCard should render with bold keyword 1`] = `
+exports[`JobCard should render job title with bold keyword 1`] = `
 <Card
   className="root"
 >
@@ -101,7 +109,20 @@ exports[`JobCard should render with bold keyword 1`] = `
       className="company"
       whispering={true}
     >
-      SEEK Asia
+      <span>
+        <span
+          className="highlight"
+          key="0"
+        >
+          SEEK
+        </span>
+        <span
+          className={null}
+          key="1"
+        >
+           Asia
+        </span>
+      </span>
     </Text>
     <div>
       <Text
@@ -137,6 +158,97 @@ exports[`JobCard should render with bold keyword 1`] = `
          (6 months Contract)
       </Text>
     </div>
+  </Section>
+  <Section
+    className="jobDescriptionSection"
+  >
+    <Text
+      baseline={true}
+      className="bodyDescriptionText"
+      intimate={true}
+    >
+      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+    </Text>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoContainer"
+      >
+        <div
+          className="jobInfoList"
+        >
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <LocationIcon
+              className="jobInfoIcon"
+            />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          whispering={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
+    </div>
+  </Section>
+</Card>
+`;
+
+exports[`JobCard should render with Classified in grey label 1`] = `
+<Card
+  className="root"
+>
+  <Section>
+    <Text
+      baseline={true}
+      className="company"
+      whispering={true}
+    >
+      <span
+        className="classifiedLabel"
+      >
+        Classified
+      </span>
+      SEEK Asia
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
   </Section>
   <Section
     className="jobDescriptionSection"

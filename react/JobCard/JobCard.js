@@ -12,24 +12,51 @@ import parse from 'autosuggest-highlight/parse';
 
 const JobCard = ({ job, keyword = '' }) => {
   let title = <Text className={styles.positionTitle}>{job.jobTitle}</Text>;
+  let company = job.company;
   if (keyword) {
     const matches = match(job.jobTitle, keyword);
-    const parts = parse(job.jobTitle, matches);
-    title = (
-      <div>
-        {
-          parts.map((part, index) => {
-            return (
-              <Text
-                strong={part.highlight}
-                className={styles.positionTitle}
-                key={index}>{part.text}
-              </Text>
-            );
-          })
-        }
-      </div>
-    );
+    // No point to parse if matches is empty array
+    if (matches.length !== 0) {
+      const parts = parse(job.jobTitle, matches);
+      title = (
+        <div>
+          {
+            parts.map((part, index) => {
+              return (
+                <Text
+                  strong={part.highlight}
+                  className={styles.positionTitle}
+                  key={index}>
+                  {part.text}
+                </Text>
+              );
+            })
+          }
+        </div>
+      );
+    }
+    if (company) {
+      const companyMatches = match(company, keyword);
+      // No point to parse if we can't find any match
+      if (companyMatches.length !== 0) {
+        const companyParts = parse(company, companyMatches);
+        company = (
+          <span>
+            {
+              companyParts.map((part, index) => {
+                return (
+                  <span
+                    className={part.highlight ? styles.highlight : null}
+                    key={index}>
+                    {part.text}
+                  </span>
+                );
+              })
+            }
+          </span>
+        );
+      }
+    }
   }
   return (
     <Card className={styles.root}>
@@ -38,7 +65,7 @@ const JobCard = ({ job, keyword = '' }) => {
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-          {job.company}
+          {company}
         </Text>
         {title}
       </Section>
