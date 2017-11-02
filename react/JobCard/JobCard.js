@@ -10,53 +10,57 @@ import styles from './JobCard.less';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 
+const getParts = (text, query) => {
+  if (!text || !query) {
+    return null;
+  }
+  const matches = match(text, query);
+  // No point to parse if matches is empty array
+  if (matches.length === 0) {
+    return null;
+  }
+  return parse(text, matches);
+};
+
 const JobCard = ({ job, keyword = '' }) => {
   let title = <Text className={styles.positionTitle}>{job.jobTitle}</Text>;
   let company = job.company;
-  if (keyword) {
-    const matches = match(job.jobTitle, keyword);
-    // No point to parse if matches is empty array
-    if (matches.length !== 0) {
-      const parts = parse(job.jobTitle, matches);
-      title = (
-        <div>
-          {
-            parts.map((part, index) => {
-              return (
-                <Text
-                  strong={part.highlight}
-                  className={styles.positionTitle}
-                  key={index}>
-                  {part.text}
-                </Text>
-              );
-            })
-          }
-        </div>
-      );
-    }
-    if (company) {
-      const companyMatches = match(company, keyword);
-      // No point to parse if we can't find any match
-      if (companyMatches.length !== 0) {
-        const companyParts = parse(company, companyMatches);
-        company = (
-          <span>
-            {
-              companyParts.map((part, index) => {
-                return (
-                  <span
-                    className={part.highlight ? styles.highlight : null}
-                    key={index}>
-                    {part.text}
-                  </span>
-                );
-              })
-            }
-          </span>
-        );
-      }
-    }
+  const keywordParts = getParts(job.jobTitle, keyword);
+  const companyParts = getParts(company, keyword);
+  if (keywordParts) {
+    title = (
+      <div>
+        {
+          keywordParts.map((part, index) => {
+            return (
+              <Text
+                strong={part.highlight}
+                className={styles.positionTitle}
+                key={index}>
+                {part.text}
+              </Text>
+            );
+          })
+        }
+      </div>
+    );
+  }
+  if (companyParts) {
+    company = (
+      <span>
+        {
+          companyParts.map((part, index) => {
+            return (
+              <span
+                className={part.highlight ? styles.highlight : null}
+                key={index}>
+                {part.text}
+              </span>
+            );
+          })
+        }
+      </span>
+    );
   }
   return (
     <Card className={styles.root}>
