@@ -22,7 +22,6 @@ const navLinks = [
         title: 'shell.navProfilesTitle',
         text: 'Company Profiles',
         hasIcon: false,
-        isActive: true,
         childLinks: [],
     },
     {
