@@ -6,16 +6,14 @@ exports[`NavigationBar should render with defaults 1`] = `
   className="root"
   role="banner"
 >
-  <section
-    className="content"
-  >
+  <section>
     <div
       className="container"
     >
       <button
         className="toggle"
       >
-        <HamburgerIcon />
+        <LeftArrowIcon />
       </button>
     </div>
   </section>

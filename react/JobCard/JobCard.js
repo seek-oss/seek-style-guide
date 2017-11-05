@@ -10,25 +10,56 @@ import styles from './JobCard.less';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 
+const getParts = (text, query) => {
+  if (!text || !query) {
+    return null;
+  }
+  const matches = match(text, query);
+  // No point to parse if matches is empty array
+  if (matches.length === 0) {
+    return null;
+  }
+  return parse(text, matches);
+};
+
 const JobCard = ({ job, keyword = '' }) => {
   let title = <Text className={styles.positionTitle}>{job.jobTitle}</Text>;
-  if (keyword) {
-    const matches = match(job.jobTitle, keyword);
-    const parts = parse(job.jobTitle, matches);
+  let company = job.company;
+  const keywordParts = getParts(job.jobTitle, keyword);
+  const companyParts = getParts(company, keyword);
+  if (keywordParts) {
     title = (
       <div>
         {
-          parts.map((part, index) => {
+          keywordParts.map((part, index) => {
             return (
               <Text
                 strong={part.highlight}
                 className={styles.positionTitle}
-                key={index}>{part.text}
+                key={index}>
+                {part.text}
               </Text>
             );
           })
         }
       </div>
+    );
+  }
+  if (companyParts) {
+    company = (
+      <span>
+        {
+          companyParts.map((part, index) => {
+            return (
+              <span
+                className={part.highlight ? styles.highlight : null}
+                key={index}>
+                {part.text}
+              </span>
+            );
+          })
+        }
+      </span>
     );
   }
   return (
@@ -38,7 +69,7 @@ const JobCard = ({ job, keyword = '' }) => {
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-          {job.company}
+          {company}
         </Text>
         {title}
       </Section>

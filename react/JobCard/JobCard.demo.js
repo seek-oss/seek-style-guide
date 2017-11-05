@@ -119,7 +119,7 @@ export default {
             job: {
               ...props.job
             },
-            keyword: 'senior engineer'
+            keyword: 'seek senior engineer'
           })
         }
       ]
