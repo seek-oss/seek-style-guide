@@ -56,7 +56,8 @@ export default {
     options: [
       {
         label: 'Really really long job title that is not gonna fit',
-        value: '3'
+        value: '3',
+        props: { disabled: true }
       },
       {
         label: 'Major Cities',

@@ -3,10 +3,7 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
 import { createRenderer } from 'react-test-renderer/shallow';
-import {
-  findAllWithClass,
-  findAllWithType
-} from 'react-shallow-testutils';
+import { findAllWithClass, findAllWithType } from 'react-shallow-testutils';
 import Dropdown from './Dropdown';
 
 chai.use(sinonChai);
@@ -25,7 +22,14 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, input, placeholder, optionGroup, childOptions, errors, option;
+  let element,
+    dropdown,
+    input,
+    placeholder,
+    optionGroup,
+    childOptions,
+    errors,
+    option;
 
   beforeEach(() => {
     errors = [];
@@ -71,24 +75,44 @@ describe('Dropdown', () => {
       render(<Dropdown inputProps={{ value: '' }} options={opt} />);
       expect(option.props.value).to.equal('3130');
     });
+
+    const opt2 = [
+      { label: 'disabled', value: 'disabled', props: { disabled: true } }
+    ];
+    it('should render disabled option', () => {
+      render(<Dropdown inputProps={{ value: '' }} options={opt2} />);
+      expect(option.props.disabled).to.equal(true);
+    });
   });
 
   describe('Option Group', () => {
     beforeAll(() => {
-      const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
+      const opts = [
+        {
+          label: 'suburbs',
+          value: [
+            { label: 'truganina', value: '3029' },
+            { label: 'wl', value: '3029' },
+            { label: 'disabled', value: 'disabled', props: { disabled: true } }
+          ]
+        }
+      ];
       render(<Dropdown inputProps={{ value: '' }} options={opts} />);
     });
     it('should render optgroup correctly', () => {
       expect(optionGroup.props.label).to.equal('suburbs');
     });
     it('should render optgroup children correctly', () => {
-      expect(optionGroup.props.children.length).to.equal(2);
+      expect(optionGroup.props.children.length).to.equal(3);
     });
     it('should render 1st optgroup child value correctly', () => {
       expect(childOptions[0].props.children).to.equal('truganina');
     });
     it('should render 2nd optgroup child value correctly', () => {
       expect(childOptions[1].props.children).to.equal('wl');
+    });
+    it('should render disabled 3nd optgroup child', () => {
+      expect(childOptions[2].props.disabled).to.equal(true);
     });
   });
 
@@ -101,7 +125,13 @@ describe('Dropdown', () => {
 
   describe('placeholder', () => {
     it('should render placeholder as first option and disabled in list ', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={options} placeholder="test" />);
+      render(
+        <Dropdown
+          inputProps={{ value: '' }}
+          options={options}
+          placeholder="test"
+        />
+      );
       expect(placeholderText()).to.equal('test');
       expect(placeholder.props.disabled).to.equal(true);
     });
@@ -109,7 +139,14 @@ describe('Dropdown', () => {
 
   describe('placeholder', () => {
     it('should render placeholder as first option and selectable in list ', () => {
-      render(<Dropdown inputProps={{ value: '' }} options={options} placeholder="test" placeholderSelectable={true} />);
+      render(
+        <Dropdown
+          inputProps={{ value: '' }}
+          options={options}
+          placeholder="test"
+          placeholderSelectable={true}
+        />
+      );
       expect(placeholder.props.disabled).to.equal(false);
     });
   });
@@ -122,16 +159,22 @@ describe('Dropdown', () => {
 
     it('should error if `inputProps.value` is not supplied', () => {
       render(<Dropdown inputProps={{}} />);
-      expect(errors[0]).to.match(/Invalid prop `inputProps.value` of type `undefined` supplied to `Dropdown`, expected `string`/);
+      expect(errors[0]).to.match(
+        /Invalid prop `inputProps.value` of type `undefined` supplied to `Dropdown`, expected `string`/
+      );
     });
 
     it('should error if `inputProps.value` is not a string', () => {
       render(<Dropdown inputProps={{ value: 2 }} />);
-      expect(errors[0]).to.match(/Invalid prop `inputProps.value` of type `number` supplied to `Dropdown`, expected `string`/);
+      expect(errors[0]).to.match(
+        /Invalid prop `inputProps.value` of type `number` supplied to `Dropdown`, expected `string`/
+      );
     });
 
-    it('should error if `inputProps`\'s `id` is specified', () => {
-      render(<Dropdown id="firstName" inputProps={{ id: 'ignored', value: '' }} />);
+    it("should error if `inputProps`'s `id` is specified", () => {
+      render(
+        <Dropdown id="firstName" inputProps={{ id: 'ignored', value: '' }} />
+      );
       expect(errors[0]).to.match(/`inputProps.id` will be overridden by `id`/);
     });
 
@@ -141,7 +184,14 @@ describe('Dropdown', () => {
     });
 
     it('should pass through other props to the input', () => {
-      render(<Dropdown inputProps={{ id: 'firstName', 'data-automation': 'first-name-field' }} />);
+      render(
+        <Dropdown
+          inputProps={{
+            id: 'firstName',
+            'data-automation': 'first-name-field'
+          }}
+        />
+      );
       expect(input.props.id).to.equal('firstName');
       expect(input.props['data-automation']).to.equal('first-name-field');
     });
