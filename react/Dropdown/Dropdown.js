@@ -20,6 +20,7 @@ function combineClassNames(props = {}, ...classNames) {
 }
 
 export default class Dropdown extends Component {
+
   static displayName = 'Dropdown';
 
   static propTypes = {
@@ -28,9 +29,7 @@ export default class Dropdown extends Component {
       const { id } = props;
 
       if (typeof id !== 'string') {
-        return new Error(
-          `Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`
-        );
+        return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
       }
     },
     /* eslint-enable consistent-return */
@@ -42,34 +41,26 @@ export default class Dropdown extends Component {
       const { id: inputId, value } = inputProps || {};
 
       if (typeof inputProps !== 'object') {
-        return new Error(
-          `Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`
-        );
+        return new Error(`Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
       }
 
       if (typeof value !== 'string') {
-        return new Error(
-          `Invalid prop \`inputProps.value\` of type \`${typeof value}\` supplied to \`${componentName}\`, expected \`string\`.`
-        );
+        return new Error(`Invalid prop \`inputProps.value\` of type \`${typeof value}\` supplied to \`${componentName}\`, expected \`string\`.`);
       }
 
       if (inputId && id) {
-        return new Error(
-          `\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`
-        );
+        return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
       }
     },
     /* eslint-enable consistent-return */
     options: PropTypes.arrayOf(
       PropTypes.shape({
         value: PropTypes.oneOfType([
-          PropTypes.arrayOf(
-            PropTypes.shape({
-              value: PropTypes.string,
-              label: PropTypes.string,
-              props: PropTypes.object
-            })
-          ),
+          PropTypes.arrayOf(PropTypes.shape({
+            value: PropTypes.string,
+            label: PropTypes.string,
+            props: PropTypes.object
+          })),
           PropTypes.string
         ]).isRequired,
         label: PropTypes.string,
@@ -148,29 +139,14 @@ export default class Dropdown extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const {
-      id,
-      label,
-      labelProps,
-      secondaryLabel,
-      tertiaryLabel,
-      invalid,
-      help,
-      helpProps,
-      message,
-      messageProps
-    } = this.props;
+    const { id, label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
       <div className={classNames}>
-        <FieldLabel
-          {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }}
-        />
+        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage
-          {...{ invalid, help, helpProps, valid, message, messageProps }}
-        />
+        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }

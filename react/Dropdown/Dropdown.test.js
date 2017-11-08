@@ -22,14 +22,7 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element,
-    dropdown,
-    input,
-    placeholder,
-    optionGroup,
-    childOptions,
-    errors,
-    option;
+  let element, dropdown, input, placeholder, optionGroup, childOptions, errors, option;
 
   beforeEach(() => {
     errors = [];
@@ -125,13 +118,7 @@ describe('Dropdown', () => {
 
   describe('placeholder', () => {
     it('should render placeholder as first option and disabled in list ', () => {
-      render(
-        <Dropdown
-          inputProps={{ value: '' }}
-          options={options}
-          placeholder="test"
-        />
-      );
+      render(<Dropdown inputProps={{ value: '' }} options={options} placeholder="test" />);
       expect(placeholderText()).to.equal('test');
       expect(placeholder.props.disabled).to.equal(true);
     });
@@ -139,14 +126,7 @@ describe('Dropdown', () => {
 
   describe('placeholder', () => {
     it('should render placeholder as first option and selectable in list ', () => {
-      render(
-        <Dropdown
-          inputProps={{ value: '' }}
-          options={options}
-          placeholder="test"
-          placeholderSelectable={true}
-        />
-      );
+      render(<Dropdown inputProps={{ value: '' }} options={options} placeholder="test" placeholderSelectable={true} />);
       expect(placeholder.props.disabled).to.equal(false);
     });
   });
@@ -159,22 +139,16 @@ describe('Dropdown', () => {
 
     it('should error if `inputProps.value` is not supplied', () => {
       render(<Dropdown inputProps={{}} />);
-      expect(errors[0]).to.match(
-        /Invalid prop `inputProps.value` of type `undefined` supplied to `Dropdown`, expected `string`/
-      );
+      expect(errors[0]).to.match(/Invalid prop `inputProps.value` of type `undefined` supplied to `Dropdown`, expected `string`/);
     });
 
     it('should error if `inputProps.value` is not a string', () => {
       render(<Dropdown inputProps={{ value: 2 }} />);
-      expect(errors[0]).to.match(
-        /Invalid prop `inputProps.value` of type `number` supplied to `Dropdown`, expected `string`/
-      );
+      expect(errors[0]).to.match(/Invalid prop `inputProps.value` of type `number` supplied to `Dropdown`, expected `string`/);
     });
 
-    it("should error if `inputProps`'s `id` is specified", () => {
-      render(
-        <Dropdown id="firstName" inputProps={{ id: 'ignored', value: '' }} />
-      );
+    it('should error if `inputProps`\'s `id` is specified', () => {
+      render(<Dropdown id="firstName" inputProps={{ id: 'ignored', value: '' }} />);
       expect(errors[0]).to.match(/`inputProps.id` will be overridden by `id`/);
     });
 
@@ -184,14 +158,7 @@ describe('Dropdown', () => {
     });
 
     it('should pass through other props to the input', () => {
-      render(
-        <Dropdown
-          inputProps={{
-            id: 'firstName',
-            'data-automation': 'first-name-field'
-          }}
-        />
-      );
+      render(<Dropdown inputProps={{ id: 'firstName', 'data-automation': 'first-name-field' }} />);
       expect(input.props.id).to.equal('firstName');
       expect(input.props['data-automation']).to.equal('first-name-field');
     });
