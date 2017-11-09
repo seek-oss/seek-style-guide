@@ -14,10 +14,17 @@ export default {
       type: 'checklist',
       states: [
         {
-          label: 'Strong',
+          label: 'Bold',
           transformProps: props => ({
             ...props,
             strong: true
+          })
+        },
+        {
+          label: 'SemiBold',
+          transformProps: props => ({
+            ...props,
+            semiStrong: true
           })
         },
         {
