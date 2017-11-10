@@ -65,7 +65,7 @@ const JobCard = ({ job, keyword = '' }) => {
   return (
     <Card className={styles.root}>
       <Section>
-        <Text whispering className={styles.company}>
+        <Text intimate className={styles.company}>
           {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
           {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
           {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
