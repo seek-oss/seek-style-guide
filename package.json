@@ -28,7 +28,8 @@
     "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "sketch-to-git": "node scripts/sketch-to-git",
-    "git-to-sketch": "node scripts/git-to-sketch"
+    "git-to-sketch": "node scripts/git-to-sketch",
+    "flow": "flow focus-check ."
   },
   "config": {
     "commitizen": {
@@ -88,6 +89,7 @@
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.1",
     "extract-zip": "^1.6.5",
+    "flow-bin": "^0.59.0",
     "gh-pages": "^1.0.0",
     "glob": "^7.1.2",
     "hex-rgb": "^1.0.0",
