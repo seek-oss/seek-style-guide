@@ -140,6 +140,7 @@ The following colors are provided:
 @sk-green-light
 @sk-yellow
 @sk-yellow-light
+@sk-orange
 @sk-footer
 @sk-background
 @sk-yellow
