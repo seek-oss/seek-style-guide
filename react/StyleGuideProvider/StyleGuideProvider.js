@@ -6,6 +6,12 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
+import WebFont from 'webfontloader';
+WebFont.load({
+  google: {
+    families: ['Muli']
+  }
+});
 
 const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
 const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';
