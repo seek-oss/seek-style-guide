@@ -116,7 +116,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:recommended+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: '/recommended',
+            href: urlForAuthStatus(authenticationStatus, '/recommended'),
             children: [
               <span key="label">Recommended Jobs</span>,
               <ThumbsUpIcon
