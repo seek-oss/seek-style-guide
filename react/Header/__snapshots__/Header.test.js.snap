@@ -244,7 +244,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -1398,7 +1398,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -3129,7 +3129,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -3704,7 +3704,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -4253,7 +4253,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -4826,7 +4826,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -5399,7 +5399,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -5935,7 +5935,7 @@ exports[`Header: should render with no divider 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
