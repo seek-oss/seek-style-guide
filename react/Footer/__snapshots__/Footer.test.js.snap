@@ -550,6 +550,17 @@ exports[`Footer: should render when authenticated 1`] = `
                       Ximble
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -1337,6 +1348,17 @@ exports[`Footer: should render when authentication is pending 1`] = `
                       href="https://www.ximble.com"
                     >
                       Ximble
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
                     </a>
                   </li>
                 </ul>
@@ -2128,6 +2150,17 @@ exports[`Footer: should render when unauthenticated 1`] = `
                       Ximble
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -2915,6 +2948,17 @@ exports[`Footer: should render with locale of AU 1`] = `
                       href="https://www.ximble.com"
                     >
                       Ximble
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
                     </a>
                   </li>
                 </ul>

@@ -126,5 +126,10 @@ export const services = [
     name: 'Ximble',
     href: 'https://www.ximble.com',
     analytics: 'toolbar:ximble'
+  },
+  {
+    name: 'Spark Hire',
+    href: 'https://anz.sparkhire.com/',
+    analytics: 'toolbar:sparkhire'
   }
 ];
