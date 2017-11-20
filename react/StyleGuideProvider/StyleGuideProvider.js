@@ -12,7 +12,7 @@ import jobStreetLocalization from './localization/jobstreet';
 const defaultPageTitle = 'SEEK Asia';
 
 const getLocalisedPageTitle = (country, language, tenant) => {
-  const brandLocalization = tenant === 'jobstreet' ? jobStreetLocalization : jobsDBLocalization;
+  const brandLocalization = tenant === 'jobStreet' ? jobStreetLocalization : jobsDBLocalization;
   const localeCode = language + '-' + country;
 
   if (brandLocalization && brandLocalization[localeCode]) {
