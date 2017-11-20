@@ -14,9 +14,13 @@ You can also run the demo site locally by checking out this repo and running `np
 
 ## Installation
 
+If you want to add SEEK Asia Style Guide to your app, install it with npm or yarn:
+
 ```bash
 $ npm install --save seek-asia-style-guide
 ```
+
+If you want to dev on the style guide itself or run the demo page, clone this repository and `npm install` then `npm start` to start the demo page locally.  See [CONTRIBUTING.md](./CONTRIBUTING.md) for a complete guide.
 
 ## Upgrading
 
