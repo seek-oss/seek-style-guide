@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
-import { capitalize } from 'lodash';
+import capitalize from 'lodash/capitalize';
 
 export default class Button extends Component {
   static displayName = 'Button';
