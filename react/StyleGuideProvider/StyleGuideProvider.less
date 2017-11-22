@@ -8,32 +8,11 @@
     background-color: @sk-background;
     min-height: 100%;
   }
+  /* stylelint-enable selector-max-type */
 }
 
 .root {
-  .rawText(1);
-  font-family: @base-font-stack;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: @sk-background;
-  color: @sk-black;
-  box-sizing: border-box;
-
-  :global {
-    *,
-    *::before,
-    *::after {
-      font-family: inherit;
-      box-sizing: inherit;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      -webkit-tap-highlight-color: transparent; /* For some Androids */
-    }
-
-    input[type=search]::-webkit-search-decoration {
-      -webkit-appearance: none;
-    }
-  }
-  /* stylelint-enable selector-max-type */
+  .provider();
 }
 
 .fullScreen {
