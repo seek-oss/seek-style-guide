@@ -31,8 +31,13 @@ export default class UserAccount extends Component {
     userName: PropTypes.string,
     linkRenderer: PropTypes.func.isRequired,
     returnUrl: PropTypes.string,
-    activeTab: PropTypes.string
+    activeTab: PropTypes.string,
+    onMenuToggle: PropTypes.func
   };
+
+  static defaultProps = {
+    onMenuToggle: () => {}
+  }
 
   constructor(props) {
     super(props);
@@ -43,7 +48,10 @@ export default class UserAccount extends Component {
   }
 
   handleMenuToggleClick = () => {
-    this.setState(state => ({ menuOpen: !state.menuOpen }));
+    this.setState(state => {
+      this.props.onMenuToggle({ open: !state.menuOpen });
+      return { menuOpen: !state.menuOpen };
+    });
   };
 
   handleMenuClick = () => {
