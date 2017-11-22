@@ -36,6 +36,15 @@
   });
 }
 
+.ghostColor(@color, @textHoverColor) {
+  border-color: @color;
+  color: @color;
+
+  .hoverState({
+    color: @textHoverColor;
+  });  
+}
+
 .root {
   .touchableText();
   display: inline-block;
@@ -67,6 +76,10 @@
   .buttonColor(@sk-white, @sk-pink);
 }
 
+.root_isWhite {
+  .buttonColor(@sk-white, @sk-white);
+}
+
 .root_isBlue {
   .buttonColor(@sk-white, @sk-highlight);
 }
@@ -75,10 +88,29 @@
   .buttonColor(@sk-black, @sk-mid-gray-light);
 }
 
-.root_isTransparent {
-  color: @sk-link;
+.root_isGhost, .root_isTransparent {
   background-color: transparent;
   box-shadow: none;
+}
+
+.root_isGhost {
+  border: 2px solid;
+}
+
+.root_isPink.root_isGhost {
+  .ghostColor(@sk-pink, @sk-white)
+}
+
+.root_isBlue.root_isGhost {
+  .ghostColor(@sk-highlight, @sk-white)
+}
+
+.root_isWhite.root_isGhost {
+  border-color: @sk-white;
+}
+
+.root_isTransparent {
+  color: @sk-link;
   padding-left: 0;
   padding-right: 0;
   .hoverState({
