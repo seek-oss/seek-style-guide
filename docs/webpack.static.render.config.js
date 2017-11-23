@@ -96,7 +96,9 @@ const config = {
       crawl: true,
       paths: [
         '/',
-        '/playground' // Currently unreachable by crawler
+        // Currently unreachable by crawler:
+        '/symbols',
+        '/playground'
       ],
       locals: { template }
     }),
