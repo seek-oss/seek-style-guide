@@ -36,12 +36,16 @@
   });
 }
 
-.ghostColor(@color, @textHoverColor) {
+.ghostColor(@color) {
   border-color: @color;
   color: @color;
 
   .hoverState({
-    color: @textHoverColor;
+    background-color: lighten(@color, 56%);
+  });
+
+  .activeState({
+    background-color: lighten(@color, 51%);
   });
 }
 
@@ -76,10 +80,6 @@
   .buttonColor(@sk-white, @sk-pink);
 }
 
-.root_isWhite {
-  .buttonColor(@sk-white, @sk-white);
-}
-
 .root_isBlue {
   .buttonColor(@sk-white, @sk-highlight);
 }
@@ -92,23 +92,25 @@
 .root_isTransparent {
   background-color: transparent;
   box-shadow: none;
-  line-height: 0;
 }
 
 .root_isGhost {
   border: 2px solid;
-}
-
-.root_isPink.root_isGhost {
-  .ghostColor(@sk-pink, @sk-white)
+  font-weight: @sk-bold;
+  line-height: 0;
 }
 
 .root_isBlue.root_isGhost {
-  .ghostColor(@sk-highlight, @sk-white)
+  .ghostColor(@sk-link)
 }
 
 .root_isWhite.root_isGhost {
   border-color: @sk-white;
+  color: @sk-white;
+
+  .hoverState({
+    background-color: rgba(255, 255, 255, 0.2);
+  });
 }
 
 .root_isTransparent {
