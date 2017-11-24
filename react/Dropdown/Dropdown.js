@@ -58,11 +58,13 @@ export default class Dropdown extends Component {
         value: PropTypes.oneOfType([
           PropTypes.arrayOf(PropTypes.shape({
             value: PropTypes.string,
-            label: PropTypes.string
+            label: PropTypes.string,
+            props: PropTypes.object
           })),
           PropTypes.string
         ]).isRequired,
-        label: PropTypes.string
+        label: PropTypes.string,
+        props: PropTypes.object
       })
     ),
     placeholder: PropTypes.string,
@@ -83,13 +85,12 @@ export default class Dropdown extends Component {
     this.renderSelect = this.renderSelect.bind(this);
   }
 
-  renderOption({ value, label }) {
-    return (<option
-      value={value}
-      key={value}
-      className={styles.option}>
-      { label }
-    </option>);
+  renderOption({ value, label, props }) {
+    return (
+      <option value={value} key={value} className={styles.option} {...props}>
+        {label}
+      </option>
+    );
   }
   renderSelect() {
     const { inputProps, id, options, placeholder } = this.props;
@@ -104,19 +105,19 @@ export default class Dropdown extends Component {
 
     return (
       <select {...allInputProps}>
-        <option
-          value=""
-          disabled={!this.props.placeholderSelectable}>
-          { placeholder }
+        <option value="" disabled={!this.props.placeholderSelectable}>
+          {placeholder}
         </option>
-        {
-          options.map(({ value, label }) => {
-            if (Array.isArray(value)) {
-              return (<optgroup value="" label={label} key={label}>{value.map(this.renderOption)}</optgroup>);
-            }
-            return this.renderOption({ value, label });
-          })
-        }
+        {options.map(({ value, label, props }) => {
+          if (Array.isArray(value)) {
+            return (
+              <optgroup value="" label={label} key={label}>
+                {value.map(this.renderOption)}
+              </optgroup>
+            );
+          }
+          return this.renderOption({ value, label, props });
+        })}
       </select>
     );
   }
@@ -124,10 +125,7 @@ export default class Dropdown extends Component {
   renderChevron() {
     return (
       <div className={styles.chevron}>
-        <ChevronIcon
-          svgClassName={styles.chevronSvg}
-          direction="down"
-        />
+        <ChevronIcon svgClassName={styles.chevronSvg} direction="down" />
       </div>
     );
   }
@@ -152,5 +150,4 @@ export default class Dropdown extends Component {
       </div>
     );
   }
-
 }
