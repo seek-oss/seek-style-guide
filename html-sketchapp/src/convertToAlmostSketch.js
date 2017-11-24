@@ -15,7 +15,7 @@ const getAllLayers = async item => {
   return layers.reduce((prev, current) => prev.concat(current), []);
 };
 
-export async function getASketchDocument() {
+export async function getASketchStyles() {
   const doc = new Document();
 
   await Array.from(document.querySelectorAll('[data-sketch-text]'))
@@ -35,7 +35,7 @@ export async function getASketchDocument() {
   return doc.toJSON();
 }
 
-export async function getASketchPage() {
+export async function getASketchSymbols() {
   const page = new Page({
     width: document.body.offsetWidth,
     height: document.body.offsetHeight

@@ -27,17 +27,17 @@ const extractSymbols = bluebird.method(async() => {
   const bundle = await fs.readFileAsync(bundlePath, 'utf8');
   await page.addScriptTag({ content: bundle });
 
-  const asketchPageJSON = await page.evaluate('convertToAlmostSketch.getASketchPage()');
-  const asketchDocumentJSON = await page.evaluate('convertToAlmostSketch.getASketchDocument()');
+  const asketchSymbolsJSON = await page.evaluate('convertToAlmostSketch.getASketchSymbols()');
+  const asketchStylesJSON = await page.evaluate('convertToAlmostSketch.getASketchStyles()');
 
   const outputPath = path.join(__dirname, '../../dist/asketch');
-  const outputPagePath = path.join(outputPath, 'page.asketch.json');
-  const outputDocumentPath = path.join(outputPath, 'document.asketch.json');
+  const outputSymbolsPath = path.join(outputPath, 'symbols.asketch.json');
+  const outputStylesPath = path.join(outputPath, 'styles.asketch.json');
 
   await mkdirp(outputPath);
   await Promise.all([
-    fs.writeFileAsync(outputPagePath, JSON.stringify(asketchPageJSON)),
-    fs.writeFileAsync(outputDocumentPath, JSON.stringify(asketchDocumentJSON))
+    fs.writeFileAsync(outputSymbolsPath, JSON.stringify(asketchSymbolsJSON)),
+    fs.writeFileAsync(outputStylesPath, JSON.stringify(asketchStylesJSON))
   ]);
 
   console.log('💎 Successfully extracted Sketch symbols and document styles.');
