@@ -11,3 +11,27 @@
 .name {
   margin-bottom: @grid-row-height;
 }
+
+.value {
+  .color & {
+    width: 100%;
+    border-radius: 3px;
+    height: @grid-row-height * 9;
+    margin-bottom: @grid-row-height * 2;
+  }
+}
+
+.color {
+  @media @mobile {
+    width: 100%;
+  }
+  @media @desktop {
+    padding-right: @grid-gutter-width;
+    width: 25%;
+  }
+}
+
+.colors {
+  display: flex;
+  flex-flow: row wrap;
+}

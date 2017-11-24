@@ -18,6 +18,13 @@ const getAllLayers = async item => {
 export async function getASketchStyles() {
   const doc = new Document();
 
+  Array.from(document.querySelectorAll('[data-sketch-color]'))
+    .forEach(item => {
+      const color = item.dataset.sketchColor;
+
+      doc.addColor(color);
+    });
+
   await Array.from(document.querySelectorAll('[data-sketch-text]'))
     .forEach(async item => {
       const layers = await getAllLayers(item);

@@ -9,11 +9,14 @@ import {
 } from 'seek-style-guide/react';
 import styles from './SketchExports.less';
 
+import colorsExports from '../../../../theme/**/*.sketch.js';
+const colors = Object.assign(...colorsExports.map(x => x.colors || {}));
+
 import componentExports from '../../../../react/*/*.sketch.js';
 const textComponents = Object.assign(...componentExports.map(x => x.text || {}));
 const symbolComponents = Object.assign(...componentExports.map(x => x.symbols || {}));
 
-const SketchExport = ({ type, name, children }) => (
+const SketchExport = ({ type, name, value }) => (
   <div className={styles[type] || ''}>
     {
       type === 'text' ? null : (
@@ -22,15 +25,18 @@ const SketchExport = ({ type, name, children }) => (
         </div>
       )
     }
-    <div {...{ [`data-sketch-${type}`]: name }}>
-      { children }
+    <div
+      className={styles.value}
+      {...{ [`data-sketch-${type}`]: type === 'color' ? value : name }}
+      {...(type !== 'color' ? {} : { style: { background: value } })}>
+      { typeof value === 'string' ? null : value }
     </div>
   </div>
 );
 SketchExport.propTypes = {
-  type: PropTypes.oneOf(['text', 'symbol']).isRequired,
+  type: PropTypes.oneOf(['text', 'color', 'symbol']).isRequired,
   name: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  value: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired
 };
 
 export default () => (
@@ -47,11 +53,25 @@ export default () => (
       <Section>
         {
           map(textComponents, (element, name) => (
-            <SketchExport key={name} type="text" name={name}>
-              { element }
-            </SketchExport>
+            <SketchExport key={name} type="text" name={name} value={element} />
           ))
         }
+      </Section>
+    </PageBlock>
+    <PageBlock>
+      <Section header>
+        <Text headline>Colours</Text>
+      </Section>
+    </PageBlock>
+    <PageBlock style={{ background: 'white' }}>
+      <Section>
+        <div className={styles.colors}>
+          {
+            map(colors, (color, name) => (
+              <SketchExport key={name} type="color" name={name} value={color} />
+            ))
+          }
+        </div>
       </Section>
     </PageBlock>
     <PageBlock>
@@ -63,9 +83,7 @@ export default () => (
       <Section>
         {
           map(symbolComponents, (element, name) => (
-            <SketchExport key={name} type="symbol" name={name}>
-              { element }
-            </SketchExport>
+            <SketchExport key={name} type="symbol" name={name} value={element} />
           ))
         }
       </Section>
