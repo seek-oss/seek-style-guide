@@ -7,7 +7,7 @@ import Home from 'Home/Home';
 import PageLayout from 'PageLayout/PageLayout';
 import Typography from 'Typography/Typography';
 import Playground from 'Playground/Playground';
-import Symbols from 'Symbols/Symbols';
+import SketchExports from 'SketchExports/SketchExports';
 import Demo from 'Demo/Demo';
 import demoSpecExports from '../../../../react/*/*.demo.js';
 const demoSpecs = demoSpecExports.map(x => x.default);
@@ -24,7 +24,7 @@ export default () => (
     <Route path="/typography" component={Typography} />
     <Route path="/page-layout" component={PageLayout} />
     <Route path="/playground" component={Playground} />
-    <Route path="/symbols" component={Symbols} />
+    <Route path="/sketch-exports" component={SketchExports} />
     { demoRoutes }
     <Footer />
   </StyleGuideProvider>

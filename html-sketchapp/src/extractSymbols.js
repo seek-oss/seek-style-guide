@@ -11,7 +11,7 @@ let server;
 
 const extractSymbols = bluebird.method(async() => {
   const port = await getPort();
-  const symbolsUrl = `http://localhost:${String(port)}/symbols`;
+  const symbolsUrl = `http://localhost:${String(port)}/sketch-exports`;
 
   const docsPath = path.resolve(__dirname, '../../docs/dist');
   server = serve(docsPath, { port, silent: true });
@@ -28,12 +28,19 @@ const extractSymbols = bluebird.method(async() => {
   await page.addScriptTag({ content: bundle });
 
   const asketchPageJSON = await page.evaluate('styleguide2asketch.getASketchPage()');
+  const asketchDocumentJSON = await page.evaluate('styleguide2asketch.getASketchDocument()');
 
-  const outputPagePath = path.join(__dirname, '../../dist/asketch/page.asketch.json');
-  await mkdirp(path.dirname(outputPagePath));
-  await fs.writeFileAsync(outputPagePath, JSON.stringify(asketchPageJSON));
+  const outputPath = path.join(__dirname, '../../dist/asketch');
+  const outputPagePath = path.join(outputPath, 'page.asketch.json');
+  const outputDocumentPath = path.join(outputPath, 'document.asketch.json');
 
-  console.log('💎 Successfully extracted Sketch symbols.');
+  await mkdirp(outputPath);
+  await Promise.all([
+    fs.writeFileAsync(outputPagePath, JSON.stringify(asketchPageJSON)),
+    fs.writeFileAsync(outputDocumentPath, JSON.stringify(asketchDocumentJSON))
+  ]);
+
+  console.log('💎 Successfully extracted Sketch symbols and document styles.');
 
   browser.close();
 });

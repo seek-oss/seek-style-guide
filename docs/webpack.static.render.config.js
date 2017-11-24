@@ -97,7 +97,7 @@ const config = {
       paths: [
         '/',
         // Currently unreachable by crawler:
-        '/symbols',
+        '/sketch-exports',
         '/playground'
       ],
       locals: { template }
