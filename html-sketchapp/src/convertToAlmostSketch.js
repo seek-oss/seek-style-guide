@@ -5,9 +5,9 @@ import SymbolMaster from 'html-sketchapp/html2asketch/symbolMaster.js';
 import nodeToSketchLayers from 'html-sketchapp/html2asketch/nodeToSketchLayers.js';
 
 const getAllLayers = async item => {
-  const parentAndChildren = [item, ...item.querySelectorAll('*')];
+  const itemAndChildren = [item, ...item.querySelectorAll('*')];
 
-  const layerPromises = Array.from(parentAndChildren)
+  const layerPromises = Array.from(itemAndChildren)
     .map(async node => await nodeToSketchLayers(node));
 
   const layers = await Promise.all(layerPromises);

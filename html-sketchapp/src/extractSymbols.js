@@ -23,12 +23,12 @@ const extractSymbols = bluebird.method(async() => {
   await page.setViewport({ width: 1024, height: 768 });
   await page.goto(symbolsUrl, { waitUntil: 'networkidle0' });
 
-  const bundlePath = path.resolve(__dirname, '../dist/styleguide2asketch.bundle.js');
+  const bundlePath = path.resolve(__dirname, '../dist/convertToAlmostSketch.bundle.js');
   const bundle = await fs.readFileAsync(bundlePath, 'utf8');
   await page.addScriptTag({ content: bundle });
 
-  const asketchPageJSON = await page.evaluate('styleguide2asketch.getASketchPage()');
-  const asketchDocumentJSON = await page.evaluate('styleguide2asketch.getASketchDocument()');
+  const asketchPageJSON = await page.evaluate('convertToAlmostSketch.getASketchPage()');
+  const asketchDocumentJSON = await page.evaluate('convertToAlmostSketch.getASketchDocument()');
 
   const outputPath = path.join(__dirname, '../../dist/asketch');
   const outputPagePath = path.join(outputPath, 'page.asketch.json');
