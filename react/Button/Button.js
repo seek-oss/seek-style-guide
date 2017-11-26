@@ -11,7 +11,7 @@ export default class Button extends Component {
 
   static propTypes = {
     color: PropTypes.oneOf([
-      'pink', 'blue', 'gray', 'transparent'
+      'pink', 'blue', 'gray', 'transparent', 'white'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
