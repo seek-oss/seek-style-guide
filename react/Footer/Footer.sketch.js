@@ -11,6 +11,6 @@ DummyLinkRenderer.propTypes = {
 };
 
 export const blockSymbols = {
-  'Footer/AU': <Footer linkRenderer={DummyLinkRenderer} />,
-  'Footer/NZ': <Footer locale="NZ" linkRenderer={DummyLinkRenderer} />
+  'Footer/Australia': <Footer linkRenderer={DummyLinkRenderer} />,
+  'Footer/New Zealand': <Footer locale="NZ" linkRenderer={DummyLinkRenderer} />
 };
