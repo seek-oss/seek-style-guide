@@ -14,6 +14,7 @@ const colors = Object.assign(...colorsExports.map(x => x.colors || {}));
 
 import componentExports from '../../../../react/*/*.sketch.js';
 const textComponents = Object.assign(...componentExports.map(x => x.text || {}));
+const blockSymbolComponents = Object.assign(...componentExports.map(x => x.blockSymbols || {}));
 const symbolComponents = Object.assign(...componentExports.map(x => x.symbols || {}));
 
 const SketchExport = ({ type, name, value }) => (
@@ -44,7 +45,7 @@ const isElementHidden = el => {
 
   return (
     (style.position === 'absolute' && style.opacity === '0') ||
-    style.clip === 'rect(1px, 1px, 1px, 1px)' // From ScreenReaderOnly.less
+    style.clip === 'rect(1px 1px 1px 1px)' // From ScreenReaderOnly.less
   );
 };
 
@@ -68,6 +69,11 @@ export default class SketchExports extends Component {
       // Ensure cascading colours are transferred onto the SVG itself
       svg.setAttribute('fill', style.fill);
       svg.setAttribute('stroke', style.stroke);
+      Array.from(svg.querySelectorAll('path')).forEach(path => {
+        const pathStyle = window.getComputedStyle(path);
+        path.setAttribute('fill', pathStyle.fill);
+        path.setAttribute('stroke', pathStyle.stroke);
+      });
 
       // Quadruple the SVG's size so we can maintain quality
       const scale = 4;
@@ -146,6 +152,16 @@ export default class SketchExports extends Component {
             }
           </Section>
         </PageBlock>
+        <PageBlock>
+          <Section header>
+            <Text headline>Block Symbols</Text>
+          </Section>
+        </PageBlock>
+        {
+          map(blockSymbolComponents, (element, name) => (
+            <SketchExport key={name} type="symbol" name={name} value={element} />
+          ))
+        }
       </div>
     );
   }
