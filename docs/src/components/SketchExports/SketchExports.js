@@ -53,7 +53,34 @@ const fixSketchRendering = rootEl => {
   // Require canvg dynamically because it can't run in a Node context
   const canvg = require('canvg-fixed');
 
-  // Total hack to remove visually-hidden elements that html-sketchapp erroneously renders
+  // Total hack until html-sketchapp supports before and after pseudo elements
+  // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/20
+  Array.from(rootEl.querySelectorAll('*')).forEach(el => {
+    const elementBeforeStyles = window.getComputedStyle(el, ':before');
+    const elementAfterStyles = window.getComputedStyle(el, ':after');
+    const elementBeforeContent = elementBeforeStyles.content;
+    const elementAfterContent = elementAfterStyles.content;
+
+    if (elementBeforeContent) {
+      const virtualBefore = document.createElement('span');
+
+      virtualBefore.setAttribute('style', elementBeforeStyles.cssText);
+      virtualBefore.innerHTML = elementBeforeStyles.content.split('"').join('');
+      el.classList.add(styles.beforeReset);
+      el.prepend(virtualBefore);
+    }
+
+    if (elementAfterContent) {
+      const virtualAfter = document.createElement('span');
+
+      virtualAfter.setAttribute('style', elementAfterStyles.cssText);
+      virtualAfter.innerHTML = elementAfterStyles.content.split('"').join('');
+      el.classList.add(styles.afterReset);
+      el.appendChild(virtualAfter);
+    }
+  });
+
+  // Another hack to remove visually-hidden elements that html-sketchapp erroneously renders
   Array.from(rootEl.querySelectorAll('*')).forEach(el => {
     // Don't remove fake checkboxes or it breaks our styling
     // Plus, Sketch doesn't seem to render them, anyway
@@ -66,7 +93,7 @@ const fixSketchRendering = rootEl => {
     }
   });
 
-  // Another total hack until html-sketchapp supports SVG
+  // Another hack until html-sketchapp supports SVG
   // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/4
   Array.from(rootEl.querySelectorAll('svg')).forEach(svg => {
     const style = window.getComputedStyle(svg);

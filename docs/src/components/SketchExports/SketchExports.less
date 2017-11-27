@@ -1,5 +1,10 @@
 @import (reference) "~seek-style-guide/theme";
 
+.beforeReset::before,
+.afterReset::after {
+  content: none !important;
+}
+
 .text {
   margin-bottom: @grid-row-height;
 }
