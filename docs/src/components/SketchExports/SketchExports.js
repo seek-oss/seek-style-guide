@@ -91,8 +91,8 @@ const fixSketchRendering = rootEl => {
     const img = new Image();
     img.src = canvas.toDataURL();
     img.classList = svg.classList;
-    img.style.width = width / scale;
-    img.style.height = height / scale;
+    img.style.width = `${width / scale}px`;
+    img.style.height = `${height / scale}px`;
     svg.parentNode.replaceChild(img, svg);
   });
 };

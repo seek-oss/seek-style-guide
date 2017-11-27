@@ -6,6 +6,12 @@
 
 .symbol {
   margin-bottom: @grid-row-height * 3;
+
+  // Disable CSS transitions and animations while taking snapshots
+  * {
+    transition: none !important;
+    animation-name: unset !important;
+  }
 }
 
 .name {

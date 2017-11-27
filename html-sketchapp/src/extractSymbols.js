@@ -9,8 +9,13 @@ const path = require('path');
 
 // Config:
 const scope = 'SEEK Style Guide';
-const viewports = [
+const textViewports = [
   { name: 'Desktop', width: 1024, height: 768 },
+  { name: 'Mobile', width: 320, height: 568 }
+];
+const symbolViewports = [
+  { name: 'Desktop', width: 1024, height: 768 },
+  { name: 'Mobile Plus', width: 414, height: 736 },
   { name: 'Mobile', width: 320, height: 568 }
 ];
 
@@ -38,10 +43,14 @@ const extractSymbols = bluebird.method(async() => {
 
   await page.evaluate('convertToAlmostSketch.snapshotColorStyles()');
 
-  for (const viewport of viewports) {
-    await page.setViewport({ width: viewport.width, height: viewport.height });
-    await page.evaluate(`convertToAlmostSketch.snapshotTextStyles({ prefix: "${scope}/", suffix: "/${viewport.name}" })`);
-    await page.evaluate(`convertToAlmostSketch.snapshotSymbols({ prefix: "${scope}/", suffix: "/${viewport.name}" })`);
+  for (const textViewport of textViewports) {
+    await page.setViewport({ width: textViewport.width, height: textViewport.height });
+    await page.evaluate(`convertToAlmostSketch.snapshotTextStyles({ prefix: "${scope}/", suffix: "/${textViewport.name}" })`);
+  }
+
+  for (const symbolViewport of symbolViewports) {
+    await page.setViewport({ width: symbolViewport.width, height: symbolViewport.height });
+    await page.evaluate(`convertToAlmostSketch.snapshotSymbols({ prefix: "${scope}/", suffix: "/${symbolViewport.name}" })`);
   }
 
   const asketchStylesJSON = await page.evaluate('convertToAlmostSketch.getStylesJSON()');
