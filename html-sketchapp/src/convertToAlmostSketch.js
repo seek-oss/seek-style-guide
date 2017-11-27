@@ -15,16 +15,22 @@ const getAllLayers = async item => {
   return layers.reduce((prev, current) => prev.concat(current), []);
 };
 
-export async function getASketchStyles() {
-  const doc = new Document();
+let doc;
 
+export function setupStyles() {
+  doc = new Document();
+}
+
+export function snapshotColorStyles() {
   Array.from(document.querySelectorAll('[data-sketch-color]'))
     .forEach(item => {
       const color = item.dataset.sketchColor;
 
       doc.addColor(color);
     });
+}
 
+export async function snapshotTextStyles({ prefix = '', suffix = '' }) {
   await Array.from(document.querySelectorAll('[data-sketch-text]'))
     .forEach(async item => {
       const layers = await getAllLayers(item);
@@ -32,31 +38,38 @@ export async function getASketchStyles() {
       layers.reduce((prev, current) => prev.concat(current), [])
         .filter(layer => layer instanceof Text)
         .forEach(layer => {
-          const styleName = item.dataset.sketchText;
+          const name = item.dataset.sketchText;
 
-          layer.setName(styleName);
+          layer.setName(`${prefix}${name}${suffix}`);
           doc.addTextStyle(layer);
         });
     });
+}
 
+export function getStylesJSON() {
   return doc.toJSON();
 }
 
-export async function getASketchSymbols() {
-  const page = new Page({
+let page;
+
+export function setupSymbols({ name }) {
+  page = new Page({
     width: document.body.offsetWidth,
     height: document.body.offsetHeight
   });
 
-  page.setName('SEEK Style Guide Symbols');
+  page.setName(name);
+}
 
+export async function snapshotSymbols({ prefix = '', suffix = '' }) {
+  document.dispatchEvent(new Event('onHtmlSketchappSnapshotSymbols'));
   const symbolPromises = Array.from(document.querySelectorAll('[data-sketch-symbol]'))
     .map(async item => {
       const name = item.dataset.sketchSymbol;
       const { left: x, top: y } = item.getBoundingClientRect();
       const symbol = new SymbolMaster({ x, y });
 
-      symbol.setName(name);
+      symbol.setName(`${prefix}${name}${suffix}`);
 
       const layers = await getAllLayers(item);
 
@@ -70,6 +83,8 @@ export async function getASketchSymbols() {
   const symbols = await Promise.all(symbolPromises);
 
   symbols.forEach(obj => page.addLayer(obj));
+}
 
+export function getSymbolsJSON() {
   return page.toJSON();
 }

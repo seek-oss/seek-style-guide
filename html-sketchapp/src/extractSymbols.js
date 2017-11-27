@@ -7,6 +7,13 @@ const mkdirp = bluebird.promisify(require('mkdirp'));
 const fs = bluebird.promisifyAll(require('fs'));
 const path = require('path');
 
+// Config:
+const scope = 'SEEK Style Guide';
+const viewports = [
+  { name: 'Desktop', width: 1024, height: 768 },
+  { name: 'Mobile', width: 320, height: 568 }
+];
+
 let server;
 
 const extractSymbols = bluebird.method(async() => {
@@ -20,15 +27,25 @@ const extractSymbols = bluebird.method(async() => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  await page.setViewport({ width: 1024, height: 768 });
   await page.goto(symbolsUrl, { waitUntil: 'networkidle0' });
 
   const bundlePath = path.resolve(__dirname, '../dist/convertToAlmostSketch.bundle.js');
   const bundle = await fs.readFileAsync(bundlePath, 'utf8');
   await page.addScriptTag({ content: bundle });
 
-  const asketchSymbolsJSON = await page.evaluate('convertToAlmostSketch.getASketchSymbols()');
-  const asketchStylesJSON = await page.evaluate('convertToAlmostSketch.getASketchStyles()');
+  await page.evaluate('convertToAlmostSketch.setupStyles()');
+  await page.evaluate(`convertToAlmostSketch.setupSymbols({ name: ${JSON.stringify(`${scope} Symbols`)} })`);
+
+  await page.evaluate('convertToAlmostSketch.snapshotColorStyles()');
+
+  for (const viewport of viewports) {
+    await page.setViewport({ width: viewport.width, height: viewport.height });
+    await page.evaluate(`convertToAlmostSketch.snapshotTextStyles({ prefix: "${scope}/", suffix: "/${viewport.name}" })`);
+    await page.evaluate(`convertToAlmostSketch.snapshotSymbols({ prefix: "${scope}/", suffix: "/${viewport.name}" })`);
+  }
+
+  const asketchStylesJSON = await page.evaluate('convertToAlmostSketch.getStylesJSON()');
+  const asketchSymbolsJSON = await page.evaluate('convertToAlmostSketch.getSymbolsJSON()');
 
   const outputPath = path.join(__dirname, '../../dist/asketch');
   const outputSymbolsPath = path.join(outputPath, 'symbols.asketch.json');

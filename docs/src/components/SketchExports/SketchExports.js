@@ -28,7 +28,7 @@ const SketchExport = ({ type, name, value }) => (
     }
     <div
       className={styles.value}
-      {...{ [`data-sketch-${type}`]: type === 'color' ? value : `SEEK Style Guide/${name}` }}
+      {...{ [`data-sketch-${type}`]: type === 'color' ? value : name }}
       {...(type !== 'color' ? {} : { style: { background: value } })}>
       { typeof value === 'string' ? null : value }
     </div>
@@ -49,53 +49,75 @@ const isElementHidden = el => {
   );
 };
 
+const fixSketchRendering = rootEl => {
+  // Require canvg dynamically because it can't run in a Node context
+  const canvg = require('canvg-fixed');
+
+  // Total hack to remove visually-hidden elements that html-sketchapp erroneously renders
+  Array.from(rootEl.querySelectorAll('*')).forEach(el => {
+    if (isElementHidden(el)) {
+      el.parentNode.removeChild(el);
+    }
+  });
+
+  // Another total hack until html-sketchapp supports SVG
+  // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/4
+  Array.from(rootEl.querySelectorAll('svg')).forEach(svg => {
+    const style = window.getComputedStyle(svg);
+
+    // Ensure cascading colours are transferred onto the SVG itself
+    svg.setAttribute('fill', style.fill);
+    svg.setAttribute('stroke', style.stroke);
+    Array.from(svg.querySelectorAll('path')).forEach(path => {
+      const pathStyle = window.getComputedStyle(path);
+      path.setAttribute('fill', pathStyle.fill);
+      path.setAttribute('stroke', pathStyle.stroke);
+    });
+
+    // Quadruple the SVG's size so we can maintain quality
+    const scale = 4;
+    const width = parseInt(style.width, 10) * scale;
+    const height = parseInt(style.height, 10) * scale;
+    svg.style.width = `${width}px`;
+    svg.style.height = `${height}px`;
+
+    // Parse SVG to canvas
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    canvg(canvas, svg.outerHTML);
+
+    // Replace original SVG with an image
+    const img = new Image();
+    img.src = canvas.toDataURL();
+    img.classList = svg.classList;
+    img.style.width = width / scale;
+    img.style.height = height / scale;
+    svg.parentNode.replaceChild(img, svg);
+  });
+};
+
 export default class SketchExports extends Component {
+  constructor() {
+    super();
+    this.state = { mountIndex: 0 };
+  }
+
   componentDidMount() {
-    // Require canvg dynamically because it can't run in a Node context
-    const canvg = require('canvg-fixed');
+    fixSketchRendering(this.el);
 
-    // Total hack to remove visually-hidden elements that html-sketchapp erroneously renders
-    Array.from(this.el.querySelectorAll('*')).forEach(el => {
-      if (isElementHidden(el)) {
-        el.parentNode.removeChild(el);
-      }
+    // Force re-render so Sketch rendering is fixed for different viewport sizes
+    document.addEventListener('onHtmlSketchappSnapshotSymbols', () => {
+      this.setState(state => ({ mountIndex: state.mountIndex + 1 }));
     });
+  }
 
-    // Another total hack until html-sketchapp supports SVG
-    // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/4
-    Array.from(this.el.querySelectorAll('svg')).forEach(svg => {
-      const style = window.getComputedStyle(svg);
+  componentDidUpdate() {
+    fixSketchRendering(this.el);
+  }
 
-      // Ensure cascading colours are transferred onto the SVG itself
-      svg.setAttribute('fill', style.fill);
-      svg.setAttribute('stroke', style.stroke);
-      Array.from(svg.querySelectorAll('path')).forEach(path => {
-        const pathStyle = window.getComputedStyle(path);
-        path.setAttribute('fill', pathStyle.fill);
-        path.setAttribute('stroke', pathStyle.stroke);
-      });
-
-      // Quadruple the SVG's size so we can maintain quality
-      const scale = 4;
-      const width = parseInt(style.width, 10) * scale;
-      const height = parseInt(style.height, 10) * scale;
-      svg.style.width = `${width}px`;
-      svg.style.height = `${height}px`;
-
-      // Parse SVG to canvas
-      const canvas = document.createElement('canvas');
-      canvas.width = width;
-      canvas.height = height;
-      canvg(canvas, svg.outerHTML);
-
-      // Replace original SVG with an image
-      const img = new Image();
-      img.src = canvas.toDataURL();
-      img.classList = svg.classList;
-      img.style.width = width / scale;
-      img.style.height = height / scale;
-      svg.parentNode.replaceChild(img, svg);
-    });
+  componentWillUnmount() {
+    document.removeEventListener('onHtmlSketchappSnapshotSymbols');
   }
 
   storeRef = el => {
@@ -104,7 +126,7 @@ export default class SketchExports extends Component {
 
   render() {
     return (
-      <div ref={this.storeRef}>
+      <div key={this.state.mountIndex} ref={this.storeRef}>
         <PageBlock>
           <Section header>
             <Text hero>Sketch Exports</Text>
