@@ -55,6 +55,12 @@ const fixSketchRendering = rootEl => {
 
   // Total hack to remove visually-hidden elements that html-sketchapp erroneously renders
   Array.from(rootEl.querySelectorAll('*')).forEach(el => {
+    // Don't remove fake checkboxes or it breaks our styling
+    // Plus, Sketch doesn't seem to render them, anyway
+    if (el.nodeName === 'INPUT' && el.type === 'checkbox') {
+      return;
+    }
+
     if (isElementHidden(el)) {
       el.parentNode.removeChild(el);
     }
