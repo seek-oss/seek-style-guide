@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 export const symbols = {
-  'Button/pink': <Button color="pink">Button</Button>,
-  'Button/blue': <Button color="blue">Button</Button>,
-  'Button/transparent': <Button color="transparent">Button</Button>
+  'Button/Pink': <Button color="pink">Button</Button>,
+  'Button/Blue': <Button color="blue">Button</Button>,
+  'Button/Transparent': <Button color="transparent">Button</Button>
 };
