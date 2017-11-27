@@ -74,6 +74,7 @@
     "babel-preset-react": "^6.24.1",
     "bluebird": "^3.5.1",
     "browserslist-config-seek": "^1.0.0",
+    "canvg-fixed": "^1.0.0",
     "chai": "^4.1.2",
     "chalk": "^2.1.0",
     "commitizen": "^2.9.6",

@@ -47,6 +47,7 @@ const config = {
       {
         test: /\.js$/,
         include: /node_modules/,
+        exclude: /canvg-fixed/,
         use: {
           loader: 'babel-loader',
           options: {
