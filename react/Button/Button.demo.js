@@ -50,6 +50,13 @@ export default {
             ...props,
             fullWidth: true
           })
+        },
+        {
+          label: 'Ghost',
+          transformProps: props => ({
+            ...props,
+            ghost: true
+          })
         }
       ]
     },
@@ -90,6 +97,13 @@ export default {
           transformProps: props => ({
             ...props,
             color: 'pink'
+          })
+        },
+        {
+          label: 'White',
+          transformProps: props => ({
+            ...props,
+            color: 'white'
           })
         },
         {
