@@ -36,6 +36,15 @@ exports[`Button: color variants: should render transparent button 1`] = `
 </button>
 `;
 
+exports[`Button: color variants: should render white ghost button 1`] = `
+<button
+  className="root root_isGhost root_isWhite"
+  disabled={false}
+>
+  SEEK
+</button>
+`;
+
 exports[`Button: should render as an anchor with href="https://www.seek.com.au" 1`] = `
 <a
   className="root root_isPink"
