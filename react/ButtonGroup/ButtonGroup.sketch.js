@@ -8,6 +8,16 @@ export const symbols = {
       <Button color="pink">Button 1</Button>
     </ButtonGroup>
   ),
+  'Button Group/Pink Ghost': (
+    <ButtonGroup>
+      <Button color="pink" ghost>Button 1</Button>
+    </ButtonGroup>
+  ),
+  'Button Group/Blue Ghost': (
+    <ButtonGroup>
+      <Button color="blue" ghost>Button 1</Button>
+    </ButtonGroup>
+  ),
   'Button Group/Pink + Blue': (
     <ButtonGroup>
       <Button color="pink">Button 1</Button>
