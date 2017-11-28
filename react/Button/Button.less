@@ -104,11 +104,11 @@
 }
 
 .root_isGhost {
-  @border-thickness: 2px;
+  @border-width: 2px;
 
-  border: @border-thickness solid;
+  border: @border-width solid;
   font-weight: @sk-bold;
-  line-height: @touchableTextHeight - 2 * @border-thickness;
+  line-height: @touchableTextHeight - (@border-width * 2);
 }
 
 .root_isBlue.root_isGhost {
