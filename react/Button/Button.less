@@ -106,9 +106,11 @@
 }
 
 .root_isGhost {
-  border: 2px solid;
+  @border-width: 2px;
+
+  border: @border-width solid;
   font-weight: @sk-bold;
-  line-height: normal;
+  line-height: @touchableTextHeight - (@border-width * 2);
 }
 
 .root_isBlue.root_isGhost {
@@ -140,9 +142,11 @@
   color: @sk-link;
   padding-left: 0;
   padding-right: 0;
+
   .hoverState({
     text-decoration: underline;
   });
+
   .activeState({
     transform: none;
   });
