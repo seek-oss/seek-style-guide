@@ -30,7 +30,7 @@ export function snapshotColorStyles() {
     });
 }
 
-export async function snapshotTextStyles({ prefix = '', suffix = '' }) {
+export async function snapshotTextStyles({ suffix = '' }) {
   await Array.from(document.querySelectorAll('[data-sketch-text]'))
     .forEach(async item => {
       const layers = await getAllLayers(item);
@@ -40,7 +40,7 @@ export async function snapshotTextStyles({ prefix = '', suffix = '' }) {
         .forEach(layer => {
           const name = item.dataset.sketchText;
 
-          layer.setName(`${prefix}${name}${suffix}`);
+          layer.setName(`${name}${suffix}`);
           doc.addTextStyle(layer);
         });
     });
@@ -61,7 +61,7 @@ export function setupSymbols({ name }) {
   page.setName(name);
 }
 
-export async function snapshotSymbols({ prefix = '', suffix = '' }) {
+export async function snapshotSymbols({ suffix = '' }) {
   document.dispatchEvent(new Event('onHtmlSketchappSnapshotSymbols'));
 
   const symbolPromises = Array.from(document.querySelectorAll('[data-sketch-symbol]'))
@@ -70,7 +70,7 @@ export async function snapshotSymbols({ prefix = '', suffix = '' }) {
       const { left: x, top: y } = item.getBoundingClientRect();
       const symbol = new SymbolMaster({ x, y });
 
-      symbol.setName(`${prefix}${name}${suffix}`);
+      symbol.setName(`${name}${suffix}`);
 
       const layers = await getAllLayers(item);
 

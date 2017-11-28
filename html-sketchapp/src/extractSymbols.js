@@ -45,12 +45,12 @@ const extractSymbols = bluebird.method(async() => {
 
   for (const textViewport of textViewports) {
     await page.setViewport({ width: textViewport.width, height: textViewport.height });
-    await page.evaluate(`convertToAlmostSketch.snapshotTextStyles({ prefix: "${scope}/", suffix: "/${textViewport.name}" })`);
+    await page.evaluate(`convertToAlmostSketch.snapshotTextStyles({ suffix: "/${textViewport.name}" })`);
   }
 
   for (const symbolViewport of symbolViewports) {
     await page.setViewport({ width: symbolViewport.width, height: symbolViewport.height });
-    await page.evaluate(`convertToAlmostSketch.snapshotSymbols({ prefix: "${scope}/", suffix: "/${symbolViewport.name}" })`);
+    await page.evaluate(`convertToAlmostSketch.snapshotSymbols({ suffix: "/${symbolViewport.name}" })`);
   }
 
   const asketchStylesJSON = await page.evaluate('convertToAlmostSketch.getStylesJSON()');
