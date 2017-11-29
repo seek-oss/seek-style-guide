@@ -60,6 +60,7 @@
 
 .root {
   .touchableText();
+  font-weight: @sk-medium;
   display: inline-block;
   text-decoration: none;
   user-select: none;
@@ -99,14 +100,17 @@
 
 .root_isGhost,
 .root_isTransparent {
+  font-weight: @sk-regular;
   background-color: transparent;
   box-shadow: none;
 }
 
 .root_isGhost {
-  border: 2px solid;
+  @border-width: 2px;
+
+  border: @border-width solid;
   font-weight: @sk-bold;
-  line-height: normal;
+  line-height: @touchableTextHeight - (@border-width * 2);
 }
 
 .root_isBlue.root_isGhost {
@@ -138,9 +142,11 @@
   color: @sk-link;
   padding-left: 0;
   padding-right: 0;
+
   .hoverState({
     text-decoration: underline;
   });
+
   .activeState({
     transform: none;
   });
