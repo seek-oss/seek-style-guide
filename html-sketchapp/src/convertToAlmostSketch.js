@@ -54,7 +54,7 @@ export async function snapshotTextStyles({ suffix = '' }) {
 }
 
 export function getStylesJSON() {
-  return doc.toJSON();
+  return JSON.stringify(doc.toJSON());
 }
 
 let page;
@@ -92,5 +92,5 @@ export async function snapshotSymbols({ suffix = '' }) {
 }
 
 export function getSymbolsJSON() {
-  return page.toJSON();
+  return JSON.stringify(page.toJSON());
 }

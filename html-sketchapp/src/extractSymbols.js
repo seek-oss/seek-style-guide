@@ -53,8 +53,8 @@ const extractSymbols = bluebird.method(async() => {
     await page.evaluate(`convertToAlmostSketch.snapshotSymbols({ suffix: "/${symbolViewport.name}" })`);
   }
 
-  const asketchStylesJSON = await page.evaluate('JSON.stringify(convertToAlmostSketch.getStylesJSON())');
-  const asketchSymbolsJSON = await page.evaluate('JSON.stringify(convertToAlmostSketch.getSymbolsJSON())');
+  const asketchStylesJSON = await page.evaluate('convertToAlmostSketch.getStylesJSON()');
+  const asketchSymbolsJSON = await page.evaluate('convertToAlmostSketch.getSymbolsJSON()');
 
   const outputPath = path.join(__dirname, '../../dist/asketch');
   const outputSymbolsPath = path.join(outputPath, 'symbols.asketch.json');
