@@ -69,8 +69,6 @@ export function setupSymbols({ name }) {
 }
 
 export async function snapshotSymbols({ suffix = '' }) {
-  document.dispatchEvent(new Event('onHtmlSketchappSnapshotSymbols'));
-
   const symbolPromises = Array.from(document.querySelectorAll('[data-sketch-symbol]'))
     .map(async item => {
       const name = item.dataset.sketchSymbol;

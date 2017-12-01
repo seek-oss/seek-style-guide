@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
-
+import fixSketchRendering from './fixSketchRendering/fixSketchRendering';
 import {
   PageBlock,
   Section,
@@ -17,117 +17,44 @@ const textComponents = Object.assign(...componentExports.map(x => x.text || {}))
 const blockSymbolComponents = Object.assign(...componentExports.map(x => x.blockSymbols || {}));
 const symbolComponents = Object.assign(...componentExports.map(x => x.symbols || {}));
 
-const SketchExport = ({ type, name, value }) => (
-  <div className={styles[type] || ''}>
-    {
-      type === 'text' ? null : (
-        <div className={styles.name}>
-          <Text strong>{ name }</Text>
-        </div>
-      )
-    }
-    <div
-      className={styles.value}
-      {...{ [`data-sketch-${type}`]: type === 'color' ? value : name }}
-      {...(type !== 'color' ? {} : { style: { background: value } })}>
-      { typeof value === 'string' ? null : value }
+const SketchText = ({ name, children }) => (
+  <div className={styles.text}>
+    <div data-sketch-text={name}>
+      { children }
     </div>
   </div>
 );
-SketchExport.propTypes = {
-  type: PropTypes.oneOf(['text', 'color', 'symbol']).isRequired,
+SketchText.propTypes = {
   name: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired
+  children: PropTypes.node.isRequired
 };
 
-const isElementHidden = el => {
-  const style = window.getComputedStyle(el);
-
-  return (
-    (style.position === 'absolute' && style.opacity === '0') ||
-    style.clip === 'rect(1px 1px 1px 1px)' // From ScreenReaderOnly.less
-  );
+const SketchColor = ({ name, value }) => (
+  <div className={styles.color}>
+    <div className={styles.name}>
+      <Text strong>{ name }</Text>
+    </div>
+    <div data-sketch-color={value} className={styles.swatch} style={{ background: value }} />
+  </div>
+);
+SketchColor.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired
 };
 
-const fixSketchRendering = rootEl => {
-  // Require canvg dynamically because it can't run in a Node context
-  const canvg = require('canvg-fixed');
-
-  // Total hack until html-sketchapp supports before and after pseudo elements
-  // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/20
-  Array.from(rootEl.querySelectorAll('*')).forEach(el => {
-    const elementBeforeStyles = window.getComputedStyle(el, ':before');
-    const elementAfterStyles = window.getComputedStyle(el, ':after');
-    const elementBeforeContent = elementBeforeStyles.content;
-    const elementAfterContent = elementAfterStyles.content;
-
-    if (elementBeforeContent) {
-      const virtualBefore = document.createElement('span');
-
-      virtualBefore.setAttribute('style', elementBeforeStyles.cssText);
-      virtualBefore.innerHTML = elementBeforeStyles.content.split('"').join('');
-      el.classList.add(styles.beforeReset);
-      el.prepend(virtualBefore);
-    }
-
-    if (elementAfterContent) {
-      const virtualAfter = document.createElement('span');
-
-      virtualAfter.setAttribute('style', elementAfterStyles.cssText);
-      virtualAfter.innerHTML = elementAfterStyles.content.split('"').join('');
-      el.classList.add(styles.afterReset);
-      el.appendChild(virtualAfter);
-    }
-  });
-
-  // Another hack to remove visually-hidden elements that html-sketchapp erroneously renders
-  Array.from(rootEl.querySelectorAll('*')).forEach(el => {
-    // Don't remove fake checkboxes or it breaks our styling
-    // Plus, Sketch doesn't seem to render them, anyway
-    if (el.nodeName === 'INPUT' && el.type === 'checkbox') {
-      return;
-    }
-
-    if (isElementHidden(el)) {
-      el.parentNode.removeChild(el);
-    }
-  });
-
-  // Another hack until html-sketchapp supports SVG
-  // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/4
-  Array.from(rootEl.querySelectorAll('svg')).forEach(svg => {
-    const style = window.getComputedStyle(svg);
-
-    // Ensure cascading colours are transferred onto the SVG itself
-    svg.setAttribute('fill', style.fill);
-    svg.setAttribute('stroke', style.stroke);
-    Array.from(svg.querySelectorAll('path')).forEach(path => {
-      const pathStyle = window.getComputedStyle(path);
-      path.setAttribute('fill', pathStyle.fill);
-      path.setAttribute('stroke', pathStyle.stroke);
-    });
-
-    // Quadruple the SVG's size so we can maintain quality
-    const scale = 4;
-    const width = parseInt(style.width, 10) * scale;
-    const height = parseInt(style.height, 10) * scale;
-    svg.style.width = `${width}px`;
-    svg.style.height = `${height}px`;
-
-    // Parse SVG to canvas
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    canvg(canvas, svg.outerHTML);
-
-    // Replace original SVG with an image
-    const img = new Image();
-    img.src = canvas.toDataURL();
-    img.classList = svg.classList;
-    img.style.width = `${width / scale}px`;
-    img.style.height = `${height / scale}px`;
-    svg.parentNode.replaceChild(img, svg);
-  });
+const SketchSymbol = ({ name, children }) => (
+  <div className={styles.symbol}>
+    <div className={styles.name}>
+      <Text strong>{ name }</Text>
+    </div>
+    <div data-sketch-symbol={name}>
+      { children }
+    </div>
+  </div>
+);
+SketchSymbol.propTypes = {
+  name: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default class SketchExports extends Component {
@@ -139,10 +66,8 @@ export default class SketchExports extends Component {
   componentDidMount() {
     fixSketchRendering(this.el);
 
-    // Force re-render so Sketch rendering is fixed for different viewport sizes
-    document.addEventListener('onHtmlSketchappSnapshotSymbols', () => {
-      this.setState(state => ({ mountIndex: state.mountIndex + 1 }));
-    });
+    // Force re-render so 'fixSketchRendering' runs from a blank slate for every viewport size
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentDidUpdate() {
@@ -150,8 +75,12 @@ export default class SketchExports extends Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('onHtmlSketchappSnapshotSymbols');
+    document.removeEventListener('resize', this.handleResize);
   }
+
+  handleResize = () => {
+    this.setState(state => ({ mountIndex: state.mountIndex + 1 }));
+  };
 
   storeRef = el => {
     this.el = el;
@@ -172,7 +101,7 @@ export default class SketchExports extends Component {
           <Section>
             {
               map(textComponents, (element, name) => (
-                <SketchExport key={name} type="text" name={name} value={element} />
+                <SketchText key={name} name={name}>{ element }</SketchText>
               ))
             }
           </Section>
@@ -187,7 +116,7 @@ export default class SketchExports extends Component {
             <div className={styles.colors}>
               {
                 map(colors, (color, name) => (
-                  <SketchExport key={name} type="color" name={name} value={color} />
+                  <SketchColor key={name} name={name} value={color} />
                 ))
               }
             </div>
@@ -202,7 +131,9 @@ export default class SketchExports extends Component {
           <Section>
             {
               map(symbolComponents, (element, name) => (
-                <SketchExport key={name} type="symbol" name={name} value={element} />
+                <SketchSymbol key={name} name={name}>
+                  { element }
+                </SketchSymbol>
               ))
             }
           </Section>
@@ -214,7 +145,9 @@ export default class SketchExports extends Component {
         </PageBlock>
         {
           map(blockSymbolComponents, (element, name) => (
-            <SketchExport key={name} type="symbol" name={name} value={element} />
+            <SketchSymbol key={name} name={name}>
+              { element }
+            </SketchSymbol>
           ))
         }
       </div>
