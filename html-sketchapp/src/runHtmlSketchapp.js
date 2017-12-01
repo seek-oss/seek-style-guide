@@ -21,7 +21,7 @@ const symbolViewports = [
 
 let server;
 
-const extractSymbols = bluebird.method(async() => {
+const runHtmlSketchapp = bluebird.method(async() => {
   const port = await getPort();
   const symbolsUrl = `http://localhost:${String(port)}/sketch-exports`;
 
@@ -71,7 +71,7 @@ const extractSymbols = bluebird.method(async() => {
   browser.close();
 });
 
-extractSymbols().finally(() => {
+runHtmlSketchapp().finally(() => {
   if (server) {
     server.stop();
   }

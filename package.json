@@ -9,7 +9,7 @@
   "scripts": {
     "start": "BASE_HREF=/ node docs/server",
     "start-header-footer": "webpack-dev-server --config standalone/header-footer/webpack.config.js --content-base dist",
-    "test": "npm run test-unit && npm run lint && npm run build && npm run extract-sketch-symbols",
+    "test": "npm run test-unit && npm run lint && npm run build && npm run html-sketchapp",
     "test-unit": "BABEL_ENV=test jest --config ./jest.config.json",
     "update-snapshot": "npm run test-unit -- --updateSnapshot",
     "lint": "npm run lint-js && npm run lint-less",
@@ -20,7 +20,7 @@
     "compile-render": "NODE_ENV=production BASE_HREF=${BASE_HREF:-/} webpack --config docs/webpack.static.render.config.js && rm docs/dist/render.js",
     "compile-client": "NODE_ENV=production BASE_HREF=${BASE_HREF:-/} webpack --config docs/webpack.static.client.config.js",
     "compile-header-footer": "NODE_ENV=production webpack --config standalone/header-footer/webpack.config.js",
-    "extract-sketch-symbols": "webpack --config html-sketchapp/src/webpack.config.js && node html-sketchapp/src/extractSymbols.js",
+    "html-sketchapp": "webpack --config html-sketchapp/src/webpack.config.js && node html-sketchapp/src/runHtmlSketchapp.js",
     "build": "npm run clean && npm run compile",
     "build-gh-pages": "BASE_HREF=/seek-style-guide/ npm run build",
     "deploy-gh-pages": "node scripts/deploy-gh-pages.js",
