@@ -95,7 +95,7 @@
     "gh-pages": "^1.0.0",
     "glob": "^7.1.2",
     "hex-rgb": "^1.0.0",
-    "html-sketchapp": "github:brainly/html-sketchapp#713621317553f1a560b928a82e800ec98ff16139",
+    "html-sketchapp": "github:brainly/html-sketchapp#9091cae599565ca1241b064884eef9c5daeef200",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",

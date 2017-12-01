@@ -8,7 +8,14 @@ const getAllLayers = async item => {
   const itemAndChildren = [item, ...item.querySelectorAll('*')];
 
   const layerPromises = Array.from(itemAndChildren)
-    .map(async node => await nodeToSketchLayers(node));
+    .map(async node => {
+      // Workaround until this PR is merged: https://github.com/brainly/html-sketchapp/pull/33
+      if (node.offsetParent === null) {
+        return [];
+      }
+
+      return await nodeToSketchLayers(node);
+    });
 
   const layers = await Promise.all(layerPromises);
 
