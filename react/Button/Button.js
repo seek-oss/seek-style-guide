@@ -48,7 +48,7 @@ export default class Button extends Component {
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
         [styles.fullWidth]: fullWidth,
-        [styles.root_isGhost]: ghost,
+        [styles.root_isGhost]: ghost && color !== 'transparent',
         [styles[`root_is${capitalize(color)}`]]: color
       }),
       disabled: loading,
