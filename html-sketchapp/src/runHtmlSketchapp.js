@@ -37,7 +37,6 @@ const symbolViewports = [
     const bundle = await fs.readFileAsync(bundlePath, 'utf8');
     await page.addScriptTag({ content: bundle });
 
-    await page.evaluate('convertToAlmostSketch.setupStyles()');
     await page.evaluate(`convertToAlmostSketch.setupSymbols({ name: ${JSON.stringify(`${scope} Symbols`)} })`);
 
     await page.evaluate('convertToAlmostSketch.snapshotColorStyles()');

@@ -22,11 +22,7 @@ const getAllLayers = async item => {
   return layers.reduce((prev, current) => prev.concat(current), []);
 };
 
-let doc;
-
-export function setupStyles() {
-  doc = new Document();
-}
+const doc = new Document();
 
 export function snapshotColorStyles() {
   Array.from(document.querySelectorAll('[data-sketch-color]'))
@@ -57,14 +53,12 @@ export function getStylesJSON() {
   return JSON.stringify(doc.toJSON());
 }
 
-let page;
+const page = new Page({
+  width: document.body.offsetWidth,
+  height: document.body.offsetHeight
+});
 
 export function setupSymbols({ name }) {
-  page = new Page({
-    width: document.body.offsetWidth,
-    height: document.body.offsetHeight
-  });
-
   page.setName(name);
 }
 
