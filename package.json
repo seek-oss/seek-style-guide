@@ -84,16 +84,13 @@
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
     "enzyme-to-json": "^3.1.2",
-    "es6-promisify": "^5.0.0",
     "eslint": "^4.8.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-jest": "^21.2.0",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.1",
-    "extract-zip": "^1.6.5",
     "get-port": "^3.2.0",
     "gh-pages": "^1.0.0",
-    "glob": "^7.1.2",
     "hex-rgb": "^1.0.0",
     "html-sketchapp": "github:brainly/html-sketchapp#9091cae599565ca1241b064884eef9c5daeef200",
     "html-webpack-plugin": "^2.30.1",
@@ -125,8 +122,6 @@
     "react-router-dom": "^4.2.2",
     "react-shallow-testutils": "^3.0.0",
     "react-test-renderer": "^16.0.0",
-    "rewrite-files": "^1.0.1",
-    "rimraf": "^2.6.2",
     "seek-style-guide-webpack": "^2.1.1",
     "semantic-release": "^8.1.2",
     "serve": "^6.4.1",
@@ -144,7 +139,6 @@
     "validate-commit-msg": "^2.14.0",
     "wait-on": "^2.0.2",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1",
-    "zip-folder": "^1.0.0"
+    "webpack-dev-server": "^2.9.1"
   }
 }
