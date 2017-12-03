@@ -1,15 +1,12 @@
-import styles from './UserAccount.less';
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ScrollLock from 'react-scrolllock';
-
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
-
 import smallDeviceOnly from '../../private/smallDeviceOnly';
+import styles from './UserAccount.less';
 
 const calculateMobileMenuLabel = (authenticationStatus, userName) => {
   if (authenticationStatus === AUTH_PENDING) {
