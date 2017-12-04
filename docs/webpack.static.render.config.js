@@ -11,6 +11,19 @@ const failPlugin = require('webpack-fail-plugin');
 const templatePath = path.resolve(__dirname, 'index.ejs');
 const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8')); // eslint-disable-line no-sync
 
+var jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const exposedProperties = ['window', 'navigator', 'document'];
+const { document } = (new JSDOM('')).window;
+global.document = document;
+global.window = document.defaultView;
+Object.keys(document.defaultView).forEach(prop => {
+  if (typeof global[prop] === 'undefined') {
+    exposedProperties.push(prop);
+    global[prop] = document.defaultView[prop];
+  }
+});
+
 // Must be absolute paths
 const appPaths = [
   path.resolve(__dirname, 'src'),
