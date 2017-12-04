@@ -17,7 +17,7 @@ const defaultPageTitle = 'SEEK Asia';
 
 const getLocalisedPageTitle = (country, language, tenant) => {
   const brandLocalization = tenant === 'jobStreet' ? jobStreetLocalization : jobsDBLocalization;
-  const localeCode = language + '-' + country;
+  const localeCode = `${language}-${country}`;
 
   if (brandLocalization && brandLocalization[localeCode]) {
     return brandLocalization[localeCode]['meta.title'];
@@ -57,7 +57,8 @@ StyleGuideProvider.propTypes = {
   meta: PropTypes.array,
   link: PropTypes.array,
   country: PropTypes.string,
-  language: PropTypes.string
+  language: PropTypes.string,
+  tenant: PropTypes.string
 };
 
 StyleGuideProvider.defaultProps = {
