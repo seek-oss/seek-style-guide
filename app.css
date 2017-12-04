@@ -664,3 +664,50 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   height: 2px;
   background-color: #212121;
 }
+.fixSketchRendering__beforeReset___GlFUD::before,
+.fixSketchRendering__afterReset___JY7ym::after {
+  content: none !important;
+}
+.SketchExports__text___2pkge {
+  margin-bottom: 9px;
+}
+.SketchExports__symbol___2iIQv {
+  margin-bottom: 27px;
+}
+.SketchExports__symbol___2iIQv * {
+  -webkit-transition: none !important;
+  transition: none !important;
+  -webkit-animation-name: SketchExports__unset___1Locq !important;
+          animation-name: SketchExports__unset___1Locq !important;
+}
+.SketchExports__name___3iJFs {
+  margin-bottom: 9px;
+}
+@media only screen and (max-width: 739px) {
+  .SketchExports__color___19irP {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 740px) {
+  .SketchExports__color___19irP {
+    padding-right: 20px;
+    width: 25%;
+  }
+}
+.SketchExports__colors___D8nIJ {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.SketchExports__swatch___1mdSl {
+  width: 100%;
+  border-radius: 3px;
+  height: 81px;
+  margin-bottom: 18px;
+}
