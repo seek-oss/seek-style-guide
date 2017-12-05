@@ -26,7 +26,9 @@ export default {
     authenticationStatus: 'authenticated',
     user: {},
     linkRenderer: makeDummyLinkRendererForPath(ROUTE),
-    returnUrl: '/jobs'
+    returnUrl: '/jobs',
+    language: 'en',
+    country: 'my'
   },
   options: [
     {
