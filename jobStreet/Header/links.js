@@ -1,6 +1,4 @@
-const isObject = obj => obj !== null
-    && !Array.isArray(obj)
-    && obj === Object(obj);
+const isObject = obj => obj !== null && !Array.isArray(obj) && obj === Object(obj);
 
 const navLinks = [
     {
@@ -18,13 +16,6 @@ const navLinks = [
         childLinks: [],
     },
     {
-        href: 'shell.navProfilesLink',
-        title: 'shell.navProfilesTitle',
-        text: 'Company Profiles',
-        hasIcon: false,
-        childLinks: [],
-    },
-    {
         href: 'shell.navMyCompanyLink',
         title: 'shell.navMyCompanyTitle',
         text: 'MyJobStreet',
@@ -32,10 +23,24 @@ const navLinks = [
         childLinks: [],
     },
     {
-        href: 'shell.navFriendsLink',
-        title: 'shell.navFriendsTitle',
-        text: 'Friends',
-        hasIcon: true,
+        href: 'shell.navProfilesLink',
+        title: 'shell.navProfilesTitle',
+        text: 'Company Profiles',
+        hasIcon: false,
+        childLinks: [],
+    },
+    {
+        href: 'shell.navCareerInsightsLink',
+        title: 'shell.navCareerInsightsTitle',
+        text: 'Career Insights',
+        hasIcon: false,
+        childLinks: [],
+    },
+    {
+        href: 'shell.navJobStreetEducationLink',
+        title: 'shell.navJobStretEducationTitle',
+        text: 'Education',
+        hasIcon: false,
         childLinks: [],
     },
     {
@@ -46,13 +51,18 @@ const navLinks = [
         hideOnMobile: true,
         childLinks: [
             {
-                href: 'shell.navOverseasLink',
-                title: 'shell.navOverseasTitle',
+                href: 'shell.navOverseasJobsLink',
+                title: 'shell.navOverseasJobsTitle',
                 text: 'Overseas Jobs',
             },
             {
-                href: 'shell.navGradLink',
-                title: 'shell.navGradTitle',
+                href: 'shell.navFreshGradJobsLink',
+                title: 'shell.navFreshGradJobsTitle',
+                text: 'Fresh Graduate Jobs',
+            },
+            {
+                href: 'shell.navClassifiedJobsLink',
+                title: 'shell.navClassifiedJobsTitle',
                 text: 'Fresh Graduate Jobs',
             },
         ],
