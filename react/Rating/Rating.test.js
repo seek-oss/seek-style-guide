@@ -14,34 +14,13 @@ describe('Rating', () => {
   });
 
   describe('should render correct star rating', () => {
-    it('when rating is: 2.74', () => {
-      const wrapper = shallow(<Rating rating={2.74} />);
-      expect(wrapper).toMatchSnapshot();
-    });
+    const ratings = ['2.74', '2.75', '3.74', '3.75', '0', '5'];
 
-    it('when rating is: 2.75', () => {
-      const wrapper = shallow(<Rating rating={2.75} />);
-      expect(wrapper).toMatchSnapshot();
-    });
-
-    it('when rating is: 3.74', () => {
-      const wrapper = shallow(<Rating rating={3.74} />);
-      expect(wrapper).toMatchSnapshot();
-    });
-
-    it('when rating is: 3.75', () => {
-      const wrapper = shallow(<Rating rating={3.75} />);
-      expect(wrapper).toMatchSnapshot();
-    });
-
-    it('when rating is: 0.0', () => {
-      const wrapper = shallow(<Rating rating={0.0} />);
-      expect(wrapper).toMatchSnapshot();
-    });
-
-    it('when rating is: 5.0', () => {
-      const wrapper = shallow(<Rating rating={5.0} />);
-      expect(wrapper).toMatchSnapshot();
+    ratings.forEach(rating => {
+      it(`when rating is: ${rating}`, () => {
+        const wrapper = shallow(<Rating rating={rating} />);
+        expect(wrapper).toMatchSnapshot();
+      });
     });
   });
 });

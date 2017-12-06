@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Rating should render correct star rating when rating is: 0.0 1`] = `
+exports[`Rating should render correct star rating when rating is: 0 1`] = `
 <Text
   baseline={true}
   raw={true}
@@ -250,7 +250,7 @@ exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
 </Text>
 `;
 
-exports[`Rating should render correct star rating when rating is: 5.0 1`] = `
+exports[`Rating should render correct star rating when rating is: 5 1`] = `
 <Text
   baseline={true}
   raw={true}
