@@ -1,69 +1,68 @@
-const isObject = obj => obj !== null && !Array.isArray(obj) && obj === Object(obj);
-
 const navLinks = [
   {
     href: 'header.homeLink',
     title: 'header.homeTitle',
-    text: 'Home',
+    text: 'header.homeText',
     hasIcon: false,
     childLinks: []
   },
   {
     href: 'header.searchLink',
     title: 'header.searchTitle',
-    text: 'Search Jobs',
+    text: 'header.searchText',
+    linkIsActive: true,
     hasIcon: false,
     childLinks: []
   },
   {
     href: 'header.myJobStreetLink',
     title: 'header.myJobStreetTitle',
-    text: 'MyJobStreet',
+    text: 'header.myJobStreetText',
     hasIcon: false,
     childLinks: []
   },
   {
-    href: 'header.profilesLink',
-    title: 'header.profilesTitle',
-    text: 'Company Profiles',
+    href: 'header.companyProfilesLink',
+    title: 'header.companyProfilesTitle',
+    text: 'header.companyProfilesText',
     hasIcon: false,
     childLinks: []
   },
   {
     href: 'header.careerInsightsLink',
     title: 'header.careerInsightsTitle',
-    text: 'Career Insights',
+    text: 'header.careerInsightsText',
     hasIcon: false,
     childLinks: []
   },
   {
     href: 'header.jobStreetEducationLink',
     title: 'header.jobStretEducationTitle',
-    text: 'Education',
+    text: 'header.jobStreetEducationText',
     hasIcon: false,
     childLinks: []
   },
   {
     href: '#',
     title: 'header.moreTitle',
-    text: 'More',
+    text: 'header.moreText',
     hasIcon: false,
     hideOnMobile: true,
     childLinks: [
       {
         href: 'header.overseasJobsLink',
         title: 'header.overseasJobsTitle',
-        text: 'Overseas Jobs'
+        text: 'header.overseasJobsText'
       },
       {
         href: 'header.freshGradJobsLink',
         title: 'header.freshGradJobsTitle',
-        text: 'Fresh Graduate Jobs'
+        text: 'header.freshGradJobsText'
       },
       {
         href: 'header.classifiedJobsLink',
         title: 'header.classifiedJobsTitle',
-        text: 'Fresh Graduate Jobs'
+        text: 'header.classifiedJobsText'
       }
     ]
   }
@@ -73,50 +72,49 @@ const userLoggedOutLinks = [
   {
     href: 'header.loginLink',
     title: 'header.loginTitle',
-    text: 'Log In',
+    text: 'header.loginText',
     hasIcon: false,
     childLinks: []
   },
   {
     href: 'header.signUpLink',
     title: 'header.signUpTitle',
-    text: 'Sign Up',
+    text: 'header.signUpText',
     hasIcon: false,
     childLinks: []
   }
 ];
 
-const getUserLinks = candidate => {
-  const isUserLoggedIn = isObject(candidate);
-  return isUserLoggedIn ?
-  [{
-    href: '',
-    title: candidate.username,
-    text: candidate.username,
-    preventTranslation: true,
-    hasIcon: false,
-    childLinks: [
-      {
-        href: 'header.logoutLink',
-        title: 'header.logoutTitle',
-        text: 'header.logoutText'
-      },
-      {
-        href: 'header.helpLink',
-        title: 'header.helpTitle',
-        text: 'header.helpText'
-      },
-      {
-        href: 'header.accountLink',
-        hrefParams: {
-          id: candidate.id
+const getUserLinks = (name, xToken) => {
+  return (name && name.length) ? [
+    {
+      href: '',
+      title: name,
+      text: name,
+      preventTranslation: true,
+      hasIcon: false,
+      childLinks: [
+        {
+          href: 'header.logoutLink',
+          title: 'header.logoutTitle',
+          text: 'header.logoutText'
         },
-        title: 'header.accountTitle',
-        text: 'header.accountText'
-      }
-    ]
-  }] :
-        userLoggedOutLinks;
+        {
+          href: 'header.helpLink',
+          title: 'header.helpTitle',
+          text: 'header.helpText'
+        },
+        {
+          href: 'header.myAccountLink',
+          hrefParams: {
+            id: xToken
+          },
+          title: 'header.myAccountTitle',
+          text: 'header.myAccountText'
+        }
+      ]
+    }
+  ] : userLoggedOutLinks;
 };
 
 export default {

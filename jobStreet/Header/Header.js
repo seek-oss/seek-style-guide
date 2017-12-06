@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-
 import Logo from '../Logo/Logo';
 import Text from 'seek-asia-style-guide/react/Text/Text';
 import MenuIcon from 'seek-asia-style-guide/react/HamburgerIcon/HamburgerIcon';
@@ -39,9 +38,9 @@ class Header extends Component {
   }
 
   render() {
-    const { user, language, country } = this.props;
+    const { username, language, country } = this.props;
     const { isNavActive } = this.state;
-    const userLinks = links.getUserLinks(user.candidate);
+    const userLinks = links.getUserLinks(username);
     const messages = localization[`${language}-${country}`];
 
     return (
@@ -95,7 +94,7 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  user: PropTypes.object.isRequired,
+  username: PropTypes.string,
   language: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired
 };

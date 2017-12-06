@@ -54,7 +54,7 @@ class Nav extends Component {
             [styles.container]: true,
             [styles.isRightAligned]: isRightAligned
           })
-      }>
+        }>
         {
           links.map(link => {
             const hasChildren = Boolean(link.childLinks.length);
@@ -92,33 +92,35 @@ class Nav extends Component {
                     link.hasIcon &&
                     <FbIcon className={styles.fbIcon} />
                   }
-                  { <span>{link.text}</span> }
+                  <span>
+                    {link.preventTranslation ? link.text : messages[link.text]}
+                  </span>
                 </a>
                 {
-                          hasChildren &&
-                          (
-                          <ul
-                            className={styles.dropdownList}
-                            ref={node => {
-                              this.dropdownNode = node;
-                            }}>
-                            {
-                                      link.childLinks.map(childLink => (
-                                        <li
-                                          key={childLink.text}
-                                          className={styles.dropdownItem}>
-                                          <a
-                                            className={styles.dropdownLink}
-                                            href={'#'}
-                                            title={'Title'}>
-                                            <Text>{childLink.text}</Text>
-                                          </a>
-                                        </li>
-                                      ))
-                                  }
-                          </ul>
-                          )
+                  hasChildren &&
+                  (
+                    <ul
+                      className={styles.dropdownList}
+                      ref={node => {
+                        this.dropdownNode = node;
+                      }}>
+                      {
+                        link.childLinks.map(childLink => (
+                          <li
+                            key={childLink.text}
+                            className={styles.dropdownItem}>
+                            <a
+                              className={styles.dropdownLink}
+                              href={messages[childLink.href]}
+                              title={messages[childLink.title]}>
+                              <span>{messages[childLink.text]}</span>
+                            </a>
+                          </li>
+                        ))
                       }
+                    </ul>
+                  )
+                }
               </li>
             );
           })

@@ -24,7 +24,7 @@ export default {
   component: Header,
   initialProps: {
     authenticationStatus: 'authenticated',
-    user: {},
+    username: 'Oliver Q.',
     linkRenderer: makeDummyLinkRendererForPath(ROUTE),
     returnUrl: '/jobs',
     language: 'en',
@@ -41,14 +41,14 @@ export default {
         },
         {
           label: 'Unauthenticated',
-          transformProps: ({ userName, ...props }) => ({
+          transformProps: ({ username, ...props }) => ({
             ...props,
             authenticationStatus: 'unauthenticated'
           })
         },
         {
           label: 'Pending',
-          transformProps: ({ userName, ...props }) => ({
+          transformProps: ({ username, ...props }) => ({
             ...props,
             authenticationStatus: 'pending'
           })
