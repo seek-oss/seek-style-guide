@@ -25,7 +25,7 @@ describe('Rating', () => {
   });
 
   describe('should render correct size', () => {
-    const sizes = ['substandard', 'standard', 'heading'];
+    const sizes = ['substandard', 'superstandard', 'heading'];
 
     sizes.forEach(size => {
       it(`when size is: ${size}`, () => {
