@@ -5,7 +5,8 @@ export default {
   title: 'Rating',
   component: Rating,
   initialProps: {
-    rating: 0
+    rating: 0,
+    renderTextRating: false
   },
   options: [
     {
@@ -17,6 +18,18 @@ export default {
           transformProps: props => ({
             ...props,
             rating
+          })
+        }))
+    },
+    {
+      label: 'Size',
+      type: 'radio',
+      states: ['substandard', 'superstandard', 'heading']
+        .map(size => ({
+          label: `${String(size)}`,
+          transformProps: props => ({
+            ...props,
+            size
           })
         }))
     }

@@ -1,5 +1,34 @@
 @import (reference) "~seek-style-guide/theme";
 
+.root {
+  display: flex;
+}
+
 .star {
-  color: @sk-yellow;
+  color: @sk-orange;
+  display: inline;
+  margin-right: 0.3em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.iconSize(@typography-scale) {
+  @icon-size: @base-font-size * @typography-scale * 1px;
+
+  width: @icon-size;
+  height: @icon-size;
+}
+
+.heading {
+  .iconSize(@heading-type-scale)
+}
+
+.superstandard {
+  .iconSize(@superstandard-type-scale)
+}
+
+.substandard {
+  .iconSize(@substandard-type-scale)
 }
