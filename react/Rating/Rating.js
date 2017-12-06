@@ -42,7 +42,7 @@ const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) =
   );
 
   return (
-    <Text raw baseline={true} {...{ [size]: true }} regular {...restProps}>
+    <Text raw {...{ [size]: true }} regular {...restProps}>
       <ScreenReaderOnly>
         {rating} out of 5
       </ScreenReaderOnly>
