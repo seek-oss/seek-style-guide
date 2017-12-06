@@ -38,17 +38,19 @@ const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) =
   );
 
   return (
-    <Text regular size={size} className={styles.root} {...restProps}>
+    <Text raw baseline={true} {...{ [size]: true }} regular {...restProps}>
       <ScreenReaderOnly>
         {rating} out of 5
       </ScreenReaderOnly>
-      {[...Array(5)].map((v, position) => {
-        const percent = getPercent(rating, position);
-        return getStar(percent, position, extendedStarClassName);
-      })}
-      {showTextRating &&
-        <span>{rating}</span>
-      }
+      <span className={styles.root}>
+        {[...Array(5)].map((v, position) => {
+          const percent = getPercent(rating, position);
+          return getStar(percent, position, extendedStarClassName);
+        })}
+        {showTextRating &&
+          <span className={styles.textRating}>{rating}</span>
+        }
+      </span>
     </Text>
   );
 };
