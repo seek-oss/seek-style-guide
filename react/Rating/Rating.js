@@ -46,7 +46,7 @@ const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) =
       <ScreenReaderOnly>
         {rating} out of 5
       </ScreenReaderOnly>
-      <span className={styles.root}>
+      <span className={styles.rating}>
         {[...Array(5)].map((v, position) => {
           const percent = getPercent(rating, position);
           return getStar(percent, position, extendedStarClassName, size);

@@ -14,7 +14,7 @@ exports[`Rating should render correct size when size is: heading 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -69,7 +69,7 @@ exports[`Rating should render correct size when size is: heading and rating text
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -129,7 +129,7 @@ exports[`Rating should render correct size when size is: substandard 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -184,7 +184,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -244,7 +244,7 @@ exports[`Rating should render correct size when size is: superstandard 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -299,7 +299,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -359,7 +359,7 @@ exports[`Rating should render correct star rating when rating is: 0 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -414,7 +414,7 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -469,7 +469,7 @@ exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -524,7 +524,7 @@ exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -579,7 +579,7 @@ exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -634,7 +634,7 @@ exports[`Rating should render correct star rating when rating is: 5 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -690,7 +690,7 @@ exports[`Rating should render with className 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
@@ -745,7 +745,7 @@ exports[`Rating should render with starClassName 1`] = `
      out of 5
   </ScreenReaderOnly>
   <span
-    className="root"
+    className="rating"
   >
     <StarIcon
       className="star"
