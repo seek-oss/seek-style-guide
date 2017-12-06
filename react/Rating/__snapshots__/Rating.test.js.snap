@@ -20,31 +20,36 @@ exports[`Rating should render correct size when size is: heading 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="headingSvg"
+      size="heading"
+      svgClassName="headingStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="headingSvg"
+      size="heading"
+      svgClassName="headingStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="headingSvg"
+      size="heading"
+      svgClassName="headingStar"
     />
     <Icon
       className="star"
       key="3"
       markup="mock svg"
-      svgClassName="headingSvg"
+      size="heading"
+      svgClassName="headingStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="headingSvg"
+      size="heading"
+      svgClassName="headingStar"
     />
   </span>
 </Text>
@@ -70,31 +75,36 @@ exports[`Rating should render correct size when size is: heading and rating text
       className="star"
       filled={true}
       key="0"
-      svgClassName="headingSvg scaledDownSvg"
+      size="heading"
+      svgClassName="headingStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="headingSvg scaledDownSvg"
+      size="heading"
+      svgClassName="headingStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="headingSvg scaledDownSvg"
+      size="heading"
+      svgClassName="headingStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="3"
-      svgClassName="headingSvg scaledDownSvg"
+      size="heading"
+      svgClassName="headingStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="headingSvg scaledDownSvg"
+      size="heading"
+      svgClassName="headingStar scaledDownSvg"
     />
     <span
       className="textRating"
@@ -125,31 +135,36 @@ exports[`Rating should render correct size when size is: substandard 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <Icon
       className="star"
       key="3"
       markup="mock svg"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -175,31 +190,36 @@ exports[`Rating should render correct size when size is: substandard and rating 
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg scaledDownSvg"
+      size="substandard"
+      svgClassName="substandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg scaledDownSvg"
+      size="substandard"
+      svgClassName="substandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="substandardSvg scaledDownSvg"
+      size="substandard"
+      svgClassName="substandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="3"
-      svgClassName="substandardSvg scaledDownSvg"
+      size="substandard"
+      svgClassName="substandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="substandardSvg scaledDownSvg"
+      size="substandard"
+      svgClassName="substandardStar scaledDownSvg"
     />
     <span
       className="textRating"
@@ -230,31 +250,36 @@ exports[`Rating should render correct size when size is: superstandard 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="superstandardSvg"
+      size="superstandard"
+      svgClassName="superstandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="superstandardSvg"
+      size="superstandard"
+      svgClassName="superstandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="superstandardSvg"
+      size="superstandard"
+      svgClassName="superstandardStar"
     />
     <Icon
       className="star"
       key="3"
       markup="mock svg"
-      svgClassName="superstandardSvg"
+      size="superstandard"
+      svgClassName="superstandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="superstandardSvg"
+      size="superstandard"
+      svgClassName="superstandardStar"
     />
   </span>
 </Text>
@@ -280,31 +305,36 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       className="star"
       filled={true}
       key="0"
-      svgClassName="superstandardSvg scaledDownSvg"
+      size="superstandard"
+      svgClassName="superstandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="superstandardSvg scaledDownSvg"
+      size="superstandard"
+      svgClassName="superstandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="superstandardSvg scaledDownSvg"
+      size="superstandard"
+      svgClassName="superstandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={true}
       key="3"
-      svgClassName="superstandardSvg scaledDownSvg"
+      size="superstandard"
+      svgClassName="superstandardStar scaledDownSvg"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="superstandardSvg scaledDownSvg"
+      size="superstandard"
+      svgClassName="superstandardStar scaledDownSvg"
     />
     <span
       className="textRating"
@@ -335,31 +365,36 @@ exports[`Rating should render correct star rating when rating is: 0 1`] = `
       className="star"
       filled={false}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="2"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="3"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -385,31 +420,36 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <Icon
       className="star"
       key="2"
       markup="mock svg"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="3"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -435,31 +475,36 @@ exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="3"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -485,31 +530,36 @@ exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <Icon
       className="star"
       key="3"
       markup="mock svg"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -535,31 +585,36 @@ exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="3"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={false}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -585,31 +640,36 @@ exports[`Rating should render correct star rating when rating is: 5 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="3"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -636,31 +696,36 @@ exports[`Rating should render with className 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="3"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="4"
-      svgClassName="substandardSvg"
+      size="substandard"
+      svgClassName="substandardStar"
     />
   </span>
 </Text>
@@ -686,31 +751,36 @@ exports[`Rating should render with starClassName 1`] = `
       className="star"
       filled={true}
       key="0"
-      svgClassName="star-class-name substandardSvg"
+      size="substandard"
+      svgClassName="star-class-name substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="1"
-      svgClassName="star-class-name substandardSvg"
+      size="substandard"
+      svgClassName="star-class-name substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="2"
-      svgClassName="star-class-name substandardSvg"
+      size="substandard"
+      svgClassName="star-class-name substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="3"
-      svgClassName="star-class-name substandardSvg"
+      size="substandard"
+      svgClassName="star-class-name substandardStar"
     />
     <StarIcon
       className="star"
       filled={true}
       key="4"
-      svgClassName="star-class-name substandardSvg"
+      size="substandard"
+      svgClassName="star-class-name substandardStar"
     />
   </span>
 </Text>

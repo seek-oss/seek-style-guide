@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-export default function Icon({ markup, className, svgClassName, ...restProps }) {
+export default function Icon({ markup, className, svgClassName, size, ...restProps }) {
   const svgWithClasses = markup
-    .replace('<svg ', `<svg class="${classnames(styles.svg, svgClassName)}" `);
+    .replace('<svg ', `<svg class="${classnames(styles.svg, svgClassName, { [styles[`${size}Svg`]]: size })}" `);
   const combinedProps = {
     ...restProps,
     className: classnames(styles.root, className)
@@ -21,7 +21,8 @@ export default function Icon({ markup, className, svgClassName, ...restProps }) 
 Icon.propTypes = {
   markup: PropTypes.string.isRequired,
   svgClassName: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  size: PropTypes.oneOf(['heading', 'substandard', 'superstandard'])
 };
 
 Icon.defaultProps = {

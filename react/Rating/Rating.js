@@ -13,9 +13,10 @@ import Text from '../Text/Text';
 
 const getPercent = (rating, position) => Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
 
-const getStar = (percent, key, starClassName) => {
+const getStar = (percent, key, starClassName, size) => {
   const props = {
     key,
+    size,
     className: styles.star,
     svgClassName: starClassName
   };
@@ -35,7 +36,7 @@ const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) =
   const extendedStarClassName = classnames(
     starClassName,
     {
-      [styles[`${size}Svg`]]: size,
+      [styles[`${size}Star`]]: size,
       [styles.scaledDownSvg]: showTextRating
     }
   );
@@ -48,7 +49,7 @@ const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) =
       <span className={styles.root}>
         {[...Array(5)].map((v, position) => {
           const percent = getPercent(rating, position);
-          return getStar(percent, position, extendedStarClassName);
+          return getStar(percent, position, extendedStarClassName, size);
         })}
         {showTextRating &&
           <span className={styles.textRating}>{rating}</span>
