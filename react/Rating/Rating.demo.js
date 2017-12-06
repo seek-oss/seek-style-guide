@@ -10,6 +10,19 @@ export default {
   },
   options: [
     {
+      label: 'States',
+      type: 'checklist',
+      states: [
+        {
+          label: 'Show rating text',
+          transformProps: ({ ...props }) => ({
+            ...props,
+            showTextRating: true
+          })
+        }
+      ]
+    },
+    {
       label: 'Ratings',
       type: 'radio',
       states: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]

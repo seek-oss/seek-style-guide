@@ -31,7 +31,7 @@ const getStar = (percent, key, starClassName) => {
   return <StarIcon {...props} />;
 };
 
-const Rating = ({ rating, starClassName, size, renderTextRating, ...restProps }) => {
+const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) => {
   const extendedStarClassName = classnames(
     starClassName,
     { [styles[size]]: size }
@@ -46,7 +46,7 @@ const Rating = ({ rating, starClassName, size, renderTextRating, ...restProps })
         const percent = getPercent(rating, position);
         return getStar(percent, position, extendedStarClassName);
       })}
-      {renderTextRating &&
+      {showTextRating &&
         <span>{rating}</span>
       }
     </Text>
@@ -60,11 +60,12 @@ Rating.propTypes = {
   className: PropTypes.string,
   starClassName: PropTypes.string,
   size: PropTypes.oneOf(['heading', 'substandard', 'superstandard']),
-  renderTextRating: PropTypes.bool
+  showTextRating: PropTypes.bool
 };
 
 Rating.defaultProps = {
-  size: 'substandard'
+  size: 'substandard',
+  showTextRating: false
 };
 
 export default Rating;
