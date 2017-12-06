@@ -1,6 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
 @elements-spacing: 0.3em;
+@icon-scale-ratio: 0.7;
 
 .root {
   display: flex;
@@ -16,7 +17,7 @@
   }
 }
 
-.iconSize(@typography-scale, @icon-scale: 0.7) {
+.iconSize(@typography-scale, @icon-scale: 1) {
   @icon-size: @base-font-size * @typography-scale * 1px * @icon-scale;
 
   width: @icon-size;
@@ -27,14 +28,26 @@
   margin-left: @elements-spacing;
 }
 
-.heading {
-  .iconSize(@heading-type-scale)
+.headingSvg {
+  .iconSize(@heading-type-scale);
+
+  &.scaledDownSvg {
+    .iconSize(@heading-type-scale, @icon-scale-ratio);
+  }
 }
 
-.superstandard {
-  .iconSize(@superstandard-type-scale)
+.superstandardSvg {
+  .iconSize(@superstandard-type-scale);
+
+  &.scaledDownSvg {
+    .iconSize(@superstandard-type-scale, @icon-scale-ratio);
+  }
 }
 
-.substandard {
-  .iconSize(@substandard-type-scale)
+.substandardSvg {
+  .iconSize(@substandard-type-scale);
+
+  &.scaledDownSvg {
+    .iconSize(@substandard-type-scale, @icon-scale-ratio);
+  }
 }

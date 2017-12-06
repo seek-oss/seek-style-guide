@@ -34,7 +34,10 @@ const getStar = (percent, key, starClassName) => {
 const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) => {
   const extendedStarClassName = classnames(
     starClassName,
-    { [styles[size]]: size }
+    {
+      [styles[`${size}Svg`]]: size,
+      [styles.scaledDownSvg]: showTextRating
+    }
   );
 
   return (
@@ -66,7 +69,7 @@ Rating.propTypes = {
 };
 
 Rating.defaultProps = {
-  size: 'heading',
+  size: 'substandard',
   showTextRating: false
 };
 
