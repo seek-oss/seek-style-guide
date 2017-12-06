@@ -66,7 +66,7 @@ Rating.propTypes = {
 };
 
 Rating.defaultProps = {
-  size: 'substandard',
+  size: 'heading',
   showTextRating: false
 };
 
