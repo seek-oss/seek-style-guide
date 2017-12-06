@@ -1,5 +1,320 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Rating should render correct size when size is: heading 1`] = `
+<Text
+  baseline={true}
+  heading={true}
+  raw={true}
+  regular={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="root"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      key="0"
+      svgClassName="headingSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="1"
+      svgClassName="headingSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="2"
+      svgClassName="headingSvg"
+    />
+    <Icon
+      className="star"
+      key="3"
+      markup="mock svg"
+      svgClassName="headingSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      key="4"
+      svgClassName="headingSvg"
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: heading and rating text is shown 1`] = `
+<Text
+  baseline={true}
+  heading={true}
+  raw={true}
+  regular={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    4
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="root"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      key="0"
+      svgClassName="headingSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="1"
+      svgClassName="headingSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="2"
+      svgClassName="headingSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="3"
+      svgClassName="headingSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      key="4"
+      svgClassName="headingSvg scaledDownSvg"
+    />
+    <span
+      className="textRating"
+    >
+      4
+    </span>
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: standard 1`] = `
+<Text
+  baseline={true}
+  raw={true}
+  regular={true}
+  standard={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="root"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      key="0"
+      svgClassName="standardSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="1"
+      svgClassName="standardSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="2"
+      svgClassName="standardSvg"
+    />
+    <Icon
+      className="star"
+      key="3"
+      markup="mock svg"
+      svgClassName="standardSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      key="4"
+      svgClassName="standardSvg"
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: standard and rating text is shown 1`] = `
+<Text
+  baseline={true}
+  raw={true}
+  regular={true}
+  standard={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    4
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="root"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      key="0"
+      svgClassName="standardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="1"
+      svgClassName="standardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="2"
+      svgClassName="standardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="3"
+      svgClassName="standardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      key="4"
+      svgClassName="standardSvg scaledDownSvg"
+    />
+    <span
+      className="textRating"
+    >
+      4
+    </span>
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: substandard 1`] = `
+<Text
+  baseline={true}
+  raw={true}
+  regular={true}
+  substandard={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="root"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      key="0"
+      svgClassName="substandardSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="1"
+      svgClassName="substandardSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="2"
+      svgClassName="substandardSvg"
+    />
+    <Icon
+      className="star"
+      key="3"
+      markup="mock svg"
+      svgClassName="substandardSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      key="4"
+      svgClassName="substandardSvg"
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: substandard and rating text is shown 1`] = `
+<Text
+  baseline={true}
+  raw={true}
+  regular={true}
+  substandard={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    4
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="root"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      key="0"
+      svgClassName="substandardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="1"
+      svgClassName="substandardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="2"
+      svgClassName="substandardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      key="3"
+      svgClassName="substandardSvg scaledDownSvg"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      key="4"
+      svgClassName="substandardSvg scaledDownSvg"
+    />
+    <span
+      className="textRating"
+    >
+      4
+    </span>
+  </span>
+</Text>
+`;
+
 exports[`Rating should render correct star rating when rating is: 0 1`] = `
 <Text
   baseline={true}
