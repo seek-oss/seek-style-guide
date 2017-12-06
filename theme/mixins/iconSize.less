@@ -1,6 +1,12 @@
-.iconSize(@typography-scale, @icon-scale: 1) {
+.iconSize(@typography-scale, @icon-scale: 1, @typography-scale-mobile: @typography-scale) {
   @icon-size: @base-font-size * @typography-scale * 1px * @icon-scale;
+  @icon-size-mobile: @base-font-size * @typography-scale-mobile * 1px * @icon-scale;
 
   width: @icon-size;
   height: @icon-size;
+
+  @media @mobile {
+    width: @icon-size-mobile;
+    height: @icon-size-mobile;    
+  }
 }

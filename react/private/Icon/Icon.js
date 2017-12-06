@@ -22,7 +22,17 @@ Icon.propTypes = {
   markup: PropTypes.string.isRequired,
   svgClassName: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.oneOf(['heading', 'substandard', 'superstandard'])
+  size: PropTypes.oneOf([
+    'hero',
+    'headline',
+    'heading',
+    'subheading',
+    'superstandard',
+    'standard',
+    'substandard',
+    'small',
+    'interaction'
+  ])
 };
 
 Icon.defaultProps = {
