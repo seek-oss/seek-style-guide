@@ -1,5 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
+@elements-spacing: 0.3em;
+
 .root {
   display: flex;
 }
@@ -7,22 +9,22 @@
 .star {
   color: @sk-orange;
   display: inline;
-  margin-right: 0.3em;
+  margin-right: @elements-spacing;
 
   &:last-child {
     margin-right: 0;
   }
 }
 
-.iconSize(@typography-scale) {
-  @icon-size: @base-font-size * @typography-scale * 1px * 0.7;
+.iconSize(@typography-scale, @icon-scale: 0.7) {
+  @icon-size: @base-font-size * @typography-scale * 1px * @icon-scale;
 
   width: @icon-size;
   height: @icon-size;
 }
 
 .textRating {
-  margin-left: 0.3em;
+  margin-left: @elements-spacing;
 }
 
 .heading {
