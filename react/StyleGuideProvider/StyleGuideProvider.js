@@ -6,12 +6,6 @@ import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import jobsDBLocalization from './localization/jobsdb';
 import jobStreetLocalization from './localization/jobstreet';
-import WebFont from 'webfontloader';
-WebFont.load({
-  google: {
-    families: ['Muli']
-  }
-});
 
 const defaultPageTitle = 'SEEK Asia';
 
@@ -25,11 +19,22 @@ const getLocalisedPageTitle = (country, language, tenant) => {
   return defaultPageTitle;
 };
 
-export default function StyleGuideProvider({ fullScreen, children, meta, link, title, country, language, tenant }) {
+export default function StyleGuideProvider({ fullScreen, children, meta, link, title, country, language, tenant, customFont }) {
   const className = classnames({
     [styles.root]: true,
     [styles.fullScreen]: fullScreen
   });
+
+  if (customFont) {
+    if (typeof window !== 'undefined') {
+      const WebFont = require('webfontloader');
+      WebFont.load({
+        google: {
+          families: ['Muli']
+        }
+      });
+    }
+  }
 
   const pageTitle = title || getLocalisedPageTitle(country, language, tenant);
 
@@ -58,12 +63,14 @@ StyleGuideProvider.propTypes = {
   link: PropTypes.array,
   country: PropTypes.string,
   language: PropTypes.string,
-  tenant: PropTypes.string
+  tenant: PropTypes.string,
+  customFont: PropTypes.bool
 };
 
 StyleGuideProvider.defaultProps = {
   fullScreen: false,
   meta: [],
   link: [],
-  locale: 'AU'
+  locale: 'AU',
+  customFont: false
 };
