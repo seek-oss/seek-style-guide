@@ -1,5 +1,23 @@
 @import (reference) "~seek-style-guide/theme";
 
-.star {
-  color: @sk-yellow;
+@elements-spacing: 0.2em;
+
+.rating {
+  display: flex;
+  align-items: flex-end;
 }
+
+.star {
+  color: @sk-orange;
+  display: inline;
+  margin-right: @elements-spacing;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.textRating {
+  margin-left: @elements-spacing;
+}
+

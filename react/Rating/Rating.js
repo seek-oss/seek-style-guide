@@ -1,20 +1,33 @@
 import styles from './Rating.less';
 
 import React from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import StarIcon from '../StarIcon/StarIcon';
 import HalfStarIcon from './HalfStarIcon.svg';
 import Icon from '../private/Icon/Icon';
+
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
+import Text from '../Text/Text';
 
 const getPercent = (rating, position) => Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
 
-const getStar = (percent, key, starClassName) => {
+const getStar = (
+  percent,
+  key,
+  starClassName,
+  substandard,
+  superstandard,
+  heading
+) => {
   const props = {
     key,
     className: styles.star,
-    svgClassName: starClassName
+    svgClassName: starClassName,
+    substandard,
+    superstandard,
+    heading
   };
 
   if (percent >= 75) {
@@ -28,17 +41,52 @@ const getStar = (percent, key, starClassName) => {
   return <StarIcon {...props} />;
 };
 
-const Rating = ({ rating, starClassName, ...restProps }) => {
+const Rating = ({
+  rating,
+  starClassName,
+  showTextRating,
+  substandard,
+  superstandard,
+  heading,
+  ...restProps
+}) => {
+  const extendedStarClassName = classnames(
+    {
+      [starClassName]: starClassName,
+      [styles.substandardStar]: substandard,
+      [styles.superstandardStar]: superstandard,
+      [styles.headingStar]: heading
+    }
+  );
+
   return (
-    <div {...restProps}>
+    <Text
+      raw
+      heading={heading}
+      superstandard={superstandard}
+      substandard={substandard}
+      regular
+      {...restProps}>
       <ScreenReaderOnly>
         {rating} out of 5
       </ScreenReaderOnly>
-      {[...Array(5)].map((v, position) => {
-        const percent = getPercent(rating, position);
-        return getStar(percent, position, starClassName);
-      })}
-    </div>
+      <span className={styles.rating}>
+        {[...Array(5)].map((v, position) => {
+          const percent = getPercent(rating, position);
+          return getStar(
+            percent,
+            position,
+            extendedStarClassName,
+            substandard,
+            superstandard,
+            heading
+          );
+        })}
+        {showTextRating &&
+          <span className={styles.textRating}>{rating}</span>
+        }
+      </span>
+    </Text>
   );
 };
 
@@ -47,7 +95,18 @@ Rating.displayName = 'Rating';
 Rating.propTypes = {
   rating: PropTypes.number.isRequired,
   className: PropTypes.string,
-  starClassName: PropTypes.string
+  starClassName: PropTypes.string,
+  showTextRating: PropTypes.bool,
+  heading: PropTypes.bool,
+  superstandard: PropTypes.bool,
+  substandard: PropTypes.bool
+};
+
+Rating.defaultProps = {
+  showTextRating: false,
+  heading: false,
+  superstandard: false,
+  substandard: false
 };
 
 export default Rating;

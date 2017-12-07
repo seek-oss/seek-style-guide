@@ -1,0 +1,955 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating should render correct size when size is: heading 1`] = `
+<Text
+  baseline={true}
+  heading={true}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={true}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={true}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={true}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <Icon
+      className="star"
+      heading={true}
+      key="3"
+      markup="mock svg"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={true}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: heading and rating text is shown 1`] = `
+<Text
+  baseline={true}
+  heading={true}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    4
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={true}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={true}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={true}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={true}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={true}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName="headingStar"
+    />
+    <span
+      className="textRating"
+    >
+      4
+    </span>
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: substandard 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={true}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <Icon
+      className="star"
+      heading={false}
+      key="3"
+      markup="mock svg"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: substandard and rating text is shown 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={true}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    4
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="3"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={true}
+      superstandard={false}
+      svgClassName="substandardStar"
+    />
+    <span
+      className="textRating"
+    >
+      4
+    </span>
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: superstandard 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <Icon
+      className="star"
+      heading={false}
+      key="3"
+      markup="mock svg"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct size when size is: superstandard and rating text is shown 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={true}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    4
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={true}
+      svgClassName="superstandardStar"
+    />
+    <span
+      className="textRating"
+    >
+      4
+    </span>
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct star rating when rating is: 0 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    0
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    2.74
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <Icon
+      className="star"
+      heading={false}
+      key="2"
+      markup="mock svg"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    2.75
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.74
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <Icon
+      className="star"
+      heading={false}
+      key="3"
+      markup="mock svg"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    3.75
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={false}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render correct star rating when rating is: 5 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render with className 1`] = `
+<Text
+  baseline={true}
+  className="root-class-name"
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName=""
+    />
+  </span>
+</Text>
+`;
+
+exports[`Rating should render with starClassName 1`] = `
+<Text
+  baseline={true}
+  heading={false}
+  raw={true}
+  regular={true}
+  substandard={false}
+  superstandard={false}
+>
+  <ScreenReaderOnly
+    component="span"
+  >
+    5
+     out of 5
+  </ScreenReaderOnly>
+  <span
+    className="rating"
+  >
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="0"
+      substandard={false}
+      superstandard={false}
+      svgClassName="star-class-name"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="1"
+      substandard={false}
+      superstandard={false}
+      svgClassName="star-class-name"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="2"
+      substandard={false}
+      superstandard={false}
+      svgClassName="star-class-name"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="3"
+      substandard={false}
+      superstandard={false}
+      svgClassName="star-class-name"
+    />
+    <StarIcon
+      className="star"
+      filled={true}
+      heading={false}
+      key="4"
+      substandard={false}
+      superstandard={false}
+      svgClassName="star-class-name"
+    />
+  </span>
+</Text>
+`;

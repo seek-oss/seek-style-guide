@@ -5,9 +5,23 @@ export default {
   title: 'Rating',
   component: Rating,
   initialProps: {
-    rating: 0
+    rating: 0,
+    substandard: true
   },
   options: [
+    {
+      label: 'States',
+      type: 'checklist',
+      states: [
+        {
+          label: 'Show rating text',
+          transformProps: ({ ...props }) => ({
+            ...props,
+            showTextRating: true
+          })
+        }
+      ]
+    },
     {
       label: 'Ratings',
       type: 'radio',
@@ -17,6 +31,20 @@ export default {
           transformProps: props => ({
             ...props,
             rating
+          })
+        }))
+    },
+    {
+      label: 'Size',
+      type: 'radio',
+      states: ['substandard', 'superstandard', 'heading']
+        .map(size => ({
+          label: `${String(size)}`,
+          transformProps: props => ({
+            ...props,
+            substandard: size === 'substandard',
+            superstandard: size === 'superstandard',
+            heading: size === 'heading'
           })
         }))
     }
