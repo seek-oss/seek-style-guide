@@ -92,7 +92,7 @@ exports[`Rating should render correct size when size is: heading and rating text
       key="0"
       substandard={false}
       superstandard={false}
-      svgClassName="headingStar scaledDownSvg"
+      svgClassName="headingStar"
     />
     <StarIcon
       className="star"
@@ -101,7 +101,7 @@ exports[`Rating should render correct size when size is: heading and rating text
       key="1"
       substandard={false}
       superstandard={false}
-      svgClassName="headingStar scaledDownSvg"
+      svgClassName="headingStar"
     />
     <StarIcon
       className="star"
@@ -110,7 +110,7 @@ exports[`Rating should render correct size when size is: heading and rating text
       key="2"
       substandard={false}
       superstandard={false}
-      svgClassName="headingStar scaledDownSvg"
+      svgClassName="headingStar"
     />
     <StarIcon
       className="star"
@@ -119,7 +119,7 @@ exports[`Rating should render correct size when size is: heading and rating text
       key="3"
       substandard={false}
       superstandard={false}
-      svgClassName="headingStar scaledDownSvg"
+      svgClassName="headingStar"
     />
     <StarIcon
       className="star"
@@ -128,7 +128,7 @@ exports[`Rating should render correct size when size is: heading and rating text
       key="4"
       substandard={false}
       superstandard={false}
-      svgClassName="headingStar scaledDownSvg"
+      svgClassName="headingStar"
     />
     <span
       className="textRating"
@@ -231,7 +231,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
       key="0"
       substandard={true}
       superstandard={false}
-      svgClassName="substandardStar scaledDownSvg"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
@@ -240,7 +240,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
       key="1"
       substandard={true}
       superstandard={false}
-      svgClassName="substandardStar scaledDownSvg"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
@@ -249,7 +249,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
       key="2"
       substandard={true}
       superstandard={false}
-      svgClassName="substandardStar scaledDownSvg"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
@@ -258,7 +258,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
       key="3"
       substandard={true}
       superstandard={false}
-      svgClassName="substandardStar scaledDownSvg"
+      svgClassName="substandardStar"
     />
     <StarIcon
       className="star"
@@ -267,7 +267,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
       key="4"
       substandard={true}
       superstandard={false}
-      svgClassName="substandardStar scaledDownSvg"
+      svgClassName="substandardStar"
     />
     <span
       className="textRating"
@@ -370,7 +370,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       key="0"
       substandard={false}
       superstandard={true}
-      svgClassName="superstandardStar scaledDownSvg"
+      svgClassName="superstandardStar"
     />
     <StarIcon
       className="star"
@@ -379,7 +379,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       key="1"
       substandard={false}
       superstandard={true}
-      svgClassName="superstandardStar scaledDownSvg"
+      svgClassName="superstandardStar"
     />
     <StarIcon
       className="star"
@@ -388,7 +388,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       key="2"
       substandard={false}
       superstandard={true}
-      svgClassName="superstandardStar scaledDownSvg"
+      svgClassName="superstandardStar"
     />
     <StarIcon
       className="star"
@@ -397,7 +397,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       key="3"
       substandard={false}
       superstandard={true}
-      svgClassName="superstandardStar scaledDownSvg"
+      svgClassName="superstandardStar"
     />
     <StarIcon
       className="star"
@@ -406,7 +406,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       key="4"
       substandard={false}
       superstandard={true}
-      svgClassName="superstandardStar scaledDownSvg"
+      svgClassName="superstandardStar"
     />
     <span
       className="textRating"
