@@ -5,9 +5,36 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-export default function Icon({ markup, className, svgClassName, size, ...restProps }) {
+export default function Icon({
+  markup,
+  className,
+  svgClassName,
+  hero,
+  headline,
+  heading,
+  subheading,
+  superstandard,
+  standard,
+  substandard,
+  small,
+  interaction,
+  ...restProps }) {
+  const svgClassNames = classnames(
+    styles.svg,
+    svgClassName,
+    {
+      [styles.smallSvg]: small,
+      [styles.substandardSvg]: substandard,
+      [styles.superstandardSvg]: superstandard,
+      [styles.subheadingSvg]: subheading,
+      [styles.headlineSvg]: headline,
+      [styles.headingSvg]: heading,
+      [styles.heroSvg]: hero
+    }
+  );
+
   const svgWithClasses = markup
-    .replace('<svg ', `<svg class="${classnames(styles.svg, svgClassName, { [styles[`${size}Svg`]]: size })}" `);
+    .replace('<svg ', `<svg class="${svgClassNames}" `);
   const combinedProps = {
     ...restProps,
     className: classnames(styles.root, className)
@@ -22,17 +49,15 @@ Icon.propTypes = {
   markup: PropTypes.string.isRequired,
   svgClassName: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.oneOf([
-    'hero',
-    'headline',
-    'heading',
-    'subheading',
-    'superstandard',
-    'standard',
-    'substandard',
-    'small',
-    'interaction'
-  ])
+  hero: PropTypes.bool,
+  headline: PropTypes.bool,
+  heading: PropTypes.bool,
+  subheading: PropTypes.bool,
+  superstandard: PropTypes.bool,
+  standard: PropTypes.bool,
+  substandard: PropTypes.bool,
+  small: PropTypes.bool,
+  interaction: PropTypes.bool
 };
 
 Icon.defaultProps = {

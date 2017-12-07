@@ -41,7 +41,9 @@ export default {
           label: `${String(size)}`,
           transformProps: props => ({
             ...props,
-            size
+            substandard: size === 'substandard',
+            superstandard: size === 'superstandard',
+            heading: size === 'heading'
           })
         }))
     }

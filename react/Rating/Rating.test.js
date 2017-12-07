@@ -29,14 +29,14 @@ describe('Rating', () => {
 
     sizes.forEach(size => {
       it(`when size is: ${size}`, () => {
-        const wrapper = shallow(<Rating rating={3.5} size={size} />);
+        const wrapper = shallow(<Rating rating={3.5} {...{ [size]: true }} />);
         expect(wrapper).toMatchSnapshot();
       });
     });
 
     sizes.forEach(size => {
       it(`when size is: ${size} and rating text is shown`, () => {
-        const wrapper = shallow(<Rating rating={4} size={size} showTextRating />);
+        const wrapper = shallow(<Rating rating={4} {...{ [size]: true }} showTextRating />);
         expect(wrapper).toMatchSnapshot();
       });
     });

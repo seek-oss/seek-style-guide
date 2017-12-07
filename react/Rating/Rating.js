@@ -13,12 +13,21 @@ import Text from '../Text/Text';
 
 const getPercent = (rating, position) => Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
 
-const getStar = (percent, key, starClassName, size) => {
+const getStar = (
+  percent,
+  key,
+  starClassName,
+  substandard,
+  superstandard,
+  heading
+) => {
   const props = {
     key,
-    size,
     className: styles.star,
-    svgClassName: starClassName
+    svgClassName: starClassName,
+    substandard,
+    superstandard,
+    heading
   };
 
   if (percent >= 75) {
@@ -32,24 +41,47 @@ const getStar = (percent, key, starClassName, size) => {
   return <StarIcon {...props} />;
 };
 
-const Rating = ({ rating, starClassName, size, showTextRating, ...restProps }) => {
+const Rating = ({
+  rating,
+  starClassName,
+  showTextRating,
+  substandard,
+  superstandard,
+  heading,
+  ...restProps
+}) => {
   const extendedStarClassName = classnames(
-    starClassName,
     {
-      [styles[`${size}Star`]]: size,
+      [starClassName]: starClassName,
+      [styles.substandardStar]: substandard,
+      [styles.superstandardStar]: superstandard,
+      [styles.headingStar]: heading,
       [styles.scaledDownSvg]: showTextRating
     }
   );
 
   return (
-    <Text raw {...{ [size]: true }} regular {...restProps}>
+    <Text
+      raw
+      heading={heading}
+      superstandard={superstandard}
+      substandard={substandard}
+      regular
+      {...restProps}>
       <ScreenReaderOnly>
         {rating} out of 5
       </ScreenReaderOnly>
       <span className={styles.rating}>
         {[...Array(5)].map((v, position) => {
           const percent = getPercent(rating, position);
-          return getStar(percent, position, extendedStarClassName, size);
+          return getStar(
+            percent,
+            position,
+            extendedStarClassName,
+            substandard,
+            superstandard,
+            heading
+          );
         })}
         {showTextRating &&
           <span className={styles.textRating}>{rating}</span>
@@ -65,13 +97,17 @@ Rating.propTypes = {
   rating: PropTypes.number.isRequired,
   className: PropTypes.string,
   starClassName: PropTypes.string,
-  size: PropTypes.oneOf(['heading', 'substandard', 'superstandard']),
-  showTextRating: PropTypes.bool
+  showTextRating: PropTypes.bool,
+  heading: PropTypes.bool,
+  superstandard: PropTypes.bool,
+  substandard: PropTypes.bool
 };
 
 Rating.defaultProps = {
-  size: 'substandard',
-  showTextRating: false
+  showTextRating: false,
+  heading: false,
+  superstandard: false,
+  substandard: false
 };
 
 export default Rating;
