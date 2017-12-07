@@ -9,6 +9,7 @@ import {
   ButtonGroup,
   StarIcon,
   MailIcon,
+  ProfileIcon,
   PageBlock,
   Section,
   AsidedLayout,
@@ -22,7 +23,9 @@ import {
   Strong,
   Header,
   Footer,
-  Rating
+  Rating,
+  HeartIcon,
+  ThumbsUpIcon
 } from 'seek-style-guide/react';
 
 import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
@@ -474,27 +477,29 @@ export default class Playground extends Component {
           <Section header>
             <Text hero>Icons</Text>
           </Section>
-          <Card>
-            <Section>
-              {[
-                'small',
-                'substandard',
-                'Default',
-                'standard',
-                'superstandard',
-                'heading',
-                'headline',
-                'hero'
-              ].map(size => (
-                <div key={size}>
-                  <Text {...{ [size]: true }}>
-                    <StarIcon {...{ [size]: true }} /> {capitalize(size)}
-                  </Text>
-                  <br />
-                </div>
-              ))}
-            </Section>
-          </Card>
+          <Columns>
+            {[StarIcon, ProfileIcon, HeartIcon, ThumbsUpIcon].map((IconComponent, index) => (
+              <Card key={index}>
+                <Section>
+                  {[
+                    'small',
+                    'substandard',
+                    'superstandard',
+                    'heading',
+                    'headline',
+                    'hero'
+                  ].map(size => (
+                    <div key={size}>
+                      <Text {...{ [size]: true }}>
+                        <IconComponent {...{ [size]: true }} /> {capitalize(size)}
+                      </Text>
+                      <br />
+                    </div>
+                  ))}
+                </Section>
+              </Card>
+            ))}
+          </Columns>
         </PageBlock>
 
         <PageBlock>
