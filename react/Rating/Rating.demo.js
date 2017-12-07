@@ -5,7 +5,8 @@ export default {
   title: 'Rating',
   component: Rating,
   initialProps: {
-    rating: 0
+    rating: 0,
+    substandard: true
   },
   options: [
     {

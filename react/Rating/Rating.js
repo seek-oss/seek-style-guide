@@ -55,8 +55,7 @@ const Rating = ({
       [starClassName]: starClassName,
       [styles.substandardStar]: substandard,
       [styles.superstandardStar]: superstandard,
-      [styles.headingStar]: heading,
-      [styles.scaledDownSvg]: showTextRating
+      [styles.headingStar]: heading
     }
   );
 

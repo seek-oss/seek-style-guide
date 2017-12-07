@@ -1,6 +1,7 @@
 import styles from './Playground.less';
 
 import React, { Component } from 'react';
+import capitalize from 'lodash/capitalize';
 
 import {
   TextField,
@@ -20,7 +21,8 @@ import {
   Secondary,
   Strong,
   Header,
-  Footer
+  Footer,
+  Rating
 } from 'seek-style-guide/react';
 
 import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
@@ -466,6 +468,54 @@ export default class Playground extends Component {
               </Section>
             </Card>
           </CardGroup>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Icons</Text>
+          </Section>
+          <Card>
+            <Section>
+              {[
+                'small',
+                'substandard',
+                'Default',
+                'standard',
+                'superstandard',
+                'heading',
+                'headline',
+                'hero'
+              ].map(size => (
+                <div key={size}>
+                  <Text {...{ [size]: true }}>
+                    <StarIcon {...{ [size]: true }} /> {capitalize(size)}
+                  </Text>
+                  <br />
+                </div>
+              ))}
+            </Section>
+          </Card>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Rating</Text>
+          </Section>
+          <Columns>
+            {[false, true].map((showTextRating, index) => (
+              <Card key={index}>
+                <Section>
+                  {['substandard', 'superstandard', 'heading'].map(size => (
+                    <div key={size}>
+                      <Rating rating={3.5} {...{ [size]: true }} showTextRating={showTextRating} />
+                      <Text {...{ [size]: true }}> {`${capitalize(size)}${showTextRating ? ' with text rating' : ''}`}</Text>
+                      <br />
+                    </div>
+                  ))}
+                </Section>
+              </Card>
+            ))}
+          </Columns>
         </PageBlock>
 
         <Footer linkRenderer={dummyLinkRenderer} />
