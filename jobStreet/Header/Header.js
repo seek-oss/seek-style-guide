@@ -41,6 +41,7 @@ class Header extends Component {
     const { username, language, country } = this.props;
     const { isNavActive } = this.state;
     const userLinks = links.getUserLinks(username);
+    const navLinks = links.getNavLinks(username);
     const messages = localization[`${language}-${country}`];
 
     return (
@@ -68,7 +69,7 @@ class Header extends Component {
                     [styles.navContainerHideOnMobile]: !isNavActive
                   })
                 }>
-                <Nav key={'navLinks'} links={links.navLinks} messages={messages} />
+                <Nav key={'navLinks'} links={navLinks} messages={messages} />
                 <Nav key={'userLinks'} links={userLinks} messages={messages} isRightAligned />
               </div>
             </div>

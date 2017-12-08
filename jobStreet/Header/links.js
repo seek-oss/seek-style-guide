@@ -1,4 +1,4 @@
-const navLinks = [
+const userLoggedOutNavLinks = [
   {
     href: 'header.homeLink',
     title: 'header.homeTitle',
@@ -10,7 +10,7 @@ const navLinks = [
     href: 'header.searchLink',
     title: 'header.searchTitle',
     text: 'header.searchText',
-    linkIsActive: true,
+    isActive: true,
     hasIcon: false,
     childLinks: []
   },
@@ -43,7 +43,7 @@ const navLinks = [
     childLinks: []
   },
   {
-    href: '#',
+    href: 'header.moreLink',
     title: 'header.moreTitle',
     text: 'header.moreText',
     hasIcon: false,
@@ -67,6 +67,109 @@ const navLinks = [
     ]
   }
 ];
+
+const getNavLinks = (name, xToken) => {
+  if (name && name.length) {
+    return userLoggedOutNavLinks.map(link => {
+      if (link.text === 'header.myJobStreetText') {
+        return {
+          ...link,
+          href: '#',
+          childLinks: [
+            {
+              href: 'header.myProfileLink',
+              title: 'header.myProfileTitle',
+              text: 'header.myProfileText',
+              isSectionHeader: true
+            },
+            {
+              href: 'header.previewProfileLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.previewProfileTitle',
+              text: 'header.previewProfileText'
+            },
+            {
+              href: 'header.editProfileLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.editProfileTitle',
+              text: 'header.editProfileText'
+            },
+            {
+              href: 'header.onlineApplicationLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.onlineApplicationTitle',
+              text: 'header.onlineApplicationText'
+            },
+            {
+              href: 'header.interviewInvitationsLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.interviewInvitationsTitle',
+              text: 'header.interviewInvitationsText'
+            },
+            {
+              href: 'header.linaJobAlertLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.linaJobAlertTitle',
+              text: 'header.linaJobAlertText',
+              hasDivider: true
+            },
+            {
+              href: 'header.careerEnhancersLink',
+              title: 'header.careerEnhancersTitle',
+              text: 'header.careerEnhancersText',
+              isSectionHeader: true
+            },
+            {
+              href: 'header.priorityApplicationLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.priorityApplicationTitle',
+              text: 'header.priorityApplicationText'
+            },
+            {
+              href: 'header.englishAssessmentLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.englishAssessmentTitle',
+              text: 'header.englishAssessmenetText'
+            },
+            {
+              href: 'header.careerResourcesLink',
+              title: 'header.careerResourcesTitle',
+              text: 'header.careerResourcesText',
+              hasDivider: true
+            },
+            {
+              href: 'header.facebookFriendsLink',
+              hrefParams: {
+                x: xToken
+              },
+              title: 'header.facebookFriendsTitle',
+              text: 'header.facebookFriendsText',
+              hasIcon: true
+            }
+          ]
+        };
+      }
+
+      return { ...link };
+    });
+  }
+
+  return userLoggedOutNavLinks;
+};
 
 const userLoggedOutLinks = [
   {
@@ -96,13 +199,20 @@ const getUserLinks = (name, xToken) => {
       childLinks: [
         {
           href: 'header.logoutLink',
+          hrefParams: {
+            x: xToken
+          },
           title: 'header.logoutTitle',
           text: 'header.logoutText'
         },
         {
           href: 'header.helpLink',
+          hrefParams: {
+            x: xToken
+          },
           title: 'header.helpTitle',
-          text: 'header.helpText'
+          text: 'header.helpText',
+          hideOnMobile: true
         },
         {
           href: 'header.myAccountLink',
@@ -110,7 +220,17 @@ const getUserLinks = (name, xToken) => {
             id: xToken
           },
           title: 'header.myAccountTitle',
-          text: 'header.myAccountText'
+          text: 'header.myAccountText',
+          hideOnMobile: true
+        },
+        {
+          href: 'header.changePasswordLink',
+          hrefParams: {
+            x: xToken
+          },
+          title: 'header.changePasswordTitle',
+          text: 'header.changePasswordText',
+          onlyOnMobile: true
         }
       ]
     }
@@ -118,6 +238,6 @@ const getUserLinks = (name, xToken) => {
 };
 
 export default {
-  navLinks,
+  getNavLinks,
   getUserLinks
 };

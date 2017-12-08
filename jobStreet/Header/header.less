@@ -1,11 +1,12 @@
 @import (reference) "~seek-asia-style-guide/theme";
 
 .root {
-  width:100%;
+  width: 100%;
 }
 
 .container {
   font-family: @base-font-stack;
+  font-size: 14px;
   .rawText(@conversational-type-scale);
   background: @saWhite;
   position: relative;
@@ -85,7 +86,8 @@
   overflow: hidden;
   padding-top: 50px;
   transition: max-height 125ms ease-out;
-  max-height:1000px;
+  max-height: 1000px;
+  font-size: 14px;
 
   @media @desktop {
     height: 50px;
