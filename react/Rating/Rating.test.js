@@ -70,10 +70,14 @@ describe('Rating', () => {
       render(<Rating rating={5.0} starClassName={'star-class-name'} />);
       const hasAppliedSvgClassName = ({ props }) =>
         props.svgClassName === 'star-class-name';
-      return testStars(findStars(),
-        [hasAppliedSvgClassName, hasAppliedSvgClassName, hasAppliedSvgClassName,
-          hasAppliedSvgClassName, hasAppliedSvgClassName]
-       );
+
+      return testStars(findStars(), [
+        hasAppliedSvgClassName,
+        hasAppliedSvgClassName,
+        hasAppliedSvgClassName,
+        hasAppliedSvgClassName,
+        hasAppliedSvgClassName
+      ]);
     });
 
     it('should apply `className`', () => {

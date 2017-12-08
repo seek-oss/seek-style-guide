@@ -27,7 +27,8 @@ export default function Header({
   linkRenderer,
   activeTab,
   divider,
-  returnUrl
+  returnUrl,
+  onMenuToggle = () => {}
 }) {
   const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
   const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
@@ -68,6 +69,7 @@ export default function Header({
                   linkRenderer={linkRenderer}
                   returnUrl={returnUrl}
                   activeTab={activeTab}
+                  onMenuToggle={onMenuToggle}
                 />
               </div>
               <div className={styles.signInRegisterWrapper}>
@@ -132,7 +134,8 @@ Header.propTypes = {
     'Advice & Tips'
   ]),
   divider: PropTypes.bool,
-  returnUrl: PropTypes.string
+  returnUrl: PropTypes.string,
+  onMenuToggle: PropTypes.func
 };
 
 Header.defaultProps = {

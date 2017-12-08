@@ -50,6 +50,13 @@ export default {
             ...props,
             fullWidth: true
           })
+        },
+        {
+          label: 'Ghost',
+          transformProps: props => ({
+            ...props,
+            ghost: true
+          })
         }
       ]
     },

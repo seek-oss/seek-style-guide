@@ -1,14 +1,10 @@
 language: node_js
-cache:
-  directories:
-    - node_modules
 notifications:
   email: false
 before_script:
   - npm prune
 script:
   - npm test
-  - npm run git-to-sketch
 after_success:
   - if [ ${TRAVIS_SECURE_ENV_VARS} = "true" ]; then
       if [ -n "$TRAVIS_PULL_REQUEST_SHA" ]; then

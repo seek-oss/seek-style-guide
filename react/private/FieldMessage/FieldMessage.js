@@ -11,7 +11,6 @@ import TickCircleIcon from '../../TickCircleIcon/TickCircleIcon';
 import Text from '../../Text/Text';
 
 export default class FieldMessage extends Component {
-
   static displayName = 'FieldMessage';
 
   static propTypes = {

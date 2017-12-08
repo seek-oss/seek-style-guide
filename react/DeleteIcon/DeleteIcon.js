@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class DeleteIcon extends Component {
-
   static displayName = 'DeleteIcon';
 
   static propTypes = {
@@ -29,5 +28,4 @@ export default class DeleteIcon extends Component {
     );
     /* eslint-enable react/no-danger */
   }
-
 }

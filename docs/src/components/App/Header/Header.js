@@ -5,10 +5,11 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { Link } from 'react-router';
-import { PageBlock, Card, Section, Text } from 'seek-style-guide/react';
+import { Link } from 'react-router-dom';
+import { PageBlock, Card, Section, Text, ScreenReaderOnly } from 'seek-asia-style-guide/react';
 import Logo from './Logo/Logo';
-import demoSpecs from '../../../demoSpecs';
+import demoSpecExports from '../../../../../react/*/*.demo.js';
+const demoSpecs = demoSpecExports.map(x => x.default);
 
 export default class Header extends Component {
   constructor() {

@@ -4,13 +4,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
+import capitalize from 'lodash/capitalize';
 
 const tenant = process.env.SKU_TENANT;
 const isJobStreet = tenant === 'jobStreet';
 const isJobsDB = tenant === 'jobsDB';
 
 export default class Button extends Component {
-
   static displayName = 'Button';
 
   static propTypes = {
@@ -27,6 +27,7 @@ export default class Button extends Component {
       PropTypes.func,
       PropTypes.string
     ]),
+    ghost: PropTypes.bool,
     isJobsDB: PropTypes.bool,
     isJobStreet: PropTypes.bool,
     loading: PropTypes.bool,
@@ -35,25 +36,20 @@ export default class Button extends Component {
 
   static defaultProps = {
     className: '',
+    ghost: false,
     loading: false,
     fullWidth: false,
     component: 'button'
   };
 
-  constructor() {
-    super();
-
-    this.storeButtonReference = this.storeButtonReference.bind(this);
-  }
-
-  storeButtonReference(button) {
+  storeButtonReference = button => {
     if (button !== null) {
       this.button = button;
     }
   }
 
   render() {
-    const { color, className, loading, fullWidth, children, component, ...restProps } = this.props;
+    const { color, ghost, className, loading, fullWidth, children, component, ...restProps } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
@@ -66,7 +62,9 @@ export default class Button extends Component {
         [styles.root_completion]: color === 'completion',
         [styles.root_alert]: color === 'alert',
         [styles.root_highlight]: color === 'highlight',
-        [styles.root_isTransparent]: color === 'transparent'
+        [styles.root_isTransparent]: color === 'transparent',
+        [styles.root_isGhost]: ghost && color !== 'transparent',
+        [styles[`root_is${capitalize(color)}`]]: color
       }),
       disabled: loading,
       ref: this.storeButtonReference,
@@ -75,5 +73,4 @@ export default class Button extends Component {
 
     return React.createElement(component, combinedProps, children);
   }
-
 }

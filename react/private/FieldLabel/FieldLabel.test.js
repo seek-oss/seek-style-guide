@@ -19,7 +19,7 @@ describe('FieldLabel', () => {
   beforeEach(() => {
     errors = [];
 
-    sinon.stub(console, 'error', errorMessage => {
+    sinon.stub(console, 'error').callsFake(errorMessage => {
       errors.push(errorMessage);
     });
   });

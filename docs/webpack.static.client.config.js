@@ -1,11 +1,13 @@
+// Alias 'seek-style-guide' so 'seek-style-guide-webpack' works correctly
 const path = require('path');
+require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '..'));
+
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const autoprefixerConfig = require('../config/autoprefixer.config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const decorateClientConfig = require('../webpack').decorateClientConfig;
+const decorateClientConfig = require('seek-style-guide-webpack').decorateClientConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
-const failPlugin = require('webpack-fail-plugin');
 
 const appCss = new ExtractTextPlugin('app.css');
 
@@ -25,21 +27,34 @@ const config = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
+        enforce: 'pre',
         test: /(?!\.css)\.js$/,
-        loader: 'babel',
-        query: babelConfig,
-        include: appPaths
+        include: appPaths,
+        use: {
+          loader: 'import-glob'
+        }
       },
       {
         test: /\.js$/,
-        loader: 'babel',
-        query: {
-          babelrc: false,
-          presets: ['es2015']
-        },
-        include: /node_modules/
+        include: appPaths,
+        use: {
+          loader: 'babel-loader',
+          options: babelConfig
+        }
+      },
+      {
+        test: /\.js$/,
+        include: /node_modules/,
+        exclude: /canvg-fixed/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            presets: ['env']
+          }
+        }
       },
       {
         test: /\.css\.js$/,
@@ -48,24 +63,47 @@ const config = {
       },
       {
         test: /\.less$/,
-        loader: appCss.extract('style', 'css?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!less'),
-        include: appPaths
+        include: appPaths,
+        loader: appCss.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]'
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [autoprefixer(autoprefixerConfig)]
+              }
+            },
+            {
+              loader: 'less-loader'
+            }
+          ]
+        }),
       },
       {
         test: /\.svg$/,
-        loader: 'raw!svgo',
-        include: appPaths
+        include: appPaths,
+        use: [
+          {
+            loader: 'raw-loader'
+          },
+          {
+            loader: 'svgo-loader'
+          }
+        ]
       }
     ]
   },
 
   resolve: {
-    modulesDirectories: ['node_modules', 'wip_modules', 'components']
+    modules: ['node_modules', 'wip_modules', 'components']
   },
-
-  postcss: [
-    autoprefixer(autoprefixerConfig)
-  ],
 
   plugins: [
     new webpack.DefinePlugin({
@@ -80,8 +118,7 @@ const config = {
       compress: {
         warnings: false
       }
-    }),
-    failPlugin
+    })
   ],
 
   stats: { children: false }

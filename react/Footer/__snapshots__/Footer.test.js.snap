@@ -122,9 +122,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -214,7 +212,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -225,9 +223,9 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -236,9 +234,9 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -248,9 +246,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -483,9 +479,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -556,6 +550,17 @@ exports[`Footer: should render when authenticated 1`] = `
                       Ximble
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -610,9 +615,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -919,9 +922,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -1011,7 +1012,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -1022,9 +1023,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -1033,9 +1034,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -1045,9 +1046,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -1280,9 +1279,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -1353,6 +1350,17 @@ exports[`Footer: should render when authentication is pending 1`] = `
                       Ximble
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -1407,9 +1415,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -1716,9 +1722,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -1808,7 +1812,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -1819,9 +1823,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -1830,9 +1834,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -1842,9 +1846,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -2077,9 +2079,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -2150,6 +2150,17 @@ exports[`Footer: should render when unauthenticated 1`] = `
                       Ximble
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -2204,9 +2215,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -2513,9 +2522,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -2605,7 +2612,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -2616,9 +2623,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -2627,9 +2634,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -2639,9 +2646,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -2874,9 +2879,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerServicesToggle"
@@ -2947,6 +2950,17 @@ exports[`Footer: should render with locale of AU 1`] = `
                       Ximble
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="link"
+                      data-analytics="toolbar:sparkhire"
+                      href="https://anz.sparkhire.com/"
+                    >
+                      Spark Hire
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -3001,9 +3015,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"
@@ -3299,9 +3311,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="PartnerSitesToggle"
@@ -3391,7 +3401,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:about+seek"
-                  href="/investor/about-us"
+                  href="/about"
                 >
                   About SEEK
                 </a>
@@ -3402,9 +3412,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:media"
-                  href="/investor/news-media"
+                  href="/about/news"
                 >
-                  Media
+                  Newsroom
                 </a>
               </li>
               <li
@@ -3413,9 +3423,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:investor+centre"
-                  href="https://ir.seek.com.au"
+                  href="/about/investors"
                 >
-                  Investor centre
+                  Investors
                 </a>
               </li>
               <li
@@ -3425,9 +3435,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="InternationalPartnersToggle"
@@ -3704,9 +3712,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   class="toggle"
                   id="SocialToggle"
                   type="checkbox"
-                >
-                  
-                </input>
+                />
                 <label
                   class="toggleLink toggleLabel"
                   for="SocialToggle"

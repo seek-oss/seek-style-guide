@@ -18,7 +18,6 @@ function combineClassNames(props = {}, ...classNames) {
 }
 
 export default class Textarea extends Component {
-
   static displayName = 'Textarea';
 
   static propTypes = {
@@ -142,5 +141,4 @@ export default class Textarea extends Component {
       </div>
     );
   }
-
 }

@@ -1,3 +1,9 @@
+@import (reference) "~seek-style-guide/theme";
+
 :global(__standalone_css_selector_prefix__) {
   @import "~seek-style-guide/react/StyleGuideProvider/reset";
+
+  .root {
+    .provider();
+  }
 }

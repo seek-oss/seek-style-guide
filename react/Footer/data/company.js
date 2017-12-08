@@ -1,19 +1,19 @@
 export default [
   {
     name: 'About SEEK',
-    href: '/investor/about-us',
+    href: '/about',
     analytics: 'toolbar:about+seek',
     secondary: true
   },
   {
-    name: 'Media',
-    href: '/investor/news-media',
+    name: 'Newsroom',
+    href: '/about/news',
     analytics: 'toolbar:media',
     secondary: true
   },
   {
-    name: 'Investor centre',
-    href: 'https://ir.seek.com.au',
+    name: 'Investors',
+    href: '/about/investors',
     analytics: 'toolbar:investor+centre',
     secondary: true
   }
@@ -126,5 +126,10 @@ export const services = [
     name: 'Ximble',
     href: 'https://www.ximble.com',
     analytics: 'toolbar:ximble'
+  },
+  {
+    name: 'Spark Hire',
+    href: 'https://anz.sparkhire.com/',
+    analytics: 'toolbar:sparkhire'
   }
 ];

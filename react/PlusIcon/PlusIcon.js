@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class PlusIcon extends Component {
-
   static displayName = 'PlusIcon';
 
   static propTypes = {
@@ -29,5 +28,4 @@ export default class PlusIcon extends Component {
     );
     /* eslint-enable react/no-danger */
   }
-
 }
