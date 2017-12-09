@@ -1,207 +1,40 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+@linkDesktopColor: #fff;
+@linkDesktopOnHoverColor: #ccc;
+@secondaryLinkDesktopColor: #999;
+@secondaryLinkDesktopOnHoverColor: #262626;
+@linkMobileColor: #1c3f94;
+@linkMobileOnHoverColor: #f5f5f5;
+@itemFocusedBackgroundColor: #142d69;
+
 .container {
   padding: 0 18px;
-
-  @media(min-width: 769px) {
-    flex:0 0 auto;
+  @media @desktop {
     padding: 0;
   }
 }
 
-.link {
-  line-height: 50px;
-  display: block;
-  text-decoration: none;
-  font-weight: 400;
-  color: #1C3F94;
-
-  @media (min-width: 990px) {
-    padding: 0 10px;
-  }
-
-  @media (min-width: 769px) {
-    display: inline-block;
-    line-height: 50px;
-    padding: 0 10px;
-    color: #FFF;
-
-    &:hover,
-    &:focus {
-      color: #CCC;
-    }
-  }
-}
-
-.dropdownLink {
-  line-height: 36px;
-  text-decoration: none;
-
-  @media(min-width: 769px) {
-    display: block;
-    padding: 0 20px;
-    color: #9D9D9D;
-    white-space: nowrap;
-
-    &:hover,
-    &:focus {
-      color: #333;
-      background: #F7F7F7;
-    }
-  }
-}
-
-.hasDivider {
-  padding-bottom: 9px;
-  margin-bottom: 9px;
-  border-bottom: 1px solid #CCC;
-}
-
-.sectionHeader {
-  @media(min-width: 769px) {
-    padding: 0 20px;
-    line-height: 36px;
-    font-weight: 700;
-    color: gray;
-  }
-}
-
-.dropdownItem {
-  display: block;
-  width: 100%;
-  &:hover,
-  &:focus {
-    color: #F5F5F7;
-  }
-}
-
-.linkIsActive {
-  font-weight: bold;
-}
-
-.linkHideOnMobile {
-  display: none;
-
-  @media(min-width: 769px) {
-    display: inline-block;
-  }
-}
-
-.linkOnlyOnMobile {
-  display: inline-block;
-
-  @media(min-width: 769px) {
-    display: none;
-  }
-}
-
-.fbIcon {
-  position: relative;
-  top: 2px;
-  margin-right: 5px;
-}
-
-.item {
-  @media(min-width: 769px) {
-    display: inline-block;
-    position: relative;
-  }
-}
-
-.itemHasDropdown {
-  & .link {
-    &:after {
-      display: inline-block;
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 4px 4px 0 4px;
-      border-color: transparent;
-      border-top-color: #1c3f94;
-      position: relative;
-      top: -3px;
-      left: 6px;
-
-      @media(min-width: 769px) {
-        border-top-color: #fff;
-      }
-    }
-
-    &:hover:after {
-      border-top-color: #142d69;
-
-      @media(min-width: 769px) {
-        border-top-color: #f7f7f7;
-      }
-    }
-  }
-}
-
-.itemShowDropdown {
-  @media(min-width: 769px) {
-    background: #142d69;
-    & .link:after {
-      border-top-color: #f7f7f7;
-    }
-  }
-
-  & .dropdownList {
-    display: block;
-  }
-}
-
-.dropdownList {
-  display: none;
-
-  @media(min-width: 769px) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 160px;
-    padding: 5px 0;
-    background: #fff;
-    border: 1px solid #F5F5F7;
-    border-radius: 0 0 3px 3px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    z-index: 1;
-  }
-}
-
 /*
-  Right aligned is used for the user navigation menu on the right hand side
-*/
-.isRightAligned {
+ * Right aligned is used for the user navigation menu on the right hand side
+ */
+.rightAligned {
   padding-bottom: 10px;
-
+  padding-top: 10px;
   & .dropdownLink {
     padding-left: 20px;
   }
-
-  & .itemShowDropdown {
-    & .link:after {
-      border-top-color: #757575;
-    }
-    & .dropdownList {
-      display: inline;
-    }
-  }
-
-  @media(min-width: 769px) {
+  @media @desktop {
     padding-bottom: 0;
-
-    & .itemShowDropdown {
-      background: #142d69;
-      & .link:after {
-        border-top-color: #f7f7f7;
-      }
-      & .dropdownList {
-        display: block;
-      }
+    padding-top: 0;
+    & .dropdownList {
+      right: 0;
+      left: auto;
     }
     & .item {
       &:after {
         content: '|';
         display: inline-block;
-        color: #fff;
       }
       &:last-child {
         &:after {
@@ -209,9 +42,140 @@
         }
       }
     }
-    & .dropdownList {
-      right: 0;
-      left: auto;
+    & .link {
+      display: inline-block;
     }
+  }
+}
+
+.item {
+  @media @desktop {
+    display: inline-block;
+    position: relative;
+    color: @linkDesktopColor;
+  }
+}
+
+.itemHasDropdown {
+  /*
+   * For the downward poiting arrow
+   */
+  & .link {
+    &:after {
+      display: inline-block;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: @grid-base;
+      border-bottom-width: 0px;
+      border-color: transparent;
+      border-top-color: @linkMobileColor;
+      position: relative;
+      top: -3px;
+      left: 6px;
+
+      @media @desktop {
+        border-top-color: @linkDesktopColor;
+      }
+    }
+
+    &:hover:after,
+    &:focus:after {
+      @media @desktop {
+        border-top-color: @linkDesktopOnHoverColor;
+      }
+    }
+  }
+}
+
+.itemShowDropdown {
+  & .dropdownList {
+    display: block;
+  }
+  @media @desktop {
+    background: @itemFocusedBackgroundColor;
+  }
+}
+
+.link {
+  line-height: 40px;
+  display: block;
+  text-decoration: none;
+  color: @linkMobileColor;
+  @media @desktop {
+    line-height: 50px;
+    padding: 0 10px;
+    color: @linkDesktopColor;
+    &:hover,
+    &:focus {
+      color: @linkDesktopOnHoverColor;
+    }
+  }
+}
+
+.linkIsActive {
+  font-weight: @sk-bold;
+}
+
+.dropdownList {
+  display: none;
+
+  @media @desktop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    padding: 5px 0;
+    background: @saWhite;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    z-index: 1;
+  }
+}
+
+.dropdownLink {
+  line-height: 36px;
+  display: block;
+  text-decoration: none;
+  color: @linkMobileColor;
+
+  &:hover,
+  &:focus {
+    background: @linkMobileOnHoverColor;
+    opacity: .8;
+  }
+
+  @media @desktop {
+    padding: 0 20px;
+    white-space: nowrap;
+    color: @secondaryLinkDesktopColor;
+
+    &:hover,
+    &:focus {
+      color: @secondaryLinkDesktopOnHoverColor;
+      opacity: 1;
+    }
+
+    &.hasDivider {
+      border-bottom: 1px solid @linkDesktopOnHoverColor;
+    }
+  }
+}
+
+.linkHideOnMobile {
+  display: none;
+
+  @media @desktop {
+    display: block;
+  }
+}
+
+.linkOnlyOnMobile {
+  display: block;
+
+  @media @desktop {
+    display: none;
   }
 }

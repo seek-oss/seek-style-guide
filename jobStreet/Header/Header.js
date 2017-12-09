@@ -38,7 +38,7 @@ class Header extends Component {
   }
 
   render() {
-    const { username, language, country } = this.props;
+    const { username, language, country, authenticationStatus } = this.props;
     const { isNavActive } = this.state;
     const userLinks = links.getUserLinks(username);
     const navLinks = links.getNavLinks(username);
@@ -70,7 +70,12 @@ class Header extends Component {
                   })
                 }>
                 <Nav key={'navLinks'} links={navLinks} messages={messages} />
-                <Nav key={'userLinks'} links={userLinks} messages={messages} isRightAligned />
+                {
+                  authenticationStatus === 'pending' ||
+                  (
+                    <Nav key={'userLinks'} links={userLinks} messages={messages} isRightAligned />
+                  )
+                }
               </div>
             </div>
             <div className={styles.bannerWrapper}>
@@ -97,7 +102,8 @@ class Header extends Component {
 Header.propTypes = {
   username: PropTypes.string,
   language: PropTypes.string.isRequired,
-  country: PropTypes.string.isRequired
+  country: PropTypes.string.isRequired,
+  authenticationStatus: PropTypes.string.isRequired
 };
 
 export default Header;

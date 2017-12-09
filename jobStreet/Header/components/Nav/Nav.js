@@ -20,7 +20,7 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDropdownVisible: {}
+      isDropdownVisible: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -29,27 +29,12 @@ class Nav extends Component {
     document.removeEventListener('click', this.handleClick, false);
   }
 
-  getDropdownVisibility(key) {
-    return this.state.isDropdownVisible && this.state.isDropdownVisible[key];
-  }
-
-  setDropdownVisibility(key, isVisible) {
+  setDropdownVisibility(isVisible) {
     const eventAction = isVisible ? 'addEventListener' : 'removeEventListener';
     document[eventAction]('click', this.handleClick, false);
-    const dropdownVisibleTracker = {};
-    dropdownVisibleTracker[key] = isVisible;
     this.setState({
-      isDropdownVisible: dropdownVisibleTracker
+      isDropdownVisible: isVisible
     });
-  }
-
-  clearAllDropdownVisibility() {
-    const dropdownVisibleStates = this.state.isDropdownVisible;
-    if (dropdownVisibleStates) {
-      for (const key in dropdownVisibleStates) {
-        this.setDropdownVisibility(key, false);
-      }
-    }
   }
 
   handleClick(e) {
@@ -60,21 +45,21 @@ class Nav extends Component {
 
   render() {
     const { links, messages, isRightAligned } = this.props;
+    const { isDropdownVisible } = this.state;
     return (
       <ul
         className={
           classNames({
             [styles.container]: true,
-            [styles.isRightAligned]: isRightAligned
+            [styles.rightAligned]: isRightAligned
           })
         }>
         {
           links.map(link => {
             const hasChildren = Boolean(link.childLinks.length);
-            const isVisible = hasChildren ? this.getDropdownVisibility(link.href) : false;
             const clickHandler = hasChildren ?
               e => {
-                if (!isVisible) {
+                if (!isDropdownVisible) {
                   this.setDropdownVisibility(link.href, true);
                 }
                 e.preventDefault();
@@ -88,7 +73,7 @@ class Nav extends Component {
                   classNames({
                     [styles.item]: true,
                     [styles.itemHasDropdown]: hasChildren,
-                    [styles.itemShowDropdown]: hasChildren && isVisible
+                    [styles.itemShowDropdown]: hasChildren && isDropdownVisible
                   })
                 }>
                 <a
@@ -117,33 +102,20 @@ class Nav extends Component {
                       }}>
                       {
                         link.childLinks.map(childLink => (
-                          <li
-                            key={childLink.text}
-                            className={styles.dropdownItem}>
-                            {
-                              childLink.isSectionHeader ?
-                                (
-                                  <span className={styles.sectionHeader}>
-                                    {messages[childLink.text]}
-                                  </span>
-                                ) :
-                                (
-                                  <a
-                                    className={
-                                      classNames({
-                                        [styles.dropdownLink]: true,
-                                        [styles.linkHideOnMobile]: childLink.hideOnMobile,
-                                        [styles.linkOnlyOnMobile]: childLink.onlyOnMobile,
-                                        [styles.hasDivider]: childLink.hasDivider
-                                      })
-                                    }
-                                    href={messages[childLink.href]}
-                                    title={messages[childLink.title]}>
-                                    {childLink.hasIcon && <FbIcon className={styles.fbIcon} />}
-                                    <span>{messages[childLink.text]}</span>
-                                  </a>
-                                )
-                            }
+                          <li key={childLink.text}>
+                            <a
+                              className={
+                                classNames({
+                                  [styles.dropdownLink]: true,
+                                  [styles.linkHideOnMobile]: childLink.hideOnMobile,
+                                  [styles.linkOnlyOnMobile]: childLink.onlyOnMobile,
+                                  [styles.hasDivider]: childLink.hasDivider
+                                })
+                              }
+                              href={messages[childLink.href]}
+                              title={messages[childLink.title]}>
+                              <span>{messages[childLink.text]}</span>
+                            </a>
                           </li>
                         ))
                       }

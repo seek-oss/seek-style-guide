@@ -23,8 +23,9 @@ export default {
   title: 'Header',
   component: Header,
   initialProps: {
-    authenticationStatus: 'authenticated',
-    username: 'Oliver Q.',
+    // authenticationStatus: 'authenticated',
+    // username: 'Oliver Q.',
+    authenticationStatus: 'unauthenticated',
     linkRenderer: makeDummyLinkRendererForPath(ROUTE),
     returnUrl: '/jobs',
     language: 'en',
