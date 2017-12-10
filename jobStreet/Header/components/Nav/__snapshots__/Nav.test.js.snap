@@ -1,0 +1,383 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobStreet navigation component should render supplied messages 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="header.homeText"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my"
+      onClick={[Function]}
+      title="Leading Job Site in Malaysia - Find Jobs in Malaysia"
+    >
+      <span>
+        Home
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.searchText"
+  >
+    <a
+      className="link linkIsActive"
+      href="https://srp-alpha.jobstreet.com"
+      onClick={[Function]}
+      title="Search Jobs @ Job Search JobStreet.com Malaysia"
+    >
+      <span>
+        Search Jobs
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.myJobStreetText"
+  >
+    <a
+      className="link"
+      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my"
+      onClick={[Function]}
+      title="Post Resume, Signup for Job Alert & Apply for Jobs @ MyJobStreet Malaysia"
+    >
+      <span>
+        MyJobStreet
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.companyProfilesText"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/companies"
+      onClick={[Function]}
+      title="JobStreet.com Malaysia - Company Profiles"
+    >
+      <span>
+        Company Profiles
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.careerInsightsText"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/career-insights"
+      onClick={[Function]}
+      title="JobStreet.com Malaysia - Career Insights"
+    >
+      <span>
+        Career Insights
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.jobStreetEducationText"
+  >
+    <a
+      className="link"
+      href="https://www.jobstreeteducation.com.my/"
+      onClick={[Function]}
+    >
+      <span>
+        Education
+      </span>
+    </a>
+  </li>
+  <li
+    className="item itemHasDropdown"
+    key="header.moreText"
+  >
+    <a
+      className="link linkHideOnMobile"
+      href="header.moreLink"
+      onClick={[Function]}
+      title=""
+    >
+      <span>
+        More
+      </span>
+    </a>
+    <ul
+      className="dropdownList"
+    >
+      <li
+        key="header.overseasJobsText"
+      >
+        <a
+          className="dropdownLink"
+          href="https://www.jobstreet.com.my/en/job-search/browse/find-overseas-jobs"
+          title=""
+        >
+          <span>
+            Overseas Jobs
+          </span>
+        </a>
+      </li>
+      <li
+        key="header.freshGradJobsText"
+      >
+        <a
+          className="dropdownLink"
+          href="https://www.jobstreet.com.my/en/job-search/campus/job-vacancy.php"
+          title=""
+        >
+          <span>
+            Fresh Grad Jobs
+          </span>
+        </a>
+      </li>
+      <li
+        key="header.classifiedJobsText"
+      >
+        <a
+          className="dropdownLink"
+          href="https://www.jobstreet.com.my/en/job-search/classified-ads.php"
+          title=""
+        >
+          <span>
+            Classified Jobs
+          </span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+`;
+
+exports[`JobStreet navigation component should render supplied messages on the right 1`] = `
+<ul
+  className="container rightAligned"
+>
+  <li
+    className="item"
+    key="header.loginText"
+  >
+    <a
+      className="link"
+      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my&language_code=3"
+      onClick={[Function]}
+      title=""
+    >
+      <span>
+        Log In
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.signUpText"
+  >
+    <a
+      className="link"
+      href="https://myjobstreet.jobstreet.com.my/registration/simple-signup.php?site=my&language_code=3"
+      onClick={[Function]}
+      title=""
+    >
+      <span>
+        Sign Up
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`JobStreet navigation component should render supplied navigation messages 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="header.homeText"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my"
+      onClick={[Function]}
+      title="Leading Job Site in Malaysia - Find Jobs in Malaysia"
+    >
+      <span>
+        Home
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.searchText"
+  >
+    <a
+      className="link linkIsActive"
+      href="https://srp-alpha.jobstreet.com"
+      onClick={[Function]}
+      title="Search Jobs @ Job Search JobStreet.com Malaysia"
+    >
+      <span>
+        Search Jobs
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.myJobStreetText"
+  >
+    <a
+      className="link"
+      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my"
+      onClick={[Function]}
+      title="Post Resume, Signup for Job Alert & Apply for Jobs @ MyJobStreet Malaysia"
+    >
+      <span>
+        MyJobStreet
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.companyProfilesText"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/companies"
+      onClick={[Function]}
+      title="JobStreet.com Malaysia - Company Profiles"
+    >
+      <span>
+        Company Profiles
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.careerInsightsText"
+  >
+    <a
+      className="link"
+      href="https://jobstreet.com.my/en/career-insights"
+      onClick={[Function]}
+      title="JobStreet.com Malaysia - Career Insights"
+    >
+      <span>
+        Career Insights
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.jobStreetEducationText"
+  >
+    <a
+      className="link"
+      href="https://www.jobstreeteducation.com.my/"
+      onClick={[Function]}
+    >
+      <span>
+        Education
+      </span>
+    </a>
+  </li>
+  <li
+    className="item itemHasDropdown"
+    key="header.moreText"
+  >
+    <a
+      className="link linkHideOnMobile"
+      href="header.moreLink"
+      onClick={[Function]}
+      title=""
+    >
+      <span>
+        More
+      </span>
+    </a>
+    <ul
+      className="dropdownList"
+    >
+      <li
+        key="header.overseasJobsText"
+      >
+        <a
+          className="dropdownLink"
+          href="https://www.jobstreet.com.my/en/job-search/browse/find-overseas-jobs"
+          title=""
+        >
+          <span>
+            Overseas Jobs
+          </span>
+        </a>
+      </li>
+      <li
+        key="header.freshGradJobsText"
+      >
+        <a
+          className="dropdownLink"
+          href="https://www.jobstreet.com.my/en/job-search/campus/job-vacancy.php"
+          title=""
+        >
+          <span>
+            Fresh Grad Jobs
+          </span>
+        </a>
+      </li>
+      <li
+        key="header.classifiedJobsText"
+      >
+        <a
+          className="dropdownLink"
+          href="https://www.jobstreet.com.my/en/job-search/classified-ads.php"
+          title=""
+        >
+          <span>
+            Classified Jobs
+          </span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+`;
+
+exports[`JobStreet navigation component should render supplied user navigation messages 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="header.loginText"
+  >
+    <a
+      className="link"
+      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my&language_code=3"
+      onClick={[Function]}
+      title=""
+    >
+      <span>
+        Log In
+      </span>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="header.signUpText"
+  >
+    <a
+      className="link"
+      href="https://myjobstreet.jobstreet.com.my/registration/simple-signup.php?site=my&language_code=3"
+      onClick={[Function]}
+      title=""
+    >
+      <span>
+        Sign Up
+      </span>
+    </a>
+  </li>
+</ul>
+`;
