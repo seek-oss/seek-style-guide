@@ -39,6 +39,7 @@ export { default as HeartIcon } from './HeartIcon/HeartIcon';
 export { default as HelpIcon } from './HelpIcon/HelpIcon';
 export { default as LinkedInIcon } from './LinkedInIcon/LinkedInIcon';
 export { default as MailIcon } from './MailIcon/MailIcon';
+export { default as JobMailNewStyleIcon } from './MailIcon/JobMailNewStyleIcon';
 export { default as PlusIcon } from './PlusIcon/PlusIcon';
 export { default as ProfileIcon } from './ProfileIcon/ProfileIcon';
 export { default as SearchIcon } from './SearchIcon/SearchIcon';
