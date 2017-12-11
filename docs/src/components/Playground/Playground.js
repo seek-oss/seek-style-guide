@@ -136,7 +136,7 @@ export default class Playground extends Component {
   render() {
     return (
       <div>
-        <JobStreetHeader user={{}} />
+        <JobStreetHeader language="en" country="my" user={{}} />
         <JobStreetFooter language="vi" country="vn" />
         <Header linkRenderer={dummyLinkRenderer} />
 
