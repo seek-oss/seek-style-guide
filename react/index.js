@@ -13,6 +13,7 @@ export { default as Rating } from './Rating/Rating';
 export { default as NavigationBar } from './NavigationBar/NavigationBar';
 
 export { default as JobCard } from './JobCard/JobCard';
+export { default as JobCardLoader } from './JobCardLoader/JobCardLoader';
 
 // Typography
 export { default as Critical } from './Critical/Critical';
