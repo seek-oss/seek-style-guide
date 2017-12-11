@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>job-mail-success-icon</title>
+    <g id="Final-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="job-mail-success-icon">
+            <g id="Illustration-Copy" transform="translate(6.000000, 4.000000)">
+                <g id="ic-envelope" transform="translate(0.000000, 14.000000)" stroke="#1D9EDE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <polygon id="Stroke-1" fill="#EDF6FB" points="0 43 63 43 63 0 0 0"></polygon>
+                    <polyline id="Stroke-3" points="0 0 31.4973191 22.6944444 63 0"></polyline>
+                </g>
+                <circle id="Oval" stroke="#1D9EDE" stroke-width="2" fill="#FFFFFF" cx="64" cy="15" r="15"></circle>
+                <path d="M47,67.5 C47,69.4331667 40.2844118,71 32,71 C23.7155882,71 17,69.4331667 17,67.5 C17,65.5668333 23.7155882,64 32,64 C40.2844118,64 47,65.5668333 47,67.5" id="Shadow" fill="#E1E1E1"></path>
+                <polyline id="ic-tick" stroke="#1D9EDE" stroke-width="3" stroke-linecap="square" points="57 16.4408289 61.5040895 20.9454 71.9566402 10.4928493"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
