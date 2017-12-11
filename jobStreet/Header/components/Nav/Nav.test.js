@@ -1,8 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Nav from './Nav';
-// import localization from '../../../localization';
-// import links from '../../links';
 
 describe('JobStreet navigation component', () => {
   it('should render supplied messages', () => {
