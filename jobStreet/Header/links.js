@@ -125,7 +125,7 @@ const getUserLinks = (name, xToken) => {
         {
           href: 'header.myAccountLink',
           hrefParams: {
-            id: xToken
+            x: xToken
           },
           title: 'header.myAccountTitle',
           text: 'header.myAccountText',

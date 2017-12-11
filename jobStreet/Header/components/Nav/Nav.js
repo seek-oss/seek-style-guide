@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import FbIcon from 'seek-asia-style-guide/react/FacebookIcon/FacebookIcon';
 import styles from './nav.less';
 
 const noop = i => i;
@@ -37,6 +36,16 @@ class Nav extends Component {
     });
   }
 
+  parseHrefWithHrefParams(href, hrefParams) {
+    let parsedHref = href;
+    if (hrefParams) {
+      for (const hrefParamKey in hrefParams) {
+        parsedHref = `${href}${hrefParamKey}=${hrefParams[hrefParamKey]}`;
+      }
+    }
+    return parsedHref;
+  }
+
   handleClick(e) {
     if (!this.dropdownNode.contains(e.target)) {
       this.setDropdownVisibility(false);
@@ -60,7 +69,7 @@ class Nav extends Component {
             const clickHandler = hasChildren ?
               e => {
                 if (!isDropdownVisible) {
-                  this.setDropdownVisibility(link.href, true);
+                  this.setDropdownVisibility(true);
                 }
                 e.preventDefault();
               } :
@@ -85,7 +94,12 @@ class Nav extends Component {
                     })
                   }
                   onClick={clickHandler}
-                  href={messages[link.href] || link.href}
+                  href={
+                    this.parseHrefWithHrefParams(
+                      messages[link.href] || link.href,
+                      link.hrefParams
+                    )
+                  }
                   title={messages[link.title]}>
 
                   <span>
@@ -112,7 +126,7 @@ class Nav extends Component {
                                   [styles.hasDivider]: childLink.hasDivider
                                 })
                               }
-                              href={messages[childLink.href]}
+                              href={this.parseHrefWithHrefParams(messages[childLink.href], childLink.hrefParams)}
                               title={messages[childLink.title]}>
                               <span>{messages[childLink.text]}</span>
                             </a>

@@ -1,155 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`JobStreet navigation component should render message with URL parameters 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="unitTest.testText"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?sfvFavorite=karin"
+      onClick={[Function]}
+      title="Buy SFV from Steam"
+    >
+      <span>
+        Buy now!
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`JobStreet navigation component should render message with child links 1`] = `
+<ul
+  className="container rightAligned"
+>
+  <li
+    className="item"
+    key="unitTest.testText"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?"
+      onClick={[Function]}
+      title="Buy SFV from Steam"
+    >
+      <span>
+        Buy now!
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
 exports[`JobStreet navigation component should render supplied messages 1`] = `
 <ul
   className="container"
 >
   <li
     className="item"
-    key="header.homeText"
+    key="unitTest.testText"
   >
     <a
       className="link"
-      href="https://jobstreet.com.my"
+      href="https://store.steampowered.com/?"
       onClick={[Function]}
-      title="Leading Job Site in Malaysia - Find Jobs in Malaysia"
+      title="Buy SFV from Steam"
     >
       <span>
-        Home
+        Buy now!
       </span>
     </a>
   </li>
   <li
     className="item"
-    key="header.searchText"
-  >
-    <a
-      className="link linkIsActive"
-      href="https://srp-alpha.jobstreet.com"
-      onClick={[Function]}
-      title="Search Jobs @ Job Search JobStreet.com Malaysia"
-    >
-      <span>
-        Search Jobs
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.myJobStreetText"
+    key="unitTest.testText1"
   >
     <a
       className="link"
-      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my"
+      href="https://store.steampowered.com/?"
       onClick={[Function]}
-      title="Post Resume, Signup for Job Alert & Apply for Jobs @ MyJobStreet Malaysia"
+      title="Buy SFV Arcade from Steam"
     >
       <span>
-        MyJobStreet
+        Pre-order now!
       </span>
     </a>
-  </li>
-  <li
-    className="item"
-    key="header.companyProfilesText"
-  >
-    <a
-      className="link"
-      href="https://jobstreet.com.my/en/companies"
-      onClick={[Function]}
-      title="JobStreet.com Malaysia - Company Profiles"
-    >
-      <span>
-        Company Profiles
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.careerInsightsText"
-  >
-    <a
-      className="link"
-      href="https://jobstreet.com.my/en/career-insights"
-      onClick={[Function]}
-      title="JobStreet.com Malaysia - Career Insights"
-    >
-      <span>
-        Career Insights
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.jobStreetEducationText"
-  >
-    <a
-      className="link"
-      href="https://www.jobstreeteducation.com.my/"
-      onClick={[Function]}
-    >
-      <span>
-        Education
-      </span>
-    </a>
-  </li>
-  <li
-    className="item itemHasDropdown"
-    key="header.moreText"
-  >
-    <a
-      className="link linkHideOnMobile"
-      href="header.moreLink"
-      onClick={[Function]}
-      title=""
-    >
-      <span>
-        More
-      </span>
-    </a>
-    <ul
-      className="dropdownList"
-    >
-      <li
-        key="header.overseasJobsText"
-      >
-        <a
-          className="dropdownLink"
-          href="https://www.jobstreet.com.my/en/job-search/browse/find-overseas-jobs"
-          title=""
-        >
-          <span>
-            Overseas Jobs
-          </span>
-        </a>
-      </li>
-      <li
-        key="header.freshGradJobsText"
-      >
-        <a
-          className="dropdownLink"
-          href="https://www.jobstreet.com.my/en/job-search/campus/job-vacancy.php"
-          title=""
-        >
-          <span>
-            Fresh Grad Jobs
-          </span>
-        </a>
-      </li>
-      <li
-        key="header.classifiedJobsText"
-      >
-        <a
-          className="dropdownLink"
-          href="https://www.jobstreet.com.my/en/job-search/classified-ads.php"
-          title=""
-        >
-          <span>
-            Classified Jobs
-          </span>
-        </a>
-      </li>
-    </ul>
   </li>
 </ul>
 `;
@@ -159,225 +86,36 @@ exports[`JobStreet navigation component should render supplied messages on the r
   className="container rightAligned"
 >
   <li
-    className="item"
-    key="header.loginText"
-  >
-    <a
-      className="link"
-      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my&language_code=3"
-      onClick={[Function]}
-      title=""
-    >
-      <span>
-        Log In
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.signUpText"
-  >
-    <a
-      className="link"
-      href="https://myjobstreet.jobstreet.com.my/registration/simple-signup.php?site=my&language_code=3"
-      onClick={[Function]}
-      title=""
-    >
-      <span>
-        Sign Up
-      </span>
-    </a>
-  </li>
-</ul>
-`;
-
-exports[`JobStreet navigation component should render supplied navigation messages 1`] = `
-<ul
-  className="container"
->
-  <li
-    className="item"
-    key="header.homeText"
-  >
-    <a
-      className="link"
-      href="https://jobstreet.com.my"
-      onClick={[Function]}
-      title="Leading Job Site in Malaysia - Find Jobs in Malaysia"
-    >
-      <span>
-        Home
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.searchText"
-  >
-    <a
-      className="link linkIsActive"
-      href="https://srp-alpha.jobstreet.com"
-      onClick={[Function]}
-      title="Search Jobs @ Job Search JobStreet.com Malaysia"
-    >
-      <span>
-        Search Jobs
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.myJobStreetText"
-  >
-    <a
-      className="link"
-      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my"
-      onClick={[Function]}
-      title="Post Resume, Signup for Job Alert & Apply for Jobs @ MyJobStreet Malaysia"
-    >
-      <span>
-        MyJobStreet
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.companyProfilesText"
-  >
-    <a
-      className="link"
-      href="https://jobstreet.com.my/en/companies"
-      onClick={[Function]}
-      title="JobStreet.com Malaysia - Company Profiles"
-    >
-      <span>
-        Company Profiles
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.careerInsightsText"
-  >
-    <a
-      className="link"
-      href="https://jobstreet.com.my/en/career-insights"
-      onClick={[Function]}
-      title="JobStreet.com Malaysia - Career Insights"
-    >
-      <span>
-        Career Insights
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.jobStreetEducationText"
-  >
-    <a
-      className="link"
-      href="https://www.jobstreeteducation.com.my/"
-      onClick={[Function]}
-    >
-      <span>
-        Education
-      </span>
-    </a>
-  </li>
-  <li
     className="item itemHasDropdown"
-    key="header.moreText"
+    key="unitTest.testText"
   >
     <a
-      className="link linkHideOnMobile"
-      href="header.moreLink"
+      className="link"
+      href="https://store.steampowered.com/?"
       onClick={[Function]}
-      title=""
+      title="Buy SFV from Steam"
     >
       <span>
-        More
+        Buy now!
       </span>
     </a>
     <ul
       className="dropdownList"
     >
       <li
-        key="header.overseasJobsText"
+        key="unitTest.testText1"
       >
         <a
           className="dropdownLink"
-          href="https://www.jobstreet.com.my/en/job-search/browse/find-overseas-jobs"
-          title=""
+          href="https://store.steampowered.com/?"
+          title="Buy SFV Arcade from Steam"
         >
           <span>
-            Overseas Jobs
-          </span>
-        </a>
-      </li>
-      <li
-        key="header.freshGradJobsText"
-      >
-        <a
-          className="dropdownLink"
-          href="https://www.jobstreet.com.my/en/job-search/campus/job-vacancy.php"
-          title=""
-        >
-          <span>
-            Fresh Grad Jobs
-          </span>
-        </a>
-      </li>
-      <li
-        key="header.classifiedJobsText"
-      >
-        <a
-          className="dropdownLink"
-          href="https://www.jobstreet.com.my/en/job-search/classified-ads.php"
-          title=""
-        >
-          <span>
-            Classified Jobs
+            Pre-order now!
           </span>
         </a>
       </li>
     </ul>
-  </li>
-</ul>
-`;
-
-exports[`JobStreet navigation component should render supplied user navigation messages 1`] = `
-<ul
-  className="container"
->
-  <li
-    className="item"
-    key="header.loginText"
-  >
-    <a
-      className="link"
-      href="https://myjobstreet.jobstreet.com.my/home/login.php?site=my&language_code=3"
-      onClick={[Function]}
-      title=""
-    >
-      <span>
-        Log In
-      </span>
-    </a>
-  </li>
-  <li
-    className="item"
-    key="header.signUpText"
-  >
-    <a
-      className="link"
-      href="https://myjobstreet.jobstreet.com.my/registration/simple-signup.php?site=my&language_code=3"
-      onClick={[Function]}
-      title=""
-    >
-      <span>
-        Sign Up
-      </span>
-    </a>
   </li>
 </ul>
 `;

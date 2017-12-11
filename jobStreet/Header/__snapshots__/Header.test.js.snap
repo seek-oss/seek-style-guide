@@ -393,7 +393,7 @@ exports[`JobStreet header component Authentication status should render with aut
                       "hideOnMobile": true,
                       "href": "header.myAccountLink",
                       "hrefParams": Object {
-                        "id": undefined,
+                        "x": undefined,
                       },
                       "text": "header.myAccountText",
                       "title": "header.myAccountTitle",

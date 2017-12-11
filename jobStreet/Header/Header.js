@@ -38,10 +38,10 @@ class Header extends Component {
   }
 
   render() {
-    const { username, language, country, authenticationStatus } = this.props;
+    const { username, userToken, language, country, authenticationStatus } = this.props;
     const { isNavActive } = this.state;
-    const userLinks = links.getUserLinks(username);
-    const navLinks = links.getNavLinks(username);
+    const userLinks = links.getUserLinks(username, userToken);
+    const navLinks = links.getNavLinks(username, userToken);
     const messages = localization[`${language}-${country}`];
 
     return (
@@ -101,6 +101,7 @@ class Header extends Component {
 
 Header.propTypes = {
   username: PropTypes.string,
+  userToken: PropTypes.string,
   language: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
   authenticationStatus: PropTypes.string.isRequired
