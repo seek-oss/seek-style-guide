@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobCardLoader should render with defaults 1`] = `
+<Card
+  className="root"
+>
+  <div
+    className="loader"
+  >
+    <div
+      className="animatedBackground"
+    >
+      <div
+        className="backgroundMasker companyRight"
+      />
+      <div
+        className="backgroundMasker companyBottom"
+      />
+      <div
+        className="backgroundMasker headerRight"
+      />
+      <div
+        className="backgroundMasker headerBottom"
+      />
+      <div
+        className="backgroundMasker desc1Right"
+      />
+      <div
+        className="backgroundMasker desc1Bottom"
+      />
+      <div
+        className="backgroundMasker desc2Right"
+      />
+      <div
+        className="backgroundMasker desc2Bottom"
+      />
+      <div
+        className="backgroundMasker locationRight"
+      />
+      <div
+        className="backgroundMasker locationBottom"
+      />
+      <div
+        className="backgroundMasker salaryRight"
+      />
+      <div
+        className="backgroundMasker salaryBottom"
+      />
+      <div
+        className="backgroundMasker dateRight"
+      />
+    </div>
+  </div>
+</Card>
+`;
