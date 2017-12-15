@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Rating should render correct size when size is: heading 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={true}
   raw={true}
   regular={true}
@@ -64,12 +63,11 @@ exports[`Rating should render correct size when size is: heading 1`] = `
       svgClassName="headingStar"
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct size when size is: heading and rating text is shown 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={true}
   raw={true}
   regular={true}
@@ -136,12 +134,11 @@ exports[`Rating should render correct size when size is: heading and rating text
       4
     </span>
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct size when size is: substandard 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -203,12 +200,11 @@ exports[`Rating should render correct size when size is: substandard 1`] = `
       svgClassName="substandardStar"
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct size when size is: substandard and rating text is shown 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -275,12 +271,11 @@ exports[`Rating should render correct size when size is: substandard and rating 
       4
     </span>
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct size when size is: superstandard 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -342,12 +337,11 @@ exports[`Rating should render correct size when size is: superstandard 1`] = `
       svgClassName="superstandardStar"
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct size when size is: superstandard and rating text is shown 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -414,12 +408,11 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       4
     </span>
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct star rating when rating is: 0 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -481,12 +474,11 @@ exports[`Rating should render correct star rating when rating is: 0 1`] = `
       svgClassName=""
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -548,12 +540,11 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
       svgClassName=""
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -615,12 +606,11 @@ exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
       svgClassName=""
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -682,12 +672,11 @@ exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
       svgClassName=""
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -749,12 +738,11 @@ exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
       svgClassName=""
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render correct star rating when rating is: 5 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -816,12 +804,11 @@ exports[`Rating should render correct star rating when rating is: 5 1`] = `
       svgClassName=""
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render with className 1`] = `
-<Text
-  baseline={true}
+<Component
   className="root-class-name"
   heading={false}
   raw={true}
@@ -884,12 +871,11 @@ exports[`Rating should render with className 1`] = `
       svgClassName=""
     />
   </span>
-</Text>
+</Component>
 `;
 
 exports[`Rating should render with starClassName 1`] = `
-<Text
-  baseline={true}
+<Component
   heading={false}
   raw={true}
   regular={true}
@@ -951,5 +937,5 @@ exports[`Rating should render with starClassName 1`] = `
       svgClassName="star-class-name"
     />
   </span>
-</Text>
+</Component>
 `;

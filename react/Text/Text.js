@@ -10,7 +10,9 @@ import stylesSecondary from '../Secondary/Secondary.less';
 import stylesStrong from '../Strong/Strong.less';
 import stylesRegular from '../Regular/Regular.less';
 
-export default function Text({
+import withTextProps from '../private/withTextProps';
+
+const Text = ({
   children,
   className,
   small,
@@ -29,37 +31,35 @@ export default function Text({
   light,
   baseline,
   ...restProps
-}) {
-  return (
+}) => (
+  <span
+    {...restProps}
+    className={classnames({
+      [styles.root]: true,
+      [className]: className,
+      [styles.small]: small,
+      [styles.substandard]: substandard,
+      [styles.superstandard]: superstandard,
+      [styles.subheading]: subheading,
+      [styles.headline]: headline,
+      [styles.heading]: heading,
+      [styles.hero]: hero,
+      [styles.raw]: raw,
+      [styles.baseline]: baseline
+    })}>
     <span
-      {...restProps}
       className={classnames({
-        [styles.root]: true,
-        [className]: className,
-        [styles.small]: small,
-        [styles.substandard]: substandard,
-        [styles.superstandard]: superstandard,
-        [styles.subheading]: subheading,
-        [styles.headline]: headline,
-        [styles.heading]: heading,
-        [styles.hero]: hero,
-        [styles.raw]: raw,
-        [styles.baseline]: baseline
+        [stylesPositive.root]: positive,
+        [stylesCritical.root]: critical,
+        [stylesSecondary.root]: secondary,
+        [stylesStrong.root]: strong,
+        [stylesRegular.root]: regular,
+        [styles.light]: light
       })}>
-      <span
-        className={classnames({
-          [stylesPositive.root]: positive,
-          [stylesCritical.root]: critical,
-          [stylesSecondary.root]: secondary,
-          [stylesStrong.root]: strong,
-          [stylesRegular.root]: regular,
-          [styles.light]: light
-        })}>
-        {children}
-      </span>
+      {children}
     </span>
-  );
-}
+  </span>
+);
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
@@ -84,3 +84,5 @@ Text.propTypes = {
 Text.defaultProps = {
   baseline: true
 };
+
+export default withTextProps()(Text);

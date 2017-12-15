@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render as heading 1`] = `
+<Text
+  baseline={true}
+  heading={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text should render as heading 2`] = `
+<Text
+  baseline={true}
+  heading={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text should render with defaults 1`] = `
+<Text
+  baseline={true}
+>
+  Hello
+</Text>
+`;
