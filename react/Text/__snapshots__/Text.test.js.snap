@@ -1,26 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Text should render as heading 1`] = `
-<Text
-  baseline={true}
-  heading={true}
->
-  Hello
-</Text>
-`;
-
-exports[`Text should render as heading 2`] = `
-<Text
-  baseline={true}
-  heading={true}
->
-  Hello
-</Text>
-`;
-
 exports[`Text should render with defaults 1`] = `
 <Text
   baseline={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as heading 1`] = `
+<Text
+  baseline={true}
+  heading={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as heading 2`] = `
+<Text
+  baseline={true}
+  heading={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as headline 1`] = `
+<Text
+  baseline={true}
+  headline={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as headline 2`] = `
+<Text
+  baseline={true}
+  headline={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as hero 1`] = `
+<Text
+  baseline={true}
+  hero={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as hero 2`] = `
+<Text
+  baseline={true}
+  hero={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as small 1`] = `
+<Text
+  baseline={true}
+  small={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as small 2`] = `
+<Text
+  baseline={true}
+  small={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as subheading 1`] = `
+<Text
+  baseline={true}
+  subheading={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as subheading 2`] = `
+<Text
+  baseline={true}
+  subheading={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as substandard 1`] = `
+<Text
+  baseline={true}
+  substandard={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as substandard 2`] = `
+<Text
+  baseline={true}
+  substandard={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as superstandard 1`] = `
+<Text
+  baseline={true}
+  superstandard={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as superstandard 2`] = `
+<Text
+  baseline={true}
+  superstandard={true}
 >
   Hello
 </Text>
