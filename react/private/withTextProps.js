@@ -1,5 +1,4 @@
 import React from 'react';
-import omit from 'lodash/omit';
 
 const sizes = ['small', 'substandard', 'superstandard', 'subheading', 'headline', 'heading', 'hero'];
 const getSizeProps = props => {
@@ -16,7 +15,7 @@ const getSizeProps = props => {
 const withTextProps = () => WrappedComponent => {
   return props => {
     const newProps = {
-      ...omit(props, 'size'),
+      ...props,
       ...getSizeProps(props)
     };
 

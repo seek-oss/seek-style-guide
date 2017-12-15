@@ -491,7 +491,7 @@ export default class Playground extends Component {
                   ].map(size => (
                     <div key={size}>
                       <Text {...{ [size]: true }}>
-                        <IconComponent {...{ [size]: true }} /> {capitalize(size)}
+                        <IconComponent size={size} /> {capitalize(size)}
                       </Text>
                       <br />
                     </div>

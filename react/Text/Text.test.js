@@ -12,7 +12,7 @@ describe('Text', () => {
   describe('sizes', () => {
     sizes.forEach(size => {
       it(`should render as ${size}`, () => {
-        expect(shallow(<Text {...{[size]: true}}>Hello</Text>)).toMatchSnapshot();
+        expect(shallow(<Text {...{ [size]: true }}>Hello</Text>)).toMatchSnapshot();
         expect(shallow(<Text size={size}>Hello</Text>)).toMatchSnapshot();
       });
     });

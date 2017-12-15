@@ -5,32 +5,18 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-export default function Icon({
+import withTextProps from '../withTextProps';
+
+function Icon({
   markup,
   className,
   svgClassName,
-  hero,
-  headline,
-  heading,
-  subheading,
-  superstandard,
-  standard,
-  substandard,
-  small,
-  interaction,
+  size,
   ...restProps }) {
   const svgClassNames = classnames(
     styles.svg,
     svgClassName,
-    {
-      [styles.smallSvg]: small,
-      [styles.substandardSvg]: substandard,
-      [styles.superstandardSvg]: superstandard,
-      [styles.subheadingSvg]: subheading,
-      [styles.headlineSvg]: headline,
-      [styles.headingSvg]: heading,
-      [styles.heroSvg]: hero
-    }
+    { [styles[`${size}Svg`]]: size }
   );
 
   const svgWithClasses = markup
@@ -49,18 +35,13 @@ Icon.propTypes = {
   markup: PropTypes.string.isRequired,
   svgClassName: PropTypes.string,
   className: PropTypes.string,
-  hero: PropTypes.bool,
-  headline: PropTypes.bool,
-  heading: PropTypes.bool,
-  subheading: PropTypes.bool,
-  superstandard: PropTypes.bool,
-  standard: PropTypes.bool,
-  substandard: PropTypes.bool,
-  small: PropTypes.bool,
-  interaction: PropTypes.bool
+  size: PropTypes.string
 };
 
 Icon.defaultProps = {
   svgClassName: '',
   className: ''
 };
+
+export default withTextProps()(Icon);
+

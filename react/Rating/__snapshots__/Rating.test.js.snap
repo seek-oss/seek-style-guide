@@ -44,7 +44,7 @@ exports[`Rating should render correct size when size is: heading 1`] = `
       superstandard={false}
       svgClassName="headingStar"
     />
-    <Icon
+    <Component
       className="star"
       heading={true}
       key="3"
@@ -181,7 +181,7 @@ exports[`Rating should render correct size when size is: substandard 1`] = `
       superstandard={false}
       svgClassName="substandardStar"
     />
-    <Icon
+    <Component
       className="star"
       heading={false}
       key="3"
@@ -318,7 +318,7 @@ exports[`Rating should render correct size when size is: superstandard 1`] = `
       superstandard={true}
       svgClassName="superstandardStar"
     />
-    <Icon
+    <Component
       className="star"
       heading={false}
       key="3"
@@ -512,7 +512,7 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
       superstandard={false}
       svgClassName=""
     />
-    <Icon
+    <Component
       className="star"
       heading={false}
       key="2"
@@ -653,7 +653,7 @@ exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
       superstandard={false}
       svgClassName=""
     />
-    <Icon
+    <Component
       className="star"
       heading={false}
       key="3"
