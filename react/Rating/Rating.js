@@ -11,23 +11,21 @@ import Icon from '../private/Icon/Icon';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import Text from '../Text/Text';
 
+import withTextProps from '../private/withTextProps';
+
 const getPercent = (rating, position) => Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
 
 const getStar = (
   percent,
   key,
   starClassName,
-  substandard,
-  superstandard,
-  heading
+  size
 ) => {
   const props = {
     key,
     className: styles.star,
     svgClassName: starClassName,
-    substandard,
-    superstandard,
-    heading
+    size
   };
 
   if (percent >= 75) {
@@ -45,26 +43,20 @@ const Rating = ({
   rating,
   starClassName,
   showTextRating,
-  substandard,
-  superstandard,
-  heading,
+  size,
   ...restProps
 }) => {
   const extendedStarClassName = classnames(
     {
       [starClassName]: starClassName,
-      [styles.substandardStar]: substandard,
-      [styles.superstandardStar]: superstandard,
-      [styles.headingStar]: heading
+      [styles[`${size}Star`]]: size
     }
   );
 
   return (
     <Text
       raw
-      heading={heading}
-      superstandard={superstandard}
-      substandard={substandard}
+      size={size}
       regular
       {...restProps}>
       <ScreenReaderOnly>
@@ -77,9 +69,7 @@ const Rating = ({
             percent,
             position,
             extendedStarClassName,
-            substandard,
-            superstandard,
-            heading
+            size
           );
         })}
         {showTextRating &&
@@ -97,16 +87,11 @@ Rating.propTypes = {
   className: PropTypes.string,
   starClassName: PropTypes.string,
   showTextRating: PropTypes.bool,
-  heading: PropTypes.bool,
-  superstandard: PropTypes.bool,
-  substandard: PropTypes.bool
+  size: PropTypes.string
 };
 
 Rating.defaultProps = {
-  showTextRating: false,
-  heading: false,
-  superstandard: false,
-  substandard: false
+  showTextRating: false
 };
 
-export default Rating;
+export default withTextProps()(Rating);
