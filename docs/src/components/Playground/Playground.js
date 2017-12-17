@@ -25,8 +25,7 @@ import {
   Footer,
   Rating,
   HeartIcon,
-  ThumbsUpIcon,
-  TickCircleIcon
+  ThumbsUpIcon
 } from 'seek-style-guide/react';
 
 import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
