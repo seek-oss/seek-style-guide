@@ -5,6 +5,7 @@ exports[`Rating should render correct size when size is: heading 1`] = `
   heading={true}
   rating={3.5}
   showTextRating={false}
+  size="heading"
 />
 `;
 
@@ -13,6 +14,7 @@ exports[`Rating should render correct size when size is: heading and rating text
   heading={true}
   rating={4}
   showTextRating={true}
+  size="heading"
 />
 `;
 
@@ -20,6 +22,7 @@ exports[`Rating should render correct size when size is: substandard 1`] = `
 <Rating
   rating={3.5}
   showTextRating={false}
+  size="substandard"
   substandard={true}
 />
 `;
@@ -28,6 +31,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
 <Rating
   rating={4}
   showTextRating={true}
+  size="substandard"
   substandard={true}
 />
 `;
@@ -36,6 +40,7 @@ exports[`Rating should render correct size when size is: superstandard 1`] = `
 <Rating
   rating={3.5}
   showTextRating={false}
+  size="superstandard"
   superstandard={true}
 />
 `;
@@ -44,6 +49,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
 <Rating
   rating={4}
   showTextRating={true}
+  size="superstandard"
   superstandard={true}
 />
 `;

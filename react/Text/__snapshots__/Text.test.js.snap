@@ -12,6 +12,7 @@ exports[`Text sizes should render as heading 1`] = `
 <Text
   baseline={true}
   heading={true}
+  size="heading"
 >
   Hello
 </Text>
@@ -31,6 +32,7 @@ exports[`Text sizes should render as headline 1`] = `
 <Text
   baseline={true}
   headline={true}
+  size="headline"
 >
   Hello
 </Text>
@@ -50,6 +52,7 @@ exports[`Text sizes should render as hero 1`] = `
 <Text
   baseline={true}
   hero={true}
+  size="hero"
 >
   Hello
 </Text>
@@ -68,6 +71,7 @@ exports[`Text sizes should render as hero 2`] = `
 exports[`Text sizes should render as small 1`] = `
 <Text
   baseline={true}
+  size="small"
   small={true}
 >
   Hello
@@ -87,6 +91,7 @@ exports[`Text sizes should render as small 2`] = `
 exports[`Text sizes should render as subheading 1`] = `
 <Text
   baseline={true}
+  size="subheading"
   subheading={true}
 >
   Hello
@@ -106,6 +111,7 @@ exports[`Text sizes should render as subheading 2`] = `
 exports[`Text sizes should render as substandard 1`] = `
 <Text
   baseline={true}
+  size="substandard"
   substandard={true}
 >
   Hello
@@ -125,6 +131,7 @@ exports[`Text sizes should render as substandard 2`] = `
 exports[`Text sizes should render as superstandard 1`] = `
 <Text
   baseline={true}
+  size="superstandard"
   superstandard={true}
 >
   Hello
