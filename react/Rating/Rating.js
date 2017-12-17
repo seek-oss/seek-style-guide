@@ -23,9 +23,9 @@ const getStar = (
 ) => {
   const props = {
     key,
+    size,
     className: styles.star,
-    svgClassName: starClassName,
-    size
+    svgClassName: starClassName
   };
 
   if (percent >= 75) {
@@ -46,12 +46,7 @@ const Rating = ({
   size,
   ...restProps
 }) => {
-  const extendedStarClassName = classnames(
-    {
-      [starClassName]: starClassName,
-      [styles[`${size}Star`]]: size
-    }
-  );
+  const extendedStarClassName = classnames({ [starClassName]: starClassName });
 
   return (
     <Text

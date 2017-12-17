@@ -25,7 +25,8 @@ import {
   Footer,
   Rating,
   HeartIcon,
-  ThumbsUpIcon
+  ThumbsUpIcon,
+  TickCircleIcon
 } from 'seek-style-guide/react';
 
 import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
@@ -163,8 +164,8 @@ export default class Playground extends Component {
             <Card>
               <Section>
                 <ButtonGroup>
-                  <Button color="grey">Save job</Button>
-                  <Button color="grey">Send job</Button>
+                  <Button color="gray">Save job</Button>
+                  <Button color="gray">Send job</Button>
                 </ButtonGroup>
               </Section>
             </Card>
@@ -181,8 +182,8 @@ export default class Playground extends Component {
               <Section>
                 <ButtonGroup>
                   <Button color="pink">Save</Button>
-                  <Button color="grey">Clear</Button>
-                  <Button color="grey">Cancel</Button>
+                  <Button color="gray">Clear</Button>
+                  <Button color="gray">Cancel</Button>
                 </ButtonGroup>
               </Section>
             </Card>
@@ -523,6 +524,28 @@ export default class Playground extends Component {
           </Columns>
         </PageBlock>
 
+        <PageBlock>
+          <Section header>
+            <Text hero>Text with inline icons</Text>
+          </Section>
+          <Card>
+            <Section>
+              {[
+                'small',
+                'substandard',
+                'superstandard',
+                'heading',
+                'headline',
+                'hero'
+              ].map(size => (
+                <div key={size}>
+                  <Text {...{ [size]: true }}>Lorem ipsum <StarIcon {...{ [size]: true }} /> dolor sit amet, <ThumbsUpIcon {...{ [size]: true }} /> consectetur adipiscing <HeartIcon {...{ [size]: true }} /> elit. Nam vel sapien lorem.</Text>
+                  <br />
+                </div>
+              ))}
+            </Section>
+          </Card>
+        </PageBlock>
         <Footer linkRenderer={dummyLinkRenderer} />
       </div>
     );
