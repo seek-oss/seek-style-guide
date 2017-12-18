@@ -118,4 +118,7 @@ const config = {
   ]
 };
 
-module.exports = decorateServerConfig(config);
+module.exports = decorateServerConfig(config, {
+  //We need the following due to `seek-style-guide-webpack` expecting `seek-style-guide`
+  extraIncludePaths: ['seek-asia-style-guide']
+});

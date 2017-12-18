@@ -125,5 +125,7 @@ const config = {
 };
 
 module.exports = decorateClientConfig(config, {
-  extractTextPlugin: appCss
+  extractTextPlugin: appCss,
+  //We need the following due to `seek-style-guide-webpack` expecting `seek-style-guide`
+  extraIncludePaths: ['seek-asia-style-guide']
 });

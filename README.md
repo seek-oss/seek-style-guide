@@ -57,7 +57,7 @@ export default class App extends Component {
 
 ## High Level Components
 
-As much as possible, you should aim to minimise the amount of custom CSS you need to write. This is achieved by leveraging our suite of high level components, which are demonstrated on our [style guide documentation site](https://seekinternational.github.io/seek-style-guide/).
+As much as possible, you should aim to minimise the amount of custom CSS you need to write. This is achieved by leveraging our suite of high level components, which are demonstrated on our [style guide documentation site](https://seekinternational.github.io/seek-asia-style-guide/).
 
 
 ## Low Level Styling

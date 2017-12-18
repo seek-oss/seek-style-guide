@@ -1,6 +1,6 @@
 // Alias 'seek-style-guide' so 'seek-style-guide-webpack' works correctly
 const path = require('path');
-require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '..'));
+require('module-alias').addAlias('seek-asia-style-guide', path.join(__dirname, '..'));
 
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
@@ -113,6 +113,9 @@ const config = decorateClientConfig({
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     })
   ]
+}, {
+  //We need the following due to `seek-style-guide-webpack` expecting `seek-style-guide`
+  extraIncludePaths: ['seek-asia-style-guide']
 });
 
 module.exports = config;
