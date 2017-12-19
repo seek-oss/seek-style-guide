@@ -4,8 +4,8 @@ import dedent from 'dedent';
 import serialize from 'serialize-javascript';
 import { minify } from 'html-minifier';
 import StandaloneProvider from './StandaloneProvider/StandaloneProvider';
-import Header from 'seek-style-guide/react/Header/Header';
-import Footer from 'seek-style-guide/react/Footer/Footer';
+import Header from 'seek-asia-style-guide/react/Header/Header';
+import Footer from 'seek-asia-style-guide/react/Footer/Footer';
 
 const renderHtml = (Component, initialProps, options = { preview: false }) => {
   const componentHtml = renderToString(

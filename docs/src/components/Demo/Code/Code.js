@@ -2,7 +2,7 @@ import styles from './Code.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Section, Text } from 'seek-style-guide/react';
+import { Section, Text } from 'seek-asia-style-guide/react';
 import debounce from 'lodash/debounce';
 import uniq from 'lodash/uniq';
 import jsxToString from 'react-element-to-jsx-string';

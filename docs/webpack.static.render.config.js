@@ -1,12 +1,12 @@
-// Alias 'seek-style-guide' so 'seek-style-guide-webpack' works correctly
+// Alias 'seek-asia-style-guide' so 'seek-asia-style-guide-webpack' works correctly
 const path = require('path');
-require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '..'));
+require('module-alias').addAlias('seek-asia-style-guide', path.join(__dirname, '..'));
 
 const fs = require('fs');
 const ejs = require('ejs');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const decorateServerConfig = require('seek-style-guide-webpack').decorateServerConfig;
+const decorateServerConfig = require('seek-asia-style-guide-webpack').decorateServerConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
@@ -49,7 +49,7 @@ const config = {
       {
         test: /\.css\.js$/,
         include: appPaths,
-        loader: 'css/locals?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!css-in-js!babel?' + JSON.stringify(babelConfig)
+        loader: 'css-loader/locals?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!css-in-js-loader!babel-loader?' + JSON.stringify(babelConfig)
       },
       {
         test: /\.less$/,
@@ -119,6 +119,6 @@ const config = {
 };
 
 module.exports = decorateServerConfig(config, {
-  //We need the following due to `seek-style-guide-webpack` expecting `seek-style-guide`
+  //We need the following due to `seek-asia-style-guide-webpack` expecting `seek-asia-style-guide`
   extraIncludePaths: ['seek-asia-style-guide']
 });

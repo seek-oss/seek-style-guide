@@ -1,9 +1,9 @@
 import styles from './ButtonsPreview.less';
-import buttonStyles from 'seek-style-guide/react/Button/Button.less';
+import buttonStyles from 'seek-asia-style-guide/react/Button/Button.less';
 
 import React from 'react';
 import classnames from 'classnames';
-import { Button } from 'seek-style-guide/react';
+import { Button } from 'seek-asia-style-guide/react';
 
 export default function ButtonsPreview() {
   return (

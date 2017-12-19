@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import { Header } from 'seek-style-guide/jobStreet';
+import { Header } from 'seek-asia-style-guide/jobStreet';
 
 export const makeDummyLinkRendererForPath = path => {
   const DummyLinkRenderer = ({ href, ...props }) => (

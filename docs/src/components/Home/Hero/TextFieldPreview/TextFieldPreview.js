@@ -1,8 +1,8 @@
 import styles from './TextFieldPreview.less';
-import textFieldStyles from 'seek-style-guide/react/TextField/TextField.less';
+import textFieldStyles from 'seek-asia-style-guide/react/TextField/TextField.less';
 
 import React from 'react';
-import { TextField } from 'seek-style-guide/react';
+import { TextField } from 'seek-asia-style-guide/react';
 
 export default function TextFieldPreview() {
   return (

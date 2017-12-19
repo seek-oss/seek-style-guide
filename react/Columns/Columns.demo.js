@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Columns, PageBlock, Card, Section, Text } from 'seek-style-guide/react';
+import { Columns, PageBlock, Card, Section, Text } from 'seek-asia-style-guide/react';
 
 const ColumnsContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>

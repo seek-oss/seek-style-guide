@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { PageBlock, Section, Text } from 'seek-style-guide/react';
+import { PageBlock, Section, Text } from 'seek-asia-style-guide/react';
 import Baseline from './Baseline/Baseline';
 import Code from './Code/Code';
 import flatten from 'lodash/flatten';

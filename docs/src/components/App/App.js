@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router';
-import { StyleGuideProvider } from 'seek-style-guide/react';
+import { StyleGuideProvider } from 'seek-asia-style-guide/react';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from 'Home/Home';

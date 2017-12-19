@@ -1,6 +1,6 @@
-// Alias 'seek-style-guide' so 'seek-style-guide-webpack' works correctly
+// Alias 'seek-asia-style-guide' so 'seek-asia-style-guide-webpack' works correctly
 const path = require('path');
-require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '../..'));
+require('module-alias').addAlias('seek-asia-style-guide', path.join(__dirname, '../..'));
 
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -8,7 +8,7 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const autoprefixerConfig = require('../../config/autoprefixer.config');
-const { decorateClientConfig, decorateServerConfig } = require('seek-style-guide-webpack');
+const { decorateClientConfig, decorateServerConfig } = require('seek-asia-style-guide-webpack');
 const babelConfig = require('../../config/babel.config.js')({ reactHotLoader: false });
 const cssSelectorPrefix = require('./cssSelectorPrefix');
 

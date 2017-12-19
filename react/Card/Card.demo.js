@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Text, PageBlock, Section } from 'seek-style-guide/react';
+import { Card, Text, PageBlock, Section } from 'seek-asia-style-guide/react';
 
 const CardContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>

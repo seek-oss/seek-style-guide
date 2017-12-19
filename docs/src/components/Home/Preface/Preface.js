@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageBlock, Section, Columns, Text } from 'seek-style-guide/react';
+import { PageBlock, Section, Columns, Text } from 'seek-asia-style-guide/react';
 
 export default () => (
   <PageBlock>
