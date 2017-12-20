@@ -443,10 +443,17 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   background: #ffffff;
   overflow-x: auto;
   overflow-y: hidden;
+  margin-bottom: 36px;
 }
 .Demo__codeBlock___3vO4r::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+.Demo__symbolName___k7NDm {
+  margin-bottom: 18px;
+}
+.Demo__symbolElement___1ZpNb {
+  margin-bottom: 27px;
 }
 .Code__root___3tEfK {
   position: relative;
