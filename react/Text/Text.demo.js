@@ -1,9 +1,11 @@
 import Text from './Text';
+import * as sketch from './Text.sketch';
 
 export default {
   route: '/text',
   title: 'Text',
   component: Text,
+  sketch,
   initialProps: {
     children: 'Living Style Guide',
     hero: true
