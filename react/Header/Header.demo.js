@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Header } from 'seek-style-guide/react';
+import * as sketch from './Header.sketch';
 import LogoRainbow from '../LogoRainbow/LogoRainbow';
 
 export const makeDummyLinkRendererForPath = path => {
@@ -22,6 +23,7 @@ export default {
   route: ROUTE,
   title: 'Header',
   component: Header,
+  sketch,
   initialProps: {
     authenticationStatus: 'authenticated',
     userName: 'Olivia',
