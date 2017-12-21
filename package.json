@@ -121,7 +121,7 @@
     "react-shallow-testutils": "^3.0.0",
     "react-test-renderer": "^16.0.0",
     "seek-style-guide-webpack": "^2.1.1",
-    "semantic-release": "^8.1.2",
+    "semantic-release": "^11.0.2",
     "serialize-javascript": "^1.4.0",
     "sinon": "^4.0.1",
     "sinon-chai": "^2.14.0",
