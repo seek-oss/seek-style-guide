@@ -17,6 +17,15 @@ import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
 const defaultLinkRenderer = props => (<a {...props} />);
+const tabNames = [
+  'Job Search',
+  '$150k+ Jobs',
+  'Profile',
+  'Saved & Applied Jobs',
+  'Recommended Jobs',
+  'Company Reviews',
+  'Advice & Tips'
+];
 
 export default function Header({
   logoComponent: LogoComponent,
@@ -26,6 +35,7 @@ export default function Header({
   userEmail,
   linkRenderer,
   activeTab,
+  newBadgeTab,
   divider,
   returnUrl,
   onMenuToggle = () => {}
@@ -69,6 +79,7 @@ export default function Header({
                   linkRenderer={linkRenderer}
                   returnUrl={returnUrl}
                   activeTab={activeTab}
+                  newBadgeTab={newBadgeTab}
                   onMenuToggle={onMenuToggle}
                 />
               </div>
@@ -94,6 +105,7 @@ export default function Header({
             locale={locale}
             linkRenderer={linkRenderer}
             activeTab={activeTab}
+            newBadgeTab={newBadgeTab}
             divider={divider}
           />
         </Hidden>
@@ -124,15 +136,8 @@ Header.propTypes = {
   userName: PropTypes.string,
   userEmail: PropTypes.string,
   linkRenderer: PropTypes.func,
-  activeTab: PropTypes.oneOf([
-    'Job Search',
-    '$150k+ Jobs',
-    'Profile',
-    'Saved & Applied Jobs',
-    'Recommended Jobs',
-    'Company Reviews',
-    'Advice & Tips'
-  ]),
+  activeTab: PropTypes.oneOf(tabNames),
+  newBadgeTab: PropTypes.oneOf(tabNames),
   divider: PropTypes.bool,
   returnUrl: PropTypes.string,
   onMenuToggle: PropTypes.func
@@ -144,6 +149,7 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
+  newBadgeTab: null,
   divider: true,
   userEmail: ''
 };

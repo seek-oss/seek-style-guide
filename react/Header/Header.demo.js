@@ -81,6 +81,26 @@ export default {
       }))
     },
     {
+      label: 'New Tab',
+      type: 'radio',
+      states: [
+        null,
+        'Job Search',
+        '$150k+ Jobs',
+        'Profile',
+        'Saved & Applied Jobs',
+        'Recommended Jobs',
+        'Company Reviews',
+        'Advice & Tips'
+      ].map(newBadgeTab => ({
+        label: newBadgeTab || 'No new label',
+        transformProps: props => ({
+          ...props,
+          newBadgeTab
+        })
+      }))
+    },
+    {
       label: 'Authentication',
       type: 'radio',
       states: [

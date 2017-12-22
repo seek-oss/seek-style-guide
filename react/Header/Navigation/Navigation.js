@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+import NewBadge from '../NewBadge/NewBadge';
 
 const items = [
   {
@@ -38,7 +39,7 @@ const items = [
   }
 ];
 
-export default function Navigation({ locale, linkRenderer, activeTab, divider }) {
+export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTab, divider }) {
   return (
     <nav
       aria-labelledby="MainNavigation"
@@ -59,11 +60,20 @@ export default function Navigation({ locale, linkRenderer, activeTab, divider })
               <li className={styles.item} key={i}>
                 {
                   linkRenderer({
-                    children: name,
+                    children: [
+                      name,
+                      name === newBadgeTab && (
+                        <NewBadge
+                          key={name}
+                          className={styles.newBadge}
+                        />
+                      )
+                    ],
                     'data-analytics': analytics,
                     className: classnames({
                       [styles.link]: true,
-                      [styles.link_isActive]: name === activeTab
+                      [styles.link_isActive]: name === activeTab,
+                      [styles.link_smallText]: locale === 'AU' && newBadgeTab === 'Company Reviews'
                     }),
                     ...restProps
                   })
@@ -82,9 +92,11 @@ Navigation.propTypes = {
   locale: PropTypes.string.isRequired,
   linkRenderer: PropTypes.func.isRequired,
   divider: PropTypes.bool.isRequired,
-  activeTab: PropTypes.string
+  activeTab: PropTypes.string,
+  newBadgeTab: PropTypes.string
 };
 
 Navigation.defaultProps = {
-  activeTab: null
+  activeTab: null,
+  newBadgeTab: null
 };
