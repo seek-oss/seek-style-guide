@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './nav.less';
+import { Text } from 'seek-asia-style-guide/react';
+import TriangleArrowDownIcon from 'seek-asia-style-guide/react/TriangleArrowDownIcon/TriangleArrowDownIcon';
 
 const noop = i => i;
 
@@ -9,11 +11,7 @@ class Nav extends Component {
   static propTypes = {
     links: PropTypes.array.isRequired,
     messages: PropTypes.object.isRequired,
-    isRightAligned: PropTypes.bool
-  }
-
-  static defaultProps = {
-    isRightAligned: false
+    activeNavLinkTextKey: PropTypes.string
   }
 
   constructor(props) {
@@ -53,16 +51,10 @@ class Nav extends Component {
   }
 
   render() {
-    const { links, messages, isRightAligned } = this.props;
+    const { links, messages, activeNavLinkTextKey } = this.props;
     const { isDropdownVisible } = this.state;
     return (
-      <ul
-        className={
-          classNames({
-            [styles.container]: true,
-            [styles.rightAligned]: isRightAligned
-          })
-        }>
+      <ul className={styles.container}>
         {
           links.map(link => {
             const hasChildren = Boolean(link.childLinks.length);
@@ -81,7 +73,6 @@ class Nav extends Component {
                 className={
                   classNames({
                     [styles.item]: true,
-                    [styles.itemHasDropdown]: hasChildren,
                     [styles.itemShowDropdown]: hasChildren && isDropdownVisible
                   })
                 }>
@@ -101,10 +92,13 @@ class Nav extends Component {
                     )
                   }
                   title={messages[link.title]}>
-
-                  <span>
+                  <Text
+                    regular={(link.text !== activeNavLinkTextKey)}
+                    whistling
+                    className={styles.linkText}>
                     {link.preventTranslation ? link.text : messages[link.text]}
-                  </span>
+                    {hasChildren && (<TriangleArrowDownIcon svgClassName={styles.dropdownIcon} />)}
+                  </Text>
                 </a>
                 {
                   hasChildren &&
@@ -128,7 +122,7 @@ class Nav extends Component {
                               }
                               href={this.parseHrefWithHrefParams(messages[childLink.href], childLink.hrefParams)}
                               title={messages[childLink.title]}>
-                              <span>{messages[childLink.text]}</span>
+                              <Text regular whistling>{messages[childLink.text]}</Text>
                             </a>
                           </li>
                         ))

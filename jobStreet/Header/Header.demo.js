@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
+import { getNavLinks } from './links';
 import Header from './Header';
 
 export const makeDummyLinkRendererForPath = path => {
@@ -29,9 +30,20 @@ export default {
     linkRenderer: makeDummyLinkRendererForPath(ROUTE),
     returnUrl: '/jobs',
     language: 'en',
-    country: 'my'
+    country: 'my',
+    activeNavLinkTextKey: 'header.searchText'
   },
   options: [
+    {
+      label: 'Language',
+      type: 'radio',
+      states: [
+        {
+          label: 'en-MY',
+          transformProps: props => props
+        }
+      ]
+    },
     {
       label: 'Authentication',
       type: 'radio',
@@ -52,6 +64,51 @@ export default {
           transformProps: ({ username, ...props }) => ({
             ...props,
             authenticationStatus: 'pending'
+          })
+        }
+      ]
+    },
+    {
+      label: 'Active Main Nav',
+      type: 'radio',
+      states: [
+        {
+          label: 'Search Jobs',
+          transformProps: props => props
+        },
+        {
+          label: 'Home',
+          transformProps: ({ activeNavLinkTextKey, ...props }) => ({
+            ...props,
+            activeNavLinkTextKey: 'header.homeText'
+          })
+        },
+        {
+          label: 'MyJobStreet',
+          transformProps: ({ activeNavLinkTextKey, ...props }) => ({
+            ...props,
+            activeNavLinkTextKey: 'header.myJobStreetText'
+          })
+        },
+        {
+          label: 'Company Profiles',
+          transformProps: ({ activeNavLinkTextKey, ...props }) => ({
+            ...props,
+            activeNavLinkTextKey: 'header.companyProfilesText'
+          })
+        },
+        {
+          label: 'Career Insights',
+          transformProps: ({ activeNavLinkTextKey, ...props }) => ({
+            ...props,
+            activeNavLinkTextKey: 'header.careerInsightsText'
+          })
+        },
+        {
+          label: 'Education',
+          transformProps: ({ activeNavLinkTextKey, ...props }) => ({
+            ...props,
+            activeNavLinkTextKey: 'header.jobStreetEducationText'
           })
         }
       ]

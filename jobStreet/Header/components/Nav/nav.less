@@ -9,84 +9,24 @@
 @itemFocusedBackgroundColor: #142d69;
 
 .container {
-  padding: 0 18px;
+  padding: @grid-base 0;
   @media @desktop {
     padding: 0;
-  }
-}
-
-/*
- * Right aligned is used for the user navigation menu on the right hand side
- */
-.rightAligned {
-  padding-bottom: 10px;
-  padding-top: 10px;
-  & .dropdownLink {
-    padding-left: 20px;
-  }
-  @media @desktop {
-    padding-bottom: 0;
-    padding-top: 0;
-    & .dropdownList {
-      right: 0;
-      left: auto;
-    }
-    & .item {
-      &:after {
-        content: '|';
-        display: inline-block;
-      }
-      &:last-child {
-        &:after {
-          display: none;
-        }
-      }
-    }
-    & .link {
-      display: inline-block;
-    }
+    display: block;
   }
 }
 
 .item {
   @media @desktop {
     display: inline-block;
-    position: relative;
     color: @linkDesktopColor;
   }
 }
 
-.itemHasDropdown {
-  /*
-   * For the downward poiting arrow
-   */
-  & .link {
-    &:after {
-      display: inline-block;
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: @grid-base;
-      border-bottom-width: 0px;
-      border-color: transparent;
-      border-top-color: @linkMobileColor;
-      position: relative;
-      top: -3px;
-      left: 6px;
-
-      @media @desktop {
-        border-top-color: @linkDesktopColor;
-      }
-    }
-
-    &:hover:after,
-    &:focus:after {
-      @media @desktop {
-        border-top-color: @linkDesktopOnHoverColor;
-      }
-    }
-  }
+.dropdownIcon {
+  padding-top: @grid-base * 2;
+  padding-left: @grid-base;
+  width: @grid-base * 3;
 }
 
 .itemShowDropdown {
@@ -99,13 +39,12 @@
 }
 
 .link {
-  line-height: 40px;
   display: block;
   text-decoration: none;
   color: @linkMobileColor;
+  padding: @grid-base 0px;
   @media @desktop {
-    line-height: 50px;
-    padding: 0 10px;
+    padding: (@grid-base * 3) (@grid-base * 2);
     color: @linkDesktopColor;
     &:hover,
     &:focus {
@@ -114,19 +53,12 @@
   }
 }
 
-.linkIsActive {
-  font-weight: @sk-bold;
-}
-
 .dropdownList {
   display: none;
-
   @media @desktop {
     position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 160px;
-    padding: 5px 0;
+    min-width: (@grid-base * 40);
+    padding: @grid-base 0px;
     background: @saWhite;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 2px;
@@ -136,28 +68,23 @@
 }
 
 .dropdownLink {
-  line-height: 36px;
   display: block;
   text-decoration: none;
   color: @linkMobileColor;
-
   &:hover,
   &:focus {
     background: @linkMobileOnHoverColor;
     opacity: .8;
   }
-
   @media @desktop {
-    padding: 0 20px;
+    padding: @grid-base @grid-gutter-width;
     white-space: nowrap;
     color: @secondaryLinkDesktopColor;
-
     &:hover,
     &:focus {
       color: @secondaryLinkDesktopOnHoverColor;
       opacity: 1;
     }
-
     &.hasDivider {
       border-bottom: 1px solid @linkDesktopOnHoverColor;
     }
@@ -166,7 +93,6 @@
 
 .linkHideOnMobile {
   display: none;
-
   @media @desktop {
     display: block;
   }
@@ -174,7 +100,6 @@
 
 .linkOnlyOnMobile {
   display: block;
-
   @media @desktop {
     display: none;
   }

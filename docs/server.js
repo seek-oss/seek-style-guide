@@ -5,12 +5,12 @@ const opn = require('opn');
 const commandLineArgs = require('command-line-args');
 
 const optionDefinitions = [
-    {
-        name: 'tenant',
-        alias: 't',
-        type: String,
-        defaultValue: 'seekAsia'
-    }
+  {
+    name: 'tenant',
+    alias: 't',
+    type: String,
+    defaultValue: 'seekAsia'
+  }
 ];
 
 const options = commandLineArgs(optionDefinitions);
@@ -19,19 +19,22 @@ const defaultPort = 3000;
 const jobStreetPort = 3001;
 const jobsDBPort = 3002;
 
-let port = defaultPort;
+let port;
 
-switch(options.tenant) {
-    case 'jobsDB':
-        port = jobsDBPort;
-        break;
-    case 'jobStreet':
-        port = jobStreetPort;
-        break;
-};
+switch (options.tenant) {
+  case 'jobsDB':
+    port = jobsDBPort;
+    break;
+  case 'jobStreet':
+    port = jobStreetPort;
+    break;
+  default:
+    port = defaultPort;
+    break;
+}
 
 config.plugins.push(new webpack.DefinePlugin({
-    'process.env.SKU_TENANT': JSON.stringify(options.tenant)
+  'process.env.SKU_TENANT': JSON.stringify(options.tenant)
 }));
 
 new WebpackDevServer(webpack(config), {

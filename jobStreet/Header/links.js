@@ -9,7 +9,6 @@ const userLoggedOutNavLinks = [
     href: 'header.searchLink',
     title: 'header.searchTitle',
     text: 'header.searchText',
-    isActive: true,
     childLinks: []
   },
   {

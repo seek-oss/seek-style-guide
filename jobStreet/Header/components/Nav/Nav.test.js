@@ -31,20 +31,19 @@ describe('JobStreet navigation component', () => {
     )).toMatchSnapshot();
   });
 
-  it('should render supplied messages on the right', () => {
+  it('should render active main nav correctly', () => {
     const links = [
       {
         href: 'unitTest.testLink',
         title: 'unitTest.testTitle',
         text: 'unitTest.testText',
-        childLinks: [
-          {
-            href: 'unitTest.testLink1',
-            title: 'unitTest.testTitle1',
-            text: 'unitTest.testText1',
-            childLinks: []
-          }
-        ]
+        childLinks: []
+      },
+      {
+        href: 'unitTest.testLink1',
+        title: 'unitTest.testTitle1',
+        text: 'unitTest.testText1',
+        childLinks: []
       }
     ];
     const localization = {
@@ -56,7 +55,7 @@ describe('JobStreet navigation component', () => {
       'unitTest.testText1': 'Pre-order now!'
     };
     expect(shallow(
-      <Nav links={links} messages={localization} isRightAligned />
+      <Nav links={links} messages={localization} activeNavLinkTextKey='unitTest.testText' />
     )).toMatchSnapshot();
   });
 
