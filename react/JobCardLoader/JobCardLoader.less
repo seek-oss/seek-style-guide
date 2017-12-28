@@ -1,0 +1,136 @@
+@import (reference) "~seek-asia-style-guide/theme";
+@job-card-loader-base-height: @grid-base * 3;
+@job-card-loader-pic: 80px;
+
+.root {
+  width: 100%;
+  margin-bottom: 0;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-color: @saGrey4;
+}
+
+.loader {
+  background: @saWhite;
+  min-width: 100%;
+  min-height: @grid-base * 48;
+  padding: @grid-base * 4;
+}
+
+.animatedBackground {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: @sk-gray-lightest;
+  background: linear-gradient(75deg, @sk-gray-light 8%, @sk-mid-gray-light 18%, @sk-gray-light 33%);
+  background-size: 200% 100%;
+  height: @grid-base * 48;
+  position: relative;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 95% 0%;
+  }
+  100% {
+    background-position: -95% 0%;
+  }
+}
+
+.backgroundMasker {
+  background: @saWhite;
+  position: absolute;
+}
+
+.companyRight {
+  top: 0;
+  left: 30%;
+  right: 0;
+  height: @job-card-loader-base-height;
+}
+
+.companyBottom {
+  top: @job-card-loader-base-height;
+  left: 0;
+  right: 0;
+  height: @job-card-loader-base-height;
+}
+
+.headerRight {
+  top: @job-card-loader-base-height * 2;
+  left: 80%;
+  right: 0;
+  height: @job-card-loader-base-height;
+}
+
+.headerBottom {
+  top: @job-card-loader-base-height * 3;
+  left: 0;
+  right: 0;
+  height: @job-card-loader-base-height *2;
+}
+
+.desc1Right {
+  top: @job-card-loader-base-height * 5;
+  left: 65%;
+  right: 0;
+  height: @job-card-loader-base-height;
+}
+
+.desc1Bottom {
+  top: @job-card-loader-base-height * 6;
+  left: 0;
+  right: 0;
+  height: @job-card-loader-base-height;
+}
+
+.desc2Right {
+  top: @job-card-loader-base-height * 7;
+  left: 60%;
+  right: 0;
+  height: @job-card-loader-base-height;
+}
+
+.desc2Bottom {
+  top: @job-card-loader-base-height * 8;
+  left: 0;
+  right: 0;
+  height: @job-card-loader-base-height * 2;
+}
+
+.locationRight {
+  top: @job-card-loader-base-height * 10;
+  left: 45%;
+  right: 0;
+  height: @job-card-loader-base-height;
+}
+
+.locationBottom {
+  top: @job-card-loader-base-height * 11;
+  left: 0;
+  right: @job-card-loader-pic;
+  height: @job-card-loader-base-height;
+}
+
+.salaryRight {
+  top: @job-card-loader-base-height * 12;
+  left: 50%;
+  right: @job-card-loader-pic;
+  height: @job-card-loader-base-height;
+}
+
+.salaryBottom {
+  top: @job-card-loader-base-height * 13;
+  left: 0;
+  right: @job-card-loader-pic;
+  height: @job-card-loader-base-height * 2;
+}
+
+.dateRight {
+  top: @job-card-loader-base-height * 15;
+  left: @grid-base * 10;
+  right: @job-card-loader-pic;
+  height: @job-card-loader-base-height;
+}
