@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import Text from './Text';
 
-const sizes = ['small', 'substandard', 'standard', 'superstandard', 'subheading', 'headline', 'heading', 'hero'];
+import { sizes } from '../private/withTextProps';
 
 describe('Text', () => {
   it('should render with defaults', () => {
