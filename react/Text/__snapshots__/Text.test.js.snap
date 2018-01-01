@@ -88,6 +88,26 @@ exports[`Text sizes should render as small 2`] = `
 </Text>
 `;
 
+exports[`Text sizes should render as standard 1`] = `
+<Text
+  baseline={true}
+  size="standard"
+  standard={true}
+>
+  Hello
+</Text>
+`;
+
+exports[`Text sizes should render as standard 2`] = `
+<Text
+  baseline={true}
+  size="standard"
+  standard={true}
+>
+  Hello
+</Text>
+`;
+
 exports[`Text sizes should render as subheading 1`] = `
 <Text
   baseline={true}

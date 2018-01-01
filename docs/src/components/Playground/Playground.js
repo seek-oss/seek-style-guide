@@ -484,6 +484,7 @@ export default class Playground extends Component {
                   {[
                     'small',
                     'substandard',
+                    'standard',
                     'superstandard',
                     'heading',
                     'headline',
@@ -510,7 +511,7 @@ export default class Playground extends Component {
             {[false, true].map((showTextRating, index) => (
               <Card key={index}>
                 <Section>
-                  {['substandard', 'superstandard', 'heading'].map(size => (
+                  {['substandard', 'standard', 'superstandard', 'heading'].map(size => (
                     <div key={size}>
                       <Rating rating={3.5} {...{ [size]: true }} showTextRating={showTextRating} />
                       <Text {...{ [size]: true }}> {`${capitalize(size)}${showTextRating ? ' with text rating' : ''}`}</Text>
@@ -532,6 +533,7 @@ export default class Playground extends Component {
               {[
                 'small',
                 'substandard',
+                'standard',
                 'superstandard',
                 'heading',
                 'headline',
