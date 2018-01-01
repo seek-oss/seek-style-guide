@@ -1,14 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const sizes = [
   'small',
   'substandard',
   'superstandard',
+  'standard',
   'subheading',
   'headline',
   'heading',
   'hero'
 ];
+
+export const SizePropTypes = PropTypes.oneOf(sizes);
+
 const getSizeProps = props => {
   const sizeProps = {};
 

@@ -11,7 +11,7 @@ import Icon from '../private/Icon/Icon';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import Text from '../Text/Text';
 
-import withTextProps from '../private/withTextProps';
+import withTextProps, { SizePropTypes } from '../private/withTextProps';
 
 const getPercent = (rating, position) => Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
 
@@ -82,7 +82,7 @@ Rating.propTypes = {
   className: PropTypes.string,
   starClassName: PropTypes.string,
   showTextRating: PropTypes.bool,
-  size: PropTypes.string
+  size: SizePropTypes
 };
 
 Rating.defaultProps = {

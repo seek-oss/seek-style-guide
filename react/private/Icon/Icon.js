@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-import withTextProps from '../withTextProps';
+import withTextProps, { SizePropTypes } from '../withTextProps';
 
 function Icon({
   markup,
@@ -35,7 +35,7 @@ Icon.propTypes = {
   markup: PropTypes.string.isRequired,
   svgClassName: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.string
+  size: SizePropTypes
 };
 
 Icon.defaultProps = {
