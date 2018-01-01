@@ -10,18 +10,12 @@ import stylesSecondary from '../Secondary/Secondary.less';
 import stylesStrong from '../Strong/Strong.less';
 import stylesRegular from '../Regular/Regular.less';
 
-import withTextProps from '../private/withTextProps';
+import withTextProps, { SizePropTypes } from '../private/withTextProps';
 
 const Text = ({
   children,
   className,
-  small,
-  substandard,
-  superstandard,
-  subheading,
-  headline,
-  heading,
-  hero,
+  size,
   raw,
   positive,
   critical,
@@ -37,13 +31,7 @@ const Text = ({
     className={classnames({
       [styles.root]: true,
       [className]: className,
-      [styles.small]: small,
-      [styles.substandard]: substandard,
-      [styles.superstandard]: superstandard,
-      [styles.subheading]: subheading,
-      [styles.headline]: headline,
-      [styles.heading]: heading,
-      [styles.hero]: hero,
+      [styles[size]]: size,
       [styles.raw]: raw,
       [styles.baseline]: baseline
     })}>
@@ -64,13 +52,7 @@ const Text = ({
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  small: PropTypes.bool,
-  substandard: PropTypes.bool,
-  superstandard: PropTypes.bool,
-  subheading: PropTypes.bool,
-  headline: PropTypes.bool,
-  heading: PropTypes.bool,
-  hero: PropTypes.bool,
+  size: SizePropTypes,
   raw: PropTypes.bool,
   positive: PropTypes.bool,
   critical: PropTypes.bool,
