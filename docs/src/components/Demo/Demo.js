@@ -7,6 +7,7 @@ import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import Baseline from './Baseline/Baseline';
 import Code from './Code/Code';
 import flatten from 'lodash/flatten';
+import map from 'lodash/map';
 
 const DefaultContainer = ({ component: DemoComponent, componentProps }) => (
   <DemoComponent {...componentProps} />
@@ -126,7 +127,8 @@ export default class Demo extends Component {
       block,
       component: DemoComponent,
       container: Container = DefaultContainer,
-      options
+      options,
+      sketch
     } = this.props.spec;
 
     const codeElement = <DemoComponent {...this.calculateProps()} />;
@@ -168,6 +170,53 @@ export default class Demo extends Component {
         <PageBlock className={styles.codeBlock}>
           <Code jsx={codeElement} />
         </PageBlock>
+        {
+          sketch && (sketch.symbols || sketch.blockSymbols) ? (
+            <div>
+              <PageBlock>
+                <Section header>
+                  <Text hero>Sketch Symbols</Text>
+                </Section>
+              </PageBlock>
+              <div className={styles.symbols}>
+                {
+                  map(sketch.blockSymbols || {}, (element, name) => (
+                    <div key={name}>
+                      <PageBlock>
+                        <Section>
+                          <div className={styles.symbolName}>
+                            <Text superstandard strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
+                          </div>
+                        </Section>
+                      </PageBlock>
+                      <div className={styles.symbolElement}>
+                        { element }
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+              <PageBlock>
+                <div className={styles.symbols}>
+                  {
+                    map(sketch.symbols || {}, (element, name) => (
+                      <div key={name}>
+                        <Section>
+                          <div className={styles.symbolName}>
+                            <Text superstandard strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
+                          </div>
+                          <div className={styles.symbolElement}>
+                            { element }
+                          </div>
+                        </Section>
+                      </div>
+                    ))
+                  }
+                </div>
+              </PageBlock>
+            </div>
+          ) : null
+        }
       </div>
     );
   }

@@ -1,9 +1,11 @@
 import SlideToggle from './SlideToggle';
+import * as sketch from './SlideToggle.sketch';
 
 export default {
   route: '/slidetoggle',
   title: 'Slide Toggle',
   component: SlideToggle,
+  sketch,
   initialProps: {
     onChange: () => {},
     id: 'myToggle',
