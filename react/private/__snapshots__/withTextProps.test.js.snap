@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withTextProps: *heading*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="heading"
+/>
+`;
+
+exports[`withTextProps: *heading*: should pass down string size 1`] = `
+<Dummy
+  size="heading"
+/>
+`;
+
+exports[`withTextProps: *headline*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="headline"
+/>
+`;
+
+exports[`withTextProps: *headline*: should pass down string size 1`] = `
+<Dummy
+  size="headline"
+/>
+`;
+
+exports[`withTextProps: *hero*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="hero"
+/>
+`;
+
+exports[`withTextProps: *hero*: should pass down string size 1`] = `
+<Dummy
+  size="hero"
+/>
+`;
+
+exports[`withTextProps: *small*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="small"
+/>
+`;
+
+exports[`withTextProps: *small*: should pass down string size 1`] = `
+<Dummy
+  size="small"
+/>
+`;
+
+exports[`withTextProps: *standard*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="standard"
+/>
+`;
+
+exports[`withTextProps: *standard*: should pass down string size 1`] = `
+<Dummy
+  size="standard"
+/>
+`;
+
+exports[`withTextProps: *subheading*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="subheading"
+/>
+`;
+
+exports[`withTextProps: *subheading*: should pass down string size 1`] = `
+<Dummy
+  size="subheading"
+/>
+`;
+
+exports[`withTextProps: *substandard*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="substandard"
+/>
+`;
+
+exports[`withTextProps: *substandard*: should pass down string size 1`] = `
+<Dummy
+  size="substandard"
+/>
+`;
+
+exports[`withTextProps: *superstandard*: should convert boolean size into string size 1`] = `
+<Dummy
+  size="superstandard"
+/>
+`;
+
+exports[`withTextProps: *superstandard*: should pass down string size 1`] = `
+<Dummy
+  size="superstandard"
+/>
+`;
+
+exports[`withTextProps: should omit boolean size props 1`] = `
+<Dummy
+  size="heading"
+/>
+`;
+
+exports[`withTextProps: should pass down non-size props 1`] = `
+<Dummy
+  bar={true}
+  baz={
+    Object {
+      "a": 1,
+    }
+  }
+  className="foo"
+/>
+`;
