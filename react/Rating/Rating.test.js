@@ -1,15 +1,15 @@
-import { shallow } from 'enzyme';
+import { render } from 'enzyme';
 import React from 'react';
 import Rating from './Rating';
 
 describe('Rating', () => {
   it('should render with starClassName', () => {
-    const wrapper = shallow(<Rating rating={5.0} starClassName={'star-class-name'} />);
+    const wrapper = render(<Rating rating={5.0} starClassName={'star-class-name'} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with className', () => {
-    const wrapper = shallow(<Rating rating={5.0} className={'root-class-name'} />);
+    const wrapper = render(<Rating rating={5.0} className={'root-class-name'} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -18,7 +18,7 @@ describe('Rating', () => {
 
     ratings.forEach(rating => {
       it(`when rating is: ${rating}`, () => {
-        const wrapper = shallow(<Rating rating={rating} />);
+        const wrapper = render(<Rating rating={rating} />);
         expect(wrapper).toMatchSnapshot();
       });
     });
@@ -29,14 +29,14 @@ describe('Rating', () => {
 
     sizes.forEach(size => {
       it(`when size is: ${size}`, () => {
-        const wrapper = shallow(<Rating rating={3.5} {...{ [size]: true }} />);
+        const wrapper = render(<Rating rating={3.5} {...{ [size]: true }} />);
         expect(wrapper).toMatchSnapshot();
       });
     });
 
     sizes.forEach(size => {
       it(`when size is: ${size} and rating text is shown`, () => {
-        const wrapper = shallow(<Rating rating={4} {...{ [size]: true }} showTextRating />);
+        const wrapper = render(<Rating rating={4} {...{ [size]: true }} showTextRating />);
         expect(wrapper).toMatchSnapshot();
       });
     });
