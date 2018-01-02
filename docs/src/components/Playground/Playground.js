@@ -482,6 +482,7 @@ export default class Playground extends Component {
               <Card key={index}>
                 <Section>
                   {[
+                    'default - 16px',
                     'small',
                     'substandard',
                     'standard',
