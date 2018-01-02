@@ -68,4 +68,4 @@ Text.defaultProps = {
   size: 'standard'
 };
 
-export default withTextProps()(Text);
+export default withTextProps(Text);

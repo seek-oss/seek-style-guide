@@ -43,5 +43,5 @@ Icon.defaultProps = {
   className: ''
 };
 
-export default withTextProps()(Icon);
+export default withTextProps(Icon);
 

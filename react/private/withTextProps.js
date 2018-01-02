@@ -28,7 +28,7 @@ const parseBooleanSize = props => {
   return sizeProps;
 };
 
-const withTextProps = () => OriginalComponent => {
+const withTextProps = OriginalComponent => {
   const DecoratedComponent = props => {
     const newProps = {
       ...parseBooleanSize(props),

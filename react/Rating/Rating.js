@@ -90,4 +90,4 @@ Rating.defaultProps = {
   size: 'standard'
 };
 
-export default withTextProps()(Rating);
+export default withTextProps(Rating);
