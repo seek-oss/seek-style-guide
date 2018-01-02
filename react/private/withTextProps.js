@@ -32,15 +32,19 @@ const getSizeProps = props => {
   return sizeProps;
 };
 
-const withTextProps = () => WrappedComponent => {
-  return props => {
+const withTextProps = () => OriginalComponent => {
+  const DecoratedComponent = props => {
     const newProps = {
       ...getSizeProps(props),
       ...omit(props, sizes)
     };
 
-    return <WrappedComponent {...newProps} />;
+    return <OriginalComponent {...newProps} />;
   };
+
+  DecoratedComponent.displayName = OriginalComponent.displayName;
+
+  return DecoratedComponent;
 };
 
 export default withTextProps;
