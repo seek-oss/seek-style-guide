@@ -61,7 +61,34 @@ const config = decorateClientConfig({
       {
         test: /\.css\.js$/,
         include: appPaths,
-        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!css-in-js-loader!babel-loader?' + JSON.stringify(babelConfig)
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer(autoprefixerConfig)]
+            }
+          },
+          {
+            loader: 'css-in-js-loader'
+          },
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              presets: ['env']
+            }
+          }
+        ]
       },
       {
         test: /\.less$/,
@@ -113,9 +140,6 @@ const config = decorateClientConfig({
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     })
   ]
-}, {
-  //We need the following due to `seek-asia-style-guide-webpack` expecting `seek-asia-style-guide`
-  extraIncludePaths: ['seek-asia-style-guide']
 });
 
 module.exports = config;

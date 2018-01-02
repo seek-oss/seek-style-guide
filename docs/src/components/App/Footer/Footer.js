@@ -10,7 +10,7 @@ export default function Footer() {
         <div className={styles.root}>
           <a
             className={styles.link}
-            href="https://github.com/seek-oss/seek-asia-style-guide"
+            href="https://github.com/seekinternational/seek-asia-style-guide"
             title="View project on Github">
             <GithubIcon svgClassName={styles.github} />
           </a>
