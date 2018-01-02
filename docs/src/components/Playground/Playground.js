@@ -477,12 +477,22 @@ export default class Playground extends Component {
           <Section header>
             <Text hero>Icons</Text>
           </Section>
+
+          <Card>
+            <Section>
+              <Text heading>Default - 16px</Text>
+              <StarIcon /><br />
+              <ProfileIcon /><br />
+              <HeartIcon /><br />
+              <ThumbsUpIcon />
+            </Section>
+          </Card>
+
           <Columns>
             {[StarIcon, ProfileIcon, HeartIcon, ThumbsUpIcon].map((IconComponent, index) => (
               <Card key={index}>
                 <Section>
                   {[
-                    'default - 16px',
                     'small',
                     'substandard',
                     'standard',

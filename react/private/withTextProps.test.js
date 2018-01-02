@@ -1,10 +1,10 @@
 import { shallow } from 'enzyme';
-import React, { Component } from 'react';
+import React from 'react';
 
 import withTextProps, { sizes } from './withTextProps';
 
 const OriginalComponent = props => <div {...props} />;
-const DecoratedComponent = withTextProps(OriginalComponent)
+const DecoratedComponent = withTextProps(OriginalComponent);
 
 describe('withTextProps:', () => {
   it('should pass down non-size props', () => {
@@ -14,7 +14,11 @@ describe('withTextProps:', () => {
   it('should omit boolean size props', () => {
     const boolSizes = {};
 
-    sizes.forEach(size => boolSizes[size] = true)
+    sizes.forEach(size => {
+      boolSizes[size] = true;
+
+      return;
+    });
 
     expect(shallow(<DecoratedComponent size="heading" {...boolSizes} />)).toMatchSnapshot();
   });
