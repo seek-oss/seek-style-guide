@@ -10,12 +10,12 @@ import {
 import styles from './SketchExports.less';
 
 import colorsExports from '../../../../theme/**/*.sketch.js';
-const colors = Object.assign(...colorsExports.map(x => x.colors || {}));
+const colors = Object.assign({}, ...colorsExports.map(x => x.colors || {}));
 
 import componentExports from '../../../../react/*/*.sketch.js';
-const textComponents = Object.assign(...componentExports.map(x => x.text || {}));
-const blockSymbolComponents = Object.assign(...componentExports.map(x => x.blockSymbols || {}));
-const symbolComponents = Object.assign(...componentExports.map(x => x.symbols || {}));
+const textComponents = Object.assign({}, ...componentExports.map(x => x.text || {}));
+const blockSymbolComponents = Object.assign({}, ...componentExports.map(x => x.blockSymbols || {}));
+const symbolComponents = Object.assign({}, ...componentExports.map(x => x.symbols || {}));
 
 const SketchText = ({ name, children }) => (
   <div className={styles.text}>
