@@ -82,7 +82,7 @@ Rating.propTypes = {
   className: PropTypes.string,
   starClassName: PropTypes.string,
   showTextRating: PropTypes.bool,
-  size: SizePropTypes
+  ...SizePropTypes
 };
 
 Rating.defaultProps = {

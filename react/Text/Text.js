@@ -52,7 +52,7 @@ const Text = ({
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  size: SizePropTypes,
+  ...SizePropTypes,
   raw: PropTypes.bool,
   positive: PropTypes.bool,
   critical: PropTypes.bool,

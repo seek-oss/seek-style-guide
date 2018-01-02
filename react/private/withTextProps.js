@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import omit from 'lodash/omit';
+import forEach from 'lodash/forEach';
 
 export const sizes = [
   'small',
@@ -14,7 +15,16 @@ export const sizes = [
   'hero'
 ];
 
-export const SizePropTypes = PropTypes.oneOf(sizes);
+const getBooleanSizes = () => {
+  const booleanProps = {};
+
+  forEach(sizes, size => booleanProps[size]: PropTypes.bool);
+};
+
+export const SizePropTypes = {
+  size: PropTypes.oneOf(sizes),
+  ...getBooleanSizes()
+};
 
 const parseBooleanSize = props => {
   const sizeProps = {};
