@@ -1,154 +1,205 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render with defaults 1`] = `
-<Text
-  baseline={true}
-  size="standard"
+<span
+  class="root standard baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as heading 1`] = `
-<Text
-  baseline={true}
-  size="heading"
+<span
+  class="root heading baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as heading 2`] = `
-<Text
-  baseline={true}
-  size="heading"
+<span
+  class="root heading baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as headline 1`] = `
-<Text
-  baseline={true}
-  size="headline"
+<span
+  class="root headline baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as headline 2`] = `
-<Text
-  baseline={true}
-  size="headline"
+<span
+  class="root headline baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as hero 1`] = `
-<Text
-  baseline={true}
-  size="hero"
+<span
+  class="root hero baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as hero 2`] = `
-<Text
-  baseline={true}
-  size="hero"
+<span
+  class="root hero baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as small 1`] = `
-<Text
-  baseline={true}
-  size="small"
+<span
+  class="root small baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as small 2`] = `
-<Text
-  baseline={true}
-  size="small"
+<span
+  class="root small baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as standard 1`] = `
-<Text
-  baseline={true}
-  size="standard"
+<span
+  class="root standard baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as standard 2`] = `
-<Text
-  baseline={true}
-  size="standard"
+<span
+  class="root standard baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as subheading 1`] = `
-<Text
-  baseline={true}
-  size="subheading"
+<span
+  class="root subheading baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as subheading 2`] = `
-<Text
-  baseline={true}
-  size="subheading"
+<span
+  class="root subheading baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as substandard 1`] = `
-<Text
-  baseline={true}
-  size="substandard"
+<span
+  class="root substandard baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as substandard 2`] = `
-<Text
-  baseline={true}
-  size="substandard"
+<span
+  class="root substandard baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as superstandard 1`] = `
-<Text
-  baseline={true}
-  size="superstandard"
+<span
+  class="root superstandard baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
 
 exports[`Text sizes should render as superstandard 2`] = `
-<Text
-  baseline={true}
-  size="superstandard"
+<span
+  class="root superstandard baseline"
 >
-  Hello
-</Text>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
 `;
