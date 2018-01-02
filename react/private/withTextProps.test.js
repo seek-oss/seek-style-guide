@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 
 import withTextProps, { sizes } from './withTextProps';
 
-const Dummy = props => <div {...props} />;
-const DecoratedComponent = withTextProps(Dummy)
+const OriginalComponent = props => <div {...props} />;
+const DecoratedComponent = withTextProps(OriginalComponent)
 
 describe('withTextProps:', () => {
   it('should pass down non-size props', () => {
