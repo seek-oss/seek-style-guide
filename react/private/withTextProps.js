@@ -16,17 +16,13 @@ export const sizes = [
 
 export const SizePropTypes = PropTypes.oneOf(sizes);
 
-const getSizeProps = props => {
+const parseBooleanSize = props => {
   const sizeProps = {};
 
   sizes.forEach(size => {
-    if (props.size) {
-      sizeProps[size] = props.size === size || props[size];
-    } else {
-      sizeProps.size = props[size] ? size : sizeProps.size;
+    if (props[size]) {
+      sizeProps.size = size;
     }
-
-    return;
   });
 
   return sizeProps;
@@ -35,7 +31,7 @@ const getSizeProps = props => {
 const withTextProps = () => OriginalComponent => {
   const DecoratedComponent = props => {
     const newProps = {
-      ...getSizeProps(props),
+      ...parseBooleanSize(props),
       ...omit(props, sizes)
     };
 
