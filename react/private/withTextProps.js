@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import omit from 'lodash/omit';
+
 export const sizes = [
   'small',
   'substandard',
@@ -33,8 +35,8 @@ const getSizeProps = props => {
 const withTextProps = () => WrappedComponent => {
   return props => {
     const newProps = {
-      ...props,
-      ...getSizeProps(props)
+      ...getSizeProps(props),
+      ...omit(props, sizes)
     };
 
     return <WrappedComponent {...newProps} />;

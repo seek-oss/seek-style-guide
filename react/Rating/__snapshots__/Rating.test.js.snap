@@ -2,7 +2,6 @@
 
 exports[`Rating should render correct size when size is: heading 1`] = `
 <Rating
-  heading={true}
   rating={3.5}
   showTextRating={false}
   size="heading"
@@ -11,7 +10,6 @@ exports[`Rating should render correct size when size is: heading 1`] = `
 
 exports[`Rating should render correct size when size is: heading and rating text is shown 1`] = `
 <Rating
-  heading={true}
   rating={4}
   showTextRating={true}
   size="heading"
@@ -23,7 +21,6 @@ exports[`Rating should render correct size when size is: substandard 1`] = `
   rating={3.5}
   showTextRating={false}
   size="substandard"
-  substandard={true}
 />
 `;
 
@@ -32,7 +29,6 @@ exports[`Rating should render correct size when size is: substandard and rating 
   rating={4}
   showTextRating={true}
   size="substandard"
-  substandard={true}
 />
 `;
 
@@ -41,7 +37,6 @@ exports[`Rating should render correct size when size is: superstandard 1`] = `
   rating={3.5}
   showTextRating={false}
   size="superstandard"
-  superstandard={true}
 />
 `;
 
@@ -50,7 +45,6 @@ exports[`Rating should render correct size when size is: superstandard and ratin
   rating={4}
   showTextRating={true}
   size="superstandard"
-  superstandard={true}
 />
 `;
 
@@ -58,6 +52,7 @@ exports[`Rating should render correct star rating when rating is: 0 1`] = `
 <Rating
   rating={0}
   showTextRating={false}
+  size="standard"
 />
 `;
 
@@ -65,6 +60,7 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
 <Rating
   rating={2.74}
   showTextRating={false}
+  size="standard"
 />
 `;
 
@@ -72,6 +68,7 @@ exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
 <Rating
   rating={2.75}
   showTextRating={false}
+  size="standard"
 />
 `;
 
@@ -79,6 +76,7 @@ exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
 <Rating
   rating={3.74}
   showTextRating={false}
+  size="standard"
 />
 `;
 
@@ -86,6 +84,7 @@ exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
 <Rating
   rating={3.75}
   showTextRating={false}
+  size="standard"
 />
 `;
 
@@ -93,6 +92,7 @@ exports[`Rating should render correct star rating when rating is: 5 1`] = `
 <Rating
   rating={5}
   showTextRating={false}
+  size="standard"
 />
 `;
 
@@ -101,6 +101,7 @@ exports[`Rating should render with className 1`] = `
   className="root-class-name"
   rating={5}
   showTextRating={false}
+  size="standard"
 />
 `;
 
@@ -108,6 +109,7 @@ exports[`Rating should render with starClassName 1`] = `
 <Rating
   rating={5}
   showTextRating={false}
+  size="standard"
   starClassName="star-class-name"
 />
 `;

@@ -86,7 +86,8 @@ Rating.propTypes = {
 };
 
 Rating.defaultProps = {
-  showTextRating: false
+  showTextRating: false,
+  size: 'standard'
 };
 
 export default withTextProps()(Rating);

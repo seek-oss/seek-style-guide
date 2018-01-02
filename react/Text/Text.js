@@ -64,7 +64,8 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  baseline: true
+  baseline: true,
+  size: 'standard'
 };
 
 export default withTextProps()(Text);
