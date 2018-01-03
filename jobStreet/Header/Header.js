@@ -6,7 +6,8 @@ import {
   Text,
   PageBlock,
   Section,
-  HamburgerIcon
+  HamburgerIcon,
+  Button
 } from 'seek-asia-style-guide/react';
 import Nav from './components/Nav/Nav';
 import styles from './header.less';
@@ -77,10 +78,7 @@ class Header extends Component {
         </PageBlock>
         <PageBlock className={styles.bannerWrapper}>
           <Section className={styles.bannerContainer}>
-            {/*
-              * Should we use <button> or <Button>?
-              */}
-            <button
+            <Button
               className={styles.toggle}
               onClick={() => {
                 if (!isNavActive) {
@@ -88,7 +86,7 @@ class Header extends Component {
                 }
               }}>
               <HamburgerIcon />
-            </button>
+            </Button>
             <div className={styles.logoContainer}>
               <a href="/" title={messages['header.homeTitle']}>
                 <Logo className={styles.logo} />

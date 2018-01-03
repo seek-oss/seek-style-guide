@@ -30,7 +30,6 @@ switch (options.tenant) {
     break;
   default:
     port = defaultPort;
-    break;
 }
 
 config.plugins.push(new webpack.DefinePlugin({

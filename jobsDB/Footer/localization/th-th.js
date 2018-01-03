@@ -1,8 +1,8 @@
 const baseUrl = 'https://th.jobsdb.com';
-const baseUrlWithLanguage = `${baseUrl  }/th/th`;
-const wpUrlWithLanguage = `${baseUrl  }/th-th`;
+const baseUrlWithLanguage = `${baseUrl}/th/th`;
+const wpUrlWithLanguage = `${baseUrl}/th-th`;
 const mbaseUrl = 'https://m.jobsdb.co.th';
-const mUrlWithLanguage = `${mbaseUrl  }/en-th`;
+const mUrlWithLanguage = `${mbaseUrl}/en-th`;
 
 export default {
   'footer.copyright': 'สงวนลิขสิทธิ์ 1998-{year} jobsDB',

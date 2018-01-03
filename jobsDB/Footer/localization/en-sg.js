@@ -1,8 +1,8 @@
 const baseUrl = 'https://sg.jobsdb.com';
-const baseUrlWithLanguage = `${baseUrl  }/sg/en`;
-const wpUrlWithLanguage = `${baseUrl  }/en-sg`;
+const baseUrlWithLanguage = `${baseUrl}/sg/en`;
+const wpUrlWithLanguage = `${baseUrl}/en-sg`;
 const mbaseUrl = 'https://m.jobsdb.com';
-const mUrlWithLanguage = `${mbaseUrl  }/en-sg`;
+const mUrlWithLanguage = `${mbaseUrl}/en-sg`;
 
 export default {
   'footer.copyright': 'Copyright © 1998-{year}, jobsDB.',
