@@ -112,15 +112,17 @@ export default class SketchExports extends Component {
           </Section>
         </PageBlock>
         <PageBlock style={{ background: 'white' }}>
-          <Section>
-            <div className={styles.colors}>
-              {
-                map(colors, (color, name) => (
-                  <SketchColor key={name} name={name} value={color} />
-                ))
-              }
-            </div>
-          </Section>
+          <SketchSymbol name="colours">
+            <Section>
+              <div className={styles.colors}>
+                {
+                  map(colors, (color, name) => (
+                    <SketchColor key={name} name={name} value={color} />
+                  ))
+                }
+              </div>
+            </Section>
+          </SketchSymbol>
         </PageBlock>
         <PageBlock>
           <Section header>
