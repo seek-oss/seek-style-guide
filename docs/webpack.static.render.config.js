@@ -51,10 +51,7 @@ const config = {
         include: appPaths,
         use: [
           {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
+            loader: 'css-loader/locals',
             options: {
               modules: true,
               localIdentName: '[name]__[local]___[hash:base64:5]'

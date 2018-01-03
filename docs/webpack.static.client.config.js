@@ -59,7 +59,34 @@ const config = {
       {
         test: /\.css\.js$/,
         include: appPaths,
-        loader: appCss.extract('style-loader', 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!css-in-js-loader!babel-loader?' + JSON.stringify(babelConfig))
+        loader: appCss.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]'
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [autoprefixer(autoprefixerConfig)]
+              }
+            },
+            {
+              loader: 'less-loader'
+            },
+            {
+              loader: 'css-in-js-loader'
+            },
+            {
+              loader: 'babel-loader',
+              options: babelConfig
+            }
+          ]
+        })
       },
       {
         test: /\.less$/,
@@ -125,7 +152,5 @@ const config = {
 };
 
 module.exports = decorateClientConfig(config, {
-  extractTextPlugin: appCss,
-  //We need the following due to `seek-asia-style-guide-webpack` expecting `seek-asia-style-guide`
-  extraIncludePaths: ['seek-asia-style-guide']
+  extractTextPlugin: appCss
 });
