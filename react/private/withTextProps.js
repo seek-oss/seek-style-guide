@@ -18,7 +18,11 @@ export const sizes = [
 const getBooleanSizes = () => {
   const booleanProps = {};
 
-  forEach(sizes, size => booleanProps[size]: PropTypes.bool);
+  forEach(sizes, size => {
+    booleanProps[size] = PropTypes.bool;
+
+    return;
+  });
 };
 
 export const SizePropTypes = {
