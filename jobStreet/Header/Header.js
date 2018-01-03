@@ -21,6 +21,8 @@ class Header extends Component {
       isNavActive: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleHamburgerClick = this.handleHamburgerClick.bind(this);
+    this.handleNodeRef = this.handleNodeRef.bind(this);
   }
 
   componentWillUnmount() {
@@ -32,6 +34,16 @@ class Header extends Component {
     if (userClickedOutsideOfDropdown) {
       this.showNav(false);
     }
+  }
+
+  handleHamburgerClick() {
+    if (!this.state.isNavActive) {
+      this.showNav(true);
+    }
+  }
+
+  handleNodeRef(node) {
+    this.dropdownNode = node;
   }
 
   showNav(shouldShowNav) {
@@ -64,9 +76,7 @@ class Header extends Component {
           }>
           <div
             className={styles.navContainer}
-            ref={node => {
-              this.dropdownNode = node;
-            }}>
+            ref={this.handleNodeRef}>
             <Nav key={'navLinks'} links={navLinks} messages={messages} activeNavLinkTextKey={activeNavLinkTextKey} />
             {
               authenticationStatus === 'pending' ||
@@ -80,11 +90,7 @@ class Header extends Component {
           <Section className={styles.bannerContainer}>
             <Button
               className={styles.toggle}
-              onClick={() => {
-                if (!isNavActive) {
-                  this.showNav(true);
-                }
-              }}>
+              onClick={this.handleHamburgerClick}>
               <HamburgerIcon />
             </Button>
             <div className={styles.logoContainer}>
