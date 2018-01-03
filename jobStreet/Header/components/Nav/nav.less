@@ -9,16 +9,20 @@
 }
 
 .item {
+  padding: @grid-base 0px;
+
   @media @desktop {
+    padding-top: (@grid-base * 3);
+    padding-bottom: (@grid-base * 3);
     display: inline-block;
     color: @jsNavLinkDesktopColor;
   }
 }
 
 .dropdownIcon {
-  padding-top: @grid-base * 2;
-  padding-left: @grid-base;
-  width: @grid-base * 3;
+  margin-left: @grid-base;
+  height: @grid-base * 2;
+  width: @grid-base * 2;
 }
 
 .itemShowDropdown {
@@ -34,13 +38,16 @@
   display: block;
   text-decoration: none;
   color: @jsNavLinkMobileColor;
-  padding: @grid-base 0px;
   @media @desktop {
-    padding: (@grid-base * 3) (@grid-base * 2);
+    padding-left: (@grid-base * 2);
+    padding-right:  (@grid-base * 2);
     color: @jsNavLinkDesktopColor;
     &:hover,
     &:focus {
       color: @jsNavLinkDesktopOnHoverColor;
+    }
+    &.hasRightSideDivider {
+      border-right: 1px solid @jsNavLinkDesktopOnHoverColor;
     }
   }
 }

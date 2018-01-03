@@ -81,7 +81,8 @@ class Nav extends Component {
                     classNames({
                       [styles.link]: true,
                       [styles.linkIsActive]: link.isActive,
-                      [styles.linkHideOnMobile]: link.hideOnMobile
+                      [styles.linkHideOnMobile]: link.hideOnMobile,
+                      [styles.hasRightSideDivider]: link.hasRightSideDivider
                     })
                   }
                   onClick={clickHandler}

@@ -85,6 +85,7 @@ const userLoggedOutLinks = [
     href: 'header.loginLink',
     title: 'header.loginTitle',
     text: 'header.loginText',
+    hasRightSideDivider: true,
     childLinks: []
   },
   {

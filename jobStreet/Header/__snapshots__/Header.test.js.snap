@@ -663,6 +663,7 @@ exports[`JobStreet header component Authentication status should render with una
           Array [
             Object {
               "childLinks": Array [],
+              "hasRightSideDivider": true,
               "href": "header.loginLink",
               "text": "header.loginText",
               "title": "header.loginTitle",
@@ -949,6 +950,7 @@ exports[`JobStreet header component Localisation should render en-my 1`] = `
           Array [
             Object {
               "childLinks": Array [],
+              "hasRightSideDivider": true,
               "href": "header.loginLink",
               "text": "header.loginText",
               "title": "header.loginTitle",
