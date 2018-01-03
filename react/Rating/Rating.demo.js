@@ -37,14 +37,15 @@ export default {
     {
       label: 'Size',
       type: 'radio',
-      states: ['substandard', 'superstandard', 'heading']
+      states: ['Standard', 'Substandard', 'Superstandard', 'Heading']
         .map(size => ({
           label: `${String(size)}`,
           transformProps: props => ({
             ...props,
-            substandard: size === 'substandard',
-            superstandard: size === 'superstandard',
-            heading: size === 'heading'
+            standard: size === 'Standard',
+            substandard: size === 'Substandard',
+            superstandard: size === 'Superstandard',
+            heading: size === 'Heading'
           })
         }))
     }
