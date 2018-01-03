@@ -39,7 +39,7 @@ const config = decorateClientConfig({
         }
       },
       {
-        test: /\.js$/,
+        test: /(?!\.css)\.js$/,
         include: appPaths,
         use: {
           loader: 'babel-loader',
@@ -83,10 +83,7 @@ const config = decorateClientConfig({
           },
           {
             loader: 'babel-loader',
-            options: {
-              babelrc: false,
-              presets: ['env']
-            }
+            options: babelConfig
           }
         ]
       },

@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
-import { PageBlock, Card, Section, Text, ScreenReaderOnly } from 'seek-asia-style-guide/react';
+import { PageBlock, Card, Section, Text } from 'seek-asia-style-guide/react';
 import Logo from './Logo/Logo';
 import demoSpecExports from '../../../../../react/*/*.demo.js';
 const demoSpecs = demoSpecExports.map(x => x.default);

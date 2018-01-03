@@ -39,7 +39,7 @@ const config = {
         }
       },
       {
-        test: /\.js$/,
+        test: /(?!\.css)\.js$/,
         include: appPaths,
         use: {
           loader: 'babel-loader',
@@ -49,7 +49,31 @@ const config = {
       {
         test: /\.css\.js$/,
         include: appPaths,
-        loader: 'css-loader/locals?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!css-in-js-loader!babel-loader?' + JSON.stringify(babelConfig)
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer]
+            }
+          },
+          {
+            loader: 'css-in-js-loader'
+          },
+          {
+            loader: 'babel-loader',
+            options: babelConfig
+          }
+        ]
       },
       {
         test: /\.less$/,
@@ -118,7 +142,4 @@ const config = {
   ]
 };
 
-module.exports = decorateServerConfig(config, {
-  //We need the following due to `seek-asia-style-guide-webpack` expecting `seek-asia-style-guide`
-  extraIncludePaths: ['seek-asia-style-guide']
-});
+module.exports = decorateServerConfig(config);
