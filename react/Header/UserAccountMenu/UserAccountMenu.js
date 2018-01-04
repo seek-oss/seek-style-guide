@@ -89,6 +89,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             className: `${styles.item} ${styles.subItem}`,
             href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
             children: [
+              newBadgeTab === 'Saved & Applied Jobs' && <NewBadge key="new" className={styles.newBadge} />,
               <span key="label">Saved <Hidden desktop>& Applied </Hidden>Jobs</span>,
               <StarIcon
                 key="icon"
@@ -121,6 +122,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             className: `${styles.item} ${styles.subItem}`,
             href: urlForAuthStatus(authenticationStatus, '/recommended'),
             children: [
+              newBadgeTab === 'Recommended Jobs' && <NewBadge key="new" className={styles.newBadge} />,
               <span key="label">Recommended Jobs</span>,
               <ThumbsUpIcon
                 key="icon"
