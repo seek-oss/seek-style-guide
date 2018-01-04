@@ -84,7 +84,8 @@ export default {
       label: 'New Tab',
       type: 'radio',
       states: [
-        null,
+        undefined,
+        'None',
         'Job Search',
         '$150k+ Jobs',
         'Profile',
@@ -93,7 +94,7 @@ export default {
         'Company Reviews',
         'Advice & Tips'
       ].map(newBadgeTab => ({
-        label: newBadgeTab || 'No new label',
+        label: newBadgeTab || 'default',
         transformProps: props => ({
           ...props,
           newBadgeTab

@@ -26,7 +26,10 @@ const tabNames = [
   'Company Reviews',
   'Advice & Tips'
 ];
-
+const allowedBadgeTabs = [
+  ...tabNames,
+  'None'
+];
 export default function Header({
   logoComponent: LogoComponent,
   locale,
@@ -137,7 +140,7 @@ Header.propTypes = {
   userEmail: PropTypes.string,
   linkRenderer: PropTypes.func,
   activeTab: PropTypes.oneOf(tabNames),
-  newBadgeTab: PropTypes.oneOf(tabNames),
+  newBadgeTab: PropTypes.oneOf(allowedBadgeTabs),
   divider: PropTypes.bool,
   returnUrl: PropTypes.string,
   onMenuToggle: PropTypes.func
@@ -149,7 +152,7 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
-  newBadgeTab: null,
+  newBadgeTab: 'Profile',
   divider: true,
   userEmail: ''
 };
