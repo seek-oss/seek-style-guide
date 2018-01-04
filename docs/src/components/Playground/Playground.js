@@ -18,7 +18,7 @@ import {
   Positive,
   Critical,
   Secondary,
-  Strong,
+  Strong
 } from 'seek-asia-style-guide/react';
 
 import JobStreetHeader from 'seek-asia-style-guide/jobStreet/Header/Header';
