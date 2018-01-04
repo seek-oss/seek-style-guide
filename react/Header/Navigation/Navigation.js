@@ -24,7 +24,8 @@ const items = [
   {
     name: 'Profile',
     href: '/profile/',
-    analytics: 'header:profile'
+    analytics: 'header:profile',
+    isShort: true
   },
   {
     name: 'Company Reviews',
@@ -55,31 +56,38 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
 
       <ul className={styles.list} data-automation="nav-tabs">
         {
-          items.map(({ specificLocale = locale, analytics, name, ...restProps }, i) => (
-            (specificLocale === locale) ?
-              <li className={styles.item} key={i}>
-                {
-                  linkRenderer({
-                    children: [
-                      name,
-                      name === newBadgeTab && (
-                        <NewBadge
-                          key={name}
-                          className={styles.newBadge}
-                        />
-                      )
-                    ],
-                    'data-analytics': analytics,
-                    className: classnames({
-                      [styles.link]: true,
-                      [styles.link_isActive]: name === activeTab
-                    }),
-                    ...restProps
-                  })
-                }
-              </li> :
-              null
-          ))
+          items.map(({ specificLocale = locale, analytics, name, isShort, ...restProps }, i) => {
+            const badgeStyles = classnames({
+              [styles.newBadge]: true,
+              [styles.newBadge_isShort]: isShort
+            });
+
+            return (
+              (specificLocale === locale) ?
+                <li className={styles.item} key={i}>
+                  {
+                    linkRenderer({
+                      children: [
+                        name,
+                        name === newBadgeTab && (
+                          <NewBadge
+                            key={name}
+                            className={badgeStyles}
+                          />
+                        )
+                      ],
+                      'data-analytics': analytics,
+                      className: classnames({
+                        [styles.link]: true,
+                        [styles.link_isActive]: name === activeTab
+                      }),
+                      ...restProps
+                    })
+                  }
+                </li> :
+                null
+            );
+          })
         }
       </ul>
 

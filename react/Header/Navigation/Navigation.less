@@ -61,7 +61,10 @@
   margin-left: 5px;
   @media only screen and (max-width: @grid-container-width) {
     position: absolute;
-    top: 0;
+    top: -4px;
     right: (@grid-gutter-width / 2);
+    &.newBadge_isShort {
+      right: @grid-gutter-width;
+    }
   }
 }
