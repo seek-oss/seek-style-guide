@@ -57,13 +57,9 @@
   }
 }
 
-.link_smallText {
-  font-size: 16px;
-}
-
 .newBadge {
   margin-left: 5px;
-  @media only screen and (max-width: (@grid-container-width + @grid-gutter-width)) {
+  @media only screen and (max-width: @grid-container-width) {
     position: absolute;
     top: 0;
     right: (@grid-gutter-width / 2);

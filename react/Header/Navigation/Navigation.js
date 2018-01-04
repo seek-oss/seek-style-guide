@@ -72,8 +72,7 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
                     'data-analytics': analytics,
                     className: classnames({
                       [styles.link]: true,
-                      [styles.link_isActive]: name === activeTab,
-                      [styles.link_smallText]: locale === 'AU' && newBadgeTab === 'Company Reviews'
+                      [styles.link_isActive]: name === activeTab
                     }),
                     ...restProps
                   })
