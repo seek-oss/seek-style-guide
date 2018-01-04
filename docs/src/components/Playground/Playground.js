@@ -19,19 +19,14 @@ import {
   Critical,
   Secondary,
   Strong,
-  Header,
-  Footer
 } from 'seek-asia-style-guide/react';
 
 import JobStreetHeader from 'seek-asia-style-guide/jobStreet/Header/Header';
 import JobStreetFooter from 'seek-asia-style-guide/jobStreet/Footer/Footer';
 
-import { makeDummyLinkRendererForPath } from 'seek-asia-style-guide/react/Header/Header.demo';
 import TextLink from './Atoms/TextLink/TextLink';
 import IconButton from './Atoms/IconButton/IconButton';
 import Tab from './Atoms/Tab/Tab';
-
-const dummyLinkRenderer = makeDummyLinkRendererForPath('/playground');
 
 const renderAsideProfile = () => (
   <Card transparent>
@@ -138,7 +133,6 @@ export default class Playground extends Component {
       <div>
         <JobStreetHeader user={{}} />
         <JobStreetFooter language="vi" country="vn" />
-        <Header linkRenderer={dummyLinkRenderer} />
 
         <PageBlock>
           <Section header>
@@ -473,7 +467,6 @@ export default class Playground extends Component {
           </CardGroup>
         </PageBlock>
 
-        <Footer linkRenderer={dummyLinkRenderer} />
       </div>
     );
   }

@@ -3,44 +3,21 @@ import Button from '../Button/Button';
 import ButtonGroup from './ButtonGroup';
 
 export const symbols = {
-  'Button Group/Pink': (
+  'Button Group/Call to Action': (
     <ButtonGroup>
-      <Button color="pink">Button 1</Button>
+      <Button color="callToAction">Button 1</Button>
     </ButtonGroup>
   ),
-  'Button Group/Pink Ghost': (
+  'Button Group/Call to Action + Hyperlink': (
     <ButtonGroup>
-      <Button color="pink" ghost>Button 1</Button>
+      <Button color="callToAction">Button 1</Button>
+      <Button color="hyperlink">Button 2</Button>
     </ButtonGroup>
   ),
-  'Button Group/Blue Ghost': (
+  'Button Group/Call to Action + Hyperlink + Transparent': (
     <ButtonGroup>
-      <Button color="blue" ghost>Button 1</Button>
-    </ButtonGroup>
-  ),
-  'Button Group/Pink + Blue': (
-    <ButtonGroup>
-      <Button color="pink">Button 1</Button>
-      <Button color="blue">Button 2</Button>
-    </ButtonGroup>
-  ),
-  'Button Group/Pink + Blue + Transparent': (
-    <ButtonGroup>
-      <Button color="pink">Button 1</Button>
-      <Button color="blue">Button 2</Button>
-      <Button color="transparent">Button 3</Button>
-    </ButtonGroup>
-  ),
-  'Button Group/Pink + Transparent': (
-    <ButtonGroup>
-      <Button color="pink">Button 1</Button>
-      <Button color="transparent">Button 2</Button>
-    </ButtonGroup>
-  ),
-  'Button Group/Pink + Transparent x2': (
-    <ButtonGroup>
-      <Button color="pink">Button 1</Button>
-      <Button color="transparent">Button 2</Button>
+      <Button color="callToAction">Button 1</Button>
+      <Button color="hyperlink">Button 2</Button>
       <Button color="transparent">Button 3</Button>
     </ButtonGroup>
   )

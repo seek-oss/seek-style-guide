@@ -13,9 +13,14 @@ import colorsExports from '../../../../theme/**/*.sketch.js';
 const colors = Object.assign({}, ...colorsExports.map(x => x.colors || {}));
 
 import componentExports from '../../../../react/*/*.sketch.js';
-const textComponents = Object.assign({}, ...componentExports.map(x => x.text || {}));
-const blockSymbolComponents = Object.assign({}, ...componentExports.map(x => x.blockSymbols || {}));
-const symbolComponents = Object.assign({}, ...componentExports.map(x => x.symbols || {}));
+import jobStreetExports from '../../../../jobStreet/*/*.sketch.js';
+import jobsDBExports from '../../../../jobsDB/*/*.sketch.js';
+
+const mergedComponentExports = componentExports.concat(jobsDBExports, jobStreetExports);
+
+const textComponents = Object.assign({}, ...mergedComponentExports.map(x => x.text || {}));
+const blockSymbolComponents = Object.assign({}, ...mergedComponentExports.map(x => x.blockSymbols || {}));
+const symbolComponents = Object.assign({}, ...mergedComponentExports.map(x => x.symbols || {}));
 
 const SketchText = ({ name, children }) => (
   <div className={styles.text}>
