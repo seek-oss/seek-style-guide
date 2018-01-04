@@ -28,7 +28,7 @@ const tabNames = [
 ];
 const allowedBadgeTabs = [
   ...tabNames,
-  'None'
+  null
 ];
 export default function Header({
   logoComponent: LogoComponent,

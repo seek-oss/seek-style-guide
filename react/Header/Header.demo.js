@@ -84,8 +84,8 @@ export default {
       label: 'New Tab',
       type: 'radio',
       states: [
-        undefined, // eslint-disable-line no-undefined
-        'None',
+        undefined,
+        null,
         'Job Search',
         '$150k+ Jobs',
         'Profile',
@@ -93,13 +93,19 @@ export default {
         'Recommended Jobs',
         'Company Reviews',
         'Advice & Tips'
-      ].map(newBadgeTab => ({
-        label: newBadgeTab || 'default',
-        transformProps: props => ({
-          ...props,
-          newBadgeTab
-        })
-      }))
+      ].map(newBadgeTab => {
+        let label = newBadgeTab;
+        if (!newBadgeTab) {
+          label = newBadgeTab === undefined ? 'Default' : 'None';
+        }
+        return {
+          label,
+          transformProps: props => ({
+            ...props,
+            newBadgeTab
+          })
+        };
+      })
     },
     {
       label: 'Authentication',
