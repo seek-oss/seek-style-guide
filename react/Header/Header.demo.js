@@ -84,7 +84,7 @@ export default {
       label: 'New Tab',
       type: 'radio',
       states: [
-        undefined,
+        undefined, // eslint-disable-line no-undefined
         'None',
         'Job Search',
         '$150k+ Jobs',
