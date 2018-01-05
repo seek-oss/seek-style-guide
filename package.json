@@ -63,7 +63,6 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^5.2.8",
-    "array-includes": "^3.0.3",
     "autoprefixer": "^7.1.5",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
@@ -80,6 +79,7 @@
     "chalk": "^2.1.0",
     "commitizen": "^2.9.6",
     "commitlint-config-seek": "^1.0.0",
+    "core-js": "^2.5.3",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
     "dedent": "^0.7.0",

@@ -1,12 +1,14 @@
+// Polyfills
+import 'core-js/fn/array/fill';
+import 'core-js/fn/array/includes';
+import 'core-js/fn/string/ends-with';
+import 'core-js/fn/string/includes';
+import 'core-js/fn/string/starts-with';
+
 import React from 'react';
 import { hydrate, render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import BrowserRouter from './BrowserRouter';
-
-import includes from 'array-includes';
-if (!Array.prototype.includes) {
-  includes.shim();
-}
 
 const appElement = document.getElementById('app');
 
