@@ -161,6 +161,7 @@ exports[`JobStreet header component Authentication status should render when pen
         className="toggle"
         component="button"
         fullWidth={false}
+        ghost={false}
         loading={false}
         onClick={[Function]}
       >
@@ -473,6 +474,7 @@ exports[`JobStreet header component Authentication status should render with aut
         className="toggle"
         component="button"
         fullWidth={false}
+        ghost={false}
         loading={false}
         onClick={[Function]}
       >
@@ -760,6 +762,7 @@ exports[`JobStreet header component Authentication status should render with una
         className="toggle"
         component="button"
         fullWidth={false}
+        ghost={false}
         loading={false}
         onClick={[Function]}
       >
@@ -1047,6 +1050,7 @@ exports[`JobStreet header component Localisation should render en-my 1`] = `
         className="toggle"
         component="button"
         fullWidth={false}
+        ghost={false}
         loading={false}
         onClick={[Function]}
       >

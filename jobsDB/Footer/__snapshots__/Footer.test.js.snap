@@ -33,7 +33,7 @@ exports[`Footer component Localisation should render en-hk 1`] = `
       <p
         className="copyright"
       >
-        Copyright © 1998-2018, jobsDB.
+        Copyright © 1998-2017, jobsDB.
         <span
           className="fullversion"
         >
@@ -78,7 +78,7 @@ exports[`Footer component Localisation should render en-id 1`] = `
       <p
         className="copyright"
       >
-        Copyright © 1998-2018, jobsDB.
+        Copyright © 1998-2017, jobsDB.
         <span
           className="fullversion"
         >
@@ -123,7 +123,7 @@ exports[`Footer component Localisation should render en-sg 1`] = `
       <p
         className="copyright"
       >
-        Copyright © 1998-2018, jobsDB.
+        Copyright © 1998-2017, jobsDB.
         <span
           className="fullversion"
         >
@@ -168,7 +168,7 @@ exports[`Footer component Localisation should render en-th 1`] = `
       <p
         className="copyright"
       >
-        Copyright © 1998-2018, jobsDB.
+        Copyright © 1998-2017, jobsDB.
         <span
           className="fullversion"
         >
@@ -213,7 +213,7 @@ exports[`Footer component Localisation should render id-id 1`] = `
       <p
         className="copyright"
       >
-        Hak Cipta© 1998-2018, jobsDB.
+        Hak Cipta© 1998-2017, jobsDB.
         <span
           className="fullversion"
         >
@@ -258,7 +258,7 @@ exports[`Footer component Localisation should render th-th 1`] = `
       <p
         className="copyright"
       >
-        สงวนลิขสิทธิ์ 1998-2018 jobsDB
+        สงวนลิขสิทธิ์ 1998-2017 jobsDB
         <span
           className="fullversion"
         />

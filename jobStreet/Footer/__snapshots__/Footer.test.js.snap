@@ -32,7 +32,7 @@ exports[`Footer component Localisation should render en-id 1`] = `
   <p
     className="copyright"
   >
-    Copyright © 2018 JobStreet.com
+    Copyright © 2017 JobStreet.com
   </p>
 </footer>
 `;
@@ -117,7 +117,7 @@ exports[`Footer component Localisation should render en-my 1`] = `
   <p
     className="copyright"
   >
-    Copyright © 2018 JobStreet.com
+    Copyright © 2017 JobStreet.com
   </p>
 </footer>
 `;
@@ -154,7 +154,7 @@ exports[`Footer component Localisation should render en-ph 1`] = `
   <p
     className="copyright"
   >
-    Copyright © 2018 JobStreet.com
+    Copyright © 2017 JobStreet.com
   </p>
 </footer>
 `;
@@ -191,7 +191,7 @@ exports[`Footer component Localisation should render en-sg 1`] = `
   <p
     className="copyright"
   >
-    Copyright © 2018 JobStreet.com
+    Copyright © 2017 JobStreet.com
   </p>
 </footer>
 `;
@@ -228,7 +228,7 @@ exports[`Footer component Localisation should render en-vn 1`] = `
   <p
     className="copyright"
   >
-    Copyright © 2018 JobStreet.com
+    Copyright © 2017 JobStreet.com
   </p>
 </footer>
 `;
@@ -265,7 +265,7 @@ exports[`Footer component Localisation should render id-id 1`] = `
   <p
     className="copyright"
   >
-    Hak Cipta © 2018 JobStreet.com
+    Hak Cipta © 2017 JobStreet.com
   </p>
 </footer>
 `;
@@ -302,7 +302,7 @@ exports[`Footer component Localisation should render vi-vn 1`] = `
   <p
     className="copyright"
   >
-    Copyright © 2018 JobStreet.com
+    Copyright © 2017 JobStreet.com
   </p>
 </footer>
 `;
