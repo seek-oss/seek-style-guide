@@ -10,7 +10,10 @@ import Playground from 'Playground/Playground';
 import SketchExports from 'SketchExports/SketchExports';
 import Demo from 'Demo/Demo';
 import demoSpecExports from '../../../../react/*/*.demo.js';
-const demoSpecs = demoSpecExports.map(x => x.default);
+import jobStreetDemoExports from '../../../../jobStreet/*/*.demo.js';
+import jobsDBDemoExports from '../../../../jobsDB/*/*.demo.js';
+
+const demoSpecs = demoSpecExports.concat(jobStreetDemoExports, jobsDBDemoExports).map(x => x.default);
 
 const demoRoutes = demoSpecs.map(demoSpec => {
   const DemoRoute = () => <Demo spec={demoSpec} />;

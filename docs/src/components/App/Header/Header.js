@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom';
 import { PageBlock, Card, Section, Text } from 'seek-asia-style-guide/react';
 import Logo from './Logo/Logo';
 import demoSpecExports from '../../../../../react/*/*.demo.js';
-const demoSpecs = demoSpecExports.map(x => x.default);
+import jobStreetDemoExports from '../../../../../jobStreet/*/*.demo.js';
+import jobsDBDemoExports from '../../../../../jobsDB/*/*.demo.js';
+const demoSpecs = demoSpecExports.concat(jobStreetDemoExports, jobsDBDemoExports).map(x => x.default);
 
 export default class Header extends Component {
   constructor() {

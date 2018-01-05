@@ -15,12 +15,12 @@ export const makeDummyLinkRendererForPath = path => {
   return DummyLinkRenderer;
 };
 
-const ROUTE = '/header';
+const ROUTE = '/jobsdb-header';
 
 export default {
   route: ROUTE,
   tenantPath: 'jobsDB',
-  title: 'Header',
+  title: 'JobsDB Header',
   component: Header,
   initialProps: {
     authenticationStatus: 'authenticated',

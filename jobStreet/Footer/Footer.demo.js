@@ -1,9 +1,9 @@
 import Footer from './Footer';
 
 export default {
-  route: '/footer',
+  route: '/jobstreet-footer',
   tenantPath: 'jobStreet',
-  title: 'Footer',
+  title: 'JobStreet Footer',
   component: Footer,
   initialProps: {
     language: 'en',
