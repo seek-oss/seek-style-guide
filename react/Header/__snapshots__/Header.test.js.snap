@@ -172,6 +172,11 @@ exports[`Header: should append returnUrl to signin and register links if present
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -434,6 +439,11 @@ exports[`Header: should append returnUrl to signin and register links if present
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -749,6 +759,11 @@ exports[`Header: should render first part of email address when username isn't p
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -1015,6 +1030,11 @@ exports[`Header: should render first part of email address when username isn't p
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -1326,6 +1346,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -1588,6 +1613,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -1903,6 +1933,11 @@ exports[`Header: should render when authenticated 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -2169,6 +2204,11 @@ exports[`Header: should render when authenticated 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -2480,6 +2520,11 @@ exports[`Header: should render when authenticated but username and email is not 
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -2746,6 +2791,11 @@ exports[`Header: should render when authenticated but username and email is not 
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -3057,6 +3107,11 @@ exports[`Header: should render when authentication is pending 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -3319,6 +3374,11 @@ exports[`Header: should render when authentication is pending 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -3632,6 +3692,11 @@ exports[`Header: should render when unauthenticated 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -3902,6 +3967,11 @@ exports[`Header: should render when unauthenticated 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -4181,6 +4251,11 @@ exports[`Header: should render with a custom logo 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -4443,6 +4518,11 @@ exports[`Header: should render with a custom logo 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -4754,6 +4834,11 @@ exports[`Header: should render with locale of AU 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -5016,6 +5101,11 @@ exports[`Header: should render with locale of AU 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -5327,6 +5417,11 @@ exports[`Header: should render with locale of NZ 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -5563,6 +5658,11 @@ exports[`Header: should render with locale of NZ 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
@@ -5863,6 +5963,11 @@ exports[`Header: should render with no divider 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
                       <span>
                         Profile
                       </span>
@@ -6125,6 +6230,11 @@ exports[`Header: should render with no divider 1`] = `
               href="/profile/"
             >
               Profile
+              <span
+                class="root newBadge newBadge_isShort"
+              >
+                New
+              </span>
             </a>
           </li>
           <li
