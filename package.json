@@ -26,7 +26,7 @@
     "deploy-gh-pages": "node scripts/deploy-gh-pages.js",
     "deploy-surge": "surge -p ./docs/dist",
     "commit": "git-cz",
-    "commitmsg": "commitlint -e -x '@commitlint/config-conventional'",
+    "commitmsg": "commitlint --edit --extends seek",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "sketch-to-git": "node scripts/sketch-to-git",
     "git-to-sketch": "node scripts/git-to-sketch"
@@ -63,7 +63,6 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^5.2.8",
-    "@commitlint/config-conventional": "^5.2.3",
     "autoprefixer": "^7.1.5",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
@@ -79,6 +78,7 @@
     "chai": "^4.1.2",
     "chalk": "^2.1.0",
     "commitizen": "^2.9.6",
+    "commitlint-config-seek": "^1.0.0",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
     "dedent": "^0.7.0",
@@ -142,7 +142,6 @@
   "greenkeeper": {
     "ignore": [
       "@commitlint/cli",
-      "@commitlint/config-conventional",
       "autoprefixer",
       "babel-core",
       "babel-eslint",
