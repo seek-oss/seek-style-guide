@@ -157,6 +157,7 @@
       "chai",
       "chalk",
       "commitizen",
+      "core-js",
       "css-loader",
       "cz-conventional-changelog",
       "dedent",
