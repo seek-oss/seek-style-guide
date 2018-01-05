@@ -1,183 +1,105 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
 .container {
-    padding: 0 18px;
-
-    @media(min-width: 769px) {
-        flex:0 0 auto;
-        padding: 0;
-    }
-}
-
-.link {
-    line-height: 50px;
+  padding: @grid-base 0;
+  @media @desktop {
+    padding: 0;
     display: block;
-    text-decoration: none;
-    font-weight: 400;
-    color: #1c3f94;
-
-    @media (min-width: 990px) {
-        padding: 0 10px;
-    }
-
-    @media (min-width: 769px) {
-        display: inline-block;
-        line-height: 50px;
-        padding: 0 10px;
-        color: #fff;
-
-        &:hover,
-        &:focus {
-            color: var(#F5F5F7);
-        }
-    }
-}
-.linkIsActive {
-    font-weight: bold;
-}
-.linkHideOnMobile {
-    display:none;
-    @media(min-width: 769px) {
-        display: inline-block;
-    }
-}
-
-.fbIcon {
-    position: relative;
-    top: 2px;
-    margin-right: 5px;
-    @media(min-width: 769px) {
-        & svg {
-            fill: #fff;
-
-        }
-    }
+  }
 }
 
 .item {
-    @media(min-width: 769px) {
-        display: inline-block;
-        position: relative;
-    }
+  padding: @grid-base 0px;
+
+  @media @desktop {
+    padding-top: (@grid-base * 3);
+    padding-bottom: (@grid-base * 3);
+    display: inline-block;
+    color: @jsNavLinkDesktopColor;
+  }
 }
 
-.itemHasDropdown {
-    & .link {
-        &:after {
-            display: inline-block;
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 4px 4px 0 4px;
-            border-color: transparent;
-            border-top-color: var(#1c3f94);
-            position: relative;
-            top: -3px;
-            left: 6px;
-            @media(min-width: 769px) {
-                border-top-color: #fff;
-            }
-        }
-
-        &:hover:after {
-            border-top-color: var(#142d69);
-
-            @media(min-width: 769px) {
-                border-top-color: var(#f7f7f7);
-            }
-        }
-    }
+.dropdownIcon {
+  margin-left: @grid-base;
+  height: @grid-base * 2;
+  width: @grid-base * 2;
 }
 
 .itemShowDropdown {
-    @media(min-width: 769px) {
-        background: var(#142d69);
-        & .link:after {
-            border-top-color: var(#f7f7f7);
-        }
-    }
+  & .dropdownList {
+    display: block;
+  }
+  @media @desktop {
+    background: @jsNavLinkDesktopFocusedBackgroundColor;
+  }
+}
 
-    & .dropdownList {
-        display: block;
+.link {
+  display: block;
+  text-decoration: none;
+  color: @jsNavLinkMobileColor;
+  @media @desktop {
+    padding-left: (@grid-base * 2);
+    padding-right:  (@grid-base * 2);
+    color: @jsNavLinkDesktopColor;
+    &:hover,
+    &:focus {
+      color: @jsNavLinkDesktopOnHoverColor;
     }
+    &.hasRightSideDivider {
+      border-right: 1px solid @jsNavLinkDesktopOnHoverColor;
+    }
+  }
 }
 
 .dropdownList {
-    display: none;
-
-    @media(min-width: 769px) {
-        position: absolute;
-        top:100%;
-        left:0;
-        min-width: 160px;
-        padding: 5px 0;
-        background: #fff;
-        border: 1px solid var(#F5F5F7);
-        border-radius: 0 0 3px 3px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    }
+  display: none;
+  @media @desktop {
+    position: absolute;
+    min-width: (@grid-base * 40);
+    padding: @grid-base 0px;
+    background: @saWhite;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    z-index: 1;
+  }
 }
 
 .dropdownLink {
-
-    line-height: 36px;
-
-    @media(min-width: 769px) {
-        display: block;
-        padding: 0 20px;
-        color: var(#9d9d9d);
-        &:hover,
-        &:focus {
-            color: var(#333);
-            background: var(#f7f7f7);
-        }
-
+  display: block;
+  text-decoration: none;
+  color: @jsNavLinkMobileColor;
+  &:hover,
+  &:focus {
+    background: @jsNavLinkMobileOnHoverColor;
+    opacity: .8;
+  }
+  @media @desktop {
+    padding: @grid-base @grid-gutter-width;
+    white-space: nowrap;
+    color: @jsSecondaryNavLinkDesktopColor;
+    &:hover,
+    &:focus {
+      color: @jsSecondaryNavLinkDesktopOnHoverColor;
+      opacity: 1;
     }
+    &.hasDivider {
+      border-bottom: 1px solid @jsNavLinkDesktopOnHoverColor;
+    }
+  }
 }
 
-/*
-    Right aligned is used for the user navigation menu on the right hand side
-*/
-.isRightAligned {
-    padding-bottom: 10px;
+.linkHideOnMobile {
+  display: none;
+  @media @desktop {
+    display: block;
+  }
+}
 
-    & .dropdownLink {
-        padding-left: 20px;
-    }
-
-    & .itemShowDropdown {
-        & .link:after {
-            border-top-color: var(#757575);
-        }
-        & .dropdownList {
-            display: block;
-        }
-    }
-
-    @media(min-width: 769px) {
-
-        padding-bottom: 0;
-
-        & .itemShowDropdown {
-            background: var(#142d69);
-            & .link:after {
-                border-top-color: var(#f7f7f7);
-            }
-        }
-        & .item {
-            &:after {
-                content: '|';
-                display: inline-block;
-                color: #fff;
-            }
-            &:last-child {
-                &:after {
-                    display: none;
-                }
-            }
-        }
-        & .dropdownList {
-            right: 0;
-            left: auto;
-        }
-    }
+.linkOnlyOnMobile {
+  display: block;
+  @media @desktop {
+    display: none;
+  }
 }

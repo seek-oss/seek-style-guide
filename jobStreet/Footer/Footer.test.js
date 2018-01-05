@@ -3,6 +3,18 @@ import { shallow } from 'enzyme';
 import Footer from './Footer';
 
 describe('Footer component', () => {
+  const _Date = Date;
+
+  beforeEach(() => {
+    const DATE = new Date('2017');
+    global.Date = jest.fn(() => DATE);
+    global.Date.getFullYear = _Date.getFullYear;
+  });
+
+  afterEach(() => {
+    global.Date = _Date;
+  });
+
   describe('Localisation', () => {
     it('should render en-my', () => {
       const wrapper = shallow(<Footer language="en" country="my" />);
@@ -38,5 +50,5 @@ describe('Footer component', () => {
       const wrapper = shallow(<Footer language="vi" country="vn" />);
       expect(wrapper).toMatchSnapshot();
     });
-  })
+  });
 });
