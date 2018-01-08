@@ -31,7 +31,7 @@ export const SizePropTypes = {
 const parseBooleanSize = props => {
   const sizeProps = {};
 
-  sizes.forEach(size => {
+  forEach(sizes, size => {
     if (props[size]) {
       sizeProps.size = size;
     }
