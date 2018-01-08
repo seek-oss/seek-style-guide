@@ -20,8 +20,6 @@ const getBooleanSizes = () => {
 
   forEach(sizes, size => {
     booleanProps[size] = PropTypes.bool;
-
-    return;
   });
 };
 
