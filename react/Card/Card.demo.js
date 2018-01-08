@@ -17,6 +17,7 @@ CardContainer.propTypes = {
 export default {
   route: '/card',
   title: 'Card',
+  category: 'Layout',
   component: Card,
   container: CardContainer,
   block: true,

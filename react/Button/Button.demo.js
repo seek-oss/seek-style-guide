@@ -7,6 +7,7 @@ import classnames from 'classnames';
 export default {
   route: '/button',
   title: 'Button',
+  category: 'Form',
   component: Button,
   sketch,
   initialProps: {

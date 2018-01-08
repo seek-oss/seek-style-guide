@@ -18,6 +18,7 @@ ButtonGroupContainer.propTypes = {
 export default {
   route: '/button-group',
   title: 'Button Group',
+  category: 'Form',
   component: ButtonGroup,
   container: ButtonGroupContainer,
   block: true,

@@ -7,6 +7,7 @@ const ROUTE = '/footer';
 export default {
   route: '/footer',
   title: 'Footer',
+  category: 'Layout',
   component: Footer,
   sketch,
   initialProps: {

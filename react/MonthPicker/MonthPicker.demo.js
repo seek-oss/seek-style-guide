@@ -42,6 +42,7 @@ class MonthPickerContainer extends Component {
 export default {
   route: '/monthpicker',
   title: 'Month Picker',
+  category: 'Form',
   component: MonthPicker,
   container: MonthPickerContainer,
   initialProps: {
