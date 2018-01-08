@@ -81,6 +81,33 @@ export default {
       }))
     },
     {
+      label: 'New Tab',
+      type: 'radio',
+      states: [
+        undefined,
+        null,
+        'Job Search',
+        '$150k+ Jobs',
+        'Profile',
+        'Saved & Applied Jobs',
+        'Recommended Jobs',
+        'Company Reviews',
+        'Advice & Tips'
+      ].map(newBadgeTab => {
+        let label = newBadgeTab;
+        if (!newBadgeTab) {
+          label = newBadgeTab === undefined ? 'Default "new" badge' : 'No "new" badge';
+        }
+        return {
+          label,
+          transformProps: props => ({
+            ...props,
+            newBadgeTab
+          })
+        };
+      })
+    },
+    {
       label: 'Authentication',
       type: 'radio',
       states: [

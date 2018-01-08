@@ -32,6 +32,7 @@ export default class UserAccount extends Component {
     linkRenderer: PropTypes.func.isRequired,
     returnUrl: PropTypes.string,
     activeTab: PropTypes.string,
+    newBadgeTab: PropTypes.string,
     onMenuToggle: PropTypes.func
   };
 
@@ -59,7 +60,7 @@ export default class UserAccount extends Component {
   };
 
   render() {
-    const { locale, authenticationStatus, userName, linkRenderer, returnUrl, activeTab } = this.props;
+    const { locale, authenticationStatus, userName, linkRenderer, returnUrl, activeTab, newBadgeTab } = this.props;
 
     const mobileMenuLabel = calculateMobileMenuLabel(authenticationStatus, userName);
     const desktopMenuLabel = userName;
@@ -115,6 +116,7 @@ export default class UserAccount extends Component {
             linkRenderer={linkRenderer}
             returnUrl={returnUrl}
             activeTab={activeTab}
+            newBadgeTab={newBadgeTab}
           />
         </div>
 
