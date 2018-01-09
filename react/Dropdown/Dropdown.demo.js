@@ -46,6 +46,7 @@ class DropdownContainer extends Component {
 export default {
   route: '/dropdown',
   title: 'Dropdown',
+  category: 'Form',
   component: Dropdown,
   container: DropdownContainer,
   initialProps: {

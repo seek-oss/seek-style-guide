@@ -4,6 +4,7 @@ import * as sketch from './SlideToggle.sketch';
 export default {
   route: '/slidetoggle',
   title: 'Slide Toggle',
+  category: 'Form',
   component: SlideToggle,
   sketch,
   initialProps: {

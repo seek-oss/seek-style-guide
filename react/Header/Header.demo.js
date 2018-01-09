@@ -22,6 +22,7 @@ const ROUTE = '/header';
 export default {
   route: ROUTE,
   title: 'Header',
+  category: 'Layout',
   component: Header,
   sketch,
   initialProps: {
