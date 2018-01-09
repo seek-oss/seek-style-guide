@@ -1,6 +1,7 @@
 import styles from './Playground.less';
 
 import React, { Component } from 'react';
+import capitalize from 'lodash/capitalize';
 
 import {
   TextField,
@@ -8,6 +9,7 @@ import {
   ButtonGroup,
   StarIcon,
   MailIcon,
+  ProfileIcon,
   PageBlock,
   Section,
   AsidedLayout,
@@ -20,7 +22,10 @@ import {
   Secondary,
   Strong,
   Header,
-  Footer
+  Footer,
+  Rating,
+  HeartIcon,
+  ThumbsUpIcon
 } from 'seek-style-guide/react';
 
 import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
@@ -158,8 +163,8 @@ export default class Playground extends Component {
             <Card>
               <Section>
                 <ButtonGroup>
-                  <Button color="grey">Save job</Button>
-                  <Button color="grey">Send job</Button>
+                  <Button color="gray">Save job</Button>
+                  <Button color="gray">Send job</Button>
                 </ButtonGroup>
               </Section>
             </Card>
@@ -176,8 +181,8 @@ export default class Playground extends Component {
               <Section>
                 <ButtonGroup>
                   <Button color="pink">Save</Button>
-                  <Button color="grey">Clear</Button>
-                  <Button color="grey">Cancel</Button>
+                  <Button color="gray">Clear</Button>
+                  <Button color="gray">Cancel</Button>
                 </ButtonGroup>
               </Section>
             </Card>
@@ -468,6 +473,91 @@ export default class Playground extends Component {
           </CardGroup>
         </PageBlock>
 
+        <PageBlock>
+          <Section header>
+            <Text hero>Icons</Text>
+          </Section>
+
+          <Card>
+            <Section>
+              <Text heading>Default - 16px</Text>
+              <StarIcon /><br />
+              <ProfileIcon /><br />
+              <HeartIcon /><br />
+              <ThumbsUpIcon />
+            </Section>
+          </Card>
+
+          <Columns>
+            {[StarIcon, ProfileIcon, HeartIcon, ThumbsUpIcon].map((IconComponent, index) => (
+              <Card key={index}>
+                <Section>
+                  {[
+                    'small',
+                    'substandard',
+                    'standard',
+                    'superstandard',
+                    'heading',
+                    'headline',
+                    'hero'
+                  ].map(size => (
+                    <div key={size}>
+                      <Text size={size}>
+                        <IconComponent size={size} /> {capitalize(size)}
+                      </Text>
+                      <br />
+                    </div>
+                  ))}
+                </Section>
+              </Card>
+            ))}
+          </Columns>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Rating</Text>
+          </Section>
+          <Columns>
+            {[false, true].map((showTextRating, index) => (
+              <Card key={index}>
+                <Section>
+                  {['default', 'substandard', 'standard', 'superstandard', 'heading'].map(size => (
+                    <div key={size}>
+                      <Rating rating={3.5} {...{ [size]: true }} showTextRating={showTextRating} />
+                      <Text {...{ [size]: true }}> {`${capitalize(size)}${showTextRating ? ' with text rating' : ''}`}</Text>
+                      <br />
+                    </div>
+                  ))}
+                </Section>
+              </Card>
+            ))}
+          </Columns>
+        </PageBlock>
+
+        <PageBlock>
+          <Section header>
+            <Text hero>Text with inline icons</Text>
+          </Section>
+          <Card>
+            <Section>
+              {[
+                'small',
+                'substandard',
+                'standard',
+                'superstandard',
+                'heading',
+                'headline',
+                'hero'
+              ].map(size => (
+                <div key={size}>
+                  <Text {...{ [size]: true }}>Lorem ipsum <StarIcon {...{ [size]: true }} /> dolor sit amet, <ThumbsUpIcon {...{ [size]: true }} /> consectetur adipiscing <HeartIcon {...{ [size]: true }} /> elit. Nam vel sapien lorem.</Text>
+                  <br />
+                </div>
+              ))}
+            </Section>
+          </Card>
+        </PageBlock>
         <Footer linkRenderer={dummyLinkRenderer} />
       </div>
     );
