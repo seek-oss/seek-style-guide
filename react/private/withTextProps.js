@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import omit from 'lodash/omit';
+import has from 'lodash/has';
+import some from 'lodash/some';
+import includes from 'lodash/includes';
 import forEach from 'lodash/forEach';
 
 export const sizes = [
@@ -15,7 +18,7 @@ export const sizes = [
   'hero'
 ];
 
-const getBooleanSizes = () => {
+const getBooleanSizePropsTypes = () => {
   const booleanProps = {};
 
   forEach(sizes, size => {
@@ -26,8 +29,16 @@ const getBooleanSizes = () => {
 };
 
 export const SizePropTypes = {
-  size: PropTypes.oneOf(sizes),
-  ...getBooleanSizes()
+  size: (props, propName, componentName) => { // eslint-disable-line consistent-return
+    if (props.size && !includes(sizes, props.size)) {
+      return new Error(`Invalid prop size='${props.size}' supplied to ${componentName}`);
+    }
+
+    if (props.size && some(sizes, size => has(props, size))) {
+      return new Error(`Seems that you've accidentially supplied boolean size along with size='${props.size}' to ${componentName}, please remove one of them. Otherwise boolean prop will overwrite the 'size' prop.`);
+    }
+  },
+  ...getBooleanSizePropsTypes()
 };
 
 const parseBooleanSize = props => {
@@ -44,13 +55,17 @@ const parseBooleanSize = props => {
 
 const withTextProps = OriginalComponent => {
   const DecoratedComponent = props => {
+    const sizeProp = parseBooleanSize(props);
+
     const newProps = {
-      ...parseBooleanSize(props),
-      ...omit(props, sizes)
+      ...omit(props, sizes),
+      ...sizeProp
     };
 
     return <OriginalComponent {...newProps} />;
   };
+
+  DecoratedComponent.propTypes = SizePropTypes;
 
   DecoratedComponent.displayName = OriginalComponent.displayName;
 
