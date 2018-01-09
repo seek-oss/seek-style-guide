@@ -1,9 +1,9 @@
 import Logo from './Logo';
 
 export default {
-  route: '/logo',
+  route: '/jobstreet-logo',
   tenantPath: 'jobStreet',
-  title: 'Logo',
+  title: 'JobStreet Logo',
   component: Logo,
   initialProps: {},
   options: [

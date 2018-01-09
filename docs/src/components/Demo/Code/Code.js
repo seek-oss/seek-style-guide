@@ -2,14 +2,13 @@ import styles from './Code.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Section, Text } from 'seek-style-guide/react';
+import { Section, Text } from 'seek-asia-style-guide/react';
 import debounce from 'lodash/debounce';
 import uniq from 'lodash/uniq';
 import jsxToString from 'react-element-to-jsx-string';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 export default class Code extends Component {
-
   static propTypes = {
     jsx: PropTypes.element,
     less: PropTypes.string,
@@ -52,10 +51,10 @@ export default class Code extends Component {
         filterProps: ['className', 'style'],
         useBooleanShorthandSyntax: false
       })
-      .replace(/\={true}/ig, '')
-      .replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
-      .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}')
-      .replace('<MockContent />', 'Lorem ipsum');
+        .replace(/\={true}/ig, '')
+        .replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
+        .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}')
+        .replace('<MockContent />', 'Lorem ipsum');
 
       const componentNames = uniq(
         (componentCode.match(/<([A-Z]\w*)(?=[\s>])/g) || [])
@@ -82,5 +81,4 @@ export default class Code extends Component {
       </CopyToClipboard>
     );
   }
-
 }

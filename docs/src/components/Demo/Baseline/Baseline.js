@@ -5,7 +5,7 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 
 import lessToJs from 'less-vars-to-js';
-import grid from '!!raw!seek-style-guide/theme/layout/grid.less';
+import grid from '!!raw-loader!seek-asia-style-guide/theme/layout/grid.less';
 const gridValues = lessToJs(grid);
 const rowHeight = parseInt(gridValues['@grid-row-height'], 10);
 

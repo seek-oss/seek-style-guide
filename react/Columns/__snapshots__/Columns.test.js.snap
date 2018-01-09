@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Columns: should render columns 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column"
+    key="0"
+  >
+    <div />
+  </div>
+  <div
+    className="column"
+    key="1"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Columns: should render flexible columns 1`] = `
+<div
+  className="columns columns_flexible"
+>
+  <div
+    className="column"
+    key="0"
+  >
+    <div />
+  </div>
+  <div
+    className="column"
+    key="1"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Columns: should render tight columns 1`] = `
+<div
+  className="columns columns_tight"
+>
+  <div
+    className="column"
+    key="0"
+  >
+    <div />
+  </div>
+  <div
+    className="column"
+    key="1"
+  >
+    <div />
+  </div>
+</div>
+`;

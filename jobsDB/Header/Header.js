@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import Logo from '../Logo/Logo';
 import Button from 'seek-asia-style-guide/react/Button/Button';
-import Text from 'seek-asia-style-guide/react/Text/Text';
 import MenuIcon from 'seek-asia-style-guide/react/HamburgerIcon/HamburgerIcon';
 import Nav from './components/Nav/Nav';
 import styles from './header.less';

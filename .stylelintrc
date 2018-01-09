@@ -26,6 +26,7 @@
     "selector-type-no-unknown": [true, {
       "ignoreTypes": ["/^__/"]
     }],
-    "value-list-comma-newline-after": "always"
+    "value-list-comma-newline-after": "always",
+    "no-descending-specificity": null
   }
 }

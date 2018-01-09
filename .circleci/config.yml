@@ -6,15 +6,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
       - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
            name: Run lint
            command: npm run lint
@@ -27,10 +19,6 @@ jobs:
      working_directory: ~/repo
      steps:
        - checkout
-       - restore_cache:
-           keys:
-           - v1-dependencies-{{ checksum "package.json" }}
-           - v1-dependencies-
        - run: npm install
        - run: npm run build
        - run: npm run deploy-surge -- -d seek-asia-style-guide--$CIRCLE_SHA1.surge.sh
@@ -40,10 +28,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
       - run: npm install
       - run: git config --global user.name "Circle-CI";
       - run: git config --global user.email "srp-dev@seekasia.com";

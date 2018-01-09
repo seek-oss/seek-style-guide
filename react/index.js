@@ -1,11 +1,9 @@
 export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
-export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider';  // Alias for backwards compatibility
+export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider'; // Alias for backwards compatibility
 
 // Components
 export { default as Button } from './Button/Button';
 export { default as ButtonGroup } from './ButtonGroup/ButtonGroup';
-export { default as Footer } from './Footer/Footer';
-export { default as Header } from './Header/Header';
 export { default as Loader } from './Loader/Loader';
 export { default as Logo } from './Logo/Logo';
 export { default as LogoRainbow } from './LogoRainbow/LogoRainbow';

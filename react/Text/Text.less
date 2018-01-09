@@ -3,6 +3,8 @@
 .root {
   padding-bottom: @grid-row-height * 2;
   display: block;
+  &:not(.baseline) { .conversationalTextResponsive(@baseline: false); }
+  &.baseline { .conversationalTextResponsive(@baseline: true); }
 
   .root {
     position: relative;
@@ -18,11 +20,6 @@
       padding: 0 @grid-gutter-width;
     }
   }
-}
-
-.root {
-  &:not(.baseline) { .conversationalTextResponsive(@baseline: false); }
-  &.baseline { .conversationalTextResponsive(@baseline: true); }
 }
 
 .screaming {

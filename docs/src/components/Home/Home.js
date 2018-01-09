@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScreenReaderOnly } from 'seek-style-guide/react';
+import { ScreenReaderOnly } from 'seek-asia-style-guide/react';
 import Hero from './Hero/Hero';
 import Preface from './Preface/Preface';
 

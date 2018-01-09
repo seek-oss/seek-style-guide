@@ -1,7 +1,11 @@
+// Alias 'seek-asia-style-guide' so 'seek-asia-style-guide-webpack' works correctly
 const path = require('path');
+require('module-alias').addAlias('seek-asia-style-guide', path.join(__dirname, '..'));
+
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const decorateClientConfig = require('../webpack').decorateClientConfig;
+const autoprefixerConfig = require('../config/autoprefixer.config');
+const decorateClientConfig = require('seek-asia-style-guide-webpack').decorateClientConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: true });
 
 // Must be absolute paths
@@ -25,47 +29,107 @@ const config = decorateClientConfig({
   },
 
   module: {
-    loaders: [
+    rules: [
+      {
+        enforce: 'pre',
+        test: /(?!\.css)\.js$/,
+        include: appPaths,
+        use: {
+          loader: 'import-glob'
+        }
+      },
       {
         test: /(?!\.css)\.js$/,
-        loader: 'babel',
-        query: babelConfig,
-        include: appPaths
+        include: appPaths,
+        use: {
+          loader: 'babel-loader',
+          options: babelConfig
+        }
       },
       {
         test: /\.js$/,
-        loader: 'babel',
-        query: {
-          babelrc: false,
-          presets: ['es2015']
-        },
-        include: /node_modules/
+        include: /node_modules/,
+        exclude: /canvg-fixed/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            presets: ['env']
+          }
+        }
       },
       {
         test: /\.css\.js$/,
         include: appPaths,
-        loader: 'style!css?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!css-in-js!babel?' + JSON.stringify(babelConfig)
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer(autoprefixerConfig)]
+            }
+          },
+          {
+            loader: 'css-in-js-loader'
+          },
+          {
+            loader: 'babel-loader',
+            options: babelConfig
+          }
+        ]
       },
       {
         test: /\.less$/,
-        loader: 'style!css?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss!less',
-        include: appPaths
+        include: appPaths,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer(autoprefixerConfig)]
+            }
+          },
+          {
+            loader: 'less-loader'
+          }
+        ]
       },
       {
         test: /\.svg$/,
-        loader: 'raw!svgo',
-        include: appPaths
+        include: appPaths,
+        use: [
+          {
+            loader: 'raw-loader'
+          },
+          {
+            loader: 'svgo-loader'
+          }
+        ]
       }
     ]
   },
 
   resolve: {
-    modulesDirectories: ['node_modules', 'wip_modules', 'components']
+    modules: ['node_modules', 'wip_modules', 'components']
   },
-
-  postcss: [
-    autoprefixer
-  ],
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

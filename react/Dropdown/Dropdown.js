@@ -20,7 +20,6 @@ function combineClassNames(props = {}, ...classNames) {
 }
 
 export default class Dropdown extends Component {
-
   static displayName = 'Dropdown';
 
   static propTypes = {
