@@ -96,9 +96,9 @@ exports[`withTextProps: *superstandard*: should pass down string size 1`] = `
 />
 `;
 
-exports[`withTextProps: should omit boolean size props 1`] = `
+exports[`withTextProps: should omit size prop if boolean size is supplied 1`] = `
 <OriginalComponent
-  size="heading"
+  size="hero"
 />
 `;
 

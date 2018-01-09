@@ -11,16 +11,8 @@ describe('withTextProps:', () => {
     expect(shallow(<DecoratedComponent className='foo' bar baz={{ a: 1 }} />)).toMatchSnapshot();
   });
 
-  it('should omit boolean size props', () => {
-    const boolSizes = {};
-
-    sizes.forEach(size => {
-      boolSizes[size] = true;
-
-      return;
-    });
-
-    expect(shallow(<DecoratedComponent size="heading" {...boolSizes} />)).toMatchSnapshot();
+  it('should omit size prop if boolean size is supplied', () => {
+    expect(shallow(<DecoratedComponent size="heading" hero />)).toMatchSnapshot();
   });
 
   sizes.forEach(size => {
