@@ -4,6 +4,7 @@ import * as sketch from './Text.sketch';
 export default {
   route: '/text',
   title: 'Text',
+  category: 'Typography',
   component: Text,
   sketch,
   initialProps: {
