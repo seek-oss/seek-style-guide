@@ -96,7 +96,7 @@ exports[`withTextProps: *superstandard*: should pass down string size 1`] = `
 />
 `;
 
-exports[`withTextProps: should omit size prop if boolean size is supplied 1`] = `
+exports[`withTextProps: should omit size prop if boolean size is supplied and throw prop validation error 1`] = `
 <OriginalComponent
   size="hero"
 />
