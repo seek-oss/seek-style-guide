@@ -18,7 +18,7 @@ export const sizes = [
   'hero'
 ];
 
-const getBooleanSizePropsTypes = () => {
+const getBooleanSizePropTypes = () => {
   const booleanProps = {};
 
   forEach(sizes, size => {
@@ -38,7 +38,7 @@ export const SizePropTypes = {
       return new Error(`Seems that you've accidentially supplied boolean size along with size='${props.size}' to ${componentName}, please remove one of them. Otherwise boolean prop will overwrite the 'size' prop.`);
     }
   },
-  ...getBooleanSizePropsTypes()
+  ...getBooleanSizePropTypes()
 };
 
 const parseBooleanSize = props => {
