@@ -45,6 +45,7 @@ class CheckboxContainer extends Component {
 export default {
   route: '/checkbox',
   title: 'Checkbox',
+  category: 'Form',
   component: Checkbox,
   container: CheckboxContainer,
   sketch,

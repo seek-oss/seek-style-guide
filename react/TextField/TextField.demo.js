@@ -55,6 +55,7 @@ class TextFieldContainer extends Component {
 export default {
   route: '/textfield',
   title: 'Text Field',
+  category: 'Form',
   component: TextField,
   container: TextFieldContainer,
   sketch,

@@ -78,18 +78,77 @@ export default class Header extends Component {
 
                       <Card transparent>
                         <h2>
-                          <Text headline>Components</Text>
+                          <Text headline>Layout Components</Text>
                         </h2>
                       </Card>
                       <Card transparent>
                         {
-                          demoSpecs.map(demoSpec => (
-                            <Text headline regular key={demoSpec.title}>
-                              <Link className={styles.link} to={demoSpec.route}>
-                                { demoSpec.title }
-                              </Link>
-                            </Text>
-                          ))
+                          demoSpecs
+                            .filter(({ category }) => category === 'Layout')
+                            .map(demoSpec => (
+                              <Text headline regular key={demoSpec.title}>
+                                <Link className={styles.link} to={demoSpec.route}>
+                                  { demoSpec.title }
+                                </Link>
+                              </Text>
+                            ))
+                        }
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text headline>Typography Components</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        {
+                          demoSpecs
+                            .filter(({ category }) => category === 'Typography')
+                            .map(demoSpec => (
+                              <Text headline regular key={demoSpec.title}>
+                                <Link className={styles.link} to={demoSpec.route}>
+                                  { demoSpec.title }
+                                </Link>
+                              </Text>
+                            ))
+                        }
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text headline>Form Components</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        {
+                          demoSpecs
+                            .filter(({ category }) => category === 'Form')
+                            .map(demoSpec => (
+                              <Text headline regular key={demoSpec.title}>
+                                <Link className={styles.link} to={demoSpec.route}>
+                                  { demoSpec.title }
+                                </Link>
+                              </Text>
+                            ))
+                        }
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text headline>Other Components</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        {
+                          demoSpecs
+                            .filter(({ category }) => !category)
+                            .map(demoSpec => (
+                              <Text headline regular key={demoSpec.title}>
+                                <Link className={styles.link} to={demoSpec.route}>
+                                  { demoSpec.title }
+                                </Link>
+                              </Text>
+                            ))
                         }
                       </Card>
                     </Section>
