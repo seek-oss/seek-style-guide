@@ -131,7 +131,7 @@
     "react-shallow-testutils": "^3.0.0",
     "react-test-renderer": "^16.0.0",
     "seek-asia-style-guide-webpack": "github:seekinternational/seek-asia-style-guide-webpack",
-    "semantic-release": "^8.1.2",
+    "semantic-release": "^7.0.2",
     "serialize-javascript": "^1.4.0",
     "sinon": "^4.0.1",
     "rewrite-files": "^1.0.1",
