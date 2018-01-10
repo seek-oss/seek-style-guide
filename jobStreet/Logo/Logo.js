@@ -24,7 +24,7 @@ export default function Logo({
         xmlns="http://www.w3.org/2000/svg"
         height={`${height}`}
         width={`${width}`}
-        viewBox={'0 0 200 36'}
+        viewBox="0 0 200 36"
         y="0px"
         x="0px">
         <LogoIcon
