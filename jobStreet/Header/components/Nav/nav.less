@@ -9,8 +9,7 @@
 }
 
 .item {
-  padding: @grid-base 0px;
-
+  padding: @grid-base 0;
   @media @desktop {
     padding-top: (@grid-base * 3);
     padding-bottom: (@grid-base * 3);
@@ -40,7 +39,7 @@
   color: @jsNavLinkMobileColor;
   @media @desktop {
     padding-left: (@grid-base * 2);
-    padding-right:  (@grid-base * 2);
+    padding-right: (@grid-base * 2);
     color: @jsNavLinkDesktopColor;
     &:hover,
     &:focus {
@@ -57,7 +56,7 @@
   @media @desktop {
     position: absolute;
     min-width: (@grid-base * 40);
-    padding: @grid-base 0px;
+    padding: @grid-base 0;
     background: @saWhite;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 2px;
@@ -73,7 +72,7 @@
   &:hover,
   &:focus {
     background: @jsNavLinkMobileOnHoverColor;
-    opacity: .8;
+    opacity: 0.8;
   }
   @media @desktop {
     padding: @grid-base @grid-gutter-width;

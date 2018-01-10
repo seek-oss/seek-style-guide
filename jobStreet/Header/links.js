@@ -97,43 +97,45 @@ const userLoggedOutLinks = [
 ];
 
 const getUserLinks = (name, xToken) => {
-  return (name && name.length) ? [
-    {
-      href: '#',
-      title: name,
-      text: name,
-      preventTranslation: true,
-      childLinks: [
-        {
-          href: 'header.logoutLink',
-          hrefParams: {
-            x: xToken
+  return name && name.length ?
+    [
+      {
+        href: '#',
+        title: name,
+        text: name,
+        preventTranslation: true,
+        childLinks: [
+          {
+            href: 'header.logoutLink',
+            hrefParams: {
+              x: xToken
+            },
+            title: 'header.logoutTitle',
+            text: 'header.logoutText'
           },
-          title: 'header.logoutTitle',
-          text: 'header.logoutText'
-        },
-        {
-          href: 'header.helpLink',
-          hrefParams: {
-            x: xToken
+          {
+            href: 'header.helpLink',
+            hrefParams: {
+              x: xToken
+            },
+            title: 'header.helpTitle',
+            text: 'header.helpText',
+            hideOnMobile: true,
+            hasDivider: true
           },
-          title: 'header.helpTitle',
-          text: 'header.helpText',
-          hideOnMobile: true,
-          hasDivider: true
-        },
-        {
-          href: 'header.myAccountLink',
-          hrefParams: {
-            x: xToken
-          },
-          title: 'header.myAccountTitle',
-          text: 'header.myAccountText',
-          hideOnMobile: true
-        }
-      ]
-    }
-  ] : userLoggedOutLinks;
+          {
+            href: 'header.myAccountLink',
+            hrefParams: {
+              x: xToken
+            },
+            title: 'header.myAccountTitle',
+            text: 'header.myAccountText',
+            hideOnMobile: true
+          }
+        ]
+      }
+    ] :
+    userLoggedOutLinks;
 };
 
 export default {

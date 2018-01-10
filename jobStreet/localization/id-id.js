@@ -1,5 +1,5 @@
 const baseUrl = 'https://jobstreet.co.id';
-const baseUrlWithLanguage = `${baseUrl  }/id`;
+const baseUrlWithLanguage = `${baseUrl}/id`;
 
 export default {
   'footer.copyright': 'Hak Cipta © {year} JobStreet.com',
@@ -19,6 +19,7 @@ export default {
   'footer.safeLinkText': 'Panduan Mencari Kerja Secara Aman',
   'footer.helpLink': `${baseUrlWithLanguage}/user/`,
   'footer.helpLinkText': 'Bantuan',
-  'footer.feedbackLink': 'https://myjobstreet.jobstreet.co.id/home/feedback.php?site=id&sub=feedback',
+  'footer.feedbackLink':
+    'https://myjobstreet.jobstreet.co.id/home/feedback.php?site=id&sub=feedback',
   'footer.feedbackLinkText': 'Kirim Saran'
 };

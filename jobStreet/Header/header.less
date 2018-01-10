@@ -73,14 +73,13 @@
 .navContainer {
   padding: (@grid-row-height * 4) @grid-gutter-width;
   @media @desktop {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
     overflow: visible;
     transition: none;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
 

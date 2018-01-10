@@ -47,7 +47,9 @@ class Header extends Component {
   }
 
   showNav(shouldShowNav) {
-    const eventAction = shouldShowNav ? 'addEventListener' : 'removeEventListener';
+    const eventAction = shouldShowNav ?
+      'addEventListener' :
+      'removeEventListener';
     document[eventAction]('click', this.handleClick, false);
     this.setState({
       isNavActive: shouldShowNav
@@ -55,35 +57,43 @@ class Header extends Component {
   }
 
   render() {
-    const { username, userToken, language, country, authenticationStatus, activeNavLinkTextKey } = this.props;
+    const {
+      username,
+      userToken,
+      language,
+      country,
+      authenticationStatus,
+      activeNavLinkTextKey
+    } = this.props;
     const { isNavActive } = this.state;
     const userLinks = links.getUserLinks(username, userToken);
     const navLinks = links.getNavLinks(username, userToken);
     const messages = localization[`${language}-${country}`];
 
     return (
-      <header className={styles.root} role="banner" aria-label="Primary navigation">
+      <header
+        className={styles.root}
+        role="banner"
+        aria-label="Primary navigation">
         {/*
           * PageBlock / Section being a functional component doesn't work with `ref`.
           * https://reactjs.org/docs/refs-and-the-dom.html
          */}
         <PageBlock
-          className={
-            classNames({
-              [styles.navWrapper]: true,
-              [styles.navWrapperHideOnMobile]: !isNavActive
-            })
-          }>
-          <div
-            className={styles.navContainer}
-            ref={this.handleNodeRef}>
-            <Nav key={'navLinks'} links={navLinks} messages={messages} activeNavLinkTextKey={activeNavLinkTextKey} />
-            {
-              authenticationStatus === 'pending' ||
-              (
-                <Nav key={'userLinks'} links={userLinks} messages={messages} />
-              )
-            }
+          className={classNames({
+            [styles.navWrapper]: true,
+            [styles.navWrapperHideOnMobile]: !isNavActive
+          })}>
+          <div className={styles.navContainer} ref={this.handleNodeRef}>
+            <Nav
+              key={'navLinks'}
+              links={navLinks}
+              messages={messages}
+              activeNavLinkTextKey={activeNavLinkTextKey}
+            />
+            {authenticationStatus === 'pending' || (
+              <Nav key={'userLinks'} links={userLinks} messages={messages} />
+            )}
           </div>
         </PageBlock>
         <PageBlock className={styles.bannerWrapper}>
@@ -106,7 +116,7 @@ class Header extends Component {
             </a>
           </Section>
         </PageBlock>
-      </header >
+      </header>
     );
   }
 }
@@ -114,9 +124,11 @@ class Header extends Component {
 Header.propTypes = {
   username: PropTypes.string,
   userToken: PropTypes.string,
-  authenticationStatus: PropTypes.oneOf(
-    ['authenticated', 'unauthenticated', 'pending']
-  ).isRequired,
+  authenticationStatus: PropTypes.oneOf([
+    'authenticated',
+    'unauthenticated',
+    'pending'
+  ]).isRequired,
   language: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
   activeNavLinkTextKey: PropTypes.string

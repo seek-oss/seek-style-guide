@@ -26,9 +26,9 @@ describe('JobStreet navigation component', () => {
       'unitTest.testTitle1': 'Buy SFV Arcade from Steam',
       'unitTest.testText1': 'Pre-order now!'
     };
-    expect(shallow(
-      <Nav links={links} messages={localization} />
-    )).toMatchSnapshot();
+    expect(
+      shallow(<Nav links={links} messages={localization} />)
+    ).toMatchSnapshot();
   });
 
   it('should render active main nav correctly', () => {
@@ -54,9 +54,15 @@ describe('JobStreet navigation component', () => {
       'unitTest.testTitle1': 'Buy SFV Arcade from Steam',
       'unitTest.testText1': 'Pre-order now!'
     };
-    expect(shallow(
-      <Nav links={links} messages={localization} activeNavLinkTextKey='unitTest.testText' />
-    )).toMatchSnapshot();
+    expect(
+      shallow(
+        <Nav
+          links={links}
+          messages={localization}
+          activeNavLinkTextKey="unitTest.testText"
+        />
+      )
+    ).toMatchSnapshot();
   });
 
   it('should render message with child links', () => {
@@ -73,9 +79,9 @@ describe('JobStreet navigation component', () => {
       'unitTest.testTitle': 'Buy SFV from Steam',
       'unitTest.testText': 'Buy now!'
     };
-    expect(shallow(
-      <Nav links={links} messages={localization} isRightAligned />
-    )).toMatchSnapshot();
+    expect(
+      shallow(<Nav links={links} messages={localization} isRightAligned />)
+    ).toMatchSnapshot();
   });
 
   it('should render message with URL parameters', () => {
@@ -95,8 +101,8 @@ describe('JobStreet navigation component', () => {
       'unitTest.testTitle': 'Buy SFV from Steam',
       'unitTest.testText': 'Buy now!'
     };
-    expect(shallow(
-      <Nav links={links} messages={localization} />
-    )).toMatchSnapshot();
+    expect(
+      shallow(<Nav links={links} messages={localization} />)
+    ).toMatchSnapshot();
   });
 });

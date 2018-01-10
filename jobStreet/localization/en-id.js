@@ -19,6 +19,7 @@ export default {
   'footer.safeLinkText': 'Safe Job Search Guide',
   'footer.helpLink': `${baseUrlWithLanguage}/user/`,
   'footer.helpLinkText': 'Help',
-  'footer.feedbackLink': 'https://myjobstreet.jobstreet.co.id/home/feedback.php?site=id&sub=feedback',
+  'footer.feedbackLink':
+    'https://myjobstreet.jobstreet.co.id/home/feedback.php?site=id&sub=feedback',
   'footer.feedbackLinkText': 'Send Feedback'
 };
