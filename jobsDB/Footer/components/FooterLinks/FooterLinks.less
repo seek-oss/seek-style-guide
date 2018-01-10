@@ -6,28 +6,31 @@
   align-items: center;
   justify-content: center;
 }
-.item{
-  &:after {
+
+.item {
+  &::after {
     content: '|';
     display: inline-block;
     color: @saWhite;
   }
-  &:last-child:after {
-    display:none;
+  &:last-child::after {
+    display: none;
   }
-  @media @mobile{
+  @media @mobile {
     display: none;
   }
 }
-.itemMobile{
+
+.itemMobile {
   display: inline-block;
-  @media @desktop{
+  @media @desktop {
     display: none;
   }
 }
+
 .link {
   display: inline-block;
-  padding:0 5px;
+  padding: 0 5px;
   text-decoration: none;
   color: @saWhite;
   font-size: 0.75rem;
