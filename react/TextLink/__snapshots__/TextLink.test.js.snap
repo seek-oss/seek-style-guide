@@ -8,7 +8,7 @@ exports[`TextLink should render with chevron 1`] = `
   <ChevronIcon
     className="chevron"
     direction="right"
-    svgClassName="chevronSvg"
+    standard={true}
   />
 </a>
 `;

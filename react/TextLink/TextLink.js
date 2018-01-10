@@ -13,9 +13,9 @@ const renderChevron = chevron => {
 
   return (
     <ChevronIcon
+      standard
       className={styles.chevron}
       direction={chevron}
-      svgClassName={styles.chevronSvg}
     />
   );
 };
