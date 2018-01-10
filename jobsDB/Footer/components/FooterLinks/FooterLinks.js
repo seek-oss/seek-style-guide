@@ -7,27 +7,27 @@ const FooterLinks = ({ messages }) => {
   return (
     <ul className={styles.list}>
       <li className={styles.itemMobile}>
-        <a className={styles.link} href={ messages['footer.legalLink'] }>
-          { messages['footer.legalLinkText'] }
+        <a className={styles.link} href={messages['footer.legalLink']}>
+          {messages['footer.legalLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.privacyLink'] }>
-          { messages['footer.privacyLinkText'] }
+        <a className={styles.link} href={messages['footer.privacyLink']}>
+          {messages['footer.privacyLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.termsLink'] }>
-          { messages['footer.termsLinkText'] }
+        <a className={styles.link} href={messages['footer.termsLink']}>
+          {messages['footer.termsLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.siteMapLink'] }>
-          { messages['footer.siteMapLinkText'] }
+        <a className={styles.link} href={messages['footer.siteMapLink']}>
+          {messages['footer.siteMapLinkText']}
         </a>
       </li>
     </ul>
-  )
+  );
 };
 
 FooterLinks.propTypes = {

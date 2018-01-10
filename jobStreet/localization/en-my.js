@@ -19,7 +19,8 @@ export default {
   'footer.safeLinkText': 'Safe Job Search Guide',
   'footer.helpLink': `${baseUrlWithLanguage}/user/`,
   'footer.helpLinkText': 'Help',
-  'footer.feedbackLink': 'https://myjobstreet.jobstreet.com.my/home/feedback.php?site=my&sub=feedback',
+  'footer.feedbackLink':
+    'https://myjobstreet.jobstreet.com.my/home/feedback.php?site=my&sub=feedback',
   'footer.feedbackLinkText': 'Send Feedback',
   'header.homeLink': `${baseUrl}`,
   'header.homeTitle': 'Leading Job Site in Malaysia - Find Jobs in Malaysia',
@@ -30,9 +31,12 @@ export default {
   'header.searchLink': 'https://srp-alpha.jobstreet.com',
   'header.searchTitle': 'Search Jobs @ Job Search JobStreet.com Malaysia',
   'header.searchText': 'Search Jobs',
-  'header.myJobStreetLink': 'https://myjobstreet.jobstreet.com.my/home/login.php?site=my',
-  'header.myJobStreetLoggedInLink': 'https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?',
-  'header.myJobStreetTitle': 'Post Resume, Signup for Job Alert & Apply for Jobs @ MyJobStreet Malaysia',
+  'header.myJobStreetLink':
+    'https://myjobstreet.jobstreet.com.my/home/login.php?site=my',
+  'header.myJobStreetLoggedInLink':
+    'https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?',
+  'header.myJobStreetTitle':
+    'Post Resume, Signup for Job Alert & Apply for Jobs @ MyJobStreet Malaysia',
   'header.myJobStreetText': 'MyJobStreet',
   'header.companyProfilesLink': `${baseUrlWithLanguage}/companies`,
   'header.companyProfilesTitle': 'JobStreet.com Malaysia - Company Profiles',
@@ -45,19 +49,24 @@ export default {
   'header.jobStreetEducationText': 'Education',
   'header.moreTitle': '',
   'header.moreText': 'More',
-  'header.overseasJobsLink': 'https://www.jobstreet.com.my/en/job-search/browse/find-overseas-jobs',
+  'header.overseasJobsLink':
+    'https://www.jobstreet.com.my/en/job-search/browse/find-overseas-jobs',
   'header.overseasJobsTitle': '',
   'header.overseasJobsText': 'Overseas Jobs',
-  'header.freshGradJobsLink': 'https://www.jobstreet.com.my/en/job-search/campus/job-vacancy.php',
+  'header.freshGradJobsLink':
+    'https://www.jobstreet.com.my/en/job-search/campus/job-vacancy.php',
   'header.freshGradJobsTitle': '',
   'header.freshGradJobsText': 'Fresh Grad Jobs',
-  'header.classifiedJobsLink': 'https://www.jobstreet.com.my/en/job-search/classified-ads.php',
+  'header.classifiedJobsLink':
+    'https://www.jobstreet.com.my/en/job-search/classified-ads.php',
   'header.classifiedJobsTitle': '',
   'header.classifiedJobsText': 'Classified Jobs',
-  'header.loginLink': 'https://myjobstreet.jobstreet.com.my/home/login.php?site=my&language_code=3',
+  'header.loginLink':
+    'https://myjobstreet.jobstreet.com.my/home/login.php?site=my&language_code=3',
   'header.loginTitle': '',
   'header.loginText': 'Log In',
-  'header.signUpLink': 'https://myjobstreet.jobstreet.com.my/registration/simple-signup.php?site=my&language_code=3',
+  'header.signUpLink':
+    'https://myjobstreet.jobstreet.com.my/registration/simple-signup.php?site=my&language_code=3',
   'header.signUpTitle': '',
   'header.signUpText': 'Sign Up',
   'header.logoutLink': 'https://myjobstreet.jobstreet.com.my/home/logout.php?',
@@ -66,7 +75,8 @@ export default {
   'header.helpLink': 'https://myjobstreet.jobstreet.com.my/home/help.php?',
   'header.helpTitle': '',
   'header.helpText': 'Help',
-  'header.myAccountLink': 'https://myjobstreet.jobstreet.com.my/registration/update-account.php?',
+  'header.myAccountLink':
+    'https://myjobstreet.jobstreet.com.my/registration/update-account.php?',
   'header.myAccountTitle': '',
   'header.myAccountText': 'My Account'
 };

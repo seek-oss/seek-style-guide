@@ -1,5 +1,5 @@
 const baseUrl = 'https://jobstreet.vn';
-const baseUrlWithLanguage = `${baseUrl  }/vi`;
+const baseUrlWithLanguage = `${baseUrl}/vi`;
 
 export default {
   'footer.copyright': 'Copyright © {year} JobStreet.com',
@@ -19,7 +19,7 @@ export default {
   'footer.safeLinkText': 'Mẹo Tìm Việc An Toàn',
   'footer.helpLink': `${baseUrlWithLanguage}/user/`,
   'footer.helpLinkText': 'Trợ Giúp',
-  'footer.feedbackLink': 'https://myjobstreet.jobstreet.vn/home/feedback.php?site=vn&sub=feedback',
+  'footer.feedbackLink':
+    'https://myjobstreet.jobstreet.vn/home/feedback.php?site=vn&sub=feedback',
   'footer.feedbackLinkText': 'Gửi Phản Hồi'
 };
-

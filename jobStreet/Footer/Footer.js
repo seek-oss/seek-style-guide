@@ -12,7 +12,9 @@ const Footer = ({ language, country }) => {
   return (
     <footer className={styles.container}>
       <FooterLinks messages={messages} />
-      <p className={styles.copyright}>{ messages['footer.copyright'].replace('{year}', year) }</p>
+      <p className={styles.copyright}>
+        {messages['footer.copyright'].replace('{year}', year)}
+      </p>
     </footer>
   );
 };

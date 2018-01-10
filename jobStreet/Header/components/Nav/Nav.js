@@ -12,7 +12,7 @@ class Nav extends Component {
     links: PropTypes.array.isRequired,
     messages: PropTypes.object.isRequired,
     activeNavLinkTextKey: PropTypes.string
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -55,86 +55,78 @@ class Nav extends Component {
     const { isDropdownVisible } = this.state;
     return (
       <ul className={styles.container}>
-        {
-          links.map(link => {
-            const hasChildren = Boolean(link.childLinks.length);
-            const clickHandler = hasChildren ?
-              e => {
-                if (!isDropdownVisible) {
-                  this.setDropdownVisibility(true);
-                }
-                e.preventDefault();
-              } :
-              noop;
+        {links.map(link => {
+          const hasChildren = Boolean(link.childLinks.length);
+          const clickHandler = hasChildren ?
+            e => {
+              if (!isDropdownVisible) {
+                this.setDropdownVisibility(true);
+              }
+              e.preventDefault();
+            } :
+            noop;
 
-            return (
-              <li
-                key={link.text}
-                className={
-                  classNames({
-                    [styles.item]: true,
-                    [styles.itemShowDropdown]: hasChildren && isDropdownVisible
-                  })
-                }>
-                <a
-                  className={
-                    classNames({
-                      [styles.link]: true,
-                      [styles.linkIsActive]: link.isActive,
-                      [styles.linkHideOnMobile]: link.hideOnMobile,
-                      [styles.hasRightSideDivider]: link.hasRightSideDivider
-                    })
-                  }
-                  onClick={clickHandler}
-                  href={
-                    this.parseHrefWithHrefParams(
-                      messages[link.href] || link.href,
-                      link.hrefParams
-                    )
-                  }
-                  title={messages[link.title]}>
-                  <Text
-                    regular={(link.text !== activeNavLinkTextKey)}
-                    whistling
-                    className={styles.linkText}>
-                    {link.preventTranslation ? link.text : messages[link.text]}
-                    {hasChildren && (<TriangleArrowDownIcon svgClassName={styles.dropdownIcon} />)}
-                  </Text>
-                </a>
-                {
-                  hasChildren &&
-                  (
-                    <ul
-                      className={styles.dropdownList}
-                      ref={node => {
-                        this.dropdownNode = node;
-                      }}>
-                      {
-                        link.childLinks.map(childLink => (
-                          <li key={childLink.text}>
-                            <a
-                              className={
-                                classNames({
-                                  [styles.dropdownLink]: true,
-                                  [styles.linkHideOnMobile]: childLink.hideOnMobile,
-                                  [styles.linkOnlyOnMobile]: childLink.onlyOnMobile,
-                                  [styles.hasDivider]: childLink.hasDivider
-                                })
-                              }
-                              href={this.parseHrefWithHrefParams(messages[childLink.href], childLink.hrefParams)}
-                              title={messages[childLink.title]}>
-                              <Text regular whistling>{messages[childLink.text]}</Text>
-                            </a>
-                          </li>
-                        ))
-                      }
-                    </ul>
-                  )
-                }
-              </li>
-            );
-          })
-        }
+          return (
+            <li
+              key={link.text}
+              className={classNames({
+                [styles.item]: true,
+                [styles.itemShowDropdown]: hasChildren && isDropdownVisible
+              })}>
+              <a
+                className={classNames({
+                  [styles.link]: true,
+                  [styles.linkIsActive]: link.isActive,
+                  [styles.linkHideOnMobile]: link.hideOnMobile,
+                  [styles.hasRightSideDivider]: link.hasRightSideDivider
+                })}
+                onClick={clickHandler}
+                href={this.parseHrefWithHrefParams(
+                  messages[link.href] || link.href,
+                  link.hrefParams
+                )}
+                title={messages[link.title]}>
+                <Text
+                  regular={link.text !== activeNavLinkTextKey}
+                  whistling
+                  className={styles.linkText}>
+                  {link.preventTranslation ? link.text : messages[link.text]}
+                  {hasChildren && (
+                    <TriangleArrowDownIcon svgClassName={styles.dropdownIcon} />
+                  )}
+                </Text>
+              </a>
+              {hasChildren && (
+                <ul
+                  className={styles.dropdownList}
+                  ref={node => {
+                    this.dropdownNode = node;
+                  }}>
+                  {link.childLinks.map(childLink => (
+                    <li key={childLink.text}>
+                      <a
+                        className={classNames({
+                          [styles.dropdownLink]: true,
+                          [styles.linkHideOnMobile]: childLink.hideOnMobile,
+                          [styles.linkOnlyOnMobile]: childLink.onlyOnMobile,
+                          [styles.hasDivider]: childLink.hasDivider
+                        })}
+                        href={this.parseHrefWithHrefParams(
+                          messages[childLink.href],
+                          childLink.hrefParams
+                        )}
+                        title={messages[childLink.title]}>
+                        <Text regular whistling>
+                          {messages[childLink.text]}
+                        </Text>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
       </ul>
     );
   }

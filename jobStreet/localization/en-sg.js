@@ -1,5 +1,5 @@
 const baseUrl = 'https://jobstreet.com.sg';
-const baseUrlWithLanguage = `${baseUrl  }/en`;
+const baseUrlWithLanguage = `${baseUrl}/en`;
 
 export default {
   'footer.copyright': 'Copyright © {year} JobStreet.com',
@@ -19,6 +19,7 @@ export default {
   'footer.safeLinkText': 'Safe Job Search Guide',
   'footer.helpLink': `${baseUrlWithLanguage}/user/`,
   'footer.helpLinkText': 'Help',
-  'footer.feedbackLink': 'https://myjobstreet.jobstreet.com.sg/home/feedback.php?site=sg&sub=feedback',
+  'footer.feedbackLink':
+    'https://myjobstreet.jobstreet.com.sg/home/feedback.php?site=sg&sub=feedback',
   'footer.feedbackLinkText': 'Send Feedback'
 };

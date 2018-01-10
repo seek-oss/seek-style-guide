@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import { getNavLinks } from './links';
 import Header from './Header';
 
 export const makeDummyLinkRendererForPath = path => {
