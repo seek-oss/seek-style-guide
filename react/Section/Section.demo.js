@@ -26,11 +26,12 @@ export default {
   category: 'Layout',
   component: Section,
   container: SectionContainer,
+  block: true,
   initialProps: {
     type: '',
     level: '',
-    message: 'I\'m some timely text that helps the user understand something',
     hideIcon: false,
+    slim: false,
     onClose: () => console.log('On close handler called'),
     children: (
       <div style={{ backgroundColor: 'blue', color: 'white' }}>
