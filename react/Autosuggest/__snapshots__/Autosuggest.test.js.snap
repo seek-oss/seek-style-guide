@@ -11,7 +11,7 @@ exports[`Autosuggest should render with label 1`] = `
         for="Foo"
       >
         <span
-          class="root baseline"
+          class="root standard baseline"
         >
           <span
             class=""
@@ -76,7 +76,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
         for="Foo"
       >
         <span
-          class="root baseline"
+          class="root standard baseline"
         >
           <span
             class=""

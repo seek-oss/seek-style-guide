@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import TextField from './TextField';
 import styles from './TextField.less';
+import * as sketch from './TextField.sketch';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
@@ -55,8 +55,10 @@ class TextFieldContainer extends Component {
 export default {
   route: '/textfield',
   title: 'Text Field',
+  category: 'Form',
   component: TextField,
   container: TextFieldContainer,
+  sketch,
   initialProps: {
     id: 'firstName',
     label: 'First Name',

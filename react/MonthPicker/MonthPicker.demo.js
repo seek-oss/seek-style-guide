@@ -42,15 +42,13 @@ class MonthPickerContainer extends Component {
 export default {
   route: '/monthpicker',
   title: 'Month Picker',
+  category: 'Form',
   component: MonthPicker,
   container: MonthPickerContainer,
   initialProps: {
     id: 'startMonth',
     label: 'Start Month',
-    message: '',
-    // Documentation only:
-    onChange: () => {},
-    value: { month: 11, year: 1955 }
+    message: ''
   },
   options: [
     {
@@ -62,6 +60,61 @@ export default {
           transformProps: props => ({
             ...props,
             native: true
+          })
+        },
+        {
+          label: 'Ascending years',
+          transformProps: props => ({
+            ...props,
+            ascendingYears: true
+          })
+        }
+      ]
+    },
+    {
+      label: 'Min year',
+      type: 'radio',
+      states: [
+        {
+          label: 'Min year',
+          transformProps: ({ minYear, ...restProps }) => restProps
+        },
+        {
+          label: '1984',
+          transformProps: props => ({
+            ...props,
+            minYear: 1984
+          })
+        },
+        {
+          label: '2000',
+          transformProps: props => ({
+            ...props,
+            minYear: 2000
+          })
+        }
+      ]
+    },
+    {
+      label: 'Max year',
+      type: 'radio',
+      states: [
+        {
+          label: 'Max year',
+          transformProps: ({ maxYear, ...restProps }) => restProps
+        },
+        {
+          label: '2001',
+          transformProps: props => ({
+            ...props,
+            maxYear: 2001
+          })
+        },
+        {
+          label: '2048',
+          transformProps: props => ({
+            ...props,
+            maxYear: 2048
           })
         }
       ]

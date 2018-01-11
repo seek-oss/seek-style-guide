@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import Checkbox from './Checkbox';
+import * as sketch from './Checkbox.sketch';
 import demoStyles from './Checkbox.demo.less';
 
 class CheckboxContainer extends Component {
@@ -45,8 +45,10 @@ class CheckboxContainer extends Component {
 export default {
   route: '/checkbox',
   title: 'Checkbox',
+  category: 'Form',
   component: Checkbox,
   container: CheckboxContainer,
+  sketch,
   initialProps: {
     id: 'stillInRole',
     label: 'Still in role',

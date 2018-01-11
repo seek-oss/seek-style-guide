@@ -34,6 +34,7 @@
 .item {
   .touchableText();
   display: flex;
+  align-items: center;
   padding: 0 @grid-gutter-width;
   white-space: nowrap;
   color: @sk-white;
@@ -89,6 +90,13 @@
 .iconSpacer {
   margin-left: (@grid-gutter-width / 2);
   width: @grid-gutter-width;
+  @media @desktop {
+    display: none;
+  }
+}
+
+.newBadge {
+  margin-right: 5px;
   @media @desktop {
     display: none;
   }

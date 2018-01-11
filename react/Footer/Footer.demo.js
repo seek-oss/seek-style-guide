@@ -1,4 +1,5 @@
 import { Footer } from 'seek-style-guide/react';
+import * as sketch from './Footer.sketch';
 import { makeDummyLinkRendererForPath } from '../Header/Header.demo';
 
 const ROUTE = '/footer';
@@ -6,7 +7,9 @@ const ROUTE = '/footer';
 export default {
   route: '/footer',
   title: 'Footer',
+  category: 'Layout',
   component: Footer,
+  sketch,
   initialProps: {
     authenticationStatus: 'authenticated',
     linkRenderer: makeDummyLinkRendererForPath(ROUTE)

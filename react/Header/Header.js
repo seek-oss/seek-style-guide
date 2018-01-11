@@ -17,7 +17,19 @@ import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
 const defaultLinkRenderer = props => (<a {...props} />);
-
+const tabNames = [
+  'Job Search',
+  '$150k+ Jobs',
+  'Profile',
+  'Saved & Applied Jobs',
+  'Recommended Jobs',
+  'Company Reviews',
+  'Advice & Tips'
+];
+const allowedBadgeTabs = [
+  ...tabNames,
+  null
+];
 export default function Header({
   logoComponent: LogoComponent,
   locale,
@@ -26,8 +38,10 @@ export default function Header({
   userEmail,
   linkRenderer,
   activeTab,
+  newBadgeTab,
   divider,
-  returnUrl
+  returnUrl,
+  onMenuToggle = () => {}
 }) {
   const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
   const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
@@ -68,6 +82,8 @@ export default function Header({
                   linkRenderer={linkRenderer}
                   returnUrl={returnUrl}
                   activeTab={activeTab}
+                  newBadgeTab={newBadgeTab}
+                  onMenuToggle={onMenuToggle}
                 />
               </div>
               <div className={styles.signInRegisterWrapper}>
@@ -92,6 +108,7 @@ export default function Header({
             locale={locale}
             linkRenderer={linkRenderer}
             activeTab={activeTab}
+            newBadgeTab={newBadgeTab}
             divider={divider}
           />
         </Hidden>
@@ -122,17 +139,11 @@ Header.propTypes = {
   userName: PropTypes.string,
   userEmail: PropTypes.string,
   linkRenderer: PropTypes.func,
-  activeTab: PropTypes.oneOf([
-    'Job Search',
-    '$150k+ Jobs',
-    'Profile',
-    'Saved & Applied Jobs',
-    'Recommended Jobs',
-    'Company Reviews',
-    'Advice & Tips'
-  ]),
+  activeTab: PropTypes.oneOf(tabNames),
+  newBadgeTab: PropTypes.oneOf(allowedBadgeTabs),
   divider: PropTypes.bool,
-  returnUrl: PropTypes.string
+  returnUrl: PropTypes.string,
+  onMenuToggle: PropTypes.func
 };
 
 Header.defaultProps = {
@@ -141,6 +152,7 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
+  newBadgeTab: 'Profile',
   divider: true,
   userEmail: ''
 };

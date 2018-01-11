@@ -36,8 +36,31 @@
   });
 }
 
+.ghostColor(@color) {
+
+  .activeBackground() {
+    background-color: lighten(@color, 51%);
+  }
+
+  border-color: @color;
+  color: @color;
+
+  .hoverState({
+    background-color: lighten(@color, 56%);
+  });
+
+  .activeState({
+    .activeBackground;
+  });
+
+  .focusState({
+    .activeBackground;
+  });
+}
+
 .root {
   .touchableText();
+  font-weight: @sk-medium;
   display: inline-block;
   text-decoration: none;
   user-select: none;
@@ -75,15 +98,55 @@
   .buttonColor(@sk-black, @sk-mid-gray-light);
 }
 
+.root_isGhost,
 .root_isTransparent {
-  color: @sk-link;
+  font-weight: @sk-regular;
   background-color: transparent;
   box-shadow: none;
+}
+
+.root_isGhost {
+  @border-width: 2px;
+
+  border: @border-width solid;
+  font-weight: @sk-bold;
+  line-height: @touchableTextHeight - (@border-width * 2);
+}
+
+.root_isBlue.root_isGhost {
+  .ghostColor(@sk-link)
+}
+
+.root_isWhite.root_isGhost {
+  border-color: @sk-white;
+  color: @sk-white;
+
+  .activeBackground() {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .activeState({
+    .activeBackground;
+  });
+
+  .hoverState({
+    .activeBackground;
+  });
+
+  .focusState({
+    .activeBackground;
+  });
+}
+
+.root_isTransparent {
+  color: @sk-link;
   padding-left: 0;
   padding-right: 0;
+
   .hoverState({
     text-decoration: underline;
   });
+
   .activeState({
     transform: none;
   });

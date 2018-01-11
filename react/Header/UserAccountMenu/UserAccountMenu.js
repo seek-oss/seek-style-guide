@@ -11,6 +11,7 @@ import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
 import Hidden from '../../Hidden/Hidden';
 import Loader from '../../Loader/Loader';
+import NewBadge from '../NewBadge/NewBadge';
 import employerLinkForLocale from '../employerLinkForLocale';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import appendReturnUrl from '../../private/appendReturnUrl';
@@ -22,7 +23,7 @@ const clearLocalStorage = () => {
   }
 };
 
-export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab }) {
+export default function UserAccountMenu({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab, newBadgeTab }) {
   return (
     <ul className={styles.root}>
       <Hidden desktop component="li" className={classnames(activeTab === 'Job Search' && styles.activeTab)}>
@@ -32,6 +33,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             className: styles.item,
             href: '/',
             children: [
+              newBadgeTab === 'Job Search' && <NewBadge key="new" className={styles.newBadge} />,
               <span key="label">Job Search</span>,
               <SearchIcon
                 key="icon"
@@ -50,6 +52,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             className: styles.item,
             href: '/profile/',
             children: [
+              newBadgeTab === 'Profile' && <NewBadge key="new" className={styles.newBadge} />,
               <span key="label">Profile</span>,
               <ProfileIcon
                 key="icon"
@@ -86,6 +89,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             className: `${styles.item} ${styles.subItem}`,
             href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
             children: [
+              newBadgeTab === 'Saved & Applied Jobs' && <NewBadge key="new" className={styles.newBadge} />,
               <span key="label">Saved <Hidden desktop>& Applied </Hidden>Jobs</span>,
               <StarIcon
                 key="icon"
@@ -116,8 +120,9 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:recommended+jobs',
             className: `${styles.item} ${styles.subItem}`,
-            href: '/recommended',
+            href: urlForAuthStatus(authenticationStatus, '/recommended'),
             children: [
+              newBadgeTab === 'Recommended Jobs' && <NewBadge key="new" className={styles.newBadge} />,
               <span key="label">Recommended Jobs</span>,
               <ThumbsUpIcon
                 key="icon"
@@ -138,6 +143,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                 className: `${styles.item} ${styles.subItem}`,
                 href: '/companies/',
                 children: [
+                  newBadgeTab === 'Company Reviews' && <NewBadge key="new" className={styles.newBadge} />,
                   'Company Reviews',
                   <div key="iconSpacer" className={styles.iconSpacer} />
                 ]
@@ -253,5 +259,6 @@ UserAccountMenu.propTypes = {
   ]),
   linkRenderer: PropTypes.func.isRequired,
   returnUrl: PropTypes.string,
-  activeTab: PropTypes.string
+  activeTab: PropTypes.string,
+  newBadgeTab: PropTypes.string
 };

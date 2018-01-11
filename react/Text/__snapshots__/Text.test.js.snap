@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render with defaults 1`] = `
+<span
+  class="root standard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as heading 1`] = `
+<span
+  class="root heading baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as heading 2`] = `
+<span
+  class="root heading baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as headline 1`] = `
+<span
+  class="root headline baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as headline 2`] = `
+<span
+  class="root headline baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as hero 1`] = `
+<span
+  class="root hero baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as hero 2`] = `
+<span
+  class="root hero baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as small 1`] = `
+<span
+  class="root small baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as small 2`] = `
+<span
+  class="root small baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as standard 1`] = `
+<span
+  class="root standard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as standard 2`] = `
+<span
+  class="root standard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as subheading 1`] = `
+<span
+  class="root subheading baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as subheading 2`] = `
+<span
+  class="root subheading baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as substandard 1`] = `
+<span
+  class="root substandard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as substandard 2`] = `
+<span
+  class="root substandard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as superstandard 1`] = `
+<span
+  class="root superstandard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as superstandard 2`] = `
+<span
+  class="root superstandard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;

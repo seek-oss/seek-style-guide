@@ -23,6 +23,11 @@ describe('Button:', () => {
       const wrapper = shallow(<Button color="transparent">SEEK</Button>);
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('should render white ghost button', () => {
+      const wrapper = shallow(<Button color="white" ghost>SEEK</Button>);
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
   it('should render with node', () => {
