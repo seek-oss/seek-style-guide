@@ -19,6 +19,7 @@ Container.propTypes = {
 export default {
   route: '/alert',
   title: 'Alert',
+  category: 'Typography',
   component: Alert,
   container: Container,
   initialProps: {
