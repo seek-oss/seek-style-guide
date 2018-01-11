@@ -25,8 +25,8 @@ export default class Alert extends Component {
   static displayName = 'Alert';
 
   static propTypes = {
-    type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP]),
-    level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY, LEVEL.TERTIARY]),
+    type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP]).isRequired,
+    level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY, LEVEL.TERTIARY]).isRequired,
     message: PropTypes.string.isRequired,
     pullout: PropTypes.bool,
     hideIcon: PropTypes.bool,
@@ -35,8 +35,6 @@ export default class Alert extends Component {
   };
 
   static defaultProps = {
-    type: TYPE.INFO,
-    level: LEVEL.TERTIARY,
     hideIcon: false,
     showCloseButton: false,
     pullout: false
@@ -47,11 +45,11 @@ export default class Alert extends Component {
   renderContents = () => {
     const { type, message, hideIcon, showCloseButton } = this.props;
 
-    const Icon = ICONS[type];
+    const Icon = type ? ICONS[type] : null;
 
     return (
       <div className={styles.alert}>
-        {!hideIcon && <Icon className={styles.icon} />}
+        {(!hideIcon && Icon) && <Icon className={styles.icon} />}
         <div className={styles.text}>
           <Text raw baseline={false}>{message}</Text>
         </div>
@@ -73,7 +71,7 @@ export default class Alert extends Component {
       [styles.root]: true,
       [styles.hideIcon]: hideIcon,
       [styles.showCloseButton]: showCloseButton,
-      [styles[type]]: isTertiary
+      [styles[type]]: type && isTertiary
     });
 
     return isTertiary ? (

@@ -28,9 +28,6 @@ export default {
   container: SectionContainer,
   block: true,
   initialProps: {
-    type: '',
-    level: '',
-    hideIcon: false,
     slim: false,
     onClose: () => console.log('On close handler called'),
     children: (

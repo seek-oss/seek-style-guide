@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert: levels: should render primary alerts 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  type="positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: levels: should render secondary alerts 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="secondary"
+  pullout={false}
+  slim={false}
+  type="positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: levels: should render tertiary alerts 1`] = `
+<div
+  className="root positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Alert: should render a close button 1`] = `
+<Section
+  className="root showCloseButton"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  type="positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+    <button
+      className="close"
+      onClick={[Function]}
+    >
+      <CrossIcon />
+    </button>
+  </div>
+</Section>
+`;
+
+exports[`Alert: should render the pullout style 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="primary"
+  pullout={true}
+  slim={false}
+  type="positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: should render with a hidden icon 1`] = `
+<Section
+  className="root hideIcon"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  type="positive"
+>
+  <div
+    className="alert"
+  >
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: types: should render critical alerts 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  type="critical"
+>
+  <div
+    className="alert"
+  >
+    <CriticalIcon
+      className="icon"
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: types: should render help alerts 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  type="help"
+>
+  <div
+    className="alert"
+  >
+    <HelpIcon
+      className="icon"
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: types: should render info alerts 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  type="info"
+>
+  <div
+    className="alert"
+  >
+    <InfoIcon
+      className="icon"
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: types: should render positive alerts 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  type="positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;

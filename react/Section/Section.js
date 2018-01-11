@@ -50,15 +50,13 @@ Section.propTypes = {
   header: PropTypes.bool,
   pullout: PropTypes.bool,
   slim: PropTypes.bool,
-  type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP, '']),
-  level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY, ''])
+  type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP]),
+  level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY])
 };
 
 Section.defaultProps = {
   className: '',
   header: false,
   pullout: false,
-  slim: false,
-  type: '',
-  level: ''
+  slim: false
 };
