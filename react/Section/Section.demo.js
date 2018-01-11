@@ -13,6 +13,8 @@ const SectionContainer = ({ component: DemoComponent, componentProps }) => (
   </PageBlock>
 );
 
+const SectionUnstyledContent = <Text>This content is nested within a Section component</Text>;
+
 SectionContainer.propTypes = {
   component: PropTypes.any,
   componentProps: PropTypes.object.isRequired
@@ -21,11 +23,12 @@ SectionContainer.propTypes = {
 export default {
   route: '/section',
   title: 'Section',
+  category: 'Layout',
   component: Section,
   container: SectionContainer,
   initialProps: {
-    type: TYPE.POSITIVE,
-    level: LEVEL.PRIMARY,
+    type: '',
+    level: '',
     message: 'I\'m some timely text that helps the user understand something',
     hideIcon: false,
     onClose: () => console.log('On close handler called'),
@@ -51,6 +54,13 @@ export default {
               </div>
             )
           })
+        },
+        {
+          label: 'Slim',
+          transformProps: props => ({
+            ...props,
+            slim: true
+          })
         }
       ]
     },
@@ -59,31 +69,39 @@ export default {
       type: 'radio',
       states: [
         {
+          label: 'Select type',
+          transformProps: props => props
+        },
+        {
           label: 'Positive',
           transformProps: props => ({
             ...props,
-            type: TYPE.POSITIVE
+            type: TYPE.POSITIVE,
+            children: SectionUnstyledContent
           })
         },
         {
           label: 'Info',
           transformProps: props => ({
             ...props,
-            type: TYPE.INFO
+            type: TYPE.INFO,
+            children: SectionUnstyledContent
           })
         },
         {
           label: 'Critical',
           transformProps: props => ({
             ...props,
-            type: TYPE.CRITICAL
+            type: TYPE.CRITICAL,
+            children: SectionUnstyledContent
           })
         },
         {
           label: 'Help',
           transformProps: props => ({
             ...props,
-            type: TYPE.HELP
+            type: TYPE.HELP,
+            children: SectionUnstyledContent
           })
         }
       ]
@@ -93,17 +111,23 @@ export default {
       type: 'radio',
       states: [
         {
+          label: 'Select level',
+          transformProps: props => props
+        },
+        {
           label: 'Primary',
           transformProps: props => ({
             ...props,
-            level: LEVEL.PRIMARY
+            level: LEVEL.PRIMARY,
+            children: SectionUnstyledContent
           })
         },
         {
           label: 'Secondary',
           transformProps: props => ({
             ...props,
-            level: LEVEL.SECONDARY
+            level: LEVEL.SECONDARY,
+            children: SectionUnstyledContent
           })
         }
       ]
