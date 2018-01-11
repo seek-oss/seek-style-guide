@@ -6,5 +6,9 @@ module.exports = {
     'Desktop': '1024x768',
     'Mobile Plus': '414x736',
     'Mobile': '320x568'
-  }
+  },
+  puppeteerArgs: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox'
+  ].join(' ')
 };
