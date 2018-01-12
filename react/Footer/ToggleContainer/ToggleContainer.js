@@ -10,7 +10,7 @@ export default function ToggleContainer({ children, secondary, label, name, 'dat
       <input id={name} className={styles.toggle} type="checkbox" data-automation={dataAutomation} />
       <label className={`${styles.toggleLink} ${styles.toggleLabel}`} htmlFor={name}>
         {label}
-        <ChevronIcon direction="down" className={styles.chevron} svgClassName={styles.chevronSvg} />
+        <ChevronIcon direction="down" className={styles.chevron} superstandard />
       </label>
       <ul className={styles.toggleContainer}>
         { children }
