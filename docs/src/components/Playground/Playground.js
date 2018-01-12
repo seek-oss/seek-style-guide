@@ -3,6 +3,8 @@ import styles from './Playground.less';
 import React, { Component } from 'react';
 import capitalize from 'lodash/capitalize';
 
+import { sizes as typographySizes } from '../../../../react/private/withTextProps';
+
 import {
   TextField,
   Button,
@@ -492,15 +494,7 @@ export default class Playground extends Component {
             {[StarIcon, ProfileIcon, HeartIcon, ThumbsUpIcon].map((IconComponent, index) => (
               <Card key={index}>
                 <Section>
-                  {[
-                    'small',
-                    'substandard',
-                    'standard',
-                    'superstandard',
-                    'heading',
-                    'headline',
-                    'hero'
-                  ].map(size => (
+                  {typographySizes.map(size => (
                     <div key={size}>
                       <Text size={size}>
                         <IconComponent size={size} /> {capitalize(size)}
@@ -541,15 +535,7 @@ export default class Playground extends Component {
           </Section>
           <Card>
             <Section>
-              {[
-                'small',
-                'substandard',
-                'standard',
-                'superstandard',
-                'heading',
-                'headline',
-                'hero'
-              ].map(size => (
+              {typographySizes.map(size => (
                 <div key={size}>
                   <Text {...{ [size]: true }}>Lorem ipsum <StarIcon {...{ [size]: true }} /> dolor sit amet, <ThumbsUpIcon {...{ [size]: true }} /> consectetur adipiscing <HeartIcon {...{ [size]: true }} /> elit. Nam vel sapien lorem.</Text>
                   <br />
