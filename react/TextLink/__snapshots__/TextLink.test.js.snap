@@ -2,20 +2,20 @@
 
 exports[`TextLink should render with chevron 1`] = `
 <a
-  className="link"
+  class="link"
 >
   Google
-  <ChevronIcon
-    className="chevron"
-    direction="right"
-    standard={true}
-  />
+  <span
+    class="root root right chevron"
+  >
+    mock svg
+  </span>
 </a>
 `;
 
 exports[`TextLink should render with children 1`] = `
 <a
-  className="link"
+  class="link"
 >
   Google
 </a>
@@ -23,12 +23,12 @@ exports[`TextLink should render with children 1`] = `
 
 exports[`TextLink should render with className 1`] = `
 <a
-  className="link foo"
+  class="link foo"
 />
 `;
 
 exports[`TextLink should render with defaults 1`] = `
 <a
-  className="link"
+  class="link"
 />
 `;

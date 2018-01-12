@@ -1,27 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import TextLink from './TextLink';
 import Text from '../Text/Text';
 
-const TextLinkContainer = ({ component: DemoComponent, componentProps }) => (
-  <Text>
-    <DemoComponent {...componentProps} />
-  </Text>
-);
-TextLinkContainer.propTypes = {
-  component: PropTypes.any,
-  componentProps: PropTypes.object.isRequired
-};
+import { sizes } from '../private/withTextProps';
+import capitalize from 'lodash/capitalize';
 
 export default {
   route: '/text-link',
   title: 'Text Link',
   category: 'Typography',
   component: TextLink,
-  container: TextLinkContainer,
   initialProps: {
     href: '#',
-    children: 'Text link'
+    children: 'Text link',
+    component: Text,
+    chevron: 'up'
   },
   options: [
     {
@@ -53,6 +45,23 @@ export default {
             chevron: 'right'
           })
         }
+      ]
+    },
+    {
+      label: 'Sizes',
+      type: 'radio',
+      states: [
+        {
+          label: 'Default',
+          transformProps: props => props
+        },
+        ...sizes.map(size => ({
+          label: capitalize(size),
+          transformProps: props => ({
+            ...props,
+            [size]: true
+          })
+        }))
       ]
     }
   ]
