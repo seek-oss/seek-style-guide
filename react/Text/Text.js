@@ -49,6 +49,8 @@ const Text = ({
   </span>
 );
 
+Text.displayName = 'Text';
+
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
