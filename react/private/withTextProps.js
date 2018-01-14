@@ -10,11 +10,11 @@ import forEach from 'lodash/forEach';
 export const sizes = [
   'small',
   'substandard',
-  'superstandard',
   'standard',
+  'superstandard',
   'subheading',
-  'headline',
   'heading',
+  'headline',
   'hero'
 ];
 
