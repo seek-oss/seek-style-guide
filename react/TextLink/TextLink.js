@@ -6,37 +6,41 @@ import PropTypes from 'prop-types';
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
 import classnames from 'classnames';
 
-const renderChevron = chevron => {
+import withTextProps, { SizePropTypes } from '../private/withTextProps';
+
+const renderChevron = (chevron, size) => {
   if (!chevron) {
     return null;
   }
 
   return (
     <ChevronIcon
+      size={size}
       className={styles.chevron}
       direction={chevron}
-      svgClassName={styles.chevronSvg}
     />
   );
 };
 
-export default function TextLink({ component: Root, className, children, chevron, ...restProps }) {
+const TextLink = ({ component: Root, className, children, chevron, size, ...restProps }) => {
   const allProps = {
     ...restProps,
+    size,
     className: classnames(styles.link, className)
   };
 
   return (
     <Root {...allProps}>
       {children}
-      {renderChevron(chevron)}
+      {renderChevron(chevron, size)}
     </Root>
   );
-}
+};
 
 TextLink.displayName = 'TextLink';
 
 TextLink.propTypes = {
+  ...SizePropTypes,
   component: PropTypes.any,
   className: PropTypes.string,
   children: PropTypes.node,
@@ -44,5 +48,8 @@ TextLink.propTypes = {
 };
 
 TextLink.defaultProps = {
-  component: 'a'
+  component: 'a',
+  size: 'standard'
 };
+
+export default withTextProps(TextLink);
