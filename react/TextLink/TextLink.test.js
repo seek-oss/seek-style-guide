@@ -20,4 +20,8 @@ describe('TextLink', () => {
       expect(shallow(<TextLink chevron={direction}>Google</TextLink>)).toMatchSnapshot();
     });
   });
+
+  it('should render with chevron props', () => {
+    expect(shallow(<TextLink chevron="up" chevronProps={{ size: 'hero' }}>Google</TextLink>)).toMatchSnapshot();
+  });
 });

@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextLink should render with chevron props 1`] = `
+<a
+  className="link"
+>
+  Google
+  <ChevronIcon
+    className="chevronRightSide"
+    direction="up"
+    size="hero"
+  />
+</a>
+`;
+
 exports[`TextLink should render with children 1`] = `
 <a
   className="link"
