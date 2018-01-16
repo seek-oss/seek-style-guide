@@ -12,7 +12,7 @@
     "test": "npm run test-unit && npm run lint && npm run build && npm run html-sketchapp",
     "test-unit": "BABEL_ENV=test jest --config ./jest.config.json",
     "update-snapshot": "npm run test-unit -- --updateSnapshot",
-    "lint": "npm run lint-js && npm run lint-less",
+    "lint": "npm run lint-js && npm run lint-less && npm run flow",
     "lint-js": "eslint app standalone/*/src docs/src react test",
     "lint-less": "stylelint '{theme,react,standalone,docs}/**/*.less'",
     "clean": "rm -rf dist && rm -rf docs/dist && mkdir -p dist && mkdir -p docs/dist",
@@ -30,7 +30,8 @@
     "commitmsg": "commitlint --edit --extends seek",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "sketch-to-git": "node scripts/sketch-to-git",
-    "git-to-sketch": "node scripts/git-to-sketch"
+    "git-to-sketch": "node scripts/git-to-sketch",
+    "flow": "flow focus-check ."
   },
   "config": {
     "commitizen": {
@@ -90,9 +91,11 @@
     "enzyme-to-json": "^3.1.2",
     "eslint": "^4.8.0",
     "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-flowtype": "^2.41.0",
     "eslint-plugin-jest": "^21.2.0",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.1",
+    "flow-bin": "^0.63.1",
     "gh-pages": "^1.0.0",
     "hex-rgb": "^1.0.0",
     "html-minifier": "^3.5.6",

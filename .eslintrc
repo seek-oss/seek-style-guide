@@ -9,7 +9,11 @@
   "plugins": [
     "babel",
     "react",
-    "jest"
+    "jest",
+    "flowtype"
+  ],
+  "extends": [
+    "plugin:flowtype/recommended"
   ],
   "rules": {
     "comma-dangle": 2,
