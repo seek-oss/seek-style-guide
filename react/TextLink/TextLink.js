@@ -6,30 +6,35 @@ import PropTypes from 'prop-types';
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
 import classnames from 'classnames';
 
-const renderChevron = chevron => {
+export const chevronDirections = ['up', 'down', 'right', 'left'];
+
+const renderChevron = (chevron, chevronProps, isLeftChevron) => {
   if (!chevron) {
     return null;
   }
 
   return (
     <ChevronIcon
-      className={styles.chevron}
+      {...chevronProps}
+      className={isLeftChevron ? styles.chevronLeftSide : styles.chevronRightSide}
       direction={chevron}
-      svgClassName={styles.chevronSvg}
     />
   );
 };
 
-export default function TextLink({ component: Root, className, children, chevron, ...restProps }) {
+export default function TextLink({ component: Root, className, children, chevron, chevronProps, ...restProps }) {
   const allProps = {
     ...restProps,
     className: classnames(styles.link, className)
   };
 
+  const isLeftChevron = chevron === 'left';
+
   return (
     <Root {...allProps}>
+      {isLeftChevron && renderChevron(chevron, chevronProps, isLeftChevron)}
       {children}
-      {renderChevron(chevron)}
+      {!isLeftChevron && renderChevron(chevron, chevronProps, isLeftChevron)}
     </Root>
   );
 }
@@ -40,9 +45,11 @@ TextLink.propTypes = {
   component: PropTypes.any,
   className: PropTypes.string,
   children: PropTypes.node,
-  chevron: PropTypes.oneOf(['up', 'down', 'right', 'left'])
+  chevron: PropTypes.oneOf(chevronDirections),
+  chevronProps: PropTypes.object
 };
 
 TextLink.defaultProps = {
-  component: 'a'
+  component: 'a',
+  chevronProps: { size: 'substandard' }
 };

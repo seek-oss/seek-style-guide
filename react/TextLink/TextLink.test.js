@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import TextLink from './TextLink';
+import TextLink, { chevronDirections } from './TextLink';
 
 describe('TextLink', () => {
   it('should render with defaults', () => {
@@ -15,7 +15,9 @@ describe('TextLink', () => {
     expect(shallow(<TextLink>Google</TextLink>)).toMatchSnapshot();
   });
 
-  it('should render with chevron', () => {
-    expect(shallow(<TextLink chevron="right">Google</TextLink>)).toMatchSnapshot();
+  chevronDirections.forEach(direction => {
+    it(`should render with ${direction} chevron`, () => {
+      expect(shallow(<TextLink chevron={direction}>Google</TextLink>)).toMatchSnapshot();
+    });
   });
 });
