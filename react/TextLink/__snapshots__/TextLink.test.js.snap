@@ -41,7 +41,7 @@ exports[`TextLink should render with down chevron 1`] = `
   <ChevronIcon
     className="chevronRightSide"
     direction="down"
-    size="substandard"
+    size="standard"
   />
 </a>
 `;
@@ -53,7 +53,7 @@ exports[`TextLink should render with left chevron 1`] = `
   <ChevronIcon
     className="chevronLeftSide"
     direction="left"
-    size="substandard"
+    size="standard"
   />
   Google
 </a>
@@ -67,7 +67,7 @@ exports[`TextLink should render with right chevron 1`] = `
   <ChevronIcon
     className="chevronRightSide"
     direction="right"
-    size="substandard"
+    size="standard"
   />
 </a>
 `;
@@ -80,7 +80,7 @@ exports[`TextLink should render with up chevron 1`] = `
   <ChevronIcon
     className="chevronRightSide"
     direction="up"
-    size="substandard"
+    size="standard"
   />
 </a>
 `;

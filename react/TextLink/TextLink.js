@@ -51,5 +51,5 @@ TextLink.propTypes = {
 
 TextLink.defaultProps = {
   component: 'a',
-  chevronProps: { size: 'substandard' }
+  chevronProps: { size: 'standard' }
 };
