@@ -10,6 +10,12 @@
   @media @desktop {
     flex-basis: 0;
     flex-grow: 1;
+
+    min-width: 0;
+    .columns_flexible & {
+      min-width: auto;
+    }
+
     padding: 0 (@grid-gutter-width / 2);
     .columns_tight & {
       padding: 0 (@grid-gutter-width / 4);

@@ -1,9 +1,9 @@
 import Logo from './Logo';
 
 export default {
-  route: '/logo',
+  route: '/jobsdb-logo',
   tenantPath: 'jobsDB',
-  title: 'Logo',
+  title: 'JobsDB Logo',
   component: Logo,
   initialProps: {},
   options: [

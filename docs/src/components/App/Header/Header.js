@@ -5,10 +5,13 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { Link } from 'react-router';
-import { PageBlock, Card, Section, Text } from 'seek-style-guide/react';
+import { Link } from 'react-router-dom';
+import { PageBlock, Card, Section, Text } from 'seek-asia-style-guide/react';
 import Logo from './Logo/Logo';
-import demoSpecs from '../../../demoSpecs';
+import demoSpecExports from '../../../../../react/*/*.demo.js';
+import jobStreetDemoExports from '../../../../../jobStreet/*/*.demo.js';
+import jobsDBDemoExports from '../../../../../jobsDB/*/*.demo.js';
+const demoSpecs = demoSpecExports.concat(jobStreetDemoExports, jobsDBDemoExports).map(x => x.default);
 
 export default class Header extends Component {
   constructor() {

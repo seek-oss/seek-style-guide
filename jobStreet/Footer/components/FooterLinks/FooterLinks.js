@@ -7,52 +7,52 @@ const FooterLinks = ({ messages }) => {
   return (
     <ul className={styles.list}>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.link'] }>
-          { messages['footer.linkText'] }
+        <a className={styles.link} href={messages['footer.link']}>
+          {messages['footer.linkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.siteMapLink'] }>
-          { messages['footer.siteMapLinkText'] }
+        <a className={styles.link} href={messages['footer.siteMapLink']}>
+          {messages['footer.siteMapLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.aboutLink'] }>
-          { messages['footer.aboutLinkText'] }
+        <a className={styles.link} href={messages['footer.aboutLink']}>
+          {messages['footer.aboutLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.profilesLink'] }>
-          { messages['footer.profilesLinkText'] }
+        <a className={styles.link} href={messages['footer.profilesLink']}>
+          {messages['footer.profilesLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.termsLink'] }>
-          { messages['footer.termsLinkText'] }
+        <a className={styles.link} href={messages['footer.termsLink']}>
+          {messages['footer.termsLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.privacyLink'] }>
-          { messages['footer.privacyLinkText'] }
+        <a className={styles.link} href={messages['footer.privacyLink']}>
+          {messages['footer.privacyLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.safeLink'] }>
-          { messages['footer.safeLinkText'] }
+        <a className={styles.link} href={messages['footer.safeLink']}>
+          {messages['footer.safeLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.helpLink'] }>
-          { messages['footer.helpLinkText'] }
+        <a className={styles.link} href={messages['footer.helpLink']}>
+          {messages['footer.helpLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={ messages['footer.feedbackLink'] }>
-          { messages['footer.feedbackLinkText'] }
+        <a className={styles.link} href={messages['footer.feedbackLink']}>
+          {messages['footer.feedbackLinkText']}
         </a>
       </li>
     </ul>
-  )
+  );
 };
 
 FooterLinks.propTypes = {

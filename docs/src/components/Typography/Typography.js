@@ -11,9 +11,9 @@ import {
   Positive,
   Critical,
   Secondary
-} from 'seek-style-guide/react';
+} from 'seek-asia-style-guide/react';
 import Demo from '../Demo/Demo';
-import textDemoSpec from 'seek-style-guide/react/Text/Text.demo';
+import textDemoSpec from 'seek-asia-style-guide/react/Text/Text.demo';
 
 const BackgroundContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>

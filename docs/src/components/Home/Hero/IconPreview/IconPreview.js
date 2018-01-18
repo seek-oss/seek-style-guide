@@ -15,7 +15,7 @@ import {
   HelpIcon,
   LocationIcon,
   JobFunctionIcon
-} from 'seek-style-guide/react';
+} from 'seek-asia-style-guide/react';
 
 export default function IconPreview() {
   return (

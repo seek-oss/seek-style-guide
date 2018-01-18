@@ -1,18 +1,14 @@
 language: node_js
-cache:
-  directories:
-    - node_modules
 notifications:
   email: false
 before_script:
   - npm prune
 script:
   - npm test
-  - npm run git-to-sketch
 after_success:
   - if [ ${TRAVIS_SECURE_ENV_VARS} = "true" ]; then
       if [ -n "$TRAVIS_PULL_REQUEST_SHA" ]; then
-        npm run deploy-surge -- -d seek-style-guide--${TRAVIS_PULL_REQUEST_SHA}.surge.sh;
+        npm run deploy-surge -- -d seek-asia-style-guide--${TRAVIS_PULL_REQUEST_SHA}.surge.sh;
       elif [ "$TRAVIS_BRANCH" == "master" ]; then
         npm run semantic-release;
 

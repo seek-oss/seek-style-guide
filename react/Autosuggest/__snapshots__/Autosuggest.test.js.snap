@@ -36,9 +36,7 @@ exports[`Autosuggest should render with label 1`] = `
         role="combobox"
         type="text"
         value=""
-      >
-        
-      </input>
+      />
       <span
         class="clearField"
       >
@@ -54,22 +52,16 @@ exports[`Autosuggest should render with label 1`] = `
       </span>
       <div
         class="root"
-      >
-        
-      </div>
+      />
     </div>
     <div
       class="suggestionsContainer suggestionsContainer_withLabel"
       id="react-autowhatever-1"
-    >
-      
-    </div>
+    />
   </div>
   <div
     class="autosuggestBackdrop"
-  >
-    
-  </div>
+  />
 </div>
 `;
 
@@ -109,9 +101,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
         role="combobox"
         type="text"
         value=""
-      >
-        
-      </input>
+      />
       <span
         class="clearField"
       >
@@ -127,22 +117,16 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
       </span>
       <div
         class="root"
-      >
-        
-      </div>
+      />
     </div>
     <div
       class="suggestionsContainer suggestionsContainer_withLabel"
       id="react-autowhatever-1"
-    >
-      
-    </div>
+    />
   </div>
   <div
     class="autosuggestBackdrop backdrop_isMobile"
-  >
-    
-  </div>
+  />
 </div>
 `;
 
@@ -162,9 +146,7 @@ exports[`Autosuggest should render with simple props 1`] = `
         role="combobox"
         type="text"
         value=""
-      >
-        
-      </input>
+      />
       <span
         class="clearField"
       >
@@ -180,22 +162,16 @@ exports[`Autosuggest should render with simple props 1`] = `
       </span>
       <div
         class="root"
-      >
-        
-      </div>
+      />
     </div>
     <div
       class="suggestionsContainer"
       id="react-autowhatever-1"
-    >
-      
-    </div>
+    />
   </div>
   <div
     class="autosuggestBackdrop"
-  >
-    
-  </div>
+  />
 </div>
 `;
 
@@ -215,9 +191,7 @@ exports[`Autosuggest should render with suggestions 1`] = `
         role="combobox"
         type="text"
         value=""
-      >
-        
-      </input>
+      />
       <span
         class="clearField"
       >
@@ -233,9 +207,7 @@ exports[`Autosuggest should render with suggestions 1`] = `
       </span>
       <div
         class="root"
-      >
-        
-      </div>
+      />
     </div>
     <div
       class="suggestionsContainer"
@@ -271,8 +243,6 @@ exports[`Autosuggest should render with suggestions 1`] = `
   </div>
   <div
     class="autosuggestBackdrop"
-  >
-    
-  </div>
+  />
 </div>
 `;

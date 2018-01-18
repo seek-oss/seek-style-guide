@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField clear button should be visible when value has white spaces only 1`] = `
+<div
+  className="root canClear"
+>
+  <FieldLabel
+    id=""
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    className="input"
+    value="  "
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`TextField clear button should be visible when value is provided 1`] = `
+<div
+  className="root canClear"
+>
+  <FieldLabel
+    id=""
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    className="input"
+    value="abc"
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`TextField clear button should not be visible when value is empty 1`] = `
+<div
+  className="root"
+>
+  <FieldLabel
+    id=""
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    className="input"
+    value=""
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`TextField clear button should not be visible when value is provided but no clear handler 1`] = `
+<div
+  className="root"
+>
+  <FieldLabel
+    id=""
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    className="input"
+    value="abc"
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`TextField should render with defaults 1`] = `
+<div
+  className="root"
+>
+  <FieldLabel
+    id=""
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    className="input"
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`TextField should render with input props 1`] = `
+<div
+  className="root"
+>
+  <FieldLabel
+    id=""
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    className="input first-name-field"
+    data-automation="first-name-field"
+    id="firstName"
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`TextField should render with valid false 1`] = `
+<div
+  className="root invalid"
+>
+  <FieldLabel
+    id=""
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    className="input"
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    valid={false}
+  />
+</div>
+`;

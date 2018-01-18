@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import { Header } from 'seek-style-guide/jobsDB';
+import { Header } from 'seek-asia-style-guide/jobsDB';
 
 export const makeDummyLinkRendererForPath = path => {
   const DummyLinkRenderer = ({ href, ...props }) => (
@@ -15,12 +15,12 @@ export const makeDummyLinkRendererForPath = path => {
   return DummyLinkRenderer;
 };
 
-const ROUTE = '/header';
+const ROUTE = '/jobsdb-header';
 
 export default {
   route: ROUTE,
   tenantPath: 'jobsDB',
-  title: 'Header',
+  title: 'JobsDB Header',
   component: Header,
   initialProps: {
     authenticationStatus: 'authenticated',

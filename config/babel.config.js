@@ -1,7 +1,7 @@
 module.exports = ({ reactHotLoader = false }) => ({
   babelrc: false,
   presets: [
-    'es2015',
+    'env',
     'react'
   ],
   plugins: [

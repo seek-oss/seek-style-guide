@@ -8,12 +8,13 @@ export default function Logo({
   svgClassName,
   invert,
   iconClass,
-  ...restProps }) {
+  ...restProps
+}) {
   const svgClasses = classnames(svgClassName, {
     [styles.root]: true,
     [styles.invert]: invert
   });
-  
+
   const height = 44;
   const width = 200;
 
@@ -22,12 +23,14 @@ export default function Logo({
       <svg
         className={svgClasses}
         xmlns="http://www.w3.org/2000/svg"
-        height={`${height}`}        
+        height={`${height}`}
         width={`${width}`}
-        viewBox={`0 0 802.89 196.75`}
+        viewBox="0 0 802.89 196.75"
         y="0px"
         x="0px">
-        <LogoIcon iconClass={invert && styles.invertedLogoIcon || iconClass}/>
+        <LogoIcon
+          iconClass={(invert && styles.invertedLogoIcon) || iconClass}
+        />
       </svg>
     </div>
   );

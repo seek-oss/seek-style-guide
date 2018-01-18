@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PageBlock, AsidedLayout, Card, CardGroup, Section, Paragraph, Text, TextLink, Strong } from 'seek-style-guide/react';
+import { PageBlock, AsidedLayout, Card, CardGroup, Section, Paragraph, Text, TextLink, Strong } from 'seek-asia-style-guide/react';
 import Demo from '../Demo/Demo';
 
 const BackgroundContainer = ({ component: DemoComponent, componentProps }) => (

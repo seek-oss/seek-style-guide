@@ -1,6 +1,6 @@
 import styles from './Hero.less';
 import React from 'react';
-import { PageBlock, Section } from 'seek-style-guide/react';
+import { PageBlock, Section } from 'seek-asia-style-guide/react';
 import ColorPreview from './ColorPreview/ColorPreview';
 import ButtonsPreview from './ButtonsPreview/ButtonsPreview';
 import TypographyPreview from './TypographyPreview/TypographyPreview';

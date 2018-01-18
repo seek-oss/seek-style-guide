@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobStreet navigation component should render active main nav correctly 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="unitTest.testText"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?"
+      onClick={[Function]}
+      title="Buy SFV from Steam"
+    >
+      <Text
+        baseline={true}
+        className="linkText"
+        regular={false}
+        whistling={true}
+      >
+        Buy now!
+      </Text>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="unitTest.testText1"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?"
+      onClick={[Function]}
+      title="Buy SFV Arcade from Steam"
+    >
+      <Text
+        baseline={true}
+        className="linkText"
+        regular={true}
+        whistling={true}
+      >
+        Pre-order now!
+      </Text>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`JobStreet navigation component should render message with URL parameters 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="unitTest.testText"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?sfvFavorite=karin"
+      onClick={[Function]}
+      title="Buy SFV from Steam"
+    >
+      <Text
+        baseline={true}
+        className="linkText"
+        regular={true}
+        whistling={true}
+      >
+        Buy now!
+      </Text>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`JobStreet navigation component should render message with child links 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="unitTest.testText"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?"
+      onClick={[Function]}
+      title="Buy SFV from Steam"
+    >
+      <Text
+        baseline={true}
+        className="linkText"
+        regular={true}
+        whistling={true}
+      >
+        Buy now!
+      </Text>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`JobStreet navigation component should render supplied messages 1`] = `
+<ul
+  className="container"
+>
+  <li
+    className="item"
+    key="unitTest.testText"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?"
+      onClick={[Function]}
+      title="Buy SFV from Steam"
+    >
+      <Text
+        baseline={true}
+        className="linkText"
+        regular={true}
+        whistling={true}
+      >
+        Buy now!
+      </Text>
+    </a>
+  </li>
+  <li
+    className="item"
+    key="unitTest.testText1"
+  >
+    <a
+      className="link"
+      href="https://store.steampowered.com/?"
+      onClick={[Function]}
+      title="Buy SFV Arcade from Steam"
+    >
+      <Text
+        baseline={true}
+        className="linkText"
+        regular={true}
+        whistling={true}
+      >
+        Pre-order now!
+      </Text>
+    </a>
+  </li>
+</ul>
+`;

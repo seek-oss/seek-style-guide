@@ -18,7 +18,6 @@ function combineClassNames(props = {}, ...classNames) {
 }
 
 export default class FieldLabel extends Component {
-
   static displayName = 'FieldLabel';
 
   static propTypes = {

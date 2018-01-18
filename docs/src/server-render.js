@@ -1,19 +1,17 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { match, RouterContext, createMemoryHistory } from 'react-router';
-import routes from './Routes';
+import { StaticRouter } from 'react-router';
+import App from 'App/App';
 
 const baseHref = process.env.BASE_HREF || '/';
 
 // Static site renderer
-export default ({ path, template }, callback) => {
-  const history = createMemoryHistory(path);
+export default ({ path, template }) => {
+  const html = renderToString(
+    <StaticRouter location={path} context={{}}>
+      <App />
+    </StaticRouter>
+  );
 
-  match({ routes, history }, (error, redirectLocation, renderProps) => {
-    const html = renderToString(
-      <RouterContext {...renderProps} />
-    );
-
-    callback(null, template({ html, baseHref }));
-  });
+  return template({ html, baseHref });
 };

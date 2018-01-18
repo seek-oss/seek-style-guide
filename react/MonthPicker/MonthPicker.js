@@ -11,8 +11,9 @@ import NativeMonthPicker from './NativeMonthPicker/NativeMonthPicker';
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
 
-export default class MonthPicker extends Component {
+const currYear = new Date().getFullYear();
 
+export default class MonthPicker extends Component {
   static displayName = 'MonthPicker';
 
   static propTypes = {
@@ -21,7 +22,9 @@ export default class MonthPicker extends Component {
       const { id } = props;
 
       if (typeof id !== 'string') {
-        return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
+        return new Error(
+          `Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`
+        );
       }
     },
     className: PropTypes.string,
@@ -33,13 +36,19 @@ export default class MonthPicker extends Component {
     }),
     native: PropTypes.bool,
     onChange: PropTypes.func,
-    onBlur: PropTypes.func
+    onBlur: PropTypes.func,
+    minYear: PropTypes.number,
+    maxYear: PropTypes.number,
+    ascendingYears: PropTypes.bool
   };
 
   static defaultProps = {
     id: '',
     className: '',
-    native: false
+    native: false,
+    maxYear: currYear,
+    minYear: currYear - 100,
+    ascendingYears: false
   };
 
   constructor() {
@@ -49,20 +58,33 @@ export default class MonthPicker extends Component {
   }
 
   renderInput() {
-    const { id, value, onChange, native, valid, onBlur } = this.props;
+    const {
+      id,
+      value,
+      onChange,
+      native,
+      valid,
+      onBlur,
+      minYear,
+      maxYear,
+      ascendingYears
+    } = this.props;
     const monthPickerProps = {
       className: styles.input,
       ...(id ? { id } : {}),
       value,
       onChange,
       onBlur,
-      valid
+      valid,
+      minYear,
+      maxYear,
+      ascendingYears
     };
 
-    return (
-      native ?
-        <NativeMonthPicker {...monthPickerProps} /> :
-        <CustomMonthPicker {...monthPickerProps} />
+    return native ? (
+      <NativeMonthPicker {...monthPickerProps} />
+    ) : (
+      <CustomMonthPicker {...monthPickerProps} />
     );
   }
 
@@ -73,16 +95,32 @@ export default class MonthPicker extends Component {
       [className]: className
     });
 
-    // eslint-disable-next-line react/prop-types
-    const { id, label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, valid, message, messageProps } = this.props;
+    /* eslint-disable react/prop-types */
+    const {
+      id,
+      label,
+      labelProps,
+      secondaryLabel,
+      tertiaryLabel,
+      invalid,
+      help,
+      helpProps,
+      valid,
+      message,
+      messageProps
+    } = this.props;
+    /* eslint-enable react/prop-types */
 
     return (
       <div className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
+        <FieldLabel
+          {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }}
+        />
         {this.renderInput()}
-        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage
+          {...{ invalid, help, helpProps, valid, message, messageProps }}
+        />
       </div>
     );
   }
-
 }

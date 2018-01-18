@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { PageBlock, Section, Text } from 'seek-style-guide/react';
+import { PageBlock, Section, Text } from 'seek-asia-style-guide/react';
 import Baseline from './Baseline/Baseline';
 import Code from './Code/Code';
 import flatten from 'lodash/flatten';
+import map from 'lodash/map';
 
 const DefaultContainer = ({ component: DemoComponent, componentProps }) => (
   <DemoComponent {...componentProps} />
@@ -127,6 +128,7 @@ export default class Demo extends Component {
       component: DemoComponent,
       container: Container = DefaultContainer,
       options,
+      sketch,
       tenantPath
     } = this.props.spec;
     const codeElement = <DemoComponent {...this.calculateProps()} />;
@@ -139,8 +141,7 @@ export default class Demo extends Component {
               <Section header>
                 <Text screaming>{ title }</Text>
               </Section>
-            ) :
-            null
+            ) : null
           }
         </PageBlock>
         <Baseline lineHeight={4} isVisible={true} type="bar" color="#e8e8e8">
@@ -161,15 +162,61 @@ export default class Demo extends Component {
                     .map((option, i) => (
                       <div key={i} className={styles.optionItem}>{ option }</div>
                     ))
-                  }
+                }
               </div>
             </PageBlock>
-          ) :
-          null
+          ) : null
         }
         <PageBlock className={styles.codeBlock}>
           <Code jsx={codeElement} tenantPath={tenantPath ? tenantPath : 'react'} />
         </PageBlock>
+        {
+          sketch && (sketch.symbols || sketch.blockSymbols) ? (
+            <div>
+              <PageBlock>
+                <Section header>
+                  <Text hero>Sketch Symbols</Text>
+                </Section>
+              </PageBlock>
+              <div className={styles.symbols}>
+                {
+                  map(sketch.blockSymbols || {}, (element, name) => (
+                    <div key={name}>
+                      <PageBlock>
+                        <Section>
+                          <div className={styles.symbolName}>
+                            <Text superstandard strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
+                          </div>
+                        </Section>
+                      </PageBlock>
+                      <div className={styles.symbolElement}>
+                        { element }
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+              <PageBlock>
+                <div className={styles.symbols}>
+                  {
+                    map(sketch.symbols || {}, (element, name) => (
+                      <div key={name}>
+                        <Section>
+                          <div className={styles.symbolName}>
+                            <Text superstandard strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
+                          </div>
+                          <div className={styles.symbolElement}>
+                            { element }
+                          </div>
+                        </Section>
+                      </div>
+                    ))
+                  }
+                </div>
+              </PageBlock>
+            </div>
+          ) : null
+        }
       </div>
     );
   }

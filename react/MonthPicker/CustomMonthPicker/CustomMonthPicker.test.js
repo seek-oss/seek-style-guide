@@ -22,7 +22,7 @@ describe('CustomMonthPicker', () => {
     errors = [];
     value = {};
 
-    sinon.stub(console, 'error', errorMessage => {
+    sinon.stub(console, 'error').callsFake(errorMessage => {
       errors.push(errorMessage);
     });
   });
@@ -41,8 +41,12 @@ describe('CustomMonthPicker', () => {
   function renderToDom(jsx) {
     element = jsx;
     monthPicker = renderIntoDocument(element);
-    monthDropdown = scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[0] || null;
-    yearDropdown = scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[1] || null;
+    monthDropdown =
+      scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[0] ||
+      null;
+    yearDropdown =
+      scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[1] ||
+      null;
   }
 
   it('should have a displayName', () => {
@@ -65,7 +69,14 @@ describe('CustomMonthPicker', () => {
     const onChange = newValue => {
       value = newValue;
     };
-    renderToDom(<CustomMonthPicker onChange={onChange} value={{ month: 6, year: 2010 }} />);
+    renderToDom(
+      <CustomMonthPicker
+        minYear={2000}
+        maxYear={2010}
+        onChange={onChange}
+        value={{ month: 6, year: 2010 }}
+      />
+    );
     monthDropdown.value = '11';
     Simulate.change(monthDropdown);
     expect(value).to.deep.equal({
@@ -78,7 +89,14 @@ describe('CustomMonthPicker', () => {
     const onChange = newValue => {
       value = newValue;
     };
-    renderToDom(<CustomMonthPicker onChange={onChange} value={{ month: 6, year: 2010 }} />);
+    renderToDom(
+      <CustomMonthPicker
+        minYear={1990}
+        maxYear={2010}
+        onChange={onChange}
+        value={{ month: 6, year: 2010 }}
+      />
+    );
     yearDropdown.value = '1999';
     Simulate.change(yearDropdown);
     expect(value).to.deep.equal({
