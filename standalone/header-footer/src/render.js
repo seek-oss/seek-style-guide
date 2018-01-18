@@ -48,14 +48,12 @@ const renderHtml = (Component, initialProps, options = { preview: false }) => {
   return minify(html, { collapseWhitespace: true });
 };
 
-const renderFileForLocale = (Component, props, locale) => {
+const renderFileForLocale = (Component, props, locale, fileNameSuffix) => {
   if (typeof Component.displayName !== 'string') {
     throw new Error('Component must have a display name');
   }
 
-  const tabSuffix = !props.activeTab ? '' :
-    `__${props.activeTab.toLowerCase().replace(/ /g, '_').replace('$', '').replace('&', 'and')}`;
-  const fileName = `${Component.displayName.toLowerCase()}__${locale.toLowerCase()}${tabSuffix}`;
+  const fileName = `${Component.displayName.toLowerCase()}__${locale.toLowerCase()}${fileNameSuffix ? `__${fileNameSuffix}` : ''}`;
 
   const localeProps = locale !== 'AU' ? { locale } : {};
   const renderProps = { ...props, ...localeProps };
@@ -66,15 +64,18 @@ const renderFileForLocale = (Component, props, locale) => {
   };
 };
 
-const renderFiles = (Component, props = {}) => {
+const renderFiles = (Component, props = {}, fileNameSuffix) => {
   return {
-    ...renderFileForLocale(Component, props, 'AU'),
-    ...renderFileForLocale(Component, props, 'NZ')
+    ...renderFileForLocale(Component, props, 'AU', fileNameSuffix),
+    ...renderFileForLocale(Component, props, 'NZ', fileNameSuffix)
   };
 };
 
 export default () => ({
   ...renderFiles(Header),
-  ...renderFiles(Header, { activeTab: 'Advice & Tips' }),
-  ...renderFiles(Footer)
+  ...renderFiles(Header, { activeTab: 'Career Advice' }, 'career_advice'),
+  ...renderFiles(Footer),
+
+  // Provide old "advice_and_tips" file for backwards compatibility:
+  ...renderFiles(Header, { activeTab: 'Career Advice' }, 'advice_and_tips')
 });
