@@ -9,7 +9,7 @@ const tenant = process.env.SKU_TENANT;
 
 export default function App({ children }) {
   return (
-    <StyleGuideProvider fullScreen={true} title="SEEK Style Guide" customFont={true}>
+    <StyleGuideProvider fullScreen={true} title="SEEK Style Guide" enableWebFont={true}>
       <Header tenant={tenant} />
       {children}
       <Footer />

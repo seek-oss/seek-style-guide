@@ -19,18 +19,18 @@ const getLocalisedPageTitle = (country, language, tenant) => {
   return defaultPageTitle;
 };
 
-export default function StyleGuideProvider({ fullScreen, children, meta, link, title, country, language, tenant, customFont }) {
+export default function StyleGuideProvider({ fullScreen, children, meta, link, title, country, language, tenant, enableWebFont }) {
   const className = classnames({
     [styles.root]: true,
     [styles.fullScreen]: fullScreen
   });
 
-  if (customFont) {
+  if (enableWebFont) {
     if (typeof window !== 'undefined') {
       const WebFont = require('webfontloader');
       WebFont.load({
         google: {
-          families: ['Muli']
+          families: ['Muli:300,400,600,700']
         }
       });
     }
@@ -64,7 +64,7 @@ StyleGuideProvider.propTypes = {
   country: PropTypes.string,
   language: PropTypes.string,
   tenant: PropTypes.string,
-  customFont: PropTypes.bool
+  enableWebFont: PropTypes.bool
 };
 
 StyleGuideProvider.defaultProps = {
@@ -72,5 +72,5 @@ StyleGuideProvider.defaultProps = {
   meta: [],
   link: [],
   locale: 'AU',
-  customFont: false
+  enableWebFont: false
 };
