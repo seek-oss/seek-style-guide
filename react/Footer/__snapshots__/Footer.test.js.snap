@@ -63,7 +63,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -863,7 +863,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -1663,7 +1663,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -2463,7 +2463,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -3263,7 +3263,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches

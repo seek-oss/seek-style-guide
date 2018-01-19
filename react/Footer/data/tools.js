@@ -11,7 +11,7 @@ export default [
   },
   {
     name: 'Saved searches',
-    href: '/myactivity#favourite',
+    href: '/myactivity',
     rel: 'nofollow',
     analytics: 'toolbar:my+activity'
   },
