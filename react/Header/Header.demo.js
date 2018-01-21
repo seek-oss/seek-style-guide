@@ -72,6 +72,7 @@ export default {
         'Saved & Applied Jobs',
         'Recommended Jobs',
         'Company Reviews',
+        'Career Advice',
         'Advice & Tips'
       ].map(activeTab => ({
         label: activeTab || 'No active tab',
@@ -93,6 +94,7 @@ export default {
         'Saved & Applied Jobs',
         'Recommended Jobs',
         'Company Reviews',
+        'Career Advice',
         'Advice & Tips'
       ].map(newBadgeTab => {
         let label = newBadgeTab;

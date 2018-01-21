@@ -30,9 +30,16 @@ export default [
     analytics: 'toolbar:applied'
   },
   {
-    name: 'Advice & tips',
+    name: 'Career Advice',
     href: '/career-advice/',
-    analytics: 'toolbar:advice+tips'
+    analytics: 'toolbar:advice+tips',
+    specificLocale: 'AU'
+  },
+  {
+    name: 'Advice & Tips',
+    href: '/career-advice/',
+    analytics: 'toolbar:advice+tips',
+    specificLocale: 'NZ'
   },
   {
     name: 'Company reviews',
