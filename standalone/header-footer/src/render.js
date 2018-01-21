@@ -75,6 +75,7 @@ const renderFiles = (Component, props = {}) => {
 
 export default () => ({
   ...renderFiles(Header),
-  ...renderFiles(Header, { activeTab: 'Advice & Tips' }),
+  ...renderFiles(Header, { activeTab: 'Career Advice' }),
+  ...renderFiles(Header, { activeTab: 'Advice & Tips' }), // Render old Advice & Tips files to maintain backwards compatibility
   ...renderFiles(Footer)
 });
