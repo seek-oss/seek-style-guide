@@ -69,7 +69,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:saved+searches',
             className: `${styles.item} ${styles.subItem}`,
-            href: '/myactivity#favourite',
+            href: '/myactivity',
             children: [
               <span key="label">Saved Searches</span>,
               <HeartIcon
