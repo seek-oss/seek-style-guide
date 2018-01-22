@@ -80,7 +80,7 @@ const getNavLinks = (name, xToken) => {
   return userLoggedOutNavLinks;
 };
 
-const getUserLoggedOutLinks = () => ([
+const getLoggedOutUserLinks = () => ([
   {
     href: 'header.loginLink',
     title: 'header.loginTitle',
@@ -139,5 +139,5 @@ const getUserLinks = (name, xToken) => {
 export default {
   getNavLinks,
   getUserLinks,
-  getUserLoggedOutLinks
+  getLoggedOutUserLinks
 };

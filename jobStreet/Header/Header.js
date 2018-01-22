@@ -71,11 +71,11 @@ class Header extends Component {
       activeNavLinkTextKey
     } = this.props;
     const { isNavActive } = this.state;
-    let userLinks = {};
+    let userLinks = [];
     if (authenticationStatus === AUTHENTICATED) {
       userLinks = links.getUserLinks(username, userToken);
     } else if (authenticationStatus === UNAUTHENTICATED) {
-      userLinks = links.getUserLoggedOutLinks();
+      userLinks = links.getLoggedOutUserLinks();
     }
     const navLinks = links.getNavLinks(username, userToken);
     const messages = localization[`${language}-${country}`];
