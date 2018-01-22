@@ -1,4 +1,4 @@
-@import (reference) "~seek-asia-style-guide/theme";
+@import (reference) '~seek-asia-style-guide/theme';
 
 .activeFocusReset() {
   .input:not([readonly]):not([disabled]):focus + .label &,
@@ -22,6 +22,10 @@
   display: block;
 }
 
+.fullWidth {
+  width: 100%;
+}
+
 .standard {
   .touchableText(@conversational-type-scale-mobile);
   cursor: pointer;
@@ -30,18 +34,27 @@
   @media @desktop {
     .touchableText(@conversational-type-scale);
   }
+
+  .fullWidth & {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .checkBox {
   .activeFocusReset();
 
-  background-color: @sk-white;
+  background-color: @saWhite;
   width: @grid-row-height * 6;
   height: @grid-row-height * 6;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   padding: @field-border-radius;
   fill: @sk-pink;
+
+  &.checked {
+    background-color: @actionBlue;
+  }
 }
 
 .checkBoxLeft {
@@ -56,7 +69,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  fill: @sk-form-accent;
+  fill: @saWhite;
   opacity: 0;
 
   .input:checked + .label & {
@@ -80,6 +93,6 @@
 
   .input:checked + .label & {
     color: @saWhite;
-    background-color: @saBlue;
+    background-color: @actionBlue;
   }
 }

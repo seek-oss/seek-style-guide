@@ -41,6 +41,11 @@ describe('Checkbox', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render full width checkbox', () => {
+    const wrapper = shallow(<Checkbox {...requiredProps} fullWidth />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe('inputProps', () => {
     it('should invoke the onChange handler when touched', () => {
       const handleChange = jest.fn();
