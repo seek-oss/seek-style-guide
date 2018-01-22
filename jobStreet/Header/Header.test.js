@@ -1,6 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Header from './Header';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from 'seek-asia-style-guide/react/private/authStatusTypes';
 
 describe('JobStreet header component', () => {
   describe('Localisation', () => {
@@ -9,7 +14,7 @@ describe('JobStreet header component', () => {
         <Header
           language="en"
           country="my"
-          authenticationStatus="unathenticated"
+          authenticationStatus={UNAUTHENTICATED}
         />
       );
       expect(wrapper).toMatchSnapshot();
@@ -23,7 +28,7 @@ describe('JobStreet header component', () => {
           <Header
             language="en"
             country="my"
-            authenticationStatus="authenticated"
+            authenticationStatus={AUTHENTICATED}
             username="Oliver Q."
           />
         )
@@ -36,7 +41,7 @@ describe('JobStreet header component', () => {
           <Header
             language="en"
             country="my"
-            authenticationStatus="unauthenticated"
+            authenticationStatus={UNAUTHENTICATED}
           />
         )
       ).toMatchSnapshot();
@@ -45,7 +50,7 @@ describe('JobStreet header component', () => {
     it('should render when pending authenticating user', () => {
       expect(
         shallow(
-          <Header language="en" country="my" authenticationStatus="pending" />
+          <Header language="en" country="my" authenticationStatus={AUTH_PENDING} />
         )
       ).toMatchSnapshot();
     });
