@@ -31,8 +31,9 @@ export default class Checkbox extends Component {
       checked: PropTypes.bool.isRequired
     }),
     type: PropTypes.oneOf([STANDARD, BUTTON]),
-    position: PropTypes.oneOf([LEFT, RIGHT])
-  }
+    position: PropTypes.oneOf([LEFT, RIGHT]),
+    fullWidth: PropTypes.bool
+  };
 
   static defaultProps = {
     className: '',
@@ -40,7 +41,8 @@ export default class Checkbox extends Component {
       checked: false
     },
     type: STANDARD,
-    position: LEFT
+    position: LEFT,
+    fullWidth: false
   };
 
   renderButton(label) {
@@ -54,18 +56,19 @@ export default class Checkbox extends Component {
   renderStandard(label) {
     return (
       <div className={styles.standard}>
-        { this.renderCheckBox(LEFT) }
+        {this.renderCheckBox(LEFT)}
         <span>{label}</span>
-        { this.renderCheckBox(RIGHT) }
+        {this.renderCheckBox(RIGHT)}
       </div>
     );
   }
 
   renderCheckBox(currentPosition) {
-    const { position } = this.props;
+    const { position, inputProps: { checked } } = this.props;
     const checkBoxStyle = classnames(
       styles.checkBox,
-      position === LEFT ? styles.checkBoxLeft : styles.checkBoxRight
+      position === LEFT ? styles.checkBoxLeft : styles.checkBoxRight,
+      checked ? styles.checked : null
     );
 
     return position === currentPosition && (
@@ -102,17 +105,18 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { className, fullWidth } = this.props;
 
     const rootClassNames = classnames({
       [styles.root]: true,
-      [className]: className
+      [className]: className,
+      [styles.fullWidth]: fullWidth
     });
 
     return (
       <div className={rootClassNames}>
-        { this.renderInput() }
-        { this.renderLabel() }
+        {this.renderInput()}
+        {this.renderLabel()}
       </div>
     );
   }

@@ -48,6 +48,35 @@ exports[`Checkbox inputProps should render as checked 1`] = `
       className="standard"
     >
       <CheckMarkIcon
+        className="checkBox checkBoxLeft checked"
+        svgClassName="checkMark"
+      />
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render full width checkbox 1`] = `
+<div
+  className="root fullWidth"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
         className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
