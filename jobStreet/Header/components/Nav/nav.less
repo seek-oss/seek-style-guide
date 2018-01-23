@@ -11,8 +11,7 @@
 .item {
   padding: @grid-base 0;
   @media @desktop {
-    padding-top: (@grid-base * 3);
-    padding-bottom: (@grid-base * 3);
+    padding: 0;
     display: inline-block;
     color: @jsNavLinkDesktopColor;
   }
@@ -38,8 +37,7 @@
   text-decoration: none;
   color: @jsNavLinkMobileColor;
   @media @desktop {
-    padding-left: (@grid-base * 2);
-    padding-right: (@grid-base * 2);
+    padding: (@grid-base * 3) (@grid-base * 2);
     color: @jsNavLinkDesktopColor;
     &:hover,
     &:focus {

@@ -9,6 +9,11 @@ import {
   HamburgerIcon,
   Button
 } from 'seek-asia-style-guide/react';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from 'seek-asia-style-guide/react/private/authStatusTypes';
 import Nav from './components/Nav/Nav';
 import styles from './header.less';
 import links from './links';
@@ -66,7 +71,12 @@ class Header extends Component {
       activeNavLinkTextKey
     } = this.props;
     const { isNavActive } = this.state;
-    const userLinks = links.getUserLinks(username, userToken);
+    let userLinks = [];
+    if (authenticationStatus === AUTHENTICATED) {
+      userLinks = links.getUserLinks(username, userToken);
+    } else if (authenticationStatus === UNAUTHENTICATED) {
+      userLinks = links.getLoggedOutUserLinks();
+    }
     const navLinks = links.getNavLinks(username, userToken);
     const messages = localization[`${language}-${country}`];
 
@@ -91,7 +101,7 @@ class Header extends Component {
               messages={messages}
               activeNavLinkTextKey={activeNavLinkTextKey}
             />
-            {authenticationStatus === 'pending' || (
+            {authenticationStatus === AUTH_PENDING || (
               <Nav key={'userLinks'} links={userLinks} messages={messages} />
             )}
           </div>
@@ -125,9 +135,9 @@ Header.propTypes = {
   username: PropTypes.string,
   userToken: PropTypes.string,
   authenticationStatus: PropTypes.oneOf([
-    'authenticated',
-    'unauthenticated',
-    'pending'
+    AUTHENTICATED,
+    UNAUTHENTICATED,
+    AUTH_PENDING
   ]).isRequired,
   language: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
