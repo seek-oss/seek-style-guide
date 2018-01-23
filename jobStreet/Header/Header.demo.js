@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import Header from './Header';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from 'seek-asia-style-guide/react/private/authStatusTypes';
 
 export const makeDummyLinkRendererForPath = path => {
   const DummyLinkRenderer = ({ href, ...props }) => (
@@ -23,7 +28,7 @@ export default {
   title: 'JobStreet Header',
   component: Header,
   initialProps: {
-    authenticationStatus: 'authenticated',
+    authenticationStatus: AUTHENTICATED,
     username: 'Oliver Q.',
     userToken: 'youcannotseemeiamhidden',
     linkRenderer: makeDummyLinkRendererForPath(ROUTE),
@@ -55,14 +60,14 @@ export default {
           label: 'Unauthenticated',
           transformProps: ({ username, ...props }) => ({
             ...props,
-            authenticationStatus: 'unauthenticated'
+            authenticationStatus: UNAUTHENTICATED
           })
         },
         {
           label: 'Pending',
           transformProps: ({ username, ...props }) => ({
             ...props,
-            authenticationStatus: 'pending'
+            authenticationStatus: AUTH_PENDING
           })
         }
       ]

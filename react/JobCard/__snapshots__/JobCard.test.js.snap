@@ -8,7 +8,7 @@ exports[`JobCard should render company with bold keyword 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
+      intimate={true}
     >
       <span>
         <span
@@ -107,7 +107,7 @@ exports[`JobCard should render job title with bold keyword 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
+      intimate={true}
     >
       <span>
         <span
@@ -234,7 +234,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
+      intimate={true}
     >
       <span
         className="classifiedLabel"
@@ -325,7 +325,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
+      intimate={true}
     >
       <span
         className="confidentialLabel"
@@ -415,7 +415,7 @@ exports[`JobCard should render with default props 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
+      intimate={true}
     >
       SEEK Asia
     </Text>
@@ -501,7 +501,7 @@ exports[`JobCard should render with featured label 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
+      intimate={true}
     >
       <span
         className="featuredLabel"
@@ -592,7 +592,7 @@ exports[`JobCard should render with selling points props 1`] = `
     <Text
       baseline={true}
       className="company"
-      whispering={true}
+      intimate={true}
     >
       SEEK Asia
     </Text>

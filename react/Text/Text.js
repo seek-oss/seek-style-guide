@@ -8,6 +8,7 @@ import stylesPositive from '../Positive/Positive.less';
 import stylesCritical from '../Critical/Critical.less';
 import stylesSecondary from '../Secondary/Secondary.less';
 import stylesStrong from '../Strong/Strong.less';
+import stylesSemiStrong from '../SemiStrong/SemiStrong.less';
 import stylesRegular from '../Regular/Regular.less';
 
 export default function Text({
@@ -27,6 +28,7 @@ export default function Text({
   critical,
   secondary,
   strong,
+  semiStrong,
   regular,
   light,
   baseline,
@@ -56,6 +58,7 @@ export default function Text({
           [stylesCritical.root]: critical,
           [stylesSecondary.root]: secondary,
           [stylesStrong.root]: strong,
+          [stylesSemiStrong.root]: semiStrong,
           [stylesRegular.root]: regular,
           [styles.light]: light
         })}>
@@ -82,6 +85,7 @@ Text.propTypes = {
   critical: PropTypes.bool,
   secondary: PropTypes.bool,
   strong: PropTypes.bool,
+  semiStrong: PropTypes.bool,
   regular: PropTypes.bool,
   light: PropTypes.bool,
   baseline: PropTypes.bool
