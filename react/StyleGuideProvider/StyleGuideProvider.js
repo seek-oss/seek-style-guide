@@ -1,8 +1,6 @@
 import styles from './StyleGuideProvider.less';
-
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
@@ -21,11 +19,22 @@ const getLocalisedPageTitle = (country, language, tenant) => {
   return defaultPageTitle;
 };
 
-export default function StyleGuideProvider({ fullScreen, children, meta, link, title, country, language, tenant }) {
+export default function StyleGuideProvider({ fullScreen, children, meta, link, title, country, language, tenant, enableWebFont }) {
   const className = classnames({
     [styles.root]: true,
     [styles.fullScreen]: fullScreen
   });
+
+  if (enableWebFont) {
+    if (typeof window !== 'undefined') {
+      const WebFont = require('webfontloader');
+      WebFont.load({
+        google: {
+          families: ['Muli:300,400,600,700']
+        }
+      });
+    }
+  }
 
   const pageTitle = title || getLocalisedPageTitle(country, language, tenant);
 
@@ -54,12 +63,14 @@ StyleGuideProvider.propTypes = {
   link: PropTypes.array,
   country: PropTypes.string,
   language: PropTypes.string,
-  tenant: PropTypes.string
+  tenant: PropTypes.string,
+  enableWebFont: PropTypes.bool
 };
 
 StyleGuideProvider.defaultProps = {
   fullScreen: false,
   meta: [],
   link: [],
-  locale: 'AU'
+  locale: 'AU',
+  enableWebFont: false
 };
