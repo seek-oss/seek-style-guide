@@ -32,7 +32,7 @@ export default class Checkbox extends Component {
     }),
     type: PropTypes.oneOf([STANDARD, BUTTON]),
     position: PropTypes.oneOf([LEFT, RIGHT]),
-    fullWidth: PropTypes.bool.isRequired
+    fullWidth: PropTypes.bool
   };
 
   static defaultProps = {
