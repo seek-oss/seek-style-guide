@@ -52,6 +52,13 @@ export default {
             ...props,
             chevron: 'right'
           })
+        },
+        {
+          label: 'Left',
+          transformProps: props => ({
+            ...props,
+            chevron: 'left'
+          })
         }
       ]
     }

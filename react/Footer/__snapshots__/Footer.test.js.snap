@@ -63,7 +63,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -101,7 +101,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
-                  Advice & tips
+                  Career Advice
                 </a>
               </li>
               <li
@@ -863,7 +863,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -901,7 +901,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
-                  Advice & tips
+                  Career Advice
                 </a>
               </li>
               <li
@@ -1663,7 +1663,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -1701,7 +1701,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
-                  Advice & tips
+                  Career Advice
                 </a>
               </li>
               <li
@@ -2463,7 +2463,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -2501,7 +2501,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
-                  Advice & tips
+                  Career Advice
                 </a>
               </li>
               <li
@@ -3263,7 +3263,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <a
                   class="link"
                   data-analytics="toolbar:my+activity"
-                  href="/myactivity#favourite"
+                  href="/myactivity"
                   rel="nofollow"
                 >
                   Saved searches
@@ -3301,7 +3301,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
-                  Advice & tips
+                  Advice & Tips
                 </a>
               </li>
               <li

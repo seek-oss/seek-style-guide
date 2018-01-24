@@ -16,6 +16,18 @@ import employerLinkForLocale from './employerLinkForLocale';
 import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
+const defaultNewBadgeTabForLocale = locale => (
+  locale === 'AU' ?
+    'Career Advice' :
+    'Profile'
+);
+
+const handleLegacyTabName = tabName => (
+  tabName === 'Advice & Tips' ?
+    'Career Advice' :
+    tabName
+);
+
 const defaultLinkRenderer = props => (<a {...props} />);
 const tabNames = [
   'Job Search',
@@ -24,7 +36,8 @@ const tabNames = [
   'Saved & Applied Jobs',
   'Recommended Jobs',
   'Company Reviews',
-  'Advice & Tips'
+  'Career Advice',
+  'Advice & Tips' // Backwards compatible name for 'Career Advice'
 ];
 const allowedBadgeTabs = [
   ...tabNames,
@@ -32,17 +45,23 @@ const allowedBadgeTabs = [
 ];
 export default function Header({
   logoComponent: LogoComponent,
+  newBadgeTab: newBadgeTabProp,
+  activeTab: activeTabProp,
   locale,
   authenticationStatus,
   userName,
   userEmail,
   linkRenderer,
-  activeTab,
-  newBadgeTab,
   divider,
   returnUrl,
   onMenuToggle = () => {}
 }) {
+  const activeTab = handleLegacyTabName(activeTabProp);
+
+  const newBadgeTab = typeof newBadgeTabProp === 'undefined' ?
+    defaultNewBadgeTabForLocale(locale) :
+    handleLegacyTabName(newBadgeTabProp);
+
   const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
   const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
 
@@ -152,7 +171,7 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
-  newBadgeTab: 'Profile',
+  newBadgeTab: undefined,
   divider: true,
   userEmail: ''
 };

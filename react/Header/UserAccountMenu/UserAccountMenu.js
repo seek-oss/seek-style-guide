@@ -69,7 +69,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
           linkRenderer({
             'data-analytics': 'header:saved+searches',
             className: `${styles.item} ${styles.subItem}`,
-            href: '/myactivity#favourite',
+            href: '/myactivity',
             children: [
               <span key="label">Saved Searches</span>,
               <HeartIcon
@@ -214,7 +214,26 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
         })()}
       </Hidden>
 
-      <Hidden desktop component="li" className={styles.firstItemInGroup}>
+      {
+        locale === 'NZ' ? null : (
+          <Hidden desktop component="li" className={classnames(activeTab === 'Career Advice' && styles.activeTab, styles.firstItemInGroup)}>
+            {
+              linkRenderer({
+                'data-analytics': 'header:advice',
+                className: styles.item,
+                href: '/career-advice/',
+                children: [
+                  newBadgeTab === 'Career Advice' && <NewBadge key="new" className={styles.newBadge} />,
+                  'Career Advice',
+                  <div key="iconSpacer" className={styles.iconSpacer} />
+                ]
+              })
+            }
+          </Hidden>
+        )
+      }
+
+      <Hidden desktop component="li" className={classnames(locale === 'NZ' && styles.firstItemInGroup)}>
         {
           linkRenderer({
             'data-analytics': 'header:employer+site',
