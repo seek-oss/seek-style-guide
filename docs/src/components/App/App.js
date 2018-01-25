@@ -20,7 +20,7 @@ const demoRoutes = demoSpecs.map(demoSpec => {
   return <Route key={demoSpec.title} path={demoSpec.route} component={DemoRoute} />;
 });
 
-const tenant = process.env.SKU_TENANT;
+const tenant = process.env.APP_TENANT;
 
 export default () => (
   <StyleGuideProvider fullScreen={true} title="SEEK Style Guide" enableWebFont={true}>
