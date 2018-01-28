@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Section, { TYPE, LEVEL } from './Section';
+import Section, { TONE, LEVEL } from './Section';
 
 const renderSection = props => shallow(
   <Section {...props} >
@@ -11,22 +11,22 @@ const renderSection = props => shallow(
 describe('Section:', () => {
   describe('types:', () => {
     it('should render positive sections', () => {
-      const section = renderSection({ type: TYPE.POSITIVE });
+      const section = renderSection({ tone: TONE.POSITIVE });
       expect(section).toMatchSnapshot();
     });
 
     it('should render info sections', () => {
-      const section = renderSection({ type: TYPE.INFO });
+      const section = renderSection({ tone: TONE.INFO });
       expect(section).toMatchSnapshot();
     });
 
     it('should render critical sections', () => {
-      const section = renderSection({ type: TYPE.CRITICAL });
+      const section = renderSection({ tone: TONE.CRITICAL });
       expect(section).toMatchSnapshot();
     });
 
     it('should render help sections', () => {
-      const section = renderSection({ type: TYPE.HELP });
+      const section = renderSection({ tone: TONE.HELP });
       expect(section).toMatchSnapshot();
     });
   });
@@ -69,7 +69,7 @@ describe('Section:', () => {
   });
 
   it('should render multiple classes together', () => {
-    const section = renderSection({ level: LEVEL.SECONDARY, type: TYPE.INFO, slim: true });
+    const section = renderSection({ level: LEVEL.SECONDARY, tone: TONE.INFO, slim: true });
     expect(section).toMatchSnapshot();
   });
 });

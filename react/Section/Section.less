@@ -1,6 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
 
-@gutter-adjustment: 100px;
+@gutter-adjustment: @grid-gutter-width + 50px;
 
 .root {
   overflow-x: hidden;
@@ -11,12 +11,9 @@
   }
 
   &.pullout {
-    margin: 0 (-@gutter-adjustment - @grid-gutter-width);
-    padding-left: (@grid-gutter-width + @gutter-adjustment);
-    padding-right: (@grid-gutter-width + @gutter-adjustment);
-    @media only screen and (min-width: (@grid-container-width + (@grid-gutter-width * 2))) {
-      margin: 0 (-@gutter-adjustment - @grid-gutter-width * 1.5);
-    }
+    margin: 0 (-@gutter-adjustment);
+    padding-left: @gutter-adjustment;
+    padding-right: @gutter-adjustment;
   }
 
   &.slim {
@@ -25,48 +22,48 @@
   }
 
   &.positive {
-    color: @positive;
+    color: @sk-positive;
 
     &.primary {
-      background-color: @positive;
+      background-color: @sk-positive;
       color: @sk-white;
     }
 
     &.secondary {
-      background-color: @positive-light;
+      background-color: @sk-positive-light;
     }
   }
 
   &.info {
-    color: @info;
+    color: @sk-info;
 
     &.primary {
-      background-color: @info;
+      background-color: @sk-info;
       color: @sk-white;
     }
 
     &.secondary {
-      background-color: @info-light;
+      background-color: @sk-info-light;
     }
   }
 
   &.critical {
-    color: @critical;
+    color: @sk-critical;
 
     &.primary,
     &.secondary {
-      background-color: @critical-light;
-      color: @critical;
+      background-color: @sk-critical-light;
+      color: @sk-critical;
     }
   }
 
   &.help {
-    color: @help;
+    color: @sk-help;
 
     &.primary,
     &.secondary {
-      background-color: @help-light;
-      color: @help;
+      background-color: @sk-help-light;
+      color: @sk-help;
     }
   }
 }

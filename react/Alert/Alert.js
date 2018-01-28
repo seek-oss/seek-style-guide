@@ -12,40 +12,39 @@ import CriticalIcon from '../CriticalIcon/CriticalIcon';
 import HelpIcon from '../HelpIcon/HelpIcon';
 import CrossIcon from '../CrossIcon/CrossIcon';
 
-import { TYPE, LEVEL } from '../Section/Section';
+import { TONE, LEVEL } from '../Section/Section';
 
 const ICONS = {
-  [TYPE.POSITIVE]: TickCircleIcon,
-  [TYPE.INFO]: InfoIcon,
-  [TYPE.CRITICAL]: CriticalIcon,
-  [TYPE.HELP]: HelpIcon
+  [TONE.POSITIVE]: TickCircleIcon,
+  [TONE.INFO]: InfoIcon,
+  [TONE.CRITICAL]: CriticalIcon,
+  [TONE.HELP]: HelpIcon
 };
 
 export default class Alert extends Component {
   static displayName = 'Alert';
 
   static propTypes = {
-    type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP]).isRequired,
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP]).isRequired,
     level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY, LEVEL.TERTIARY]).isRequired,
     message: PropTypes.string.isRequired,
     pullout: PropTypes.bool,
     hideIcon: PropTypes.bool,
-    showCloseButton: PropTypes.bool,
     onClose: PropTypes.func
   };
 
   static defaultProps = {
     hideIcon: false,
-    showCloseButton: false,
-    pullout: false
+    pullout: false,
+    onClose: null
   };
 
   handleClose = event => this.props.onClose(event);
 
   renderContents = () => {
-    const { type, message, hideIcon, showCloseButton } = this.props;
+    const { tone, message, hideIcon, onClose } = this.props;
 
-    const Icon = type ? ICONS[type] : null;
+    const Icon = tone ? ICONS[tone] : null;
 
     return (
       <div className={styles.alert}>
@@ -53,7 +52,7 @@ export default class Alert extends Component {
         <div className={styles.text}>
           <Text raw baseline={false}>{message}</Text>
         </div>
-        {showCloseButton && (
+        {onClose && (
           <button className={styles.close} onClick={this.handleClose}>
             <CrossIcon />
           </button>
@@ -63,15 +62,15 @@ export default class Alert extends Component {
   }
 
   render() {
-    const { hideIcon, showCloseButton, type, level, pullout } = this.props;
+    const { hideIcon, onClose, tone, level, pullout } = this.props;
 
     const isTertiary = level === LEVEL.TERTIARY;
 
     const rootClasses = classnames({
       [styles.root]: true,
       [styles.hideIcon]: hideIcon,
-      [styles.showCloseButton]: showCloseButton,
-      [styles[type]]: type && isTertiary
+      [styles.showCloseButton]: onClose,
+      [styles[tone]]: tone && isTertiary
     });
 
     return isTertiary ? (
@@ -80,7 +79,7 @@ export default class Alert extends Component {
       </div>
     ) : (
       <Section
-        type={type}
+        tone={tone}
         level={level}
         pullout={pullout}
         className={rootClasses}>

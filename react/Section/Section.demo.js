@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Section from './Section';
 import PageBlock from '../PageBlock/PageBlock';
 import Text from '../Text/Text';
-import { LEVEL, TYPE } from '../Section/Section';
+import { LEVEL, TONE } from '../Section/Section';
 
 const SectionContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>
@@ -29,6 +29,7 @@ export default {
   block: true,
   initialProps: {
     slim: false,
+    pullout: false,
     onClose: () => console.log('On close handler called'),
     children: (
       <div style={{ backgroundColor: 'blue', color: 'white' }}>
@@ -59,22 +60,29 @@ export default {
             ...props,
             slim: true
           })
+        },
+        {
+          label: 'Pullout',
+          transformProps: props => ({
+            ...props,
+            pullout: true
+          })
         }
       ]
     },
     {
-      label: 'Type',
+      label: 'Tone',
       type: 'radio',
       states: [
         {
-          label: 'Select type',
+          label: 'Select tone',
           transformProps: props => props
         },
         {
           label: 'Positive',
           transformProps: props => ({
             ...props,
-            type: TYPE.POSITIVE,
+            tone: TONE.POSITIVE,
             children: SectionUnstyledContent
           })
         },
@@ -82,7 +90,7 @@ export default {
           label: 'Info',
           transformProps: props => ({
             ...props,
-            type: TYPE.INFO,
+            tone: TONE.INFO,
             children: SectionUnstyledContent
           })
         },
@@ -90,7 +98,7 @@ export default {
           label: 'Critical',
           transformProps: props => ({
             ...props,
-            type: TYPE.CRITICAL,
+            tone: TONE.CRITICAL,
             children: SectionUnstyledContent
           })
         },
@@ -98,7 +106,7 @@ export default {
           label: 'Help',
           transformProps: props => ({
             ...props,
-            type: TYPE.HELP,
+            tone: TONE.HELP,
             children: SectionUnstyledContent
           })
         }

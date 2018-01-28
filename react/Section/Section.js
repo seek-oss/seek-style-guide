@@ -4,7 +4,7 @@ import React from 'react';
 
 import styles from './Section.less';
 
-export const TYPE = {
+export const TONE = {
   POSITIVE: 'positive',
   INFO: 'info',
   CRITICAL: 'critical',
@@ -23,7 +23,7 @@ export default function Section({
   header,
   pullout,
   slim,
-  type,
+  tone,
   level,
   ...restProps
 }) {
@@ -36,7 +36,7 @@ export default function Section({
         [styles.header]: header,
         [styles.pullout]: pullout,
         [styles.slim]: slim,
-        [styles[type]]: type,
+        [styles[tone]]: tone,
         [styles[level]]: level
       })}>
       {children}
@@ -50,7 +50,7 @@ Section.propTypes = {
   header: PropTypes.bool,
   pullout: PropTypes.bool,
   slim: PropTypes.bool,
-  type: PropTypes.oneOf([TYPE.POSITIVE, TYPE.INFO, TYPE.CRITICAL, TYPE.HELP]),
+  tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP]),
   level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY])
 };
 

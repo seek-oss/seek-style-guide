@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert, Card, Section } from 'seek-style-guide/react';
-import { LEVEL, TYPE } from '../Section/Section';
+import { LEVEL, TONE } from '../Section/Section';
 
 const Container = ({ component: DemoComponent, componentProps }) => (
   <Card style={{ width: '500px' }}>
@@ -19,15 +19,15 @@ Container.propTypes = {
 export default {
   route: '/alert',
   title: 'Alert',
-  category: 'Typography',
+  category: 'Form',
   component: Alert,
   container: Container,
   initialProps: {
-    type: TYPE.POSITIVE,
+    tone: TONE.POSITIVE,
     level: LEVEL.PRIMARY,
     message: 'I\'m some timely text that helps the user understand something',
     hideIcon: false,
-    onClose: () => console.log('On close handler called')
+    onClose: null
   },
   options: [
     {
@@ -42,10 +42,10 @@ export default {
           })
         },
         {
-          label: 'Show close button',
-          transformProps: ({ showCloseButton, ...props }) => ({
+          label: 'Close button / handler',
+          transformProps: ({ onClose, ...props }) => ({
             ...props,
-            showCloseButton: !showCloseButton
+            onClose: () => console.log('On close handler called')
           })
         },
         {
@@ -58,35 +58,35 @@ export default {
       ]
     },
     {
-      label: 'Type',
+      label: 'Tone',
       type: 'radio',
       states: [
         {
           label: 'Positive',
           transformProps: props => ({
             ...props,
-            type: TYPE.POSITIVE
+            tone: TONE.POSITIVE
           })
         },
         {
           label: 'Info',
           transformProps: props => ({
             ...props,
-            type: TYPE.INFO
+            tone: TONE.INFO
           })
         },
         {
           label: 'Critical',
           transformProps: props => ({
             ...props,
-            type: TYPE.CRITICAL
+            tone: TONE.CRITICAL
           })
         },
         {
           label: 'Help',
           transformProps: props => ({
             ...props,
-            type: TYPE.HELP
+            tone: TONE.HELP
           })
         }
       ]

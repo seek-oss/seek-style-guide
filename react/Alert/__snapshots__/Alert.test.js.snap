@@ -7,7 +7,7 @@ exports[`Alert: levels: should render primary alerts 1`] = `
   level="primary"
   pullout={false}
   slim={false}
-  type="positive"
+  tone="positive"
 >
   <div
     className="alert"
@@ -37,7 +37,7 @@ exports[`Alert: levels: should render secondary alerts 1`] = `
   level="secondary"
   pullout={false}
   slim={false}
-  type="positive"
+  tone="positive"
 >
   <div
     className="alert"
@@ -92,7 +92,7 @@ exports[`Alert: should render a close button 1`] = `
   level="primary"
   pullout={false}
   slim={false}
-  type="positive"
+  tone="positive"
 >
   <div
     className="alert"
@@ -128,7 +128,7 @@ exports[`Alert: should render the pullout style 1`] = `
   level="primary"
   pullout={true}
   slim={false}
-  type="positive"
+  tone="positive"
 >
   <div
     className="alert"
@@ -158,7 +158,7 @@ exports[`Alert: should render with a hidden icon 1`] = `
   level="primary"
   pullout={false}
   slim={false}
-  type="positive"
+  tone="positive"
 >
   <div
     className="alert"
@@ -184,7 +184,7 @@ exports[`Alert: types: should render critical alerts 1`] = `
   level="primary"
   pullout={false}
   slim={false}
-  type="critical"
+  tone="critical"
 >
   <div
     className="alert"
@@ -213,7 +213,7 @@ exports[`Alert: types: should render help alerts 1`] = `
   level="primary"
   pullout={false}
   slim={false}
-  type="help"
+  tone="help"
 >
   <div
     className="alert"
@@ -242,7 +242,7 @@ exports[`Alert: types: should render info alerts 1`] = `
   level="primary"
   pullout={false}
   slim={false}
-  type="info"
+  tone="info"
 >
   <div
     className="alert"
@@ -271,7 +271,7 @@ exports[`Alert: types: should render positive alerts 1`] = `
   level="primary"
   pullout={false}
   slim={false}
-  type="positive"
+  tone="positive"
 >
   <div
     className="alert"

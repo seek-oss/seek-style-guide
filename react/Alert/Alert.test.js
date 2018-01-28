@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Alert from './Alert';
-import { TYPE, LEVEL } from '../Section/Section';
+import { TONE, LEVEL } from '../Section/Section';
 
 const renderAlert = props => shallow(
   <Alert
-    type={TYPE.POSITIVE}
+    tone={TONE.POSITIVE}
     level={LEVEL.PRIMARY}
     message="Test message"
     {...props}
@@ -15,22 +15,22 @@ const renderAlert = props => shallow(
 describe('Alert:', () => {
   describe('types:', () => {
     it('should render positive alerts', () => {
-      const alert = renderAlert({ type: TYPE.POSITIVE });
+      const alert = renderAlert({ tone: TONE.POSITIVE });
       expect(alert).toMatchSnapshot();
     });
 
     it('should render info alerts', () => {
-      const alert = renderAlert({ type: TYPE.INFO });
+      const alert = renderAlert({ tone: TONE.INFO });
       expect(alert).toMatchSnapshot();
     });
 
     it('should render critical alerts', () => {
-      const alert = renderAlert({ type: TYPE.CRITICAL });
+      const alert = renderAlert({ tone: TONE.CRITICAL });
       expect(alert).toMatchSnapshot();
     });
 
     it('should render help alerts', () => {
-      const alert = renderAlert({ type: TYPE.HELP });
+      const alert = renderAlert({ tone: TONE.HELP });
       expect(alert).toMatchSnapshot();
     });
   });
@@ -63,13 +63,13 @@ describe('Alert:', () => {
   });
 
   it('should render a close button', () => {
-    const alert = renderAlert({ showCloseButton: true });
+    const alert = renderAlert({ onClose: true });
     expect(alert).toMatchSnapshot();
   });
 
-  it('should call a passed in onClose function when the checkbox fires a change event', () => {
+  it('should call a passed in onClose function when the button fires a click event', () => {
     const onClose = jest.fn();
-    const alert = renderAlert({ showCloseButton: true, onClose });
+    const alert = renderAlert({ onClose });
     const event = { someEventData: true };
 
     alert.find('button').simulate('click', event);
