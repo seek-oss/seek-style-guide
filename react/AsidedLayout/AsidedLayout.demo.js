@@ -23,7 +23,7 @@ export default {
     renderAside: () => (
       <Card transparent>
         <Section>
-          <Text heading>Aside</Text>
+          <Text shouting>Aside</Text>
           <Text>This card is provided via the 'renderAside' prop.</Text>
         </Section>
       </Card>
@@ -31,13 +31,13 @@ export default {
     children: [
       <Card key="1">
         <Section>
-          <Text heading>Main Content</Text>
+          <Text shouting>Main Content</Text>
           <Text>This card is provided as children.</Text>
         </Section>
       </Card>,
       <Card key="2">
         <Section>
-          <Text heading>Another Card</Text>
+          <Text shouting>Another Card</Text>
           <Text>Here's another card for good measure.</Text>
         </Section>
       </Card>

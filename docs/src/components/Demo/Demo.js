@@ -175,7 +175,7 @@ export default class Demo extends Component {
             <div>
               <PageBlock>
                 <Section header>
-                  <Text hero>Sketch Symbols</Text>
+                  <Text screaming>Sketch Symbols</Text>
                 </Section>
               </PageBlock>
               <div className={styles.symbols}>
@@ -185,7 +185,7 @@ export default class Demo extends Component {
                       <PageBlock>
                         <Section>
                           <div className={styles.symbolName}>
-                            <Text superstandard strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
+                            <Text strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
                           </div>
                         </Section>
                       </PageBlock>
@@ -203,7 +203,7 @@ export default class Demo extends Component {
                       <div key={name}>
                         <Section>
                           <div className={styles.symbolName}>
-                            <Text superstandard strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
+                            <Text strong>{ name.replace(/\//g, ' \u25B8 ') }</Text>
                           </div>
                           <div className={styles.symbolElement}>
                             { element }

@@ -19,15 +19,15 @@ const renderChevron = chevron => {
   );
 };
 
-export default function TextLink({ component: Root, className, subheading, heading, hero, children, chevron, ...restProps }) {
+export default function TextLink({ component: Root, className, shouting, yelling, screaming, children, chevron, ...restProps }) {
   const allProps = {
     ...restProps,
     className: classnames(styles.link, {
       [className]: className,
-      [styles.subheading]: subheading,
-      [styles.heading]: heading,
-      [styles.hero]: hero,
-      [styles.touchable]: !subheading && !heading && !hero
+      [styles.shouting]: shouting,
+      [styles.yelling]: yelling,
+      [styles.screaming]: screaming,
+      [styles.touchable]: !shouting && !yelling && !screaming
     })
   };
 
@@ -46,9 +46,9 @@ TextLink.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   chevron: PropTypes.oneOf(['up', 'down', 'right', 'left']),
-  subheading: PropTypes.bool,
-  heading: PropTypes.bool,
-  hero: PropTypes.bool
+  shouting: PropTypes.bool,
+  yelling: PropTypes.bool,
+  screaming: PropTypes.bool
 };
 
 TextLink.defaultProps = {

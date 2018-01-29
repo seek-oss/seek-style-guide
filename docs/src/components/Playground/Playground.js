@@ -31,7 +31,7 @@ import Tab from './Atoms/Tab/Tab';
 const renderAsideProfile = () => (
   <Card transparent>
     <Section>
-      <Text heading>Profile visibility</Text>
+      <Text shouting>Profile visibility</Text>
       <Text secondary>Employers cant view your profile or resumes or contact you with job opportunities.</Text>
     </Section>
   </Card>
@@ -39,9 +39,9 @@ const renderAsideProfile = () => (
 
 const renderAsideProfilePhoto = () => (
   <div>
-    <Text hero>Tom Cliff</Text>
+    <Text screaming>Tom Cliff</Text>
 
-    <Text subheading>
+    <Text waving>
       <div>0412 345 678</div>
       <div>Add a home location</div>
       <div>t.cliff@email.com</div>
@@ -52,7 +52,7 @@ const renderAsideProfilePhoto = () => (
 const renderAsideSignIn = () => (
   <Card transparent>
     <Section className={styles.marketing}>
-      <Text heading>Make the most of SEEK</Text>
+      <Text shouting>Make the most of SEEK</Text>
       <Text>Only employers registered with SEEK can see your profile</Text>
       <Text>Save time everytime with pre-filled application forms</Text>
       <Text>Be the first to receive latest jobs and industry insights</Text>
@@ -65,7 +65,7 @@ const renderAsideRegister = renderAsideSignIn;
 const renderAsideRecommendedJobs = () => (
   <Card>
     <Section>
-      <Text heading>How it works</Text>
+      <Text shouting>How it works</Text>
       <Text>Every day we look for new opportunities for you based on your profile, search, save and apply activity.</Text>
       <Text><TextLink href="https://www.seek.com.au">Review your profile</TextLink></Text>
       <Text><TextLink href="https://www.seek.com.au">Start a new search</TextLink></Text>
@@ -92,7 +92,7 @@ const renderAsideMyActivityActions = () => (
 );
 
 const renderJobDetailDate = () => (
-  <Text headline secondary>18 Jan 2017</Text>
+  <Text yelling secondary>18 Jan 2017</Text>
 );
 
 const renderJobDetailMetadata = () => (
@@ -136,7 +136,7 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Button Groups</Text>
+            <Text screaming>Button Groups</Text>
           </Section>
           <AsidedLayout reverse size="340px">
             <Card>
@@ -187,7 +187,7 @@ export default class Playground extends Component {
           <AsidedLayout size="340px">
             <Section>
               <AsidedLayout renderAside={renderAsideProfilePhoto} size="400px">
-                <Text hero className={styles.photo}>TC</Text>
+                <Text screaming className={styles.photo}>TC</Text>
               </AsidedLayout>
             </Section>
           </AsidedLayout>
@@ -197,7 +197,7 @@ export default class Playground extends Component {
           <AsidedLayout reverse renderAside={renderAsideProfile} size="340px">
             <Card>
               <Section>
-                <Text heading>Personal summary</Text>
+                <Text shouting>Personal summary</Text>
                 <Text>Add a personal summary to your profile as a way to introduce who you are.</Text>
                 <IconButton icon="plus">Add summary</IconButton>
               </Section>
@@ -205,7 +205,7 @@ export default class Playground extends Component {
 
             <Card>
               <Section>
-                <Text heading>Career history</Text>
+                <Text shouting>Career history</Text>
                 <Text>The more you let employers know about your experince the more you can stand out from other candidates.</Text>
                 <IconButton icon="plus">Add Role</IconButton>
               </Section>
@@ -213,12 +213,12 @@ export default class Playground extends Component {
 
             <Card>
               <Section>
-                <Text heading>Resumé</Text>
-                <Text subheading>Default Resumé</Text>
+                <Text shouting>Resumé</Text>
+                <Text waving>Default Resumé</Text>
                 <Text secondary><TextLink href="https://www.seek.com.au">20140714_-_cc11017_development...orm.pdf</TextLink> (75.82KB Added - 16 Dec 2016)</Text>
                 <Text>Your “Default” resumé is not visible to employers.</Text>
                 <Text>Update your privacy setting to “Standard” so that employers can view your resumé and get in contact with job opportunities. <TextLink href="https://www.seek.com.au">Learn more</TextLink> about your privacy.</Text>
-                <Text subheading>Other Resumés</Text>
+                <Text waving>Other Resumés</Text>
                 <Text secondary><TextLink href="https://www.seek.com.au">Ohter_Resume.pdf</TextLink> (75.82KB Added - 16 Dec 2016)</Text>
                 <IconButton icon="plus">Add summary</IconButton>
               </Section>
@@ -226,7 +226,7 @@ export default class Playground extends Component {
 
             <Card>
               <Section>
-                <Text heading>About the role you are looking for</Text>
+                <Text shouting>About the role you are looking for</Text>
                 <Text secondary>Classification/s of interest:</Text>
                 <Text secondary>Role type</Text>
               </Section>
@@ -236,7 +236,7 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Candidate Sign in</Text>
+            <Text screaming>Candidate Sign in</Text>
           </Section>
 
           <AsidedLayout reverse renderAside={renderAsideSignIn} size="360px">
@@ -260,7 +260,7 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Register</Text>
+            <Text screaming>Register</Text>
           </Section>
 
           <AsidedLayout reverse renderAside={renderAsideRegister} size="360px">
@@ -285,7 +285,7 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Recommended jobs</Text>
+            <Text screaming>Recommended jobs</Text>
             <Text>24 jobs showing</Text>
             <Tab>All</Tab>
             <Tab selected>New</Tab>
@@ -310,7 +310,7 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Activity</Text>
+            <Text screaming>Activity</Text>
             <Tab selected>Saved</Tab>
             <Tab>Applied</Tab>
           </Section>
@@ -344,7 +344,7 @@ export default class Playground extends Component {
           <Section>
             <TextLink>Back to search results</TextLink>
             <AsidedLayout renderAside={renderJobDetailDate}>
-              <Text headline>Software Architect</Text>
+              <Text yelling>Software Architect</Text>
             </AsidedLayout>
             <TextLink>More jobs from SEEK Limited</TextLink>
           </Section>
@@ -371,7 +371,7 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>This job is no longer advertised</Text>
+            <Text screaming>This job is no longer advertised</Text>
           </Section>
           <Card>
             <Section>
@@ -387,21 +387,21 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Two columns</Text>
+            <Text screaming>Two columns</Text>
           </Section>
           <Columns>
             <Card>
               <Section>
-                <Text heading>The quick brown fox</Text>
-                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text shouting>The quick brown fox</Text>
+                <Text waving>The quick brown fox jumps over the lazy dog</Text>
                 <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
                 <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Text heading>The quick brown fox</Text>
-                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text shouting>The quick brown fox</Text>
+                <Text waving>The quick brown fox jumps over the lazy dog</Text>
                 <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
                 <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
               </Section>
@@ -411,29 +411,29 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Three columns</Text>
+            <Text screaming>Three columns</Text>
           </Section>
           <Columns>
             <Card>
               <Section>
-                <Text heading>The quick brown fox</Text>
-                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text shouting>The quick brown fox</Text>
+                <Text waving>The quick brown fox jumps over the lazy dog</Text>
                 <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
                 <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Text heading>The quick brown fox</Text>
-                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text shouting>The quick brown fox</Text>
+                <Text waving>The quick brown fox jumps over the lazy dog</Text>
                 <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
                 <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
               </Section>
             </Card>
             <Card>
               <Section>
-                <Text heading>The quick brown fox</Text>
-                <Text subheading>The quick brown fox jumps over the lazy dog</Text>
+                <Text shouting>The quick brown fox</Text>
+                <Text waving>The quick brown fox jumps over the lazy dog</Text>
                 <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sapien lorem. Duis viverra semper lacus. Vestibulum ipsum ipsum, imperdiet a nulla eget, consequat mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ultricies placerat mattis. Vestibulum ac laoreet mauris. Cras ut turpis ultrices mi placerat cursus. Sed bibendum odio eget convallis blandit. Nullam placerat elit ut porttitor dignissim. Curabitur a risus enim. Nullam sit amet nulla finibus, rutrum diam a, viverra nisi. Ut turpis sapien, convallis ut lacus sed, luctus lobortis neque. Nulla facilisi. Cras vitae orci est. Etiam nec dictum orci. Morbi nisl nulla, dictum vitae nunc quis, varius hendrerit erat.</Text>
                 <Text>Integer at ipsum a velit elementum luctus. Sed quis odio vitae lorem gravida ornare. Integer pharetra facilisis faucibus. Nullam dignissim, justo hendrerit lacinia pulvinar, nulla sapien condimentum lacus, a tincidunt est nibh non neque. Fusce quis leo accumsan, tempus nisl nec, gravida leo. Ut non augue eget enim tempor fringilla. Nulla pellentesque condimentum risus at consequat. Sed nibh nunc, consectetur sed massa eleifend, dapibus sollicitudin nisl. Nullam leo lorem, mollis vel dolor quis, tristique laoreet ligula. Nam id mi in ante consectetur sagittis vitae ac magna. Fusce iaculis, nibh ac pellentesque luctus, eros lacus ultrices ligula, eget tincidunt metus est at nisl. Nam consectetur eros odio, nec molestie nibh rhoncus at. Aenean augue tortor, sodales non faucibus eget, hendrerit vitae quam. Integer tincidunt laoreet euismod.</Text>
               </Section>
@@ -443,12 +443,12 @@ export default class Playground extends Component {
 
         <PageBlock>
           <Section header>
-            <Text hero>Text variants</Text>
+            <Text screaming>Text variants</Text>
           </Section>
           <CardGroup>
             <Card>
               <Section>
-                <Text heading>Text component modifiers</Text>
+                <Text shouting>Text component modifiers</Text>
                 <Text positive>Positive text</Text>
                 <Text critical>Critical text</Text>
                 <Text secondary>Secondary text</Text>
@@ -457,7 +457,7 @@ export default class Playground extends Component {
             </Card>
             <Card>
               <Section>
-                <Text heading>Inline variant components</Text>
+                <Text shouting>Inline variant components</Text>
                 <Text><Positive>Positive text</Positive></Text>
                 <Text><Critical>Critical text</Critical></Text>
                 <Text><Secondary>Secondary text</Secondary></Text>

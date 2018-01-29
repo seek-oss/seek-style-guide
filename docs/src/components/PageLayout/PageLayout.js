@@ -23,7 +23,7 @@ const MockContent = ({ text = 'Lorem ipsum' }) => (
       justifyContent: 'center'
     }}>
     <Text
-      hero
+      screaming
       strong
       baseline={false}
       style={{
@@ -147,7 +147,7 @@ export default () => (
           style: { background: 'pink' },
           children: (
             <Section header style={{ background: 'cyan' }}>
-              <Text hero style={{ background: 'blue', color: 'white' }}>Lorem ipsum</Text>
+              <Text screaming style={{ background: 'blue', color: 'white' }}>Lorem ipsum</Text>
             </Section>
           )
         },
@@ -173,7 +173,7 @@ export default () => (
         initialProps: {
           children: (
             <Section header>
-              <Text headline>Lorem ipsum</Text>
+              <Text yelling>Lorem ipsum</Text>
             </Section>
           )
         },
@@ -201,7 +201,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text headline>Lorem ipsum</Text>
+                <Text yelling>Lorem ipsum</Text>
               </Section>
               <Card>
                 <Section>
@@ -241,7 +241,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text headline>Lorem ipsum</Text>
+                <Text yelling>Lorem ipsum</Text>
               </Section>
               <Card>
                 <Section>
@@ -282,7 +282,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text headline>Lorem ipsum</Text>
+                <Text yelling>Lorem ipsum</Text>
               </Section>
               <CardGroup>
                 <Card>
@@ -392,7 +392,7 @@ export default () => (
           children: (
             <div>
               <Section header>
-                <Text headline>Lorem ipsum</Text>
+                <Text yelling>Lorem ipsum</Text>
               </Section>
               <AsidedLayout
                 size="33%"
