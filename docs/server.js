@@ -33,7 +33,7 @@ switch (options.tenant) {
 }
 
 config.plugins.push(new webpack.DefinePlugin({
-  'process.env.SKU_TENANT': JSON.stringify(options.tenant)
+  'process.env.APP_TENANT': JSON.stringify(options.tenant)
 }));
 
 new WebpackDevServer(webpack(config), {

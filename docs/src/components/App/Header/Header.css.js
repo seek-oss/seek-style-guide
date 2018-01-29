@@ -1,6 +1,6 @@
 import { saBlue, saWhite, saGrey3, saGrey4 } from '../../../../../theme/palette/palette.js';
 
-const tenant = process.env.SKU_TENANT;
+const tenant = process.env.APP_TENANT;
 
 let headerBackgroundColor = saBlue;
 let headerColor = saWhite;

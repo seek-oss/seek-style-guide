@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import capitalize from 'lodash/capitalize';
 
-const tenant = process.env.SKU_TENANT;
+const tenant = process.env.APP_TENANT;
 const isJobStreet = tenant === 'jobStreet';
 const isJobsDB = tenant === 'jobsDB';
 
