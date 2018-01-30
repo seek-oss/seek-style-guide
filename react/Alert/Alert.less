@@ -1,0 +1,98 @@
+@import (reference) "~seek-style-guide/theme";
+
+@icon-width: @grid-row-height * 3;
+@gutter-adjustment: 100px;
+@alert-gutter: @grid-gutter-width * 0.75;
+
+.root {
+  position: relative;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+
+  &.hideIcon.showCloseButton {
+    justify-content: space-between;
+  }
+}
+
+.positive {
+  color: @sk-positive;
+}
+
+.info {
+  color: @sk-info;
+}
+
+.critical {
+  color: @sk-critical;
+}
+
+.help {
+  color: @sk-help;
+
+  .icon {
+    position: relative;
+    top: -2px;
+  }
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: ~"calc(100% - (@{icon-width} + @{alert-gutter}))";
+
+  .hideIcon & {
+    max-width: none;
+  }
+
+  .showCloseButton & {
+    max-width: ~"calc(100% - ((@{icon-width} * 2) + (@{alert-gutter} * 2)))";
+  }
+
+  .hideIcon.showCloseButton & {
+    max-width: none;
+  }
+}
+
+.icon {
+  vertical-align: middle;
+  text-align: center;
+  width: @icon-width;
+  height: @icon-width;
+  margin-right: @alert-gutter;
+  @media @mobile {
+    vertical-align: top;
+  }
+
+  svg { // stylelint-disable-line selector-max-type
+    width: @icon-width;
+    height: @icon-width;
+  }
+
+  .primary & {
+    opacity: 0.8;
+  }
+}
+
+.close {
+  width: @icon-width;
+  height: @icon-width;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: currentColor;
+  margin-left: @alert-gutter;
+  vertical-align: middle;
+  cursor: pointer;
+
+  .primary & {
+    opacity: 0.8;
+  }
+
+  .secondary & {
+    color: @sk-black;
+    opacity: 0.5;
+  }
+}
