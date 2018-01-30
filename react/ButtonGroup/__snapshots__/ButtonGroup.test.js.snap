@@ -6,7 +6,7 @@ exports[`ButtonGroup: should combine className when passed in 1`] = `
 >
   <Button
     className=""
-    color="blue"
+    color="callToAction"
     component="button"
     fullWidth={false}
     ghost={false}
@@ -25,7 +25,7 @@ exports[`ButtonGroup: should render a button group with node 1`] = `
 >
   <Button
     className=""
-    color="blue"
+    color="callToAction"
     component="button"
     fullWidth={false}
     ghost={false}

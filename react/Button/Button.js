@@ -15,8 +15,7 @@ export default class Button extends Component {
 
   static propTypes = {
     color: PropTypes.oneOf([
-      'callToAction', 'hyperlink', 'completion', 'alert', 'highlight', 'transparent',
-      'blue', 'pink'
+      'callToAction', 'hyperlink', 'completion', 'alert', 'highlight', 'transparent'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -31,7 +30,8 @@ export default class Button extends Component {
     isJobsDB: PropTypes.bool,
     isJobStreet: PropTypes.bool,
     loading: PropTypes.bool,
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    inverse: PropTypes.bool
   };
 
   static defaultProps = {
@@ -49,7 +49,7 @@ export default class Button extends Component {
   }
 
   render() {
-    const { color, ghost, className, loading, fullWidth, children, component, ...restProps } = this.props;
+    const { color, inverse, ghost, className, loading, fullWidth, children, component, ...restProps } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
@@ -63,7 +63,8 @@ export default class Button extends Component {
         [styles.root_alert]: color === 'alert',
         [styles.root_highlight]: color === 'highlight',
         [styles.root_isTransparent]: color === 'transparent',
-        [styles.root_isGhost]: ghost && color !== 'transparent',
+        [styles.root_isInverse]: inverse && color !== 'transparent',
+        [styles.root_isGhost]: ghost && !inverse && color !== 'transparent',
         [styles[`root_is${capitalize(color)}`]]: color
       }),
       disabled: loading,

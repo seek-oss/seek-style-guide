@@ -34,8 +34,13 @@ describe('Button:', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('should render white ghost button', () => {
-      const wrapper = shallow(<Button color="white" ghost>SEEK</Button>);
+    it('should render ghost callToAction button', () => {
+      const wrapper = shallow(<Button color="callToAction" ghost>SEEK</Button>);
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render inverse callToAction button', () => {
+      const wrapper = shallow(<Button color="callToAction" inverse>SEEK</Button>);
       expect(wrapper).toMatchSnapshot();
     });
   });
