@@ -34,7 +34,7 @@ const items = [
     specificLocale: 'AU'
   },
   {
-    name: 'Advice & Tips',
+    name: 'Career Advice',
     href: '/career-advice/',
     analytics: 'header:advice'
   }
@@ -68,7 +68,7 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
                   {
                     linkRenderer({
                       children: [
-                        name,
+                        name === 'Career Advice' && locale === 'NZ' ? 'Advice & Tips' : name,
                         name === newBadgeTab && (
                           <NewBadge
                             key={name}
