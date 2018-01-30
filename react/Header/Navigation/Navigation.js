@@ -68,7 +68,7 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
                   {
                     linkRenderer({
                       children: [
-                        name === 'Career Advice' && locale === 'NZ' ? 'Advice & Tips' : name,
+                        name,
                         name === newBadgeTab && (
                           <NewBadge
                             key={name}
