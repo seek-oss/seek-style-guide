@@ -1,10 +1,7 @@
 // @flow
-
 import styles from './Button.less';
-
 import React from 'react';
 import { Component } from 'react';
-
 import classnames from 'classnames';
 import capitalize from 'lodash/capitalize';
 
