@@ -59,6 +59,13 @@ export default {
             ...props,
             ghost: true
           })
+        },
+        {
+          label: 'Inverse',
+          transformProps: props => ({
+            ...props,
+            inverse: true
+          })
         }
       ]
     },

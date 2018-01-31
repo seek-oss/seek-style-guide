@@ -33,6 +33,11 @@
   });
 }
 
+.inverseColor(@color, @background-color) {
+  .buttonColor(@background-color, @color);
+  border: 1px solid @background-color;
+}
+
 .ghostColor(@color) {
 
   .activeBackground() {
@@ -87,43 +92,87 @@
 }
 
 .root_callToAction {
-  .buttonColor(@sk-white, @saBlue);
+  .buttonColor(@saWhite, @saBlue);
+}
+
+.root_callToAction.root_isInverse {
+  .inverseColor(@saWhite, @saBlue);
+}
+
+.root_callToAction.root_isGhost {
+  .ghostColor(@saBlue);
 }
 
 .jobStreet.root_callToAction {
   .buttonColor(@sk-black, @actionYellow);
 }
 
+.jobStreet.root_callToAction.root_isInverse {
+  .inverseColor(@sk-black, @actionYellow);
+}
+
+.jobStreet.root_callToAction.root_isGhost {
+  .ghostColor(@actionYellow);
+}
+
 .jobsDB.root_callToAction {
-  .buttonColor(@sk-white, @actionOrange);
+  .buttonColor(@saWhite, @actionOrange);
+}
+
+.jobsDB.root_callToAction.root_isInverse {
+  .inverseColor(@saWhite, @actionOrange);
+}
+
+.jobsDB.root_callToAction.root_isGhost {
+  .ghostColor(@actionOrange);
 }
 
 .root_hyperlink {
-  .buttonColor(@sk-white, @actionBlue);
+  .buttonColor(@saWhite, @actionBlue);
+}
+
+.root_hyperlink.root_isInverse {
+  .inverseColor(@saWhite, @actionBlue);
+}
+
+.root_hyperlink.root_isGhost {
+  .ghostColor(@actionBlue);
 }
 
 .root_completion {
-  .buttonColor(@sk-white, @actionGreen);
+  .buttonColor(@saWhite, @actionGreen);
+}
+
+.root_completion.root_isInverse {
+  .inverseColor(@saWhite, @actionGreen);
+}
+
+.root_completion.root_isGhost {
+  .ghostColor(@actionGreen);
 }
 
 .root_alert {
-  .buttonColor(@sk-white, @actionRed);
+  .buttonColor(@saWhite, @actionRed);
+}
+
+.root_alert.root_isInverse {
+  .inverseColor(@saWhite, @actionRed);
+}
+
+.root_alert.root_isGhost {
+  .ghostColor(@actionRed);
 }
 
 .root_highlight {
   .buttonColor(@saGrey2, @actionPastelBlue);
 }
 
-.root_isPink {
-  .buttonColor(@sk-white, @sk-pink);
+.root_highlight.root_isInverse {
+  .inverseColor(@saGrey2, @actionPastelBlue);
 }
 
-.root_isBlue {
-  .buttonColor(@sk-white, @sk-highlight);
-}
-
-.root_isGray {
-  .buttonColor(@sk-black, @sk-mid-gray-light);
+.root_highlight.root_isGhost {
+  .ghostColor(@actionPastelBlue);
 }
 
 .root_isGhost,
@@ -139,31 +188,6 @@
   border: @border-width solid;
   font-weight: @sk-bold;
   line-height: @touchableTextHeight - (@border-width * 2);
-}
-
-.root_isBlue.root_isGhost {
-  .ghostColor(@sk-link)
-}
-
-.root_isWhite.root_isGhost {
-  border-color: @sk-white;
-  color: @sk-white;
-
-  .activeBackground() {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .activeState({
-    .activeBackground;
-  });
-
-  .hoverState({
-    .activeBackground;
-  });
-
-  .focusState({
-    .activeBackground;
-  });
 }
 
 .root_isTransparent {
