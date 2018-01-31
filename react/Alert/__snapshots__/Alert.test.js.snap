@@ -85,6 +85,37 @@ exports[`Alert: levels: should render tertiary alerts 1`] = `
 </div>
 `;
 
+exports[`Alert: should pass through additional props 1`] = `
+<Section
+  className="root"
+  custom-prop={true}
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  tone="positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
 exports[`Alert: should render a close button 1`] = `
 <Section
   className="root showCloseButton"
@@ -288,6 +319,38 @@ exports[`Alert: types: should render positive alerts 1`] = `
         raw={true}
       >
         Test message
+      </Text>
+    </div>
+  </div>
+</Section>
+`;
+
+exports[`Alert: will accept a node in a the message prop 1`] = `
+<Section
+  className="root"
+  header={false}
+  level="primary"
+  pullout={false}
+  slim={false}
+  tone="positive"
+>
+  <div
+    className="alert"
+  >
+    <TickCircleIcon
+      className="icon"
+      filled={false}
+    />
+    <div
+      className="text"
+    >
+      <Text
+        baseline={false}
+        raw={true}
+      >
+        <span>
+          I'm a node
+        </span>
       </Text>
     </div>
   </div>

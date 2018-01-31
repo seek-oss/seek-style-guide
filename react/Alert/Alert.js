@@ -3,6 +3,7 @@ import styles from './Alert.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import omit from 'lodash/omit';
 
 import Section from '../Section/Section';
 import Text from '../Text/Text';
@@ -27,7 +28,7 @@ export default class Alert extends Component {
   static propTypes = {
     tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP]).isRequired,
     level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY, LEVEL.TERTIARY]).isRequired,
-    message: PropTypes.string.isRequired,
+    message: PropTypes.node.isRequired,
     pullout: PropTypes.bool,
     hideIcon: PropTypes.bool,
     onClose: PropTypes.func
@@ -62,7 +63,9 @@ export default class Alert extends Component {
   }
 
   render() {
-    const { hideIcon, onClose, tone, level, pullout } = this.props;
+    const { hideIcon, onClose, tone, level, pullout, ...restProps } = this.props;
+
+    const additionalProps = omit(restProps, 'message');
 
     const isTertiary = level === LEVEL.TERTIARY;
 
@@ -74,7 +77,7 @@ export default class Alert extends Component {
     });
 
     return isTertiary ? (
-      <div className={rootClasses}>
+      <div className={rootClasses} {...additionalProps}>
         {this.renderContents()}
       </div>
     ) : (
@@ -82,7 +85,8 @@ export default class Alert extends Component {
         tone={tone}
         level={level}
         pullout={pullout}
-        className={rootClasses}>
+        className={rootClasses}
+        {...additionalProps}>
         {this.renderContents()}
       </Section>
     );

@@ -75,4 +75,14 @@ describe('Alert:', () => {
     alert.find('button').simulate('click', event);
     expect(onClose).toBeCalledWith(event);
   });
+
+  it('should pass through additional props', () => {
+    const alert = renderAlert({ 'custom-prop': true });
+    expect(alert).toMatchSnapshot();
+  });
+
+  it('will accept a node in a the message prop', () => {
+    const alert = renderAlert({ message: <span>I'm a node</span> });
+    expect(alert).toMatchSnapshot();
+  });
 });
