@@ -47,6 +47,24 @@
   }
 }
 
+.suggestionsContainer_fullWidth {
+  display: table;
+  width: 100vw;
+  left: 50%;
+  box-shadow: 0 0;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+}
+
+.suggestionsList_fullWidth {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: -50%;
+  background: @sk-white;
+}
+
 .sectionTitle {
   .rawText(1);
   line-height: @sectionTitleHeight;
@@ -72,7 +90,7 @@
 }
 
 .suggestionHighlighted {
-  background-color: @sk-mid-gray-light;
+  background-color: @actionPastelBlue;
 }
 
 .autosuggestBackdrop {

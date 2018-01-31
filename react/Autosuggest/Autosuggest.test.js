@@ -57,6 +57,16 @@ describe('Autosuggest', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with mobile full width', () => {
+    const props = getAutosuggestProps();
+    props.labelProps = {
+      className: 'LABEL_TEST_CLASS'
+    };
+
+    const wrapper = render(<Autosuggest {...props} id="Foo" label="Foo" showMobileFullWidth />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should error if `suggestionsContainerClassName` is not a string', () => {
     const expectedError = expect.stringMatching(/Invalid prop `suggestionsContainerClassName` of type `boolean` supplied to `Autosuggest`, expected `string/);
     render(<Autosuggest {...getAutosuggestProps()} suggestionsContainerClassName={true} />);
