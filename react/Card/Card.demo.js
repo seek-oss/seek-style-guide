@@ -23,7 +23,7 @@ export default {
   initialProps: {
     children: (
       <Section>
-        <Text heading>Living Style Guide</Text>
+        <Text shouting>Living Style Guide</Text>
         <Text>This is some text inside a card.</Text>
       </Section>
     )

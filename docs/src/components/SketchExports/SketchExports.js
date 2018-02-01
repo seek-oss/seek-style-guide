@@ -96,10 +96,10 @@ export default class SketchExports extends Component {
       <div key={this.state.mountIndex} ref={this.storeRef}>
         <PageBlock>
           <Section header>
-            <Text hero>Sketch Exports</Text>
+            <Text screaming>Sketch Exports</Text>
           </Section>
           <Section header>
-            <Text headline>Text styles</Text>
+            <Text yelling>Text styles</Text>
           </Section>
         </PageBlock>
         <PageBlock style={{ background: 'white' }}>
@@ -113,7 +113,7 @@ export default class SketchExports extends Component {
         </PageBlock>
         <PageBlock>
           <Section header>
-            <Text headline>Colours</Text>
+            <Text yelling>Colours</Text>
           </Section>
         </PageBlock>
         <PageBlock style={{ background: 'white' }}>
@@ -129,7 +129,7 @@ export default class SketchExports extends Component {
         </PageBlock>
         <PageBlock>
           <Section header>
-            <Text headline>Symbols</Text>
+            <Text yelling>Symbols</Text>
           </Section>
         </PageBlock>
         <PageBlock style={{ background: 'white' }}>
@@ -145,7 +145,7 @@ export default class SketchExports extends Component {
         </PageBlock>
         <PageBlock>
           <Section header>
-            <Text headline>Block Symbols</Text>
+            <Text yelling>Block Symbols</Text>
           </Section>
         </PageBlock>
         {
