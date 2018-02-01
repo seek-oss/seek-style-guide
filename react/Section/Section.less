@@ -1,10 +1,70 @@
 @import (reference) "~seek-style-guide/theme";
 
+@gutter-adjustment: @grid-gutter-width + 50px;
+
 .root {
+  overflow-x: hidden;
   padding: (@grid-row-height * 2) @grid-gutter-width;
   @media only screen and (min-width: (@grid-container-width + (@grid-gutter-width * 2))) {
     padding-left: (@grid-gutter-width * 1.5);
     padding-right: (@grid-gutter-width * 1.5);
+  }
+
+  &.pullout {
+    margin: 0 (-@gutter-adjustment);
+    padding-left: @gutter-adjustment;
+    padding-right: @gutter-adjustment;
+  }
+
+  &.slim {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.positive {
+    color: @sk-positive;
+
+    &.primary {
+      background-color: @sk-positive;
+      color: @sk-white;
+    }
+
+    &.secondary {
+      background-color: @sk-positive-light;
+    }
+  }
+
+  &.info {
+    color: @sk-info;
+
+    &.primary {
+      background-color: @sk-info;
+      color: @sk-white;
+    }
+
+    &.secondary {
+      background-color: @sk-info-light;
+    }
+  }
+
+  &.critical {
+    color: @sk-critical;
+
+    &.primary,
+    &.secondary {
+      background-color: @sk-critical-light;
+      color: @sk-critical;
+    }
+  }
+
+  &.help {
+    color: @sk-help;
+
+    &.primary,
+    &.secondary {
+      background-color: @sk-help-light;
+      color: @sk-help;
+    }
   }
 }
 
