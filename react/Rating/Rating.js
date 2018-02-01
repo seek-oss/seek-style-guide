@@ -68,7 +68,7 @@ const Rating = ({
           );
         })}
         {showTextRating &&
-          <span className={styles.textRating}>{rating}</span>
+          <span className={styles.textRating}>{rating.toFixed(1)}</span>
         }
       </span>
     </Text>
