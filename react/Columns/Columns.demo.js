@@ -15,7 +15,7 @@ ColumnsContainer.propTypes = {
 const makeColumns = count => [...new Array(count)].map((x, i) => (
   <Card key={i}>
     <Section>
-      <Text heading>Column {i + 1}</Text>
+      <Text shouting>Column {i + 1}</Text>
       <Text>This card is currently acting as a column.</Text>
     </Section>
   </Card>

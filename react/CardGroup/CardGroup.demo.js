@@ -24,17 +24,17 @@ export default {
     children: [
       <Card key="1">
         <Section>
-          <Text heading>Living Style Guide</Text>
+          <Text shouting>Living Style Guide</Text>
         </Section>
       </Card>,
       <Card key="2">
         <Section>
-          <Text heading>Living Style Guide</Text>
+          <Text shouting>Living Style Guide</Text>
         </Section>
       </Card>,
       <Card key="3">
         <Section>
-          <Text heading>Living Style Guide</Text>
+          <Text shouting>Living Style Guide</Text>
         </Section>
       </Card>
     ]
