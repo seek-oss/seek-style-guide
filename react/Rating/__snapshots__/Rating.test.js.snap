@@ -88,7 +88,7 @@ exports[`Rating should render correct size when size is: heading and rating text
       <span
         class="textRating"
       >
-        4
+        4.0
       </span>
     </span>
   </span>
@@ -183,7 +183,7 @@ exports[`Rating should render correct size when size is: substandard and rating 
       <span
         class="textRating"
       >
-        4
+        4.0
       </span>
     </span>
   </span>
@@ -278,7 +278,7 @@ exports[`Rating should render correct size when size is: superstandard and ratin
       <span
         class="textRating"
       >
-        4
+        4.0
       </span>
     </span>
   </span>
