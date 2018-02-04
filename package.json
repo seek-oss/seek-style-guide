@@ -31,8 +31,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "sketch-to-git": "node scripts/sketch-to-git",
     "git-to-sketch": "node scripts/git-to-sketch",
-    "flow": "flow focus-check .",
-    "postinstall": "sgftg --entry=react/index.js --moduleName=\"seek-style-guide/react\""
+    "flow": "flow focus-check ."
   },
   "config": {
     "commitizen": {

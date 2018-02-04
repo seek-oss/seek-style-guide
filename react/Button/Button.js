@@ -17,6 +17,15 @@ type Props = {
 
 export default class Button extends Component<Props> {
   static displayName = 'Button';
+
+  static defaultProps = {
+    className: '',
+    ghost: false,
+    loading: false,
+    fullWidth: false,
+    component: 'button'
+  }
+
   button: ?HTMLElement;
   props: Props;
 
@@ -29,10 +38,10 @@ export default class Button extends Component<Props> {
   render() {
     const {
       color,
-      ghost = false,
-      className = '',
-      loading = false,
-      fullWidth = false,
+      ghost,
+      className,
+      loading,
+      fullWidth,
       children,
       component = 'button',
       ...restProps
