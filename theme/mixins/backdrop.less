@@ -7,6 +7,11 @@
   transition: opacity 0.3s;
   z-index: @z-index-backdrop;
   opacity: 0;
+  @media @desktop {
+    // This is required as otherwise on desktop the backdrop
+    // Overflows the page.
+    max-width: 100vw;
+  }
 }
 
 .backdrop() {
