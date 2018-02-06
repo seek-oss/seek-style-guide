@@ -104,7 +104,7 @@ export default {
           label: 'Show mobile full width',
           transformProps: ({ ...props }) => ({
             ...props,
-            showMobileFullWidth: true
+            showFullWidthSuggestionList: true
           })
         }
       ]

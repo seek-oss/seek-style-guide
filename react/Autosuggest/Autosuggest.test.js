@@ -63,7 +63,7 @@ describe('Autosuggest', () => {
       className: 'LABEL_TEST_CLASS'
     };
 
-    const wrapper = render(<Autosuggest {...props} id="Foo" label="Foo" showMobileFullWidth />);
+    const wrapper = render(<Autosuggest {...props} id="Foo" label="Foo" showFullWidthSuggestionList />);
     expect(wrapper).toMatchSnapshot();
   });
 
