@@ -1,16 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Dropdown from './Dropdown';
 import styles from './Dropdown.sketch.less';
-
-const Container = ({ children }) => (
-  <div style={{ maxWidth: '520px' }}>
-    { children }
-  </div>
-);
-Container.propTypes = {
-  children: PropTypes.node.isRequired
-};
+import SketchFieldContainer from '../private/SketchFieldContainer/SketchFieldContainer';
 
 const commonProps = {
   className: styles.root,
@@ -25,23 +16,23 @@ const commonProps = {
 
 export const symbols = {
   'Dropdown/Standard': (
-    <Container>
+    <SketchFieldContainer>
       <Dropdown {...commonProps} id="dropdown1" message={false} />
-    </Container>
+    </SketchFieldContainer>
   ),
   'Dropdown/With Help Text': (
-    <Container>
+    <SketchFieldContainer>
       <Dropdown {...commonProps} id="dropdown2" message="Help text" />
-    </Container>
+    </SketchFieldContainer>
   ),
   'Dropdown/With Critical Text': (
-    <Container>
+    <SketchFieldContainer>
       <Dropdown {...commonProps} id="dropdown3" message="Critical text" valid={false} />
-    </Container>
+    </SketchFieldContainer>
   ),
   'Dropdown/With Positive Text': (
-    <Container>
+    <SketchFieldContainer>
       <Dropdown {...commonProps} id="dropdown4" message="Positive text" valid={true} />
-    </Container>
+    </SketchFieldContainer>
   )
 };

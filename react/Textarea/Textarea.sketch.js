@@ -1,16 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Textarea from './Textarea';
 import styles from './Textarea.sketch.less';
-
-const Container = ({ children }) => (
-  <div style={{ maxWidth: '520px' }}>
-    { children }
-  </div>
-);
-Container.propTypes = {
-  children: PropTypes.node.isRequired
-};
+import SketchFieldContainer from '../private/SketchFieldContainer/SketchFieldContainer';
 
 const commonProps = {
   className: styles.root,
@@ -23,23 +14,23 @@ const commonProps = {
 
 export const symbols = {
   'Textarea/Standard': (
-    <Container>
+    <SketchFieldContainer>
       <Textarea {...commonProps} id="textarea1" message={false} />
-    </Container>
+    </SketchFieldContainer>
   ),
   'Textarea/With Help Text': (
-    <Container>
+    <SketchFieldContainer>
       <Textarea {...commonProps} id="textarea2" message="Help text" />
-    </Container>
+    </SketchFieldContainer>
   ),
   'Textarea/With Critical Text': (
-    <Container>
+    <SketchFieldContainer>
       <Textarea {...commonProps} id="textarea3" message="Critical text" valid={false} countFeedback={() => ({ count: -20 })} />
-    </Container>
+    </SketchFieldContainer>
   ),
   'Textarea/With Positive Text': (
-    <Container>
+    <SketchFieldContainer>
       <Textarea {...commonProps} id="textarea4" message="Positive text" valid={true} />
-    </Container>
+    </SketchFieldContainer>
   )
 };
