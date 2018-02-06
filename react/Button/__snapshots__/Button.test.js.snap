@@ -91,6 +91,15 @@ exports[`Button: should render as loading 1`] = `
 </button>
 `;
 
+exports[`Button: should render compact font size 1`] = `
+<button
+  className="root compact root_callToAction root_isCalltoaction"
+  disabled={false}
+>
+  SEEK
+</button>
+`;
+
 exports[`Button: should render custom component based on it’s reference 1`] = `
 <CustomComponent
   className="root root_callToAction root_isCalltoaction"

@@ -31,7 +31,8 @@ export default class Button extends Component {
     isJobStreet: PropTypes.bool,
     loading: PropTypes.bool,
     fullWidth: PropTypes.bool,
-    inverse: PropTypes.bool
+    inverse: PropTypes.bool,
+    compact: PropTypes.bool
   };
 
   static defaultProps = {
@@ -49,11 +50,12 @@ export default class Button extends Component {
   }
 
   render() {
-    const { color, inverse, ghost, className, loading, fullWidth, children, component, ...restProps } = this.props;
+    const { color, inverse, compact, ghost, className, loading, fullWidth, children, component, ...restProps } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
+        [styles.compact]: compact,
         [styles.fullWidth]: fullWidth,
         [styles.jobsDB]: isJobsDB,
         [styles.jobStreet]: isJobStreet,

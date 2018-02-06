@@ -66,6 +66,13 @@ export default {
             ...props,
             inverse: true
           })
+        },
+        {
+          label: 'Compact',
+          transformProps: props => ({
+            ...props,
+            compact: true
+          })
         }
       ]
     },

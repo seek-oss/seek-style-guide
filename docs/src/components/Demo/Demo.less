@@ -26,23 +26,21 @@
 .options {
   padding: (@grid-row-height * 2) @grid-gutter-width (@grid-row-height * 4) @grid-gutter-width;
   @media @desktop {
-    height: @grid-row-height * 14;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
   }
 }
 
 .optionItem {
   padding-bottom: @grid-row-height * 2;
   @media @desktop {
-    flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100%;
     padding-bottom: 0;
+    margin-right: @grid-base * 4;
   }
 }
 
