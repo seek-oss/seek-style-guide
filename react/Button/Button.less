@@ -61,7 +61,7 @@
 }
 
 .root {
-  .touchableText();
+  .touchableText(@waving-type-scale);
   display: inline-block;
   text-decoration: none;
   user-select: none;
@@ -84,11 +84,10 @@
     .focus();
     box-shadow:none;
   });
-  @media @desktop {
-    .touchableText(@conversational-type-scale);
-    line-height: 38px;
-    height: 38px;
-  }
+}
+
+.compact {
+  .touchableText(@whistling-type-scale);
 }
 
 .root_callToAction {
@@ -191,6 +190,7 @@
 }
 
 .root_isTransparent {
+  .touchableText(@conversational-type-scale);
   color: @sk-link;
   padding-left: 0;
   padding-right: 0;
@@ -202,9 +202,10 @@
   .activeState({
     transform: none;
   });
-  @media @desktop {
-    .touchableText(@conversational-type-scale);
-  }
+}
+
+.root_isTransparent.compact {
+  .touchableText(@whispering-type-scale);
 }
 
 .loading {

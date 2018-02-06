@@ -75,6 +75,11 @@ describe('Button:', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render compact font size', () => {
+    const wrapper = shallow(<Button color="callToAction" compact>SEEK</Button>);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render custom component based on it’s reference', () => {
     const CustomComponent = props => <a {...props} someProp="kraken" />;
     const wrapper = shallow(<Button color="callToAction" component={CustomComponent}>SEEK</Button>);
