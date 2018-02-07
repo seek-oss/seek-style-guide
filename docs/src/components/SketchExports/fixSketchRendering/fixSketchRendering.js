@@ -84,4 +84,9 @@ export default rootEl => {
     img.style.height = `${height / scale}px`;
     svg.parentNode.replaceChild(img, svg);
   });
+
+  // Another hack to fix select chevron layering issues
+  Array.from(rootEl.querySelectorAll('select')).forEach(el => {
+    el.style.backgroundColor = 'transparent';
+  });
 };
