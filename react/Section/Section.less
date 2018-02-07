@@ -1,19 +1,19 @@
 @import (reference) "~seek-style-guide/theme";
 
-@gutter-adjustment: @grid-gutter-width + 50px;
+@gutter-breakpoint: %(~"only screen and (min-width: %s)", (@grid-container-width + (@grid-gutter-width * 2)));
 
 .root {
-  overflow-x: hidden;
   padding: (@grid-row-height * 2) @grid-gutter-width;
-  @media only screen and (min-width: (@grid-container-width + (@grid-gutter-width * 2))) {
+  @media @gutter-breakpoint {
     padding-left: (@grid-gutter-width * 1.5);
     padding-right: (@grid-gutter-width * 1.5);
   }
 
   &.pullout {
-    margin: 0 (-@gutter-adjustment);
-    padding-left: @gutter-adjustment;
-    padding-right: @gutter-adjustment;
+    margin: 0 (-@grid-gutter-width);
+    @media @gutter-breakpoint {
+      margin: 0 (-@grid-gutter-width * 1.5);
+    }
   }
 
   &.slim {
