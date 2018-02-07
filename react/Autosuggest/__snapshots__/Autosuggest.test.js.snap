@@ -130,6 +130,71 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
 </div>
 `;
 
+exports[`Autosuggest should render with mobile full width 1`] = `
+<div>
+  <div>
+    <div
+      class="root"
+    >
+      <label
+        class="LABEL_TEST_CLASS"
+        for="Foo"
+      >
+        <span
+          class="root baseline"
+        >
+          <span
+            class=""
+          >
+            <strong
+              class="root"
+            >
+              Foo
+            </strong>
+             
+          </span>
+        </span>
+      </label>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-haspopup="false"
+        aria-owns="react-autowhatever-1"
+        autocomplete="off"
+        class="input"
+        id="Foo"
+        role="combobox"
+        type="text"
+        value=""
+      />
+      <span
+        class="clearField"
+      >
+        <div
+          class="root"
+        >
+          <span
+            class="root"
+          >
+            mock svg
+          </span>
+        </div>
+      </span>
+      <div
+        class="root"
+      />
+    </div>
+    <div
+      class="suggestionsContainer suggestionsContainer_withLabel suggestionsContainer_fullWidth"
+      id="react-autowhatever-1"
+    />
+  </div>
+  <div
+    class="autosuggestBackdrop"
+  />
+</div>
+`;
+
 exports[`Autosuggest should render with simple props 1`] = `
 <div>
   <div>
