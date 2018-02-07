@@ -12,7 +12,7 @@ DummyLinkRenderer.propTypes = {
 
 export const blockSymbols = {
   'Header/Australia/Unauthenticated': <Header linkRenderer={DummyLinkRenderer} authenticationStatus="unauthenticated" />,
-  'Header/Australia/Authenticated': <Header linkRenderer={DummyLinkRenderer} authenticationStatus="authenticated" userName="Olivia" />,
+  'Header/Australia/Authenticated': <Header linkRenderer={DummyLinkRenderer} authenticationStatus="authenticated" userName="Name" />,
   'Header/New Zealand/Unauthenticated': <Header locale="NZ" linkRenderer={DummyLinkRenderer} authenticationStatus="unauthenticated" />,
-  'Header/New Zealand/Authenticated': <Header locale="NZ" linkRenderer={DummyLinkRenderer} authenticationStatus="authenticated" userName="Olivia" />
+  'Header/New Zealand/Authenticated': <Header locale="NZ" linkRenderer={DummyLinkRenderer} authenticationStatus="authenticated" userName="Name" />
 };
