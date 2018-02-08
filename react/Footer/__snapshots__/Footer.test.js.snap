@@ -266,24 +266,8 @@ exports[`Footer: should render when authenticated 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:babajob"
-                      href="http://www.babajob.com"
-                    >
-                      BabaJob
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — India
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
                       data-analytics="toolbar:bdjobs"
-                      href="http://www.bdjobs.com"
+                      href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
@@ -315,7 +299,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:catho"
-                      href="http://www.catho.com.br"
+                      href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
@@ -331,7 +315,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobberman"
-                      href="http://www.jobberman.com"
+                      href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
@@ -347,7 +331,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobsdb"
-                      href="http://www.jobsdb.com"
+                      href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
@@ -363,7 +347,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobstreet"
-                      href="http://www.jobstreet.com"
+                      href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
@@ -387,22 +371,6 @@ exports[`Footer: should render when authenticated 1`] = `
                       class="partnerCountry"
                     >
                        — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:manager"
-                      href="http://www.manager.com.br"
-                    >
-                      Manager
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — Brazil
                     </span>
                   </li>
                   <li
@@ -443,7 +411,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:zhaopin"
-                      href="http://www.zhaopin.com"
+                      href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
@@ -1066,24 +1034,8 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:babajob"
-                      href="http://www.babajob.com"
-                    >
-                      BabaJob
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — India
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
                       data-analytics="toolbar:bdjobs"
-                      href="http://www.bdjobs.com"
+                      href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
@@ -1115,7 +1067,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:catho"
-                      href="http://www.catho.com.br"
+                      href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
@@ -1131,7 +1083,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobberman"
-                      href="http://www.jobberman.com"
+                      href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
@@ -1147,7 +1099,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobsdb"
-                      href="http://www.jobsdb.com"
+                      href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
@@ -1163,7 +1115,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobstreet"
-                      href="http://www.jobstreet.com"
+                      href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
@@ -1187,22 +1139,6 @@ exports[`Footer: should render when authentication is pending 1`] = `
                       class="partnerCountry"
                     >
                        — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:manager"
-                      href="http://www.manager.com.br"
-                    >
-                      Manager
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — Brazil
                     </span>
                   </li>
                   <li
@@ -1243,7 +1179,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:zhaopin"
-                      href="http://www.zhaopin.com"
+                      href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
@@ -1866,24 +1802,8 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:babajob"
-                      href="http://www.babajob.com"
-                    >
-                      BabaJob
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — India
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
                       data-analytics="toolbar:bdjobs"
-                      href="http://www.bdjobs.com"
+                      href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
@@ -1915,7 +1835,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:catho"
-                      href="http://www.catho.com.br"
+                      href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
@@ -1931,7 +1851,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobberman"
-                      href="http://www.jobberman.com"
+                      href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
@@ -1947,7 +1867,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobsdb"
-                      href="http://www.jobsdb.com"
+                      href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
@@ -1963,7 +1883,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobstreet"
-                      href="http://www.jobstreet.com"
+                      href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
@@ -1987,22 +1907,6 @@ exports[`Footer: should render when unauthenticated 1`] = `
                       class="partnerCountry"
                     >
                        — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:manager"
-                      href="http://www.manager.com.br"
-                    >
-                      Manager
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — Brazil
                     </span>
                   </li>
                   <li
@@ -2043,7 +1947,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:zhaopin"
-                      href="http://www.zhaopin.com"
+                      href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
@@ -2666,24 +2570,8 @@ exports[`Footer: should render with locale of AU 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:babajob"
-                      href="http://www.babajob.com"
-                    >
-                      BabaJob
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — India
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
                       data-analytics="toolbar:bdjobs"
-                      href="http://www.bdjobs.com"
+                      href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
@@ -2715,7 +2603,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:catho"
-                      href="http://www.catho.com.br"
+                      href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
@@ -2731,7 +2619,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobberman"
-                      href="http://www.jobberman.com"
+                      href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
@@ -2747,7 +2635,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobsdb"
-                      href="http://www.jobsdb.com"
+                      href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
@@ -2763,7 +2651,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobstreet"
-                      href="http://www.jobstreet.com"
+                      href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
@@ -2787,22 +2675,6 @@ exports[`Footer: should render with locale of AU 1`] = `
                       class="partnerCountry"
                     >
                        — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:manager"
-                      href="http://www.manager.com.br"
-                    >
-                      Manager
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — Brazil
                     </span>
                   </li>
                   <li
@@ -2843,7 +2715,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:zhaopin"
-                      href="http://www.zhaopin.com"
+                      href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
@@ -3455,24 +3327,8 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   >
                     <a
                       class="link"
-                      data-analytics="toolbar:babajob"
-                      href="http://www.babajob.com"
-                    >
-                      BabaJob
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — India
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
                       data-analytics="toolbar:bdjobs"
-                      href="http://www.bdjobs.com"
+                      href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
@@ -3504,7 +3360,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:catho"
-                      href="http://www.catho.com.br"
+                      href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
@@ -3520,7 +3376,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobberman"
-                      href="http://www.jobberman.com"
+                      href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
@@ -3536,7 +3392,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobsdb"
-                      href="http://www.jobsdb.com"
+                      href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
@@ -3552,7 +3408,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:jobstreet"
-                      href="http://www.jobstreet.com"
+                      href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
@@ -3576,22 +3432,6 @@ exports[`Footer: should render with locale of NZ 1`] = `
                       class="partnerCountry"
                     >
                        — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="link"
-                      data-analytics="toolbar:manager"
-                      href="http://www.manager.com.br"
-                    >
-                      Manager
-                    </a>
-                    <span
-                      class="partnerCountry"
-                    >
-                       — Brazil
                     </span>
                   </li>
                   <li
@@ -3632,7 +3472,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     <a
                       class="link"
                       data-analytics="toolbar:zhaopin"
-                      href="http://www.zhaopin.com"
+                      href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
