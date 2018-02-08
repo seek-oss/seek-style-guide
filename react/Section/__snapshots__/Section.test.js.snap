@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section: levels: should render primary sections 1`] = `
+<div
+  className="root primary"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: levels: should render secondary sections 1`] = `
+<div
+  className="root secondary"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: should accept additional classnames and place them on the root 1`] = `
+<div
+  className="testClass root secondary"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: should accept additional props 1`] = `
+<div
+  className="root"
+  testProp={true}
+>
+  Test content
+</div>
+`;
+
+exports[`Section: should render multiple classes together 1`] = `
+<div
+  className="root slim info secondary"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: should render the header style 1`] = `
+<div
+  className="root header"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: should render the pullout style 1`] = `
+<div
+  className="root pullout"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: should render the slim style 1`] = `
+<div
+  className="root slim"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: types: should render critical sections 1`] = `
+<div
+  className="root critical"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: types: should render help sections 1`] = `
+<div
+  className="root help"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: types: should render info sections 1`] = `
+<div
+  className="root info"
+>
+  Test content
+</div>
+`;
+
+exports[`Section: types: should render positive sections 1`] = `
+<div
+  className="root positive"
+>
+  Test content
+</div>
+`;

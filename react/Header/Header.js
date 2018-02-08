@@ -16,12 +16,6 @@ import employerLinkForLocale from './employerLinkForLocale';
 import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
-const defaultNewBadgeTabForLocale = locale => (
-  locale === 'AU' ?
-    'Career Advice' :
-    'Profile'
-);
-
 const handleLegacyTabName = tabName => (
   tabName === 'Advice & Tips' ?
     'Career Advice' :
@@ -57,10 +51,7 @@ export default function Header({
   onMenuToggle = () => {}
 }) {
   const activeTab = handleLegacyTabName(activeTabProp);
-
-  const newBadgeTab = typeof newBadgeTabProp === 'undefined' ?
-    defaultNewBadgeTabForLocale(locale) :
-    handleLegacyTabName(newBadgeTabProp);
+  const newBadgeTab = handleLegacyTabName(newBadgeTabProp);
 
   const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
   const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
@@ -171,7 +162,7 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
-  newBadgeTab: undefined,
+  newBadgeTab: 'Career Advice',
   divider: true,
   userEmail: ''
 };

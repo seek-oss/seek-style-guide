@@ -30,7 +30,7 @@ export default class FieldLabel extends Component {
       }
     },
     /* eslint-enable consistent-return */
-    label: PropTypes.string,
+    label: PropTypes.node,
     /* eslint-disable consistent-return */
     labelProps: (props, propName, componentName) => {
       const { id, label, labelProps } = props;

@@ -236,9 +236,9 @@ Then, include the appropriate header and footer HTML snippets, switching based o
 - `seek-style-guide/dist/header-footer/header__au.html`
 - `seek-style-guide/dist/header-footer/header__nz.html`
 
-**Header, with "Advice & Tips" tab selected:**
-- `seek-style-guide/dist/header-footer/header__au__advice_and_tips.html`
-- `seek-style-guide/dist/header-footer/header__nz__advice_and_tips.html`
+**Header, with "Career Advice" tab selected:**
+- `seek-style-guide/dist/header-footer/header__au__career_advice.html`
+- `seek-style-guide/dist/header-footer/header__nz__career_advice.html`
 
 *Note: If you need a different tab selected, feel free to open a pull request or raise an issue*
 

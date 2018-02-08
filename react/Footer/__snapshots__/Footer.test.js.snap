@@ -3301,7 +3301,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
-                  Advice & Tips
+                  Career Advice
                 </a>
               </li>
               <li

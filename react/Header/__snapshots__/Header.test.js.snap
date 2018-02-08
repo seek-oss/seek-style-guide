@@ -5543,11 +5543,6 @@ exports[`Header: should render with locale of NZ 1`] = `
                       data-analytics="header:profile"
                       href="/profile/"
                     >
-                      <span
-                        class="root newBadge"
-                      >
-                        New
-                      </span>
                       <span>
                         Profile
                       </span>
@@ -5784,11 +5779,6 @@ exports[`Header: should render with locale of NZ 1`] = `
               href="/profile/"
             >
               Profile
-              <span
-                class="root newBadge newBadge_isShort"
-              >
-                New
-              </span>
             </a>
           </li>
           <li
@@ -5799,7 +5789,12 @@ exports[`Header: should render with locale of NZ 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
