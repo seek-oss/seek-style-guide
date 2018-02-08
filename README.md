@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![Greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/) [![David](https://img.shields.io/david/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide) [![David](https://img.shields.io/david/peer/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide?type=peer) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
 # seek-style-guide
 
@@ -329,6 +329,34 @@ Then, include the following in your Babel config:
   }]
 ]
 ```
+
+### Flow Type Checking
+
+We've opted to include flow type checking in this project. If you're unfamiliar with static type checking you should start by reading React's [overview](https://reactjs.org/docs/static-type-checking.html). 
+
+This is completely opt-in and if you've decided not to use type checking in your project then **there is nothing you need to do**. It shouldn't impact your ability to include the style guide so long as you are using either [sku](https://github.com/seek-oss/sku) or our [webpack decorator](https://github.com/seek-oss/seek-style-guide-webpack).
+
+Conversely, if you would like to opt-in to flow types you'll need to ensure that your `.flowconfig` includes a few exclusions and special options.
+
+```
+[ignore]
+.*/node_modules/config-chain/.*
+.*/node_modules/npmconf/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+# This is required to prevent errors to less file imports
+module.name_mapper.extension='less' -> '<PROJECT_ROOT>/no-declarations.js.flow'
+
+# Good idea to ignore json too
+module.name_mapper.extension='json' -> '<PROJECT_ROOT>/no-declarations.js.flow'
+```
+> *no-declarations.js.flow* is just an empty file
 
 ## Sketch asset generation
 

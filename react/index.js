@@ -1,3 +1,5 @@
+// @flow
+
 export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
 export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider'; // Alias for backwards compatibility
 
