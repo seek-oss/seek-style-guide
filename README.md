@@ -356,7 +356,7 @@ module.name_mapper.extension='less' -> '<PROJECT_ROOT>/no-declarations.js.flow'
 # Good idea to ignore json too
 module.name_mapper.extension='json' -> '<PROJECT_ROOT>/no-declarations.js.flow'
 ```
-> *no-declaratins.js.flow* is just an empty file
+> *no-declarations.js.flow* is just an empty file
 
 ## Sketch asset generation
 
