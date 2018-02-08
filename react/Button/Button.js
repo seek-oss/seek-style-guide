@@ -1,31 +1,22 @@
+// @flow
 import styles from './Button.less';
-
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
+import React from 'react';
+import { Component } from 'react';
 import classnames from 'classnames';
 import capitalize from 'lodash/capitalize';
 
-export default class Button extends Component {
-  static displayName = 'Button';
+type Props = {
+  color: 'pink' | 'blue' | 'gray' | 'transparent' | 'white',
+  children: React$Node,
+  className?: string,
+  component?: string | Function,
+  ghost?: boolean,
+  loading?: boolean,
+  fullWidth?: boolean
+};
 
-  static propTypes = {
-    color: PropTypes.oneOf([
-      'pink', 'blue', 'gray', 'transparent', 'white'
-    ]).isRequired,
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-    ]).isRequired,
-    className: PropTypes.string,
-    component: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.string
-    ]),
-    ghost: PropTypes.bool,
-    loading: PropTypes.bool,
-    fullWidth: PropTypes.bool
-  };
+export default class Button extends Component<Props> {
+  static displayName = 'Button';
 
   static defaultProps = {
     className: '',
@@ -33,16 +24,28 @@ export default class Button extends Component {
     loading: false,
     fullWidth: false,
     component: 'button'
-  };
+  }
 
-  storeButtonReference = button => {
+  button: ?HTMLElement;
+  props: Props;
+
+  storeButtonReference = (button: ?HTMLElement) => {
     if (button !== null) {
       this.button = button;
     }
-  }
+  };
 
   render() {
-    const { color, ghost, className, loading, fullWidth, children, component, ...restProps } = this.props;
+    const {
+      color,
+      ghost,
+      className,
+      loading,
+      fullWidth,
+      children,
+      component = 'button',
+      ...restProps
+    } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
