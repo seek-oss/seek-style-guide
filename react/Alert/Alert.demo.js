@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert, Card, Section } from 'seek-style-guide/react';
 import { LEVEL, TONE } from '../Section/Section';
+import * as sketch from './Alert.sketch';
 
 const Container = ({ component: DemoComponent, componentProps }) => (
   <Card style={{ width: '500px' }}>
@@ -22,6 +23,7 @@ export default {
   category: 'Form',
   component: Alert,
   container: Container,
+  sketch,
   initialProps: {
     tone: TONE.POSITIVE,
     level: LEVEL.PRIMARY,
