@@ -118,7 +118,7 @@ exports[`Alert: should pass through additional props 1`] = `
 
 exports[`Alert: should render a close button 1`] = `
 <Section
-  className="root showCloseButton"
+  className="root"
   header={false}
   level="primary"
   pullout={false}
@@ -184,7 +184,7 @@ exports[`Alert: should render the pullout style 1`] = `
 
 exports[`Alert: should render with a hidden icon 1`] = `
 <Section
-  className="root hideIcon"
+  className="root"
   header={false}
   level="primary"
   pullout={false}
