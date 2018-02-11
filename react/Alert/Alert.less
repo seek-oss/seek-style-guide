@@ -11,10 +11,6 @@
 .alert {
   display: flex;
   align-items: center;
-
-  &.hideIcon.showCloseButton {
-    justify-content: space-between;
-  }
 }
 
 .positive {
@@ -41,19 +37,7 @@
 .text {
   display: inline-block;
   vertical-align: middle;
-  max-width: ~"calc(100% - (@{icon-width} + @{alert-gutter}))";
-
-  .hideIcon & {
-    max-width: none;
-  }
-
-  .showCloseButton & {
-    max-width: ~"calc(100% - ((@{icon-width} * 2) + (@{alert-gutter} * 2)))";
-  }
-
-  .hideIcon.showCloseButton & {
-    max-width: none;
-  }
+  flex-grow: 1;
 }
 
 .icon {
@@ -61,6 +45,7 @@
   text-align: center;
   width: @icon-width;
   height: @icon-width;
+  flex-shrink: 0;
   margin-right: @alert-gutter;
   @media @mobile {
     vertical-align: top;
@@ -79,6 +64,7 @@
 .close {
   width: @icon-width;
   height: @icon-width;
+  flex-shrink: 0;
   border: none;
   padding: 0;
   background-color: transparent;

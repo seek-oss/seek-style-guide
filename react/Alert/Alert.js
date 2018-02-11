@@ -71,8 +71,6 @@ export default class Alert extends Component {
 
     const rootClasses = classnames({
       [styles.root]: true,
-      [styles.hideIcon]: hideIcon,
-      [styles.showCloseButton]: onClose,
       [styles[tone]]: tone && isTertiary
     });
 
