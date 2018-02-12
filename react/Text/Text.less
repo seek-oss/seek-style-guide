@@ -1,7 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  padding-bottom: @grid-row-height;
+  padding-bottom: @row-height * 2;
   display: block;
 
   .root {
@@ -15,7 +15,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      padding: 0 @grid-gutter-width;
+      padding: 0 @gutter-width;
     }
   }
 }
@@ -28,16 +28,6 @@
 .small {
   &:not(.baseline) { .smallTextResponsive(@baseline: false); }
   &.baseline { .smallTextResponsive(@baseline: true); }
-}
-
-.substandard {
-  &:not(.baseline) { .substandardTextResponsive(@baseline: false); }
-  &.baseline { .substandardTextResponsive(@baseline: true); }
-}
-
-.superstandard {
-  &:not(.baseline) { .superstandardTextResponsive(@baseline: false); }
-  &.baseline { .superstandardTextResponsive(@baseline: true); }
 }
 
 .subheading {

@@ -14,14 +14,8 @@
 .subheadingText(@baseline: true) {
   .__type(@subheading-type-scale, @subheading-type-row-span, @baseline);
 }
-.superstandardText(@baseline: true) {
-  .__type(@superstandard-type-scale, @superstandard-type-row-span, @baseline);
-}
 .standardText(@baseline: true) {
   .__type(@standard-type-scale, @standard-type-row-span, @baseline);
-}
-.substandardText(@baseline: true) {
-  .__type(@substandard-type-scale, @substandard-type-row-span, @baseline);
 }
 .smallText(@baseline: true) {
   .__type(@small-type-scale, @small-type-row-span, @baseline);
@@ -39,20 +33,14 @@
 .subheadingTextResponsive(@baseline: true) {
   .__responsiveType("subheading"; @baseline);
 }
-.superstandardTextResponsive(@baseline: true) {
-  .__responsiveType("superstandard"; @baseline);
-}
 .standardTextResponsive(@baseline: true) {
   .__responsiveType("standard"; @baseline);
-}
-.substandardTextResponsive(@baseline: true) {
-  .__responsiveType("substandard"; @baseline);
 }
 .smallTextResponsive(@baseline: true) {
   .__responsiveType("small"; @baseline);
 }
 
-@touchableTextHeight: @grid-row-height * @interaction-type-row-span;
+@touchableTextHeight: @row-height * @interaction-type-row-span;
 
 .touchableText(@font-scale: @interaction-type-scale) {
   .rawText(@font-scale);
@@ -67,11 +55,11 @@
 // Private type mixins
 .__type(@type-scale; @row-span; @baseline) when (isnumber(@type-scale)) and (isnumber(@row-span)) {
   .__baselineCheck(@baseline) when (@baseline = true) {
-    .basekick(@type-scale, @row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+    .basekick(@type-scale, @row-span, @font-descender-height-scale, @base-font-size, @row-height);
   }
   .__baselineCheck(@baseline) when (@baseline = false) {
     .rawText(@type-scale);
-    line-height: (@grid-row-height * @row-span);
+    line-height: (@row-height * @row-span);
   }
   .__baselineCheck(@baseline);
 }

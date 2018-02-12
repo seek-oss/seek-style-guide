@@ -1,9 +1,9 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  line-height: @grid-row-height * 3;
-  height: @grid-row-height * 5;
-  padding: @grid-row-height 0;
+  line-height: @row-height * 5;
+  height: @row-height * 8;
+  padding: (@row-height * 2) 0;
   cursor: pointer;
   display: inline-block;
 }
@@ -54,15 +54,15 @@
 }
 
 .labelLeft {
-  margin-right: @grid-gutter-width / 2;
+  margin-right: @gutter-width / 2;
 }
 
 .labelRight {
-  margin-left: @grid-gutter-width / 2;
+  margin-left: @gutter-width / 2;
 }
 
 .labelText {
-  line-height: @grid-row-height * 3;
+  line-height: @row-height * 5;
 }
 
 .slider {
@@ -70,8 +70,8 @@
   display: inline-block;
   left: 0;
   width: 48px;
-  height: @grid-row-height * 3;
-  border-radius: @grid-row-height * 1.5;
+  height: @row-height * 5;
+  border-radius: @row-height * 2.5;
   background-color: @sk-mid-gray-light;
   transition: 0.3s;
 }
@@ -85,8 +85,8 @@
     content: '';
     transition: 0.3s;
     position: absolute;
-    height: @grid-row-height * 3;
-    width: @grid-row-height * 3;
+    height: @row-height * 5;
+    width: @row-height * 5;
     border-radius: 50%;
     background-color: @sk-mid-gray;
     text-align: center;
@@ -95,8 +95,8 @@
 
 .icon {
   position: absolute;
-  width: @grid-row-height * 3;
-  height: @grid-row-height * 3;
+  width: @row-height * 5;
+  height: @row-height * 5;
   text-align: center;
 }
 

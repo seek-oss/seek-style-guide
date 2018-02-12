@@ -9,7 +9,6 @@ export default {
   component: Text,
   initialProps: {
     style: { padding: '0 20px' },
-    superstandard: true,
     children: [
       'The next sentence can only be read by screen readers. ',
       <ScreenReaderOnly key="ScreenReaderOnly">This sentence can only be read by screen readers.</ScreenReaderOnly>

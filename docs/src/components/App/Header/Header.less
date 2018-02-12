@@ -15,15 +15,16 @@
 .logoLink {
   display: inline-block;
   position: relative;
-  left: -4px;
+  left: -3px;
+  top: -2px;
 }
 
 .logo {
-  width: 89px;
-  height: 31px;
+  width: 84px;
+  height: 33px;
   position: relative;
-  top: 3px;
-  margin-bottom: 3px;
+  top: 5px;
+  margin-bottom: 1px;
 }
 
 .title {
@@ -45,7 +46,7 @@
 .hamburger {
   position: absolute;
   right: 0;
-  top: 4px;
+  top: 0;
 }
 
 .hamburgerText {
@@ -66,16 +67,15 @@
 .bars {
   display: block;
   cursor: pointer;
-  width: @grid-gutter-width * 2;
-  height: (@grid-row-height * 3) + 1;
+  width: @gutter-width * 2.5;
+  height: @row-height * 6;
   position: relative;
   transform-origin: 100% 50%;
   transform: scale(0.7);
 }
 
-@barHeight: 6px;
 .bar() {
-  height: @barHeight;
+  height: @row-height;
   width: 100%;
   background: @sk-white;
   position: absolute;
@@ -86,14 +86,14 @@
   .bar();
   top: 0;
   .checkbox:checked ~ .bars & {
-    transform: translateY(11px) rotate(45deg);
+    transform: translateY(15px) rotate(45deg);
   }
 }
 
 .bar2 {
   .bar();
   top: 50%;
-  margin-top: @barHeight * -0.5;
+  margin-top: @row-height * -0.5;
   .checkbox:checked ~ .bars & {
     opacity: 0;
   }
@@ -103,7 +103,7 @@
   .bar();
   bottom: 0;
   .checkbox:checked ~ .bars & {
-    transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-15px) rotate(-45deg);
   }
 }
 
@@ -112,11 +112,11 @@
   color: @sk-white;
   position: fixed;
   z-index: 10;
-  top: @grid-row-height * 8;
+  top: @row-height * 12;
   left: 0;
   right: 0;
   bottom: 0;
-  padding-bottom: @grid-row-height * 10;
+  padding-bottom: @row-height * 15;
   overflow: auto;
   display: none;
 
@@ -129,8 +129,10 @@
   color: white;
   text-decoration: none;
   display: inline-block;
-  margin-bottom: @grid-row-height;
   &:hover {
     box-shadow: inset 0 -2px 0 @sk-white;
+  }
+  @media @desktop {
+    margin-bottom: (@row-height * 2);
   }
 }

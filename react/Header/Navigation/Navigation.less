@@ -9,7 +9,7 @@
   @media @desktop {
     background-color: @sk-background;
     &.divider {
-      border-bottom: @grid-row-height solid @sk-blue;
+      border-bottom: @row-height solid @sk-blue;
     }
   }
 }
@@ -18,9 +18,9 @@
   display: flex;
   justify-content: space-around;
   flex-grow: 1;
-  max-width: @grid-container-width;
+  max-width: @container-width;
   .aboveSmallDevice({
-    flex: 0 1 @grid-container-width;
+    flex: 0 1 @container-width;
   });
 }
 
@@ -59,12 +59,12 @@
 
 .newBadge {
   margin-left: 5px;
-  @media only screen and (max-width: @grid-container-width) {
+  @media only screen and (max-width: @container-width) {
     position: absolute;
     top: -4px;
-    right: (@grid-gutter-width / 2);
+    right: (@gutter-width / 2);
     &.newBadge_isShort {
-      right: @grid-gutter-width * 1.5;
+      right: @gutter-width * 1.5;
     }
   }
 }

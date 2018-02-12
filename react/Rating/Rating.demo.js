@@ -6,6 +6,7 @@ export default {
   category: 'Typography',
   component: Rating,
   initialProps: {
+    hero: true,
     rating: 0
   },
   options: [
@@ -37,15 +38,12 @@ export default {
     {
       label: 'Size',
       type: 'radio',
-      states: ['Standard', 'Substandard', 'Superstandard', 'Heading']
+      states: ['Hero', 'Headline', 'Heading', 'Standard', 'Small']
         .map(size => ({
           label: `${String(size)}`,
-          transformProps: props => ({
+          transformProps: ({ hero, ...props }) => ({
             ...props,
-            standard: size === 'Standard',
-            substandard: size === 'Substandard',
-            superstandard: size === 'Superstandard',
-            heading: size === 'Heading'
+            [size.toLowerCase()]: true
           })
         }))
     }

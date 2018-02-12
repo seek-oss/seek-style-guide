@@ -95,9 +95,9 @@ exports[`Rating should render correct size when size is: heading and rating text
 </span>
 `;
 
-exports[`Rating should render correct size when size is: substandard 1`] = `
+exports[`Rating should render correct size when size is: headline 1`] = `
 <span
-  class="root substandard raw baseline"
+  class="root headline raw baseline"
 >
   <span
     class="root"
@@ -140,9 +140,9 @@ exports[`Rating should render correct size when size is: substandard 1`] = `
 </span>
 `;
 
-exports[`Rating should render correct size when size is: substandard and rating text is shown 1`] = `
+exports[`Rating should render correct size when size is: headline and rating text is shown 1`] = `
 <span
-  class="root substandard raw baseline"
+  class="root headline raw baseline"
 >
   <span
     class="root"
@@ -190,9 +190,9 @@ exports[`Rating should render correct size when size is: substandard and rating 
 </span>
 `;
 
-exports[`Rating should render correct size when size is: superstandard 1`] = `
+exports[`Rating should render correct size when size is: hero 1`] = `
 <span
-  class="root superstandard raw baseline"
+  class="root hero raw baseline"
 >
   <span
     class="root"
@@ -235,9 +235,9 @@ exports[`Rating should render correct size when size is: superstandard 1`] = `
 </span>
 `;
 
-exports[`Rating should render correct size when size is: superstandard and rating text is shown 1`] = `
+exports[`Rating should render correct size when size is: hero and rating text is shown 1`] = `
 <span
-  class="root superstandard raw baseline"
+  class="root hero raw baseline"
 >
   <span
     class="root"

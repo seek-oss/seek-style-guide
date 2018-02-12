@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import lessToJs from 'less-vars-to-js';
 import grid from '!!raw-loader!seek-style-guide/theme/layout/grid.less';
 const gridValues = lessToJs(grid);
-const rowHeight = parseInt(gridValues['@grid-row-height'], 10);
+const rowHeight = parseInt(gridValues['@row-height'], 10);
 
 function calculateBackground(type, lineHeight, color) {
   if (type === 'line') {
