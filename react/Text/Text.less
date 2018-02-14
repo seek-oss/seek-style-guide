@@ -1,7 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  padding-bottom: @row-height * 1;
+  padding-bottom: @row-height * 2;
   display: block;
 
   .root {
@@ -23,11 +23,13 @@
 .standard {
   &:not(.baseline) { .standardTextResponsive(@baseline: false); }
   &.baseline { .standardTextResponsive(@baseline: true); }
+  padding-bottom: @row-height;
 }
 
 .small {
   &:not(.baseline) { .smallTextResponsive(@baseline: false); }
   &.baseline { .smallTextResponsive(@baseline: true); }
+  padding-bottom: @row-height;
 }
 
 .subheading {
