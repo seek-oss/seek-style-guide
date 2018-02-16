@@ -39,7 +39,8 @@
 }
 
 .suggestionsContainer_withLabel {
-  @labelRowOffset: 6;
+  @rows-below-standard-text: 1;
+  @labelRowOffset: @standard-type-row-span + @rows-below-standard-text;
   top: @row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
 }
 
