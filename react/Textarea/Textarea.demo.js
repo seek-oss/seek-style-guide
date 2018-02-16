@@ -6,6 +6,7 @@ import styles from './Textarea.less';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
+import * as sketch from './Textarea.sketch';
 
 class TextareaContainer extends Component {
   static propTypes = {
@@ -46,8 +47,10 @@ class TextareaContainer extends Component {
 export default {
   route: '/textarea',
   title: 'Textarea',
+  category: 'Form',
   component: Textarea,
   container: TextareaContainer,
+  sketch,
   initialProps: {
     id: 'description',
     label: 'Description',

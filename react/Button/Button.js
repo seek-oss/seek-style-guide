@@ -1,60 +1,58 @@
+// @flow
 import styles from './Button.less';
-
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
+import React from 'react';
+import { Component } from 'react';
 import classnames from 'classnames';
+import capitalize from 'lodash/capitalize';
 
-export default class Button extends Component {
+type Props = {
+  color: 'pink' | 'blue' | 'gray' | 'transparent' | 'white',
+  children: React$Node,
+  className?: string,
+  component?: string | Function,
+  ghost?: boolean,
+  loading?: boolean,
+  fullWidth?: boolean
+};
+
+export default class Button extends Component<Props> {
   static displayName = 'Button';
-
-  static propTypes = {
-    color: PropTypes.oneOf([
-      'pink', 'blue', 'gray', 'transparent'
-    ]).isRequired,
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-    ]).isRequired,
-    className: PropTypes.string,
-    component: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.string
-    ]),
-    loading: PropTypes.bool,
-    fullWidth: PropTypes.bool
-  };
 
   static defaultProps = {
     className: '',
+    ghost: false,
     loading: false,
     fullWidth: false,
     component: 'button'
-  };
-
-  constructor() {
-    super();
-
-    this.storeButtonReference = this.storeButtonReference.bind(this);
   }
 
-  storeButtonReference(button) {
+  button: ?HTMLElement;
+  props: Props;
+
+  storeButtonReference = (button: ?HTMLElement) => {
     if (button !== null) {
       this.button = button;
     }
-  }
+  };
 
   render() {
-    const { color, className, loading, fullWidth, children, component, ...restProps } = this.props;
+    const {
+      color,
+      ghost,
+      className,
+      loading,
+      fullWidth,
+      children,
+      component = 'button',
+      ...restProps
+    } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
         [styles.loading]: loading,
         [styles.fullWidth]: fullWidth,
-        [styles.root_isPink]: color === 'pink',
-        [styles.root_isBlue]: color === 'blue',
-        [styles.root_isGray]: color === 'gray',
-        [styles.root_isTransparent]: color === 'transparent'
+        [styles.root_isGhost]: ghost && color !== 'transparent',
+        [styles[`root_is${capitalize(color)}`]]: color
       }),
       disabled: loading,
       ref: this.storeButtonReference,

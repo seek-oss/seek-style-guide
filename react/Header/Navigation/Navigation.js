@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+import NewBadge from '../NewBadge/NewBadge';
 
 const items = [
   {
@@ -23,7 +24,8 @@ const items = [
   {
     name: 'Profile',
     href: '/profile/',
-    analytics: 'header:profile'
+    analytics: 'header:profile',
+    isShort: true
   },
   {
     name: 'Company Reviews',
@@ -32,13 +34,13 @@ const items = [
     specificLocale: 'AU'
   },
   {
-    name: 'Advice & Tips',
+    name: 'Career Advice',
     href: '/career-advice/',
     analytics: 'header:advice'
   }
 ];
 
-export default function Navigation({ locale, linkRenderer, activeTab, divider }) {
+export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTab, divider }) {
   return (
     <nav
       aria-labelledby="MainNavigation"
@@ -54,23 +56,38 @@ export default function Navigation({ locale, linkRenderer, activeTab, divider })
 
       <ul className={styles.list} data-automation="nav-tabs">
         {
-          items.map(({ specificLocale = locale, analytics, name, ...restProps }, i) => (
-            (specificLocale === locale) ?
-              <li className={styles.item} key={i}>
-                {
-                  linkRenderer({
-                    children: name,
-                    'data-analytics': analytics,
-                    className: classnames({
-                      [styles.link]: true,
-                      [styles.link_isActive]: name === activeTab
-                    }),
-                    ...restProps
-                  })
-                }
-              </li> :
-              null
-          ))
+          items.map(({ specificLocale = locale, analytics, name, isShort, ...restProps }, i) => {
+            const badgeStyles = classnames({
+              [styles.newBadge]: true,
+              [styles.newBadge_isShort]: isShort
+            });
+
+            return (
+              (specificLocale === locale) ?
+                <li className={styles.item} key={i}>
+                  {
+                    linkRenderer({
+                      children: [
+                        name,
+                        name === newBadgeTab && (
+                          <NewBadge
+                            key={name}
+                            className={badgeStyles}
+                          />
+                        )
+                      ],
+                      'data-analytics': analytics,
+                      className: classnames({
+                        [styles.link]: true,
+                        [styles.link_isActive]: name === activeTab
+                      }),
+                      ...restProps
+                    })
+                  }
+                </li> :
+                null
+            );
+          })
         }
       </ul>
 
@@ -82,9 +99,11 @@ Navigation.propTypes = {
   locale: PropTypes.string.isRequired,
   linkRenderer: PropTypes.func.isRequired,
   divider: PropTypes.bool.isRequired,
-  activeTab: PropTypes.string
+  activeTab: PropTypes.string,
+  newBadgeTab: PropTypes.string
 };
 
 Navigation.defaultProps = {
-  activeTab: null
+  activeTab: null,
+  newBadgeTab: null
 };

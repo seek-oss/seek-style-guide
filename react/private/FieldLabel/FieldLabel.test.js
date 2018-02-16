@@ -58,6 +58,12 @@ describe('FieldLabel', () => {
       expect(labelText.props.children).to.equal('First Name');
     });
 
+    it('should be able to pass a node to `label`', () => {
+      render(<FieldLabel id="firstName" label={<span>First Name</span>} />);
+      expect(labelText.props.children.type).to.equal('span');
+      expect(labelText.props.children.props.children).to.equal('First Name');
+    });
+
     it('should error if `id` is not specified but `label` is', () => {
       render(<FieldLabel label="First Name" />);
       expect(errors[0]).to.match(/have an `id`/);

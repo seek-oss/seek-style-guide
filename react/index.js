@@ -1,7 +1,10 @@
+// @flow
+
 export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
 export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider'; // Alias for backwards compatibility
 
 // Components
+export { default as Alert } from './Alert/Alert';
 export { default as Button } from './Button/Button';
 export { default as ButtonGroup } from './ButtonGroup/ButtonGroup';
 export { default as Footer } from './Footer/Footer';
@@ -33,6 +36,7 @@ export { default as Section } from './Section/Section';
 export { default as ChevronIcon } from './ChevronIcon/ChevronIcon';
 export { default as ClearIcon } from './ClearIcon/ClearIcon';
 export { default as CloseIcon } from './CloseIcon/CloseIcon';
+export { default as CriticalIcon } from './CriticalIcon/CriticalIcon';
 export { default as CrossIcon } from './CrossIcon/CrossIcon';
 export { default as DeleteIcon } from './DeleteIcon/DeleteIcon';
 export { default as DownRightArrowIcon } from './DownRightArrowIcon/DownRightArrowIcon';

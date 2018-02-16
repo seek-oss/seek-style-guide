@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![Greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/) [![David](https://img.shields.io/david/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide) [![David](https://img.shields.io/david/dev/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide?type=dev) [![David](https://img.shields.io/david/peer/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide?type=peer) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
 # seek-style-guide
 
@@ -224,49 +224,69 @@ It's important to note that any additions to these values (e.g. borders) will ne
 
 ## Standalone Header and Footer
 
-If you're maintaining or updating a non-React app, a standalone JS + CSS package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
+If you're maintaining or updating a non-React app, a standalone JS + CSS + HTML package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
 
 First, include the following files in your app:
 - `seek-style-guide/dist/header-footer/styles.css`
 - `seek-style-guide/dist/header-footer/client.js`
 
-Then, add placeholder elements to your page:
-- `<div id="header"></div>`
-- `<div id="footer"></div>`
+Then, include the appropriate header and footer HTML snippets, switching based on locale:
 
-When the document is ready, render the header:
+**Header:**
+- `seek-style-guide/dist/header-footer/header__au.html`
+- `seek-style-guide/dist/header-footer/header__nz.html`
+
+**Header, with "Career Advice" tab selected:**
+- `seek-style-guide/dist/header-footer/header__au__career_advice.html`
+- `seek-style-guide/dist/header-footer/header__nz__career_advice.html`
+
+*Note: If you need a different tab selected, feel free to open a pull request or raise an issue*
+
+**Footer:**
+- `seek-style-guide/dist/header-footer/footer__au.html`
+- `seek-style-guide/dist/header-footer/footer__nz.html`
+
+When the document is ready, rehydrate the header by triggering a client-side render:
 
 ```js
-var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), {
-  ...initialProps
-});
+var header = SeekHeaderFooter.renderHeader();
 
 // Update props later, if needed:
-header.updateProps({
-  ...newProps
-});
+header.updateProps({ ...newProps });
 ```
 
 Finally, render the footer following a similar pattern:
 
 ```js
-var footer = SeekHeaderFooter.renderFooter(document.getElementById('footer'), {
-  ...initialProps
-});
+var footer = SeekHeaderFooter.renderFooter();
 
-// Update props later, if needed:
-footer.updateProps({
-  ...newProps
-});
+// Again, update props later, if needed:
+footer.updateProps({ ...newProps });
 ```
+
+If you'd prefer not to use the pre-rendered header and footer snippets and purely render client-side, you can manually pass the container element and initial props to the render methods yourself.
+
+First, add placeholder elements to the page:
+
+```html
+<div id="header"></div>
+<div id="footer"></div>
+```
+
+Then, trigger the initial render client-side:
+
+```js
+var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), { ...props });
+var footer = SeekHeaderFooter.renderHeader(document.getElementById('footer'), { ...props });
+```
+
+For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
 
 If you need to create React elements (e.g. when providing a `linkRenderer` function), the standalone bundle also exports React's [createElement](https://facebook.github.io/react/docs/react-api.html#createelement) function so you don't need to install React separately to gain access to it:
 
 ```js
 var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
 ```
-
-For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
 
 ## Advanced Usage
 
@@ -309,6 +329,45 @@ Then, include the following in your Babel config:
   }]
 ]
 ```
+
+### Flow Type Checking
+
+We've opted to include flow type checking in this project. If you're unfamiliar with static type checking you should start by reading React's [overview](https://reactjs.org/docs/static-type-checking.html). 
+
+This is completely opt-in and if you've decided not to use type checking in your project then **there is nothing you need to do**. It shouldn't impact your ability to include the style guide so long as you are using either [sku](https://github.com/seek-oss/sku) or our [webpack decorator](https://github.com/seek-oss/seek-style-guide-webpack).
+
+Conversely, if you would like to opt-in to flow types you'll need to ensure that your `.flowconfig` includes a few exclusions and special options.
+
+```
+[ignore]
+.*/node_modules/config-chain/.*
+.*/node_modules/npmconf/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+# This is required to prevent errors to less file imports
+module.name_mapper.extension='less' -> '<PROJECT_ROOT>/no-declarations.js.flow'
+
+# Good idea to ignore json too
+module.name_mapper.extension='json' -> '<PROJECT_ROOT>/no-declarations.js.flow'
+```
+> *no-declarations.js.flow* is just an empty file
+
+## Sketch asset generation
+
+On every successful build (via `npm test`), `asketch.json` files (i.e. *almost* Sketch files) are generated by [html-sketchapp](https://github.com/brainly/html-sketchapp) containing document styles and symbols. These are provided via the following JSON files:
+
+- `dist/asketch/document.asketch.json`
+- `dist/asketch/page.asketch.json`
+
+These can be manually imported into Sketch by [downloading html-sketchapp](https://github.com/brainly/html-sketchapp/archive/master.zip) and installing `asketch2sketch.sketchplugin`.
+
+Once in Sketch, open the "Plugins" menu and select "From \*Almost\* Sketch to Sketch". Assuming you've run a full build of the style guide via `npm test`, you should now be able to select the `asketch.json` files in `dist/asketch`.
 
 ## Contributing
 

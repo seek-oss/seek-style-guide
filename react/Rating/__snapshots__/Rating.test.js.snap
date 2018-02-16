@@ -1,0 +1,646 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating should render correct size when size is: heading 1`] = `
+<span
+  class="root heading raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      3.5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct size when size is: heading and rating text is shown 1`] = `
+<span
+  class="root heading raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      4 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="textRating"
+      >
+        4.0
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct size when size is: substandard 1`] = `
+<span
+  class="root substandard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      3.5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct size when size is: substandard and rating text is shown 1`] = `
+<span
+  class="root substandard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      4 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="textRating"
+      >
+        4.0
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct size when size is: superstandard 1`] = `
+<span
+  class="root superstandard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      3.5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct size when size is: superstandard and rating text is shown 1`] = `
+<span
+  class="root superstandard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      4 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="textRating"
+      >
+        4.0
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct star rating when rating is: 0 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      0 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      2.74 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      2.75 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      3.74 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      3.75 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render correct star rating when rating is: 5 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render with className 1`] = `
+<span
+  class="root root-class-name standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rating should render with starClassName 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+    </span>
+  </span>
+</span>
+`;

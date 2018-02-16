@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Header } from 'seek-style-guide/react';
+import * as sketch from './Header.sketch';
 import LogoRainbow from '../LogoRainbow/LogoRainbow';
 
 export const makeDummyLinkRendererForPath = path => {
@@ -21,7 +22,9 @@ const ROUTE = '/header';
 export default {
   route: ROUTE,
   title: 'Header',
+  category: 'Layout',
   component: Header,
+  sketch,
   initialProps: {
     authenticationStatus: 'authenticated',
     userName: 'Olivia',
@@ -69,6 +72,7 @@ export default {
         'Saved & Applied Jobs',
         'Recommended Jobs',
         'Company Reviews',
+        'Career Advice',
         'Advice & Tips'
       ].map(activeTab => ({
         label: activeTab || 'No active tab',
@@ -77,6 +81,34 @@ export default {
           activeTab
         })
       }))
+    },
+    {
+      label: 'New Tab',
+      type: 'radio',
+      states: [
+        undefined,
+        null,
+        'Job Search',
+        '$150k+ Jobs',
+        'Profile',
+        'Saved & Applied Jobs',
+        'Recommended Jobs',
+        'Company Reviews',
+        'Career Advice',
+        'Advice & Tips'
+      ].map(newBadgeTab => {
+        let label = newBadgeTab;
+        if (!newBadgeTab) {
+          label = newBadgeTab === undefined ? 'Default "new" badge' : 'No "new" badge';
+        }
+        return {
+          label,
+          transformProps: props => ({
+            ...props,
+            newBadgeTab
+          })
+        };
+      })
     },
     {
       label: 'Authentication',

@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextLink should render with chevron 1`] = `
+exports[`TextLink should render with chevron props 1`] = `
 <a
   className="link"
 >
   Google
   <ChevronIcon
-    className="chevron"
-    direction="right"
-    svgClassName="chevronSvg"
+    className="chevronRightSide"
+    direction="up"
+    size="hero"
   />
 </a>
 `;
@@ -31,4 +31,56 @@ exports[`TextLink should render with defaults 1`] = `
 <a
   className="link"
 />
+`;
+
+exports[`TextLink should render with down chevron 1`] = `
+<a
+  className="link"
+>
+  Google
+  <ChevronIcon
+    className="chevronRightSide"
+    direction="down"
+    size="standard"
+  />
+</a>
+`;
+
+exports[`TextLink should render with left chevron 1`] = `
+<a
+  className="link"
+>
+  <ChevronIcon
+    className="chevronLeftSide"
+    direction="left"
+    size="standard"
+  />
+  Google
+</a>
+`;
+
+exports[`TextLink should render with right chevron 1`] = `
+<a
+  className="link"
+>
+  Google
+  <ChevronIcon
+    className="chevronRightSide"
+    direction="right"
+    size="standard"
+  />
+</a>
+`;
+
+exports[`TextLink should render with up chevron 1`] = `
+<a
+  className="link"
+>
+  Google
+  <ChevronIcon
+    className="chevronRightSide"
+    direction="up"
+    size="standard"
+  />
+</a>
 `;

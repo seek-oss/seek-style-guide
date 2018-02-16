@@ -35,8 +35,6 @@ Next, create a new branch for your work, with an appropriate name for your chang
 $ git checkout -b add-my-cool-new-feature
 ```
 
-### Local Development Workflow
-
 In order to see changes to the style guide during development, run the local development server:
 
 ```bash
@@ -53,30 +51,6 @@ Note that the test suite needs to pass for your changes to be accepted, so it's 
 
 Even though we'd like to automate as much as possible, a comprehensive manual test is never a bad idea, especially if you're working in an area of the codebase that's particularly business critical. Reviewers are also encouraged to put UI changes through their paces, to act as a last line of defense before merging.
 
-### Local Design Workflow
-
-Some components have associated Sketch files included, but these are stored in git as plain text rather than Sketch's zip-based file format. This is so that we can see *into* the Sketch files and better understand the scope of changes being made.
-
-To generate the Sketch files, run the following script, but be warned that this will overwrite any Sketch files that you've modified in your local copy of the style guide:
-
-```bash
-npm run git-to-sketch
-```
-
-Feel free to add new Sketch files or modify any existing files. Note that there should only be a single Sketch file per component, with one or more symbols for each variation.
-
-Once you're ready to commit your changes, you need to decode your Sketch files back to plain text by running the inverse of the previous command:
-
-```bash
-npm run sketch-to-git
-```
-
-This script finds all Sketch files in the project and generates a folder with the same name, but ending in `__sketch`, e.g. `Button.sketch` becomes a folder called `Button__sketch`. Inside this folder you'll find a bunch of pretty-printed JSON, and a PNG preview image. These files will all be visible in GitHub during the pull request review process, so you'll be able to see the changes more clearly.
-
-### Design + Code = ❤
-
-🎨 🔗 💻 If your code becomes out of sync with the design assets, or vice-versa, make sure you either keep them in sync yourself, or pair with a designer/developer to help you make the necessary changes. Either way, **we want to ensure that design and development assets remain in sync with every pull request.**
-
 ### Committing
 
 Once you've made the desired changes and you're ready to commit, first stage your local changes:
@@ -87,7 +61,7 @@ $ git add .
 
 Before continuing, consider the scope of your changes according to [semantic versioning](http://semver.org), noting whether this is a breaking change, a feature release or a patch.
 
-New versions are published automatically from [Travis CI](https://travis-ci.org) using [semantic-release](https://github.com/semantic-release/semantic-release). In order to automatically increment version numbers correctly, commit messages must follow our [semantic commit message convention](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines). If your commit includes a breaking change, be sure to prefix your commit body with `BREAKING CHANGE: `. To make this process easier, we have a commit script (powered by [commitizen](https://github.com/commitizen/cz-cli)) to help guide you through the commit process:
+New versions are published automatically from [Travis CI](https://travis-ci.org) using [semantic-release](https://github.com/semantic-release/semantic-release). In order to automatically increment version numbers correctly, commit messages must follow the [conventional commit message format](https://github.com/marionebl/commitlint/tree/master/%40commitlint/config-conventional). If your commit includes a breaking change, be sure to prefix your commit body with `BREAKING CHANGE: `. To make this process easier, we have a commit script (powered by [commitizen](https://github.com/commitizen/cz-cli)) to help guide you through the commit process:
 
 ```bash
 $ npm run commit

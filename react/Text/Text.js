@@ -10,16 +10,12 @@ import stylesSecondary from '../Secondary/Secondary.less';
 import stylesStrong from '../Strong/Strong.less';
 import stylesRegular from '../Regular/Regular.less';
 
-export default function Text({
+import withTextProps, { SizePropTypes } from '../private/withTextProps';
+
+const Text = ({
   children,
   className,
-  small,
-  substandard,
-  superstandard,
-  subheading,
-  headline,
-  heading,
-  hero,
+  size,
   raw,
   positive,
   critical,
@@ -29,48 +25,36 @@ export default function Text({
   light,
   baseline,
   ...restProps
-}) {
-  return (
+}) => (
+  <span
+    {...restProps}
+    className={classnames({
+      [styles.root]: true,
+      [className]: className,
+      [styles[size]]: size,
+      [styles.raw]: raw,
+      [styles.baseline]: baseline
+    })}>
     <span
-      {...restProps}
       className={classnames({
-        [styles.root]: true,
-        [className]: className,
-        [styles.small]: small,
-        [styles.substandard]: substandard,
-        [styles.superstandard]: superstandard,
-        [styles.subheading]: subheading,
-        [styles.headline]: headline,
-        [styles.heading]: heading,
-        [styles.hero]: hero,
-        [styles.raw]: raw,
-        [styles.baseline]: baseline
+        [stylesPositive.root]: positive,
+        [stylesCritical.root]: critical,
+        [stylesSecondary.root]: secondary,
+        [stylesStrong.root]: strong,
+        [stylesRegular.root]: regular,
+        [styles.light]: light
       })}>
-      <span
-        className={classnames({
-          [stylesPositive.root]: positive,
-          [stylesCritical.root]: critical,
-          [stylesSecondary.root]: secondary,
-          [stylesStrong.root]: strong,
-          [stylesRegular.root]: regular,
-          [styles.light]: light
-        })}>
-        {children}
-      </span>
+      {children}
     </span>
-  );
-}
+  </span>
+);
+
+Text.displayName = 'Text';
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  small: PropTypes.bool,
-  substandard: PropTypes.bool,
-  superstandard: PropTypes.bool,
-  subheading: PropTypes.bool,
-  headline: PropTypes.bool,
-  heading: PropTypes.bool,
-  hero: PropTypes.bool,
+  ...SizePropTypes,
   raw: PropTypes.bool,
   positive: PropTypes.bool,
   critical: PropTypes.bool,
@@ -82,5 +66,8 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  baseline: true
+  baseline: true,
+  size: 'standard'
 };
+
+export default withTextProps(Text);

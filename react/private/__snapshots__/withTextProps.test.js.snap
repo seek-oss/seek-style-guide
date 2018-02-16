@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withTextProps: *heading*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="heading"
+/>
+`;
+
+exports[`withTextProps: *heading*: should pass down string size 1`] = `
+<OriginalComponent
+  size="heading"
+/>
+`;
+
+exports[`withTextProps: *headline*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="headline"
+/>
+`;
+
+exports[`withTextProps: *headline*: should pass down string size 1`] = `
+<OriginalComponent
+  size="headline"
+/>
+`;
+
+exports[`withTextProps: *hero*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="hero"
+/>
+`;
+
+exports[`withTextProps: *hero*: should pass down string size 1`] = `
+<OriginalComponent
+  size="hero"
+/>
+`;
+
+exports[`withTextProps: *small*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="small"
+/>
+`;
+
+exports[`withTextProps: *small*: should pass down string size 1`] = `
+<OriginalComponent
+  size="small"
+/>
+`;
+
+exports[`withTextProps: *standard*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="standard"
+/>
+`;
+
+exports[`withTextProps: *standard*: should pass down string size 1`] = `
+<OriginalComponent
+  size="standard"
+/>
+`;
+
+exports[`withTextProps: *subheading*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="subheading"
+/>
+`;
+
+exports[`withTextProps: *subheading*: should pass down string size 1`] = `
+<OriginalComponent
+  size="subheading"
+/>
+`;
+
+exports[`withTextProps: *substandard*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="substandard"
+/>
+`;
+
+exports[`withTextProps: *substandard*: should pass down string size 1`] = `
+<OriginalComponent
+  size="substandard"
+/>
+`;
+
+exports[`withTextProps: *superstandard*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="superstandard"
+/>
+`;
+
+exports[`withTextProps: *superstandard*: should pass down string size 1`] = `
+<OriginalComponent
+  size="superstandard"
+/>
+`;
+
+exports[`withTextProps: should omit size prop if boolean size is supplied and throw prop validation error 1`] = `
+<OriginalComponent
+  size="hero"
+/>
+`;
+
+exports[`withTextProps: should pass down non-size props 1`] = `
+<OriginalComponent
+  bar={true}
+  baz={
+    Object {
+      "a": 1,
+    }
+  }
+  className="foo"
+/>
+`;

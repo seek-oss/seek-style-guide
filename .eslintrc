@@ -9,7 +9,11 @@
   "plugins": [
     "babel",
     "react",
-    "jest"
+    "jest",
+    "flowtype"
+  ],
+  "extends": [
+    "plugin:flowtype/recommended"
   ],
   "rules": {
     "comma-dangle": 2,
@@ -105,7 +109,7 @@
     "no-shadow": 2,
     "no-undef-init": 2,
     "no-undef": 2,
-    "no-undefined": 2,
+    "no-undefined": 0,
     "no-unused-vars": [2, { "ignoreRestSiblings": true }],
     "no-use-before-define": 2,
 
@@ -203,7 +207,7 @@
     "react/jsx-indent-props": [2, 2],
     "react/jsx-key": 2,
     "react/jsx-max-props-per-line": 0,
-    "react/jsx-no-bind": 2,
+    "react/jsx-no-bind": 0,
     "react/jsx-no-duplicate-props": 2,
     "react/jsx-no-literals": 0,
     "react/jsx-no-target-blank": 2,

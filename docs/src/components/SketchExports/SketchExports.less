@@ -1,0 +1,41 @@
+@import (reference) "~seek-style-guide/theme";
+
+.text {
+  margin-bottom: @grid-row-height;
+}
+
+.symbol {
+  margin-bottom: @grid-row-height * 3;
+
+  // Disable CSS transitions and animations while taking snapshots
+  * {
+    transition: none !important;
+    animation-name: unset !important;
+  }
+}
+
+.name {
+  margin-bottom: @grid-row-height;
+}
+
+.color {
+  @media @mobile {
+    width: 100%;
+  }
+  @media @desktop {
+    padding-right: @grid-gutter-width;
+    width: 25%;
+  }
+}
+
+.colors {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.swatch {
+  width: 100%;
+  border-radius: 3px;
+  height: @grid-row-height * 9;
+  margin-bottom: @grid-row-height * 2;
+}

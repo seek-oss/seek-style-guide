@@ -3,5 +3,5 @@ dist
 npm-debug.log
 yarn.lock
 package-lock.json
-*.sketch
-sketch-manifest.json
+flow-typed/*.generated.*
+

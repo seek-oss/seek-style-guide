@@ -1,15 +1,10 @@
-import styles from './UserAccount.less';
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ScrollLock from 'react-scrolllock';
-
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
-
-import smallDeviceOnly from '../../private/smallDeviceOnly';
+import styles from './UserAccount.less';
 
 const calculateMobileMenuLabel = (authenticationStatus, userName) => {
   if (authenticationStatus === AUTH_PENDING) {
@@ -34,8 +29,14 @@ export default class UserAccount extends Component {
     userName: PropTypes.string,
     linkRenderer: PropTypes.func.isRequired,
     returnUrl: PropTypes.string,
-    activeTab: PropTypes.string
+    activeTab: PropTypes.string,
+    newBadgeTab: PropTypes.string,
+    onMenuToggle: PropTypes.func
   };
+
+  static defaultProps = {
+    onMenuToggle: () => {}
+  }
 
   constructor(props) {
     super(props);
@@ -46,7 +47,10 @@ export default class UserAccount extends Component {
   }
 
   handleMenuToggleClick = () => {
-    this.setState(state => ({ menuOpen: !state.menuOpen }));
+    this.setState(state => {
+      this.props.onMenuToggle({ open: !state.menuOpen });
+      return { menuOpen: !state.menuOpen };
+    });
   };
 
   handleMenuClick = () => {
@@ -54,7 +58,7 @@ export default class UserAccount extends Component {
   };
 
   render() {
-    const { locale, authenticationStatus, userName, linkRenderer, returnUrl, activeTab } = this.props;
+    const { locale, authenticationStatus, userName, linkRenderer, returnUrl, activeTab, newBadgeTab } = this.props;
 
     const mobileMenuLabel = calculateMobileMenuLabel(authenticationStatus, userName);
     const desktopMenuLabel = userName;
@@ -69,8 +73,6 @@ export default class UserAccount extends Component {
         <ScreenReaderOnly>
           <h1 id="UserMenu">User menu</h1>
         </ScreenReaderOnly>
-
-        {this.state.menuOpen && smallDeviceOnly() ? <ScrollLock /> : null }
 
         <input
           id="user-account-menu-toggle"
@@ -110,6 +112,7 @@ export default class UserAccount extends Component {
             linkRenderer={linkRenderer}
             returnUrl={returnUrl}
             activeTab={activeTab}
+            newBadgeTab={newBadgeTab}
           />
         </div>
 

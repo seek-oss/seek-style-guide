@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import Dropdown from './Dropdown';
 import styles from './Dropdown.less';
+import * as sketch from './Dropdown.sketch';
 import classnames from 'classnames';
 import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
@@ -46,8 +46,10 @@ class DropdownContainer extends Component {
 export default {
   route: '/dropdown',
   title: 'Dropdown',
+  category: 'Form',
   component: Dropdown,
   container: DropdownContainer,
+  sketch,
   initialProps: {
     id: 'jobTitles',
     label: 'Job Titles',

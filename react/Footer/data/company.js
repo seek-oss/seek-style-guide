@@ -21,15 +21,9 @@ export default [
 
 export const partners = [
   {
-    name: 'BabaJob',
-    partner: 'India',
-    href: 'http://www.babajob.com',
-    analytics: 'toolbar:babajob'
-  },
-  {
     name: 'Bdjobs',
     partner: 'Bangladesh',
-    href: 'http://www.bdjobs.com',
+    href: 'https://www.bdjobs.com',
     analytics: 'toolbar:bdjobs'
   },
   {
@@ -41,25 +35,25 @@ export const partners = [
   {
     name: 'Catho',
     partner: 'Brazil',
-    href: 'http://www.catho.com.br',
+    href: 'https://www.catho.com.br',
     analytics: 'toolbar:catho'
   },
   {
     name: 'Jobberman',
     partner: 'W Africa',
-    href: 'http://www.jobberman.com',
+    href: 'https://www.jobberman.com',
     analytics: 'toolbar:jobberman'
   },
   {
     name: 'jobsDB',
     partner: 'SE Asia',
-    href: 'http://www.jobsdb.com',
+    href: 'https://www.jobsdb.com',
     analytics: 'toolbar:jobsdb'
   },
   {
     name: 'JobStreet',
     partner: 'SE Asia',
-    href: 'http://www.jobstreet.com',
+    href: 'https://www.jobstreet.com',
     analytics: 'toolbar:jobstreet'
   },
   {
@@ -67,12 +61,6 @@ export const partners = [
     partner: 'Worldwide',
     href: 'https://www.jora.com',
     analytics: 'toolbar:jora+int'
-  },
-  {
-    name: 'Manager',
-    partner: 'Brazil',
-    href: 'http://www.manager.com.br',
-    analytics: 'toolbar:manager'
   },
   {
     name: 'OCC Mundial',
@@ -89,7 +77,7 @@ export const partners = [
   {
     name: 'Zhaopin',
     partner: 'China',
-    href: 'http://www.zhaopin.com',
+    href: 'https://www.zhaopin.com',
     analytics: 'toolbar:zhaopin'
   },
   {
@@ -126,5 +114,10 @@ export const services = [
     name: 'Ximble',
     href: 'https://www.ximble.com',
     analytics: 'toolbar:ximble'
+  },
+  {
+    name: 'Spark Hire',
+    href: 'https://anz.sparkhire.com/',
+    analytics: 'toolbar:sparkhire'
   }
 ];

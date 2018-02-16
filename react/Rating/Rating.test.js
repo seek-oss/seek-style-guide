@@ -1,88 +1,44 @@
-import { expect } from 'chai';
+import { render } from 'enzyme';
 import React from 'react';
-import { createRenderer } from 'react-test-renderer/shallow';
 import Rating from './Rating';
 
 describe('Rating', () => {
-  let element, rating;
-
-  const renderer = createRenderer();
-  const render = jsx => {
-    element = jsx;
-    rating = renderer.render(element);
-  };
-  const testStars = (starElem, conditons) =>
-    starElem.forEach((e, i) => expect(conditons[i](e)).to.equal(true));
-
-  const findStars = () => {
-    const { props: { children } } = rating;
-    return children[1];
-  };
-
-  it('should have a displayName', () => {
-    render(<Rating rating={3.3} />);
-    expect(element.type.displayName).to.equal('Rating');
+  it('should render with starClassName', () => {
+    const wrapper = render(<Rating rating={5.0} starClassName={'star-class-name'} />);
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render 5 stars', () => {
-    render(<Rating rating={3.3} />);
-    expect(findStars().length).to.equal(5);
+  it('should render with className', () => {
+    const wrapper = render(<Rating rating={5.0} className={'root-class-name'} />);
+    expect(wrapper).toMatchSnapshot();
   });
 
   describe('should render correct star rating', () => {
-    const isFilled = ({ props }) => props.filled === true;
-    const isHalfFilled = ({ props }) => props.markup === 'mock svg';
-    const isEmpty = ({ props }) => props.filled === false;
+    const ratings = [2.74, 2.75, 3.74, 3.75, 0.0, 5.0];
 
-    it('when rating is: 2.74', () => {
-      render(<Rating rating={2.74} />);
-      return testStars(findStars(), [isFilled, isFilled, isHalfFilled, isEmpty, isEmpty]);
-    });
-
-    it('when rating is: 2.75', () => {
-      render(<Rating rating={2.75} />);
-      return testStars(findStars(), [isFilled, isFilled, isFilled, isEmpty, isEmpty]);
-    });
-
-    it('when rating is: 3.74', () => {
-      render(<Rating rating={3.74} />);
-      return testStars(findStars(), [isFilled, isFilled, isFilled, isHalfFilled, isEmpty]);
-    });
-
-    it('when rating is: 3.75', () => {
-      render(<Rating rating={3.75} />);
-      return testStars(findStars(), [isFilled, isFilled, isFilled, isFilled, isEmpty]);
-    });
-
-    it('when rating is: 0.0', () => {
-      render(<Rating rating={0.0} />);
-      return testStars(findStars(), [isEmpty, isEmpty, isEmpty, isEmpty, isEmpty]);
-    });
-
-    it('when rating is: 5.0', () => {
-      render(<Rating rating={5.0} />);
-      return testStars(findStars(), [isFilled, isFilled, isFilled, isFilled, isFilled]);
+    ratings.forEach(rating => {
+      it(`when rating is: ${rating}`, () => {
+        const wrapper = render(<Rating rating={rating} />);
+        expect(wrapper).toMatchSnapshot();
+      });
     });
   });
 
-  describe('should apply props', () => {
-    it('should apply `starClassName`', () => {
-      render(<Rating rating={5.0} starClassName={'star-class-name'} />);
-      const hasAppliedSvgClassName = ({ props }) =>
-        props.svgClassName === 'star-class-name';
+  describe('should render correct size', () => {
+    const sizes = ['substandard', 'superstandard', 'heading'];
 
-      return testStars(findStars(), [
-        hasAppliedSvgClassName,
-        hasAppliedSvgClassName,
-        hasAppliedSvgClassName,
-        hasAppliedSvgClassName,
-        hasAppliedSvgClassName
-      ]);
+    sizes.forEach(size => {
+      it(`when size is: ${size}`, () => {
+        const wrapper = render(<Rating rating={3.5} {...{ [size]: true }} />);
+        expect(wrapper).toMatchSnapshot();
+      });
     });
 
-    it('should apply `className`', () => {
-      render(<Rating rating={5.0} className={'root-class-name'} />);
-      expect(rating.props.className).to.equal('root-class-name');
+    sizes.forEach(size => {
+      it(`when size is: ${size} and rating text is shown`, () => {
+        const wrapper = render(<Rating rating={4} {...{ [size]: true }} showTextRating />);
+        expect(wrapper).toMatchSnapshot();
+      });
     });
   });
 });

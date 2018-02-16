@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonGroup, Button, PageBlock, Section } from 'seek-style-guide/react';
+import * as sketch from './ButtonGroup.sketch';
 
 const ButtonGroupContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>
@@ -17,9 +18,11 @@ ButtonGroupContainer.propTypes = {
 export default {
   route: '/button-group',
   title: 'Button Group',
+  category: 'Form',
   component: ButtonGroup,
   container: ButtonGroupContainer,
   block: true,
+  sketch,
   initialProps: {
     children: <Button color="pink">Create a Profile</Button>
   },

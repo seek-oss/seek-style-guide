@@ -188,7 +188,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -244,7 +244,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -310,6 +310,25 @@ exports[`Header: should append returnUrl to signin and register links if present
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -455,7 +474,12 @@ exports[`Header: should append returnUrl to signin and register links if present
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -765,7 +789,7 @@ exports[`Header: should render first part of email address when username isn't p
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -877,6 +901,25 @@ exports[`Header: should render first part of email address when username isn't p
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -1036,7 +1079,12 @@ exports[`Header: should render first part of email address when username isn't p
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -1342,7 +1390,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -1398,7 +1446,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -1464,6 +1512,25 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -1609,7 +1676,12 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -1919,7 +1991,7 @@ exports[`Header: should render when authenticated 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -2031,6 +2103,25 @@ exports[`Header: should render when authenticated 1`] = `
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -2190,7 +2281,12 @@ exports[`Header: should render when authenticated 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -2496,7 +2592,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -2608,6 +2704,25 @@ exports[`Header: should render when authenticated but username and email is not 
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -2767,7 +2882,12 @@ exports[`Header: should render when authenticated but username and email is not 
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -3073,7 +3193,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -3129,7 +3249,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -3195,6 +3315,25 @@ exports[`Header: should render when authentication is pending 1`] = `
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -3340,7 +3479,12 @@ exports[`Header: should render when authentication is pending 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -3648,7 +3792,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -3704,7 +3848,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -3778,6 +3922,25 @@ exports[`Header: should render when unauthenticated 1`] = `
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -3923,7 +4086,12 @@ exports[`Header: should render when unauthenticated 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -4197,7 +4365,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -4253,7 +4421,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -4319,6 +4487,25 @@ exports[`Header: should render with a custom logo 1`] = `
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -4464,7 +4651,12 @@ exports[`Header: should render with a custom logo 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -4770,7 +4962,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -4826,7 +5018,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -4892,6 +5084,25 @@ exports[`Header: should render with locale of AU 1`] = `
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -5037,7 +5248,12 @@ exports[`Header: should render with locale of AU 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -5343,7 +5559,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -5399,7 +5615,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -5573,7 +5789,12 @@ exports[`Header: should render with locale of NZ 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
@@ -5879,7 +6100,7 @@ exports[`Header: should render with no divider 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:saved+searches"
-                      href="/myactivity#favourite"
+                      href="/myactivity"
                     >
                       <span>
                         Saved Searches
@@ -5935,7 +6156,7 @@ exports[`Header: should render with no divider 1`] = `
                     <a
                       class="item subItem"
                       data-analytics="header:recommended+jobs"
-                      href="/recommended"
+                      href="/sign-in?returnUrl=%2Frecommended"
                     >
                       <span>
                         Recommended Jobs
@@ -6001,6 +6222,25 @@ exports[`Header: should render with no divider 1`] = `
                   </li>
                   <li
                     class="firstItemInGroup desktop"
+                  >
+                    <a
+                      class="item"
+                      data-analytics="header:advice"
+                      href="/career-advice/"
+                    >
+                      <span
+                        class="root newBadge"
+                      >
+                        New
+                      </span>
+                      Career Advice
+                      <div
+                        class="iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="desktop"
                   >
                     <a
                       class="item"
@@ -6146,7 +6386,12 @@ exports[`Header: should render with no divider 1`] = `
               data-analytics="header:advice"
               href="/career-advice/"
             >
-              Advice & Tips
+              Career Advice
+              <span
+                class="root newBadge"
+              >
+                New
+              </span>
             </a>
           </li>
         </ul>
