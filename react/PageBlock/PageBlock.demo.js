@@ -12,7 +12,7 @@ export default {
     style: { backgroundColor: 'pink' },
     children: (
       <div style={{ backgroundColor: 'blue', color: 'white' }}>
-        <Text superstandard strong>This content is nested within a PageBlock component</Text>
+        <Text strong>This content is nested within a PageBlock component</Text>
       </div>
     )
   },

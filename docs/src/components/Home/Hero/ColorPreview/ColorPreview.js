@@ -14,7 +14,7 @@ const getSwatch = name => {
     <div className={styles.drop} key={name}>
       <Droplet
         color={value}
-        sizeInRows={5}
+        sizeInRows={8}
         showHex={true}
       />
     </div>

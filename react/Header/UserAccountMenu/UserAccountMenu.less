@@ -2,13 +2,12 @@
 @import (reference) "../Header.less";
 
 .root {
-  padding: @grid-row-height 0;
   @media @desktop {
     @border-width: 1px;
     background-color: @sk-white;
     border: @border-width solid @sk-mid-gray-light;
     border-radius: 2px;
-    padding: (@grid-row-height - @border-width) 0;
+    padding: ((@row-height * 2) - @border-width) 0;
   }
 }
 
@@ -31,7 +30,7 @@
   .touchableText();
   display: flex;
   align-items: center;
-  padding: 0 @grid-gutter-width;
+  padding: 0 @gutter-width;
   white-space: nowrap;
   color: @sk-white;
   text-decoration: none;
@@ -48,7 +47,7 @@
     .touchableText(@standard-type-scale);
     justify-content: space-between;
     color: @sk-black;
-    padding: 0 (@grid-gutter-width * 2);
+    padding: 0 (@gutter-width * 2);
   }
 }
 
@@ -69,11 +68,11 @@
 }
 
 .icon {
-  margin-left: @grid-gutter-width;
-  width: @grid-gutter-width;
+  margin-left: @gutter-width;
+  width: @gutter-width;
   text-align: center;
   @media @mobile {
-    margin-left: (@grid-gutter-width / 2);
+    margin-left: (@gutter-width / 2);
   }
 }
 
@@ -84,8 +83,8 @@
 .icon.recommendedJobs { color: @sk-green-light; }
 
 .iconSpacer {
-  margin-left: (@grid-gutter-width / 2);
-  width: @grid-gutter-width;
+  margin-left: (@gutter-width / 2);
+  width: @gutter-width;
   @media @desktop {
     display: none;
   }
@@ -113,7 +112,7 @@
 }
 
 .firstItemInGroup {
-  @padding-height: @grid-row-height * 2;
+  @padding-height: @row-height * 3;
   @media @mobile {
     padding-top: @padding-height;
     position: relative;

@@ -11,7 +11,7 @@
   .touchableText();
   width: 100%;
   display: block;
-  height: @grid-row-height * 5;
+  height: (@row-height * @interaction-type-row-span);
   padding: 0 @chevronWidth 0 @field-gutter-width;
   background: @sk-white;
   border: @field-border-width solid @sk-mid-gray-light;
@@ -57,7 +57,7 @@
   position: absolute;
   right: 0;
   overflow: hidden;
-  height: (@interaction-type-row-span * @grid-row-height);
+  height: (@row-height * @interaction-type-row-span);
   border: 0;
   padding: 0 @field-gutter-width;
   background-color: transparent;

@@ -8,7 +8,7 @@ export default {
   category: 'Layout',
   component: Hidden,
   initialProps: {
-    children: <Text superstandard strong>This content may or may not be hidden.</Text>
+    children: <Text strong>This content may or may not be hidden.</Text>
   },
   options: [
     {

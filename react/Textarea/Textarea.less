@@ -8,9 +8,9 @@
 .textarea {
   .touchableText();
   width: 100%;
-  height: @grid-row-height * 10;
+  height: @row-height * 15;
   resize: vertical;
-  max-height: @grid-row-height * 20;
+  max-height: @row-height * 30;
   line-height: 25px; // Deliberate deviation to avoid looking like body copy
   color: @sk-charcoal;
   border: @field-border-width solid @sk-mid-gray-light;
@@ -43,16 +43,16 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  min-height: (@grid-row-height * @standard-type-row-span);
-  margin-bottom: @grid-row-height;
+  min-height: (@row-height * @standard-type-row-span);
+  margin-bottom: (@row-height * 2);
   align-items: flex-start;
 }
 
 .characterCount {
-  .standardText();
+  .smallText();
   color: @sk-mid-gray-dark;
   text-align: right;
-  margin-left: (@grid-gutter-width / 2);
+  margin-left: (@gutter-width / 2);
 
   &:only-child {
     flex-basis: 100%;

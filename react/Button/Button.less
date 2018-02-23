@@ -1,7 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
 @keyframes loading {
-  to { width: @grid-gutter-width; }
+  to { width: @gutter-width; }
 }
 
 .hoverState(@rules) {
@@ -65,7 +65,7 @@
   text-decoration: none;
   user-select: none;
   text-align: center;
-  padding: 0 @grid-gutter-width;
+  padding: 0 @gutter-width;
   box-shadow: 0 1px fade(@sk-black, 70%);
   border: 0;
   border-radius: 2px;
@@ -156,7 +156,7 @@
 }
 
 .loading {
-  padding-right: @grid-gutter-width * 2;
+  padding-right: @gutter-width * 2;
 
   &::after {
     content: ' \2026';
@@ -185,19 +185,19 @@
     }
     &:not(.root_isTransparent) {
       @media @mobile {
-        padding-left: @grid-gutter-width * 2;
-        padding-right: @grid-gutter-width * 2;
+        padding-left: @gutter-width * 2;
+        padding-right: @gutter-width * 2;
       }
     }
     & + .root {
-      margin-left: @grid-gutter-width / 2;
+      margin-left: @gutter-width / 2;
       @media only screen and (max-width: 500px) {
-        margin-top: @grid-row-height;
+        margin-top: (@row-height * 2);
         margin-left: 0;
       }
     }
     & + .root_isTransparent {
-      margin-left: @grid-gutter-width * 2;
+      margin-left: @gutter-width * 2;
       @media only screen and (max-width: 500px) {
         margin-left: 0;
       }

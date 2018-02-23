@@ -1,11 +1,11 @@
 @import (reference) "~seek-style-guide/theme";
 
 .text {
-  margin-bottom: @grid-row-height;
+  margin-bottom: @row-height * 2;
 }
 
 .symbol {
-  margin-bottom: @grid-row-height * 3;
+  margin-bottom: @row-height * 5;
 
   // Disable CSS transitions and animations while taking snapshots
   * {
@@ -15,7 +15,7 @@
 }
 
 .name {
-  margin-bottom: @grid-row-height;
+  margin-bottom: @row-height * 2;
 }
 
 .color {
@@ -23,7 +23,7 @@
     width: 100%;
   }
   @media @desktop {
-    padding-right: @grid-gutter-width;
+    padding-right: @gutter-width;
     width: 25%;
   }
 }
@@ -36,6 +36,6 @@
 .swatch {
   width: 100%;
   border-radius: 3px;
-  height: @grid-row-height * 9;
-  margin-bottom: @grid-row-height * 2;
+  height: @row-height * 14;
+  margin-bottom: @row-height * 3;
 }

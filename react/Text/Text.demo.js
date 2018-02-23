@@ -107,21 +107,14 @@ export default {
           })
         },
         {
-          label: 'Superstandard',
-          transformProps: ({ hero, ...props }) => ({
-            ...props,
-            superstandard: true
-          })
-        },
-        {
           label: 'Standard',
           transformProps: ({ hero, ...props }) => props
         },
         {
-          label: 'Substandard',
+          label: 'Small',
           transformProps: ({ hero, ...props }) => ({
             ...props,
-            substandard: true
+            small: true
           })
         }
       ]
