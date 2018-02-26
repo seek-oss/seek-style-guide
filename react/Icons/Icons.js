@@ -6,7 +6,7 @@ import React from 'react';
 
 import Icon from '../private/Icon/Icon';
 
-const iconGenerator = IconName => {
+export const iconGenerator = IconName => {
   const IconExportable = ({ filled, direction, className, ...props }) => {
     const markup = require(`./svg/${IconName}${filled ? 'Filled' : ''}.svg`);
 
@@ -40,27 +40,3 @@ const iconGenerator = IconName => {
 
   return IconExportable;
 };
-
-export const CheckMarkIcon = iconGenerator('CheckMarkIcon');
-export const ChevronIcon = iconGenerator('ChevronIcon');
-export const ClearIcon = iconGenerator('ClearIcon');
-export const CloseIcon = iconGenerator('CloseIcon');
-export const CriticalIcon = iconGenerator('CriticalIcon');
-export const CrossIcon = iconGenerator('CrossIcon');
-export const DeleteIcon = iconGenerator('DeleteIcon');
-export const DownRightArrowIcon = iconGenerator('DownRightArrowIcon');
-export const ErrorIcon = iconGenerator('ErrorIcon');
-export const FacebookIcon = iconGenerator('FacebookIcon');
-export const HeartIcon = iconGenerator('HeartIcon');
-export const HelpIcon = iconGenerator('HelpIcon');
-export const InfoIcon = iconGenerator('InfoIcon');
-export const LinkedInIcon = iconGenerator('LinkedInIcon');
-export const MailIcon = iconGenerator('MailIcon');
-export const PlusIcon = iconGenerator('PlusIcon');
-export const ProfileIcon = iconGenerator('ProfileIcon');
-export const SearchIcon = iconGenerator('SearchIcon');
-export const StarIcon = iconGenerator('StarIcon');
-export const ThumbsUpIcon = iconGenerator('ThumbsUpIcon');
-export const TickCircleIcon = iconGenerator('TickCircleIcon');
-export const TickIcon = iconGenerator('TickIcon');
-export const TwitterIcon = iconGenerator('TwitterIcon');
