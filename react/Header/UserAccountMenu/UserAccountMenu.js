@@ -4,13 +4,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import SearchIcon from '../../SearchIcon/SearchIcon';
-import ProfileIcon from '../../ProfileIcon/ProfileIcon';
-import HeartIcon from '../../HeartIcon/HeartIcon';
-import StarIcon from '../../StarIcon/StarIcon';
-import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
-import Hidden from '../../Hidden/Hidden';
-import Loader from '../../Loader/Loader';
+import {
+  SearchIcon,
+  ProfileIcon,
+  HeartIcon,
+  StarIcon,
+  ThumbsUpIcon,
+  Hidden,
+  Loader
+} from 'seek-style-guide/react';
+
 import NewBadge from '../NewBadge/NewBadge';
 import employerLinkForLocale from '../employerLinkForLocale';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';

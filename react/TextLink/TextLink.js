@@ -3,7 +3,7 @@ import styles from './TextLink.less';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ChevronIcon from '../ChevronIcon/ChevronIcon';
+import { ChevronIcon } from 'seek-style-guide/react';
 import classnames from 'classnames';
 
 export const chevronDirections = ['up', 'down', 'right', 'left'];

@@ -1,9 +1,9 @@
 import styles from './SlideToggle.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TickIcon from '../TickIcon/TickIcon';
-import Text from '../Text/Text';
 import classnames from 'classnames';
+
+import { TickIcon, Text } from 'seek-style-guide/react';
 
 const LEFT = 'left';
 const RIGHT = 'right';

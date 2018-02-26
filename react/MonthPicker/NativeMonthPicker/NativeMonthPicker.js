@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import pad from 'pad-left';
 
-import ChevronIcon from '../../ChevronIcon/ChevronIcon';
+import { ChevronIcon } from 'seek-style-guide/react';
 
 const makeMonthString = ({ month, year }) => {
   if (month && year) {

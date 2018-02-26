@@ -1,0 +1,46 @@
+// TickCircleIcon
+
+.TickCircleIcon.filled,
+.HeartIcon.filled {
+  animation-duration: 0.4s;
+  animation-name: pop;
+}
+
+.StarIcon.filled {
+  animation-duration: 0.3s;
+  animation-name: spring;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); }
+  65% { transform: scale(1.5); }
+  85% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+@keyframes spring {
+  0% { transform: scale(0.6); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.ChevronIcon {
+  &.root {
+    transition: transform 0.3s ease;
+    transform-origin: 50% 50%;
+  }
+
+  &.left {
+    transform: rotate(90deg);
+  }
+
+  &.up {
+    transform: rotate(180deg);
+  }
+
+  &.right {
+    transform: rotate(270deg);
+  }
+}
+

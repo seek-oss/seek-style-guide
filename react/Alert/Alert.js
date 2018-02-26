@@ -5,13 +5,15 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import omit from 'lodash/omit';
 
-import Section from '../Section/Section';
-import Text from '../Text/Text';
-import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
-import InfoIcon from '../InfoIcon/InfoIcon';
-import CriticalIcon from '../CriticalIcon/CriticalIcon';
-import HelpIcon from '../HelpIcon/HelpIcon';
-import CrossIcon from '../CrossIcon/CrossIcon';
+import {
+  Text,
+  Section,
+  TickCircleIcon,
+  InfoIcon,
+  CriticalIcon,
+  HelpIcon,
+  CrossIcon
+} from 'seek-style-guide/react';
 
 import { TONE, LEVEL } from '../Section/Section';
 

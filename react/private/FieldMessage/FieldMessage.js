@@ -5,10 +5,7 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-import ErrorIcon from '../../ErrorIcon/ErrorIcon';
-import TickCircleIcon from '../../TickCircleIcon/TickCircleIcon';
-
-import Text from '../../Text/Text';
+import { ErrorIcon, TickCircleIcon, Text } from 'seek-style-guide/react';
 
 export default class FieldMessage extends Component {
   static displayName = 'FieldMessage';
