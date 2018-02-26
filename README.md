@@ -107,11 +107,19 @@ The following colors are provided:
 
 ```less
 // Brand colors
+@sk-blue-darker
+@sk-blue-dark
 @sk-blue
+@sk-blue-light
+@sk-blue-lighter
 @sk-pink
 @sk-green
+@sk-green-light
 @sk-purple
 @sk-teal
+@sk-orange
+@sk-yellow
+@sk-yellow-light
 
 // Partner brand colors
 @sk-business
@@ -137,13 +145,17 @@ The following colors are provided:
 @sk-link-visited
 @sk-focus
 @sk-highlight
-@sk-green-light
-@sk-yellow
-@sk-yellow-light
-@sk-orange
 @sk-footer
 @sk-background
-@sk-yellow
+@sk-form-accent
+@sk-positive-light
+@sk-positive
+@sk-info-light
+@sk-info
+@sk-critical-light
+@sk-critical
+@sk-help-light
+@sk-help
 ```
 
 ### Z-Indexes

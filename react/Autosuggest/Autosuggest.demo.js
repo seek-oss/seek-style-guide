@@ -95,6 +95,22 @@ export default {
           })
         },
         {
+          label: 'Grouped',
+          transformProps: ({ autosuggestProps, ...props }) => ({
+            ...props,
+            autosuggestProps: {
+              ...autosuggestProps,
+              multiSection: true,
+              suggestions: [{
+                title: 'RECENT TITLES',
+                suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer']
+              }],
+              renderSectionTitle: section => <div>{section.title}</div>,
+              getSectionSuggestions: section => section.suggestions
+            }
+          })
+        },
+        {
           label: 'Show mobile backdrop',
           transformProps: ({ ...props }) => ({
             ...props,
