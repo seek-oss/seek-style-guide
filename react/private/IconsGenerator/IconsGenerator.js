@@ -1,12 +1,12 @@
-import styles from './Icons.less';
+import styles from './IconsGenerator.less';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Icon from '../private/Icon/Icon';
+import Icon from '../Icon/Icon';
 
-export const iconGenerator = IconName => {
+const iconGenerator = IconName => {
   const IconExportable = ({ filled, direction, className, ...props }) => {
     const markup = require(`./svg/${IconName}${filled ? 'Filled' : ''}.svg`);
 
@@ -40,3 +40,5 @@ export const iconGenerator = IconName => {
 
   return IconExportable;
 };
+
+export default iconGenerator;

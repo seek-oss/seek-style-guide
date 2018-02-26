@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './Checkbox.less';
 import classnames from 'classnames';
 
-import { CheckMarkIcon } from '../Icons/Icons';
+import { CheckMarkIcon } from 'seek-style-guide/react';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
