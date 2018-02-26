@@ -72,30 +72,6 @@ exports[`withTextProps: *subheading*: should pass down string size 1`] = `
 />
 `;
 
-exports[`withTextProps: *substandard*: should convert boolean size into string size 1`] = `
-<OriginalComponent
-  size="substandard"
-/>
-`;
-
-exports[`withTextProps: *substandard*: should pass down string size 1`] = `
-<OriginalComponent
-  size="substandard"
-/>
-`;
-
-exports[`withTextProps: *superstandard*: should convert boolean size into string size 1`] = `
-<OriginalComponent
-  size="superstandard"
-/>
-`;
-
-exports[`withTextProps: *superstandard*: should pass down string size 1`] = `
-<OriginalComponent
-  size="superstandard"
-/>
-`;
-
 exports[`withTextProps: should omit size prop if boolean size is supplied and throw prop validation error 1`] = `
 <OriginalComponent
   size="hero"

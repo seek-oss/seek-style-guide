@@ -1,9 +1,9 @@
 @import (reference) "~seek-style-guide/theme";
 
-@suggestionContainerRowsOffset: 6;
-@suggestionFieldHeightInRows: 5;
+@suggestionContainerRowsOffset: 9;
+@suggestionFieldHeightInRows: 8;
 
-@sectionTitleHeight: @grid-row-height * 4;
+@sectionTitleHeight: @row-height * 6;
 @containerHeight: @touchableTextHeight + @sectionTitleHeight;
 
 .container {
@@ -21,13 +21,13 @@
   position: absolute;
   background-color: @sk-white;
   box-shadow: 0 9px 30px rgba(0, 0, 0, 0.4);
-  padding: @grid-row-height 0;
+  padding: @row-height 0;
   border-radius: 2px;
   min-width: 100%;
   max-width: 100%;
   max-height: 385px;
   overflow-y: auto;
-  top: @grid-row-height * @suggestionContainerRowsOffset;
+  top: @row-height * @suggestionContainerRowsOffset;
 
   .smallDeviceOnly({
     max-height: ~"calc(100vh - @{containerHeight})";
@@ -39,20 +39,17 @@
 }
 
 .suggestionsContainer_withLabel {
-  @labelRowOffset: 4;
-  top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
-  @media @desktop {
-    @labelRowOffset: 3;
-    top: @grid-row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
-  }
+  @rows-below-standard-text: 1;
+  @labelRowOffset: @standard-type-row-span + @rows-below-standard-text;
+  top: @row-height * (@suggestionContainerRowsOffset + @labelRowOffset);
 }
 
 .sectionTitle {
   .rawText(1);
   line-height: @sectionTitleHeight;
   height: @sectionTitleHeight;
-  margin: @grid-row-height (@grid-gutter-width * 0.75) 0;
-  color: darken(@sk-highlight, 10%);
+  margin: @row-height (@gutter-width * 0.75) 0;
+  color: @sk-form-accent;
   font-weight: @sk-bold;
 
   .sectionContainer:first-child & {
@@ -62,9 +59,9 @@
 
 .suggestion {
   .rawText();
-  line-height: (@grid-row-height * @suggestionFieldHeightInRows);
-  height: (@grid-row-height * @suggestionFieldHeightInRows);
-  padding: 0 (@grid-gutter-width * 0.75);
+  line-height: (@row-height * @suggestionFieldHeightInRows);
+  height: (@row-height * @suggestionFieldHeightInRows);
+  padding: 0 (@gutter-width * 0.75);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

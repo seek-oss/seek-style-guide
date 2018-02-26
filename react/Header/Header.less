@@ -1,7 +1,7 @@
 @import (reference) "~seek-style-guide/theme";
 
-@headerHeightDesktop: @grid-row-height * 9;
-@headerHeightMobile: @grid-row-height * 7;
+@headerHeightDesktop: @row-height * 13;
+@headerHeightMobile: @row-height * 11;
 
 .root {
   width: 100%;
@@ -27,8 +27,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 (@grid-gutter-width / 2);
-  max-width: @grid-container-width + @grid-gutter-width;
+  padding: 0 (@gutter-width / 2);
+  max-width: @container-width + @gutter-width;
   @media @mobile {
     height: @headerHeightMobile;
   }
@@ -45,7 +45,7 @@
   order: 0;
   width: 100%;
   background-color: @sk-background;
-  padding: 0 (@grid-gutter-width / 2);
+  padding: 0 (@gutter-width / 2);
 }
 
 .topBannerContent {
@@ -53,7 +53,7 @@
   display: flex;
   flex-grow: 1;
   justify-content: center;
-  max-width: @grid-container-width;
+  max-width: @container-width;
   margin: 0 auto;
 }
 

@@ -5,11 +5,11 @@
 @footer-classic: ~"and (min-width: 1025px)";
 
 .footerText() {
-  .rawText();
-  line-height: (@grid-row-height * 4);
-  height: (@grid-row-height * 4);
+  .rawText(@small-type-scale);
+  line-height: (@row-height * 6);
+  height: (@row-height * 6);
   @media only screen @footer-vertical {
-    .touchableText(@standard-type-scale);
+    .touchableText(@small-type-scale);
   }
 }
 
@@ -18,7 +18,7 @@
   display: inline-block;
   color: @sk-link-on-mid-gray-light;
   @media only screen @footer-vertical {
-    .touchableText(@standard-type-scale);
+    .touchableText(@small-type-scale);
   }
   @media only screen @footer-horizontal {
     .footerText();

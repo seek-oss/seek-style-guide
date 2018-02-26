@@ -7,7 +7,7 @@ import lessToJs from 'less-vars-to-js';
 
 import grid from '!!raw-loader!seek-style-guide/theme/layout/grid.less';
 const gridValues = lessToJs(grid);
-const rowHeight = parseInt(gridValues['@grid-row-height'], 10);
+const rowHeight = parseInt(gridValues['@row-height'], 10);
 
 export default function Droplet({ color, outline, outlineColor, showHex, showVariable, variableName, sizeInRows }) {
   const size = sizeInRows * rowHeight;

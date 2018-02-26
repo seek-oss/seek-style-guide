@@ -40,7 +40,7 @@
 
 .activityPanel {
   @media @desktop {
-    padding-top: @grid-row-height;
+    padding-top: (@row-height * 2);
   }
 }
 
@@ -48,15 +48,15 @@
   @media only screen and (max-width: 740px) {
     border-top: 1px solid @sk-gray-medium;
     border-bottom: 1px solid @sk-gray-medium;
-    margin: 0 -@grid-gutter-width;
-    padding: 0 @grid-gutter-width;
+    margin: 0 -@gutter-width;
+    padding: 0 @gutter-width;
 
     :global(div) {
-      line-height: (@grid-row-height * 3);
+      line-height: (@row-height * 5);
     }
   }
   @media @desktop {
-    padding-top: @grid-row-height;
+    padding-top: (@row-height * 2);
   }
 }
 

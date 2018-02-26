@@ -10,9 +10,7 @@ const sizes = [
   'headline',
   'heading',
   'subheading',
-  'superstandard',
   'standard',
-  'substandard',
   'small'
 ];
 const typeVars = lessToJs(type);
@@ -34,24 +32,12 @@ export const text = {
   [`${symbolNames.headline}`]: <Text headline>Headline text</Text>,
   [`${symbolNames.heading}`]: <Text heading>Heading text</Text>,
   [`${symbolNames.subheading}`]: <Text subheading>Subheading text</Text>,
-  [`${symbolNames.superstandard}/1. Default`]: <Text superstandard>Superstandard text</Text>,
-  [`${symbolNames.superstandard}/2. Secondary`]: <Text superstandard secondary>Superstandard critical text</Text>,
-  [`${symbolNames.superstandard}/3. Strong`]: <Text superstandard strong>Superstandard strong text</Text>,
-  [`${symbolNames.superstandard}/4. Positive`]: <Text superstandard positive>Superstandard positive text</Text>,
-  [`${symbolNames.superstandard}/5. Critical`]: <Text superstandard critical>Superstandard critical text</Text>,
-  [`${symbolNames.superstandard}/6. Link`]: <Text superstandard><TextLink href="#">Superstandard link text</TextLink></Text>,
   [`${symbolNames.standard}/1. Default`]: <Text>Standard text</Text>,
   [`${symbolNames.standard}/2. Secondary`]: <Text secondary>Standard critical text</Text>,
   [`${symbolNames.standard}/3. Strong`]: <Text strong>Standard strong text</Text>,
   [`${symbolNames.standard}/4. Positive`]: <Text positive>Standard positive text</Text>,
   [`${symbolNames.standard}/5. Critical`]: <Text critical>Standard critical text</Text>,
   [`${symbolNames.standard}/6. Link`]: <Text><TextLink href="#">Standard link text</TextLink></Text>,
-  [`${symbolNames.substandard}/1. Default`]: <Text substandard>Substandard text</Text>,
-  [`${symbolNames.substandard}/2. Secondary`]: <Text substandard secondary>Substandard critical text</Text>,
-  [`${symbolNames.substandard}/3. Strong`]: <Text substandard strong>Substandard strong text</Text>,
-  [`${symbolNames.substandard}/4. Positive`]: <Text substandard positive>Substandard positive text</Text>,
-  [`${symbolNames.substandard}/5. Critical`]: <Text substandard critical>Substandard critical text</Text>,
-  [`${symbolNames.substandard}/6. Link`]: <Text substandard><TextLink href="#">Substandard link text</TextLink></Text>,
   [`${symbolNames.small}`]: <Text small>Small text</Text>
 };
 

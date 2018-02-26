@@ -107,11 +107,19 @@ The following colors are provided:
 
 ```less
 // Brand colors
+@sk-blue-darker
+@sk-blue-dark
 @sk-blue
+@sk-blue-light
+@sk-blue-lighter
 @sk-pink
 @sk-green
+@sk-green-light
 @sk-purple
 @sk-teal
+@sk-orange
+@sk-yellow
+@sk-yellow-light
 
 // Partner brand colors
 @sk-business
@@ -137,13 +145,17 @@ The following colors are provided:
 @sk-link-visited
 @sk-focus
 @sk-highlight
-@sk-green-light
-@sk-yellow
-@sk-yellow-light
-@sk-orange
 @sk-footer
 @sk-background
-@sk-yellow
+@sk-form-accent
+@sk-positive-light
+@sk-positive
+@sk-info-light
+@sk-info
+@sk-critical-light
+@sk-critical
+@sk-help-light
+@sk-help
 ```
 
 ### Z-Indexes
@@ -178,17 +190,17 @@ Please note that this list is not exhaustive, so contributions are encouraged. T
 In order to ensure elements correctly follow the grid, element sizing should always be controlled by the following variables:
 
 ```less
-@grid-row-height
-@grid-gutter-width
-@grid-column-width
-@grid-container-width
+@row-height
+@gutter-width
+@column-width
+@container-width
 ```
 
 When defining a document content container:
 
 ```less
 .element {
-  max-width: @grid-container-width;
+  max-width: @container-width;
 }
 ```
 
@@ -196,9 +208,9 @@ When defining heights and vertical padding/margins:
 
 ```less
 .element {
-  height: (@grid-row-height * 3);
-  padding-bottom: @grid-row-height;
-  margin-bottom: @grid-row-height;
+  height: (@row-height * 3);
+  padding-bottom: @row-height;
+  margin-bottom: @row-height;
 }
 ```
 
@@ -206,9 +218,9 @@ When defining widths and horizontal padding/margins:
 
 ```less
 .element {
-  width: (@grid-column-width * 3);
-  padding-right: @grid-gutter-width;
-  margin-right: @grid-column-width;
+  width: (@column-width * 3);
+  padding-right: @gutter-width;
+  margin-right: @column-width;
 }
 ```
 
@@ -218,7 +230,7 @@ It's important to note that any additions to these values (e.g. borders) will ne
 .element {
   @border-width: 1px;
   border-bottom: @border-width solid @sk-charcoal;
-  padding-bottom: @grid-row-height - @border-width;
+  padding-bottom: @row-height - @border-width;
 }
 ```
 
@@ -332,7 +344,7 @@ Then, include the following in your Babel config:
 
 ### Flow Type Checking
 
-We've opted to include flow type checking in this project. If you're unfamiliar with static type checking you should start by reading React's [overview](https://reactjs.org/docs/static-type-checking.html). 
+We've opted to include flow type checking in this project. If you're unfamiliar with static type checking you should start by reading React's [overview](https://reactjs.org/docs/static-type-checking.html).
 
 This is completely opt-in and if you've decided not to use type checking in your project then **there is nothing you need to do**. It shouldn't impact your ability to include the style guide so long as you are using either [sku](https://github.com/seek-oss/sku) or our [webpack decorator](https://github.com/seek-oss/seek-style-guide-webpack).
 

@@ -54,14 +54,14 @@
   position: absolute;
   right: 0;
   transform-origin: 50% 0;
-  transform: translateY(@grid-row-height * -3);
+  transform: translateY(@row-height * -4);
   transition:
     opacity 0.25s ease,
     transform 0.25s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   pointer-events: none;
   z-index: @z-index-inline-overlay;
   @media @mobile {
-    transform: translateY(@grid-row-height * -1);
+    transform: translateY(@row-height * -1);
     transition:
       opacity 0.25s ease,
       transform 0.25s ease;
@@ -126,14 +126,14 @@
 
 .chevron {
   display: inline-block;
-  margin-left: (@grid-gutter-width / 2);
+  margin-left: (@gutter-width / 2);
   transition: transform 0.3s ease;
   transform-origin: 50% 50%;
   pointer-events: none;
   @media @mobile {
     text-align: center;
-    width: @grid-gutter-width;
-    margin-right: (@grid-gutter-width / 2);
+    width: @gutter-width;
+    margin-right: (@gutter-width / 2);
   }
 }
 
