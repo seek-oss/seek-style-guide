@@ -16,27 +16,27 @@ exports[`Rating should render correct size when size is: heading 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
-      >
-        mock svg
-      </span>
-      <span
-        class="root star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
         class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -61,27 +61,27 @@ exports[`Rating should render correct size when size is: heading and rating text
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -111,27 +111,27 @@ exports[`Rating should render correct size when size is: headline 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
-      >
-        mock svg
-      </span>
-      <span
-        class="root star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
         class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -156,27 +156,27 @@ exports[`Rating should render correct size when size is: headline and rating tex
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -206,27 +206,27 @@ exports[`Rating should render correct size when size is: hero 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
-      >
-        mock svg
-      </span>
-      <span
-        class="root star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
         class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -251,27 +251,27 @@ exports[`Rating should render correct size when size is: hero and rating text is
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -301,27 +301,27 @@ exports[`Rating should render correct star rating when rating is: 0 1`] = `
       class="rating"
     >
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -346,17 +346,12 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
-      >
-        mock svg
-      </span>
-      <span
-        class="root star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
@@ -366,7 +361,12 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -391,27 +391,27 @@ exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -436,27 +436,27 @@ exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
-      >
-        mock svg
-      </span>
-      <span
-        class="root star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
         class="root star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -481,27 +481,27 @@ exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root star"
+        class="root StarIcon star"
       >
         mock svg
       </span>
@@ -526,27 +526,27 @@ exports[`Rating should render correct star rating when rating is: 5 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
@@ -571,27 +571,27 @@ exports[`Rating should render with className 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
@@ -616,27 +616,27 @@ exports[`Rating should render with starClassName 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root StarIcon filled star"
       >
         mock svg
       </span>

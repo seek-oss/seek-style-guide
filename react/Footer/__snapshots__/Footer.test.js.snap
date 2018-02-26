@@ -129,7 +129,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -253,7 +253,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -454,7 +454,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -590,7 +590,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -897,7 +897,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -1021,7 +1021,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -1222,7 +1222,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -1358,7 +1358,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -1665,7 +1665,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -1789,7 +1789,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -1990,7 +1990,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -2126,7 +2126,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -2433,7 +2433,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -2557,7 +2557,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -2758,7 +2758,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -2894,7 +2894,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -3190,7 +3190,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -3314,7 +3314,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>
@@ -3559,7 +3559,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="root ChevronIcon chevron down"
                   >
                     mock svg
                   </span>

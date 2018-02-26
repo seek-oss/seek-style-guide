@@ -23,6 +23,7 @@ exports[`Slide toggle: should render a checked state 1`] = `
       >
         <TickIcon
           className="icon"
+          filled={false}
           svgClassName="svg"
         />
       </div>
@@ -63,6 +64,7 @@ exports[`Slide toggle: should render with default props 1`] = `
       >
         <TickIcon
           className="icon"
+          filled={false}
           svgClassName="svg"
         />
       </div>
@@ -103,6 +105,7 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
       >
         <TickIcon
           className="icon"
+          filled={false}
           svgClassName="svg"
         />
       </div>
@@ -143,6 +146,7 @@ exports[`Slide toggle: should render with the label on the left 1`] = `
       >
         <TickIcon
           className="icon"
+          filled={false}
           svgClassName="svg"
         />
       </div>
