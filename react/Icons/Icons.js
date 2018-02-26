@@ -6,10 +6,8 @@ import React from 'react';
 
 import Icon from '../private/Icon/Icon';
 
-const iconGenerator = (IconName) => {
-
+const iconGenerator = IconName => {
   const IconExportable = ({ filled, direction, className, ...props }) => {
-
     const markup = require(`./svg/${IconName}${filled ? 'Filled' : ''}.svg`);
 
     const combinedProps = {
