@@ -9,7 +9,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const decorateClientConfig = require('seek-style-guide-webpack').decorateClientConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 
-const appCss = new ExtractTextPlugin('app.css');
+const appCss = new ExtractTextPlugin({
+  filename: 'app.css',
+  allChunks: true
+});
 
 // Must be absolute paths
 const appPaths = [
@@ -18,6 +21,8 @@ const appPaths = [
 ];
 
 const config = {
+  mode: 'production',
+
   entry: path.resolve(__dirname, 'src/client-render'),
 
   output: {
@@ -102,21 +107,18 @@ const config = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     }),
-    appCss,
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false
-      }
-    })
+    appCss
   ],
 
-  stats: { children: false }
+  optimization: {
+    minimize: true
+  },
+
+  stats: {
+    children: false
+  }
 };
 
 module.exports = decorateClientConfig(config, {

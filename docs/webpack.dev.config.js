@@ -15,6 +15,8 @@ const appPaths = [
 ];
 
 const config = decorateClientConfig({
+  mode: 'development',
+
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',

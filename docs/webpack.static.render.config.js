@@ -20,6 +20,8 @@ const appPaths = [
 ];
 
 const config = {
+  mode: 'production',
+
   entry: path.resolve(__dirname, 'src/server-render'),
 
   output: {
@@ -27,6 +29,8 @@ const config = {
     filename: 'render.js',
     libraryTarget: 'umd'
   },
+
+  target: 'node',
 
   module: {
     rules: [
@@ -89,7 +93,6 @@ const config = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     }),
     new StaticSiteGeneratorPlugin({
@@ -101,16 +104,12 @@ const config = {
         '/playground'
       ],
       locals: { template }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false
-      }
     })
-  ]
+  ],
+
+  optimization: {
+    minimize: true
+  }
 };
 
 module.exports = decorateServerConfig(config);

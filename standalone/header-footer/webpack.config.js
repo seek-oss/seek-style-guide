@@ -12,7 +12,10 @@ const { decorateClientConfig, decorateServerConfig } = require('seek-style-guide
 const babelConfig = require('../../config/babel.config.js')({ reactHotLoader: false });
 const cssSelectorPrefix = require('./cssSelectorPrefix');
 
-const headerCss = new ExtractTextPlugin('styles.css');
+const headerCss = new ExtractTextPlugin({
+  filename: 'styles.css',
+  allChunks: true
+});
 
 // Must be absolute paths
 const appPaths = [
@@ -79,6 +82,8 @@ const getStyleLoaders = (options = {}) => {
 };
 
 const clientConfig = {
+  mode: 'production',
+
   entry: path.resolve(__dirname, 'src/client.js'),
 
   output: {
@@ -105,27 +110,24 @@ const clientConfig = {
   resolve: resolveConfig,
 
   plugins: [
-    headerCss
-  ].concat(process.env.NODE_ENV !== 'production' ? [
-    new HtmlWebpackPlugin()
-  ] : [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false
-      }
-    })
-  ]),
+    headerCss,
+    ...(process.env.NODE_ENV === 'production' ? [] : [
+      new HtmlWebpackPlugin()
+    ])
+  ],
 
-  stats: { children: false }
+  optimization: {
+    minimize: true
+  },
+
+  stats: {
+    children: false
+  }
 };
 
 const renderConfig = {
+  mode: 'production',
+
   entry: path.resolve(__dirname, 'src/render.js'),
 
   output: {
@@ -133,6 +135,8 @@ const renderConfig = {
     filename: 'render.js',
     libraryTarget: 'umd'
   },
+
+  target: 'node',
 
   module: {
     rules: [
