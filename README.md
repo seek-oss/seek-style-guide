@@ -144,7 +144,6 @@ The following colors are provided:
 @sk-link
 @sk-link-visited
 @sk-focus
-@sk-highlight
 @sk-footer
 @sk-background
 @sk-form-accent
