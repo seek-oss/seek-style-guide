@@ -1,0 +1,29 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+.root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  z-index: @z-index-header-overlay + 1;
+  width: 100%;
+  height: @grid-base * 14;
+  background-color: @saWhite;
+  border-top: 1px solid @saGrey5;
+  @media @desktop {
+    display: none;
+  }
+}
+
+.menuToggle {
+  cursor: pointer;
+}
+
+.svg {
+  fill: @saGrey4;
+  width: @grid-base * 6;
+  height: @grid-base * 6;
+}

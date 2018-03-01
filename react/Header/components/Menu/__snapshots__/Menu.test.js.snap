@@ -1,0 +1,912 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render with default props 1`] = `
+<div
+  className="root"
+>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      JOB SEEKER
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="employerLink"
+      linkUrl="http://brand.seekasia.com"
+    >
+      <Text
+        baseline={true}
+      >
+        Awesome employers click here
+      </Text>
+    </MenuItem>
+  </div>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      SETTINGS
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      className="countryAndLanguage"
+      handleClick={[Function]}
+    >
+      <div>
+        <Text
+          baseline={true}
+        >
+          Country & Language
+        </Text>
+        <Text
+          baseline={true}
+          className="currentLocale"
+          intimate={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </div>
+    </MenuItem>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <Section
+      className="headerMenu"
+    >
+      <Text
+        baseline={true}
+        whisperingTitle={true}
+      >
+        MORE
+      </Text>
+    </Section>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="selectedLocaleItem"
+    >
+      <span
+        className="selectedLocale"
+      >
+        <Text
+          baseline={true}
+        >
+          Hong Kong (English)
+        </Text>
+        <CheckMarkIcon
+          className="selectedLocaleCheck"
+          svgClassName="selectedLocaleCheckIcon"
+        />
+      </span>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="1"
+      linkUrl="https://id.jobsdb.com/id"
+    >
+      <Text
+        baseline={true}
+      >
+        Indonesia (English)
+      </Text>
+    </MenuItem>
+  </div>
+</div>
+`;
+
+exports[`Menu should render with links list 1`] = `
+<div
+  className="root"
+>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      JOB SEEKER
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="0"
+      linkUrl="http://seekasia.com/home"
+    >
+      <Text
+        baseline={true}
+      >
+        Home
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="1"
+      linkUrl="http://seekasia.com/myPortal"
+    >
+      <Text
+        baseline={true}
+      >
+        MyPortal
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="2"
+      linkUrl="http://seekasia.com/resources"
+    >
+      <Text
+        baseline={true}
+      >
+        Resources
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="3"
+      linkUrl="http://seekasia.com/career-insights"
+    >
+      <Text
+        baseline={true}
+      >
+        CareerInsights
+      </Text>
+    </MenuItem>
+  </div>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="employerLink"
+      linkUrl="http://brand.seekasia.com"
+    >
+      <Text
+        baseline={true}
+      >
+        Awesome employers click here
+      </Text>
+    </MenuItem>
+  </div>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      SETTINGS
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      className="countryAndLanguage"
+      handleClick={[Function]}
+    >
+      <div>
+        <Text
+          baseline={true}
+        >
+          Country & Language
+        </Text>
+        <Text
+          baseline={true}
+          className="currentLocale"
+          intimate={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </div>
+    </MenuItem>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <Section
+      className="headerMenu"
+    >
+      <Text
+        baseline={true}
+        whisperingTitle={true}
+      >
+        MORE
+      </Text>
+    </Section>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="selectedLocaleItem"
+    >
+      <span
+        className="selectedLocale"
+      >
+        <Text
+          baseline={true}
+        >
+          Hong Kong (English)
+        </Text>
+        <CheckMarkIcon
+          className="selectedLocaleCheck"
+          svgClassName="selectedLocaleCheckIcon"
+        />
+      </span>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="1"
+      linkUrl="https://id.jobsdb.com/id"
+    >
+      <Text
+        baseline={true}
+      >
+        Indonesia (English)
+      </Text>
+    </MenuItem>
+  </div>
+</div>
+`;
+
+exports[`Menu should render with menu open 1`] = `
+<div
+  className="root showMenu"
+>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      JOB SEEKER
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="employerLink"
+      linkUrl="http://brand.seekasia.com"
+    >
+      <Text
+        baseline={true}
+      >
+        Awesome employers click here
+      </Text>
+    </MenuItem>
+  </div>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      SETTINGS
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      className="countryAndLanguage"
+      handleClick={[Function]}
+    >
+      <div>
+        <Text
+          baseline={true}
+        >
+          Country & Language
+        </Text>
+        <Text
+          baseline={true}
+          className="currentLocale"
+          intimate={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </div>
+    </MenuItem>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <Section
+      className="headerMenu"
+    >
+      <Text
+        baseline={true}
+        whisperingTitle={true}
+      >
+        MORE
+      </Text>
+    </Section>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="selectedLocaleItem"
+    >
+      <span
+        className="selectedLocale"
+      >
+        <Text
+          baseline={true}
+        >
+          Hong Kong (English)
+        </Text>
+        <CheckMarkIcon
+          className="selectedLocaleCheck"
+          svgClassName="selectedLocaleCheckIcon"
+        />
+      </span>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="1"
+      linkUrl="https://id.jobsdb.com/id"
+    >
+      <Text
+        baseline={true}
+      >
+        Indonesia (English)
+      </Text>
+    </MenuItem>
+  </div>
+</div>
+`;
+
+exports[`Menu should render with more links 1`] = `
+<div
+  className="root"
+>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      JOB SEEKER
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="0"
+      linkUrl="http://seekasia.com/home"
+    >
+      <Text
+        baseline={true}
+      >
+        Home
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="1"
+      linkUrl="http://seekasia.com/myPortal"
+    >
+      <Text
+        baseline={true}
+      >
+        MyPortal
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="2"
+      linkUrl="http://seekasia.com/resources"
+    >
+      <Text
+        baseline={true}
+      >
+        Resources
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="3"
+      linkUrl="http://seekasia.com/career-insights"
+    >
+      <Text
+        baseline={true}
+      >
+        CareerInsights
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      key="4"
+    >
+      <Text
+        baseline={true}
+      >
+        More
+      </Text>
+    </MenuItem>
+  </div>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="employerLink"
+      linkUrl="http://brand.seekasia.com"
+    >
+      <Text
+        baseline={true}
+      >
+        Awesome employers click here
+      </Text>
+    </MenuItem>
+  </div>
+  <Section
+    className="headerMenu"
+  >
+    <Text
+      baseline={true}
+      whisperingTitle={true}
+    >
+      SETTINGS
+    </Text>
+  </Section>
+  <div
+    className="menuBody"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      className="countryAndLanguage"
+      handleClick={[Function]}
+    >
+      <div>
+        <Text
+          baseline={true}
+        >
+          Country & Language
+        </Text>
+        <Text
+          baseline={true}
+          className="currentLocale"
+          intimate={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </div>
+    </MenuItem>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <Section
+      className="headerMenu"
+    >
+      <Text
+        baseline={true}
+        whisperingTitle={true}
+      >
+        MORE
+      </Text>
+    </Section>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="moreItem"
+      key="0"
+      linkUrl="http://seekasia.com/overseas-jobs"
+    >
+      <Text
+        baseline={true}
+      >
+        Overseas Jobs
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="moreItem"
+      key="1"
+      linkUrl="http://seekasia.com/fresh-grad-jobs"
+    >
+      <Text
+        baseline={true}
+      >
+        Fresh Grad Jobs
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="moreItem"
+      key="2"
+      linkUrl="http://seekasia.com/classified-jobs"
+    >
+      <Text
+        baseline={true}
+      >
+        Classified Jobs
+      </Text>
+    </MenuItem>
+  </div>
+  <div
+    className="subMenu"
+  >
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      handleClick={[Function]}
+      iconProps={
+        Object {
+          "direction": "left",
+          "svgClassName": "backChevron",
+        }
+      }
+      itemClass="backLink"
+    >
+      <Text
+        baseline={true}
+      >
+        Get back!
+      </Text>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      itemClass="selectedLocaleItem"
+    >
+      <span
+        className="selectedLocale"
+      >
+        <Text
+          baseline={true}
+        >
+          Hong Kong (English)
+        </Text>
+        <CheckMarkIcon
+          className="selectedLocaleCheck"
+          svgClassName="selectedLocaleCheckIcon"
+        />
+      </span>
+    </MenuItem>
+    <MenuItem
+      ItemIcon={[Function]}
+      brandStyles={
+        Object {
+          "employerLink": "employerLink",
+        }
+      }
+      key="1"
+      linkUrl="https://id.jobsdb.com/id"
+    >
+      <Text
+        baseline={true}
+      >
+        Indonesia (English)
+      </Text>
+    </MenuItem>
+  </div>
+</div>
+`;

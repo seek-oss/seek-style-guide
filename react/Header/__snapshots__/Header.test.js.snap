@@ -1,0 +1,590 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should pass through optional props 1`] = `
+<header
+  className="root"
+>
+  <div
+    className="externalNav"
+  >
+    <div
+      className="locale"
+    >
+      <span
+        className="currentLocale"
+      >
+        <FakeComponent
+          className="localeIcon"
+        />
+        <Text
+          baseline={true}
+          whispering={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </span>
+    </div>
+    <div>
+      <Text
+        baseline={true}
+        whispering={true}
+      >
+        Awesome employers should 
+        <a
+          className="employerLink"
+          href="http://brand.seekasia.com"
+        >
+          click here
+        </a>
+      </Text>
+    </div>
+  </div>
+  <div
+    className="primaryNavNoLogin"
+  >
+    <FakeComponent
+      country="my"
+    />
+    <div
+      className="primaryNavLinksWrapper"
+    >
+      <span
+        className="primaryNavLinkWrapper"
+        key="0"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/home"
+        >
+          <Text
+            baseline={true}
+          >
+            Home
+          </Text>
+        </a>
+      </span>
+      <span
+        className="primaryNavLinkWrapper"
+        key="1"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/myPortal"
+        >
+          <Text
+            baseline={true}
+          >
+            MyPortal
+          </Text>
+        </a>
+      </span>
+      <span
+        className="primaryNavLinkWrapper"
+        key="2"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/resources"
+        >
+          <Text
+            baseline={true}
+          >
+            Resources
+          </Text>
+        </a>
+      </span>
+      <span
+        className="primaryNavLinkWrapper"
+        key="3"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/career-insights"
+        >
+          <Text
+            baseline={true}
+          >
+            CareerInsights
+          </Text>
+        </a>
+      </span>
+    </div>
+  </div>
+  <ActionTray
+    activeTab="ACTIVE_TAB_HOME"
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    handleToggleMenu={[Function]}
+    loginAvailable={false}
+    menuOpen={false}
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+  />
+  <Menu
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "ItemIcon": [Function],
+          "title": "Home",
+          "url": "http://seekasia.com/home",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "title": "MyPortal",
+          "url": "http://seekasia.com/myPortal",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "title": "Resources",
+          "url": "http://seekasia.com/resources",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "title": "CareerInsights",
+          "url": "http://seekasia.com/career-insights",
+        },
+      ]
+    }
+    locales={
+      Array [
+        Object {
+          "ItemIcon": [Function],
+          "country": "hk",
+          "language": "en",
+          "title": "Hong Kong (English)",
+          "url": "https://hk.jobsdb.com/hk",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "country": "id",
+          "language": "en",
+          "title": "Indonesia (English)",
+          "url": "https://id.jobsdb.com/id",
+        },
+      ]
+    }
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+    more={
+      Array [
+        Object {
+          "title": "Space Piracy Jobs",
+          "url": "http://seekasia.com/space-piracy",
+        },
+      ]
+    }
+    shouldShowMenu={false}
+  />
+</header>
+`;
+
+exports[`Header should render with default props 1`] = `
+<header
+  className="root"
+>
+  <div
+    className="externalNav"
+  >
+    <div
+      className="locale"
+    >
+      <span
+        className="currentLocale"
+      >
+        <FakeComponent
+          className="localeIcon"
+        />
+        <Text
+          baseline={true}
+          whispering={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </span>
+    </div>
+    <div>
+      <Text
+        baseline={true}
+        whispering={true}
+      >
+        Awesome employers should 
+        <a
+          className="employerLink"
+          href="http://brand.seekasia.com"
+        >
+          click here
+        </a>
+      </Text>
+    </div>
+  </div>
+  <div
+    className="primaryNavNoLogin"
+  >
+    <FakeComponent />
+    <div
+      className="primaryNavLinksWrapper"
+    />
+  </div>
+  <ActionTray
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    handleToggleMenu={[Function]}
+    loginAvailable={false}
+    menuOpen={false}
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+  />
+  <Menu
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    locales={
+      Array [
+        Object {
+          "ItemIcon": [Function],
+          "country": "hk",
+          "language": "en",
+          "title": "Hong Kong (English)",
+          "url": "https://hk.jobsdb.com/hk",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "country": "id",
+          "language": "en",
+          "title": "Indonesia (English)",
+          "url": "https://id.jobsdb.com/id",
+        },
+      ]
+    }
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+    shouldShowMenu={false}
+  />
+</header>
+`;
+
+exports[`Header should render with links list 1`] = `
+<header
+  className="root"
+>
+  <div
+    className="externalNav"
+  >
+    <div
+      className="locale"
+    >
+      <span
+        className="currentLocale"
+      >
+        <FakeComponent
+          className="localeIcon"
+        />
+        <Text
+          baseline={true}
+          whispering={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </span>
+    </div>
+    <div>
+      <Text
+        baseline={true}
+        whispering={true}
+      >
+        Awesome employers should 
+        <a
+          className="employerLink"
+          href="http://brand.seekasia.com"
+        >
+          click here
+        </a>
+      </Text>
+    </div>
+  </div>
+  <div
+    className="primaryNavNoLogin"
+  >
+    <FakeComponent />
+    <div
+      className="primaryNavLinksWrapper"
+    >
+      <span
+        className="primaryNavLinkWrapper"
+        key="0"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/home"
+        >
+          <Text
+            baseline={true}
+          >
+            Home
+          </Text>
+        </a>
+      </span>
+      <span
+        className="primaryNavLinkWrapper"
+        key="1"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/myPortal"
+        >
+          <Text
+            baseline={true}
+          >
+            MyPortal
+          </Text>
+        </a>
+      </span>
+      <span
+        className="primaryNavLinkWrapper"
+        key="2"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/resources"
+        >
+          <Text
+            baseline={true}
+          >
+            Resources
+          </Text>
+        </a>
+      </span>
+      <span
+        className="primaryNavLinkWrapper"
+        key="3"
+      >
+        <a
+          className="primaryNavLink primaryNavLink"
+          href="http://seekasia.com/career-insights"
+        >
+          <Text
+            baseline={true}
+          >
+            CareerInsights
+          </Text>
+        </a>
+      </span>
+    </div>
+  </div>
+  <ActionTray
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    handleToggleMenu={[Function]}
+    loginAvailable={false}
+    menuOpen={false}
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+  />
+  <Menu
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "ItemIcon": [Function],
+          "title": "Home",
+          "url": "http://seekasia.com/home",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "title": "MyPortal",
+          "url": "http://seekasia.com/myPortal",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "title": "Resources",
+          "url": "http://seekasia.com/resources",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "title": "CareerInsights",
+          "url": "http://seekasia.com/career-insights",
+        },
+      ]
+    }
+    locales={
+      Array [
+        Object {
+          "ItemIcon": [Function],
+          "country": "hk",
+          "language": "en",
+          "title": "Hong Kong (English)",
+          "url": "https://hk.jobsdb.com/hk",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "country": "id",
+          "language": "en",
+          "title": "Indonesia (English)",
+          "url": "https://id.jobsdb.com/id",
+        },
+      ]
+    }
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+    shouldShowMenu={false}
+  />
+</header>
+`;
+
+exports[`Header should render with login available 1`] = `
+<header
+  className="root"
+>
+  <div
+    className="externalNav"
+  >
+    <div
+      className="locale"
+    >
+      <span
+        className="currentLocale"
+      >
+        <FakeComponent
+          className="localeIcon"
+        />
+        <Text
+          baseline={true}
+          whispering={true}
+        >
+          Hong Kong (English)
+        </Text>
+      </span>
+    </div>
+    <div>
+      <Text
+        baseline={true}
+        whispering={true}
+      >
+        Awesome employers should 
+        <a
+          className="employerLink"
+          href="http://brand.seekasia.com"
+        >
+          click here
+        </a>
+      </Text>
+    </div>
+  </div>
+  <div
+    className="primaryNav"
+  >
+    <FakeComponent />
+    <div
+      className="primaryNavLinksWrapper"
+    />
+  </div>
+  <ActionTray
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    handleToggleMenu={[Function]}
+    loginAvailable={true}
+    menuOpen={false}
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+  />
+  <Menu
+    brandStyles={
+      Object {
+        "employerLink": "employerLink",
+        "primaryNavLink": "primaryNavLink",
+      }
+    }
+    locales={
+      Array [
+        Object {
+          "ItemIcon": [Function],
+          "country": "hk",
+          "language": "en",
+          "title": "Hong Kong (English)",
+          "url": "https://hk.jobsdb.com/hk",
+        },
+        Object {
+          "ItemIcon": [Function],
+          "country": "id",
+          "language": "en",
+          "title": "Indonesia (English)",
+          "url": "https://id.jobsdb.com/id",
+        },
+      ]
+    }
+    messages={
+      Object {
+        "header.employerLinkPrefix": "Awesome employers should ",
+        "header.employerSiteTitle": "click here",
+        "header.employerSiteUrl": "http://brand.seekasia.com",
+      }
+    }
+    shouldShowMenu={false}
+  />
+</header>
+`;

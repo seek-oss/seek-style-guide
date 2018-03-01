@@ -1,147 +1,56 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
+import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Header.less';
+import { Header as GlobalHeader } from 'seek-asia-style-guide/react';
 import Logo from '../Logo/Logo';
-import {
-  Text,
-  PageBlock,
-  Section,
-  HamburgerIcon,
-  Button
-} from 'seek-asia-style-guide/react';
-import {
-  AUTHENTICATED,
-  UNAUTHENTICATED,
-  AUTH_PENDING
-} from 'seek-asia-style-guide/react/private/authStatusTypes';
-import Nav from './components/Nav/Nav';
-import styles from './header.less';
-import links from './links';
-import localization from '../localization';
+import { HomeIcon, PortalIcon, CompanyIcon, LightbulbIcon, EducationIcon } from 'seek-asia-style-guide/react';
+import { getLocalization, locales } from '../localization';
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isNavActive: false
-    };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleHamburgerClick = this.handleHamburgerClick.bind(this);
-    this.handleNodeRef = this.handleNodeRef.bind(this);
-  }
+const getJobStreetProps = ({ country, language }) => {
+  const messages = getLocalization({ country, language });
 
-  componentWillUnmount() {
-    document.removeEventListener('click', this.handleClick, false);
-  }
+  const links = [
+    { title: messages['header.homeTitle'], url: messages['header.homeUrl'], ItemIcon: HomeIcon },
+    { title: messages['header.myJobStreetTitle'], url: messages['header.myJobStreetUrl'], ItemIcon: PortalIcon },
+    { title: messages['header.companyProfilesTitle'], url: messages['header.companyProfilesUrl'], ItemIcon: CompanyIcon },
+    { title: messages['header.careerInsightsTitle'], url: messages['header.careerInsightsUrl'], ItemIcon: LightbulbIcon },
+    { title: messages['header.educationTitle'], url: messages['header.educationUrl'], ItemIcon: EducationIcon }
+  ];
 
-  handleClick(e) {
-    const userClickedOutsideOfDropdown = !this.dropdownNode.contains(e.target);
-    if (userClickedOutsideOfDropdown) {
-      this.showNav(false);
-    }
-  }
+  const more = [
+    { title: messages['header.overseasJobsTitle'], url: messages['header.overseasJobsUrl'] },
+    { title: messages['header.freshGradJobsTitle'], url: messages['header.freshGradJobsUrl'] },
+    { title: messages['header.classifiedJobsTitle'], url: messages['header.classifiedJobsUrl'] }
+  ];
 
-  handleHamburgerClick() {
-    if (!this.state.isNavActive) {
-      this.showNav(true);
-    }
-  }
+  return {
+    links,
+    messages,
+    more
+  };
+};
 
-  handleNodeRef(node) {
-    this.dropdownNode = node;
-  }
-
-  showNav(shouldShowNav) {
-    const eventAction = shouldShowNav ?
-      'addEventListener' :
-      'removeEventListener';
-    document[eventAction]('click', this.handleClick, false);
-    this.setState({
-      isNavActive: shouldShowNav
-    });
-  }
-
-  render() {
-    const {
-      username,
-      userToken,
-      language,
-      country,
-      authenticationStatus,
-      activeNavLinkTextKey
-    } = this.props;
-    const { isNavActive } = this.state;
-    let userLinks = [];
-    if (authenticationStatus === AUTHENTICATED) {
-      userLinks = links.getUserLinks(username, userToken);
-    } else if (authenticationStatus === UNAUTHENTICATED) {
-      userLinks = links.getLoggedOutUserLinks();
-    }
-    const navLinks = links.getNavLinks(username, userToken);
-    const messages = localization[`${language}-${country}`];
-
-    return (
-      <header
-        className={styles.root}
-        role="banner"
-        aria-label="Primary navigation">
-        {/*
-          * PageBlock / Section being a functional component doesn't work with `ref`.
-          * https://reactjs.org/docs/refs-and-the-dom.html
-         */}
-        <PageBlock
-          className={classNames({
-            [styles.navWrapper]: true,
-            [styles.navWrapperHideOnMobile]: !isNavActive
-          })}>
-          <div className={styles.navContainer} ref={this.handleNodeRef}>
-            <Nav
-              key={'navLinks'}
-              links={navLinks}
-              messages={messages}
-              activeNavLinkTextKey={activeNavLinkTextKey}
-            />
-            {authenticationStatus === AUTH_PENDING || (
-              <Nav key={'userLinks'} links={userLinks} messages={messages} />
-            )}
-          </div>
-        </PageBlock>
-        <PageBlock className={styles.bannerWrapper}>
-          <Section className={styles.bannerContainer}>
-            <Button
-              className={styles.toggle}
-              onClick={this.handleHamburgerClick}>
-              <HamburgerIcon />
-            </Button>
-            <div className={styles.logoContainer}>
-              <a href="/" title={messages['header.homeTitle']}>
-                <Logo className={styles.logo} />
-              </a>
-            </div>
-            <a
-              className={styles.employerLink}
-              href={messages['header.employerLink']}
-              title={messages['header.employerTitle']}>
-              <Text strong>{messages['header.employerText']}</Text>
-            </a>
-          </Section>
-        </PageBlock>
-      </header>
-    );
-  }
-}
+const Header = ({ country = 'my', language = 'en', activeTab, loginAvailable = false }) => {
+  return (
+    <GlobalHeader
+      LogoComponent={Logo}
+      logoProps={{ country }}
+      activeTab={activeTab}
+      loginAvailable={loginAvailable}
+      {...getJobStreetProps({ country, language })}
+      brandStyles={styles}
+      locales={locales}
+      country={country}
+      language={language}
+    />
+  );
+};
 
 Header.propTypes = {
-  username: PropTypes.string,
-  userToken: PropTypes.string,
-  authenticationStatus: PropTypes.oneOf([
-    AUTHENTICATED,
-    UNAUTHENTICATED,
-    AUTH_PENDING
-  ]).isRequired,
-  language: PropTypes.string.isRequired,
-  country: PropTypes.string.isRequired,
-  activeNavLinkTextKey: PropTypes.string
+  country: PropTypes.string,
+  language: PropTypes.string,
+  activeTab: PropTypes.string,
+  loginAvailable: PropTypes.bool
 };
 
 export default Header;

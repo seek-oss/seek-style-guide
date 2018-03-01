@@ -115,19 +115,9 @@ When defining heights and vertical padding/margins:
 
 ```less
 .element {
-  height: (@grid-row-height * 3);
-  padding-bottom: @grid-row-height;
-  margin-bottom: @grid-row-height;
-}
-```
-
-When defining widths and horizontal padding/margins:
-
-```less
-.element {
-  width: (@grid-column-width * 3);
-  padding-right: @grid-gutter-width;
-  margin-right: @grid-column-width;
+  height: (@grid-base * 6);
+  padding-bottom: @grid-base;
+  margin-bottom: @grid-base * 2;
 }
 ```
 
@@ -137,7 +127,7 @@ It's important to note that any additions to these values (e.g. borders) will ne
 .element {
   @border-width: 1px;
   border-bottom: @border-width solid @sk-charcoal;
-  padding-bottom: @grid-row-height - @border-width;
+  padding-bottom: @grid-base * 2 - @border-width;
 }
 ```
 

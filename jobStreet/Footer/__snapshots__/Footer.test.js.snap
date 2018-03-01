@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer component Localisation should render en-id 1`] = `
+exports[`Footer component Localization should render en-id 1`] = `
 <footer
   className="container"
 >
@@ -26,6 +26,33 @@ exports[`Footer component Localisation should render en-id 1`] = `
         "footer.siteMapLinkText": "Site Map",
         "footer.termsLink": "https://jobstreet.co.id/en/about-us/terms-of-use/",
         "footer.termsLinkText": "Term of Use",
+        "header.careerInsightsTitle": "Career Insights",
+        "header.careerInsightsUrl": "https://jobstreet.co.id/en/career-insights",
+        "header.classifiedJobsTitle": "Classified Jobs",
+        "header.classifiedJobsUrl": "https://jobstreet.co.id/en/job-search/classified-ads.php",
+        "header.companyProfilesTitle": "Company Profiles",
+        "header.companyProfilesUrl": "https://jobstreet.co.id/en/companies/",
+        "header.educationTitle": "Education",
+        "header.educationUrl": "https://jobstreet.co.id/en/career-insights",
+        "header.employerLinkPrefix": "Looking to hire? Check out our ",
+        "header.employerSiteTitle": "Employer Site",
+        "header.employerSiteUrl": "\${baseUrlWithLanguage}/cms/employer",
+        "header.freshGradJobsTitle": "Fresh Grad Jobs",
+        "header.freshGradJobsUrl": "https://jobstreet.co.id/en/job-search/campus/job-vacancy.php",
+        "header.homeTitle": "Home",
+        "header.homeUrl": "https://jobstreet.co.id",
+        "header.myAccountTitle": "My Account",
+        "header.myAccountUrl": "https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?",
+        "header.myJobStreetTitle": "MyJobStreet",
+        "header.myJobStreetUrl": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my",
+        "header.overseasJobsTitle": "Overseas Jobs",
+        "header.overseasJobsUrl": "https://jobstreet.co.id/en/job-search/browse/find-overseas-jobs",
+        "menu.backToMenu": "Back to Menu",
+        "menu.countryAndLanguage": "Country & Language",
+        "menu.jobSeekerHeader": "JOB SEEKER",
+        "menu.more": "More",
+        "menu.moreHeader": "MORE",
+        "menu.settingsHeader": "SETTINGS",
       }
     }
   />
@@ -37,7 +64,7 @@ exports[`Footer component Localisation should render en-id 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render en-my 1`] = `
+exports[`Footer component Localization should render en-my 1`] = `
 <footer
   className="container"
 >
@@ -63,54 +90,33 @@ exports[`Footer component Localisation should render en-my 1`] = `
         "footer.siteMapLinkText": "Site Map",
         "footer.termsLink": "https://jobstreet.com.my/en/about-us/terms-of-use/",
         "footer.termsLinkText": "Term of Use",
-        "header.careerInsightsLink": "https://jobstreet.com.my/en/career-insights",
-        "header.careerInsightsText": "Career Insights",
-        "header.careerInsightsTitle": "JobStreet.com Malaysia - Career Insights",
-        "header.classifiedJobsLink": "https://www.jobstreet.com.my/en/job-search/classified-ads.php",
-        "header.classifiedJobsText": "Classified Jobs",
-        "header.classifiedJobsTitle": "",
-        "header.companyProfilesLink": "https://jobstreet.com.my/en/companies",
-        "header.companyProfilesText": "Company Profiles",
-        "header.companyProfilesTitle": "JobStreet.com Malaysia - Company Profiles",
-        "header.employerLink": "https://jobstreet.com.my/en/cms/employer",
-        "header.employerText": "Employer",
-        "header.employerTitle": "Post a Job Ad: +603-2176 0333",
-        "header.freshGradJobsLink": "https://www.jobstreet.com.my/en/job-search/campus/job-vacancy.php",
-        "header.freshGradJobsText": "Fresh Grad Jobs",
-        "header.freshGradJobsTitle": "",
-        "header.helpLink": "https://myjobstreet.jobstreet.com.my/home/help.php?",
-        "header.helpText": "Help",
-        "header.helpTitle": "",
-        "header.homeLink": "https://jobstreet.com.my",
-        "header.homeText": "Home",
-        "header.homeTitle": "Leading Job Site in Malaysia - Find Jobs in Malaysia",
-        "header.jobStreetEducationLink": "https://www.jobstreeteducation.com.my/",
-        "header.jobStreetEducationText": "Education",
-        "header.jobStreetEducationTitle": "",
-        "header.loginLink": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my&language_code=3",
-        "header.loginText": "Log In",
-        "header.loginTitle": "",
-        "header.logoutLink": "https://myjobstreet.jobstreet.com.my/home/logout.php?",
-        "header.logoutText": "Logout",
-        "header.logoutTitle": "",
-        "header.moreText": "More",
-        "header.moreTitle": "",
-        "header.myAccountLink": "https://myjobstreet.jobstreet.com.my/registration/update-account.php?",
-        "header.myAccountText": "My Account",
-        "header.myAccountTitle": "",
-        "header.myJobStreetLink": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my",
-        "header.myJobStreetLoggedInLink": "https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?",
-        "header.myJobStreetText": "MyJobStreet",
-        "header.myJobStreetTitle": "Post Resume, Signup for Job Alert & Apply for Jobs @ MyJobStreet Malaysia",
-        "header.overseasJobsLink": "https://www.jobstreet.com.my/en/job-search/browse/find-overseas-jobs",
-        "header.overseasJobsText": "Overseas Jobs",
-        "header.overseasJobsTitle": "",
-        "header.searchLink": "https://srp-alpha.jobstreet.com",
-        "header.searchText": "Search Jobs",
-        "header.searchTitle": "Search Jobs @ Job Search JobStreet.com Malaysia",
-        "header.signUpLink": "https://myjobstreet.jobstreet.com.my/registration/simple-signup.php?site=my&language_code=3",
-        "header.signUpText": "Sign Up",
-        "header.signUpTitle": "",
+        "header.careerInsightsTitle": "Career Insights",
+        "header.careerInsightsUrl": "https://jobstreet.com.my/en/career-insights",
+        "header.classifiedJobsTitle": "Classified Jobs",
+        "header.classifiedJobsUrl": "https://jobstreet.com.my/en/job-search/classified-ads.php",
+        "header.companyProfilesTitle": "Company Profiles",
+        "header.companyProfilesUrl": "https://jobstreet.com.my/en/companies/",
+        "header.educationTitle": "Education",
+        "header.educationUrl": "https://jobstreet.com.my/en/career-insights",
+        "header.employerLinkPrefix": "Looking to hire? Check out our ",
+        "header.employerSiteTitle": "Employer Site",
+        "header.employerSiteUrl": "\${baseUrlWithLanguage}/cms/employer",
+        "header.freshGradJobsTitle": "Fresh Grad Jobs",
+        "header.freshGradJobsUrl": "https://jobstreet.com.my/en/job-search/campus/job-vacancy.php",
+        "header.homeTitle": "Home",
+        "header.homeUrl": "https://jobstreet.com.my",
+        "header.myAccountTitle": "My Account",
+        "header.myAccountUrl": "https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?",
+        "header.myJobStreetTitle": "MyJobStreet",
+        "header.myJobStreetUrl": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my",
+        "header.overseasJobsTitle": "Overseas Jobs",
+        "header.overseasJobsUrl": "https://jobstreet.com.my/en/job-search/browse/find-overseas-jobs",
+        "menu.backToMenu": "Back to Menu",
+        "menu.countryAndLanguage": "Country & Language",
+        "menu.jobSeekerHeader": "JOB SEEKER",
+        "menu.more": "More",
+        "menu.moreHeader": "MORE",
+        "menu.settingsHeader": "SETTINGS",
       }
     }
   />
@@ -122,7 +128,7 @@ exports[`Footer component Localisation should render en-my 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render en-ph 1`] = `
+exports[`Footer component Localization should render en-ph 1`] = `
 <footer
   className="container"
 >
@@ -148,6 +154,33 @@ exports[`Footer component Localisation should render en-ph 1`] = `
         "footer.siteMapLinkText": "Site Map",
         "footer.termsLink": "https://jobstreet.com.ph/en/about-us/terms-of-use/",
         "footer.termsLinkText": "Term of Use",
+        "header.careerInsightsTitle": "Career Insights",
+        "header.careerInsightsUrl": "https://jobstreet.com.ph/en/career-insights",
+        "header.classifiedJobsTitle": "Classified Jobs",
+        "header.classifiedJobsUrl": "https://jobstreet.com.ph/en/job-search/classified-ads.php",
+        "header.companyProfilesTitle": "Company Profiles",
+        "header.companyProfilesUrl": "https://jobstreet.com.ph/en/companies/",
+        "header.educationTitle": "Education",
+        "header.educationUrl": "https://jobstreet.com.ph/en/career-insights",
+        "header.employerLinkPrefix": "Looking to hire? Check out our ",
+        "header.employerSiteTitle": "Employer Site",
+        "header.employerSiteUrl": "\${baseUrlWithLanguage}/cms/employer",
+        "header.freshGradJobsTitle": "Fresh Grad Jobs",
+        "header.freshGradJobsUrl": "https://jobstreet.com.ph/en/job-search/campus/job-vacancy.php",
+        "header.homeTitle": "Home",
+        "header.homeUrl": "https://jobstreet.com.ph",
+        "header.myAccountTitle": "My Account",
+        "header.myAccountUrl": "https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?",
+        "header.myJobStreetTitle": "MyJobStreet",
+        "header.myJobStreetUrl": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my",
+        "header.overseasJobsTitle": "Overseas Jobs",
+        "header.overseasJobsUrl": "https://jobstreet.com.ph/en/job-search/browse/find-overseas-jobs",
+        "menu.backToMenu": "Back to Menu",
+        "menu.countryAndLanguage": "Country & Language",
+        "menu.jobSeekerHeader": "JOB SEEKER",
+        "menu.more": "More",
+        "menu.moreHeader": "MORE",
+        "menu.settingsHeader": "SETTINGS",
       }
     }
   />
@@ -159,7 +192,7 @@ exports[`Footer component Localisation should render en-ph 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render en-sg 1`] = `
+exports[`Footer component Localization should render en-sg 1`] = `
 <footer
   className="container"
 >
@@ -185,6 +218,33 @@ exports[`Footer component Localisation should render en-sg 1`] = `
         "footer.siteMapLinkText": "Site Map",
         "footer.termsLink": "https://jobstreet.com.sg/en/about-us/terms-of-use/",
         "footer.termsLinkText": "Term of Use",
+        "header.careerInsightsTitle": "Career Insights",
+        "header.careerInsightsUrl": "https://jobstreet.com.sg/en/career-insights",
+        "header.classifiedJobsTitle": "Classified Jobs",
+        "header.classifiedJobsUrl": "https://jobstreet.com.sg/en/job-search/classified-ads.php",
+        "header.companyProfilesTitle": "Company Profiles",
+        "header.companyProfilesUrl": "https://jobstreet.com.sg/en/companies/",
+        "header.educationTitle": "Education",
+        "header.educationUrl": "https://jobstreet.com.sg/en/career-insights",
+        "header.employerLinkPrefix": "Looking to hire? Check out our ",
+        "header.employerSiteTitle": "Employer Site",
+        "header.employerSiteUrl": "\${baseUrlWithLanguage}/cms/employer",
+        "header.freshGradJobsTitle": "Fresh Grad Jobs",
+        "header.freshGradJobsUrl": "https://jobstreet.com.sg/en/job-search/campus/job-vacancy.php",
+        "header.homeTitle": "Home",
+        "header.homeUrl": "https://jobstreet.com.sg",
+        "header.myAccountTitle": "My Account",
+        "header.myAccountUrl": "https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?",
+        "header.myJobStreetTitle": "MyJobStreet",
+        "header.myJobStreetUrl": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my",
+        "header.overseasJobsTitle": "Overseas Jobs",
+        "header.overseasJobsUrl": "https://jobstreet.com.sg/en/job-search/browse/find-overseas-jobs",
+        "menu.backToMenu": "Back to Menu",
+        "menu.countryAndLanguage": "Country & Language",
+        "menu.jobSeekerHeader": "JOB SEEKER",
+        "menu.more": "More",
+        "menu.moreHeader": "MORE",
+        "menu.settingsHeader": "SETTINGS",
       }
     }
   />
@@ -196,7 +256,7 @@ exports[`Footer component Localisation should render en-sg 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render en-vn 1`] = `
+exports[`Footer component Localization should render en-vn 1`] = `
 <footer
   className="container"
 >
@@ -233,7 +293,7 @@ exports[`Footer component Localisation should render en-vn 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render id-id 1`] = `
+exports[`Footer component Localization should render id-id 1`] = `
 <footer
   className="container"
 >
@@ -259,6 +319,33 @@ exports[`Footer component Localisation should render id-id 1`] = `
         "footer.siteMapLinkText": "Site Map",
         "footer.termsLink": "https://jobstreet.co.id/id/about-us/ketentuan-penggunaan/",
         "footer.termsLinkText": "Ketentuan Penggunaan",
+        "header.careerInsightsTitle": "Career Insights",
+        "header.careerInsightsUrl": "https://jobstreet.co.id/id/career-insights",
+        "header.classifiedJobsTitle": "Classified Jobs",
+        "header.classifiedJobsUrl": "https://jobstreet.co.id/id/job-search/classified-ads.php",
+        "header.companyProfilesTitle": "Company Profiles",
+        "header.companyProfilesUrl": "https://jobstreet.co.id/id/companies/",
+        "header.educationTitle": "Education",
+        "header.educationUrl": "https://jobstreet.co.id/id/career-insights",
+        "header.employerLinkPrefix": "Looking to hire? Check out our ",
+        "header.employerSiteTitle": "Employer Site",
+        "header.employerSiteUrl": "\${baseUrlWithLanguage}/cms/employer",
+        "header.freshGradJobsTitle": "Fresh Grad Jobs",
+        "header.freshGradJobsUrl": "https://jobstreet.co.id/id/job-search/campus/job-vacancy.php",
+        "header.homeTitle": "Home",
+        "header.homeUrl": "https://jobstreet.co.id",
+        "header.myAccountTitle": "My Account",
+        "header.myAccountUrl": "https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?",
+        "header.myJobStreetTitle": "MyJobStreet",
+        "header.myJobStreetUrl": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my",
+        "header.overseasJobsTitle": "Overseas Jobs",
+        "header.overseasJobsUrl": "https://jobstreet.co.id/id/job-search/browse/find-overseas-jobs",
+        "menu.backToMenu": "Back to Menu",
+        "menu.countryAndLanguage": "Country & Language",
+        "menu.jobSeekerHeader": "JOB SEEKER",
+        "menu.more": "More",
+        "menu.moreHeader": "MORE",
+        "menu.settingsHeader": "SETTINGS",
       }
     }
   />
@@ -270,7 +357,7 @@ exports[`Footer component Localisation should render id-id 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render vi-vn 1`] = `
+exports[`Footer component Localization should render vi-vn 1`] = `
 <footer
   className="container"
 >
@@ -296,6 +383,33 @@ exports[`Footer component Localisation should render vi-vn 1`] = `
         "footer.siteMapLinkText": "Site Map",
         "footer.termsLink": "https://jobstreet.vn/vi/about-us/dieu-khoan-su-dung/",
         "footer.termsLinkText": "Điều Khoản Sử Dụng",
+        "header.careerInsightsTitle": "Career Insights",
+        "header.careerInsightsUrl": "https://jobstreet.vn/vi/career-insights",
+        "header.classifiedJobsTitle": "Classified Jobs",
+        "header.classifiedJobsUrl": "https://jobstreet.vn/vi/job-search/classified-ads.php",
+        "header.companyProfilesTitle": "Company Profiles",
+        "header.companyProfilesUrl": "https://jobstreet.vn/vi/companies/",
+        "header.educationTitle": "Education",
+        "header.educationUrl": "https://jobstreet.vn/vi/career-insights",
+        "header.employerLinkPrefix": "Looking to hire? Check out our ",
+        "header.employerSiteTitle": "Employer Site",
+        "header.employerSiteUrl": "\${baseUrlWithLanguage}/cms/employer",
+        "header.freshGradJobsTitle": "Fresh Grad Jobs",
+        "header.freshGradJobsUrl": "https://jobstreet.vn/vi/job-search/campus/job-vacancy.php",
+        "header.homeTitle": "Home",
+        "header.homeUrl": "https://jobstreet.vn",
+        "header.myAccountTitle": "My Account",
+        "header.myAccountUrl": "https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?",
+        "header.myJobStreetTitle": "MyJobStreet",
+        "header.myJobStreetUrl": "https://myjobstreet.jobstreet.com.my/home/login.php?site=my",
+        "header.overseasJobsTitle": "Overseas Jobs",
+        "header.overseasJobsUrl": "https://jobstreet.vn/vi/job-search/browse/find-overseas-jobs",
+        "menu.backToMenu": "Back to Menu",
+        "menu.countryAndLanguage": "Country & Language",
+        "menu.jobSeekerHeader": "JOB SEEKER",
+        "menu.more": "More",
+        "menu.moreHeader": "MORE",
+        "menu.settingsHeader": "SETTINGS",
       }
     }
   />

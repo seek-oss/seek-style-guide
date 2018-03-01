@@ -45,7 +45,7 @@ export default function Text({
         [styles.shouting]: shouting,
         [styles.waving]: waving,
         [styles.whistling]: whistling,
-        [styles.whiserpingTitle]: whisperingTitle,
+        [styles.whisperingTitle]: whisperingTitle,
         [styles.loud]: loud,
         [styles.intimate]: intimate,
         [styles.whispering]: whispering,
