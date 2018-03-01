@@ -59,6 +59,11 @@ export default class App extends Component {
 
 As much as possible, you should aim to minimise the amount of custom CSS you need to write. This is achieved by leveraging our suite of high level components, which are demonstrated on our [style guide documentation site](https://seekinternational.github.io/seek-asia-style-guide/).
 
+## Headers
+
+Please use the branded headers under `JobStreet` and `JobsDB` for candidate-facing sites.  They consume the same underlying header component but you may find it useful to avoid importing the assets of the second brand in a particular build if your users will only see one of them at runtime.
+
+If you're building a variant branded experience, you should consume the underlying `<Header />` component in `/react`.  Note it has a fairly extensive API, see the `JobStreet` and `JobsDB` components for examples of how to pass props in to the `<Header />` component.
 
 ## Low Level Styling
 
