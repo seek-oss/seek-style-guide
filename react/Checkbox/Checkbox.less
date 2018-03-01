@@ -27,17 +27,21 @@
 }
 
 .standard {
-  .touchableText(@conversational-type-scale-mobile);
+  .touchableText(@whistling-type-scale-mobile);
   cursor: pointer;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  line-height: @grid-base * 6;
+  padding: @grid-base 0; 
   @media @desktop {
-    .touchableText(@conversational-type-scale);
+    .touchableText(@whistling-type-scale);
+    line-height: @grid-base * 6;
   }
 
   .fullWidth & {
     justify-content: space-between;
     width: 100%;
+    height: auto;
   }
 }
 
@@ -51,9 +55,11 @@
   border-radius: @field-border-radius;
   padding: @field-border-radius;
   fill: @sk-pink;
+  align-self: flex-start;
 
   &.checked {
     background-color: @actionBlue;
+    border: @field-border-width solid @actionBlue;
   }
 }
 
@@ -67,7 +73,6 @@
 
 .checkMark {
   display: block;
-  width: 100%;
   height: 100%;
   fill: @saWhite;
   opacity: 0;
@@ -79,16 +84,15 @@
 
 .button {
   .activeFocusReset();
-  .touchableText(@conversational-type-scale-mobile);
+  .touchableText(@whistling-type-scale-mobile);
   display: flex;
-  align-items: center;
   justify-content: center;
   background-color: @saWhite;
   color: @saGrey2;
-  border-radius: 2px;
+  border-radius: @field-border-radius;
   cursor: pointer;
   @media @desktop {
-    .touchableText(@conversational-type-scale);
+    .touchableText(@whistling-type-scale);
   }
 
   .input:checked + .label & {
