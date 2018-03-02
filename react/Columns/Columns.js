@@ -28,3 +28,9 @@ Columns.propTypes = {
   flexible: PropTypes.bool,
   reverse: PropTypes.bool
 };
+
+Columns.defaultProps = {
+  tight: false,
+  flexible: false,
+  reverse: false
+};
