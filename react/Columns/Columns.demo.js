@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Columns, PageBlock, Card, Section, Text } from 'seek-style-guide/react';
+import classnames from 'classnames';
+import styles from './Columns.less';
 
 const ColumnsContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>
@@ -52,6 +54,36 @@ export default {
           transformProps: props => ({
             ...props,
             children: makeColumns(4)
+          })
+        }
+      ]
+    },
+    {
+      label: 'Reverse',
+      type: 'checklist',
+      states: [
+        {
+          label: 'Flexible',
+          transformProps: props => ({
+            ...props,
+            flexible: true,
+            className: classnames(styles.columns, styles.columns_flexible)
+          })
+        },
+        {
+          label: 'Tight',
+          transformProps: props => ({
+            ...props,
+            tight: true,
+            className: classnames(styles.columns, styles.columns_tight)
+          })
+        },
+        {
+          label: 'Reverse',
+          transformProps: props => ({
+            ...props,
+            reverse: true,
+            className: classnames(styles.columns, styles.columns_reverse)
           })
         }
       ]
