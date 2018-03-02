@@ -30,4 +30,13 @@ describe('Columns:', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render columns in reverse', () => {
+    const wrapper = shallow(
+      <Columns reverse>
+        <div id="1" />
+        <div id="2" />
+      </Columns>
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
