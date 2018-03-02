@@ -21,6 +21,16 @@ export const symbols = {
       <Checkbox id="checkbox1" label="Checkbox" inputProps={{ checked: false, onChange: noop }} />
     </Container>
   ),
+  'Checkbox/Compact/Checked': (
+    <Container>
+      <Checkbox id="checkbox2" label="Checkbox" compact inputProps={{ checked: true, onChange: noop }} />
+    </Container>
+  ),
+  'Checkbox/Compact/Unchecked': (
+    <Container>
+      <Checkbox id="checkbox1" label="Checkbox" compact inputProps={{ checked: false, onChange: noop }} />
+    </Container>
+  ),
   'Checkbox/Button/Checked': (
     <Container>
       <Checkbox id="checkbox2" label="Checkbox" type="button" inputProps={{ checked: true, onChange: noop }} />

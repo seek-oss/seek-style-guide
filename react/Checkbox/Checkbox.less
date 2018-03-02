@@ -27,21 +27,39 @@
 }
 
 .standard {
-  .touchableText(@whistling-type-scale-mobile);
+  .touchableText(@conversational-type-scale-mobile);
   cursor: pointer;
   display: flex;
   align-items: flex-start;
-  line-height: @grid-base * 6;
+  line-height: @grid-base * 5;
   padding: @grid-base 0;
   @media @desktop {
-    .touchableText(@whistling-type-scale);
-    line-height: @grid-base * 6;
+    .touchableText(@conversational-type-scale);
+    line-height: @grid-base * 5;
   }
 
   .fullWidth & {
     justify-content: space-between;
     width: 100%;
     height: auto;
+  }
+
+  .compact & {
+    .touchableText(@whistling-type-scale-mobile);
+    line-height: @grid-base * 5;
+    @media @desktop {
+      .touchableText(@whistling-type-scale);
+      line-height: @grid-base * 5;
+    }
+  }
+}
+
+.standardLabel {
+  padding: @grid-base / 2 0;
+  .compact & {
+    @media @desktop {
+      padding: 1px 0;
+    }
   }
 }
 
@@ -60,6 +78,14 @@
   &.checked {
     background-color: @actionBlue;
     border: @field-border-width solid @actionBlue;
+  }
+
+  .compact & {
+    @media @desktop {
+      width: @grid-row-height * 5;
+      height: @grid-row-height * 5;
+      padding: @field-border-radius / 2;
+    }
   }
 }
 
@@ -84,7 +110,7 @@
 
 .button {
   .activeFocusReset();
-  .touchableText(@whistling-type-scale-mobile);
+  .touchableText(@conversational-type-scale-mobile);
   display: flex;
   justify-content: center;
   background-color: @saWhite;
@@ -92,11 +118,18 @@
   border-radius: @field-border-radius;
   cursor: pointer;
   @media @desktop {
-    .touchableText(@whistling-type-scale);
+    .touchableText(@conversational-type-scale);
   }
 
   .input:checked + .label & {
     color: @saWhite;
     background-color: @actionBlue;
+  }
+
+  .compact & {
+    .touchableText(@whistling-type-scale-mobile);
+    @media @desktop {
+      .touchableText(@whistling-type-scale);
+    }
   }
 }
