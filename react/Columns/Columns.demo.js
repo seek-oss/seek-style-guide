@@ -59,7 +59,7 @@ export default {
       ]
     },
     {
-      label: 'Reverse',
+      label: 'States',
       type: 'checklist',
       states: [
         {
