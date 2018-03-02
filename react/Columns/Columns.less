@@ -23,17 +23,13 @@
     .columns_tight & {
       padding: 0 (@gutter-width / 4);
     }
-    .columns:not(.columns_reverse) &:first-child {
-      padding-left: 0 !important;
-    }
-    .columns:not(.columns_reverse) &:last-child {
-      padding-right: 0 !important;
-    }
-    .columns_reverse &:first-child {
-      padding-right: 0 !important;
-    }
+    .columns:not(.columns_reverse) &:first-child,
     .columns_reverse &:last-child {
       padding-left: 0 !important;
+    }
+    .columns:not(.columns_reverse) &:last-child,
+    .columns_reverse &:first-child {
+      padding-right: 0 !important;
     }
   }
 }
