@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItem should render with a click handler 1`] = `
+<div
+  className="root"
+>
+  <Button
+    className="item"
+    color="transparent"
+    component="a"
+    fullWidth={false}
+    ghost={false}
+    loading={false}
+    onClick={[MockFunction]}
+  >
+    <span
+      key="children"
+    >
+      Awesome Brand Portal!
+    </span>
+  </Button>
+</div>
+`;
+
+exports[`MenuItem should render with a linkUrl 1`] = `
+<div
+  className="root"
+>
+  <Button
+    className="item"
+    color="transparent"
+    component="a"
+    fullWidth={false}
+    ghost={false}
+    href="https://brand.seekasia.com/"
+    loading={false}
+  >
+    <span
+      key="children"
+    >
+      Awesome Brand Portal!
+    </span>
+  </Button>
+</div>
+`;
+
+exports[`MenuItem should render with all optional props 1`] = `
+<div
+  className="root awesomeClass"
+>
+  <span
+    className="item"
+  >
+    <FakeIcon
+      className="icon"
+      direction="left"
+      key="icon"
+      svgClassName="awesomeSVG menuIcon"
+    />
+    <span
+      className="seriously I thought css modules would solve this precarious css specificity nonsense"
+      key="children"
+    >
+      Awesome Brand Portal!
+    </span>
+  </span>
+</div>
+`;
+
+exports[`MenuItem should render with icon and default props 1`] = `
+<div
+  className="root"
+>
+  <span
+    className="item"
+  >
+    <FakeIcon
+      className="icon"
+      key="icon"
+    />
+    <span
+      key="children"
+    >
+      Awesome Brand Portal!
+    </span>
+  </span>
+</div>
+`;
+
+exports[`MenuItem should render with no icon and default props 1`] = `
+<div
+  className="root"
+>
+  <span
+    className="item"
+  >
+    <span
+      key="children"
+    >
+      Awesome Brand Portal!
+    </span>
+  </span>
+</div>
+`;

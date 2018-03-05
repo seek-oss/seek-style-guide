@@ -1,46 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import markup from './JobsDBLogo.svg';
 import styles from './Logo.less';
-import LogoIcon from './LogoIcon';
 
-export default function Logo({
-  svgClassName,
-  invert,
-  iconClass,
-  ...restProps
-}) {
-  const svgClasses = classnames(svgClassName, {
-    [styles.root]: true,
-    [styles.invert]: invert
-  });
-
-  const height = 44;
-  const width = 200;
+export default function Logo({ svgClassName, className, ...restProps }) {
+  const svgWithClasses = markup
+    .replace('<svg ', `<svg class="${svgClassName}" `);
 
   return (
-    <div {...restProps}>
-      <svg
-        className={svgClasses}
-        xmlns="http://www.w3.org/2000/svg"
-        height={`${height}`}
-        width={`${width}`}
-        viewBox="0 0 802.89 196.75"
-        y="0px"
-        x="0px">
-        <LogoIcon
-          iconClass={(invert && styles.invertedLogoIcon) || iconClass}
-        />
-      </svg>
-    </div>
+    <span className={classnames(styles.logoWrapper, className)} dangerouslySetInnerHTML={{ __html: svgWithClasses }} {...restProps} /> // eslint-disable-line react/no-danger
   );
 }
 
 Logo.propTypes = {
   svgClassName: PropTypes.string,
-  invert: PropTypes.bool,
-  className: PropTypes.string,
-  iconClass: PropTypes.string
+  className: PropTypes.string
 };
 
 Logo.defaultProps = {

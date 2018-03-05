@@ -1,0 +1,46 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+.root {
+  min-height: @grid-base * 12;
+  background-color: @saWhite;
+  border-bottom: 1px solid @saGrey5;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 0 @grid-base * 4;
+  color: @saBlack;
+}
+
+.item:hover,
+.item:active {
+  text-decoration: none;
+}
+
+.item:active {
+  filter: opacity(50%);
+}
+
+.noIcon {
+  height: @grid-base * 12;
+}
+
+.icon {
+  padding-top: @grid-base * 2;
+  margin-right: @grid-base * 8;
+}
+
+/* stylelint-disable */
+/* we need to avoid specificity problems from unpredictable order of imports between icons and MenuItem */
+.icon svg {
+  width: @grid-base * 5 !important;
+  height: @grid-base * 5 !important;
+}
+/* stylelint-enable */
+

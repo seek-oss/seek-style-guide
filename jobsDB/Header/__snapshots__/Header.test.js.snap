@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobsDB Header renders with default props 1`] = `
+<Header
+  LogoComponent={[Function]}
+  activeTab="ACTIVE_TAB_HOME"
+  brandStyles={null}
+  country="hk"
+  language="en"
+  links={
+    Array [
+      Object {
+        "ItemIcon": [Function],
+        "title": "Home",
+        "url": "https://hk.jobsdb.com/hk",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "title": "MyJobsDB",
+        "url": "https://hk.jobsdb.com/hk/en/MyJobsDB",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "title": "Resources",
+        "url": "https://hk.jobsdb.com/en-hk/career-recruitment-advice/",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "title": "Career Insights",
+        "url": "https://hk.jobsdb.com/hk/en/career-insights",
+      },
+    ]
+  }
+  locales={
+    Array [
+      Object {
+        "ItemIcon": [Function],
+        "country": "hk",
+        "language": "en",
+        "title": "Hong Kong (English)",
+        "url": "https://hk.jobsdb.com/hk",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "country": "id",
+        "language": "en",
+        "title": "Indonesia (English)",
+        "url": "https://id.jobsdb.com/id",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "country": "id",
+        "language": "id",
+        "title": "Indonesia (Bahasa)",
+        "url": "https://id.jobsdb.com/id/id",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "country": "sg",
+        "language": "en",
+        "title": "Singapore (English)",
+        "url": "https://sg.jobsdb.com/sg",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "country": "th",
+        "language": "en",
+        "title": "Thailand (English)",
+        "url": "https://th.jobsdb.com/th",
+      },
+      Object {
+        "ItemIcon": [Function],
+        "country": "th",
+        "language": "th",
+        "title": "ไทย (ภาษาไทย)",
+        "url": "https://th.jobsdb.com/th/th",
+      },
+    ]
+  }
+  loginAvailable={false}
+  messages={
+    Object {
+      "header.careerInsightsTitle": "Career Insights",
+      "header.careerInsightsUrl": "https://hk.jobsdb.com/hk/en/career-insights",
+      "header.employerLinkPrefix": "Looking to hire? Check out our ",
+      "header.employerSiteTitle": "Employer Site",
+      "header.employerSiteUrl": "https://hk.jobsdb.com/HK/en/Home/EmployerIndex",
+      "header.homeTitle": "Home",
+      "header.homeUrl": "https://hk.jobsdb.com/hk",
+      "header.myAccountTitle": "My Account",
+      "header.myAccountUrl": "https://hk.jobsdb.com/hk/en/MyJobsDB",
+      "header.myJobsDBTitle": "MyJobsDB",
+      "header.myJobsDBUrl": "https://hk.jobsdb.com/hk/en/MyJobsDB",
+      "header.resourcesTitle": "Resources",
+      "header.resourcesUrl": "https://hk.jobsdb.com/en-hk/career-recruitment-advice/",
+      "menu.backToMenu": "Back to Menu",
+      "menu.countryAndLanguage": "Country & Language",
+      "menu.jobSeekerHeader": "JOB SEEKER",
+      "menu.more": "More",
+      "menu.moreHeader": "MORE",
+      "menu.settingsHeader": "SETTINGS",
+    }
+  }
+/>
+`;

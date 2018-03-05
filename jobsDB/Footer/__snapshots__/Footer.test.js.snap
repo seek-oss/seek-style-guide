@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer component Localisation should render en-hk 1`] = `
+exports[`Footer component Localization should render en-hk 1`] = `
 <footer
   className="container"
 >
@@ -45,7 +45,7 @@ exports[`Footer component Localisation should render en-hk 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render en-id 1`] = `
+exports[`Footer component Localization should render en-id 1`] = `
 <footer
   className="container"
 >
@@ -90,7 +90,7 @@ exports[`Footer component Localisation should render en-id 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render en-sg 1`] = `
+exports[`Footer component Localization should render en-sg 1`] = `
 <footer
   className="container"
 >
@@ -135,7 +135,7 @@ exports[`Footer component Localisation should render en-sg 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render en-th 1`] = `
+exports[`Footer component Localization should render en-th 1`] = `
 <footer
   className="container"
 >
@@ -180,7 +180,7 @@ exports[`Footer component Localisation should render en-th 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render id-id 1`] = `
+exports[`Footer component Localization should render id-id 1`] = `
 <footer
   className="container"
 >
@@ -225,7 +225,7 @@ exports[`Footer component Localisation should render id-id 1`] = `
 </footer>
 `;
 
-exports[`Footer component Localisation should render th-th 1`] = `
+exports[`Footer component Localization should render th-th 1`] = `
 <footer
   className="container"
 >

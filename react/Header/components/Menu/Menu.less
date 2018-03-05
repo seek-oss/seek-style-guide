@@ -1,0 +1,88 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+.root {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: @z-index-header-overlay;
+  background-color: @saGrey6;
+}
+
+.showMenu {
+  display: block;
+}
+
+.headerMenu {
+  display: flex;
+  align-items: center;
+  height: @grid-base * 12;
+  background-color: @saWhite;
+  border-bottom: 1px solid @saGrey5;
+  color: @saGrey3;
+}
+
+.menuBody {
+  margin-bottom: @grid-base * 2;
+  background-color: @saWhite;
+}
+
+.countryAndLanguage {
+  height: @grid-base * 18;
+}
+
+.currentLocale {
+  color: @saGrey3;
+  text-align: left;
+}
+
+.subMenu {
+  &:extend(.root);
+  z-index: @z-index-header-overlay + 1;
+}
+
+.showSubMenu {
+  &:extend(.subMenu);
+  display: block;
+}
+
+.backLink {
+  color: @hyperlink;
+}
+
+.backChevron {
+  color: @hyperlink;
+}
+
+.selectedLocaleItem {
+  flex-grow: 1;
+  height: @grid-base * 12;
+}
+
+.selectedLocale {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 100%;
+}
+
+.selectedLocaleCheck {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.selectedLocaleCheckIcon {
+  color: @hyperlink;
+}
+
+.moreItem {
+  display: flex;
+  align-items: center;
+  height: @grid-base * 12;
+}
+
+.employerLink {
+  color: @hyperlink;
+}

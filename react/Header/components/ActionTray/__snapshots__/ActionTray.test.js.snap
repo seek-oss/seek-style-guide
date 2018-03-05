@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionTray should render with default props 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should render with home tab active 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <HomeIcon
+      svgClassName="svg activeActionTrayIcon"
+    />
+  </div>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should render with login available 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <a
+      href="header.savedJobsUrl"
+    >
+      <BookmarkIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should render with menu open 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg activeActionTrayIcon"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should render with saved jobs tab active 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <BookmarkIcon
+      svgClassName="svg activeActionTrayIcon"
+    />
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should render with search tab active 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <SearchIcon
+      svgClassName="svg activeActionTrayIcon"
+    />
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;

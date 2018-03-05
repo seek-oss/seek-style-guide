@@ -15,7 +15,7 @@ describe('Footer component', () => {
     global.Date = _Date;
   });
 
-  describe('Localisation', () => {
+  describe('Localization', () => {
     it('should render en-my', () => {
       const wrapper = shallow(<Footer language="en" country="my" />);
       expect(wrapper).toMatchSnapshot();

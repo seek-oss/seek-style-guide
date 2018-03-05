@@ -1,48 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import styles from './Logo.less';
-import LogoIcon from './LogoIcon';
 
-export default function Logo({
-  svgClassName,
-  invert,
-  iconClass,
-  ...restProps
-}) {
-  const svgClasses = classnames(svgClassName, {
-    [styles.root]: true,
-    [styles.invert]: invert
-  });
-  const height = 36;
-  const width = 200;
+import markupID from './JobStreetLogoID.svg';
+import markupMY from './JobStreetLogoMY.svg';
+import markupPH from './JobStreetLogoPH.svg';
+import markupSG from './JobStreetLogoSG.svg';
+
+const getMarkup = country => {
+  switch (country.toLowerCase()) {
+    case 'sg':
+      return markupSG;
+    case 'id':
+      return markupID;
+    case 'ph':
+      return markupPH;
+    default:
+      return markupMY;
+  }
+};
+
+export default function Logo({ country, svgClassName, ...restProps }) {
+  const svgWithClasses = getMarkup(country)
+    .replace('<svg ', `<svg class="${svgClassName}" `);
 
   return (
-    <div {...restProps}>
-      <svg
-        className={svgClasses}
-        xmlns="http://www.w3.org/2000/svg"
-        height={`${height}`}
-        width={`${width}`}
-        viewBox="0 0 200 36"
-        y="0px"
-        x="0px">
-        <LogoIcon
-          iconClass={(invert && styles.invertedLogoIcon) || iconClass}
-        />
-      </svg>
-    </div>
+    <span dangerouslySetInnerHTML={{ __html: svgWithClasses }} {...restProps} /> // eslint-disable-line react/no-danger
   );
 }
 
 Logo.propTypes = {
   svgClassName: PropTypes.string,
-  invert: PropTypes.bool,
   className: PropTypes.string,
-  iconClass: PropTypes.string
+  country: PropTypes.string
 };
 
 Logo.defaultProps = {
   svgClassName: '',
-  className: ''
+  className: '',
+  country: 'my'
 };

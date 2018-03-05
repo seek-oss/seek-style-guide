@@ -6,19 +6,5 @@ export default {
   title: 'JobsDB Logo',
   component: Logo,
   initialProps: {},
-  options: [
-    {
-      label: 'States',
-      type: 'checklist',
-      states: [
-        {
-          label: 'Invert',
-          transformProps: props => ({
-            ...props,
-            invert: true
-          })
-        }
-      ]
-    }
-  ]
+  options: []
 };

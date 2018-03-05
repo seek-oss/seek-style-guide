@@ -1,0 +1,74 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+.root {
+  width: 100%;
+  background-color: @saWhite;
+}
+
+.externalNav {
+  display: none;
+  @media @desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: @grid-base * 8;
+    padding: 0 @grid-base * 6;
+    background-color: @saGrey6;
+  }
+}
+
+.currentLocale {
+  display: flex;
+  align-items: center;
+}
+
+.localeIcon {
+  margin: @grid-base @grid-base 0 0;
+}
+
+.employerLink {
+  color: @hyperlink;
+  text-decoration: none;
+}
+
+.primaryNav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  padding: 1px @grid-base * 2 0 @grid-base * 2; /* 1px padding fixes baseline for align-centered items in this container */
+  height: @grid-base * 12;
+  @media @desktop {
+    height: @grid-base * 16;
+    padding: 1px @grid-base * 6 0 @grid-base * 6;
+  }
+}
+
+.primaryNavNoLogin {
+  &:extend(.primaryNav);
+  justify-content: center;
+  @media @desktop {
+    justify-content: flex-start;
+  }
+}
+
+.primaryNavLinksWrapper {
+  display: none;
+  @media @desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: @grid-base * 8;
+  }
+}
+
+.primaryNavLinkWrapper {
+  margin-right: @grid-base * 8;
+}
+
+.primaryNavLink {
+  text-decoration: none;
+}
