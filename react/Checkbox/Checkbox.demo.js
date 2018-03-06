@@ -78,6 +78,19 @@ export default {
       ]
     },
     {
+      label: 'States',
+      type: 'checklist',
+      states: [
+        {
+          label: 'Compact',
+          transformProps: props => ({
+            ...props,
+            compact: true
+          })
+        }
+      ]
+    },
+    {
       label: 'Type',
       type: 'radio',
       states: [

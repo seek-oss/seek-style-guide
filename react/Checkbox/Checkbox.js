@@ -32,7 +32,8 @@ export default class Checkbox extends Component {
     }),
     type: PropTypes.oneOf([STANDARD, BUTTON]),
     position: PropTypes.oneOf([LEFT, RIGHT]),
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    compact: PropTypes.bool
   };
 
   static defaultProps = {
@@ -42,7 +43,8 @@ export default class Checkbox extends Component {
     },
     type: STANDARD,
     position: LEFT,
-    fullWidth: false
+    fullWidth: false,
+    compact: false
   };
 
   renderButton(label) {
@@ -57,7 +59,7 @@ export default class Checkbox extends Component {
     return (
       <div className={styles.standard}>
         {this.renderCheckBox(LEFT)}
-        <span>{label}</span>
+        <span className={styles.standardLabel}>{label}</span>
         {this.renderCheckBox(RIGHT)}
       </div>
     );
@@ -105,12 +107,13 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const { className, fullWidth } = this.props;
+    const { className, fullWidth, compact } = this.props;
 
     const rootClassNames = classnames({
       [styles.root]: true,
       [className]: className,
-      [styles.fullWidth]: fullWidth
+      [styles.fullWidth]: fullWidth,
+      [styles.compact]: compact
     });
 
     return (

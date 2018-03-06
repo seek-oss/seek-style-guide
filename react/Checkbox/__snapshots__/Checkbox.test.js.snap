@@ -22,7 +22,9 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
         className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
     </div>
@@ -51,7 +53,9 @@ exports[`Checkbox inputProps should render as checked 1`] = `
         className="checkBox checkBoxLeft checked"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
     </div>
@@ -80,7 +84,9 @@ exports[`Checkbox should render full width checkbox 1`] = `
         className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
     </div>
@@ -132,7 +138,9 @@ exports[`Checkbox should render with checkbox on left hand side 1`] = `
         className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
     </div>
@@ -157,7 +165,9 @@ exports[`Checkbox should render with checkbox on right hand side 1`] = `
     <div
       className="standard"
     >
-      <span>
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
       <CheckMarkIcon
@@ -190,7 +200,40 @@ exports[`Checkbox should render with className 1`] = `
         className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="standardLabel"
+      >
+        Still in role
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Checkbox should render with compact checkbox style 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="still-in-role"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="still-in-role"
+  >
+    <div
+      className="standard"
+    >
+      <CheckMarkIcon
+        className="checkBox checkBoxLeft"
+        svgClassName="checkMark"
+      />
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
     </div>
@@ -219,7 +262,9 @@ exports[`Checkbox should render with simple props 1`] = `
         className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
     </div>
@@ -248,7 +293,9 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
         className="checkBox checkBoxLeft"
         svgClassName="checkMark"
       />
-      <span>
+      <span
+        className="standardLabel"
+      >
         Still in role
       </span>
     </div>
