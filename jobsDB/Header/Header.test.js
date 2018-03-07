@@ -14,4 +14,15 @@ describe('JobsDB Header', () => {
     const wrapper = shallow(<Header {...defaultProps} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('passes through optional props', () => {
+    const testProps = {
+      ...defaultProps,
+      actionTrayProps: {
+        showSavedJobs: false
+      }
+    };
+    const wrapper = shallow(<Header {...testProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

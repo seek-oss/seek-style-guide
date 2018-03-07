@@ -22,7 +22,7 @@ const getJobsDBProps = ({ country, language }) => {
   };
 };
 
-const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false }) => {
+const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, ...restProps }) => {
   return (
     <GlobalHeader
       LogoComponent={Logo}
@@ -33,6 +33,7 @@ const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = f
       locales={locales}
       country={country}
       language={language}
+      {...restProps}
     />
   );
 };

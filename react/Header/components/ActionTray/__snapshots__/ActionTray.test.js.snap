@@ -1,5 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ActionTray should not render home link if showHome prop is explicitly false 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should not render menu button if showMenu prop is explicitly false 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ActionTray should not render saved jobs link if showSavedJobs prop is explicitly false 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div>
+    <a
+      href="header.searchUrl"
+    >
+      <SearchIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should not render search link if showSearch prop is explicitly false 1`] = `
+<div
+  className="root"
+>
+  <div>
+    <a
+      href="header.homeUrl"
+    >
+      <HomeIcon
+        svgClassName="svg"
+      />
+    </a>
+  </div>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HamburgerIcon
+      svgClassName="svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionTray should not render tray if showTray prop is explicitly false 1`] = `""`;
+
 exports[`ActionTray should render with default props 1`] = `
 <div
   className="root"

@@ -63,7 +63,7 @@ export default class Header extends Component {
   }
 
   render() {
-    const { loginAvailable = false, LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language } = this.props;
+    const { loginAvailable = false, LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps } = this.props;
     const localeList = sortCurrentLocaleToTop({ locales, country, language });
     const menuOpen = this.state.menuOpen;
 
@@ -81,7 +81,7 @@ export default class Header extends Component {
           <LogoComponent {...logoProps} />
           { renderPrimaryNavLinks({ links, brandStyles }) }
         </div>
-        <ActionTray brandStyles={brandStyles} messages={messages} menuOpen={menuOpen} handleToggleMenu={this.handleToggleMenu.bind(this)} loginAvailable={loginAvailable} activeTab={activeTab} />
+        <ActionTray {...actionTrayProps} brandStyles={brandStyles} messages={messages} menuOpen={menuOpen} handleToggleMenu={this.handleToggleMenu.bind(this)} loginAvailable={loginAvailable} activeTab={activeTab} />
         <Menu shouldShowMenu={menuOpen} messages={messages} links={links} more={more} locales={localeList} brandStyles={brandStyles} />
       </header>
     );
@@ -99,5 +99,6 @@ Header.propTypes = {
   country: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
   messages: PropTypes.object.isRequired,
-  brandStyles: PropTypes.object.isRequired
+  brandStyles: PropTypes.object.isRequired,
+  actionTrayProps: PropTypes.object
 };

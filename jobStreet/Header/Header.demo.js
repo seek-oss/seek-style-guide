@@ -15,6 +15,57 @@ export default {
     activeTab: ACTIVE_TAB_HOME
   },
   options: [{
+    label: 'States',
+    type: 'checklist',
+    states: [
+      {
+        label: 'Hide Tray',
+        transformProps: props => ({
+          ...props,
+          actionTrayProps: {
+            ...props.actionTrayProps,
+            showTray: false
+          }
+        })
+      }, {
+        label: 'Hide Home',
+        transformProps: props => ({
+          ...props,
+          actionTrayProps: {
+            ...props.actionTrayProps,
+            showHome: false
+          }
+        })
+      }, {
+        label: 'Hide Search',
+        transformProps: props => ({
+          ...props,
+          actionTrayProps: {
+            ...props.actionTrayProps,
+            showSearch: false
+          }
+        })
+      }, {
+        label: 'Hide Saved Jobs',
+        transformProps: props => ({
+          ...props,
+          actionTrayProps: {
+            ...props.actionTrayProps,
+            showSavedJobs: false
+          }
+        })
+      }, {
+        label: 'Hide Menu',
+        transformProps: props => ({
+          ...props,
+          actionTrayProps: {
+            ...props.actionTrayProps,
+            showMenu: false
+          }
+        })
+      }
+    ]
+  }, {
     label: 'Locale',
     type: 'radio',
     states: [

@@ -68,4 +68,49 @@ describe('ActionTray', () => {
     const wrapper = shallow(<ActionTray {...testProps} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should not render tray if showTray prop is explicitly false', () => {
+    const testProps = {
+      ...defaultProps,
+      showTray: false
+    };
+    const wrapper = shallow(<ActionTray {...testProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should not render home link if showHome prop is explicitly false', () => {
+    const testProps = {
+      ...defaultProps,
+      showHome: false
+    };
+    const wrapper = shallow(<ActionTray {...testProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should not render search link if showSearch prop is explicitly false', () => {
+    const testProps = {
+      ...defaultProps,
+      showSearch: false
+    };
+    const wrapper = shallow(<ActionTray {...testProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should not render saved jobs link if showSavedJobs prop is explicitly false', () => {
+    const testProps = {
+      ...defaultProps,
+      showSavedJobs: false
+    };
+    const wrapper = shallow(<ActionTray {...testProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should not render menu button if showMenu prop is explicitly false', () => {
+    const testProps = {
+      ...defaultProps,
+      showMenu: false
+    };
+    const wrapper = shallow(<ActionTray {...testProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

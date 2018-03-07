@@ -70,7 +70,10 @@ describe('Header', () => {
       links: mockLinks,
       activeTab: 'ACTIVE_TAB_HOME',
       logoProps: { country: 'my' },
-      more: [{ title: 'Space Piracy Jobs', url: 'http://seekasia.com/space-piracy' }]
+      more: [{ title: 'Space Piracy Jobs', url: 'http://seekasia.com/space-piracy' }],
+      actionTrayProps: [{
+        showMenu: false
+      }]
     };
     const wrapper = shallow(<Header {...testProps} />);
     expect(wrapper).toMatchSnapshot();

@@ -30,7 +30,7 @@ const getJobStreetProps = ({ country, language }) => {
   };
 };
 
-const Header = ({ country = 'my', language = 'en', activeTab, loginAvailable = false }) => {
+const Header = ({ country = 'my', language = 'en', activeTab, loginAvailable = false, ...restProps }) => {
   return (
     <GlobalHeader
       LogoComponent={Logo}
@@ -42,6 +42,7 @@ const Header = ({ country = 'my', language = 'en', activeTab, loginAvailable = f
       locales={locales}
       country={country}
       language={language}
+      {...restProps}
     />
   );
 };
