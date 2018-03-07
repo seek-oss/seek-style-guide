@@ -301,44 +301,22 @@ var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
 
 ## Advanced Usage
 
-### Optimising Imports
+### Babel Plugin
 
-**Note: If you're using [sku](https://github.com/seek-oss/sku), this optimisation is already enabled.**
+**Note: If you're using [sku](https://github.com/seek-oss/sku), this plugin is already enabled.**
 
-When importing from the style guide, while it might appear that you are only importing what's needed, it's highly likely that you're actually including the entire style guide in your application bundle ([even when using tree shaking in webpack 2](https://github.com/webpack/webpack/issues/2867)).
-
-In order to help you optimise your bundle size, all components can be imported directly from their individual source files. For example, take a look at standard import statement:
-
-```js
-import { Header, Footer } from 'seek-style-guide/react';
-```
-
-This can also be expressed as separate, file-level imports:
-
-```js
-import Header from 'seek-style-guide/react/Header/Header.js';
-import Footer from 'seek-style-guide/react/Footer/Footer.js';
-```
-
-Rather than transforming this manually, it's recommended that you leverage [Babel](https://babeljs.io/) instead, with [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports) configured to match the pattern used in this style guide.
-
-To set this up, assuming you're already using Babel, first install the plugin:
+In order to help you optimise your bundle size, you can use [babel-plugin-seek-style-guide](https://github.com/seek-oss/babel-plugin-seek-style-guide).
 
 ```bash
-npm install --save-dev babel-plugin-transform-imports
+$ npm install --save-dev babel-plugin-seek-style-guide
 ```
 
-Then, include the following in your Babel config:
+Then, add `seek-style-guide` to the plugins list in your Babel config. For example, in `.babelrc`:
 
-```js
-"plugins": [
-  ["babel-plugin-transform-imports", {
-    "seek-style-guide/react": {
-      "transform": "seek-style-guide/react/${member}/${member}",
-      "preventFullImport": true
-    }
-  }]
-]
+```json
+{
+  "plugins": ["seek-style-guide"]
+}
 ```
 
 ### Flow Type Checking
