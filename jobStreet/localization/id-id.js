@@ -36,7 +36,7 @@ export default {
   'header.myAccountUrl': 'https://myjobstreet.jobstreet.com.my/resume/preview-resume.php?',
   'header.employerSiteTitle': 'Employer Site',
   'header.employerLinkPrefix': 'Looking to hire? Check out our ',
-  'header.employerSiteUrl': '${baseUrlWithLanguage}/cms/employer',
+  'header.employerSiteUrl': `${baseUrlWithLanguage}/cms/employer`,
   'header.overseasJobsTitle': 'Overseas Jobs',
   'header.overseasJobsUrl': `${baseUrlWithLanguage}/job-search/browse/find-overseas-jobs`,
   'header.freshGradJobsTitle': 'Fresh Grad Jobs',

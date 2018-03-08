@@ -4,8 +4,11 @@ exports[`ActionTray should not render home link if showHome prop is explicitly f
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -28,8 +31,11 @@ exports[`ActionTray should not render menu button if showMenu prop is explicitly
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.homeUrl"
     >
       <HomeIcon
@@ -37,8 +43,11 @@ exports[`ActionTray should not render menu button if showMenu prop is explicitly
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -53,8 +62,11 @@ exports[`ActionTray should not render saved jobs link if showSavedJobs prop is e
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.homeUrl"
     >
       <HomeIcon
@@ -62,8 +74,11 @@ exports[`ActionTray should not render saved jobs link if showSavedJobs prop is e
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -86,8 +101,11 @@ exports[`ActionTray should not render search link if showSearch prop is explicit
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.homeUrl"
     >
       <HomeIcon
@@ -112,8 +130,11 @@ exports[`ActionTray should render with default props 1`] = `
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.homeUrl"
     >
       <HomeIcon
@@ -121,8 +142,11 @@ exports[`ActionTray should render with default props 1`] = `
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -145,13 +169,18 @@ exports[`ActionTray should render with home tab active 1`] = `
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <HomeIcon
       svgClassName="svg activeActionTrayIcon"
     />
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -174,8 +203,11 @@ exports[`ActionTray should render with login available 1`] = `
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.homeUrl"
     >
       <HomeIcon
@@ -183,8 +215,11 @@ exports[`ActionTray should render with login available 1`] = `
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -192,8 +227,11 @@ exports[`ActionTray should render with login available 1`] = `
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.savedJobsUrl"
     >
       <BookmarkIcon
@@ -216,17 +254,19 @@ exports[`ActionTray should render with menu open 1`] = `
 <div
   className="root"
 >
-  <div>
-    <a
-      href="header.homeUrl"
-    >
-      <HomeIcon
-        svgClassName="svg"
-      />
-    </a>
+  <div
+    className="menuToggle"
+    onClick={[MockFunction]}
+  >
+    <HomeIcon
+      svgClassName="svg"
+    />
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -249,8 +289,11 @@ exports[`ActionTray should render with saved jobs tab active 1`] = `
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.homeUrl"
     >
       <HomeIcon
@@ -258,8 +301,11 @@ exports[`ActionTray should render with saved jobs tab active 1`] = `
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.searchUrl"
     >
       <SearchIcon
@@ -267,7 +313,9 @@ exports[`ActionTray should render with saved jobs tab active 1`] = `
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <BookmarkIcon
       svgClassName="svg activeActionTrayIcon"
     />
@@ -287,8 +335,11 @@ exports[`ActionTray should render with search tab active 1`] = `
 <div
   className="root"
 >
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <a
+      className="actionTrayLink"
       href="header.homeUrl"
     >
       <HomeIcon
@@ -296,7 +347,9 @@ exports[`ActionTray should render with search tab active 1`] = `
       />
     </a>
   </div>
-  <div>
+  <div
+    className="actionTrayTab"
+  >
     <SearchIcon
       svgClassName="svg activeActionTrayIcon"
     />

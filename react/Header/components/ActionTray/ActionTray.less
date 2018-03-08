@@ -13,17 +13,31 @@
   height: @grid-base * 14;
   background-color: @saWhite;
   border-top: 1px solid @saGrey5;
+  color: @saGrey4;
   @media @desktop {
     display: none;
   }
 }
 
+.actionTrayTab {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .menuToggle {
+  &:extend(.actionTrayTab);
   cursor: pointer;
 }
 
+.actionTrayLink {
+  color: currentColor;
+}
+
 .svg {
-  fill: @saGrey4;
+  fill: currentColor;
   width: @grid-base * 6;
   height: @grid-base * 6;
 }

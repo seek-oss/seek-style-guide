@@ -5,14 +5,27 @@ import { HomeIcon, SearchIcon, BookmarkIcon, HamburgerIcon } from 'seek-asia-sty
 import { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } from '../../Header';
 import styles from './ActionTray.less';
 
-const actionTrayLink = ({ linkUrl, LinkIcon, activeTab, tabName, menuOpen, brandStyles }) => {
-  return !menuOpen && activeTab === tabName ? (
-    <LinkIcon svgClassName={classnames(styles.svg, brandStyles.activeActionTrayIcon)} />
-  ) : (
-    <a href={linkUrl}>
-      <LinkIcon svgClassName={styles.svg} />
-    </a>
-  );
+const actionTrayLink = ({ linkUrl, LinkIcon, activeTab, tabName, menuOpen, brandStyles, showFlag, handleToggleMenu }) => {
+  if (showFlag) {
+    return activeTab === tabName ? (
+      <div
+        onClick={(menuOpen && activeTab === tabName) ? handleToggleMenu : undefined} // eslint-disable-line no-undefined
+        className={menuOpen ? styles.menuToggle : styles.actionTrayTab}>
+        <LinkIcon
+          svgClassName={classnames(styles.svg, {
+            [brandStyles.activeActionTrayIcon]: !menuOpen
+          })}
+        />
+      </div>
+    ) : (
+      <div className={styles.actionTrayTab}>
+        <a href={linkUrl} className={styles.actionTrayLink}>
+          <LinkIcon svgClassName={styles.svg} />
+        </a>
+      </div>
+    );
+  }
+  return null;
 };
 
 actionTrayLink.propTypes = {
@@ -21,28 +34,27 @@ actionTrayLink.propTypes = {
   activeTab: PropTypes.string,
   tabName: PropTypes.string,
   menuOpen: PropTypes.bool,
-  brandStyles: PropTypes.object.isRequired
+  showFlag: PropTypes.bool.isRequired,
+  brandStyles: PropTypes.object.isRequired,
+  handleToggleMenu: PropTypes.func
 };
 
 const ActionTray = ({ loginAvailable, brandStyles, messages, handleToggleMenu, activeTab, menuOpen, showTray = true, showHome = true, showSearch = true, showSavedJobs = true, showMenu = true }) => {
+  const actionTrayLinkProps = {
+    brandStyles,
+    activeTab,
+    menuOpen,
+    handleToggleMenu
+  };
+
   if (showTray) {
     return (
       <div className={styles.root}>
-        { showHome && (
-          <div>
-            { actionTrayLink({ LinkIcon: HomeIcon, linkUrl: messages['header.homeUrl'], activeTab, tabName: ACTIVE_TAB_HOME, menuOpen, brandStyles }) }
-          </div>
-        )}
-        { showSearch && (
-          <div>
-            { actionTrayLink({ LinkIcon: SearchIcon, linkUrl: messages['header.searchUrl'], activeTab, tabName: ACTIVE_TAB_SEARCH, menuOpen, brandStyles }) }
-          </div>
-        )}
-        { loginAvailable && showSavedJobs && (
-          <div>
-            { actionTrayLink({ LinkIcon: BookmarkIcon, linkUrl: messages['header.savedJobsUrl'], activeTab, tabName: ACTIVE_TAB_SAVED_JOBS, menuOpen, brandStyles }) }
-          </div>
-        )}
+        { actionTrayLink({ showFlag: showHome, LinkIcon: HomeIcon, linkUrl: messages['header.homeUrl'], tabName: ACTIVE_TAB_HOME, ...actionTrayLinkProps }) }
+        { actionTrayLink({ showFlag: showSearch, LinkIcon: SearchIcon, linkUrl: messages['header.searchUrl'], tabName: ACTIVE_TAB_SEARCH, ...actionTrayLinkProps }) }
+        { loginAvailable &&
+            actionTrayLink({ showFlag: showSavedJobs, LinkIcon: BookmarkIcon, linkUrl: messages['header.savedJobsUrl'], tabName: ACTIVE_TAB_SAVED_JOBS, ...actionTrayLinkProps })
+        }
         { showMenu && (
           <div onClick={handleToggleMenu} className={styles.menuToggle}>
             <HamburgerIcon svgClassName={classnames(styles.svg, { [brandStyles.activeActionTrayIcon]: menuOpen })} />
