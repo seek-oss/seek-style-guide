@@ -3,6 +3,9 @@
 .columns {
   @media @desktop {
     display: flex;
+    &.columns_reverse {
+      flex-direction: row-reverse;
+    }
   }
 }
 
@@ -20,10 +23,12 @@
     .columns_tight & {
       padding: 0 (@gutter-width / 4);
     }
-    &:first-child {
+    .columns:not(.columns_reverse) &:first-child,
+    .columns_reverse &:last-child {
       padding-left: 0 !important;
     }
-    &:last-child {
+    .columns:not(.columns_reverse) &:last-child,
+    .columns_reverse &:first-child {
       padding-right: 0 !important;
     }
   }

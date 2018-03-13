@@ -19,6 +19,29 @@ exports[`Columns: should render columns 1`] = `
 </div>
 `;
 
+exports[`Columns: should render columns in reverse 1`] = `
+<div
+  className="columns columns_reverse"
+>
+  <div
+    className="column"
+    key="0"
+  >
+    <div
+      id="1"
+    />
+  </div>
+  <div
+    className="column"
+    key="1"
+  >
+    <div
+      id="2"
+    />
+  </div>
+</div>
+`;
+
 exports[`Columns: should render flexible columns 1`] = `
 <div
   className="columns columns_flexible"
