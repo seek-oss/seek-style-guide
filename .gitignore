@@ -1,7 +1,6 @@
 node_modules
 dist
-npm-debug.log
+*.log
 yarn.lock
 package-lock.json
 flow-typed/*.generated.*
-
