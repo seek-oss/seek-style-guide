@@ -56,6 +56,7 @@ export default class Radio extends Component {
           className={styles.svg}
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
         >
           <circle className={styles.circle} cx="100" cy="100" r="100" />
         </svg>
