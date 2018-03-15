@@ -37,6 +37,16 @@
   .buttonColor(@background-color, @color);
   border: 1px solid @background-color;
   line-height: @touchableTextHeight - 2px;
+
+  .hoverState({
+    .buttonColor(@background-color, fade(@background-color, 10%));
+    border: 0px;
+    line-height: @touchableTextHeight;
+  });
+
+  .activeState({
+    .buttonColor(@color, @background-color);
+  });
 }
 
 .ghostColor(@color) {
