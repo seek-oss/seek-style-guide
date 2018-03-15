@@ -33,15 +33,9 @@ exports[`JobCard should render company with bold keyword 1`] = `
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div />
   </Section>
   <Section
     className="footerSection"
@@ -86,14 +80,6 @@ exports[`JobCard should render company with bold keyword 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -160,15 +146,9 @@ exports[`JobCard should render job title with bold keyword 1`] = `
     </div>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div />
   </Section>
   <Section
     className="footerSection"
@@ -213,14 +193,6 @@ exports[`JobCard should render job title with bold keyword 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -251,15 +223,9 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div />
   </Section>
   <Section
     className="footerSection"
@@ -304,14 +270,6 @@ exports[`JobCard should render with Classified in grey label 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -341,15 +299,9 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div />
   </Section>
   <Section
     className="footerSection"
@@ -394,14 +346,6 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -427,15 +371,9 @@ exports[`JobCard should render with default props 1`] = `
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div />
   </Section>
   <Section
     className="footerSection"
@@ -480,14 +418,6 @@ exports[`JobCard should render with default props 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -518,15 +448,9 @@ exports[`JobCard should render with featured label 1`] = `
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div />
   </Section>
   <Section
     className="footerSection"
@@ -571,14 +495,6 @@ exports[`JobCard should render with featured label 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -604,56 +520,51 @@ exports[`JobCard should render with selling points props 1`] = `
     </Text>
   </Section>
   <Section
-    className="sellingPointsSection"
+    className="bodySection"
   >
-    <ul
-      className="sellingPointsList"
-    >
-      <li
-        key="0"
+    <div>
+      <div
+        className="sellingPointsSection"
       >
-        <Text
-          baseline={true}
-          className="sellingPoint"
-          intimate={true}
+        <ul
+          className="sellingPointsList"
         >
-          We practice a vibrant & energetic office culture
-        </Text>
-      </li>
-      <li
-        key="1"
-      >
-        <Text
-          baseline={true}
-          className="sellingPoint"
-          intimate={true}
-        >
-          Our company supports a fun yet balanced working environment
-        </Text>
-      </li>
-      <li
-        key="2"
-      >
-        <Text
-          baseline={true}
-          className="sellingPoint"
-          intimate={true}
-        >
-          We support a safe environment for our employees
-        </Text>
-      </li>
-    </ul>
-  </Section>
-  <Section
-    className="jobDescriptionSection"
-  >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+          <li
+            key="0"
+          >
+            <Text
+              baseline={true}
+              className="sellingPoint"
+              intimate={true}
+            >
+              We practice a vibrant & energetic office culture
+            </Text>
+          </li>
+          <li
+            key="1"
+          >
+            <Text
+              baseline={true}
+              className="sellingPoint"
+              intimate={true}
+            >
+              Our company supports a fun yet balanced working environment
+            </Text>
+          </li>
+          <li
+            key="2"
+          >
+            <Text
+              baseline={true}
+              className="sellingPoint"
+              intimate={true}
+            >
+              We support a safe environment for our employees
+            </Text>
+          </li>
+        </ul>
+      </div>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -698,14 +609,6 @@ exports[`JobCard should render with selling points props 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
