@@ -36,6 +36,7 @@
 .inverseColor(@color, @background-color) {
   .buttonColor(@background-color, @color);
   border: 1px solid @background-color;
+  line-height: @touchableTextHeight - 2px;
 }
 
 .ghostColor(@color) {
@@ -66,7 +67,7 @@
   text-decoration: none;
   user-select: none;
   text-align: center;
-  padding: 0 @grid-gutter-width;
+  padding: 0 @grid-base * 2;
   border: 0;
   border-radius: 3px;
   transition:
