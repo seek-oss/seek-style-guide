@@ -4,6 +4,6 @@ import SlideToggle from './SlideToggle';
 const noop = () => {};
 
 export const symbols = {
-  'Slide Toggle/Unchecked': <SlideToggle label="Slide toggle" onChange={noop} checked={false} />,
-  'Slide Toggle/Checked': <SlideToggle label="Slide toggle" onChange={noop} checked={true} />
+  'Slide Toggle/Unchecked': <SlideToggle id="myToggle" label="Slide toggle" onChange={noop} checked={false} />,
+  'Slide Toggle/Checked': <SlideToggle id="myToggle" label="Slide toggle" onChange={noop} checked={true} />
 };
