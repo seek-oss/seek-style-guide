@@ -40,7 +40,7 @@ const getJobAdTypeOption = jobAdType => {
     case 'jobstreetStandout':
       return jobstreetStandout;
     default:
-      return jobsdbDefault;
+      return {};
   }
 };
 

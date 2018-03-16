@@ -81,7 +81,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
           <div>
             {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
               <div
-                className={classnames(styles.sellingPointsSection, { [styles.paddingBottom]: jobAdTypeOption.showDescription && job.description })}>
+                className={classnames(styles.sellingPointsSection, { [styles.withDescription]: jobAdTypeOption.showDescription && job.description })}>
                 <ul className={styles.sellingPointsList} >
                   {job.sellingPoints.map((sellingPoint, i) => {
                     return (

@@ -33,11 +33,6 @@ exports[`JobCard should render company with bold keyword 1`] = `
     </Text>
   </Section>
   <Section
-    className="bodySection"
-  >
-    <div />
-  </Section>
-  <Section
     className="footerSection"
   >
     <div
@@ -146,11 +141,6 @@ exports[`JobCard should render job title with bold keyword 1`] = `
     </div>
   </Section>
   <Section
-    className="bodySection"
-  >
-    <div />
-  </Section>
-  <Section
     className="footerSection"
   >
     <div
@@ -221,11 +211,6 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     >
       Senior Software Engineer (6 months Contract)
     </Text>
-  </Section>
-  <Section
-    className="bodySection"
-  >
-    <div />
   </Section>
   <Section
     className="footerSection"
@@ -299,11 +284,6 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     </Text>
   </Section>
   <Section
-    className="bodySection"
-  >
-    <div />
-  </Section>
-  <Section
     className="footerSection"
   >
     <div
@@ -369,11 +349,6 @@ exports[`JobCard should render with default props 1`] = `
     >
       Senior Software Engineer (6 months Contract)
     </Text>
-  </Section>
-  <Section
-    className="bodySection"
-  >
-    <div />
   </Section>
   <Section
     className="footerSection"
@@ -448,11 +423,6 @@ exports[`JobCard should render with featured label 1`] = `
     </Text>
   </Section>
   <Section
-    className="bodySection"
-  >
-    <div />
-  </Section>
-  <Section
     className="footerSection"
   >
     <div
@@ -518,53 +488,6 @@ exports[`JobCard should render with selling points props 1`] = `
     >
       Senior Software Engineer (6 months Contract)
     </Text>
-  </Section>
-  <Section
-    className="bodySection"
-  >
-    <div>
-      <div
-        className="sellingPointsSection"
-      >
-        <ul
-          className="sellingPointsList"
-        >
-          <li
-            key="0"
-          >
-            <Text
-              baseline={true}
-              className="sellingPoint"
-              intimate={true}
-            >
-              We practice a vibrant & energetic office culture
-            </Text>
-          </li>
-          <li
-            key="1"
-          >
-            <Text
-              baseline={true}
-              className="sellingPoint"
-              intimate={true}
-            >
-              Our company supports a fun yet balanced working environment
-            </Text>
-          </li>
-          <li
-            key="2"
-          >
-            <Text
-              baseline={true}
-              className="sellingPoint"
-              intimate={true}
-            >
-              We support a safe environment for our employees
-            </Text>
-          </li>
-        </ul>
-      </div>
-    </div>
   </Section>
   <Section
     className="footerSection"
