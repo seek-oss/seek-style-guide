@@ -45,14 +45,15 @@ const ActionTray = ({ loginAvailable, brandStyles, messages, handleToggleMenu, a
     menuOpen,
     handleToggleMenu
   };
+  const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } = Constants;
 
   if (showTray) {
     return (
       <div className={styles.root}>
-        { actionTrayLink({ showFlag: showHome, LinkIcon: HomeIcon, linkUrl: messages['header.homeUrl'], tabName: Constants.ACTIVE_TAB_HOME, ...actionTrayLinkProps }) }
-        { actionTrayLink({ showFlag: showSearch, LinkIcon: SearchIcon, linkUrl: messages['header.searchUrl'], tabName: Constants.ACTIVE_TAB_SEARCH, ...actionTrayLinkProps }) }
+        { actionTrayLink({ showFlag: showHome, LinkIcon: HomeIcon, linkUrl: messages['header.homeUrl'], tabName: ACTIVE_TAB_HOME, ...actionTrayLinkProps }) }
+        { actionTrayLink({ showFlag: showSearch, LinkIcon: SearchIcon, linkUrl: messages['header.searchUrl'], tabName: ACTIVE_TAB_SEARCH, ...actionTrayLinkProps }) }
         { loginAvailable &&
-            actionTrayLink({ showFlag: showSavedJobs, LinkIcon: BookmarkIcon, linkUrl: messages['header.savedJobsUrl'], tabName: Constants.ACTIVE_TAB_SAVED_JOBS, ...actionTrayLinkProps })
+            actionTrayLink({ showFlag: showSavedJobs, LinkIcon: BookmarkIcon, linkUrl: messages['header.savedJobsUrl'], tabName: ACTIVE_TAB_SAVED_JOBS, ...actionTrayLinkProps })
         }
         { showMenu && (
           <div onClick={handleToggleMenu} className={styles.menuToggle}>

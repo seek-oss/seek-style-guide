@@ -4,6 +4,8 @@ import { shallow } from 'enzyme';
 import ActionTray from './ActionTray';
 import { Constants } from 'seek-asia-style-guide/react';
 
+const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } = Constants;
+
 describe('ActionTray', () => {
   const defaultProps = {
     handleToggleMenu: jest.fn(),
@@ -34,7 +36,7 @@ describe('ActionTray', () => {
   it('should render with home tab active', () => {
     const testProps = {
       ...defaultProps,
-      activeTab: Constants.ACTIVE_TAB_HOME
+      activeTab: ACTIVE_TAB_HOME
     };
     const wrapper = shallow(<ActionTray {...testProps} />);
     expect(wrapper).toMatchSnapshot();
@@ -43,7 +45,7 @@ describe('ActionTray', () => {
   it('should render with search tab active', () => {
     const testProps = {
       ...defaultProps,
-      activeTab: Constants.ACTIVE_TAB_SEARCH
+      activeTab: ACTIVE_TAB_SEARCH
     };
     const wrapper = shallow(<ActionTray {...testProps} />);
     expect(wrapper).toMatchSnapshot();
@@ -53,7 +55,7 @@ describe('ActionTray', () => {
     const testProps = {
       ...defaultProps,
       loginAvailable: true,
-      activeTab: Constants.ACTIVE_TAB_SAVED_JOBS
+      activeTab: ACTIVE_TAB_SAVED_JOBS
     };
     const wrapper = shallow(<ActionTray {...testProps} />);
     expect(wrapper).toMatchSnapshot();
@@ -62,7 +64,7 @@ describe('ActionTray', () => {
   it('should render with menu open', () => {
     const testProps = {
       ...defaultProps,
-      activeTab: Constants.ACTIVE_TAB_HOME,
+      activeTab: ACTIVE_TAB_HOME,
       menuOpen: true
     };
     const wrapper = shallow(<ActionTray {...testProps} />);

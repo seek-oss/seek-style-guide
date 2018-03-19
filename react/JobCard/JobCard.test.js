@@ -2,6 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import JobCard from './JobCard';
+import { Constants } from 'seek-asia-style-guide/react';
+
+const { JOBADTYPE_JOBSDB_DEFAULT, JOBADTYPE_JOBSTREET_STANDOUT } = Constants;
 
 const defaultJob = {
   company: 'SEEK Asia',
@@ -79,6 +82,24 @@ describe('JobCard', () => {
     };
     const keyword = 'Seek';
     const wrapper = shallow(<JobCard job={descriptionJob} keyword={keyword} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render jobsDB default style', () => {
+    const descriptionJob = {
+      ...defaultJob
+    };
+    const keyword = 'Seek';
+    const wrapper = shallow(<JobCard job={descriptionJob} keyword={keyword} jobAdType={JOBADTYPE_JOBSDB_DEFAULT} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render jobStreet standout style', () => {
+    const descriptionJob = {
+      ...defaultJob
+    };
+    const keyword = 'Seek';
+    const wrapper = shallow(<JobCard job={descriptionJob} keyword={keyword} jobAdType={JOBADTYPE_JOBSTREET_STANDOUT} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -188,6 +188,196 @@ exports[`JobCard should render job title with bold keyword 1`] = `
 </Card>
 `;
 
+exports[`JobCard should render jobStreet standout style 1`] = `
+<Card
+  className="root highlightedBg"
+>
+  <Section>
+    <Text
+      baseline={true}
+      className="company"
+      intimate={true}
+    >
+      <span>
+        <span
+          className="highlight"
+          key="0"
+        >
+          SEEK
+        </span>
+        <span
+          className={null}
+          key="1"
+        >
+           Asia
+        </span>
+      </span>
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
+  </Section>
+  <Section
+    className="bodySection"
+  >
+    <div>
+      <div
+        className="jobDescriptionSection"
+      >
+        <Text
+          baseline={true}
+          className="bodyDescriptionText"
+          intimate={true}
+        >
+          Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+        </Text>
+      </div>
+    </div>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoContainer"
+      >
+        <div
+          className="jobInfoList"
+        >
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <LocationIcon
+              className="jobInfoIcon"
+            />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          whispering={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+    <div
+      className="companyLogoWrapper"
+    >
+      <img
+        className="companyLogo"
+        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
+      />
+    </div>
+  </Section>
+</Card>
+`;
+
+exports[`JobCard should render jobsDB default style 1`] = `
+<Card
+  className="root"
+>
+  <Section>
+    <Text
+      baseline={true}
+      className="company"
+      intimate={true}
+    >
+      <span>
+        <span
+          className="highlight"
+          key="0"
+        >
+          SEEK
+        </span>
+        <span
+          className={null}
+          key="1"
+        >
+           Asia
+        </span>
+      </span>
+    </Text>
+    <Text
+      baseline={true}
+      className="positionTitle"
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
+  </Section>
+  <Section
+    className="bodySection"
+  >
+    <div />
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoContainer"
+      >
+        <div
+          className="jobInfoList"
+        >
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <LocationIcon
+              className="jobInfoIcon"
+            />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            whispering={true}
+          >
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          whispering={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+  </Section>
+</Card>
+`;
+
 exports[`JobCard should render with Classified in grey label 1`] = `
 <Card
   className="root"

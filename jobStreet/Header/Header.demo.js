@@ -1,6 +1,7 @@
 import { Header } from 'seek-asia-style-guide/jobStreet';
 import { Constants } from 'seek-asia-style-guide/react';
 
+const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } = Constants;
 const ROUTE = '/jobstreet-header';
 
 export default {
@@ -12,7 +13,7 @@ export default {
     language: 'en',
     country: 'my',
     loginAvailable: true,
-    activeTab: Constants.ACTIVE_TAB_HOME
+    activeTab: ACTIVE_TAB_HOME
   },
   options: [{
     label: 'States',
@@ -145,21 +146,21 @@ export default {
         label: 'Home',
         transformProps: props => ({
           ...props,
-          activeTab: Constants.ACTIVE_TAB_HOME
+          activeTab: ACTIVE_TAB_HOME
         })
       },
       {
         label: 'Search',
         transformProps: props => ({
           ...props,
-          activeTab: Constants.ACTIVE_TAB_SEARCH
+          activeTab: ACTIVE_TAB_SEARCH
         })
       },
       {
         label: 'Saved Jobs',
         transformProps: props => ({
           ...props,
-          activeTab: Constants.ACTIVE_TAB_SAVED_JOBS
+          activeTab: ACTIVE_TAB_SAVED_JOBS
         })
       }
     ]

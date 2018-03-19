@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { JobCard, PageBlock, Constants } from 'seek-asia-style-guide/react';
 
+const { JOBADTYPE_JOBSDB_DEFAULT, JOBADTYPE_JOBSDB_BRANDED, JOBADTYPE_JOBSTREET_DEFAULT, JOBADTYPE_JOBSTREET_STANDOUT } = Constants;
+
 const JobCardContainer = ({ component: DemoComponent, componentProps }) => {
   return (
     <PageBlock style={{ width: '100%' }}>
@@ -37,7 +39,7 @@ export default {
         'We support a safe environment for our employees'
       ]
     },
-    jobAdType: Constants.JOBADTYPE_JOBSDB_DEFAULT
+    jobAdType: JOBADTYPE_JOBSDB_DEFAULT
   },
   options: [
     {
@@ -105,28 +107,28 @@ export default {
           label: 'jobsDB standard',
           transformProps: props => ({
             ...props,
-            jobAdType: Constants.JOBADTYPE_JOBSDB_DEFAULT
+            jobAdType: JOBADTYPE_JOBSDB_DEFAULT
           })
         },
         {
           label: 'jobsDB Branded',
           transformProps: props => ({
             ...props,
-            jobAdType: Constants.JOBADTYPE_JOBSDB_BRANDED
+            jobAdType: JOBADTYPE_JOBSDB_BRANDED
           })
         },
         {
           label: 'jobStreet Default',
           transformProps: props => ({
             ...props,
-            jobAdType: Constants.JOBADTYPE_JOBSTREET_DEFAULT
+            jobAdType: JOBADTYPE_JOBSTREET_DEFAULT
           })
         },
         {
           label: 'jobStreet Standout',
           transformProps: props => ({
             ...props,
-            jobAdType: Constants.JOBADTYPE_JOBSTREET_STANDOUT
+            jobAdType: JOBADTYPE_JOBSTREET_STANDOUT
           })
         }
       ]
