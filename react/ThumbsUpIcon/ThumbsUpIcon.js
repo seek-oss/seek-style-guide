@@ -1,10 +1,3 @@
-import svgMarkup from './ThumbsUpIcon.svg';
+import iconGenerator from '../private/IconsGenerator/IconsGenerator';
 
-import React from 'react';
-import Icon from '../private/Icon/Icon';
-
-export default function ThumbsUpIcon(props) {
-  return <Icon markup={svgMarkup} {...props} />;
-}
-
-ThumbsUpIcon.displayName = 'ThumbsUpIcon';
+export default iconGenerator('ThumbsUpIcon');

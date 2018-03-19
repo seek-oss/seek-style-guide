@@ -1,10 +1,3 @@
-import svgMarkup from './DeleteIcon.svg';
+import iconGenerator from '../private/IconsGenerator/IconsGenerator';
 
-import React from 'react';
-import Icon from '../private/Icon/Icon';
-
-export default function DeleteIcon(props) {
-  return <Icon markup={svgMarkup} {...props} />;
-}
-
-DeleteIcon.displayName = 'DeleteIcon';
+export default iconGenerator('DeleteIcon');

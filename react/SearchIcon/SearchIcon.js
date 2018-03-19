@@ -1,10 +1,3 @@
-import svgMarkup from './SearchIcon.svg';
+import iconGenerator from '../private/IconsGenerator/IconsGenerator';
 
-import React from 'react';
-import Icon from '../private/Icon/Icon';
-
-export default function SearchIcon(props) {
-  return <Icon markup={svgMarkup} {...props} />;
-}
-
-SearchIcon.displayName = 'SearchIcon';
+export default iconGenerator('SearchIcon');

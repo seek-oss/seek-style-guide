@@ -1,10 +1,3 @@
-import svgMarkup from './HelpIcon.svg';
+import iconGenerator from '../private/IconsGenerator/IconsGenerator';
 
-import React from 'react';
-import Icon from '../private/Icon/Icon';
-
-export default function HelpIcon(props) {
-  return <Icon markup={svgMarkup} {...props} />;
-}
-
-HelpIcon.displayName = 'HelpIcon';
+export default iconGenerator('HelpIcon');

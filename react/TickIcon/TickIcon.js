@@ -1,10 +1,3 @@
-import svgMarkup from './TickIcon.svg';
+import iconGenerator from '../private/IconsGenerator/IconsGenerator';
 
-import React from 'react';
-import Icon from '../private/Icon/Icon';
-
-export default function TickIcon(props) {
-  return <Icon markup={svgMarkup} {...props} />;
-}
-
-TickIcon.displayName = 'TickIcon';
+export default iconGenerator('TickIcon');

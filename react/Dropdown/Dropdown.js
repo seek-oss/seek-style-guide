@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-import ChevronIcon from '../ChevronIcon/ChevronIcon';
+import { ChevronIcon } from 'seek-style-guide/react';
 
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';

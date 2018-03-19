@@ -1,10 +1,3 @@
-import svgMarkup from './CloseIcon.svg';
+import iconGenerator from '../private/IconsGenerator/IconsGenerator';
 
-import React from 'react';
-import Icon from '../private/Icon/Icon';
-
-export default function CloseIcon(props) {
-  return <Icon markup={svgMarkup} {...props} />;
-}
-
-CloseIcon.displayName = 'CloseIcon';
+export default iconGenerator('CloseIcon');

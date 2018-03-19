@@ -17,10 +17,6 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
       <span>
         Still in role
       </span>
@@ -46,10 +42,6 @@ exports[`Checkbox inputProps should render as checked 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
       <span>
         Still in role
       </span>
@@ -98,10 +90,6 @@ exports[`Checkbox should render with className 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
       <span>
         Still in role
       </span>
@@ -127,10 +115,6 @@ exports[`Checkbox should render with simple props 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
       <span>
         Still in role
       </span>
@@ -156,10 +140,6 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
       <span>
         Still in role
       </span>

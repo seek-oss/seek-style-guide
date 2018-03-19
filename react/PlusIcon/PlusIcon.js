@@ -1,10 +1,3 @@
-import svgMarkup from './PlusIcon.svg';
+import iconGenerator from '../private/IconsGenerator/IconsGenerator';
 
-import React from 'react';
-import Icon from '../private/Icon/Icon';
-
-export default function PlusIcon(props) {
-  return <Icon markup={svgMarkup} {...props} />;
-}
-
-PlusIcon.displayName = 'PlusIcon';
+export default iconGenerator('PlusIcon');

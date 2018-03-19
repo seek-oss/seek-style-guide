@@ -8,6 +8,7 @@ exports[`TextLink should render with chevron props 1`] = `
   <ChevronIcon
     className="chevronRightSide"
     direction="up"
+    filled={false}
     size="hero"
   />
 </a>
@@ -41,6 +42,7 @@ exports[`TextLink should render with down chevron 1`] = `
   <ChevronIcon
     className="chevronRightSide"
     direction="down"
+    filled={false}
     size="standard"
   />
 </a>
@@ -53,6 +55,7 @@ exports[`TextLink should render with left chevron 1`] = `
   <ChevronIcon
     className="chevronLeftSide"
     direction="left"
+    filled={false}
     size="standard"
   />
   Google
@@ -67,6 +70,7 @@ exports[`TextLink should render with right chevron 1`] = `
   <ChevronIcon
     className="chevronRightSide"
     direction="right"
+    filled={false}
     size="standard"
   />
 </a>
@@ -80,6 +84,7 @@ exports[`TextLink should render with up chevron 1`] = `
   <ChevronIcon
     className="chevronRightSide"
     direction="up"
+    filled={false}
     size="standard"
   />
 </a>

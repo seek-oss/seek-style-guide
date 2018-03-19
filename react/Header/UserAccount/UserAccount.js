@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ChevronIcon from '../../ChevronIcon/ChevronIcon';
-import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+
+import { ChevronIcon, ScreenReaderOnly } from 'seek-style-guide/react';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import styles from './UserAccount.less';

@@ -135,7 +135,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -158,7 +158,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -176,7 +176,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -194,7 +194,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -218,7 +218,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -250,7 +250,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -726,7 +726,7 @@ exports[`Header: should render first part of email address when username isn't p
                   </span>
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -749,7 +749,7 @@ exports[`Header: should render first part of email address when username isn't p
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -767,7 +767,7 @@ exports[`Header: should render first part of email address when username isn't p
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -785,7 +785,7 @@ exports[`Header: should render first part of email address when username isn't p
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -809,7 +809,7 @@ exports[`Header: should render first part of email address when username isn't p
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -841,7 +841,7 @@ exports[`Header: should render first part of email address when username isn't p
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -1317,7 +1317,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -1340,7 +1340,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -1358,7 +1358,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -1376,7 +1376,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -1400,7 +1400,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -1432,7 +1432,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -1908,7 +1908,7 @@ exports[`Header: should render when authenticated 1`] = `
                   </span>
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -1931,7 +1931,7 @@ exports[`Header: should render when authenticated 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -1949,7 +1949,7 @@ exports[`Header: should render when authenticated 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -1967,7 +1967,7 @@ exports[`Header: should render when authenticated 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -1991,7 +1991,7 @@ exports[`Header: should render when authenticated 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -2023,7 +2023,7 @@ exports[`Header: should render when authenticated 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -2499,7 +2499,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -2522,7 +2522,7 @@ exports[`Header: should render when authenticated but username and email is not 
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -2540,7 +2540,7 @@ exports[`Header: should render when authenticated but username and email is not 
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -2558,7 +2558,7 @@ exports[`Header: should render when authenticated but username and email is not 
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -2582,7 +2582,7 @@ exports[`Header: should render when authenticated but username and email is not 
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -2614,7 +2614,7 @@ exports[`Header: should render when authenticated but username and email is not 
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -3090,7 +3090,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -3113,7 +3113,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -3131,7 +3131,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -3149,7 +3149,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -3173,7 +3173,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -3205,7 +3205,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -3679,7 +3679,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -3702,7 +3702,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -3720,7 +3720,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -3738,7 +3738,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -3762,7 +3762,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -3794,7 +3794,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -4242,7 +4242,7 @@ exports[`Header: should render with a custom logo 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -4265,7 +4265,7 @@ exports[`Header: should render with a custom logo 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -4283,7 +4283,7 @@ exports[`Header: should render with a custom logo 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -4301,7 +4301,7 @@ exports[`Header: should render with a custom logo 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -4325,7 +4325,7 @@ exports[`Header: should render with a custom logo 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -4357,7 +4357,7 @@ exports[`Header: should render with a custom logo 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -4829,7 +4829,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -4852,7 +4852,7 @@ exports[`Header: should render with locale of AU 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -4870,7 +4870,7 @@ exports[`Header: should render with locale of AU 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -4888,7 +4888,7 @@ exports[`Header: should render with locale of AU 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -4912,7 +4912,7 @@ exports[`Header: should render with locale of AU 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -4944,7 +4944,7 @@ exports[`Header: should render with locale of AU 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -5416,7 +5416,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -5439,7 +5439,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -5457,7 +5457,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -5475,7 +5475,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -5499,7 +5499,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -5531,7 +5531,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>
@@ -5952,7 +5952,7 @@ exports[`Header: should render with no divider 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root ChevronIcon chevron down"
                 >
                   mock svg
                 </span>
@@ -5975,7 +5975,7 @@ exports[`Header: should render with no divider 1`] = `
                         Job Search
                       </span>
                       <span
-                        class="root icon jobSearch"
+                        class="root SearchIcon icon jobSearch"
                       >
                         mock svg
                       </span>
@@ -5993,7 +5993,7 @@ exports[`Header: should render with no divider 1`] = `
                         Profile
                       </span>
                       <span
-                        class="root icon profile"
+                        class="root ProfileIcon icon profile"
                       >
                         mock svg
                       </span>
@@ -6011,7 +6011,7 @@ exports[`Header: should render with no divider 1`] = `
                         Saved Searches
                       </span>
                       <span
-                        class="root icon saveSearches"
+                        class="root HeartIcon icon saveSearches"
                       >
                         mock svg
                       </span>
@@ -6035,7 +6035,7 @@ exports[`Header: should render with no divider 1`] = `
                         Jobs
                       </span>
                       <span
-                        class="root icon saveJobs"
+                        class="root StarIcon icon saveJobs"
                       >
                         mock svg
                       </span>
@@ -6067,7 +6067,7 @@ exports[`Header: should render with no divider 1`] = `
                         Recommended Jobs
                       </span>
                       <span
-                        class="root icon recommendedJobs"
+                        class="root ThumbsUpIcon icon recommendedJobs"
                       >
                         mock svg
                       </span>

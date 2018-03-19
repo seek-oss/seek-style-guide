@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Checkbox.less';
-import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
+
+import { CheckMarkIcon } from 'seek-style-guide/react';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
