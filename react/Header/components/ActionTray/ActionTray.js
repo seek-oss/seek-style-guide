@@ -1,8 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { HomeIcon, SearchIcon, BookmarkIcon, HamburgerIcon } from 'seek-asia-style-guide/react';
-import { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } from '../../Header';
+import { HomeIcon, SearchIcon, BookmarkIcon, HamburgerIcon, Constants } from 'seek-asia-style-guide/react';
 import styles from './ActionTray.less';
 
 const actionTrayLink = ({ linkUrl, LinkIcon, activeTab, tabName, menuOpen, brandStyles, showFlag, handleToggleMenu }) => {
@@ -50,10 +49,10 @@ const ActionTray = ({ loginAvailable, brandStyles, messages, handleToggleMenu, a
   if (showTray) {
     return (
       <div className={styles.root}>
-        { actionTrayLink({ showFlag: showHome, LinkIcon: HomeIcon, linkUrl: messages['header.homeUrl'], tabName: ACTIVE_TAB_HOME, ...actionTrayLinkProps }) }
-        { actionTrayLink({ showFlag: showSearch, LinkIcon: SearchIcon, linkUrl: messages['header.searchUrl'], tabName: ACTIVE_TAB_SEARCH, ...actionTrayLinkProps }) }
+        { actionTrayLink({ showFlag: showHome, LinkIcon: HomeIcon, linkUrl: messages['header.homeUrl'], tabName: Constants.ACTIVE_TAB_HOME, ...actionTrayLinkProps }) }
+        { actionTrayLink({ showFlag: showSearch, LinkIcon: SearchIcon, linkUrl: messages['header.searchUrl'], tabName: Constants.ACTIVE_TAB_SEARCH, ...actionTrayLinkProps }) }
         { loginAvailable &&
-            actionTrayLink({ showFlag: showSavedJobs, LinkIcon: BookmarkIcon, linkUrl: messages['header.savedJobsUrl'], tabName: ACTIVE_TAB_SAVED_JOBS, ...actionTrayLinkProps })
+            actionTrayLink({ showFlag: showSavedJobs, LinkIcon: BookmarkIcon, linkUrl: messages['header.savedJobsUrl'], tabName: Constants.ACTIVE_TAB_SAVED_JOBS, ...actionTrayLinkProps })
         }
         { showMenu && (
           <div onClick={handleToggleMenu} className={styles.menuToggle}>

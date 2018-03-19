@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { JobCard, PageBlock } from 'seek-asia-style-guide/react';
+import { JobCard, PageBlock, Constants } from 'seek-asia-style-guide/react';
 
 const JobCardContainer = ({ component: DemoComponent, componentProps }) => {
   return (
@@ -37,7 +37,7 @@ export default {
         'We support a safe environment for our employees'
       ]
     },
-    jobAdType: 'jobsdbDefault'
+    jobAdType: Constants.JOBADTYPE_JOBSDB_DEFAULT
   },
   options: [
     {
@@ -105,28 +105,28 @@ export default {
           label: 'jobsDB standard',
           transformProps: props => ({
             ...props,
-            jobAdType: 'jobsdbDefault'
+            jobAdType: Constants.JOBADTYPE_JOBSDB_DEFAULT
           })
         },
         {
           label: 'jobsDB Branded',
           transformProps: props => ({
             ...props,
-            jobAdType: 'jobsdbBranded'
+            jobAdType: Constants.JOBADTYPE_JOBSDB_BRANDED
           })
         },
         {
           label: 'jobStreet Default',
           transformProps: props => ({
             ...props,
-            jobAdType: 'jobstreetDefault'
+            jobAdType: Constants.JOBADTYPE_JOBSTREET_DEFAULT
           })
         },
         {
           label: 'jobStreet Standout',
           transformProps: props => ({
             ...props,
-            jobAdType: 'jobstreetStandout'
+            jobAdType: Constants.JOBADTYPE_JOBSTREET_STANDOUT
           })
         }
       ]
