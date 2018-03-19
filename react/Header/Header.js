@@ -162,7 +162,7 @@ Header.defaultProps = {
   linkRenderer: defaultLinkRenderer,
   authenticationStatus: AUTH_PENDING,
   activeTab: null,
-  newBadgeTab: 'Career Advice',
+  newBadgeTab: null,
   divider: true,
   userEmail: ''
 };
