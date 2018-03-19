@@ -4,27 +4,9 @@ exports[`JobCard should render company with bold keyword 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span>
-        <span
-          className="highlight"
-          key="0"
-        >
-          SEEK
-        </span>
-        <span
-          className={null}
-          key="1"
-        >
-           Asia
-        </span>
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
@@ -84,27 +66,9 @@ exports[`JobCard should render job title with bold keyword 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span>
-        <span
-          className="highlight"
-          key="0"
-        >
-          SEEK
-        </span>
-        <span
-          className={null}
-          key="1"
-        >
-           Asia
-        </span>
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <div>
       <Text
         baseline={true}
@@ -192,27 +156,9 @@ exports[`JobCard should render jobStreet standout style 1`] = `
 <Card
   className="root highlightedBg"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span>
-        <span
-          className="highlight"
-          key="0"
-        >
-          SEEK
-        </span>
-        <span
-          className={null}
-          key="1"
-        >
-           Asia
-        </span>
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
@@ -224,17 +170,26 @@ exports[`JobCard should render jobStreet standout style 1`] = `
     className="bodySection"
   >
     <div>
-      <div
-        className="jobDescriptionSection"
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
       >
-        <Text
-          baseline={true}
-          className="bodyDescriptionText"
-          intimate={true}
-        >
-          Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-        </Text>
-      </div>
+        <span>
+          <span
+            className="highlight"
+            key="0"
+          >
+            SEEK
+          </span>
+          <span
+            className={null}
+            key="1"
+          >
+             Asia
+          </span>
+        </span>
+      </Text>
     </div>
   </Section>
   <Section
@@ -297,27 +252,9 @@ exports[`JobCard should render jobsDB default style 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span>
-        <span
-          className="highlight"
-          key="0"
-        >
-          SEEK
-        </span>
-        <span
-          className={null}
-          key="1"
-        >
-           Asia
-        </span>
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
@@ -328,7 +265,28 @@ exports[`JobCard should render jobsDB default style 1`] = `
   <Section
     className="bodySection"
   >
-    <div />
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span>
+          <span
+            className="highlight"
+            key="0"
+          >
+            SEEK
+          </span>
+          <span
+            className={null}
+            key="1"
+          >
+             Asia
+          </span>
+        </span>
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -382,19 +340,9 @@ exports[`JobCard should render with Classified in grey label 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span
-        className="classifiedLabel"
-      >
-        Classified
-      </span>
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
@@ -454,18 +402,9 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span
-        className="confidentialLabel"
-      >
-        Company Confidential
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
@@ -525,14 +464,9 @@ exports[`JobCard should render with default props 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
@@ -592,19 +526,9 @@ exports[`JobCard should render with featured label 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span
-        className="featuredLabel"
-      >
-        Feature
-      </span>
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
@@ -664,14 +588,9 @@ exports[`JobCard should render with selling points props 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"

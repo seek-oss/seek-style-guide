@@ -67,18 +67,18 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
   }
   return (
     <Card className={classnames(styles.root, { [styles.highlightedBg]: jobAdTypeOption.showHighlightedBg })}>
-      <Section>
-        <Text intimate className={styles.company}>
-          {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
-          {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
-          {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-          {company}
-        </Text>
+      <Section className={styles.headerSection}>
         {title}
       </Section>
       {(jobAdTypeOption.showSellingPoint || jobAdTypeOption.showDescription) && (
         <Section className={styles.bodySection}>
           <div>
+            <Text intimate className={styles.company}>
+              {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
+              {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
+              {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
+              {company}
+            </Text>
             {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
               <div
                 className={classnames(styles.sellingPointsSection, { [styles.withDescription]: jobAdTypeOption.showDescription && job.description })}>
