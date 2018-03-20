@@ -22,8 +22,8 @@ export { default as Secondary } from './Secondary/Secondary';
 export { default as Strong } from './Strong/Strong';
 export { default as Text } from './Text/Text';
 export { default as TextLink } from './TextLink/TextLink';
-export { default as BulletPoint } from './BulletPoint/BulletPoint';
-export { default as BulletPointList } from './BulletPointList/BulletPointList';
+export { default as BulletList } from './BulletList/BulletList';
+export { default as Bullet } from './Bullet/Bullet';
 
 // Layout
 export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';

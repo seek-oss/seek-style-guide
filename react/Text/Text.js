@@ -13,6 +13,8 @@ import stylesRegular from '../Regular/Regular.less';
 import withTextProps, { SizePropTypes } from '../private/withTextProps';
 
 const Text = ({
+  component,
+  bullet,
   children,
   className,
   size,
@@ -25,35 +27,40 @@ const Text = ({
   light,
   baseline,
   ...restProps
-}) => (
-  <span
-    {...restProps}
-    className={classnames({
-      [styles.root]: true,
-      [className]: className,
-      [styles[size]]: size,
-      [styles.raw]: raw,
-      [styles.baseline]: baseline
-    })}>
-    <span
+}) => {
+  const Component = component || (bullet ? 'li' : 'span');
+  return (
+    <Component
+      {...restProps}
       className={classnames({
-        [stylesPositive.root]: positive,
-        [stylesCritical.root]: critical,
-        [stylesSecondary.root]: secondary,
-        [stylesStrong.root]: strong,
-        [stylesRegular.root]: regular,
-        [styles.light]: light
+        [styles.root]: true,
+        [className]: className,
+        [styles[size]]: size,
+        [styles.raw]: raw,
+        [styles.bullet]: bullet,
+        [styles.baseline]: baseline
       })}>
-      {children}
-    </span>
-  </span>
-);
+      <span
+        className={classnames({
+          [stylesPositive.root]: positive,
+          [stylesCritical.root]: critical,
+          [stylesSecondary.root]: secondary,
+          [stylesStrong.root]: strong,
+          [stylesRegular.root]: regular,
+          [styles.light]: light
+        })}>
+        {children}
+      </span>
+    </Component>
+  );
+};
 
 Text.displayName = 'Text';
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  bullet: PropTypes.bool,
   ...SizePropTypes,
   raw: PropTypes.bool,
   positive: PropTypes.bool,
@@ -67,6 +74,7 @@ Text.propTypes = {
 
 Text.defaultProps = {
   baseline: true,
+  bullet: false,
   size: 'standard'
 };
 
