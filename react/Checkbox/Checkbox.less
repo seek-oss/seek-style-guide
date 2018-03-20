@@ -27,13 +27,11 @@
 }
 
 .standard {
-  .touchableText(@standard-type-scale-mobile);
+  .touchableText(@standard-type-scale);
+  height: 100%;
   cursor: pointer;
   display: flex;
   align-items: center;
-  @media @desktop {
-    .touchableText(@standard-type-scale);
-  }
 }
 
 .checkBox {
@@ -42,6 +40,7 @@
   background-color: @sk-white;
   width: @row-height * 5;
   height: @row-height * 5;
+  flex: 0 0 (@row-height * 5);
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   margin-right: @field-gutter-width;
