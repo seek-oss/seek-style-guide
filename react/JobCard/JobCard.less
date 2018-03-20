@@ -53,25 +53,35 @@
 }
 
 .positionTitle {
-  color: @linkBlue;
+  color: @actionBlue;
   padding-bottom: @job-card-text-space;
   display: inline;
   word-wrap: break-word;
 }
 
 .sellingPointsList {
+  .rawText();
   list-style: disc;
   padding-left: @job-card-list-indent;
-  color: @saGrey1;
+  color: @saGrey3;
+  margin-left: @grid-base;
 }
 
 .sellingPoint {
   padding-bottom: @job-card-text-space;
+  color: @saGrey1;
 }
 
-.jobDescriptionSection,
 .sellingPointsSection {
   padding-top: @job-card-section-space;
+}
+
+.jobDescriptionSection {
+  display: none;
+  @media @desktop {
+    padding-top: @job-card-section-space;
+    display: flex;
+  }
 }
 
 .withDescription {
@@ -119,7 +129,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: @saGrey1;
+  color: @saGrey2;
   /* stylelint-disable-next-line */
   & span {
     vertical-align: middle;
@@ -127,12 +137,13 @@
 }
 
 .jobInfoIcon {
-  color: @saGrey2;
+  color: @saGrey4;
+  margin-right: @grid-base;
 }
 
 .postingDuration {
   padding-bottom: @job-card-bottom-text-space;
-  color: @saGrey3;
+  color: @saGrey2;
 }
 
 .companyPicWrapper {
@@ -141,10 +152,11 @@
     width: @grid-base * 40;
     min-width: @grid-base * 40;
     height: @grid-base * 30;
-    max-height: @grid-base * 40;
+    max-height: 100%;
     display: flex;
     justify-content: flex-end;
     padding-left: @grid-base * 2;
+    flex: 1;
   }
 }
 

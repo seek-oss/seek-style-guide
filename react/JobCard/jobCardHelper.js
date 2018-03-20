@@ -19,14 +19,14 @@ const jobstreetDefault = {
   showCompanyPic: false,
   showHighlightedBg: false,
   showSellingPoint: false,
-  showDescription: false
+  showDescription: true
 };
 const jobstreetStandout = {
   showCompanyLogo: true,
   showCompanyPic: true,
   showHighlightedBg: true,
   showSellingPoint: true,
-  showDescription: false
+  showDescription: true
 };
 
 const getJobAdTypeOption = jobAdType => {
