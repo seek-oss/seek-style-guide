@@ -49,8 +49,26 @@ export default class Menu extends Component {
     return null;
   }
 
+  renderMenuButtons = ({ btns, brandStyles }) => {
+    if (btns && btns.map) {
+      const menuItems = btns.map((btns, index) => (
+        <MenuItem itemClass={styles.buttonLink} key={index} linkUrl={btns.url} ItemIcon={btns.ItemIcon} brandStyles={brandStyles}>
+          <Text>{btns.title}</Text>
+        </MenuItem>
+      ));
+
+      return (
+        <div className={styles.menuBody}>
+          {menuItems}
+        </div>
+      );
+    }
+
+    return null;
+  }
+
   render() {
-    const { messages, shouldShowMenu, links, locales, more, brandStyles } = this.props;
+    const { messages, shouldShowMenu, links, locales, more, brandStyles, btns, loginAvailable = false } = this.props;
     return (
       <div className={classnames(styles.root, { [styles.showMenu]: shouldShowMenu })}>
         <Section className={styles.headerMenu}>
@@ -59,12 +77,16 @@ export default class Menu extends Component {
         {
           this.renderMenuLinks({ links, more, messages, brandStyles })
         }
+        {
+          loginAvailable && (
+            this.renderMenuButtons({ btns, brandStyles })
+          )
+        }
         <div className={styles.menuBody}>
           <MenuItem itemClass={styles.employerLink} linkUrl={messages['header.employerSiteUrl']} ItemIcon={EmployerIcon} brandStyles={brandStyles}>
             <Text>{messages['header.employerSiteTitle']}</Text>
           </MenuItem>
         </div>
-
         <Section className={styles.headerMenu}>
           <Text whisperingTitle>{messages['menu.settingsHeader']}</Text>
         </Section>

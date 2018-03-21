@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Header.less';
 import { Header as GlobalHeader } from 'seek-asia-style-guide/react';
 import Logo from '../Logo/Logo';
-import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon } from 'seek-asia-style-guide/react';
+import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon, JobFunctionIcon, ProfileIcon } from 'seek-asia-style-guide/react';
 import { getLocalization, locales } from '../localization';
 
 const getJobsDBProps = ({ country, language }) => {
@@ -16,7 +16,13 @@ const getJobsDBProps = ({ country, language }) => {
     { title: messages['header.careerInsightsTitle'], url: messages['header.careerInsightsUrl'], ItemIcon: LightbulbIcon }
   ];
 
+  const btns = [
+    { title: messages['header.loginTitle'], url: messages['header.loginUrl'], ItemIcon: ProfileIcon },
+    { title: messages['header.signupTitle'], url: messages['header.signupUrl'], ItemIcon: JobFunctionIcon, btnColor: "callToAction" }
+  ];
+
   return {
+    btns,
     links,
     messages
   };

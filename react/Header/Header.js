@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Text } from 'seek-asia-style-guide/react';
+import { Text, Button, ButtonGroup } from 'seek-asia-style-guide/react';
 import Menu from './components/Menu/Menu';
 import ActionTray from './components/ActionTray/ActionTray';
 import { sortCurrentLocaleToTop } from './localeUtils';
@@ -23,6 +23,34 @@ const currentLocale = ({ title, ItemIcon }) => {
 currentLocale.propTypes = {
   title: PropTypes.string,
   ItemIcon: PropTypes.func
+};
+
+const renderSecondaryNavBtns = ({ btns }) => {
+  if (btns && btns.map) {
+    const secondaryNavBtns = btns.map((btns, index) => {
+        return (
+          <Button color={btns.btnColor || "hyperlink"}
+                  compact
+                  component="a"
+                  href={btns.url}>
+            {btns.title}
+          </Button>
+        );
+    });
+
+    return (
+      <div className={styles.secondaryNav}>
+        <ButtonGroup>
+          { secondaryNavBtns }
+        </ButtonGroup>
+      </div>
+    );
+  }
+  return null;
+};
+
+renderSecondaryNavBtns.propTypes = {
+  btns: PropTypes.array
 };
 
 const renderPrimaryNavLinks = ({ links, brandStyles }) => {
@@ -63,7 +91,7 @@ export default class Header extends Component {
   }
 
   render() {
-    const { loginAvailable = false, LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps } = this.props;
+    const { loginAvailable = false, LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps, btns } = this.props;
     const localeList = sortCurrentLocaleToTop({ locales, country, language });
     const menuOpen = this.state.menuOpen;
 
@@ -80,9 +108,12 @@ export default class Header extends Component {
         <div className={loginAvailable ? styles.primaryNav : styles.primaryNavNoLogin}>
           <LogoComponent {...logoProps} />
           { renderPrimaryNavLinks({ links, brandStyles }) }
+          { loginAvailable && (
+            renderSecondaryNavBtns({ btns, loginAvailable })
+          )}
         </div>
         <ActionTray {...actionTrayProps} brandStyles={brandStyles} messages={messages} menuOpen={menuOpen} handleToggleMenu={this.handleToggleMenu.bind(this)} loginAvailable={loginAvailable} activeTab={activeTab} />
-        <Menu shouldShowMenu={menuOpen} messages={messages} links={links} more={more} locales={localeList} brandStyles={brandStyles} />
+        <Menu shouldShowMenu={menuOpen} messages={messages} links={links} more={more} locales={localeList} brandStyles={brandStyles} btns={btns} loginAvailable={loginAvailable} />
       </header>
     );
   }
