@@ -12,6 +12,9 @@
   border-style: solid;
   border-bottom-width: 1px;
   border-color: @saGrey4;
+  @media @desktop {
+    padding: 0 @grid-base * 2;
+  }
 }
 
 .headerSection {
@@ -149,9 +152,9 @@
 .companyPicWrapper {
   display: none;
   @media @desktop {
-    width: @grid-base * 40;
-    min-width: @grid-base * 40;
-    height: @grid-base * 30;
+    width: @grid-base * 50;
+    min-width: @grid-base * 50;
+    height: @grid-base * 35;
     max-height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -164,6 +167,8 @@
   max-width: 100%;
   max-height: 100%;
   display: flex;
+  object-fit: contain;
+  align-self: flex-start;
 }
 
 .companyLogoWrapper {

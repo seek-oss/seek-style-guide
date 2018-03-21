@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types';
+import Constants from '../Constants/Constants';
+
+const { JOBADTYPE_JOBSDB_DEFAULT, JOBADTYPE_JOBSDB_BRANDED, JOBADTYPE_JOBSTREET_DEFAULT, JOBADTYPE_JOBSTREET_STANDOUT } = Constants;
 
 const jobsdbDefault = {
   showCompanyLogo: false,
@@ -31,13 +34,13 @@ const jobstreetStandout = {
 
 const getJobAdTypeOption = jobAdType => {
   switch (jobAdType) {
-    case 'jobsdbDefault':
+    case JOBADTYPE_JOBSDB_DEFAULT:
       return jobsdbDefault;
-    case 'jobsdbBranded':
+    case JOBADTYPE_JOBSDB_BRANDED:
       return jobsdbBranded;
-    case 'jobstreetDefault':
+    case JOBADTYPE_JOBSTREET_DEFAULT:
       return jobstreetDefault;
-    case 'jobstreetStandout':
+    case JOBADTYPE_JOBSTREET_STANDOUT:
       return jobstreetStandout;
     default:
       return {};

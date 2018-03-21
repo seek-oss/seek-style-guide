@@ -132,6 +132,52 @@ export default {
           })
         }
       ]
+    },
+    {
+      label: 'Company Pic',
+      type: 'radio',
+      states: [
+        {
+          label: 'Normal',
+          transformProps: props => ({
+            ...props,
+            job: {
+              ...props.job,
+              companyPictureUrl: 'https://siva.jsstatic.com/my/94463/images/photo/94463_photo_0_621506.jpg'
+            }
+          })
+        },
+        {
+          label: 'Very long',
+          transformProps: props => ({
+            ...props,
+            job: {
+              ...props.job,
+              companyPictureUrl: 'https://siva.jsstatic.com/my/56932/images/photo/56932_photo_0_213672.jpg'
+            }
+          })
+        },
+        {
+          label: 'Vertical',
+          transformProps: props => ({
+            ...props,
+            job: {
+              ...props.job,
+              companyPictureUrl: 'https://siva.jsstatic.com/my/86688/images/photo/86688_photo_0_400935.jpg'
+            }
+          })
+        },
+        {
+          label: 'Square',
+          transformProps: props => ({
+            ...props,
+            job: {
+              ...props.job,
+              companyPictureUrl: 'https://siva.jsstatic.com/my/119697/images/photo/119697_photo_0_738574.jpg'
+            }
+          })
+        }
+      ]
     }
   ]
 };
