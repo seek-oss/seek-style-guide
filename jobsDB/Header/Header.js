@@ -17,7 +17,7 @@ const getJobsDBProps = ({ country, language }) => {
   ];
 
   const btns = [
-    { title: messages['header.loginTitle'], url: messages['header.loginUrl'], ItemIcon: ProfileIcon },
+    { title: messages['header.loginTitle'], url: messages['header.loginUrl'], ItemIcon: ProfileIcon, btnColor: "secondary" },
     { title: messages['header.signupTitle'], url: messages['header.signupUrl'], ItemIcon: JobFunctionIcon, btnColor: "callToAction" }
   ];
 

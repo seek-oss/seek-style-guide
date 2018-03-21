@@ -149,6 +149,13 @@ export default {
             ...props,
             color: 'transparent'
           })
+        },
+        {
+          label: 'Secondary',
+          transformProps: props => ({
+            ...props,
+            color: 'secondary'
+          })
         }
       ]
     },

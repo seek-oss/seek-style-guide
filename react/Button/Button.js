@@ -15,7 +15,7 @@ export default class Button extends Component {
 
   static propTypes = {
     color: PropTypes.oneOf([
-      'callToAction', 'hyperlink', 'completion', 'alert', 'highlight', 'transparent'
+      'callToAction', 'hyperlink', 'completion', 'alert', 'highlight', 'transparent', 'secondary'
     ]).isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -65,6 +65,7 @@ export default class Button extends Component {
         [styles.root_alert]: color === 'alert',
         [styles.root_highlight]: color === 'highlight',
         [styles.root_isTransparent]: color === 'transparent',
+        [styles.root_secondary]: color === 'secondary',
         [styles.root_isInverse]: inverse && color !== 'transparent',
         [styles.root_isGhost]: ghost && !inverse && color !== 'transparent',
         [styles[`root_is${capitalize(color)}`]]: color
