@@ -21,7 +21,13 @@ exports[`Radio inputProps should pass through other props to the input 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="circle"
+        className="circle circle_isHover"
+        cx="100"
+        cy="100"
+        r="100"
+      />
+      <circle
+        className="circle circle_isSelected"
         cx="100"
         cy="100"
         r="100"
@@ -59,7 +65,13 @@ exports[`Radio inputProps should render as checked 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="circle"
+        className="circle circle_isHover"
+        cx="100"
+        cy="100"
+        r="100"
+      />
+      <circle
+        className="circle circle_isSelected"
         cx="100"
         cy="100"
         r="100"
@@ -96,7 +108,13 @@ exports[`Radio should render with className 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="circle"
+        className="circle circle_isHover"
+        cx="100"
+        cy="100"
+        r="100"
+      />
+      <circle
+        className="circle circle_isSelected"
         cx="100"
         cy="100"
         r="100"
@@ -133,7 +151,13 @@ exports[`Radio should render with simple props 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="circle"
+        className="circle circle_isHover"
+        cx="100"
+        cy="100"
+        r="100"
+      />
+      <circle
+        className="circle circle_isSelected"
         cx="100"
         cy="100"
         r="100"

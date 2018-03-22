@@ -44,10 +44,30 @@
 }
 
 .circle {
-  fill: @sk-form-accent;
+  transition:
+    opacity 0.2s ease,
+    @spring-transition;
+  transform-origin: 50% 50%;
   opacity: 0;
 
-  .input:checked + .label & {
-    opacity: 1;
+  .input:active + .label & {
+    transform: scale(0.9);
+  }
+
+  &.circle_isSelected {
+    fill: @sk-form-accent;
+
+    .input:checked + .label & {
+      opacity: 1;
+    }
+  }
+
+  &.circle_isHover {
+    fill: @sk-gray-lightest;
+
+    .input:focus:not(:checked) + .label &,
+    .input:hover:not(:checked) + .label & {
+      opacity: 1;
+    }
   }
 }

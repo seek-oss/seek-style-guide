@@ -57,7 +57,8 @@ export default class Radio extends Component {
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
           focusable="false" >
-          <circle className={styles.circle} cx="100" cy="100" r="100" />
+          <circle className={classnames(styles.circle, styles.circle_isHover)} cx="100" cy="100" r="100" />
+          <circle className={classnames(styles.circle, styles.circle_isSelected)} cx="100" cy="100" r="100" />
         </svg>
         <Text raw baseline={false} className={styles.labelText}>{label}</Text>
       </label>

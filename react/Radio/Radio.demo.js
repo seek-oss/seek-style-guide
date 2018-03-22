@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Radio from './Radio';
+import Text from '../Text/Text';
 import * as sketch from './Radio.sketch';
 import demoStyles from './Radio.demo.less';
 
@@ -14,27 +15,45 @@ class RadioContainer extends Component {
     super();
 
     this.state = {
-      checked: false
+      value: ''
     };
   }
 
-  handleChange = event => {
+  handleYes = () => {
     this.setState({
-      checked: event.target.checked
+      value: 'Yes'
+    });
+  };
+
+  handleNo = () => {
+    this.setState({
+      value: 'No'
     });
   };
 
   render() {
     const { component: DemoComponent, componentProps } = this.props;
-    const { checked } = this.state;
+    const { value } = this.state;
 
     return (
       <div className={demoStyles.root}>
+        <Text subheading>Still in role</Text>
         <DemoComponent
           {...componentProps}
+          id="Yes"
+          label="Yes"
           inputProps={{
-            checked,
-            onChange: this.handleChange
+            checked: value === 'Yes',
+            onChange: this.handleYes
+          }}
+        />
+        <DemoComponent
+          {...componentProps}
+          id="No"
+          label="No"
+          inputProps={{
+            checked: value === 'No',
+            onChange: this.handleNo
           }}
         />
       </div>
@@ -50,9 +69,9 @@ export default {
   container: RadioContainer,
   sketch,
   initialProps: {
-    id: 'stillInRole',
-    label: 'Still in role',
+    name: 'stillInRole',
     // Documentation only:
+    id: 'myRadio',
     inputProps: {
       checked: false,
       onChange: () => {}
