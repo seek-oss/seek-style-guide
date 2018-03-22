@@ -32,7 +32,8 @@ export default class Button extends Component {
     loading: PropTypes.bool,
     fullWidth: PropTypes.bool,
     inverse: PropTypes.bool,
-    compact: PropTypes.bool
+    compact: PropTypes.bool,
+    disabled: PropTypes.bool
   };
 
   static defaultProps = {
@@ -50,7 +51,7 @@ export default class Button extends Component {
   }
 
   render() {
-    const { color, inverse, compact, ghost, className, loading, fullWidth, children, component, ...restProps } = this.props;
+    const { color, inverse, compact, ghost, className, loading, fullWidth, children, component, disabled, ...restProps } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
@@ -59,15 +60,16 @@ export default class Button extends Component {
         [styles.fullWidth]: fullWidth,
         [styles.jobsDB]: isJobsDB,
         [styles.jobStreet]: isJobStreet,
-        [styles.root_callToAction]: color === 'callToAction',
-        [styles.root_hyperlink]: color === 'hyperlink',
-        [styles.root_completion]: color === 'completion',
-        [styles.root_alert]: color === 'alert',
-        [styles.root_highlight]: color === 'highlight',
-        [styles.root_isTransparent]: color === 'transparent',
-        [styles.root_isInverse]: inverse && color !== 'transparent',
-        [styles.root_isGhost]: ghost && !inverse && color !== 'transparent',
-        [styles[`root_is${capitalize(color)}`]]: color
+        [styles.root_callToAction]: color === 'callToAction' && !disabled,
+        [styles.root_hyperlink]: color === 'hyperlink' && !disabled,
+        [styles.root_completion]: color === 'completion' && !disabled,
+        [styles.root_alert]: color === 'alert' && !disabled,
+        [styles.root_highlight]: color === 'highlight' && !disabled,
+        [styles.root_isTransparent]: color === 'transparent' && !disabled,
+        [styles.root_isInverse]: inverse && color !== 'transparent' && !disabled,
+        [styles.root_isGhost]: ghost && !inverse && color !== 'transparent' && !disabled,
+        [styles.disabled]: disabled,
+        [styles[`root_is${capitalize(color)}`]]: color && !disabled
       }),
       disabled: loading,
       ref: this.storeButtonReference,

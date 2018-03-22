@@ -85,4 +85,9 @@ describe('Button:', () => {
     const wrapper = shallow(<Button color="callToAction" component={CustomComponent}>SEEK</Button>);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render disabled', () => {
+    const wrapper = shallow(<Button color="callToAction" disabled>SEEK</Button>);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
