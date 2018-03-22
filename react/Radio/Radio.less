@@ -19,6 +19,7 @@
   cursor: pointer;
   position: relative;
   align-items: center;
+  padding: @row-height 0 (@row-height * 2);
 }
 
 .labelText {
@@ -43,7 +44,7 @@
 }
 
 .circle {
-  fill: @sk-blue-lighter;
+  fill: @sk-form-accent;
   opacity: 0;
 
   .input:checked + .label & {
