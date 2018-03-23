@@ -94,6 +94,13 @@ export default {
           })
         },
         {
+          label: 'Compact',
+          transformProps: props => ({
+            ...props,
+            compact: true
+          })
+        },
+        {
           label: 'Show mobile backdrop',
           transformProps: ({ ...props }) => ({
             ...props,

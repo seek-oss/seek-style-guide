@@ -57,12 +57,14 @@ export default class TextField extends Component {
       }
     },
     /* eslint-enable consistent-return */
-    onClear: PropTypes.func
+    onClear: PropTypes.func,
+    compact: PropTypes.bool
   };
 
   static defaultProps = {
     id: '',
-    className: ''
+    className: '',
+    compact: false
   };
 
   constructor() {
@@ -116,13 +118,14 @@ export default class TextField extends Component {
   }
 
   render() {
-    const { className, valid, onClear, inputProps = {} } = this.props;
+    const { className, valid, onClear, compact, inputProps = {} } = this.props;
     const hasValue = (inputProps.value && inputProps.value.length > 0);
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,
       [styles.invalid]: valid === false,
       [styles.canClear]: canClear,
+      [styles.compact]: compact,
       [className]: className
     });
 

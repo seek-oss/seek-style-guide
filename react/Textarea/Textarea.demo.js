@@ -85,6 +85,13 @@ export default {
             ...props,
             description: 'Describe a descriptive description descriptively'
           })
+        },
+        {
+          label: 'Compact',
+          transformProps: props => ({
+            ...props,
+            compact: true
+          })
         }
       ]
     },

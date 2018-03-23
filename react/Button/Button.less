@@ -38,10 +38,17 @@
   border: 1px solid @background-color;
   line-height: @touchableTextHeight - 2px;
 
+  &.compact {
+    line-height: @compactTouchableTextHeight - 2px;
+  }
+
   .hoverState({
     .buttonColor(@background-color, fade(@background-color, 10%));
     border: 0px;
     line-height: @touchableTextHeight;
+    &.compact {
+      line-height: @compactTouchableTextHeight;
+    }
   });
 
   .activeState({
@@ -98,7 +105,7 @@
 }
 
 .compact {
-  .touchableText(@whistling-type-scale);
+  .compactTouchableText(@whistling-type-scale);
 }
 
 .disabled {
@@ -203,6 +210,10 @@
   border: @border-width solid;
   font-weight: @sk-bold;
   line-height: @touchableTextHeight - (@border-width * 2);
+
+  &.compact {
+    line-height: @compactTouchableTextHeight - 4px;
+  }
 }
 
 .root_isTransparent {
@@ -221,7 +232,7 @@
 }
 
 .root_isTransparent.compact {
-  .touchableText(@whispering-type-scale);
+  .compactTouchableText(@whispering-type-scale);
 }
 
 .loading {
