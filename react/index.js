@@ -95,3 +95,6 @@ export { default as TextField } from './TextField/TextField';
 export { default as ScreenReaderOnly } from './ScreenReaderOnly/ScreenReaderOnly';
 export { default as ScreenReaderSkipLink } from './ScreenReaderSkipLink/ScreenReaderSkipLink';
 export { default as ScreenReaderSkipTarget } from './ScreenReaderSkipTarget/ScreenReaderSkipTarget';
+
+// Constants
+export { default as Constants } from './Constants/Constants';

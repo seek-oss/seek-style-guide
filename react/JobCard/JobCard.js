@@ -7,8 +7,10 @@ import Section from '../Section/Section';
 import LocationIcon from '../LocationIcon/LocationIcon';
 import MoneyIcon from '../MoneyIcon/MoneyIcon';
 import styles from './JobCard.less';
+import classnames from 'classnames';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
+import getJobAdTypeOption from './jobCardHelper.js';
 
 const getParts = (text, query) => {
   if (!text || !query) {
@@ -22,8 +24,9 @@ const getParts = (text, query) => {
   return parse(text, matches);
 };
 
-const JobCard = ({ job, keyword = '' }) => {
-  let title = <Text className={styles.positionTitle}>{job.jobTitle}</Text>;
+const JobCard = ({ job, keyword = '', jobAdType }) => {
+  const jobAdTypeOption = getJobAdTypeOption(jobAdType);
+  let title = <Text waving semiStrong className={styles.positionTitle}>{job.jobTitle}</Text>;
   let company = job.company;
   const keywordParts = getParts(job.jobTitle, keyword);
   const companyParts = getParts(company, keyword);
@@ -34,6 +37,7 @@ const JobCard = ({ job, keyword = '' }) => {
           keywordParts.map((part, index) => {
             return (
               <Text
+                waving
                 strong={part.highlight}
                 className={styles.positionTitle}
                 key={index}>
@@ -63,43 +67,53 @@ const JobCard = ({ job, keyword = '' }) => {
     );
   }
   return (
-    <Card className={styles.root}>
-      <Section>
-        <Text intimate className={styles.company}>
-          {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
-          {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
-          {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-          {company}
-        </Text>
+    <Card className={classnames(styles.root, { [styles.highlightedBg]: jobAdTypeOption.showHighlightedBg })}>
+      <Section className={styles.headerSection}>
         {title}
       </Section>
-      {job.sellingPoints &&
-        <Section className={styles.sellingPointsSection} >
-          <ul className={styles.sellingPointsList} >
-            {job.sellingPoints.map((sellingPoint, i) => {
-              return (
-                <li key={i}><Text intimate className={styles.sellingPoint}>{sellingPoint}</Text></li>
-              );
-            })}
-          </ul>
-        </Section>
-      }
-      { job.description && (
-        <Section className={styles.jobDescriptionSection}>
-          <Text intimate className={styles.bodyDescriptionText}>{job.description}</Text>
-        </Section>
-      )}
+      <Section className={styles.bodySection}>
+        <div>
+          <Text intimate className={styles.company}>
+            {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
+            {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
+            {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
+            {company}
+          </Text>
+          {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
+            <div
+              className={classnames(styles.sellingPointsSection, { [styles.withDescription]: jobAdTypeOption.showDescription && job.description })}>
+              <ul className={styles.sellingPointsList} >
+                {job.sellingPoints.map((sellingPoint, i) => {
+                  return (
+                    <li key={i}><Text intimate className={styles.sellingPoint}>{sellingPoint}</Text></li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+          {jobAdTypeOption.showDescription && job.description && (
+            <div className={styles.jobDescriptionSection}>
+              <Text intimate className={styles.bodyDescriptionText}>{job.description}</Text>
+            </div>
+          )}
+        </div>
+        {jobAdTypeOption.showCompanyPic && job.companyPictureUrl && (
+          <div className={styles.companyPicWrapper}>
+            <img className={styles.companyPic} src={job.companyPictureUrl} />
+          </div>
+        )}
+      </Section>
       <Section className={styles.footerSection}>
         <div className={styles.footerLeft}>
           <div className={styles.jobInfoContainer}>
             <div className={styles.jobInfoList}>
-              <Text whispering className={styles.jobInfo}><LocationIcon className={styles.jobInfoIcon} /> {job.location}</Text>
-              { job.salary && (<Text whispering className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /> {job.salary}</Text>)}
+              <Text intimate className={styles.jobInfo}><LocationIcon className={styles.jobInfoIcon} /> {job.location}</Text>
+              {job.salary && (<Text intimate className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /> {job.salary}</Text>)}
             </div>
             <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>
         </div>
-        {job.companyLogoUrl && (
+        {jobAdTypeOption.showCompanyLogo && (
           <div className={styles.companyLogoWrapper}>
             <img className={styles.companyLogo} src={job.companyLogoUrl} />
           </div>
@@ -117,6 +131,7 @@ JobCard.propTypes = {
     jobTitle: PropTypes.string.isRequired,
     jobUrl: PropTypes.string.isRequired,
     sellingPoints: PropTypes.arrayOf(PropTypes.string),
+    companyPictureUrl: PropTypes.string,
     companyLogoUrl: PropTypes.string,
     description: PropTypes.string,
     location: PropTypes.string.isRequired,
@@ -125,5 +140,6 @@ JobCard.propTypes = {
     featuredLabel: PropTypes.string,
     classifiedLabel: PropTypes.string,
     confidentialLabel: PropTypes.string
-  }).isRequired
+  }).isRequired,
+  jobAdType: PropTypes.string
 };

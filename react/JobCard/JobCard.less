@@ -12,6 +12,17 @@
   border-style: solid;
   border-bottom-width: 1px;
   border-color: @saGrey4;
+  @media @desktop {
+    padding: 0 @grid-base * 2;
+  }
+}
+
+.headerSection {
+  padding-bottom: @job-card-section-space;
+}
+
+.highlightedBg {
+  background-color: @actionPastelBlue;
 }
 
 .company {
@@ -45,25 +56,39 @@
 }
 
 .positionTitle {
-  color: @linkBlue;
+  color: @actionBlue;
   padding-bottom: @job-card-text-space;
   display: inline;
   word-wrap: break-word;
 }
 
 .sellingPointsList {
+  .rawText();
   list-style: disc;
   padding-left: @job-card-list-indent;
-  color: @saGrey1;
+  color: @saGrey3;
+  margin-left: @grid-base;
 }
 
 .sellingPoint {
   padding-bottom: @job-card-text-space;
+  color: @saGrey1;
 }
 
-.jobDescriptionSection,
 .sellingPointsSection {
   padding-top: @job-card-section-space;
+}
+
+.jobDescriptionSection {
+  display: none;
+  @media @desktop {
+    padding-top: @job-card-section-space;
+    display: flex;
+  }
+}
+
+.withDescription {
+  padding-bottom: @grid-base * 2;
 }
 
 .bodyDescriptionText {
@@ -74,8 +99,14 @@
   display: -webkit-box;
 }
 
-.footerSection {
+.bodySection {
   padding-top: @job-card-section-space;
+  padding-bottom: @job-card-section-space;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerSection {
   display: flex;
   justify-content: space-between;
 }
@@ -101,7 +132,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: @saGrey1;
+  color: @saGrey2;
   /* stylelint-disable-next-line */
   & span {
     vertical-align: middle;
@@ -109,12 +140,35 @@
 }
 
 .jobInfoIcon {
-  color: @saGrey2;
+  color: @saGrey4;
+  margin-right: @grid-base;
 }
 
 .postingDuration {
   padding-bottom: @job-card-bottom-text-space;
-  color: @saGrey3;
+  color: @saGrey2;
+}
+
+.companyPicWrapper {
+  display: none;
+  @media @desktop {
+    width: @grid-base * 50;
+    min-width: @grid-base * 50;
+    height: @grid-base * 35;
+    max-height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: @grid-base * 2;
+    flex: 1;
+  }
+}
+
+.companyPic {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  object-fit: contain;
+  align-self: flex-start;
 }
 
 .companyLogoWrapper {
@@ -131,6 +185,8 @@
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
+  display: flex;
+  align-self: flex-start;
 }
 
 .highlight {

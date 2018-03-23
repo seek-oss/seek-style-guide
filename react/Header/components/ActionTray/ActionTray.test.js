@@ -2,7 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import ActionTray from './ActionTray';
-import { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } from '../../Header';
+import { Constants } from 'seek-asia-style-guide/react';
+
+const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } = Constants;
 
 describe('ActionTray', () => {
   const defaultProps = {
