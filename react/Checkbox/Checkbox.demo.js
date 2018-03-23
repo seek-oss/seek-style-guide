@@ -56,6 +56,7 @@ export default {
   initialProps: {
     id: 'stillInRole',
     label: 'Still in role',
+    extraLabel: '(All)',
     type: 'standard',
     // Documentation only:
     inputProps: {
