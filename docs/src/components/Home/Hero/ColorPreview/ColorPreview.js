@@ -4,11 +4,11 @@ import React from 'react';
 import lessToJs from 'less-vars-to-js';
 
 import Droplet from './Droplet/Droplet';
-import brand from '!!raw-loader!seek-asia-style-guide/theme/palette/brand.less';
-const brandValues = lessToJs(brand);
+import elements from '!!raw-loader!seek-asia-style-guide/theme/palette/elements.less';
+const elementsValues = lessToJs(elements);
 
 const getSwatch = name => {
-  const value = brandValues[name];
+  const value = elementsValues[name];
 
   return (
     <div className={styles.drop} key={name}>
@@ -25,8 +25,11 @@ export default function ColorPreview() {
   return (
     <div>
       {
-        Object.keys(brandValues)
-          .slice(0, 3)
+        Object.keys(elementsValues)
+          .filter(function(k) {
+            return k.indexOf('@action') === 0;
+          })
+          .slice(0, 5)
           .map(getSwatch)
       }
     </div>

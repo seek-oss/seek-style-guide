@@ -4,44 +4,43 @@ exports[`JobCard should render company with bold keyword 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span>
-        <span
-          className="highlight"
-          key="0"
-        >
-          SEEK
-        </span>
-        <span
-          className={null}
-          key="1"
-        >
-           Asia
-        </span>
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
+      semiStrong={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span>
+          <span
+            className="highlight"
+            key="0"
+          >
+            SEEK
+          </span>
+          <span
+            className={null}
+            key="1"
+          >
+             Asia
+          </span>
+        </span>
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -58,7 +57,7 @@ exports[`JobCard should render company with bold keyword 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <LocationIcon
               className="jobInfoIcon"
@@ -69,7 +68,7 @@ exports[`JobCard should render company with bold keyword 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <MoneyIcon
               className="jobInfoIcon"
@@ -86,14 +85,6 @@ exports[`JobCard should render company with bold keyword 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -103,33 +94,16 @@ exports[`JobCard should render job title with bold keyword 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span>
-        <span
-          className="highlight"
-          key="0"
-        >
-          SEEK
-        </span>
-        <span
-          className={null}
-          key="1"
-        >
-           Asia
-        </span>
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <div>
       <Text
         baseline={true}
         className="positionTitle"
         key="0"
         strong={true}
+        waving={true}
       >
         Senior
       </Text>
@@ -138,6 +112,7 @@ exports[`JobCard should render job title with bold keyword 1`] = `
         className="positionTitle"
         key="1"
         strong={false}
+        waving={true}
       >
          Software 
       </Text>
@@ -146,6 +121,7 @@ exports[`JobCard should render job title with bold keyword 1`] = `
         className="positionTitle"
         key="2"
         strong={true}
+        waving={true}
       >
         Engineer
       </Text>
@@ -154,21 +130,37 @@ exports[`JobCard should render job title with bold keyword 1`] = `
         className="positionTitle"
         key="3"
         strong={false}
+        waving={true}
       >
          (6 months Contract)
       </Text>
     </div>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span>
+          <span
+            className="highlight"
+            key="0"
+          >
+            SEEK
+          </span>
+          <span
+            className={null}
+            key="1"
+          >
+             Asia
+          </span>
+        </span>
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -185,7 +177,7 @@ exports[`JobCard should render job title with bold keyword 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <LocationIcon
               className="jobInfoIcon"
@@ -196,7 +188,108 @@ exports[`JobCard should render job title with bold keyword 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
+          >
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          whispering={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+  </Section>
+</Card>
+`;
+
+exports[`JobCard should render jobStreet standout style 1`] = `
+<Card
+  className="root highlightedBg"
+>
+  <Section
+    className="headerSection"
+  >
+    <Text
+      baseline={true}
+      className="positionTitle"
+      semiStrong={true}
+      waving={true}
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
+  </Section>
+  <Section
+    className="bodySection"
+  >
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span>
+          <span
+            className="highlight"
+            key="0"
+          >
+            SEEK
+          </span>
+          <span
+            className={null}
+            key="1"
+          >
+             Asia
+          </span>
+        </span>
+      </Text>
+      <div
+        className="jobDescriptionSection"
+      >
+        <Text
+          baseline={true}
+          className="bodyDescriptionText"
+          intimate={true}
+        >
+          Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
+        </Text>
+      </div>
+    </div>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoContainer"
+      >
+        <div
+          className="jobInfoList"
+        >
+          <Text
+            baseline={true}
+            className="jobInfo"
+            intimate={true}
+          >
+            <LocationIcon
+              className="jobInfoIcon"
+            />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            intimate={true}
           >
             <MoneyIcon
               className="jobInfoIcon"
@@ -221,6 +314,96 @@ exports[`JobCard should render job title with bold keyword 1`] = `
         className="companyLogo"
         src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
       />
+    </div>
+  </Section>
+</Card>
+`;
+
+exports[`JobCard should render jobsDB default style 1`] = `
+<Card
+  className="root"
+>
+  <Section
+    className="headerSection"
+  >
+    <Text
+      baseline={true}
+      className="positionTitle"
+      semiStrong={true}
+      waving={true}
+    >
+      Senior Software Engineer (6 months Contract)
+    </Text>
+  </Section>
+  <Section
+    className="bodySection"
+  >
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span>
+          <span
+            className="highlight"
+            key="0"
+          >
+            SEEK
+          </span>
+          <span
+            className={null}
+            key="1"
+          >
+             Asia
+          </span>
+        </span>
+      </Text>
+    </div>
+  </Section>
+  <Section
+    className="footerSection"
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoContainer"
+      >
+        <div
+          className="jobInfoList"
+        >
+          <Text
+            baseline={true}
+            className="jobInfo"
+            intimate={true}
+          >
+            <LocationIcon
+              className="jobInfoIcon"
+            />
+             
+            Kuala Lumpur
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            intimate={true}
+          >
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
+             
+            RM99999 - RM999999
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          whispering={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
     </div>
   </Section>
 </Card>
@@ -230,36 +413,35 @@ exports[`JobCard should render with Classified in grey label 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span
-        className="classifiedLabel"
-      >
-        Classified
-      </span>
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
+      semiStrong={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span
+          className="classifiedLabel"
+        >
+          Classified
+        </span>
+        SEEK Asia
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -276,7 +458,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <LocationIcon
               className="jobInfoIcon"
@@ -287,7 +469,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <MoneyIcon
               className="jobInfoIcon"
@@ -304,14 +486,6 @@ exports[`JobCard should render with Classified in grey label 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -321,35 +495,34 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span
-        className="confidentialLabel"
-      >
-        Company Confidential
-      </span>
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
+      semiStrong={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span
+          className="confidentialLabel"
+        >
+          Company Confidential
+        </span>
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -366,7 +539,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <LocationIcon
               className="jobInfoIcon"
@@ -377,7 +550,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <MoneyIcon
               className="jobInfoIcon"
@@ -394,14 +567,6 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -411,31 +576,30 @@ exports[`JobCard should render with default props 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
+      semiStrong={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        SEEK Asia
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -452,7 +616,7 @@ exports[`JobCard should render with default props 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <LocationIcon
               className="jobInfoIcon"
@@ -463,7 +627,7 @@ exports[`JobCard should render with default props 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <MoneyIcon
               className="jobInfoIcon"
@@ -480,14 +644,6 @@ exports[`JobCard should render with default props 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -497,36 +653,35 @@ exports[`JobCard should render with featured label 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      <span
-        className="featuredLabel"
-      >
-        Feature
-      </span>
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
+      semiStrong={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="jobDescriptionSection"
+    className="bodySection"
   >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span
+          className="featuredLabel"
+        >
+          Feature
+        </span>
+        SEEK Asia
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -543,7 +698,7 @@ exports[`JobCard should render with featured label 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <LocationIcon
               className="jobInfoIcon"
@@ -554,7 +709,7 @@ exports[`JobCard should render with featured label 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <MoneyIcon
               className="jobInfoIcon"
@@ -571,14 +726,6 @@ exports[`JobCard should render with featured label 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>
@@ -588,72 +735,30 @@ exports[`JobCard should render with selling points props 1`] = `
 <Card
   className="root"
 >
-  <Section>
-    <Text
-      baseline={true}
-      className="company"
-      intimate={true}
-    >
-      SEEK Asia
-    </Text>
+  <Section
+    className="headerSection"
+  >
     <Text
       baseline={true}
       className="positionTitle"
+      semiStrong={true}
+      waving={true}
     >
       Senior Software Engineer (6 months Contract)
     </Text>
   </Section>
   <Section
-    className="sellingPointsSection"
+    className="bodySection"
   >
-    <ul
-      className="sellingPointsList"
-    >
-      <li
-        key="0"
+    <div>
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
       >
-        <Text
-          baseline={true}
-          className="sellingPoint"
-          intimate={true}
-        >
-          We practice a vibrant & energetic office culture
-        </Text>
-      </li>
-      <li
-        key="1"
-      >
-        <Text
-          baseline={true}
-          className="sellingPoint"
-          intimate={true}
-        >
-          Our company supports a fun yet balanced working environment
-        </Text>
-      </li>
-      <li
-        key="2"
-      >
-        <Text
-          baseline={true}
-          className="sellingPoint"
-          intimate={true}
-        >
-          We support a safe environment for our employees
-        </Text>
-      </li>
-    </ul>
-  </Section>
-  <Section
-    className="jobDescriptionSection"
-  >
-    <Text
-      baseline={true}
-      className="bodyDescriptionText"
-      intimate={true}
-    >
-      Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...
-    </Text>
+        SEEK Asia
+      </Text>
+    </div>
   </Section>
   <Section
     className="footerSection"
@@ -670,7 +775,7 @@ exports[`JobCard should render with selling points props 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <LocationIcon
               className="jobInfoIcon"
@@ -681,7 +786,7 @@ exports[`JobCard should render with selling points props 1`] = `
           <Text
             baseline={true}
             className="jobInfo"
-            whispering={true}
+            intimate={true}
           >
             <MoneyIcon
               className="jobInfoIcon"
@@ -698,14 +803,6 @@ exports[`JobCard should render with selling points props 1`] = `
           1 hour ago
         </Text>
       </div>
-    </div>
-    <div
-      className="companyLogoWrapper"
-    >
-      <img
-        className="companyLogo"
-        src="https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png"
-      />
     </div>
   </Section>
 </Card>

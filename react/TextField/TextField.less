@@ -25,12 +25,12 @@
 
   .invalid & {
     border-color: transparent;
-    box-shadow: 0 0 0 @field-border-width @sk-pink;
+    box-shadow: 0 0 0 @field-border-width @actionRed;
 
     &:not([readonly]):not([disabled]):focus,
     .rootFocus & {
       border-color: transparent;
-      box-shadow: 0 0 0 @field-border-width @sk-pink;
+      box-shadow: 0 0 0 @field-border-width @actionRed;
     }
   }
 
@@ -44,6 +44,9 @@
   &::-ms-clear {
     display: none;
   }
+  .compact & {
+    .compactTouchableText();
+  }
 }
 
 .clearField {
@@ -56,5 +59,8 @@
     opacity: 1;
     transition: opacity 0.3s ease;
     max-width: initial;
+  }
+  .compact & {
+    .compactTouchableText();
   }
 }

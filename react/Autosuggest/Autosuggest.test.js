@@ -35,6 +35,11 @@ describe('Autosuggest', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with compact prop', () => {
+    const wrapper = render(<Autosuggest compact {...getAutosuggestProps()} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render with suggestions', () => {
     const wrapper = render(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} />);
     const suggestions = wrapper.find('.suggestionsContainer').find('li');

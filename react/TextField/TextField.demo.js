@@ -80,6 +80,13 @@ export default {
             ...props,
             className: classnames(className, styles.rootFocus)
           })
+        },
+        {
+          label: 'Compact',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            compact: true
+          })
         }
       ]
     },

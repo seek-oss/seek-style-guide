@@ -1,8 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { HomeIcon, SearchIcon, BookmarkIcon, HamburgerIcon } from 'seek-asia-style-guide/react';
-import { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } from '../../Header';
+import { HomeIcon, SearchIcon, BookmarkIcon, HamburgerIcon, Constants } from 'seek-asia-style-guide/react';
 import styles from './ActionTray.less';
 
 const actionTrayLink = ({ linkUrl, LinkIcon, activeTab, tabName, menuOpen, brandStyles, showFlag, handleToggleMenu }) => {
@@ -46,6 +45,7 @@ const ActionTray = ({ loginAvailable, brandStyles, messages, handleToggleMenu, a
     menuOpen,
     handleToggleMenu
   };
+  const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } = Constants;
 
   if (showTray) {
     return (
