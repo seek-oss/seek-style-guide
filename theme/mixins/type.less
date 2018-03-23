@@ -41,6 +41,14 @@
   height: @touchableTextHeight;
 }
 
+@compactTouchableTextHeight: @grid-row-height * @compact-interaction-type-row-span;
+
+.compactTouchableText(@font-scale: @compact-interaction-type-scale) {
+  .rawText(@font-scale);
+  line-height: @compactTouchableTextHeight;
+  height: @compactTouchableTextHeight;
+}
+
 .rawText(@font-scale: @conversational-type-scale) {
   font-size: unit((@font-scale * @base-font-size), px);
 }

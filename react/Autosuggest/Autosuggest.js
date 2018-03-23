@@ -25,6 +25,7 @@ export default class Autosuggest extends Component {
     autosuggestProps: PropTypes.object.isRequired,
     showMobileBackdrop: PropTypes.bool,
     showFullWidthSuggestionList: PropTypes.bool,
+    compact: PropTypes.bool,
     /* eslint-disable consistent-return */
     suggestionsContainerClassName: (props, _, componentName) => {
       const { suggestionsContainerClassName, autosuggestProps } = props;
@@ -49,7 +50,8 @@ export default class Autosuggest extends Component {
     label: '',
     labelProps: {},
     showMobileBackdrop: false,
-    showFullWidthSuggestionList: false
+    showFullWidthSuggestionList: false,
+    compact: false
   };
 
   state = {

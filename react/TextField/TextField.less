@@ -44,6 +44,9 @@
   &::-ms-clear {
     display: none;
   }
+  .compact & {
+    .compactTouchableText();
+  }
 }
 
 .clearField {
@@ -56,5 +59,8 @@
     opacity: 1;
     transition: opacity 0.3s ease;
     max-width: initial;
+  }
+  .compact & {
+    .compactTouchableText();
   }
 }
