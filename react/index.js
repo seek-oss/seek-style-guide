@@ -80,6 +80,21 @@ export { default as TickIcon } from './TickIcon/TickIcon';
 export { default as TwitterIcon } from './TwitterIcon/TwitterIcon';
 export { default as TimeIcon } from './TimeIcon/TimeIcon';
 
+// Brand portal icons
+export { default as IconAlert } from './IconAlert/IconAlert';
+export { default as IconBookmark } from './IconBookmark/IconBookmark';
+export { default as IconCompany } from './IconCompany/IconCompany';
+export { default as IconEducation } from './IconEducation/IconEducation';
+export { default as IconEmployer } from './IconEmployer/IconEmployer';
+export { default as IconExperience } from './IconExperience/IconExperience';
+export { default as IconHome } from './IconHome/IconHome';
+export { default as IconJobAd } from './IconJobAd/IconJobAd';
+export { default as IconNegative } from './IconNegative/IconNegative';
+export { default as IconPositive } from './IconPositive/IconPositive';
+export { default as IconMail } from './IconMail/IconMail';
+export { default as IconResume } from './IconResume/IconResume';
+export { default as IconSearch } from './IconSearch/IconSearch';
+
 // Fields
 export { default as Autosuggest } from './Autosuggest/Autosuggest';
 export { default as Checkbox } from './Checkbox/Checkbox';
