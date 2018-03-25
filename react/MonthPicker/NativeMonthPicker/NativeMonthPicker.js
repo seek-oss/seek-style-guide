@@ -93,7 +93,7 @@ export default class NativeMonthPicker extends Component {
           value={inputValue}
           onChange={this.handleChange}
           onBlur={this.handleBlur}
-          aria-label = "Month Year"
+          aria-label="Month Year"
         />
       </div>
     );

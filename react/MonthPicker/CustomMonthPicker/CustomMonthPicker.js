@@ -157,7 +157,7 @@ export default class CustomMonthPicker extends Component {
             value: monthValue,
             className: styles.dropdownInput,
             ref: this.storeMonthReference,
-            'aria-label': "Month"
+            'aria-label': 'Month'
           }}
         />
         <Dropdown
@@ -172,7 +172,7 @@ export default class CustomMonthPicker extends Component {
             value: yearValue,
             className: styles.dropdownInput,
             ref: this.storeYearReference,
-            'aria-label': "Year"
+            'aria-label': 'Year'
           }}
         />
       </div>
