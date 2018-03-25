@@ -113,13 +113,17 @@ export default class MonthPicker extends Component {
 
     return (
       <div className={classNames}>
-        <FieldLabel
-          {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }}
-        />
-        {this.renderInput()}
-        <FieldMessage
-          {...{ invalid, help, helpProps, valid, message, messageProps }}
-        />
+        <fieldset>
+          <legend>
+            <FieldLabel
+              {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }}
+            />
+          </legend>
+          {this.renderInput()}
+          <FieldMessage
+            {...{ invalid, help, helpProps, valid, message, messageProps }}
+          />
+        </fieldset>
       </div>
     );
   }
