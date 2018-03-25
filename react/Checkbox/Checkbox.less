@@ -20,6 +20,9 @@
 
 .label {
   display: block;
+  :checked + & {
+    font-weight: @sa-bold;
+  }
 }
 
 .fullWidth {
@@ -30,7 +33,7 @@
   .touchableText(@conversational-type-scale-mobile);
   cursor: pointer;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   line-height: @grid-base * 5;
   padding: @grid-base 0;
   @media @desktop {
@@ -63,6 +66,12 @@
       padding: 1px 0;
     }
   }
+}
+
+.extraLabel {
+  padding-left: 1px;
+  padding-bottom: 0;
+  color: @saGrey1;
 }
 
 .checkBox {

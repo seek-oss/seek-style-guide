@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './Checkbox.less';
 import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
+import { Text } from 'seek-asia-style-guide/react';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
@@ -25,6 +26,7 @@ export default class Checkbox extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     label: PropTypes.node.isRequired,
+    extraLabel: PropTypes.node,
     className: PropTypes.string,
     inputProps: PropTypes.shape({
       onChange: PropTypes.func,
@@ -55,11 +57,12 @@ export default class Checkbox extends Component {
     );
   }
 
-  renderStandard(label) {
+  renderStandard(label, extraLabel) {
     return (
       <div className={styles.standard}>
         {this.renderCheckBox(LEFT)}
         <span className={styles.standardLabel}>{label}</span>
+        {extraLabel && <Text baseline={false} className={styles.extraLabel} whispering>{extraLabel}</Text>}
         {this.renderCheckBox(RIGHT)}
       </div>
     );
@@ -79,13 +82,13 @@ export default class Checkbox extends Component {
   }
 
   renderLabel() {
-    const { label, id, type } = this.props;
+    const { label, id, type, extraLabel } = this.props;
 
     return (
       <label className={styles.label} htmlFor={id}>
         {
           type === STANDARD ?
-            this.renderStandard(label) :
+            this.renderStandard(label, extraLabel) :
             this.renderButton(label)
         }
       </label>
