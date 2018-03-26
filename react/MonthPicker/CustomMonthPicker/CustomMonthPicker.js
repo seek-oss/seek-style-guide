@@ -156,7 +156,8 @@ export default class CustomMonthPicker extends Component {
             onChange: this.handleMonthChange,
             value: monthValue,
             className: styles.dropdownInput,
-            ref: this.storeMonthReference
+            ref: this.storeMonthReference,
+            'aria-label': 'Month'
           }}
         />
         <Dropdown
@@ -170,7 +171,8 @@ export default class CustomMonthPicker extends Component {
             onChange: this.handleYearChange,
             value: yearValue,
             className: styles.dropdownInput,
-            ref: this.storeYearReference
+            ref: this.storeYearReference,
+            'aria-label': 'Year'
           }}
         />
       </div>
