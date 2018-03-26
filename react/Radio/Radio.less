@@ -1,0 +1,73 @@
+@import (reference) "~seek-style-guide/theme";
+@circumference: @row-height * 5;
+
+.root {
+  display: inline-block;
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+  width: @circumference;
+  height: @circumference;
+  border: none;
+  margin: @row-height 0 0;
+}
+
+.label {
+  .touchableText(@standard-type-scale);
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+}
+
+.labelText {
+  .input:checked + .label & {
+    font-weight: @sk-bold;
+  }
+}
+
+.svg {
+  background-color: @sk-white;
+  width: @circumference;
+  height: @circumference;
+  border: @field-border-width solid @sk-mid-gray-light;
+  border-radius: 100%;
+  padding: 5px;
+  margin-right: @gutter-width / 2;
+
+  .input:not([readonly]):not([disabled]):focus + .label & {
+    .focus();
+    border-radius: 100%;
+  }
+}
+
+.circle {
+  transition:
+    opacity 0.2s ease,
+    @spring-transition;
+  transform-origin: 50% 50%;
+  opacity: 0;
+
+  .input:active + .label & {
+    transform: scale(0.9);
+  }
+
+  &.circle_isSelected {
+    fill: @sk-form-accent;
+
+    .input:checked + .label & {
+      opacity: 1;
+    }
+  }
+
+  &.circle_isHover {
+    fill: @sk-gray-lightest;
+
+    .input:focus:not(:checked) + .label &,
+    .input:hover:not(:checked) + .label & {
+      opacity: 1;
+    }
+  }
+}
