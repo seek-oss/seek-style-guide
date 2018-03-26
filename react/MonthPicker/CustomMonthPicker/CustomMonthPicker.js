@@ -170,7 +170,8 @@ export default class CustomMonthPicker extends Component {
             onChange: this.handleYearChange,
             value: yearValue,
             className: styles.dropdownInput,
-            ref: this.storeYearReference
+            ref: this.storeYearReference,
+            ...(id ? { 'aria-describedby': `${id}-message` } : {})
           }}
         />
       </div>

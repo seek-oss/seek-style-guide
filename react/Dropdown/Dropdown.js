@@ -96,7 +96,8 @@ export default class Dropdown extends Component {
     });
     const allInputProps = {
       ...combineClassNames(inputProps, inputStyles),
-      ...(id ? { id } : {})
+      ...(id ? { id } : {}),
+      ...(id ? { 'aria-describedby': `${id}-message` } : {})
     };
 
     return (
@@ -145,7 +146,7 @@ export default class Dropdown extends Component {
         <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage {...{ id, invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }

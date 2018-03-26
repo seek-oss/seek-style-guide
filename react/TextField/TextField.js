@@ -97,7 +97,8 @@ export default class TextField extends Component {
     const allInputProps = {
       ...combineClassNames(inputProps, styles.input),
       ...(id ? { id } : {}),
-      ref: attachRefs(this.storeInputReference, ref)
+      ref: attachRefs(this.storeInputReference, ref),
+      ...(id ? { 'aria-describedby': `${id}-message` } : {})
     };
 
     return (
@@ -134,7 +135,7 @@ export default class TextField extends Component {
         <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderInput()}
         {this.renderClear()}
-        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage {...{ id, invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }

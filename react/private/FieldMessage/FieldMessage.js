@@ -14,6 +14,7 @@ export default class FieldMessage extends Component {
   static displayName = 'FieldMessage';
 
   static propTypes = {
+    id: PropTypes.string,
     invalid: PropTypes.bool,
     help: PropTypes.string,
     helpProps: PropTypes.object,
@@ -42,13 +43,14 @@ export default class FieldMessage extends Component {
   }
 
   renderMessage() {
-    const { message, valid } = this.props;
+    const { id, message, valid } = this.props;
 
     if (message) {
       const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
 
       return (
         <Text
+          {...(id ? { id: `${id}-message` } : {})}
           small
           {...restMessageProps}
           critical={(valid === false && !secondary) || critical}
