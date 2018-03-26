@@ -4,17 +4,17 @@
 @toggleWidth: 48px;
 
 .root {
-  line-height: @toggleHeight;
-  height: @row-height * 8;
-  padding: (@row-height * 2) 0;
+  .touchableText(@standard-type-scale);    
   cursor: pointer;
-  display: inline-block;
-  position: relative;
+  position: relative;        
+  display: inline-flex;
+  align-items: center;
 }
 
-.switch {
+
+.switch {   
   display: inline-flex;
-  position: relative;
+  position: relative;    
 }
 
 .input {
@@ -116,7 +116,7 @@
   opacity: 0;
   transition: 0.3s;
   position: relative;
-  top: 5px;
+  top: -4px;
   transform: rotate(-25deg);
   .input:checked:active ~ .switch .slider & {
     transform: rotate(6deg);
