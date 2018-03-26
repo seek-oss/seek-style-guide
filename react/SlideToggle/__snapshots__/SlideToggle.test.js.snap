@@ -1,152 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Slide toggle: should render a checked state 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
-    className="switch"
+  <input
+    aria-label="Test toggle"
+    checked={true}
+    className="input"
+    id="testToggle"
+    type="checkbox"
+  />
+  <label
+    htmlFor="testToggle"
   >
-    <input
-      aria-label="Test toggle"
-      checked={true}
-      className="input"
-      id="testToggle"
-      type="checkbox"
-    />
     <div
-      className="slider"
+      className="switch"
     >
       <div
-        className="slideButton"
+        className="slider"
       >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
+        <div
+          className="slideButton"
+        >
+          <TickIcon
+            className="icon"
+            svgClassName="svg"
+          />
+        </div>
       </div>
-    </div>
-    <Text
-      baseline={false}
-      className="label labelRight"
-    >
-      <span
-        className="labelText"
+      <Text
+        baseline={false}
+        className="label labelRight"
       >
-        Test toggle
-      </span>
-    </Text>
-  </div>
-</label>
+        <span
+          className="labelText"
+        >
+          Test toggle
+        </span>
+      </Text>
+    </div>
+  </label>
+</div>
 `;
 
 exports[`Slide toggle: should render with default props 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
-    className="switch"
+  <input
+    aria-label="Test toggle"
+    className="input"
+    id="testToggle"
+    type="checkbox"
+  />
+  <label
+    htmlFor="testToggle"
   >
-    <input
-      aria-label="Test toggle"
-      className="input"
-      id="testToggle"
-      type="checkbox"
-    />
     <div
-      className="slider"
+      className="switch"
     >
       <div
-        className="slideButton"
+        className="slider"
       >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
+        <div
+          className="slideButton"
+        >
+          <TickIcon
+            className="icon"
+            svgClassName="svg"
+          />
+        </div>
       </div>
-    </div>
-    <Text
-      baseline={false}
-      className="label labelRight"
-    >
-      <span
-        className="labelText"
+      <Text
+        baseline={false}
+        className="label labelRight"
       >
-        Test toggle
-      </span>
-    </Text>
-  </div>
-</label>
+        <span
+          className="labelText"
+        >
+          Test toggle
+        </span>
+      </Text>
+    </div>
+  </label>
+</div>
 `;
 
 exports[`Slide toggle: should render with the label hidden 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
-    className="switch"
+  <input
+    aria-label="Test toggle"
+    className="input"
+    id="testToggle"
+    type="checkbox"
+  />
+  <label
+    htmlFor="testToggle"
   >
-    <input
-      aria-label="Test toggle"
-      className="input"
-      id="testToggle"
-      type="checkbox"
-    />
     <div
-      className="slider"
+      className="switch"
     >
       <div
-        className="slideButton"
+        className="slider"
       >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
+        <div
+          className="slideButton"
+        >
+          <TickIcon
+            className="icon"
+            svgClassName="svg"
+          />
+        </div>
       </div>
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Slide toggle: should render with the label on the left 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
-    className="switch"
+  <input
+    aria-label="Test toggle"
+    className="input inputLeft"
+    id="testToggle"
+    type="checkbox"
+  />
+  <label
+    htmlFor="testToggle"
   >
-    <input
-      aria-label="Test toggle"
-      className="input inputLeft"
-      id="testToggle"
-      type="checkbox"
-    />
-    <Text
-      baseline={false}
-      className="label labelLeft"
-    >
-      <span
-        className="labelText"
-      >
-        Test toggle
-      </span>
-    </Text>
     <div
-      className="slider"
+      className="switch"
     >
-      <div
-        className="slideButton"
+      <Text
+        baseline={false}
+        className="label labelLeft"
       >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
+        <span
+          className="labelText"
+        >
+          Test toggle
+        </span>
+      </Text>
+      <div
+        className="slider"
+      >
+        <div
+          className="slideButton"
+        >
+          <TickIcon
+            className="icon"
+            svgClassName="svg"
+          />
+        </div>
       </div>
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;

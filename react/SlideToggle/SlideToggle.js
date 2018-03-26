@@ -49,29 +49,31 @@ export default class SlideToggle extends Component {
     });
 
     return (
-      <label htmlFor={id} className={classnames(styles.root, className)}>
-        <div className={styles.switch}>
-          <input
-            ref={this.storeInputRef}
-            type="checkbox"
-            id={id}
-            aria-label={label}
-            className={inputStyles}
-            checked={checked}
-            onChange={onChange}
-          />
-          {this.renderLabel(LEFT)}
-          <div className={styles.slider}>
-            <div className={styles.slideButton}>
-              <TickIcon
-                className={styles.icon}
-                svgClassName={styles.svg}
-              />
+      <div className={classnames(styles.root, className)}>
+      <input
+        ref={this.storeInputRef}
+        type="checkbox"
+        id={id}
+        aria-label={label}
+        className={inputStyles}
+        checked={checked}
+        onChange={onChange}
+      />
+        <label htmlFor={id}>
+          <div className={styles.switch}>
+            {this.renderLabel(LEFT)}
+            <div className={styles.slider}>
+              <div className={styles.slideButton}>
+                <TickIcon
+                  className={styles.icon}
+                  svgClassName={styles.svg}
+                />
+              </div>
             </div>
+            {this.renderLabel(RIGHT)}
           </div>
-          {this.renderLabel(RIGHT)}
-        </div>
-      </label>
+        </label>
+      </div>
     );
   }
 }
