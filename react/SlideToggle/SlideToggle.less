@@ -25,19 +25,19 @@
   width: @toggleWidth;
   height: @toggleHeight;
 
-  &:focus ~ label .slider .slideButton::before {
+  &:focus ~ .switch .slider .slideButton::before {
     border: 1px solid @sk-focus;
   }
 
   @slide-distance: 21px;
   @anticipation-distance: 4px;
-  &:active ~ label .slider .slideButton {
+  &:active ~ .switch .slider .slideButton {
     transform: translateX(-@anticipation-distance);
   }
-  &:checked:active ~ label .slider .slideButton {
+  &:checked:active ~ .switch .slider .slideButton {
     transform: translateX(@slide-distance + @anticipation-distance);
   }
-  &:checked ~ label .slider .slideButton {
+  &:checked ~ .switch .slider .slideButton {
     transform: translateX(@slide-distance);
 
     &::before {
@@ -45,11 +45,11 @@
     }
   }
 
-  &:checked ~ label .slider .slideButton :global(svg) {
+  &:checked ~ .switch .slider .slideButton :global(svg) {
     opacity: 1;
   }
 
-  &:checked ~ label .label {
+  &:checked ~ .switch .label {
     font-weight: @sk-bold;
   }
 }
@@ -118,10 +118,10 @@
   position: relative;
   top: 5px;
   transform: rotate(-25deg);
-  .input:checked:active ~ label .slider & {
+  .input:checked:active ~ .switch .slider & {
     transform: rotate(6deg);
   }
-  .input:checked ~ label .slider & {
+  .input:checked ~ .switch .slider & {
     transform: none;
   }
 }
