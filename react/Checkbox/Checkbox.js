@@ -61,8 +61,9 @@ export default class Checkbox extends Component {
     return (
       <div className={styles.standard}>
         {this.renderCheckBox(LEFT)}
-        <span className={styles.standardLabel}>{label}</span>
-        {extraLabel && <Text baseline={false} className={styles.extraLabel} whispering>{extraLabel}</Text>}
+        <span className={styles.standardLabel}>{label}
+          {extraLabel && <Text baseline={false} className={styles.extraLabel} whispering>{extraLabel}</Text>}
+        </span>
         {this.renderCheckBox(RIGHT)}
       </div>
     );

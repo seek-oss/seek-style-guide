@@ -69,9 +69,10 @@
 }
 
 .extraLabel {
-  padding-left: 1px;
+  padding-left: @grid-base / 2;
   padding-bottom: 0;
   color: @saGrey1;
+  display: inline;
 }
 
 .checkBox {
@@ -84,7 +85,6 @@
   border-radius: @field-border-radius;
   padding: @field-border-radius;
   fill: @sk-pink;
-  align-self: flex-start;
 
   &.checked {
     background-color: @actionBlue;
