@@ -12,34 +12,31 @@ exports[`Slide toggle: should render a checked state 1`] = `
     type="checkbox"
   />
   <label
+    className="switch"
     htmlFor="testToggle"
   >
     <div
-      className="switch"
+      className="slider"
     >
       <div
-        className="slider"
+        className="slideButton"
       >
-        <div
-          className="slideButton"
-        >
-          <TickIcon
-            className="icon"
-            svgClassName="svg"
-          />
-        </div>
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
+        />
       </div>
-      <Text
-        baseline={false}
-        className="label labelRight"
-      >
-        <span
-          className="labelText"
-        >
-          Test toggle
-        </span>
-      </Text>
     </div>
+    <Text
+      baseline={false}
+      className="label labelRight"
+    >
+      <span
+        className="labelText"
+      >
+        Test toggle
+      </span>
+    </Text>
   </label>
 </div>
 `;
@@ -55,34 +52,31 @@ exports[`Slide toggle: should render with default props 1`] = `
     type="checkbox"
   />
   <label
+    className="switch"
     htmlFor="testToggle"
   >
     <div
-      className="switch"
+      className="slider"
     >
       <div
-        className="slider"
+        className="slideButton"
       >
-        <div
-          className="slideButton"
-        >
-          <TickIcon
-            className="icon"
-            svgClassName="svg"
-          />
-        </div>
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
+        />
       </div>
-      <Text
-        baseline={false}
-        className="label labelRight"
-      >
-        <span
-          className="labelText"
-        >
-          Test toggle
-        </span>
-      </Text>
     </div>
+    <Text
+      baseline={false}
+      className="label labelRight"
+    >
+      <span
+        className="labelText"
+      >
+        Test toggle
+      </span>
+    </Text>
   </label>
 </div>
 `;
@@ -98,22 +92,19 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
     type="checkbox"
   />
   <label
+    className="switch"
     htmlFor="testToggle"
   >
     <div
-      className="switch"
+      className="slider"
     >
       <div
-        className="slider"
+        className="slideButton"
       >
-        <div
-          className="slideButton"
-        >
-          <TickIcon
-            className="icon"
-            svgClassName="svg"
-          />
-        </div>
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
+        />
       </div>
     </div>
   </label>
@@ -131,32 +122,29 @@ exports[`Slide toggle: should render with the label on the left 1`] = `
     type="checkbox"
   />
   <label
+    className="switch"
     htmlFor="testToggle"
   >
-    <div
-      className="switch"
+    <Text
+      baseline={false}
+      className="label labelLeft"
     >
-      <Text
-        baseline={false}
-        className="label labelLeft"
+      <span
+        className="labelText"
       >
-        <span
-          className="labelText"
-        >
-          Test toggle
-        </span>
-      </Text>
+        Test toggle
+      </span>
+    </Text>
+    <div
+      className="slider"
+    >
       <div
-        className="slider"
+        className="slideButton"
       >
-        <div
-          className="slideButton"
-        >
-          <TickIcon
-            className="icon"
-            svgClassName="svg"
-          />
-        </div>
+        <TickIcon
+          className="icon"
+          svgClassName="svg"
+        />
       </div>
     </div>
   </label>
