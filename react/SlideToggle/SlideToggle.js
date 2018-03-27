@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TickIcon from '../TickIcon/TickIcon';
-import Text from '../Text/Text';
 import classnames from 'classnames';
 import styles from './SlideToggle.less';
 
@@ -32,12 +31,9 @@ export default class SlideToggle extends Component {
       position === LEFT ? styles.labelLeft : styles.labelRight
     );
     return hideLabel !== true && position === currentPosition && !children && (
-      <Text
-        className={labelStyle}
-        baseline={false}
-        raw>
+      <span className={labelStyle}>
         {label}
-      </Text>
+      </span>
     );
   }
 
@@ -63,12 +59,10 @@ export default class SlideToggle extends Component {
         <label htmlFor={id} className={styles.switch}>
           {this.renderLabel(LEFT)}
           <div className={styles.slider}>
-            <div className={styles.slideButton}>
-              <TickIcon
-                className={styles.icon}
-                svgClassName={styles.svg}
-              />
-            </div>
+            <TickIcon
+              className={styles.slideButton}
+              svgClassName={styles.svg}
+            />
           </div>
           {this.renderLabel(RIGHT)}
         </label>

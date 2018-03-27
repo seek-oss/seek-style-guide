@@ -2,6 +2,8 @@
 
 @toggleHeight: @row-height * 5;
 @toggleWidth: 48px;
+@toggleButtonSize: 24px;
+@togglePadding: 2px;
 
 .root {
   height: @touchableTextHeight;
@@ -19,34 +21,17 @@
 .input {
   opacity: 0;
   position: absolute;
-  left: 1px;
   margin: 0;
   width: @toggleWidth;
   height: @toggleHeight;
-  cursor: pointer;
+  z-index: @z-index-negative;
+}
 
-  &:focus ~ .switch .slider .slideButton::before {
-    border: 1px solid @sk-focus;
-  }
+.labelText {
+  .rawText(@standard-type-scale);
+  line-height: @toggleHeight;
 
-  @slide-distance: 21px;
-  @anticipation-distance: 4px;
-  &:active ~ .switch .slider .slideButton {
-    transform: translateX(-@anticipation-distance);
-  }
-  &:checked:active ~ .switch .slider .slideButton {
-    transform: translateX(@slide-distance + @anticipation-distance);
-  }
-  &:checked ~ .switch .slider .slideButton {
-    transform: translateX(@slide-distance);
-    background-color: @sk-form-accent;
-  }
-
-  &:checked ~ .switch .slider .slideButton :global(svg) {
-    opacity: 1;
-  }
-
-  &:checked ~ .switch .labelText {
+  .input:checked ~ .switch & {
     font-weight: @sk-bold;
   }
 }
@@ -64,45 +49,57 @@
   margin-left: @gutter-width / 2;
 }
 
-.labelText {
-  line-height: @toggleHeight;
-}
-
 .slider {
   width: @toggleWidth;
-  height: @toggleHeight;
   border-radius: @row-height * 2.5;
-  background-color: @sk-mid-gray-light;
-  transition: 0.3s;
+  background-color: @sk-white;
+  border: @field-border-width solid @sk-mid-gray-light;
+  padding: @togglePadding;
+
+  .input:not([readonly]):not([disabled]):focus ~ .switch & {
+    .focus();
+    border-radius: @row-height * 2.5;
+  }
 }
 
 .slideButton {
-  transition: 0.3s;
-  height: @toggleHeight;
-  width: @toggleHeight;
+  transition: transform 0.3s ease;
+  height: @toggleButtonSize;
+  width: @toggleButtonSize;
   border-radius: 50%;
-  background-color: @sk-mid-gray;
+  background-color: @sk-gray-medium;
   box-shadow: inset 0 -2px fade(@sk-black, 10%);
-  text-align: center;
-}
-
-.icon {
-  width: @toggleHeight;
-  height: @toggleHeight;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
+
+  @slide-distance: @toggleWidth - @toggleButtonSize - (@togglePadding * 2) - (@field-border-width * 2);
+  @anticipation-distance: @togglePadding;
+  .input:active ~ .switch & {
+    transform: translateX(-@anticipation-distance);
+  }
+  .input:checked ~ .switch & {
+    transform: translateX(@slide-distance);
+    background-color: @sk-form-accent;
+  }
+  .input:checked:active ~ .switch & {
+    transform: translateX(@slide-distance + @anticipation-distance);
+  }
 }
 
 .svg {
   fill: white;
   opacity: 0;
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   transform: rotate(-25deg);
-  .input:checked:active ~ .switch .slider & {
+
+  .input:checked:active ~ .switch & {
     transform: rotate(6deg);
   }
-  .input:checked ~ .switch .slider & {
+  .input:checked ~ .switch & {
     transform: none;
+    opacity: 1;
   }
 }
