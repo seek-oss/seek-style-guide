@@ -4,16 +4,20 @@
 @toggleWidth: 48px;
 
 .root {
-  .touchableText(@standard-type-scale);
-  cursor: pointer;
+  height: @touchableTextHeight;
   position: relative;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .switch {
   display: inline-flex;
-  position: relative;
+  cursor: pointer;
+
+  .labelText {
+    line-height: @toggleHeight;
+  }
 }
 
 .input {
@@ -23,6 +27,7 @@
   margin: 0;
   width: @toggleWidth;
   height: @toggleHeight;
+  cursor: pointer;
 
   &:focus ~ .switch .slider .slideButton::before {
     border: 1px solid @sk-focus;
@@ -38,17 +43,14 @@
   }
   &:checked ~ .switch .slider .slideButton {
     transform: translateX(@slide-distance);
-
-    &::before {
-      background-color: @sk-form-accent;
-    }
+    background-color: @sk-form-accent;
   }
 
   &:checked ~ .switch .slider .slideButton :global(svg) {
     opacity: 1;
   }
 
-  &:checked ~ .switch .label {
+  &:checked ~ .switch .labelText {
     font-weight: @sk-bold;
   }
 }
@@ -56,10 +58,6 @@
 .inputLeft {
   left: auto;
   right: 0;
-}
-
-.label {
-  padding: 0;
 }
 
 .labelLeft {
@@ -70,14 +68,9 @@
   margin-left: @gutter-width / 2;
 }
 
-.labelText {
-  line-height: @toggleHeight;
-}
+
 
 .slider {
-  position: relative;
-  display: inline-block;
-  left: 0;
   width: @toggleWidth;
   height: @toggleHeight;
   border-radius: @row-height * 2.5;
@@ -86,36 +79,27 @@
 }
 
 .slideButton {
-  position: relative;
-  left: 0;
   transition: 0.3s;
-
-  &::before {
-    content: '';
-    transition: 0.3s;
-    position: absolute;
-    height: @toggleHeight;
-    width: @toggleHeight;
-    border-radius: 50%;
-    background-color: @sk-mid-gray;
-    box-shadow: inset 0 -2px fade(@sk-black, 10%);
-    text-align: center;
-  }
+  height: @toggleHeight;
+  width: @toggleHeight;
+  border-radius: 50%;
+  background-color: @sk-mid-gray;
+  box-shadow: inset 0 -2px fade(@sk-black, 10%);
+  text-align: center;
 }
 
 .icon {
-  position: absolute;
   width: @toggleHeight;
   height: @toggleHeight;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .svg {
   fill: white;
   opacity: 0;
   transition: 0.3s;
-  position: relative;
-  top: -4px;
   transform: rotate(-25deg);
   .input:checked:active ~ .switch .slider & {
     transform: rotate(6deg);

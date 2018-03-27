@@ -1,9 +1,9 @@
-import styles from './SlideToggle.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TickIcon from '../TickIcon/TickIcon';
 import Text from '../Text/Text';
 import classnames from 'classnames';
+import styles from './SlideToggle.less';
 
 const LEFT = 'left';
 const RIGHT = 'right';
@@ -28,14 +28,15 @@ export default class SlideToggle extends Component {
   renderLabel = currentPosition => {
     const { label, hideLabel, children, position } = this.props;
     const labelStyle = classnames(
-      styles.label,
+      styles.labelText,
       position === LEFT ? styles.labelLeft : styles.labelRight
     );
     return hideLabel !== true && position === currentPosition && !children && (
       <Text
         className={labelStyle}
-        baseline={false}>
-        <span className={styles.labelText}>{label}</span>
+        baseline={false}
+        raw>
+        {label}
       </Text>
     );
   }
