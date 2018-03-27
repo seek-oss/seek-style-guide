@@ -2,7 +2,9 @@
 @circumference: @row-height * 5;
 
 .root {
-  display: inline-block;
+  .touchableText(@standard-type-scale);
+  display: inline-flex;
+  align-items: center;
 }
 
 .input {
@@ -11,14 +13,12 @@
   width: @circumference;
   height: @circumference;
   border: none;
-  margin: @row-height 0 0;
+  margin: 0;
 }
 
 .label {
-  .touchableText(@standard-type-scale);
   display: flex;
   cursor: pointer;
-  position: relative;
   align-items: center;
 }
 
