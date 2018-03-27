@@ -58,6 +58,11 @@ const Text = ({
 Text.displayName = 'Text';
 
 Text.propTypes = {
+  component: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.func
+  ]),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   bullet: PropTypes.bool,
