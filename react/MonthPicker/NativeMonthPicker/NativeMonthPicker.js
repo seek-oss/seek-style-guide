@@ -8,6 +8,9 @@ import pad from 'pad-left';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 
+import FieldLabel from '../../private/FieldLabel/FieldLabel';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+
 const makeMonthString = ({ month, year }) => {
   if (month && year) {
     return `${year}-${pad(month, 2, '0')}`;
@@ -69,7 +72,9 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, valid, id, label } = this.props;
+    const { value, className, valid, id } = this.props;
+    // eslint-disable-next-line react/prop-types
+    const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
     const inputValue = makeMonthString(value);
 
@@ -81,19 +86,22 @@ export default class NativeMonthPicker extends Component {
 
     return (
       <div className={rootClasses}>
+        <FieldLabel
+          {...{ id: `${id}`, label: label ? <span>{label} <ScreenReaderOnly>Month Year</ScreenReaderOnly></span> : <ScreenReaderOnly>Month Year</ScreenReaderOnly>, labelProps, secondaryLabel, tertiaryLabel }}
+        />
         <ChevronIcon
           className={styles.chevron}
           svgClassName={styles.chevronSvg}
           direction="down"
         />
         <input
-          {...(id ? { id } : {})}
+          id={id}
           className={styles.input}
           type="month"
           value={inputValue}
           onChange={this.handleChange}
           onBlur={this.handleBlur}
-          aria-label={label ? `${label} Month Year` : "Month Year"}
+          aria-label={label ? `${label} Month Year` : 'Month Year'}
         />
       </div>
     );

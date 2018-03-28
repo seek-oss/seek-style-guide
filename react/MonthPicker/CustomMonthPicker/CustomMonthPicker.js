@@ -3,10 +3,12 @@ import styles from './CustomMonthPicker.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import classnames from 'classnames';
-
 import getYearOptions from './getYearOptions';
+import Columns from '../../Columns/Columns';
 import Dropdown from '../../Dropdown/Dropdown';
+
+import FieldLabel from '../../private/FieldLabel/FieldLabel';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const months = [
   { value: '1', label: 'Jan' },
@@ -132,50 +134,58 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, valid, id, label } = this.props;
+    const { value, className, valid, id } = this.props;
+    // eslint-disable-next-line react/prop-types
+    const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
+
     const { month, year } = value;
     const monthValue = String(month || '');
     const yearValue = String(year || '');
 
-    const rootClasses = classnames({
-      [styles.root]: true,
-      [className]: className
-    });
-
     return (
-      <div className={rootClasses}>
-        <Dropdown
-          {...(id ? { id } : {})}
-          options={months}
-          className={styles.dropdown}
-          valid={valid}
-          message={false}
-          placeholder="Month"
-          inputProps={{
-            onBlur: this.handleBlur,
-            onChange: this.handleMonthChange,
-            value: monthValue,
-            className: styles.dropdownInput,
-            ref: this.storeMonthReference,
-            'aria-label': label ? `${label} Month` : 'Month'
-          }}
-        />
-        <Dropdown
-          options={this.yearOptions}
-          className={styles.dropdown}
-          valid={valid}
-          message={false}
-          placeholder="Year"
-          inputProps={{
-            onBlur: this.handleBlur,
-            onChange: this.handleYearChange,
-            value: yearValue,
-            className: styles.dropdownInput,
-            ref: this.storeYearReference,
-            'aria-label': label ? `${label} Year` : 'Year'
-          }}
-        />
-      </div>
+      <Columns className={className}>
+        <div>
+          <FieldLabel
+            {...{ id: `${id}-month`, label: label ? <span>{label} <ScreenReaderOnly>Month</ScreenReaderOnly></span> : <ScreenReaderOnly>Month</ScreenReaderOnly>, labelProps, secondaryLabel, tertiaryLabel }}
+          />
+          <Dropdown
+            id={`${id}-month`}
+            options={months}
+            className={styles.dropdown}
+            valid={valid}
+            message={false}
+            placeholder="Month"
+            inputProps={{
+              onBlur: this.handleBlur,
+              onChange: this.handleMonthChange,
+              value: monthValue,
+              ref: this.storeMonthReference,
+              className: 'dropdownInput'
+            }}
+          />
+        </div>
+
+        <div>
+          <FieldLabel
+            {...{ id: `${id}-year`, label: label ? <ScreenReaderOnly>${label} Year</ScreenReaderOnly> : <ScreenReaderOnly>Year</ScreenReaderOnly>, raw: true, labelProps: { className: styles.yearLabel } }}
+          />
+          <Dropdown
+            id={`${id}-year`}
+            options={this.yearOptions}
+            className={styles.dropdown}
+            valid={valid}
+            message={false}
+            placeholder="Year"
+            inputProps={{
+              onBlur: this.handleBlur,
+              onChange: this.handleYearChange,
+              value: yearValue,
+              ref: this.storeYearReference,
+              className: 'dropdownInput'
+            }}
+          />
+        </div>
+      </Columns>
     );
   }
 }

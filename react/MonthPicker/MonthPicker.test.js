@@ -44,11 +44,6 @@ describe('MonthPicker', () => {
   });
 
   describe('input', () => {
-    it('should not have an `id` if it is not specified', () => {
-      render(<MonthPicker />);
-      expect(input.props).not.to.include.keys('id');
-    });
-
     it('should render the `CustomMonthPicker` when native is not set', () => {
       render(<MonthPicker />);
       expect(input.type.displayName).to.equal('CustomMonthPicker');
