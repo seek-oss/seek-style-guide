@@ -18,13 +18,6 @@ export default {
       type: 'checklist',
       states: [
         {
-          label: 'Checked',
-          transformProps: ({ className, ...props }) => ({
-            ...props,
-            checked: true
-          })
-        },
-        {
           label: 'Hide label',
           transformProps: ({ className, ...props }) => ({
             ...props,

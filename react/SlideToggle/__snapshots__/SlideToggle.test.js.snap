@@ -16,8 +16,11 @@ exports[`Slide toggle: should render a checked state 1`] = `
     htmlFor="testToggle"
   >
     <div
-      className="slider"
+      className="slideContainer"
     >
+      <div
+        className="slider"
+      />
       <TickIcon
         className="slideButton"
         svgClassName="svg"
@@ -47,8 +50,11 @@ exports[`Slide toggle: should render with default props 1`] = `
     htmlFor="testToggle"
   >
     <div
-      className="slider"
+      className="slideContainer"
     >
+      <div
+        className="slider"
+      />
       <TickIcon
         className="slideButton"
         svgClassName="svg"
@@ -78,8 +84,11 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
     htmlFor="testToggle"
   >
     <div
-      className="slider"
+      className="slideContainer"
     >
+      <div
+        className="slider"
+      />
       <TickIcon
         className="slideButton"
         svgClassName="svg"
@@ -109,8 +118,11 @@ exports[`Slide toggle: should render with the label on the left 1`] = `
       Test toggle
     </span>
     <div
-      className="slider"
+      className="slideContainer"
     >
+      <div
+        className="slider"
+      />
       <TickIcon
         className="slideButton"
         svgClassName="svg"

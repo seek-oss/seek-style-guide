@@ -58,7 +58,8 @@ export default class SlideToggle extends Component {
         />
         <label htmlFor={id} className={styles.switch}>
           {this.renderLabel(LEFT)}
-          <div className={styles.slider}>
+          <div className={styles.slideContainer}>
+            <div className={styles.slider} />
             <TickIcon
               className={styles.slideButton}
               svgClassName={styles.svg}

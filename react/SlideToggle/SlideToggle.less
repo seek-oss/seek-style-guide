@@ -1,12 +1,16 @@
 @import (reference) "~seek-style-guide/theme";
 
-@toggleHeight: @row-height * 5;
-@toggleWidth: 48px;
-@toggleButtonSize: 22px;
-@togglePadding: 3px;
+@toggle-height: (@row-height * 5);
+@toggle-slider-width: 48px;
+@toggle-slider-height: (@row-height * 4);
+@toggle-button-size: 30px;
+@toggle-button-border: 1px;
+@toggle-radius: (@row-height * 2.5);
+@slide-distance: @toggle-slider-width - (@toggle-button-size - @toggle-button-border);
+@anticipation-distance: 4px;
 
 .root {
-  height: @touchableTextHeight;
+  min-height: @touchableTextHeight;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -15,6 +19,7 @@
 
 .switch {
   display: inline-flex;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -22,14 +27,13 @@
   opacity: 0;
   position: absolute;
   margin: 0;
-  width: @toggleWidth;
-  height: @toggleHeight;
-  z-index: @z-index-negative;
+  width: @toggle-slider-width;
+  height: @toggle-height;
 }
 
 .labelText {
   .rawText(@standard-type-scale);
-  line-height: @toggleHeight;
+  line-height: @toggle-height;
 
   .input:checked ~ .switch & {
     font-weight: @sk-bold;
@@ -49,47 +53,69 @@
   margin-left: @gutter-width / 2;
 }
 
-.slider {
-  width: @toggleWidth;
-  border-radius: @row-height * 2.5;
-  background-color: @sk-white;
-  border: @field-border-width solid @sk-mid-gray-light;
-  padding: @togglePadding;
+.slideContainer {
+  width: @toggle-slider-width;
+  height: @toggle-height;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
 
-  .input:not([readonly]):not([disabled]):focus ~ .switch & {
-    .focus();
-    border-radius: @row-height * 2.5;
+.slider {
+  width: @toggle-slider-width;
+  height: @toggle-slider-height;
+  border-radius: @toggle-radius;
+  background-color: @sk-mid-gray-light;
+  position: absolute;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: @sk-form-accent;
+    border-radius: @toggle-radius;
+    transition: transform 0.3s ease;
+    transform: translateX(-(@slide-distance + @anticipation-distance));
+  }
+
+  .input:checked ~ .switch &::before {
+    transform: none;
   }
 }
 
 .slideButton {
   transition: transform 0.3s ease;
-  height: @toggleButtonSize;
-  width: @toggleButtonSize;
+  height: @toggle-button-size;
+  width: @toggle-button-size;
   border-radius: 50%;
-  background-color: @sk-gray-medium;
+  background-color: @sk-white;
+  border: @toggle-button-border solid @sk-mid-gray-light;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  transform: translateX(-@toggle-button-border);
 
-  @slide-distance: @toggleWidth - @toggleButtonSize - (@togglePadding * 2) - (@field-border-width * 2);
-  @anticipation-distance: @togglePadding;
   .input:active ~ .switch & {
     transform: translateX(-@anticipation-distance);
   }
   .input:checked ~ .switch & {
     transform: translateX(@slide-distance);
-    background-color: @sk-form-accent;
   }
   .input:checked:active ~ .switch & {
     transform: translateX(@slide-distance + @anticipation-distance);
   }
+  .input:not([readonly]):not([disabled]):focus ~ .switch & {
+    .focus();
+    border-radius: @toggle-radius;
+  }
 }
 
 .svg {
-  fill: white;
-  width: 14px;
-  height: 14px;
+  fill: @sk-form-accent;
   opacity: 0;
   transition:
     transform 0.3s ease,
