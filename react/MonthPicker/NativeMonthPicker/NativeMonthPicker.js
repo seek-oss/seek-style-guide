@@ -69,7 +69,7 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, valid, id } = this.props;
+    const { value, className, valid, id, label } = this.props;
 
     const inputValue = makeMonthString(value);
 
@@ -93,6 +93,7 @@ export default class NativeMonthPicker extends Component {
           value={inputValue}
           onChange={this.handleChange}
           onBlur={this.handleBlur}
+          aria-label={label ? `${label} Month Year` : "Month Year"}
         />
       </div>
     );

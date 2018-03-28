@@ -67,7 +67,8 @@ export default class MonthPicker extends Component {
       onBlur,
       minYear,
       maxYear,
-      ascendingYears
+      ascendingYears,
+      label
     } = this.props;
     const monthPickerProps = {
       className: styles.input,
@@ -78,7 +79,8 @@ export default class MonthPicker extends Component {
       valid,
       minYear,
       maxYear,
-      ascendingYears
+      ascendingYears,
+      label
     };
 
     return native ? (
