@@ -33,6 +33,7 @@
 .labelText {
   .rawText(@standard-type-scale);
   line-height: @toggle-height;
+  user-select: none;
 
   .input:checked ~ .switch & {
     font-weight: @sk-bold;
@@ -98,6 +99,24 @@
   position: absolute;
   transform: translateX(-@toggle-button-border);
 
+  // Split the focus styles out to a pseudo element
+  // to fix `box-shadow` rendering artifact on transition
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    .focus();
+    border-radius: @toggle-radius;
+
+    .input:not([readonly]):not([disabled]):focus ~ .switch &,
+    .input:not([readonly]):not([disabled]):active ~ .switch & {
+      opacity: 1;
+    }
+  }
+
   .input:active ~ .switch & {
     transform: translateX(-@anticipation-distance);
   }
@@ -106,11 +125,6 @@
   }
   .input:checked:active ~ .switch & {
     transform: translateX(@slide-distance + @anticipation-distance);
-  }
-  .input:not([readonly]):not([disabled]):focus ~ .switch &,
-  .input:not([readonly]):not([disabled]):active ~ .switch & {
-    .focus();
-    border-radius: @toggle-radius;
   }
 }
 
