@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BulletList renders with standard text 1`] = `
+<ul
+  className="root"
+>
+  <Bullet>
+    Foo
+  </Bullet>
+  <Bullet>
+    Bar
+  </Bullet>
+</ul>
+`;
