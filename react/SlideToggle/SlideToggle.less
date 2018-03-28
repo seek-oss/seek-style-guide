@@ -107,7 +107,8 @@
   .input:checked:active ~ .switch & {
     transform: translateX(@slide-distance + @anticipation-distance);
   }
-  .input:not([readonly]):not([disabled]):focus ~ .switch & {
+  .input:not([readonly]):not([disabled]):focus ~ .switch &,
+  .input:not([readonly]):not([disabled]):active ~ .switch & {
     .focus();
     border-radius: @toggle-radius;
   }
