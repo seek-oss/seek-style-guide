@@ -3,10 +3,9 @@
 @toggle-height: (@row-height * 5);
 @toggle-slider-width: 48px;
 @toggle-slider-height: (@row-height * 4);
-@toggle-button-size: 30px;
 @toggle-button-border: 1px;
-@toggle-radius: (@row-height * 2.5);
-@slide-distance: @toggle-slider-width - (@toggle-button-size - @toggle-button-border);
+@toggle-radius: (@toggle-height / 2);
+@slide-distance: @toggle-slider-width - (@toggle-height - @toggle-button-border);
 @anticipation-distance: 4px;
 
 .root {
@@ -88,8 +87,8 @@
 
 .slideButton {
   transition: transform 0.3s ease;
-  height: @toggle-button-size;
-  width: @toggle-button-size;
+  height: @toggle-height;
+  width: @toggle-height;
   border-radius: 50%;
   background-color: @sk-white;
   border: @toggle-button-border solid @sk-mid-gray-light;
