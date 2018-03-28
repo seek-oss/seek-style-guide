@@ -20,6 +20,7 @@
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .input {
@@ -33,7 +34,6 @@
 .labelText {
   .rawText(@standard-type-scale);
   line-height: @toggle-height;
-  user-select: none;
 
   .input:checked ~ .switch & {
     font-weight: @sk-bold;
