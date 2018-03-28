@@ -27,9 +27,9 @@ const getParts = (text, query) => {
 const JobCard = ({ job, keyword = '', jobAdType }) => {
   const jobAdTypeOption = getJobAdTypeOption(jobAdType);
   let title = <Text waving semiStrong className={styles.positionTitle}>{job.jobTitle}</Text>;
-  let company = job.company;
+  let company = job.company && <span className={styles.companyName}>{job.company}</span> || '';
   const keywordParts = getParts(job.jobTitle, keyword);
-  const companyParts = getParts(company, keyword);
+  const companyParts = getParts(job.company, keyword);
   if (keywordParts) {
     title = (
       <div>
@@ -37,9 +37,10 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
           keywordParts.map((part, index) => {
             return (
               <Text
-                waving
                 strong={part.highlight}
-                className={styles.positionTitle}
+                semiStrong={!part.highlight}
+                waving
+                className={classnames(styles.positionTitle, { [styles.titleKeyword]: part.highlight })}
                 key={index}>
                 {part.text}
               </Text>
@@ -51,7 +52,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
   }
   if (companyParts) {
     company = (
-      <span>
+      <span className={styles.companyName}>
         {
           companyParts.map((part, index) => {
             return (
