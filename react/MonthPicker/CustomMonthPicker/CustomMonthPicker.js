@@ -132,7 +132,7 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, valid, id } = this.props;
+    const { value, className, valid, id, label } = this.props;
     const { month, year } = value;
     const monthValue = String(month || '');
     const yearValue = String(year || '');
@@ -157,7 +157,7 @@ export default class CustomMonthPicker extends Component {
             value: monthValue,
             className: styles.dropdownInput,
             ref: this.storeMonthReference,
-            'aria-label': 'Month'
+            'aria-label': label ? `${label} Month` : 'Month'
           }}
         />
         <Dropdown
@@ -172,7 +172,7 @@ export default class CustomMonthPicker extends Component {
             value: yearValue,
             className: styles.dropdownInput,
             ref: this.storeYearReference,
-            'aria-label': 'Year'
+            'aria-label': label ? `${label} Year` : 'Year'
           }}
         />
       </div>
