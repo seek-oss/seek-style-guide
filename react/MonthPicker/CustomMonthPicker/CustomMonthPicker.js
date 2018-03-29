@@ -3,8 +3,9 @@ import styles from './CustomMonthPicker.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import classnames from 'classnames';
+
 import getYearOptions from './getYearOptions';
-import Columns from '../../Columns/Columns';
 import Dropdown from '../../Dropdown/Dropdown';
 
 import FieldLabel from '../../private/FieldLabel/FieldLabel';
@@ -141,10 +142,14 @@ export default class CustomMonthPicker extends Component {
     const { month, year } = value;
     const monthValue = String(month || '');
     const yearValue = String(year || '');
+    const rootClasses = classnames({
+      [styles.root]: true,
+      [className]: className
+    });
 
     return (
-      <Columns className={className}>
-        <div>
+      <div className={rootClasses}>
+        <div className={styles.monthWrapper}>
           <FieldLabel
             {...{ id: `${id}-month`, label: label ? <span>{label} <ScreenReaderOnly>Month</ScreenReaderOnly></span> : <ScreenReaderOnly>Month</ScreenReaderOnly>, labelProps, secondaryLabel, tertiaryLabel }}
           />
@@ -165,7 +170,7 @@ export default class CustomMonthPicker extends Component {
           />
         </div>
 
-        <div>
+        <div className={styles.yearWrapper}>
           <FieldLabel
             {...{ id: `${id}-year`, label: label ? <ScreenReaderOnly>${label} Year</ScreenReaderOnly> : <ScreenReaderOnly>Year</ScreenReaderOnly>, raw: true, labelProps: { className: styles.yearLabel } }}
           />
@@ -185,7 +190,7 @@ export default class CustomMonthPicker extends Component {
             }}
           />
         </div>
-      </Columns>
+      </div>
     );
   }
 }
