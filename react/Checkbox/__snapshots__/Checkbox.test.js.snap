@@ -17,10 +17,18 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
+      <div
+        className="checkbox"
+      >
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+        />
+      </div>
       <span>
         Still in role
       </span>
@@ -46,10 +54,18 @@ exports[`Checkbox inputProps should render as checked 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
+      <div
+        className="checkbox"
+      >
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+        />
+      </div>
       <span>
         Still in role
       </span>
@@ -98,10 +114,18 @@ exports[`Checkbox should render with className 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
+      <div
+        className="checkbox"
+      >
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+        />
+      </div>
       <span>
         Still in role
       </span>
@@ -127,10 +151,18 @@ exports[`Checkbox should render with simple props 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
+      <div
+        className="checkbox"
+      >
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+        />
+      </div>
       <span>
         Still in role
       </span>
@@ -156,10 +188,18 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
     <div
       className="standard"
     >
-      <CheckMarkIcon
-        className="checkBox"
-        svgClassName="checkMark"
-      />
+      <div
+        className="checkbox"
+      >
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+        />
+      </div>
       <span>
         Still in role
       </span>

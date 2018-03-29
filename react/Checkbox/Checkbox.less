@@ -34,7 +34,7 @@
   align-items: center;
 }
 
-.checkBox {
+.checkbox {
   .activeFocusReset();
 
   background-color: @sk-white;
@@ -44,19 +44,49 @@
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
   margin-right: @field-gutter-width;
-  padding: @field-border-radius;
-  fill: @sk-pink;
+  position: relative;
 }
 
 .checkMark {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  fill: @sk-form-accent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: @field-border-radius;
+}
+
+.checkMarkSvg {
+  width: 100%;
+  height: 100%;
+  transition:
+    opacity 0.2s ease,
+    @spring-transition;
+  transform-origin: 50% 50%;
   opacity: 0;
 
-  .input:checked + .label & {
-    opacity: 1;
+  .input:active + .label & {
+    transform: scale(0.9);
+  }
+
+  &.checkMarkSvg_isSelected {
+    fill: @sk-form-accent;
+
+    .input:checked + .label & {
+      opacity: 1;
+    }
+  }
+
+  &.checkMarkSvg_isHover {
+    fill: @sk-gray-lightest;
+
+    .input:focus:not(:checked) + .label &,
+    .input:hover:not(:checked) + .label & {
+      opacity: 1;
+    }
   }
 }
 

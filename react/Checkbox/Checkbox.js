@@ -50,7 +50,16 @@ export default class Checkbox extends Component {
   renderStandard(label) {
     return (
       <div className={styles.standard}>
-        <CheckMarkIcon svgClassName={styles.checkMark} className={styles.checkBox} />
+        <div className={styles.checkbox}>
+          <CheckMarkIcon
+            className={styles.checkMark}
+            svgClassName={classnames(styles.checkMarkSvg, styles.checkMarkSvg_isHover)}
+          />
+          <CheckMarkIcon
+            svgClassName={classnames(styles.checkMarkSvg, styles.checkMarkSvg_isSelected)}
+            className={styles.checkMark}
+          />
+        </div>
         <span>{label}</span>
       </div>
     );
