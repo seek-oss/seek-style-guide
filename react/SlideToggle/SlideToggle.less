@@ -9,11 +9,13 @@
 @anticipation-distance: 4px;
 
 .root {
-  min-height: @touchableTextHeight;
   position: relative;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  min-height: @touchableTextHeight;
+  // IE11 Flex box centering fix
+  height: 1px;
 }
 
 .switch {
@@ -21,6 +23,13 @@
   align-items: center;
   cursor: pointer;
   user-select: none;
+
+  // IE11 :active selector fix for nested elements to
+  // allow the parent (the label) to accept the event
+  // https://stackoverflow.com/questions/31061544/active-selector-in-ie11-doesnt-work-if-there-are-nested-elements-how-do-i-mak
+  :global(*) {
+    pointer-events: none;
+  }
 }
 
 .input {
@@ -57,18 +66,20 @@
   width: @toggle-slider-width;
   height: @toggle-height;
   position: relative;
-  display: inline-flex;
-  align-items: center;
   flex-shrink: 0;
 }
 
 .slider {
   width: @toggle-slider-width;
   height: @toggle-slider-height;
+  margin: ((@toggle-height - @toggle-slider-height) / 2) 0;
   border-radius: @toggle-radius;
   background-color: @sk-mid-gray-light;
   position: absolute;
   overflow: hidden;
+  // Fix for Safari border-radius, overflow hidden, transform bug:
+  // https://gist.github.com/ayamflow/b602ab436ac9f05660d9c15190f4fd7b
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   &::before {
     content: '';
@@ -104,6 +115,8 @@
   &::before {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     transition: opacity 0.3s ease;
