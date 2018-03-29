@@ -172,7 +172,7 @@ export default class CustomMonthPicker extends Component {
 
         <div className={styles.yearWrapper}>
           <FieldLabel
-            {...{ id: `${id}-year`, label: label ? <ScreenReaderOnly>${label} Year</ScreenReaderOnly> : <ScreenReaderOnly>Year</ScreenReaderOnly>, raw: true, labelProps: { className: styles.yearLabel } }}
+            {...{ id: `${id}-year`, label: label ? <ScreenReaderOnly>{label} Year</ScreenReaderOnly> : <ScreenReaderOnly>Year</ScreenReaderOnly>, raw: true, labelProps: { className: styles.yearLabel } }}
           />
           <Dropdown
             id={`${id}-year`}
