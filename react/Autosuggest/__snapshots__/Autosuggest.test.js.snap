@@ -27,6 +27,7 @@ exports[`Autosuggest should render with label 1`] = `
       </label>
       <input
         aria-autocomplete="list"
+        aria-describedby="Foo-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
@@ -91,6 +92,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
       </label>
       <input
         aria-autocomplete="list"
+        aria-describedby="Foo-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"

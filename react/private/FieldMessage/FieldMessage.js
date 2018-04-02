@@ -55,7 +55,8 @@ export default class FieldMessage extends Component {
           {...restMessageProps}
           critical={(valid === false && !secondary) || critical}
           positive={(valid === true && !secondary) || positive}
-          secondary={typeof valid === 'undefined' || secondary}>
+          secondary={typeof valid === 'undefined' || secondary}
+          tabIndex='-1'>
           {this.renderMessageIcon()}
           {message}
         </Text>
