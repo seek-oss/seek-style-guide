@@ -52,4 +52,12 @@ export default rootEl => {
   Array.from(rootEl.querySelectorAll('select')).forEach(el => {
     el.style.backgroundColor = 'transparent';
   });
+
+  // Another hack to fix massive stroke widths when SVGs have a large viewbox
+  // e.g. the mobile Header chevron
+  Array.from(rootEl.querySelectorAll('path')).forEach(el => {
+    if (parseInt(getComputedStyle(el).strokeWidth, 10) > 40) {
+      el.style.strokeWidth = '1px';
+    }
+  });
 };
