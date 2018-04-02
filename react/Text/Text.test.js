@@ -8,6 +8,12 @@ describe('Text', () => {
   it('should render with defaults', () => {
     expect(render(<Text>Hello</Text>)).toMatchSnapshot();
   });
+  it('should render with a custom component', () => {
+    expect(render(<Text component="div">Hello</Text>)).toMatchSnapshot();
+  });
+  it('should render a bullet point', () => {
+    expect(render(<Text bullet>Hello</Text>)).toMatchSnapshot();
+  });
 
   describe('sizes', () => {
     sizes.forEach(size => {

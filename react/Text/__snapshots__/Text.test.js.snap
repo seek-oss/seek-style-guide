@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Text should render a bullet point 1`] = `
+<li
+  class="root standard bullet baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</li>
+`;
+
+exports[`Text should render with a custom component 1`] = `
+<div
+  class="root standard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</div>
+`;
+
 exports[`Text should render with defaults 1`] = `
 <span
   class="root standard baseline"
