@@ -60,4 +60,16 @@ export default rootEl => {
       el.style.strokeWidth = '1px';
     }
   });
+
+  // Another hack to hide the blue background on unchecked slide toggles
+  // since neither "overflow: hidden" nor "-webkit-mask-image" work properly.
+  // To fix it, we remove all children of masked elements inside the label.
+  // (Yep, this one is pretty awful...)
+  Array.from(rootEl.querySelectorAll('[aria-label="Slide toggle"]:not(:checked) ~ label *')).forEach(el => {
+    if (getComputedStyle(el).webkitMaskImage !== 'none') {
+      Array.from(el.querySelectorAll('*')).forEach(maskedEl => {
+        maskedEl.parentNode.removeChild(maskedEl);
+      });
+    }
+  });
 };
