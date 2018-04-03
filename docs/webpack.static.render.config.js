@@ -13,6 +13,8 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const templatePath = path.resolve(__dirname, 'index.ejs');
 const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8')); // eslint-disable-line no-sync
 
+const css = fs.readFileSync(path.resolve(__dirname, 'dist', 'app.css'), 'utf-8');
+
 // Must be absolute paths
 const appPaths = [
   path.resolve(__dirname, 'src'),
@@ -100,7 +102,7 @@ const config = {
         '/sketch-exports',
         '/playground'
       ],
-      locals: { template }
+      locals: { template, css }
     }),
     new webpack.optimize.UglifyJsPlugin({
       output: {
