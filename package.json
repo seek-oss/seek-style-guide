@@ -84,6 +84,7 @@
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
     "dedent": "^0.7.0",
+    "dom4": "^2.0.1",
     "ejs": "^2.5.7",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
