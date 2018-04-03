@@ -87,7 +87,13 @@ export default class NativeMonthPicker extends Component {
     return (
       <div className={rootClasses}>
         <FieldLabel
-          {...{ id, label: label ? <span>{label} <ScreenReaderOnly>Month Year</ScreenReaderOnly></span> : <ScreenReaderOnly>Month Year</ScreenReaderOnly>, labelProps, secondaryLabel, tertiaryLabel }}
+          {...{ 
+            id, 
+            label: <span>{label}<ScreenReaderOnly> Month Year</ScreenReaderOnly></span>,
+            labelProps, 
+            secondaryLabel, 
+            tertiaryLabel 
+          }}
         />
         <ChevronIcon
           className={styles.chevron}
