@@ -14,12 +14,17 @@
   height: @circumference;
   border: none;
   margin: 0;
+  cursor: pointer;
 }
 
 .label {
   display: flex;
   cursor: pointer;
   align-items: center;
+
+  :global(*) {
+    pointer-events: none;
+  }
 }
 
 .labelText {
