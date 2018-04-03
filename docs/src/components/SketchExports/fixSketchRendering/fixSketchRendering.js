@@ -17,7 +17,7 @@ export default rootEl => {
       virtualBefore.setAttribute('style', elementBeforeStyles.cssText);
       virtualBefore.innerHTML = elementBeforeContent.split('"').join('');
       el.classList.add(styles.beforeReset);
-      el.prepend(virtualBefore);
+      el.insertBefore(virtualBefore, el.firstChild);
     }
 
     if (elementAfterContent) {
