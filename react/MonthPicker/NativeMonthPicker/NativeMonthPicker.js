@@ -87,7 +87,7 @@ export default class NativeMonthPicker extends Component {
     return (
       <div className={rootClasses}>
         <FieldLabel
-          {...{ id: `${id}`, label: label ? <span>{label} <ScreenReaderOnly>Month Year</ScreenReaderOnly></span> : <ScreenReaderOnly>Month Year</ScreenReaderOnly>, labelProps, secondaryLabel, tertiaryLabel }}
+          {...{ id, label: label ? <span>{label} <ScreenReaderOnly>Month Year</ScreenReaderOnly></span> : <ScreenReaderOnly>Month Year</ScreenReaderOnly>, labelProps, secondaryLabel, tertiaryLabel }}
         />
         <ChevronIcon
           className={styles.chevron}
@@ -95,7 +95,7 @@ export default class NativeMonthPicker extends Component {
           direction="down"
         />
         <input
-          id={id}
+          {...(id ? { id } : {})}
           className={styles.input}
           type="month"
           value={inputValue}
