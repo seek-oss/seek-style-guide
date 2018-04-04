@@ -1,13 +1,11 @@
 import React from 'react';
 import { BulletList, Bullet } from 'seek-style-guide/react';
-import * as sketch from './BulletList.sketch';
 
 export default {
   route: '/bullet-list',
   title: 'Bullet List',
   category: 'Typography',
   component: 'div',
-  sketch,
   initialProps: {
     children: (
       <BulletList>
