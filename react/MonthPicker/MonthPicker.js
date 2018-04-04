@@ -72,7 +72,6 @@ export default class MonthPicker extends Component {
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
     const monthPickerProps = {
-      className: styles.input,
       id,
       value,
       onChange,

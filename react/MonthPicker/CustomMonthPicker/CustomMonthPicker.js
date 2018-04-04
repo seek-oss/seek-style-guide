@@ -3,8 +3,6 @@ import styles from './CustomMonthPicker.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import classnames from 'classnames';
-
 import getYearOptions from './getYearOptions';
 import Dropdown from '../../Dropdown/Dropdown';
 
@@ -37,7 +35,6 @@ export default class CustomMonthPicker extends Component {
       year: PropTypes.number
     }),
     valid: PropTypes.bool,
-    className: PropTypes.string,
     id: PropTypes.string,
     minYear: PropTypes.number.isRequired,
     maxYear: PropTypes.number.isRequired,
@@ -45,8 +42,7 @@ export default class CustomMonthPicker extends Component {
   };
 
   static defaultProps = {
-    value: {},
-    className: ''
+    value: {}
   };
 
   constructor({ minYear, maxYear, ascendingYears }) {
@@ -135,30 +131,34 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, valid, id } = this.props;
+    const { value, valid, id } = this.props;
     // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
     const { month, year } = value;
     const monthValue = String(month || '');
     const yearValue = String(year || '');
-    const rootClasses = classnames({
-      [styles.root]: true,
-      [className]: className
-    });
 
     return (
-      <div className={rootClasses}>
-        <div className={styles.monthWrapper}>
-          <FieldLabel
-            {...{
-              id: `${id}-month`,
-              label: <span>{label}<ScreenReaderOnly> Month</ScreenReaderOnly></span>,
-              labelProps,
-              secondaryLabel,
-              tertiaryLabel
-            }}
-          />
+      <div>
+        <FieldLabel
+          {...{
+            id: `${id}-month`,
+            label: <span>{label}<ScreenReaderOnly> Month</ScreenReaderOnly></span>,
+            labelProps,
+            secondaryLabel,
+            tertiaryLabel
+          }}
+        />
+        <FieldLabel
+          {...{
+            id: `${id}-year`,
+            label: <ScreenReaderOnly>{label} Year</ScreenReaderOnly>,
+            raw: true
+          }}
+        />
+
+        <div className={styles.dropdownWrapper}>
           <Dropdown
             id={`${id}-month`}
             options={months}
@@ -170,21 +170,10 @@ export default class CustomMonthPicker extends Component {
               onBlur: this.handleBlur,
               onChange: this.handleMonthChange,
               value: monthValue,
-              ref: this.storeMonthReference,
-              className: 'dropdownInput'
+              ref: this.storeMonthReference
             }}
           />
-        </div>
 
-        <div className={styles.yearWrapper}>
-          <FieldLabel
-            {...{
-              id: `${id}-year`,
-              label: <ScreenReaderOnly>{label} Year</ScreenReaderOnly>,
-              raw: true,
-              labelProps: { className: styles.yearLabel }
-            }}
-          />
           <Dropdown
             id={`${id}-year`}
             options={this.yearOptions}
@@ -196,8 +185,7 @@ export default class CustomMonthPicker extends Component {
               onBlur: this.handleBlur,
               onChange: this.handleYearChange,
               value: yearValue,
-              ref: this.storeYearReference,
-              className: 'dropdownInput'
+              ref: this.storeYearReference
             }}
           />
         </div>

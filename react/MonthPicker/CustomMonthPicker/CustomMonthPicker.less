@@ -1,26 +1,16 @@
 @import (reference) "~seek-style-guide/theme";
 
-.root {
+.dropdownWrapper {
   display: flex;
 }
 
-.monthWrapper {
-  flex-basis: 0;
-  flex-grow: 1;
-  padding-right: @gutter-width / 2;
-}
-
-.yearWrapper {
-  flex-basis: 0;
-  flex-grow: 1;
-  padding-left: @gutter-width / 2;
-}
-
 .dropdown {
-  width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-right: @gutter-width / 2;
 }
 
-.yearLabel {
-  display: block;
-  height: @row-height * 5;
+.dropdown + .dropdown {
+  margin-right: 0;
+  margin-left: @gutter-width / 2;
 }
