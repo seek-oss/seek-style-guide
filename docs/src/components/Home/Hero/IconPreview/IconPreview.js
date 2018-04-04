@@ -2,37 +2,37 @@ import styles from './IconPreview.less';
 
 import React from 'react';
 import {
-  ChevronIcon,
-  CloseIcon,
-  HeartIcon,
-  ProfileIcon,
-  SearchIcon,
-  StarIcon,
-  ThumbsUpIcon,
-  ErrorIcon,
-  TickIcon,
-  TickCircleIcon,
-  HelpIcon,
-  LocationIcon,
-  JobFunctionIcon
+  IconAlert,
+  IconBookmark,
+  IconCompany,
+  IconEducation,
+  IconEmployer,
+  IconExperience,
+  IconHome,
+  IconJobAd,
+  IconMail,
+  IconNegative,
+  IconPositive,
+  IconResume,
+  IconSearch
 } from 'seek-asia-style-guide/react';
 
 export default function IconPreview() {
   return (
     <div className={styles.root}>
-      <HeartIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <ProfileIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <TickIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <TickCircleIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <SearchIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <ChevronIcon direction="down" className={styles.icon} svgClassName={styles.iconSvg} />
-      <StarIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <ThumbsUpIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <CloseIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <ErrorIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <HelpIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <LocationIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <JobFunctionIcon className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconEducation className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconExperience className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconResume className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconJobAd className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconCompany className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconSearch className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconEmployer className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconHome className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconBookmark className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconAlert className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconNegative className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconPositive className={styles.icon} svgClassName={styles.iconSvg} />
+      <IconMail className={styles.icon} svgClassName={styles.iconSvg} />
     </div>
   );
 }

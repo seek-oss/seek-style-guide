@@ -7,10 +7,6 @@ import ActionTray from './components/ActionTray/ActionTray';
 import { sortCurrentLocaleToTop } from './localeUtils';
 import styles from './Header.less';
 
-export const ACTIVE_TAB_HOME = 'HOME';
-export const ACTIVE_TAB_SEARCH = 'SEARCH';
-export const ACTIVE_TAB_SAVED_JOBS = 'SAVED_JOBS';
-
 const currentLocale = ({ title, ItemIcon }) => {
   return (
     <span className={styles.currentLocale}>

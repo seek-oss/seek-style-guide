@@ -58,14 +58,16 @@ export default class Textarea extends Component {
         return new Error(`\`inputProps.value\` must be supplied if \`${propName}\` is set`);
       }
     },
-    secondaryLabel: PropTypes.string
+    secondaryLabel: PropTypes.string,
+    compact: PropTypes.bool
     /* eslint-enable consistent-return */
   };
 
   static defaultProps = {
     id: '',
     className: '',
-    description: ''
+    description: '',
+    compact: false
   };
 
   constructor() {
@@ -116,10 +118,11 @@ export default class Textarea extends Component {
   }
 
   render() {
-    const { className, valid } = this.props;
+    const { className, valid, compact } = this.props;
     const classNames = classnames({
       [styles.root]: true,
       [styles.invalid]: valid === false,
+      [styles.compact]: compact,
       [className]: className
     });
 

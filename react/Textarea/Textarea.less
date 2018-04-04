@@ -15,7 +15,7 @@
   color: @sk-charcoal;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
-  padding: 12px @field-gutter-width;
+  padding: @grid-base * 3 @field-gutter-width;
   vertical-align: top;
   background-color: @sk-white;
   -webkit-appearance: none;
@@ -37,6 +37,14 @@
       border-color: transparent;
       box-shadow: 0 0 0 @field-border-width @sk-pink;
     }
+  }
+
+  .compact & {
+    .compactTouchableText();
+    height: @grid-row-height * 20;
+    max-height: @grid-row-height * 40;
+    line-height: 18px;
+    padding: @grid-base * 2 @field-gutter-width;
   }
 }
 

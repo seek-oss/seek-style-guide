@@ -1,5 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Autosuggest should render with compact prop 1`] = `
+<div>
+  <div>
+    <div
+      class="root compact"
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-owns="react-autowhatever-1"
+        autocomplete="off"
+        class="input"
+        role="combobox"
+        type="text"
+        value=""
+      />
+      <span
+        class="clearField"
+      >
+        <div
+          class="root"
+        >
+          <span
+            class="root"
+          >
+            mock svg
+          </span>
+        </div>
+      </span>
+      <div
+        class="root"
+      />
+    </div>
+    <div
+      class="suggestionsContainer"
+      id="react-autowhatever-1"
+    />
+  </div>
+  <div
+    class="autosuggestBackdrop"
+  />
+</div>
+`;
+
 exports[`Autosuggest should render with label 1`] = `
 <div>
   <div>

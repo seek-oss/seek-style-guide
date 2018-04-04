@@ -109,6 +109,15 @@ exports[`Button: should render custom component based on it’s reference 1`] = 
 </CustomComponent>
 `;
 
+exports[`Button: should render disabled 1`] = `
+<button
+  className="root disabled"
+  disabled={false}
+>
+  SEEK
+</button>
+`;
+
 exports[`Button: should render fullwidth button 1`] = `
 <button
   className="root fullWidth root_isTransparent"

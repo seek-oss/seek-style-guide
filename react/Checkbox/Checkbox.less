@@ -20,6 +20,9 @@
 
 .label {
   display: block;
+  :checked + & {
+    font-weight: @sa-bold;
+  }
 }
 
 .fullWidth {
@@ -30,7 +33,7 @@
   .touchableText(@conversational-type-scale-mobile);
   cursor: pointer;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   line-height: @grid-base * 5;
   padding: @grid-base 0;
   @media @desktop {
@@ -65,6 +68,13 @@
   }
 }
 
+.extraLabel {
+  padding-left: @grid-base / 2;
+  padding-bottom: 0;
+  color: @saGrey1;
+  display: inline;
+}
+
 .checkBox {
   .activeFocusReset();
 
@@ -75,7 +85,6 @@
   border-radius: @field-border-radius;
   padding: @field-border-radius;
   fill: @sk-pink;
-  align-self: flex-start;
 
   &.checked {
     background-color: @actionBlue;

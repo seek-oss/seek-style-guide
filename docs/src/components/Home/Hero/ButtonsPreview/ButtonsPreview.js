@@ -14,9 +14,9 @@ export default function ButtonsPreview() {
         <Button color="hyperlink" className={classnames(styles.button, buttonStyles.rootActive)}>Pressed</Button>
       </div>
       <div className={styles.group}>
-        <Button color="alert" className={styles.button}>Normal</Button>
-        <Button color="alert" className={classnames(styles.button, buttonStyles.rootHover)}>Hover</Button>
-        <Button color="alert" className={classnames(styles.button, buttonStyles.rootActive)}>Pressed</Button>
+        <Button color="highlight" className={styles.button}>Normal</Button>
+        <Button color="highlight" className={classnames(styles.button, buttonStyles.rootHover)}>Hover</Button>
+        <Button color="highlight" className={classnames(styles.button, buttonStyles.rootActive)}>Pressed</Button>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Header } from 'seek-asia-style-guide/jobStreet';
-import { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } from 'seek-asia-style-guide/react/Header/Header';
+import { Constants } from 'seek-asia-style-guide/react';
 
+const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } = Constants;
 const ROUTE = '/jobstreet-header';
 
 export default {
