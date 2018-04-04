@@ -143,7 +143,7 @@ export default class CustomMonthPicker extends Component {
       <div>
         <FieldLabel
           {...{
-            id: `${id}-month`,
+            ...(id ? { id: `${id}-month` } : {}),
             label: <span>{label}<ScreenReaderOnly> Month</ScreenReaderOnly></span>,
             labelProps,
             secondaryLabel,
@@ -152,7 +152,7 @@ export default class CustomMonthPicker extends Component {
         />
         <FieldLabel
           {...{
-            id: `${id}-year`,
+            ...(id ? { id: `${id}-year` } : {}),
             label: <ScreenReaderOnly>{label} Year</ScreenReaderOnly>,
             raw: true
           }}
@@ -160,7 +160,7 @@ export default class CustomMonthPicker extends Component {
 
         <div className={styles.dropdownWrapper}>
           <Dropdown
-            id={`${id}-month`}
+            {...(id ? { id: `${id}-month` } : {})}
             options={months}
             className={styles.dropdown}
             valid={valid}
@@ -175,7 +175,7 @@ export default class CustomMonthPicker extends Component {
           />
 
           <Dropdown
-            id={`${id}-year`}
+            {...(id ? { id: `${id}-year` } : {})}
             options={this.yearOptions}
             className={styles.dropdown}
             valid={valid}

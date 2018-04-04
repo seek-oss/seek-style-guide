@@ -72,7 +72,7 @@ export default class MonthPicker extends Component {
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
     const monthPickerProps = {
-      id,
+      ...(id ? { id } : {}),
       value,
       onChange,
       onBlur,
