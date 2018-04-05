@@ -26,6 +26,16 @@ If you want to dev on the style guide itself or run the demo page, clone this re
 
 Consumers can stay up to date by following our [release notes](https://github.com/seekinternational/seek-asia-style-guide/releases), which are published automatically whenever a new release is published to [npm](https://www.npmjs.com/package/seek-asia-style-guide).
 
+## Working with `sku`
+
+`sku` needs to be told you're using `seek-asia-style-guide` to pass the components through babel.  In your `sku.config.js` file, add `seek-asia-style-guide` to the `compilePackages` array:
+
+```js
+module.exports = {
+  compilePackages: ['seek-asia-style-guide']
+};
+```
+
 ## Setup
 
 Wrap your app with the `StyleGuideProvider` component to use any of the style guide components. For example:
