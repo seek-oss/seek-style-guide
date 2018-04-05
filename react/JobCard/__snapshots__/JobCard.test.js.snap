@@ -19,7 +19,9 @@ exports[`JobCard should render company with bold keyword 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -145,7 +147,9 @@ exports[`JobCard should render job title with bold keyword 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -237,7 +241,9 @@ exports[`JobCard should render jobStreet standout style 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -348,7 +354,9 @@ exports[`JobCard should render jobsDB default style 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -440,7 +448,9 @@ exports[`JobCard should render with Classified in grey label 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -526,7 +536,9 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -607,7 +619,9 @@ exports[`JobCard should render with default props 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -688,7 +702,9 @@ exports[`JobCard should render with featured label 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
@@ -774,7 +790,9 @@ exports[`JobCard should render with selling points props 1`] = `
   <Section
     className="bodySection"
   >
-    <div>
+    <div
+      className="bodyDetailsWrapper"
+    >
       <Text
         baseline={true}
         className="company"
