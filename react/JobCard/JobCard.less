@@ -110,6 +110,12 @@
   justify-content: space-between;
 }
 
+.bodyDetailsWrapper {
+  // Without this, the flex child containing the other text elements
+  // won't narrow past the "implied width" of those text elements.
+  min-width: 0;
+}
+
 .footerSection {
   display: flex;
   justify-content: space-between;

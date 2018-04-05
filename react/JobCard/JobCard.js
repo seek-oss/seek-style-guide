@@ -73,7 +73,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
         {title}
       </Section>
       <Section className={styles.bodySection}>
-        <div>
+        <div className={styles.bodyDetailsWrapper}>
           <Text intimate className={styles.company}>
             {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
             {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
