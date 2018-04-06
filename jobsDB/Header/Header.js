@@ -6,7 +6,7 @@ import Logo from '../Logo/Logo';
 import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon, JobFunctionIcon, ProfileIcon } from 'seek-asia-style-guide/react';
 import { getLocalization, locales } from '../localization';
 
-const getJobsDBProps = ({ country, language }) => {
+const getJobsDBProps = ({ country, language, loggedIn, loginAvailable }) => {
   const messages = getLocalization({ country, language });
 
   const links = [
@@ -16,29 +16,43 @@ const getJobsDBProps = ({ country, language }) => {
     { title: messages['header.careerInsightsTitle'], url: messages['header.careerInsightsUrl'], ItemIcon: LightbulbIcon }
   ];
 
-  const btns = [
-    { title: messages['header.loginTitle'], url: messages['header.loginUrl'], ItemIcon: ProfileIcon, btnColor: "secondary" },
-    { title: messages['header.signupTitle'], url: messages['header.signupUrl'], ItemIcon: JobFunctionIcon, btnColor: "callToAction" }
-  ];
+  let btns, rightLinks;
+  if (loginAvailable) {
+    if (!loggedIn) {
+      btns = [
+        { title: messages['header.loginTitle'], url: messages['header.loginUrl'], ItemIcon: ProfileIcon, btnColor: "secondary" },
+        { title: messages['header.signupTitle'], url: messages['header.signupUrl'], ItemIcon: JobFunctionIcon, btnColor: "callToAction" }
+      ];
+    } else {
+      rightLinks = [
+        { title: "Placeholder for Name", subTitle: "Placeholder for Job Title", dropDown: [
+          { title: messages['header.profileTitle'], url: messages['header.profileUrl'], ItemIcon: ProfileIcon },
+          { title: messages['header.invitationTitle'], url: messages['header.invitationUrl'], ItemIcon: JobFunctionIcon }
+        ] }
+      ];
+    }
+  }
 
   return {
+    rightLinks,
     btns,
     links,
     messages
   };
 };
 
-const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, ...restProps }) => {
+const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, loggedIn = false, ...restProps }) => {
   return (
     <GlobalHeader
       LogoComponent={Logo}
       activeTab={activeTab}
       loginAvailable={loginAvailable}
-      {...getJobsDBProps({ country, language })}
+      {...getJobsDBProps({ country, language, loggedIn, loginAvailable })}
       brandStyles={styles}
       locales={locales}
       country={country}
       language={language}
+      employerSite={!loggedIn || !loginAvailable}
       {...restProps}
     />
   );
@@ -48,7 +62,7 @@ Header.propTypes = {
   country: PropTypes.string,
   language: PropTypes.string,
   activeTab: PropTypes.string,
-  loginAvailable: PropTypes.bool
+  loginAvailable: PropTypes.bool,
 };
 
 export default Header;

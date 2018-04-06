@@ -9,7 +9,7 @@
   display: none;
   @media @desktop {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     height: @grid-base * 8;
@@ -65,7 +65,15 @@
   }
 }
 
+.nationSelector {
+  display: none;
+}
+
 .primaryNavLinkWrapper {
+  cursor: pointer;
+}
+
+.primaryNavLinkWrapper:not(:last-child) {
   margin-right: @grid-base * 8;
 }
 

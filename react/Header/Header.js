@@ -23,13 +23,13 @@ currentLocale.propTypes = {
 
 const renderSecondaryNavBtns = ({ btns }) => {
   if (btns && btns.map) {
-    const secondaryNavBtns = btns.map((btns, index) => {
+    const secondaryNavBtns = btns.map((btn, index) => {
         return (
-          <Button color={btns.btnColor || "hyperlink"}
+          <Button color={btn.btnColor || "hyperlink"}
                   compact
                   component="a"
-                  href={btns.url}>
-            {btns.title}
+                  href={btn.url}>
+            {btn.title}
           </Button>
         );
     });
@@ -49,20 +49,22 @@ renderSecondaryNavBtns.propTypes = {
   btns: PropTypes.array
 };
 
-const renderPrimaryNavLinks = ({ links, brandStyles }) => {
+const renderPrimaryNavLinks = ({ brandStyles }, links, _style) => {
+
   const primaryNavLinks = (links && links.map) ?
     links.map((link, index) => {
       return (
         <span key={index} className={styles.primaryNavLinkWrapper}>
           <a href={link.url} className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
             <Text>{link.title}</Text>
+            {link.subTitle && <Text whisperingTitle>{link.subTitle}</Text>}
           </a>
         </span>
       );
     }) : [];
 
   return (
-    <div className={styles.primaryNavLinksWrapper}>
+    <div className={_style}>
       { primaryNavLinks }
     </div>
   );
@@ -87,7 +89,7 @@ export default class Header extends Component {
   }
 
   render() {
-    const { loginAvailable = false, LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps, btns } = this.props;
+    const { LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps, btns, rightLinks, employerSite, loginAvailable = false } = this.props;
     const localeList = sortCurrentLocaleToTop({ locales, country, language });
     const menuOpen = this.state.menuOpen;
 
@@ -97,19 +99,21 @@ export default class Header extends Component {
           <div className={styles.locale}>
             {currentLocale(localeList[0])}
           </div>
-          <div>
+        {
+          employerSite &&
+          (<div>
             <Text whispering>{messages['header.employerLinkPrefix']}<a className={styles.employerLink} href={messages['header.employerSiteUrl']}>{messages['header.employerSiteTitle']}</a></Text>
-          </div>
+          </div>)
+        }
         </div>
         <div className={loginAvailable ? styles.primaryNav : styles.primaryNavNoLogin}>
           <LogoComponent {...logoProps} />
-          { renderPrimaryNavLinks({ links, brandStyles }) }
-          { loginAvailable && (
-            renderSecondaryNavBtns({ btns, loginAvailable })
-          )}
+          { renderPrimaryNavLinks({ brandStyles }, links, styles.primaryNavLinksWrapper ) }
+          { renderPrimaryNavLinks({ brandStyles }, rightLinks, styles.secondaryNav ) }
+          { !rightLinks && renderSecondaryNavBtns({ btns }) }
         </div>
         <ActionTray {...actionTrayProps} brandStyles={brandStyles} messages={messages} menuOpen={menuOpen} handleToggleMenu={this.handleToggleMenu.bind(this)} loginAvailable={loginAvailable} activeTab={activeTab} />
-        <Menu shouldShowMenu={menuOpen} messages={messages} links={links} more={more} locales={localeList} brandStyles={brandStyles} btns={btns} loginAvailable={loginAvailable} />
+        <Menu shouldShowMenu={menuOpen} messages={messages} links={links} more={more} locales={localeList} brandStyles={brandStyles} btns={btns} loginAvailable={loginAvailable} rightLinks={rightLinks} employerSite={employerSite} />
       </header>
     );
   }
@@ -127,5 +131,8 @@ Header.propTypes = {
   language: PropTypes.string.isRequired,
   messages: PropTypes.object.isRequired,
   brandStyles: PropTypes.object.isRequired,
-  actionTrayProps: PropTypes.object
+  actionTrayProps: PropTypes.object,
+  btn: PropTypes.array,
+  rightLinks: PropTypes.array,
+  employerSite: PropTypes.bool
 };

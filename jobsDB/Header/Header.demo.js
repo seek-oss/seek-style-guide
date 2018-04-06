@@ -139,6 +139,25 @@ export default {
       }
     ]
   }, {
+    label: 'Logged In',
+    type: 'radio',
+    states: [
+      {
+        label: 'Not logged in',
+        transformProps: props => ({
+          ...props,
+          loggedIn: false
+        })
+      },
+      {
+        label: 'Logged in',
+        transformProps: props => ({
+          ...props,
+          loggedIn: true
+        })
+      }
+    ]
+  }, {
     label: 'Active tab',
     type: 'radio',
     states: [

@@ -23,7 +23,7 @@ export default class Menu extends Component {
     this.setState({ localesMenuOpen: !this.state.localesMenuOpen });
   }
 
-  renderMenuLinks = ({ links, more, messages, brandStyles }) => {
+  renderMenuLinks = ({ more, messages, brandStyles }, links) => {
     if (links && links.map) {
       const menuItems = links.map((link, index) => (
         <MenuItem key={index} linkUrl={link.url} ItemIcon={link.ItemIcon} brandStyles={brandStyles}>
@@ -49,44 +49,29 @@ export default class Menu extends Component {
     return null;
   }
 
-  renderMenuButtons = ({ btns, brandStyles }) => {
-    if (btns && btns.map) {
-      const menuItems = btns.map((btns, index) => (
-        <MenuItem itemClass={styles.buttonLink} key={index} linkUrl={btns.url} ItemIcon={btns.ItemIcon} brandStyles={brandStyles}>
-          <Text>{btns.title}</Text>
-        </MenuItem>
-      ));
-
-      return (
-        <div className={styles.menuBody}>
-          {menuItems}
-        </div>
-      );
-    }
-
-    return null;
-  }
-
   render() {
-    const { messages, shouldShowMenu, links, locales, more, brandStyles, btns, loginAvailable = false } = this.props;
+    const { rightLinks, messages, shouldShowMenu, links, locales, more, brandStyles, btns, employerSite, loginAvailable = false} = this.props;
     return (
       <div className={classnames(styles.root, { [styles.showMenu]: shouldShowMenu })}>
         <Section className={styles.headerMenu}>
           <Text whisperingTitle>{messages['menu.jobSeekerHeader']}</Text>
         </Section>
+        { this.renderMenuLinks({ more, messages, brandStyles }, links) }
+        { this.renderMenuLinks({ brandStyles }, btns) }
         {
-          this.renderMenuLinks({ links, more, messages, brandStyles })
+          rightLinks && rightLinks.map((link, index) => {
+            if (link.dropDown && link.dropDown.map) {
+              return this.renderMenuLinks({ brandStyles }, link.dropDown)
+            }
+          })
         }
         {
-          loginAvailable && (
-            this.renderMenuButtons({ btns, brandStyles })
-          )
+          employerSite && (<div className={styles.menuBody}>
+            <MenuItem itemClass={styles.employerLink} linkUrl={messages['header.employerSiteUrl']} ItemIcon={EmployerIcon} brandStyles={brandStyles}>
+              <Text>{messages['header.employerSiteTitle']}</Text>
+            </MenuItem>
+          </div>)
         }
-        <div className={styles.menuBody}>
-          <MenuItem itemClass={styles.employerLink} linkUrl={messages['header.employerSiteUrl']} ItemIcon={EmployerIcon} brandStyles={brandStyles}>
-            <Text>{messages['header.employerSiteTitle']}</Text>
-          </MenuItem>
-        </div>
         <Section className={styles.headerMenu}>
           <Text whisperingTitle>{messages['menu.settingsHeader']}</Text>
         </Section>
@@ -148,5 +133,8 @@ Menu.propTypes = {
   links: PropTypes.array,
   locales: PropTypes.array.isRequired,
   more: PropTypes.array,
-  brandStyles: PropTypes.object.isRequired
+  brandStyles: PropTypes.object.isRequired,
+  rightLinks: PropTypes.array,
+  btns: PropTypes.array,
+  employerSite: PropTypes.bool
 };
