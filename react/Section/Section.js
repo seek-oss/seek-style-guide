@@ -3,15 +3,44 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './Section.less';
+import { isJobsDB, isJobStreet } from '../private/tenant';
 
-export default function Section({ children, className, header, ...restProps }) {
+export const TONE = {
+  POSITIVE: 'positive',
+  INFO: 'info',
+  CRITICAL: 'critical',
+  HELP: 'help'
+};
+
+export const LEVEL = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  TERTIARY: 'tertiary'
+};
+
+export default function Section({
+  children,
+  className,
+  header,
+  pullout,
+  slim,
+  tone,
+  level,
+  ...restProps
+}) {
   return (
     <div
       {...restProps}
       className={classnames({
         [className]: className,
         [styles.root]: true,
-        [styles.header]: header
+        [styles.header]: header,
+        [styles.pullout]: pullout,
+        [styles.slim]: slim,
+        [styles[tone]]: tone,
+        [styles[level]]: level,
+        [styles.jobsDB]: isJobsDB,
+        [styles.jobStreet]: isJobStreet
       })}>
       {children}
     </div>
@@ -21,5 +50,16 @@ export default function Section({ children, className, header, ...restProps }) {
 Section.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  header: PropTypes.bool
+  header: PropTypes.bool,
+  pullout: PropTypes.bool,
+  slim: PropTypes.bool,
+  tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP]),
+  level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY])
+};
+
+Section.defaultProps = {
+  className: '',
+  header: false,
+  pullout: false,
+  slim: false
 };

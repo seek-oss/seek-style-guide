@@ -6,6 +6,9 @@ exports[`Menu should render with default props 1`] = `
 >
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -36,6 +39,9 @@ exports[`Menu should render with default props 1`] = `
   </div>
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -100,6 +106,9 @@ exports[`Menu should render with default props 1`] = `
     </MenuItem>
     <Section
       className="headerMenu"
+      header={false}
+      pullout={false}
+      slim={false}
     >
       <Text
         baseline={true}
@@ -183,6 +192,9 @@ exports[`Menu should render with links list 1`] = `
 >
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -281,6 +293,9 @@ exports[`Menu should render with links list 1`] = `
   </div>
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -345,6 +360,9 @@ exports[`Menu should render with links list 1`] = `
     </MenuItem>
     <Section
       className="headerMenu"
+      header={false}
+      pullout={false}
+      slim={false}
     >
       <Text
         baseline={true}
@@ -428,6 +446,9 @@ exports[`Menu should render with menu open 1`] = `
 >
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -458,6 +479,9 @@ exports[`Menu should render with menu open 1`] = `
   </div>
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -522,6 +546,9 @@ exports[`Menu should render with menu open 1`] = `
     </MenuItem>
     <Section
       className="headerMenu"
+      header={false}
+      pullout={false}
+      slim={false}
     >
       <Text
         baseline={true}
@@ -605,6 +632,9 @@ exports[`Menu should render with more links 1`] = `
 >
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -719,6 +749,9 @@ exports[`Menu should render with more links 1`] = `
   </div>
   <Section
     className="headerMenu"
+    header={false}
+    pullout={false}
+    slim={false}
   >
     <Text
       baseline={true}
@@ -783,6 +816,9 @@ exports[`Menu should render with more links 1`] = `
     </MenuItem>
     <Section
       className="headerMenu"
+      header={false}
+      pullout={false}
+      slim={false}
     >
       <Text
         baseline={true}

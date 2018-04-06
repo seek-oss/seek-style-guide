@@ -1,18 +1,91 @@
 @import (reference) "~seek-asia-style-guide/theme";
 
+@gutter-breakpoint: %(~"only screen and (min-width: %s)", (@grid-container-width + (@grid-gutter-width * 2)));
+
 .root {
-  padding: (@grid-row-height * 4) @grid-gutter-width;
-  @media only screen and (min-width: (@grid-container-width + (@grid-gutter-width * 2))) {
+  padding: (@grid-row-height * 3) @grid-gutter-width;
+  @media @gutter-breakpoint {
     padding-left: (@grid-gutter-width * 1.5);
     padding-right: (@grid-gutter-width * 1.5);
+  }
+
+  &.pullout {
+    margin: 0 (-@grid-gutter-width);
+    @media @gutter-breakpoint {
+      margin: 0 (-@grid-gutter-width * 1.5);
+    }
+  }
+
+  &.slim {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.positive {
+    color: @actionGreen;
+
+    &.primary {
+      background-color: @actionGreen;
+      color: @saWhite;
+    }
+
+    &.secondary {
+      background-color: fade(@actionGreen, 50%);
+    }
+  }
+
+  &.info.jobStreet {
+    color: @jsBlue;
+
+    &.primary {
+      background-color: @jsBlue;
+      color: @saWhite;
+    }
+
+    &.secondary {
+      background-color: fade(@jsBlue, 50%);
+    }
+  }
+
+  &.info.jobsDB {
+    color: @dbBlue;
+
+    &.primary {
+      background-color: @dbBlue;
+      color: @saWhite;
+    }
+
+    &.secondary {
+      background-color: fade(@dbBlue, 50%);
+    }
+  }
+
+  &.critical {
+    color: @actionRed;
+
+    &.primary,
+    &.secondary {
+      background-color: @actionRed;
+      color: @saWhite;
+    }
+  }
+
+  &.help {
+    color: @saGrey5;
+
+    &.primary,
+    &.secondary {
+      background-color: @saGrey3;
+      color: @saGrey5;
+    }
   }
 }
 
 .header {
-  padding-top: (@grid-row-height * 6);
-  padding-bottom: (@grid-row-height * 6);
+  padding-top: (@grid-row-height * 5);
+  padding-bottom: (@grid-row-height * 5);
   @media @desktop {
-    padding-top: (@grid-row-height * 8);
-    padding-bottom: (@grid-row-height * 8);
+    padding-top: (@grid-row-height * 7);
+    padding-bottom: (@grid-row-height * 6);
   }
 }

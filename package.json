@@ -8,6 +8,8 @@
   "main": "index.js",
   "scripts": {
     "start": "BASE_HREF=/ node docs/server",
+    "start-jobsdb": "BASE_HREF=/ node docs/server -t jobsDB",
+    "start-jobstreet": "BASE_HREF=/ node docs/server -t jobStreet",
     "start-in-window": "node docs/server",
     "start-header-footer": "webpack-dev-server --config standalone/header-footer/webpack.config.js --content-base dist",
     "test": "npm run test-unit && npm run lint && npm run build && npm run html-sketchapp",

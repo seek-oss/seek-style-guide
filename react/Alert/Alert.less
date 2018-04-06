@@ -1,0 +1,87 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+@icon-width: @grid-base * 10;
+@gutter-adjustment: 100px;
+@alert-gutter: @grid-base * 2;
+
+.root {
+  position: relative;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+}
+
+.positive {
+  color: @actionGreen;
+}
+
+.jobStreet.info {
+  color: @jsBlue;
+}
+
+.jobsDB.info {
+  color: @dbBlue;
+}
+
+.critical {
+  color: @actionRed;
+}
+
+.help {
+  color: @saGrey5;
+
+  .icon {
+    position: relative;
+    top: -2px;
+  }
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  flex-grow: 1;
+}
+
+.icon {
+  vertical-align: middle;
+  text-align: center;
+  width: @icon-width;
+  height: @icon-width;
+  flex-shrink: 0;
+  margin-right: @alert-gutter;
+  @media @mobile {
+    vertical-align: top;
+  }
+
+  svg { // stylelint-disable-line selector-max-type
+    width: @icon-width;
+    height: @icon-width;
+  }
+
+  .primary & {
+    opacity: 0.8;
+  }
+}
+
+.close {
+  width: @icon-width;
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: currentColor;
+  margin-left: @alert-gutter;
+  vertical-align: middle;
+  cursor: pointer;
+
+  .primary & {
+    opacity: 0.8;
+  }
+
+  .secondary & {
+    color: @sk-black;
+    opacity: 0.5;
+  }
+}

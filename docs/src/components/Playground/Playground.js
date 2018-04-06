@@ -3,6 +3,7 @@ import styles from './Playground.less';
 import React, { Component } from 'react';
 
 import {
+  Alert,
   TextField,
   Button,
   ButtonGroup,
@@ -131,6 +132,8 @@ export default class Playground extends Component {
   render() {
     return (
       <div>
+        <Alert hideIcon tone="info" level="primary" onClose={() => {}}><Text>Welcome to our new search page. <span className={styles.alertBreaker}>Find your dream job faster.</span></Text></Alert>
+
         <JobStreetHeader language="en" country="my" user={{}} />
         <JobStreetFooter language="vi" country="vn" />
 
