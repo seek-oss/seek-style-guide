@@ -47,7 +47,7 @@ export default {
   container: MonthPickerContainer,
   initialProps: {
     id: 'startMonth',
-    label: 'Start Month',
+    label: 'Started',
     message: ''
   },
   options: [

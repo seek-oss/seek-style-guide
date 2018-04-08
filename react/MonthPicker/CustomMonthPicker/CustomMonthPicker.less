@@ -1,14 +1,16 @@
 @import (reference) "~seek-style-guide/theme";
 
-.root {
+.dropdownWrapper {
   display: flex;
-  justify-content: space-between;
+}
 
-  .dropdown {
-    flex-basis: 45%;
+.dropdown {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-right: @gutter-width / 2;
+}
 
-    .dropdownInput {
-      margin-bottom: 0;
-    }
-  }
+.dropdown + .dropdown {
+  margin-right: 0;
+  margin-left: @gutter-width / 2;
 }

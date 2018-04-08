@@ -6,7 +6,7 @@ import CustomMonthPicker from './CustomMonthPicker';
 import {
   renderIntoDocument,
   Simulate,
-  scryRenderedDOMComponentsWithClass
+  scryRenderedDOMComponentsWithTag
 } from 'react-dom/test-utils';
 import { createRenderer } from 'react-test-renderer/shallow';
 import { findAllWithClass } from 'react-shallow-testutils';
@@ -42,10 +42,10 @@ describe('CustomMonthPicker', () => {
     element = jsx;
     monthPicker = renderIntoDocument(element);
     monthDropdown =
-      scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[0] ||
+      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[0] ||
       null;
     yearDropdown =
-      scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[1] ||
+      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[1] ||
       null;
   }
 

@@ -8,6 +8,9 @@ import pad from 'pad-left';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 
+import FieldLabel from '../../private/FieldLabel/FieldLabel';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+
 const makeMonthString = ({ month, year }) => {
   if (month && year) {
     return `${year}-${pad(month, 2, '0')}`;
@@ -36,13 +39,11 @@ export default class NativeMonthPicker extends Component {
       year: PropTypes.number
     }),
     valid: PropTypes.bool,
-    className: PropTypes.string,
     id: PropTypes.string
   };
 
   static defaultProps = {
-    value: {},
-    className: ''
+    value: {}
   };
 
   constructor() {
@@ -69,18 +70,28 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, valid, id } = this.props;
+    const { value, valid, id } = this.props;
+    // eslint-disable-next-line react/prop-types
+    const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
     const inputValue = makeMonthString(value);
 
     const rootClasses = classnames({
       [styles.root]: true,
-      [styles.invalid]: valid === false,
-      [className]: className
+      [styles.invalid]: valid === false
     });
 
     return (
       <div className={rootClasses}>
+        <FieldLabel
+          {...{
+            ...(id ? { id } : {}),
+            label: <span>{label}<ScreenReaderOnly> Month Year</ScreenReaderOnly></span>,
+            labelProps,
+            secondaryLabel,
+            tertiaryLabel
+          }}
+        />
         <ChevronIcon
           className={styles.chevron}
           svgClassName={styles.chevronSvg}

@@ -1,31 +1,30 @@
 import styles from './fixSketchRendering.less';
 
 export default rootEl => {
-  // Require canvg dynamically because it can't run in a Node context
-  const canvg = require('canvg-fixed');
+  const parseContent = content => content === 'none' ? '' : content;
 
   // Total hack until html-sketchapp supports before and after pseudo elements
   // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/20
   Array.from(rootEl.querySelectorAll('*')).forEach(el => {
     const elementBeforeStyles = window.getComputedStyle(el, ':before');
     const elementAfterStyles = window.getComputedStyle(el, ':after');
-    const elementBeforeContent = elementBeforeStyles.content;
-    const elementAfterContent = elementAfterStyles.content;
+    const elementBeforeContent = parseContent(elementBeforeStyles.content);
+    const elementAfterContent = parseContent(elementAfterStyles.content);
 
     if (elementBeforeContent) {
       const virtualBefore = document.createElement('span');
 
       virtualBefore.setAttribute('style', elementBeforeStyles.cssText);
-      virtualBefore.innerHTML = elementBeforeStyles.content.split('"').join('');
+      virtualBefore.innerHTML = elementBeforeContent.split('"').join('');
       el.classList.add(styles.beforeReset);
-      el.prepend(virtualBefore);
+      el.insertBefore(virtualBefore, el.firstChild);
     }
 
     if (elementAfterContent) {
       const virtualAfter = document.createElement('span');
 
       virtualAfter.setAttribute('style', elementAfterStyles.cssText);
-      virtualAfter.innerHTML = elementAfterStyles.content.split('"').join('');
+      virtualAfter.innerHTML = elementAfterContent.split('"').join('');
       el.classList.add(styles.afterReset);
       el.appendChild(virtualAfter);
     }
@@ -33,9 +32,9 @@ export default rootEl => {
 
   // Another hack to remove visually-hidden elements that html-sketchapp erroneously renders
   Array.from(rootEl.querySelectorAll('*')).forEach(el => {
-    // Don't remove checkboxes or it breaks our custom checkbox CSS rules
+    // Don't remove checkboxes and radio buttons or it breaks our CSS
     // Plus, Sketch doesn't seem to render them, anyway
-    if (el.nodeName === 'INPUT' && el.type === 'checkbox') {
+    if (el.nodeName === 'INPUT' && /checkbox|radio/.test(el.type)) {
       return;
     }
 
@@ -43,50 +42,34 @@ export default rootEl => {
 
     if (
       (style.position === 'absolute' && style.opacity === '0') ||
-      style.clip === 'rect(1px 1px 1px 1px)' // ScreenReaderOnly
+      style.clip === 'rect(1px, 1px, 1px, 1px)' // ScreenReaderOnly
     ) {
       el.parentNode.removeChild(el);
     }
   });
 
-  // Another hack until html-sketchapp supports SVG
-  // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/4
-  Array.from(rootEl.querySelectorAll('svg')).forEach(svg => {
-    const style = window.getComputedStyle(svg);
-
-    // Ensure cascading colours are transferred onto the SVG itself
-    svg.setAttribute('fill', style.fill);
-    svg.setAttribute('stroke', style.stroke);
-    Array.from(svg.querySelectorAll('path')).forEach(path => {
-      const pathStyle = window.getComputedStyle(path);
-      path.setAttribute('fill', pathStyle.fill);
-      path.setAttribute('stroke', pathStyle.stroke);
-    });
-
-    // Quadruple the SVG's size so we can maintain quality
-    const scale = 4;
-    const width = parseInt(style.width, 10) * scale;
-    const height = parseInt(style.height, 10) * scale;
-    svg.style.width = `${width}px`;
-    svg.style.height = `${height}px`;
-
-    // Parse SVG to canvas
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    canvg(canvas, svg.outerHTML);
-
-    // Replace original SVG with an image
-    const img = new Image();
-    img.src = canvas.toDataURL();
-    img.classList = svg.classList;
-    img.style.width = `${width / scale}px`;
-    img.style.height = `${height / scale}px`;
-    svg.parentNode.replaceChild(img, svg);
-  });
-
   // Another hack to fix select chevron layering issues
   Array.from(rootEl.querySelectorAll('select')).forEach(el => {
     el.style.backgroundColor = 'transparent';
+  });
+
+  // Another hack to fix massive stroke widths when SVGs have a large viewbox
+  // e.g. the mobile Header chevron
+  Array.from(rootEl.querySelectorAll('path')).forEach(el => {
+    if (parseInt(getComputedStyle(el).strokeWidth, 10) > 40) {
+      el.style.strokeWidth = '1px';
+    }
+  });
+
+  // Another hack to hide the blue background on unchecked slide toggles
+  // since neither "overflow: hidden" nor "-webkit-mask-image" work properly.
+  // To fix it, we remove all children of masked elements inside the label.
+  // (Yep, this one is pretty awful...)
+  Array.from(rootEl.querySelectorAll('[aria-label="Slide toggle"]:not(:checked) ~ label *')).forEach(el => {
+    if (getComputedStyle(el).webkitMaskImage !== 'none') {
+      Array.from(el.querySelectorAll('*')).forEach(maskedEl => {
+        maskedEl.parentNode.removeChild(maskedEl);
+      });
+    }
   });
 };
