@@ -171,7 +171,7 @@ export default class CustomMonthPicker extends Component {
               onChange: this.handleMonthChange,
               value: monthValue,
               ref: this.storeMonthReference,
-              'aria-describedby': `${id}-message` // Is is important as these fields are are using a shared FieldMessage
+              'aria-describedby': `${id}-message` // Is is important as these fields are using a shared FieldMessage
             }}
           />
 
@@ -187,7 +187,7 @@ export default class CustomMonthPicker extends Component {
               onChange: this.handleYearChange,
               value: yearValue,
               ref: this.storeYearReference,
-              'aria-describedby': `${id}-message` // Is is important as these fields are are using a shared FieldMessage
+              'aria-describedby': `${id}-message` // Is is important as these fields are using a shared FieldMessage
             }}
           />
         </div>
