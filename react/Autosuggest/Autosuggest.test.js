@@ -31,19 +31,19 @@ describe('Autosuggest', () => {
   });
 
   it('should render with simple props', () => {
-    const wrapper = render(<Autosuggest {...getAutosuggestProps()} />);
+    const wrapper = render(<Autosuggest {...getAutosuggestProps()} id="testAutosuggest" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with suggestions', () => {
-    const wrapper = render(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} />);
+    const wrapper = render(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} id="testAutosuggest" />);
     const suggestions = wrapper.find('.suggestionsContainer').find('li');
     expect(wrapper).toMatchSnapshot();
     expect(suggestions.length).toEqual(2);
   });
 
   it('should render with label', () => {
-    const wrapper = render(<Autosuggest {...getAutosuggestProps()} id="Foo" label="Foo" />);
+    const wrapper = render(<Autosuggest {...getAutosuggestProps()} id="testAutosuggest" label="Foo" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -53,13 +53,13 @@ describe('Autosuggest', () => {
       className: 'LABEL_TEST_CLASS'
     };
 
-    const wrapper = render(<Autosuggest {...props} id="Foo" label="Foo" showMobileBackdrop />);
+    const wrapper = render(<Autosuggest {...props} id="testAutosuggest" label="Foo" showMobileBackdrop />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should error if `suggestionsContainerClassName` is not a string', () => {
     const expectedError = expect.stringMatching(/Invalid prop `suggestionsContainerClassName` of type `boolean` supplied to `Autosuggest`, expected `string/);
-    render(<Autosuggest {...getAutosuggestProps()} suggestionsContainerClassName={true} />);
+    render(<Autosuggest {...getAutosuggestProps()} id="testAutosuggest" suggestionsContainerClassName={true} />);
 
     expect(spy).toBeCalledWith(expectedError);
   });
@@ -71,12 +71,12 @@ describe('Autosuggest', () => {
     };
     const expectedError = expect.stringMatching(/`suggestionsContainerClassName` will be overridden by the `suggestionsContainer` class in autosuggestProps `theme`. Please remove it./);
 
-    render(<Autosuggest {...props} suggestionsContainerClassName="TEST 2" />);
+    render(<Autosuggest {...props} id="testAutosuggest" suggestionsContainerClassName="TEST 2" />);
     expect(spy).toBeCalledWith(expectedError);
   });
 
   it('should focus field when suggestion is clicked', () => {
-    const wrapper = mount(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} />);
+    const wrapper = mount(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} id="testAutosuggest" />);
     const firstSuggestion = wrapper.find('li').first();
     const input = wrapper.find('input').html();
     firstSuggestion.simulate('click');
