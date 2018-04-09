@@ -3,7 +3,7 @@ import PageBlock from './PageBlock';
 import Text from '../Text/Text';
 
 export default {
-  route: '/page-block',
+  route: 'page-block',
   title: 'Page Block',
   category: 'Layout',
   component: PageBlock,

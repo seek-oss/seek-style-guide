@@ -14,7 +14,7 @@ TextLinkContainer.propTypes = {
 };
 
 export default {
-  route: '/text-link',
+  route: 'text-link',
   title: 'Text Link',
   category: 'Typography',
   component: TextLink,
