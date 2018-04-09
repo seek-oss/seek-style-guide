@@ -58,7 +58,7 @@ class AutosuggestContainer extends Component {
 }
 
 export default {
-  route: '/autosuggest',
+  route: 'autosuggest',
   title: 'Autosuggest',
   category: 'Form',
   component: Autosuggest,
