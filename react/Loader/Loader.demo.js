@@ -1,7 +1,7 @@
 import Loader from './Loader';
 
 export default {
-  route: '/loader',
+  route: 'loader',
   title: 'Loader',
   component: Loader,
   initialProps: {},
