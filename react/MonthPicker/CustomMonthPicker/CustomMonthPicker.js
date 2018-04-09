@@ -28,6 +28,7 @@ export default class CustomMonthPicker extends Component {
   static displayName = 'CustomMonthPicker';
 
   static propTypes = {
+    id: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     value: PropTypes.shape({
@@ -35,7 +36,6 @@ export default class CustomMonthPicker extends Component {
       year: PropTypes.number
     }),
     valid: PropTypes.bool,
-    id: PropTypes.string,
     minYear: PropTypes.number.isRequired,
     maxYear: PropTypes.number.isRequired,
     ascendingYears: PropTypes.bool.isRequired
@@ -131,7 +131,7 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { value, valid, id } = this.props;
+    const { id, value, valid } = this.props;
     // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
@@ -143,7 +143,7 @@ export default class CustomMonthPicker extends Component {
       <div>
         <FieldLabel
           {...{
-            ...(id ? { id: `${id}-month` } : {}),
+            id: `${id}-month`,
             label: <span>{label}<ScreenReaderOnly> Month</ScreenReaderOnly></span>,
             labelProps,
             secondaryLabel,
@@ -152,7 +152,7 @@ export default class CustomMonthPicker extends Component {
         />
         <FieldLabel
           {...{
-            ...(id ? { id: `${id}-year` } : {}),
+            id: `${id}-year`,
             label: <ScreenReaderOnly>{label} Year</ScreenReaderOnly>,
             raw: true
           }}
@@ -160,7 +160,7 @@ export default class CustomMonthPicker extends Component {
 
         <div className={styles.dropdownWrapper}>
           <Dropdown
-            {...(id ? { id: `${id}-month` } : {})}
+            id={`${id}-month`}
             options={months}
             className={styles.dropdown}
             valid={valid}
@@ -171,12 +171,12 @@ export default class CustomMonthPicker extends Component {
               onChange: this.handleMonthChange,
               value: monthValue,
               ref: this.storeMonthReference,
-              ...(id ? { 'aria-describedby': `${id}-message` } : {})
+              'aria-describedby': `${id}-message` // Is is important as these fields are are using a shared FieldMessage
             }}
           />
 
           <Dropdown
-            {...(id ? { id: `${id}-year` } : {})}
+            id={`${id}-year`}
             options={this.yearOptions}
             className={styles.dropdown}
             valid={valid}
@@ -187,7 +187,7 @@ export default class CustomMonthPicker extends Component {
               onChange: this.handleYearChange,
               value: yearValue,
               ref: this.storeYearReference,
-              ...(id ? { 'aria-describedby': `${id}-message` } : {})
+              'aria-describedby': `${id}-message` // Is is important as these fields are are using a shared FieldMessage
             }}
           />
         </div>

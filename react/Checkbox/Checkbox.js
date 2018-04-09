@@ -66,10 +66,10 @@ export default class Checkbox extends Component {
   }
 
   renderLabel() {
-    const { label, id, type } = this.props;
+    const { id, label, type } = this.props;
 
     return (
-      <label className={styles.label} htmlFor={id}>
+      <label htmlFor={id} className={styles.label}>
         {
           type === STANDARD ?
             this.renderStandard(label) :
@@ -80,12 +80,12 @@ export default class Checkbox extends Component {
   }
 
   renderInput() {
-    const { inputProps, id } = this.props;
+    const { id, inputProps } = this.props;
 
     const allInputProps = {
+      id,
       ...combineClassNames(inputProps, styles.input),
-      type: 'checkbox',
-      id
+      type: 'checkbox'
     };
 
     return (

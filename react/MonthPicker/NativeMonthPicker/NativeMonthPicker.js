@@ -32,14 +32,14 @@ export default class NativeMonthPicker extends Component {
   static displayName = 'NativeMonthPicker';
 
   static propTypes = {
+    id: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     value: PropTypes.shape({
       month: PropTypes.number,
       year: PropTypes.number
     }),
-    valid: PropTypes.bool,
-    id: PropTypes.string
+    valid: PropTypes.bool
   };
 
   static defaultProps = {
@@ -70,7 +70,7 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { value, valid, id } = this.props;
+    const { id, value, valid } = this.props;
     // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
@@ -85,7 +85,7 @@ export default class NativeMonthPicker extends Component {
       <div className={rootClasses}>
         <FieldLabel
           {...{
-            ...(id ? { id } : {}),
+            id,
             label: <span>{label}<ScreenReaderOnly> Month Year</ScreenReaderOnly></span>,
             labelProps,
             secondaryLabel,
@@ -98,13 +98,13 @@ export default class NativeMonthPicker extends Component {
           direction="down"
         />
         <input
-          {...(id ? { id } : {})}
+          id={id}
           className={styles.input}
           type="month"
           value={inputValue}
           onChange={this.handleChange}
           onBlur={this.handleBlur}
-          {...(id ? { 'aria-describedby': `${id}-message` } : {})}
+          aria-describedby={`${id}-message`}
         />
       </div>
     );

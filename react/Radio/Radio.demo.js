@@ -62,7 +62,7 @@ class RadioContainer extends Component {
 }
 
 export default {
-  route: '/radio',
+  route: 'radio',
   title: 'Radio',
   category: 'Form',
   component: Radio,
