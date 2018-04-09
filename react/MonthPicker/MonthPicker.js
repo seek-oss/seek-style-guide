@@ -83,7 +83,7 @@ export default class MonthPicker extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { id, className } = this.props;
     const classNames = classnames({
       [styles.root]: true,
       [className]: className
