@@ -17,7 +17,7 @@ export const makeDummyLinkRendererForPath = path => {
   return DummyLinkRenderer;
 };
 
-const ROUTE = '/header';
+const ROUTE = 'header';
 
 export default {
   route: ROUTE,

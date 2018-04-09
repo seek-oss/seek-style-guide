@@ -15,7 +15,7 @@ CardGroupContainer.propTypes = {
 };
 
 export default {
-  route: '/card-group',
+  route: 'card-group',
   title: 'Card Group',
   category: 'Layout',
   component: CardGroup,

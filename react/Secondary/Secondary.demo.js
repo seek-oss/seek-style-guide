@@ -3,7 +3,7 @@ import Secondary from './Secondary';
 import Text from '../Text/Text';
 
 export default {
-  route: '/secondary',
+  route: 'secondary',
   title: 'Secondary',
   category: 'Typography',
   component: Text,

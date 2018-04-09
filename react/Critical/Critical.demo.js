@@ -3,7 +3,7 @@ import Critical from './Critical';
 import Text from '../Text/Text';
 
 export default {
-  route: '/critical',
+  route: 'critical',
   title: 'Critical',
   category: 'Typography',
   component: Text,
