@@ -44,22 +44,22 @@ describe('NativeMonthPicker', () => {
   }
 
   it('should have a displayName', () => {
-    render(<NativeMonthPicker id="testNativeMonthPicker" />);
+    render(<NativeMonthPicker />);
     expect(element.type.displayName).to.equal('NativeMonthPicker');
   });
 
   it('should render without exploding', () => {
-    render(<NativeMonthPicker id="testNativeMonthPicker" />);
+    render(<NativeMonthPicker />);
     expect(errors.length).to.equal(0);
   });
 
   it('should assign invalid className when valid is false', () => {
-    render(<NativeMonthPicker id="testNativeMonthPicker" valid={false} />);
+    render(<NativeMonthPicker valid={false} />);
     expect(rootElement.props.className).to.contain('invalid');
   });
 
   it('should convert monthValue & yearValue to generic month string', () => {
-    render(<NativeMonthPicker id="testNativeMonthPicker" value={{ month: 1, year: 2016 }} />);
+    render(<NativeMonthPicker value={{ month: 1, year: 2016 }} />);
     expect(input.props.value).to.equal('2016-01');
   });
 
@@ -67,7 +67,7 @@ describe('NativeMonthPicker', () => {
     const onChange = newValue => {
       value = newValue;
     };
-    renderToDom(<NativeMonthPicker id="testNativeMonthPicker" onChange={onChange} value={{ month: 6, year: 2010 }} />);
+    renderToDom(<NativeMonthPicker onChange={onChange} value={{ month: 6, year: 2010 }} />);
     input.value = '2012-11';
     Simulate.change(input);
     expect(value).to.deep.equal({
@@ -80,7 +80,7 @@ describe('NativeMonthPicker', () => {
     const onBlur = newValue => {
       value = newValue;
     };
-    renderToDom(<NativeMonthPicker id="testNativeMonthPicker" onBlur={onBlur} value={{ month: 6, year: 2010 }} />);
+    renderToDom(<NativeMonthPicker onBlur={onBlur} value={{ month: 6, year: 2010 }} />);
     input.value = '2012-11';
     Simulate.blur(input);
     expect(value).to.deep.equal({

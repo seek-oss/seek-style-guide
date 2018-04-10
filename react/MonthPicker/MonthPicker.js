@@ -16,8 +16,18 @@ export default class MonthPicker extends Component {
   static displayName = 'MonthPicker';
 
   static propTypes = {
-    id: PropTypes.string.isRequired,
+    /* eslint-disable consistent-return */
+    id: (props, propName, componentName) => {
+      const { id } = props;
+
+      if (typeof id !== 'string') {
+        return new Error(
+          `Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`
+        );
+      }
+    },
     className: PropTypes.string,
+    /* eslint-enable consistent-return */
     valid: PropTypes.bool,
     value: PropTypes.shape({
       month: PropTypes.number,
@@ -32,6 +42,7 @@ export default class MonthPicker extends Component {
   };
 
   static defaultProps = {
+    id: '',
     className: '',
     native: false,
     maxYear: currYear,
@@ -61,7 +72,7 @@ export default class MonthPicker extends Component {
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
     const monthPickerProps = {
-      id,
+      ...(id ? { id } : {}),
       value,
       onChange,
       onBlur,

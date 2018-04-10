@@ -7,12 +7,12 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
   <input
     className="input"
     data-automation="first-name-field"
-    id="testCheckbox"
+    id="still-in-role"
     type="checkbox"
   />
   <label
     className="label"
-    htmlFor="testCheckbox"
+    htmlFor="still-in-role"
   >
     <div
       className="standard"
@@ -44,12 +44,12 @@ exports[`Checkbox inputProps should render as checked 1`] = `
   <input
     checked={true}
     className="input"
-    id="testCheckbox"
+    id="still-in-role"
     type="checkbox"
   />
   <label
     className="label"
-    htmlFor="testCheckbox"
+    htmlFor="still-in-role"
   >
     <div
       className="standard"
@@ -81,12 +81,12 @@ exports[`Checkbox should render with button style 1`] = `
   <input
     checked={false}
     className="input"
-    id="testCheckbox"
+    id="still-in-role"
     type="checkbox"
   />
   <label
     className="label"
-    htmlFor="testCheckbox"
+    htmlFor="still-in-role"
   >
     <span
       className="button"
@@ -104,12 +104,12 @@ exports[`Checkbox should render with className 1`] = `
   <input
     checked={false}
     className="input"
-    id="testCheckbox"
+    id="still-in-role"
     type="checkbox"
   />
   <label
     className="label"
-    htmlFor="testCheckbox"
+    htmlFor="still-in-role"
   >
     <div
       className="standard"
@@ -141,12 +141,12 @@ exports[`Checkbox should render with simple props 1`] = `
   <input
     checked={false}
     className="input"
-    id="testCheckbox"
+    id="still-in-role"
     type="checkbox"
   />
   <label
     className="label"
-    htmlFor="testCheckbox"
+    htmlFor="still-in-role"
   >
     <div
       className="standard"
@@ -178,12 +178,12 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
   <input
     checked={false}
     className="input"
-    id="testCheckbox"
+    id="still-in-role"
     type="checkbox"
   />
   <label
     className="label"
-    htmlFor="testCheckbox"
+    htmlFor="still-in-role"
   >
     <div
       className="standard"

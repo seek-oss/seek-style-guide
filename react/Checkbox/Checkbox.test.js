@@ -5,7 +5,7 @@ import Checkbox from './Checkbox';
 
 describe('Checkbox', () => {
   const requiredProps = {
-    id: 'testCheckbox',
+    id: 'still-in-role',
     label: 'Still in role'
   };
 

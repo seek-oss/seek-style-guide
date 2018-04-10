@@ -14,7 +14,7 @@ describe('TextField', () => {
   });
 
   it('should render with defaults', () => {
-    expect(shallow(<TextField id="testTextField" />)).toMatchSnapshot();
+    expect(shallow(<TextField />)).toMatchSnapshot();
   });
 
   describe('errors', () => {
@@ -32,7 +32,7 @@ describe('TextField', () => {
         /Invalid prop `inputProps`/
       );
 
-      shallow(<TextField id="testTextField" inputProps="hey" />);
+      shallow(<TextField inputProps="hey" />);
       expect(spy).toBeCalledWith(expectedError);
     });
 
@@ -49,41 +49,41 @@ describe('TextField', () => {
   it('should render with input props', () => {
     expect(shallow(
       <TextField
-        id="testTextField"
         inputProps={{
           className: 'first-name-field',
+          id: 'firstName',
           'data-automation': 'first-name-field'
         }}
       />)).toMatchSnapshot();
   });
 
   it('should render with valid false', () => {
-    expect(shallow(<TextField id="testTextField" valid={false} />)).toMatchSnapshot();
+    expect(shallow(<TextField valid={false} />)).toMatchSnapshot();
   });
 
   describe('clear button', () => {
     const handleClear = () => {};
 
     it('should not be visible when value is empty', () => {
-      expect(shallow(<TextField id="testTextField" inputProps={{ value: '' }} onClear={handleClear} />)).toMatchSnapshot();
+      expect(shallow(<TextField inputProps={{ value: '' }} onClear={handleClear} />)).toMatchSnapshot();
     });
 
     it('should not be visible when value is provided but no clear handler', () => {
-      expect(shallow(<TextField id="testTextField" inputProps={{ value: 'abc' }} />)).toMatchSnapshot();
+      expect(shallow(<TextField inputProps={{ value: 'abc' }} />)).toMatchSnapshot();
     });
 
     it('should be visible when value is provided', () => {
-      expect(shallow(<TextField id="testTextField" inputProps={{ value: 'abc' }} onClear={handleClear} />)).toMatchSnapshot();
+      expect(shallow(<TextField inputProps={{ value: 'abc' }} onClear={handleClear} />)).toMatchSnapshot();
     });
 
     it('should be visible when value has white spaces only', () => {
-      expect(shallow(<TextField id="testTextField" inputProps={{ value: '  ' }} onClear={handleClear} />)).toMatchSnapshot();
+      expect(shallow(<TextField inputProps={{ value: '  ' }} onClear={handleClear} />)).toMatchSnapshot();
     });
 
     it('should invoke the clear handler when clicked and focus on input', () => {
       const clickHandlerSpy = jest.fn();
 
-      const wrapper = mount(<TextField id="testTextField" onClear={clickHandlerSpy} />);
+      const wrapper = mount(<TextField onClear={clickHandlerSpy} />);
       const input = wrapper.find('input').html();
       const clearButton = wrapper.find('.clearField');
 

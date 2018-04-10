@@ -17,7 +17,7 @@ export default class Autosuggest extends Component {
   static displayName = 'Autosuggest';
 
   static propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.string,
     inputProps: PropTypes.object.isRequired,
     label: PropTypes.string,
     labelProps: PropTypes.object,
@@ -43,6 +43,7 @@ export default class Autosuggest extends Component {
   };
 
   static defaultProps = {
+    id: '',
     className: '',
     label: '',
     labelProps: {},
