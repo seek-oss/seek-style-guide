@@ -19,10 +19,10 @@ export default class Radio extends Component {
   static displayName = 'Radio';
 
   static propTypes = {
-    id: PropTypes.string.isRequired,
     className: PropTypes.string,
     label: PropTypes.string,
     labelProps: PropTypes.object,
+    id: PropTypes.string.isRequired,
     inputProps: PropTypes.object
   };
 
@@ -33,11 +33,11 @@ export default class Radio extends Component {
   };
 
   renderInput() {
-    const { id, inputProps } = this.props;
+    const { inputProps, id } = this.props;
     const allInputProps = {
-      id,
       ...combineClassNames(inputProps, styles.input),
-      type: 'radio'
+      type: 'radio',
+      id
     };
 
     return <input {...allInputProps} />;
@@ -46,8 +46,8 @@ export default class Radio extends Component {
   renderLabel() {
     const { label, labelProps, id } = this.props;
     const allLabelProps = {
-      htmlFor: id,
-      ...combineClassNames(labelProps, styles.label)
+      ...combineClassNames(labelProps, styles.label),
+      htmlFor: id
     };
 
     return (

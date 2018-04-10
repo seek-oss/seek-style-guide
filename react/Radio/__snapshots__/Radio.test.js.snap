@@ -7,12 +7,12 @@ exports[`Radio inputProps should pass through other props to the input 1`] = `
   <input
     className="input"
     data-automation="first-name-field"
-    id="testRadio"
+    id="still-in-role"
     type="radio"
   />
   <label
     className="label"
-    htmlFor="testRadio"
+    htmlFor="still-in-role"
   >
     <svg
       className="svg"
@@ -51,12 +51,12 @@ exports[`Radio inputProps should render as checked 1`] = `
   <input
     checked={true}
     className="input"
-    id="testRadio"
+    id="still-in-role"
     type="radio"
   />
   <label
     className="label"
-    htmlFor="testRadio"
+    htmlFor="still-in-role"
   >
     <svg
       className="svg"
@@ -94,12 +94,12 @@ exports[`Radio should render with className 1`] = `
 >
   <input
     className="input"
-    id="testRadio"
+    id="still-in-role"
     type="radio"
   />
   <label
     className="label"
-    htmlFor="testRadio"
+    htmlFor="still-in-role"
   >
     <svg
       className="svg"
@@ -137,12 +137,12 @@ exports[`Radio should render with simple props 1`] = `
 >
   <input
     className="input"
-    id="testRadio"
+    id="still-in-role"
     type="radio"
   />
   <label
     className="label"
-    htmlFor="testRadio"
+    htmlFor="still-in-role"
   >
     <svg
       className="svg"

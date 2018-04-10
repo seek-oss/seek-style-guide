@@ -48,9 +48,9 @@ export default class SlideToggle extends Component {
     return (
       <div className={classnames(styles.root, className)}>
         <input
-          id={id}
           ref={this.storeInputRef}
           type="checkbox"
+          id={id}
           aria-label={label}
           className={inputStyles}
           checked={checked}

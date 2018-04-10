@@ -50,17 +50,17 @@ describe('CustomMonthPicker', () => {
   }
 
   it('should have a displayName', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" />);
+    render(<CustomMonthPicker />);
     expect(element.type.displayName).to.equal('CustomMonthPicker');
   });
 
   it('should render without exploding', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" />);
+    render(<CustomMonthPicker />);
     expect(errors.length).to.equal(0);
   });
 
   it('should send valid prop to false to both dropdowns when valid is false', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" valid={false} />);
+    render(<CustomMonthPicker valid={false} />);
     expect(monthDropdown.props.valid).to.equal(false);
     expect(yearDropdown.props.valid).to.equal(false);
   });
@@ -71,7 +71,6 @@ describe('CustomMonthPicker', () => {
     };
     renderToDom(
       <CustomMonthPicker
-        id="testCustomMonthPicker"
         minYear={2000}
         maxYear={2010}
         onChange={onChange}
@@ -92,7 +91,6 @@ describe('CustomMonthPicker', () => {
     };
     renderToDom(
       <CustomMonthPicker
-        id="testCustomMonthPicker"
         minYear={1990}
         maxYear={2010}
         onChange={onChange}
