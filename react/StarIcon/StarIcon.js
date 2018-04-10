@@ -9,14 +9,15 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../private/Icon/Icon';
 
-export default function StarIcon({ filled, className, ...props }) {
+export default function StarIcon({ filled, className, size, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;
 
   const combinedProps = {
     ...props,
     className: classnames({
       [styles.filled]: filled,
-      [className]: className
+      [className]: className,
+      [styles[`${size}Svg`]]: size
     })
   };
 

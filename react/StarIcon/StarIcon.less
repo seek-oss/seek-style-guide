@@ -1,3 +1,5 @@
+@import (reference) "~seek-style-guide/theme";
+
 .filled {
   animation-duration: 0.3s;
   animation-name: spring;
@@ -8,4 +10,32 @@
   0% { transform: scale(0.6); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+.heroSvg {
+  .iconSize(
+    @typography-scale: @hero-type-scale,
+    @typography-scale-mobile: @hero-type-scale-mobile
+  );
+}
+
+.headlineSvg {
+  .iconSize(
+    @typography-scale: @headline-type-scale,
+    @typography-scale-mobile: @headline-type-scale-mobile
+  );
+}
+
+.subheadingSvg {
+  .iconSize(
+    @typography-scale: @subheading-type-scale,
+    @typography-scale-mobile: @subheading-type-scale-mobile
+  );
+}
+
+.headingSvg {
+  .iconSize(
+    @typography-scale: @heading-type-scale,
+    @typography-scale-mobile: @heading-type-scale-mobile
+  );
 }
