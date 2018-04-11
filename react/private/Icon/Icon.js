@@ -17,7 +17,7 @@ function Icon({
   const svgClassNames = classnames(
     styles.svg,
     svgClassName,
-    { [styles[`${size}Svg`]]: customStyle ? false : size },
+    { [styles[`${size}Svg`]]: customStyle || size },
     { [styles[`${size}Svg${customStyle}`]]: customStyle }
   );
 
