@@ -8,12 +8,12 @@ exports[`Slide toggle: should render a checked state 1`] = `
     aria-label="Test toggle"
     checked={true}
     className="input"
-    id="testSlideToggle"
+    id="testToggle"
     type="checkbox"
   />
   <label
     className="switch"
-    htmlFor="testSlideToggle"
+    htmlFor="testToggle"
   >
     <div
       className="slideContainer"
@@ -42,12 +42,12 @@ exports[`Slide toggle: should render with default props 1`] = `
   <input
     aria-label="Test toggle"
     className="input"
-    id="testSlideToggle"
+    id="testToggle"
     type="checkbox"
   />
   <label
     className="switch"
-    htmlFor="testSlideToggle"
+    htmlFor="testToggle"
   >
     <div
       className="slideContainer"
@@ -76,12 +76,12 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
   <input
     aria-label="Test toggle"
     className="input"
-    id="testSlideToggle"
+    id="testToggle"
     type="checkbox"
   />
   <label
     className="switch"
-    htmlFor="testSlideToggle"
+    htmlFor="testToggle"
   >
     <div
       className="slideContainer"
@@ -105,12 +105,12 @@ exports[`Slide toggle: should render with the label on the left 1`] = `
   <input
     aria-label="Test toggle"
     className="input inputLeft"
-    id="testSlideToggle"
+    id="testToggle"
     type="checkbox"
   />
   <label
     className="switch"
-    htmlFor="testSlideToggle"
+    htmlFor="testToggle"
   >
     <span
       className="labelText labelLeft"

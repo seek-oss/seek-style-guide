@@ -32,7 +32,15 @@ export default class TextField extends Component {
   static displayName = 'TextField';
 
   static propTypes = {
-    id: PropTypes.string.isRequired,
+    /* eslint-disable consistent-return */
+    id: (props, propName, componentName) => {
+      const { id } = props;
+
+      if (typeof id !== 'string') {
+        return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
+      }
+    },
+    /* eslint-enable consistent-return */
     className: PropTypes.string,
     valid: PropTypes.bool,
     /* eslint-disable consistent-return */
@@ -53,6 +61,7 @@ export default class TextField extends Component {
   };
 
   static defaultProps = {
+    id: '',
     className: ''
   };
 
@@ -83,11 +92,11 @@ export default class TextField extends Component {
   }
 
   renderInput() {
-    const { id, inputProps = {} } = this.props;
+    const { inputProps = {}, id } = this.props;
     const { ref } = inputProps;
     const allInputProps = {
-      id,
       ...combineClassNames(inputProps, styles.input),
+      ...(id ? { id } : {}),
       ref: attachRefs(this.storeInputReference, ref)
     };
 
@@ -107,7 +116,7 @@ export default class TextField extends Component {
   }
 
   render() {
-    const { id, className, valid, onClear, inputProps = {} } = this.props;
+    const { className, valid, onClear, inputProps = {} } = this.props;
     const hasValue = (inputProps.value && inputProps.value.length > 0);
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
@@ -118,7 +127,7 @@ export default class TextField extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
+    const { id, label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
       <div ref={this.storeContainerReference} className={classNames}>

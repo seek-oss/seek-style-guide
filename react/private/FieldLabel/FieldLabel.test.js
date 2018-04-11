@@ -38,64 +38,64 @@ describe('FieldLabel', () => {
   }
 
   it('should have a displayName', () => {
-    render(<FieldLabel id="testFieldLabel" />);
+    render(<FieldLabel />);
     expect(element.type.displayName).to.equal('FieldLabel');
   });
 
   describe('label', () => {
     it('should not be rendered by default', () => {
-      render(<FieldLabel id="testFieldLabel" />);
+      render(<FieldLabel />);
       expect(label).to.equal(null);
     });
 
     it('should have `htmlFor` equal to `id` when `label` is specified', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" />);
-      expect(label.props).to.contain.keys({ htmlFor: 'testFieldLabel' });
+      render(<FieldLabel id="firstName" label="First Name" />);
+      expect(label.props).to.contain.keys({ htmlFor: 'firstName' });
     });
 
     it('should have the right text when `label` is specified', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" labelTextProps={{ className: 'text' }} />);
+      render(<FieldLabel id="firstName" label="First Name" labelTextProps={{ className: 'text' }} />);
       expect(labelText.props.children).to.equal('First Name');
     });
 
     it('should be able to pass a node to `label`', () => {
-      render(<FieldLabel id="testFieldLabel" label={<span>First Name</span>} />);
+      render(<FieldLabel id="firstName" label={<span>First Name</span>} />);
       expect(labelText.props.children.type).to.equal('span');
       expect(labelText.props.children.props.children).to.equal('First Name');
     });
 
-    it('should error if `id` is not a string', () => {
-      render(<FieldLabel id={true} />);
-      expect(errors[0]).to.match(/Invalid prop `id`/);
+    it('should error if `id` is not specified but `label` is', () => {
+      render(<FieldLabel label="First Name" />);
+      expect(errors[0]).to.match(/have an `id`/);
     });
   });
 
   describe('secondaryLabel', () => {
     it('should not be rendered by default', () => {
-      render(<FieldLabel id="testFieldLabel" />);
+      render(<FieldLabel />);
       expect(secondaryLabel).to.equal(null);
     });
 
     it('should have the right text when `secondaryLabel` is specified', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" secondaryLabel="Hint Message" />);
+      render(<FieldLabel id="firstName" label="First Name" secondaryLabel="Hint Message" />);
       expect(secondaryLabel.props.children).to.equal('Hint Message');
     });
   });
 
   describe('tertiaryLabel', () => {
     it('should not be rendered by default', () => {
-      render(<FieldLabel id="testFieldLabel" />);
+      render(<FieldLabel />);
 
       expect(tertiaryLabel).to.equal(null);
     });
 
     it('should have the right text when `tertiaryLabel` is specified', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" tertiaryLabel="Test Tertiary Label" />);
+      render(<FieldLabel id="firstName" label="First Name" tertiaryLabel="Test Tertiary Label" />);
       expect(tertiaryLabel.props.children).to.equal('Test Tertiary Label');
     });
 
     it('should be able to pass a node to `tertiaryLabel`', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" tertiaryLabel={<TextLink>Tertiary TextLink</TextLink>} />);
+      render(<FieldLabel id="firstName" label="First Name" tertiaryLabel={<TextLink>Tertiary TextLink</TextLink>} />);
       expect(tertiaryLabel.props.children.type.displayName).to.equal('TextLink');
       expect(tertiaryLabel.props.children.props.children).to.equal('Tertiary TextLink');
     });
@@ -103,27 +103,27 @@ describe('FieldLabel', () => {
 
   describe('labelProps', () => {
     it('should error if `labelProps` is not an object', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" labelProps="data-automation=first-name" />);
+      render(<FieldLabel id="firstName" label="First Name" labelProps="data-automation=first-name" />);
       expect(errors[0]).to.match(/Invalid prop `labelProps`/);
     });
 
     it('should error if `labelProps` is specified but `label` is not', () => {
-      render(<FieldLabel id="testFieldLabel" labelProps={{ 'data-automation': 'first-name' }} />);
+      render(<FieldLabel labelProps={{ 'data-automation': 'first-name' }} />);
       expect(errors[0]).to.match(/Specifying `labelProps` is redundant/);
     });
 
     it('should error if `labelProps`\'s `htmlFor` is specified', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" labelProps={{ htmlFor: 'ignored' }} />);
+      render(<FieldLabel id="firstName" label="First Name" labelProps={{ htmlFor: 'ignored' }} />);
       expect(errors[0]).to.match(/`labelProps.htmlFor` will be overridden by `id`/);
     });
 
     it('should pass through className to the label', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" labelProps={{ className: 'first-name-label' }} />);
+      render(<FieldLabel id="firstName" label="First Name" labelProps={{ className: 'first-name-label' }} />);
       expect(label.props.className).to.match(/first-name-label$/);
     });
 
     it('should pass through other props to the label', () => {
-      render(<FieldLabel id="testFieldLabel" label="First Name" labelProps={{ 'data-automation': 'first-name-label' }} />);
+      render(<FieldLabel id="firstName" label="First Name" labelProps={{ 'data-automation': 'first-name-label' }} />);
       expect(label.props['data-automation']).to.equal('first-name-label');
     });
   });

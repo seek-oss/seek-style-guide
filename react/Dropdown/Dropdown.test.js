@@ -54,13 +54,13 @@ describe('Dropdown', () => {
   }
 
   it('should have a displayName', () => {
-    render(<Dropdown id="testDropdown" inputProps={{ value: '' }} />);
+    render(<Dropdown inputProps={{ value: '' }} />);
     expect(element.type.displayName).to.equal('Dropdown');
   });
 
   describe('id', () => {
     it('should error if `id` is not a string', () => {
-      render(<Dropdown id={true} inputProps={{ value: '' }} />);
+      render(<Dropdown inputProps={{ value: '' }} id={true} />);
       expect(errors[0]).to.match(/Invalid prop `id`/);
     });
   });
@@ -68,7 +68,7 @@ describe('Dropdown', () => {
   describe('options', () => {
     const opt = [{ label: 'suburbs', value: '3130' }];
     it('should render options correctly', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ value: '' }} options={opt} />);
+      render(<Dropdown inputProps={{ value: '' }} options={opt} />);
       expect(option.props.value).to.equal('3130');
     });
   });
@@ -76,7 +76,7 @@ describe('Dropdown', () => {
   describe('Option Group', () => {
     beforeAll(() => {
       const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
-      render(<Dropdown id="testDropdown" inputProps={{ value: '' }} options={opts} />);
+      render(<Dropdown inputProps={{ value: '' }} options={opts} />);
     });
     it('should render optgroup correctly', () => {
       expect(optionGroup.props.label).to.equal('suburbs');
@@ -92,41 +92,48 @@ describe('Dropdown', () => {
     });
   });
 
+  describe('input', () => {
+    it('should not have an `id` if it is not specified', () => {
+      render(<Dropdown inputProps={{ value: '' }} />);
+      expect(input.props).not.to.include.keys('id');
+    });
+  });
+
   describe('placeholder', () => {
     it('should render placeholder as first option in list ', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ value: '' }} options={options} placeholder="test" />);
+      render(<Dropdown inputProps={{ value: '' }} options={options} placeholder="test" />);
       expect(placeholderText()).to.equal('test');
     });
   });
 
   describe('inputProps', () => {
     it('should error if `inputProps` is not an object', () => {
-      render(<Dropdown id="testDropdown" inputProps="hey" />);
+      render(<Dropdown inputProps="hey" />);
       expect(errors[0]).to.match(/Invalid prop `inputProps`/);
     });
 
     it('should error if `inputProps.value` is not supplied', () => {
-      render(<Dropdown id="testDropdown" inputProps={{}} />);
+      render(<Dropdown inputProps={{}} />);
       expect(errors[0]).to.match(/Invalid prop `inputProps.value` of type `undefined` supplied to `Dropdown`, expected `string`/);
     });
 
     it('should error if `inputProps.value` is not a string', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ value: 2 }} />);
+      render(<Dropdown inputProps={{ value: 2 }} />);
       expect(errors[0]).to.match(/Invalid prop `inputProps.value` of type `number` supplied to `Dropdown`, expected `string`/);
     });
 
     it('should error if `inputProps`\'s `id` is specified', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ id: 'ignored', value: '' }} />);
+      render(<Dropdown id="firstName" inputProps={{ id: 'ignored', value: '' }} />);
       expect(errors[0]).to.match(/`inputProps.id` will be overridden by `id`/);
     });
 
     it('should pass through className to the input', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ className: 'first-name-field' }} />);
+      render(<Dropdown inputProps={{ className: 'first-name-field' }} />);
       expect(input.props.className).to.match(/first-name-field$/);
     });
 
     it('should pass through other props to the input', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ id: 'firstName', 'data-automation': 'first-name-field' }} />);
+      render(<Dropdown inputProps={{ id: 'firstName', 'data-automation': 'first-name-field' }} />);
       expect(input.props.id).to.equal('firstName');
       expect(input.props['data-automation']).to.equal('first-name-field');
     });
@@ -135,7 +142,7 @@ describe('Dropdown', () => {
   describe('valid', () => {
     describe('set to false', () => {
       it('Dropdown should have the invalid className', () => {
-        render(<Dropdown id="testDropdown" inputProps={{ value: '' }} valid={false} />);
+        render(<Dropdown inputProps={{ value: '' }} valid={false} />);
         expect(dropdown.props.className).to.contain('invalid');
       });
     });

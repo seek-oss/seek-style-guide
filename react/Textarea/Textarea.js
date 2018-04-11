@@ -21,7 +21,15 @@ export default class Textarea extends Component {
   static displayName = 'Textarea';
 
   static propTypes = {
-    id: PropTypes.string.isRequired,
+    /* eslint-disable consistent-return */
+    id: (props, propName, componentName) => {
+      const { id } = props;
+
+      if (typeof id !== 'string') {
+        return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
+      }
+    },
+    /* eslint-enable consistent-return */
     className: PropTypes.string,
     valid: PropTypes.bool,
     description: PropTypes.string,
@@ -55,6 +63,7 @@ export default class Textarea extends Component {
   };
 
   static defaultProps = {
+    id: '',
     className: '',
     description: ''
   };
@@ -95,10 +104,10 @@ export default class Textarea extends Component {
   /* eslint-enable consistent-return */
 
   renderInput() {
-    const { id, inputProps } = this.props;
+    const { inputProps, id } = this.props;
     const allInputProps = {
-      id,
-      ...combineClassNames(inputProps, styles.textarea)
+      ...combineClassNames(inputProps, styles.textarea),
+      ...(id ? { id } : {})
     };
 
     return (
@@ -107,7 +116,7 @@ export default class Textarea extends Component {
   }
 
   render() {
-    const { id, className, valid } = this.props;
+    const { className, valid } = this.props;
     const classNames = classnames({
       [styles.root]: true,
       [styles.invalid]: valid === false,
@@ -115,7 +124,7 @@ export default class Textarea extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { label, labelProps, invalid, help, helpProps, message, messageProps, secondaryLabel, tertiaryLabel, description } = this.props;
+    const { id, label, labelProps, invalid, help, helpProps, message, messageProps, secondaryLabel, tertiaryLabel, description } = this.props;
     const hasDescription = description.length > 0;
 
     return (
