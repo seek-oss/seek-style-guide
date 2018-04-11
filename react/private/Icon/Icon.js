@@ -17,8 +17,8 @@ function Icon({
   const svgClassNames = classnames(
     styles.svg,
     svgClassName,
-    {[styles[`${size}Svg`]]: customStyle ? false : size},
-    {[styles[`${size}Svg${customStyle}`]]: customStyle}
+    { [styles[`${size}Svg`]]: customStyle ? false : size },
+    { [styles[`${size}Svg${customStyle}`]]: customStyle }
   );
 
   const svgWithClasses = markup
@@ -29,7 +29,7 @@ function Icon({
   };
 
   return (
-    <span dangerouslySetInnerHTML={{__html: svgWithClasses}} {...combinedProps} /> // eslint-disable-line react/no-danger
+    <span dangerouslySetInnerHTML={{ __html: svgWithClasses }} {...combinedProps} /> // eslint-disable-line react/no-danger
   );
 }
 
