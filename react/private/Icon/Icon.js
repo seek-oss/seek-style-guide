@@ -8,17 +8,17 @@ import classnames from 'classnames';
 import withTextProps, { SizePropTypes } from '../withTextProps';
 
 function Icon({
-                markup,
-                className,
-                svgClassName,
-                size,
-                customStyle,
-                ...restProps }) {
+  markup,
+  className,
+  svgClassName,
+  size,
+  customStyle,
+  ...restProps }) {
   const svgClassNames = classnames(
     styles.svg,
     svgClassName,
-    { [styles[`${size}Svg`]]: customStyle ? false : size },
-    { [styles[`${size}Svg${customStyle}`]]: customStyle }
+    {[styles[`${size}Svg`]]: customStyle ? false : size},
+    {[styles[`${size}Svg${customStyle}`]]: customStyle}
   );
 
   const svgWithClasses = markup
@@ -29,7 +29,7 @@ function Icon({
   };
 
   return (
-    <span dangerouslySetInnerHTML={{ __html: svgWithClasses }} {...combinedProps} /> // eslint-disable-line react/no-danger
+    <span dangerouslySetInnerHTML={{__html: svgWithClasses}} {...combinedProps} /> // eslint-disable-line react/no-danger
   );
 }
 
