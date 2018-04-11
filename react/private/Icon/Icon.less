@@ -1,5 +1,5 @@
 @import (reference) "~seek-style-guide/theme";
-@star-scale: 0.75;
+@star-scale: 1.0;
 
 .root {
   display: inline-block;
@@ -11,7 +11,7 @@
   height: 16px;
 }
 
-.heroSvg(@icon-scale) {
+.heroSvg( @icon-scale ) {
   .iconSize( @typography-scale: @hero-type-scale, @typography-scale-mobile: @hero-type-scale-mobile, @icon-scale);
 }
 
@@ -19,44 +19,44 @@
   .heroSvg(@icon-scale: @star-scale);
 }
 
-.headlineSvg {
-  .iconSize( @typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile);
+.headlineSvg( @icon-scale ) {
+  .iconSize( @typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile, @icon-scale);
 }
 
 .headlineSvgStar {
-  .iconSize( @typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile, @icon-scale: @star-scale);
+  .headlineSvg( @icon-scale: @star-scale);
 }
 
-.subheadingSvg {
-  .iconSize( @typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile);
+.subheadingSvg ( @icon-scale ) {
+  .iconSize( @typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile, @icon-scale);
 }
 
 .subheadingSvgStar {
-  .iconSize( @typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile, @icon-scale: @star-scale);
+  .subheadingSvg( @icon-scale: @star-scale );
 }
 
-.headingSvg {
-  .iconSize( @typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile);
+.headingSvg ( @icon-scale ) {
+  .iconSize( @typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile, @icon-scale);
 }
 
 .headingSvgStar {
-  .iconSize( @typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile, @icon-scale: @star-scale);
+  .headingSvg( @icon-scale: @star-scale );
 }
 
-.standardSvg {
-  .iconSize( @typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile);
+.standardSvg ( @icon-scale ) {
+  .iconSize( @typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile, @icon-scale);
 }
 
 .standardSvgStar {
-  .iconSize( @typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile, @icon-scale: @star-scale);
+  .standardSvg( @icon-scale: @star-scale );
 }
 
-.smallSvg {
-  .iconSize(@small-type-scale);
+.smallSvg ( @icon-scale ) {
+  .iconSize(@small-type-scale, @icon-scale);
 }
 
 .smallSvgStar {
-  .iconSize(@small-type-scale, @icon-scale: @star-scale);
+  .smallSvg( @icon-scale: @star-scale);
 }
 
 .interactionSvg {

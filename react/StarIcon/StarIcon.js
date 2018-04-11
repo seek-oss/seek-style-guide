@@ -33,6 +33,5 @@ StarIcon.propTypes = {
 
 StarIcon.defaultProps = {
   filled: false,
-  className: '',
-  customStyle: 'Star'
+  className: ''
 };
