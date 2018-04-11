@@ -8,15 +8,17 @@ import classnames from 'classnames';
 import withTextProps, { SizePropTypes } from '../withTextProps';
 
 function Icon({
-  markup,
-  className,
-  svgClassName,
-  size,
-  ...restProps }) {
+                markup,
+                className,
+                svgClassName,
+                size,
+                customStyle,
+                ...restProps }) {
   const svgClassNames = classnames(
     styles.svg,
     svgClassName,
-    { [styles[`${size}Svg`]]: size }
+    { [styles[`${size}Svg`]]: customStyle ? false : size },
+    { [styles[`${size}Svg${customStyle}`]]: customStyle }
   );
 
   const svgWithClasses = markup
@@ -35,6 +37,7 @@ Icon.propTypes = {
   markup: PropTypes.string.isRequired,
   svgClassName: PropTypes.string,
   className: PropTypes.string,
+  customStyle: PropTypes.string,
   ...SizePropTypes
 };
 
@@ -44,4 +47,3 @@ Icon.defaultProps = {
 };
 
 export default withTextProps(Icon);
-

@@ -1,4 +1,5 @@
 @import (reference) "~seek-style-guide/theme";
+@star-scale: 0.75;
 
 .root {
   display: inline-block;
@@ -10,43 +11,52 @@
   height: 16px;
 }
 
-.heroSvg {
-  .iconSize(
-    @typography-scale: @hero-type-scale,
-    @typography-scale-mobile: @hero-type-scale-mobile
-  );
+.heroSvg(@icon-scale) {
+  .iconSize( @typography-scale: @hero-type-scale, @typography-scale-mobile: @hero-type-scale-mobile, @icon-scale);
+}
+
+.heroSvgStar {
+  .heroSvg(@icon-scale: @star-scale);
 }
 
 .headlineSvg {
-  .iconSize(
-    @typography-scale: @headline-type-scale,
-    @typography-scale-mobile: @headline-type-scale-mobile
-  );
+  .iconSize( @typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile);
+}
+
+.headlineSvgStar {
+  .iconSize( @typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile, @icon-scale: @star-scale);
 }
 
 .subheadingSvg {
-  .iconSize(
-    @typography-scale: @subheading-type-scale,
-    @typography-scale-mobile: @subheading-type-scale-mobile
-  );
+  .iconSize( @typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile);
+}
+
+.subheadingSvgStar {
+  .iconSize( @typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile, @icon-scale: @star-scale);
 }
 
 .headingSvg {
-  .iconSize(
-    @typography-scale: @heading-type-scale,
-    @typography-scale-mobile: @heading-type-scale-mobile
-  );
+  .iconSize( @typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile);
+}
+
+.headingSvgStar {
+  .iconSize( @typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile, @icon-scale: @star-scale);
 }
 
 .standardSvg {
-  .iconSize(
-    @typography-scale: @standard-type-scale,
-    @typography-scale-mobile: @standard-type-scale-mobile
-  );
+  .iconSize( @typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile);
+}
+
+.standardSvgStar {
+  .iconSize( @typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile, @icon-scale: @star-scale);
 }
 
 .smallSvg {
   .iconSize(@small-type-scale);
+}
+
+.smallSvgStar {
+  .iconSize(@small-type-scale, @icon-scale: @star-scale);
 }
 
 .interactionSvg {
