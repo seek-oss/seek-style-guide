@@ -2,7 +2,7 @@ import React from 'react';
 import { BulletList, Bullet } from 'seek-style-guide/react';
 
 export default {
-  route: 'bullet-list',
+  route: '/bullet-list',
   title: 'Bullet List',
   category: 'Typography',
   component: 'div',

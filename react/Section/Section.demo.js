@@ -21,7 +21,7 @@ SectionContainer.propTypes = {
 };
 
 export default {
-  route: 'section',
+  route: '/section',
   title: 'Section',
   category: 'Layout',
   component: Section,

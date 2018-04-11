@@ -3,7 +3,7 @@ import ScreenReaderOnly from './ScreenReaderOnly';
 import Text from '../Text/Text';
 
 export default {
-  route: 'screen-reader-only',
+  route: '/screen-reader-only',
   title: 'Screen Reader Only',
   category: 'Layout',
   component: Text,

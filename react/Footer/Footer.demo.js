@@ -5,7 +5,7 @@ import { makeDummyLinkRendererForPath } from '../Header/Header.demo';
 const ROUTE = '/footer';
 
 export default {
-  route: 'footer',
+  route: '/footer',
   title: 'Footer',
   category: 'Layout',
   component: Footer,

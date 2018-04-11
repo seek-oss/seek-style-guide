@@ -18,7 +18,7 @@ Container.propTypes = {
 };
 
 export default {
-  route: 'alert',
+  route: '/alert',
   title: 'Alert',
   category: 'Form',
   component: Alert,

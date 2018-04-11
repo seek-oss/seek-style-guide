@@ -1,7 +1,7 @@
 import Rating from './Rating';
 
 export default {
-  route: 'rating',
+  route: '/rating',
   title: 'Rating',
   category: 'Typography',
   component: Rating,

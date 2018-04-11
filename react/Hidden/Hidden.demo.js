@@ -3,7 +3,7 @@ import Hidden from './Hidden';
 import Text from '../Text/Text';
 
 export default {
-  route: 'hidden',
+  route: '/hidden',
   title: 'Hidden',
   category: 'Layout',
   component: Hidden,

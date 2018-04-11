@@ -5,7 +5,7 @@ import styles from './Button.less';
 import classnames from 'classnames';
 
 export default {
-  route: 'button',
+  route: '/button',
   title: 'Button',
   category: 'Form',
   component: Button,
