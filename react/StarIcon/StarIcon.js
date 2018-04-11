@@ -27,7 +27,8 @@ StarIcon.displayName = 'StarIcon';
 
 StarIcon.propTypes = {
   filled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
+  customStyle: PropTypes.string
 };
 
 StarIcon.defaultProps = {
