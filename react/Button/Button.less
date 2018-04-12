@@ -44,11 +44,7 @@
 
   .hoverState({
     .buttonColor(@background-color, fade(@background-color, 10%));
-    border: 0px;
-    line-height: @touchableTextHeight;
-    &.compact {
-      line-height: @compactTouchableTextHeight;
-    }
+    border: 1px solid transparent;
   });
 
   .activeState({
