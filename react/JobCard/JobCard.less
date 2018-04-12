@@ -15,6 +15,9 @@
   @media @desktop {
     padding: 0 @grid-base * 2;
   }
+  &:hover {
+    background-color: lighten(@actionPastelBlue, 3%);
+  }
 }
 
 .headerSection {
@@ -60,6 +63,7 @@
   padding-bottom: @job-card-text-space;
   display: inline;
   word-wrap: break-word;
+  text-decoration: none;
 }
 
 .titleKeyword {
@@ -206,4 +210,8 @@
 
 .companyName {
   font-weight: @sa-semi-bold;
+}
+
+.root:hover .positionTitle {
+  color: darken(@actionBlue, 15%);
 }
