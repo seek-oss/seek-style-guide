@@ -38,8 +38,8 @@ function StarIcon({ filled, half, className, size, ...props }) {
         [styles[`${size}Svg`]]: size
       })}
     />
-  )
-};
+  );
+}
 
 StarIcon.displayName = 'StarIcon';
 
