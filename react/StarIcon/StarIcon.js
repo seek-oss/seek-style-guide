@@ -9,7 +9,9 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../private/Icon/Icon';
 
-export default function StarIcon({ filled, className, ...props }) {
+import withTextProps, { SizePropTypes } from '../private/withTextProps';
+
+function StarIcon({ filled, className, size, ...props }) {
   const markup = filled ? svgMarkupFilled : svgMarkup;
 
   const combinedProps = {
@@ -17,6 +19,9 @@ export default function StarIcon({ filled, className, ...props }) {
     className: classnames({
       [styles.filled]: filled,
       [className]: className
+    }),
+    svgClassName: classnames({
+      [styles[`${size}Svg`]]: size
     })
   };
 
@@ -28,10 +33,12 @@ StarIcon.displayName = 'StarIcon';
 StarIcon.propTypes = {
   filled: PropTypes.bool,
   className: PropTypes.string,
-  customStyle: PropTypes.string
+  ...SizePropTypes
 };
 
 StarIcon.defaultProps = {
   filled: false,
   className: ''
 };
+
+export default withTextProps(StarIcon);

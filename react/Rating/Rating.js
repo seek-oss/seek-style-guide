@@ -19,13 +19,11 @@ const getStar = (
   percent,
   key,
   starClassName,
-  size,
-  customStyle
+  size
 ) => {
   const props = {
     key,
     size,
-    customStyle,
     className: styles.star,
     svgClassName: starClassName
   };
@@ -46,7 +44,6 @@ const Rating = ({
   starClassName,
   showTextRating,
   size,
-  customStyle,
   ...restProps
 }) => {
   const extendedStarClassName = classnames({ [starClassName]: starClassName });
@@ -67,8 +64,7 @@ const Rating = ({
             percent,
             position,
             extendedStarClassName,
-            size,
-            customStyle
+            size
           );
         })}
         {showTextRating &&
@@ -91,8 +87,7 @@ Rating.propTypes = {
 
 Rating.defaultProps = {
   showTextRating: false,
-  size: 'standard',
-  customStyle: 'Star'
+  size: 'standard'
 };
 
 export default withTextProps(Rating);

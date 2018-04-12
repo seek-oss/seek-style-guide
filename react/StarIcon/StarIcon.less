@@ -1,3 +1,6 @@
+@import (reference) "~seek-style-guide/theme";
+@icon-scale: 1;
+
 .filled {
   animation-duration: 0.3s;
   animation-name: spring;
@@ -8,4 +11,32 @@
   0% { transform: scale(0.6); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+.heroSvg {
+  .iconSize( @typography-scale: @hero-type-scale, @typography-scale-mobile: @hero-type-scale-mobile, @icon-scale: @icon-scale);
+}
+
+.headlineSvg {
+  .iconSize( @typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile,@icon-scale: @icon-scale);
+}
+
+.subheadingSvg {
+  .iconSize( @typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile,@icon-scale: @icon-scale);
+}
+
+.headingSvg {
+  .iconSize( @typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile,@icon-scale: @icon-scale);
+}
+
+.standardSvg {
+  .iconSize( @typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile,@icon-scale: @icon-scale);
+}
+
+.smallSvg {
+  .iconSize(@small-type-scale,@icon-scale: @icon-scale);
+}
+
+.interactionSvg {
+  .iconSize(@interaction-type-scale);
 }

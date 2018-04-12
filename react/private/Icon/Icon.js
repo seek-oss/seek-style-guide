@@ -12,13 +12,11 @@ function Icon({
   className,
   svgClassName,
   size,
-  customStyle,
   ...restProps }) {
   const svgClassNames = classnames(
     styles.svg,
     svgClassName,
-    { [styles[`${size}Svg`]]: customStyle || size },
-    { [styles[`${size}Svg${customStyle}`]]: customStyle }
+    { [styles[`${size}Svg`]]: size }
   );
 
   const svgWithClasses = markup
@@ -37,7 +35,6 @@ Icon.propTypes = {
   markup: PropTypes.string.isRequired,
   svgClassName: PropTypes.string,
   className: PropTypes.string,
-  customStyle: PropTypes.string,
   ...SizePropTypes
 };
 
