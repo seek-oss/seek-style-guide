@@ -20,7 +20,10 @@ export default {
   title: 'Pill',
   category: 'Form',
   component: props => (
-    <div><Pill {...props} /><Pill {...props} /></div>
+    <div>
+      <Pill {...props} />
+      <Pill {...props} />
+    </div>
   ),
   container: Container,
   // sketch,
