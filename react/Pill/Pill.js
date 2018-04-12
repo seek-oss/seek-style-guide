@@ -10,7 +10,8 @@ import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 type Props = {
   text: string,
-  onClose?: Function
+  onClose?: Function,
+  className?: string
 };
 
 export default class Pill extends Component<Props> {
@@ -18,10 +19,15 @@ export default class Pill extends Component<Props> {
 
   props: Props
 
-  handleClose = event => this.props.onClose(event);
+  handleClose = (event: Object) => {
+    const { onClose } = this.props;
+    if (onClose) {
+      onClose(event);
+    }
+  }
 
-  renderStaticPill(className) {
-    const { text, ...restProps } = this.props;
+  renderStaticPill() {
+    const { text, className, ...restProps } = this.props;
     return (
       <span className={classnames(className, styles.staticPill)} {...restProps}>
         <Text baseline={false} raw>{text}</Text>
@@ -29,8 +35,8 @@ export default class Pill extends Component<Props> {
     );
   }
 
-  renderInteractivePill(className) {
-    const { text, onClose, ...restProps } = this.props;
+  renderInteractivePill() {
+    const { text, onClose, className, ...restProps } = this.props;
     return (
       <span
         className={classnames(className, styles.interactivePill)}
@@ -50,10 +56,9 @@ export default class Pill extends Component<Props> {
   }
 
   render() {
-    const { text, onClose, ...restProps } = this.props;
-    const className = restProps.className || '';
+    const { onClose } = this.props;
     return onClose ?
-      this.renderInteractivePill(className) :
-      this.renderStaticPill(className);
+      this.renderInteractivePill() :
+      this.renderStaticPill();
   }
 }

@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pill: should pass through additional props 1`] = `
+<span
+  className="staticPill"
+  custom-prop={true}
+>
+  <Text
+    baseline={false}
+    raw={true}
+  >
+    I am a pill
+  </Text>
+</span>
+`;
+
+exports[`Pill: should render a static pill 1`] = `
+<span
+  className="staticPill"
+>
+  <Text
+    baseline={false}
+    raw={true}
+  >
+    I am a pill
+  </Text>
+</span>
+`;
+
+exports[`Pill: should render an additional class for the static pill 1`] = `
+<span
+  className="test-class staticPill"
+>
+  <Text
+    baseline={false}
+    raw={true}
+  >
+    I am a pill
+  </Text>
+</span>
+`;
+
+exports[`Pill: should render an additional class for the static pill 2`] = `
+<span
+  className="test-class interactivePill"
+>
+  <Text
+    baseline={false}
+    raw={true}
+  >
+    I am a pill
+  </Text>
+  <button
+    className="removeButton"
+    onClick={[Function]}
+  >
+    <ScreenReaderOnly
+      component="span"
+    >
+      Remove item 
+      I am a pill
+    </ScreenReaderOnly>
+    <CrossIcon
+      className="removeIcon"
+      svgClassName="removeSvg"
+    />
+  </button>
+</span>
+`;
+
+exports[`Pill: should render an interactive pill 1`] = `
+<span
+  className="interactivePill"
+>
+  <Text
+    baseline={false}
+    raw={true}
+  >
+    I am a pill
+  </Text>
+  <button
+    className="removeButton"
+    onClick={[Function]}
+  >
+    <ScreenReaderOnly
+      component="span"
+    >
+      Remove item 
+      I am a pill
+    </ScreenReaderOnly>
+    <CrossIcon
+      className="removeIcon"
+      svgClassName="removeSvg"
+    />
+  </button>
+</span>
+`;
