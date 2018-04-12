@@ -5,8 +5,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import StarIcon from '../StarIcon/StarIcon';
-import HalfStarIcon from './HalfStarIcon.svg';
-import Icon from '../private/Icon/Icon';
 
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import Text from '../Text/Text';
@@ -29,11 +27,11 @@ const getStar = (
   };
 
   if (percent >= 75) {
-    return <StarIcon filled={true} {...props} />;
+    return <StarIcon filled {...props} />;
   }
 
   if (percent >= 25) {
-    return <Icon markup={HalfStarIcon} {...props} />;
+    return <StarIcon half {...props} />;
   }
 
   return <StarIcon {...props} />;
