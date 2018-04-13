@@ -9,7 +9,6 @@
   "scripts": {
     "start": "BASE_HREF=/ node docs/server",
     "start-in-window": "node docs/server",
-    "start-header-footer": "webpack-dev-server --config standalone/header-footer/webpack.config.js --content-base dist",
     "test": "npm run test-unit && npm run lint && npm run build && npm run html-sketchapp",
     "test-unit": "BABEL_ENV=test jest --config ./jest.config.json",
     "test-in-window": "npm run test-unit-in-window && npm run lint && npm run build",
@@ -22,7 +21,7 @@
     "compile": "npm run compile-render && npm run compile-client",
     "compile-render": "NODE_ENV=production BASE_HREF=${BASE_HREF:-/} webpack --config docs/webpack.static.render.config.js && rm docs/dist/render.js",
     "compile-client": "NODE_ENV=production BASE_HREF=${BASE_HREF:-/} webpack --config docs/webpack.static.client.config.js",
-    "compile-header-footer": "NODE_ENV=production webpack --config standalone/header-footer/webpack.config.js && rm dist/header-footer/render.js",
+    "compile-header-footer": "NODE_ENV=production APP_TENANT=jobsDB webpack --config standalone/header-footer/webpack.config.js && rm dist/header-footer/render.js",
     "html-sketchapp": "html-sketchapp --config docs/html-sketchapp.config.js",
     "build": "npm run clean && npm run compile",
     "build-gh-pages": "BASE_HREF=/seek-asia-style-guide/ npm run build",
