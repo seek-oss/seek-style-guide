@@ -15,8 +15,8 @@
   @media @desktop {
     padding: 0 @grid-base * 2;
   }
-  &:hover {
-    background-color: lighten(@actionPastelBlue, 3%);
+  &:active {
+    background-color: desaturate(@actionPastelBlue, 30%);
   }
 }
 
@@ -63,11 +63,10 @@
   padding-bottom: @job-card-text-space;
   display: inline;
   word-wrap: break-word;
-  text-decoration: none;
 }
 
 .titleKeyword {
-  color: darken(@actionBlue, 15%);
+  color: darken(@actionBlue, 10%);
 }
 
 .sellingPointsList {
@@ -212,6 +211,14 @@
   font-weight: @sa-semi-bold;
 }
 
-.root:hover .positionTitle {
-  color: darken(@actionBlue, 15%);
+.root:active .positionTitle {
+  color: darken(@actionBlue, 10%);
+}
+
+.positionLink {
+  text-decoration: none;
+}
+
+.positionLink:visited .positionTitle {
+  color: @saVisitedLink;
 }
