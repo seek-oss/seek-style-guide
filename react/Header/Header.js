@@ -4,22 +4,9 @@ import classnames from 'classnames';
 import { Text, Button, ButtonGroup } from 'seek-asia-style-guide/react';
 import Menu from './components/Menu/Menu';
 import ActionTray from './components/ActionTray/ActionTray';
+import DropdownLink from './components/DropdownLink/DropdownLink'
 import { sortCurrentLocaleToTop } from './localeUtils';
 import styles from './Header.less';
-
-const currentLocale = ({ title, ItemIcon }) => {
-  return (
-    <span className={styles.currentLocale}>
-      <ItemIcon className={styles.localeIcon} />
-      <Text whispering>{title}</Text>
-    </span>
-  );
-};
-
-currentLocale.propTypes = {
-  title: PropTypes.string,
-  ItemIcon: PropTypes.func
-};
 
 const renderSecondaryNavBtns = ({ btns }) => {
   if (btns && btns.map) {
@@ -96,9 +83,7 @@ export default class Header extends Component {
     return (
       <header className={styles.root}>
         <div className={styles.externalNav}>
-          <div className={styles.locale}>
-            {currentLocale(localeList[0])}
-          </div>
+          <DropdownLink localeList={localeList} />
         {
           employerSite &&
           (<div>

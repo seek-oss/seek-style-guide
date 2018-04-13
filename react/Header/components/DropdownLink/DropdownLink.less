@@ -1,0 +1,67 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+.root {
+  margin: @grid-base 0 0 0;
+}
+
+.root[show="true"] {
+  .dropdown {
+    display: block;
+  }
+}
+
+.currentLocale {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  margin: @grid-base @grid-base 0 0;
+}
+
+.checkMark {
+  margin-left: auto;
+  color: @hyperlink;
+}
+
+.chevron {
+  overflow: hidden;
+  border: 0;
+  padding: 0 0 0 @field-gutter-width;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: @sk-black;
+}
+
+.chevronSvg {
+  height: 10px;
+  width: 10px;
+}
+
+.dropdown {
+  margin: 0;
+  z-index: 10;
+  position: absolute;
+  overflow: auto;
+  right: 0;
+  width: 300px; /* To be updated */
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+  display: none;
+
+  // .currentLocale[show="true"] ~ & {
+  //   display: block;
+  // }
+}
+
+.dropdown .node {
+  display: flex;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.dropdown .placeholder {
+  cursor: inherit;
+}
