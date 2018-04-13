@@ -137,7 +137,7 @@ export default class Dropdown extends Component {
         <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage {...{ id: `${id}-message` , invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }

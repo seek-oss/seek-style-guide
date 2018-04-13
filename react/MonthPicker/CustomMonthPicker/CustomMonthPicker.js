@@ -38,7 +38,8 @@ export default class CustomMonthPicker extends Component {
     valid: PropTypes.bool,
     minYear: PropTypes.number.isRequired,
     maxYear: PropTypes.number.isRequired,
-    ascendingYears: PropTypes.bool.isRequired
+    ascendingYears: PropTypes.bool.isRequired,
+    fieldMessageId: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -131,7 +132,7 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { id, value, valid } = this.props;
+    const { id, value, valid, fieldMessageId } = this.props;
     // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
@@ -171,7 +172,7 @@ export default class CustomMonthPicker extends Component {
               onChange: this.handleMonthChange,
               value: monthValue,
               ref: this.storeMonthReference,
-              'aria-describedby': `${id}-message` // Is is important as these fields are using a shared FieldMessage
+              'aria-describedby': fieldMessageId // Is is important as these fields are using a shared FieldMessage
             }}
           />
 
@@ -187,7 +188,7 @@ export default class CustomMonthPicker extends Component {
               onChange: this.handleYearChange,
               value: yearValue,
               ref: this.storeYearReference,
-              'aria-describedby': `${id}-message` // Is is important as these fields are using a shared FieldMessage
+              'aria-describedby': fieldMessageId // Is is important as these fields are using a shared FieldMessage
             }}
           />
         </div>

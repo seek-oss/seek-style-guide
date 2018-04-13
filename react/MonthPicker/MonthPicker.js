@@ -72,7 +72,8 @@ export default class MonthPicker extends Component {
       label,
       labelProps,
       secondaryLabel,
-      tertiaryLabel
+      tertiaryLabel,
+      fieldMessageId: `${id}-message`
     };
 
     return native ? (
