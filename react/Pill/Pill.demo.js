@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Pill, Card, Section } from 'seek-style-guide/react';
+import * as sketch from './Pill.sketch';
 
-const Container = ({ component: demoComponent, componentProps }) => (
+const Container = ({ component: DemoComponent, componentProps }) => (
   <Card style={{ width: '500px' }}>
     <Section>
-      {demoComponent({ ...componentProps })}
+      <DemoComponent {...componentProps} />
+      <DemoComponent {...componentProps} />
+      <DemoComponent {...componentProps} />
+      <DemoComponent {...componentProps} />
+      <DemoComponent {...componentProps} />
+      <DemoComponent {...componentProps} />
     </Section>
   </Card>
 );
@@ -19,14 +25,9 @@ export default {
   route: 'pill',
   title: 'Pill',
   category: 'Form',
-  component: props => (
-    <div>
-      <Pill {...props} />
-      <Pill {...props} />
-    </div>
-  ),
+  component: Pill,
   container: Container,
-  // sketch,
+  sketch,
   initialProps: {
     text: 'I\'m a pill',
     onClose: null

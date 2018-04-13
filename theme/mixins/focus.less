@@ -1,7 +1,7 @@
-.focus() {
+.focus(@focus-color: @sk-focus) {
   outline: none;
   z-index: 1;
-  box-shadow: 0 0 0 @field-border-width @sk-focus;
+  box-shadow: 0 0 0 @field-border-width @focus-color;
   border-radius: @field-border-radius;
 
   &::-moz-focus-inner {

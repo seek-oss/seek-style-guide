@@ -1,5 +1,5 @@
 import React from 'react';
-import Pill from './Alert';
+import Pill from './Pill';
 import SketchFieldContainer from '../private/SketchFieldContainer/SketchFieldContainer';
 
 const noop = () => {};
