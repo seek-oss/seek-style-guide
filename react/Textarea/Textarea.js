@@ -127,7 +127,7 @@ export default class Textarea extends Component {
         }
         {this.renderInput()}
         <div className={styles.footer}>
-          <FieldMessage {...{ id, invalid, help, helpProps, valid, message, messageProps }} />
+          <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
           {this.renderCharacterCount()}
         </div>
       </div>

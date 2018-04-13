@@ -104,7 +104,7 @@ export default class MonthPicker extends Component {
       <div className={classNames}>
         {this.renderInput()}
         <FieldMessage
-          {...{ id, invalid, help, helpProps, valid, message, messageProps }}
+          {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }}
         />
       </div>
     );
