@@ -27,20 +27,7 @@ exports[`Pill: should render a static pill 1`] = `
 </span>
 `;
 
-exports[`Pill: should render an additional class for the static pill 1`] = `
-<span
-  className="test-class staticPill"
->
-  <Text
-    baseline={false}
-    raw={true}
-  >
-    I am a pill
-  </Text>
-</span>
-`;
-
-exports[`Pill: should render an additional class for the static pill 2`] = `
+exports[`Pill: should render an additional class for the interactive pill 1`] = `
 <span
   className="test-class interactivePill"
 >
@@ -65,6 +52,19 @@ exports[`Pill: should render an additional class for the static pill 2`] = `
       svgClassName="removeSvg"
     />
   </button>
+</span>
+`;
+
+exports[`Pill: should render an additional class for the static pill 1`] = `
+<span
+  className="test-class staticPill"
+>
+  <Text
+    baseline={false}
+    raw={true}
+  >
+    I am a pill
+  </Text>
 </span>
 `;
 
