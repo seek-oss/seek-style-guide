@@ -5,7 +5,7 @@ import SlideToggle from './SlideToggle';
 
 const renderSlideToggle = (props, children) => shallow(
   <SlideToggle
-    id="testToggle"
+    id="testSlideToggle"
     label="Test toggle"
     {...props}>
     {children}
