@@ -1,6 +1,13 @@
 @import (reference) "~seek-style-guide/theme";
 @icon-scale: 1;
 
+.iconHeight(@row-span, @row-span-mobile) {
+  height: (@row-height * @row-span);
+  @media @mobile {
+    height: (@row-height * @row-span-mobile);
+  }
+}
+
 .filled {
   animation-duration: 0.3s;
   animation-name: spring;
@@ -19,30 +26,51 @@
     top: 0.05em;
   }
 
+  &.hero {
+    .iconHeight(@hero-type-row-span, @hero-type-row-span-mobile);
+  }
   .heroSvg {
     .iconSize(@typography-scale: @hero-type-scale, @typography-scale-mobile: @hero-type-scale-mobile, @icon-scale: @icon-scale);
   }
 
+  &.headline {
+    .iconHeight(@headline-type-row-span, @headline-type-row-span-mobile);
+  }
   .headlineSvg {
     .iconSize(@typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile,@icon-scale: @icon-scale);
   }
 
+  &.subheading {
+    .iconHeight(@subheading-type-row-span, @subheading-type-row-span-mobile);
+  }
   .subheadingSvg {
     .iconSize(@typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile,@icon-scale: @icon-scale);
   }
 
+  &.heading {
+    .iconHeight(@heading-type-row-span, @heading-type-row-span-mobile);
+  }
   .headingSvg {
     .iconSize(@typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile,@icon-scale: @icon-scale);
   }
 
+  &.standard {
+    .iconHeight(@standard-type-row-span, @standard-type-row-span-mobile);
+  }
   .standardSvg {
     .iconSize(@typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile,@icon-scale: @icon-scale);
   }
 
+  &.small {
+    .iconHeight(@small-type-row-span, @small-type-row-span-mobile);
+  }
   .smallSvg {
     .iconSize(@small-type-scale,@icon-scale: @icon-scale);
   }
 
+  &.interaction {
+    .iconHeight(@interaction-type-row-span, @interaction-type-row-span);
+  }
   .interactionSvg {
     .iconSize(@interaction-type-scale);
   }

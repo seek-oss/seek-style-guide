@@ -33,6 +33,7 @@ function StarIcon({ filled, half, _large, className, svgClassName, size, ...prop
       className={classnames({
         [styles._large]: _large,
         [styles.filled]: filled,
+        [styles[size]]: size,
         [className]: className
       })}
       svgClassName={classnames({
