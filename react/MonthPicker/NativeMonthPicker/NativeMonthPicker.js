@@ -39,7 +39,8 @@ export default class NativeMonthPicker extends Component {
       month: PropTypes.number,
       year: PropTypes.number
     }),
-    valid: PropTypes.bool
+    valid: PropTypes.bool,
+    fieldMessageId: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -70,7 +71,7 @@ export default class NativeMonthPicker extends Component {
   }
 
   render() {
-    const { id, value, valid } = this.props;
+    const { id, value, valid, fieldMessageId } = this.props;
     // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
@@ -104,6 +105,7 @@ export default class NativeMonthPicker extends Component {
           value={inputValue}
           onChange={this.handleChange}
           onBlur={this.handleBlur}
+          aria-describedby={fieldMessageId}
         />
       </div>
     );

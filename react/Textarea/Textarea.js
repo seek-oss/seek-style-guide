@@ -98,7 +98,8 @@ export default class Textarea extends Component {
     const { id, inputProps } = this.props;
     const allInputProps = {
       id,
-      ...combineClassNames(inputProps, styles.textarea)
+      ...combineClassNames(inputProps, styles.textarea),
+      'aria-describedby': `${id}-message`
     };
 
     return (
@@ -126,7 +127,7 @@ export default class Textarea extends Component {
         }
         {this.renderInput()}
         <div className={styles.footer}>
-          <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
+          <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
           {this.renderCharacterCount()}
         </div>
       </div>
