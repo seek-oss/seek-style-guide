@@ -72,7 +72,8 @@ export default class MonthPicker extends Component {
       label,
       labelProps,
       secondaryLabel,
-      tertiaryLabel
+      tertiaryLabel,
+      fieldMessageId: `${id}-message`
     };
 
     return native ? (
@@ -83,7 +84,7 @@ export default class MonthPicker extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { id, className } = this.props;
     const classNames = classnames({
       [styles.root]: true,
       [className]: className
@@ -104,7 +105,7 @@ export default class MonthPicker extends Component {
       <div className={classNames}>
         {this.renderInput()}
         <FieldMessage
-          {...{ invalid, help, helpProps, valid, message, messageProps }}
+          {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }}
         />
       </div>
     );
