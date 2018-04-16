@@ -38,7 +38,8 @@ export default class CustomMonthPicker extends Component {
     valid: PropTypes.bool,
     minYear: PropTypes.number.isRequired,
     maxYear: PropTypes.number.isRequired,
-    ascendingYears: PropTypes.bool.isRequired
+    ascendingYears: PropTypes.bool.isRequired,
+    fieldMessageId: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -131,13 +132,18 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { id, value, valid } = this.props;
+    const { id, value, valid, fieldMessageId } = this.props;
     // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
     const { month, year } = value;
     const monthValue = String(month || '');
     const yearValue = String(year || '');
+
+    const sharedInputProps = {
+      onBlur: this.handleBlur,
+      'aria-describedby': fieldMessageId
+    };
 
     return (
       <div>
@@ -167,10 +173,10 @@ export default class CustomMonthPicker extends Component {
             message={false}
             placeholder="Month"
             inputProps={{
-              onBlur: this.handleBlur,
               onChange: this.handleMonthChange,
               value: monthValue,
-              ref: this.storeMonthReference
+              ref: this.storeMonthReference,
+              ...sharedInputProps
             }}
           />
 
@@ -182,10 +188,10 @@ export default class CustomMonthPicker extends Component {
             message={false}
             placeholder="Year"
             inputProps={{
-              onBlur: this.handleBlur,
               onChange: this.handleYearChange,
               value: yearValue,
-              ref: this.storeYearReference
+              ref: this.storeYearReference,
+              ...sharedInputProps
             }}
           />
         </div>

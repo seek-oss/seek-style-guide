@@ -3,7 +3,7 @@ import Strong from './Strong';
 import Text from '../Text/Text';
 
 export default {
-  route: 'strong',
+  route: '/strong',
   title: 'Strong',
   category: 'Typography',
   component: Text,

@@ -50,17 +50,17 @@ describe('CustomMonthPicker', () => {
   }
 
   it('should have a displayName', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" />);
+    render(<CustomMonthPicker id="testCustomMonthPicker" fieldMessageId="testCustomMonthPicker-message" />);
     expect(element.type.displayName).to.equal('CustomMonthPicker');
   });
 
   it('should render without exploding', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" />);
+    render(<CustomMonthPicker id="testCustomMonthPicker" fieldMessageId="testCustomMonthPicker-message" />);
     expect(errors.length).to.equal(0);
   });
 
   it('should send valid prop to false to both dropdowns when valid is false', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" valid={false} />);
+    render(<CustomMonthPicker id="testCustomMonthPicker" valid={false} fieldMessageId="testCustomMonthPicker-message" />);
     expect(monthDropdown.props.valid).to.equal(false);
     expect(yearDropdown.props.valid).to.equal(false);
   });
@@ -76,6 +76,7 @@ describe('CustomMonthPicker', () => {
         maxYear={2010}
         onChange={onChange}
         value={{ month: 6, year: 2010 }}
+        fieldMessageId="testCustomMonthPicker-message"
       />
     );
     monthDropdown.value = '11';
@@ -97,6 +98,7 @@ describe('CustomMonthPicker', () => {
         maxYear={2010}
         onChange={onChange}
         value={{ month: 6, year: 2010 }}
+        fieldMessageId="testCustomMonthPicker-message"
       />
     );
     yearDropdown.value = '1999';

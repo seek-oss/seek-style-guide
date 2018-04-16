@@ -3,7 +3,7 @@ import Regular from './Regular';
 import Text from '../Text/Text';
 
 export default {
-  route: 'regular',
+  route: '/regular',
   title: 'Regular',
   category: 'Typography',
   component: Text,
