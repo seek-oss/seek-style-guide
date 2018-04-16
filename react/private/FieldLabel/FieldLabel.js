@@ -21,15 +21,7 @@ export default class FieldLabel extends Component {
   static displayName = 'FieldLabel';
 
   static propTypes = {
-    /* eslint-disable consistent-return */
-    id: (props, propName, componentName) => {
-      const { id, label } = props;
-
-      if (label && !id) {
-        return new Error(`When ${componentName} has a \`label\`, it should also have an \`id\`.`);
-      }
-    },
-    /* eslint-enable consistent-return */
+    id: PropTypes.string.isRequired,
     label: PropTypes.node,
     /* eslint-disable consistent-return */
     labelProps: (props, propName, componentName) => {
@@ -102,10 +94,10 @@ export default class FieldLabel extends Component {
       return null;
     }
 
-    const { labelProps, id } = this.props;
+    const { id, labelProps } = this.props;
     const allLabelProps = {
-      ...combineClassNames(labelProps),
-      ...(id ? { htmlFor: id } : {})
+      htmlFor: id,
+      ...combineClassNames(labelProps)
     };
     return (
       <label {...allLabelProps}>

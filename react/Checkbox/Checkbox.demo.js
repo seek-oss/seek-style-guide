@@ -43,7 +43,7 @@ class CheckboxContainer extends Component {
 }
 
 export default {
-  route: '/checkbox',
+  route: 'checkbox',
   title: 'Checkbox',
   category: 'Form',
   component: Checkbox,

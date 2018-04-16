@@ -30,7 +30,7 @@ describe('MonthPicker', () => {
   }
 
   it('should have a displayName', () => {
-    render(<MonthPicker />);
+    render(<MonthPicker id="testMonthPicker" />);
     expect(element.type.displayName).to.equal('MonthPicker');
   });
 
@@ -43,12 +43,12 @@ describe('MonthPicker', () => {
 
   describe('input', () => {
     it('should render the `CustomMonthPicker` when native is not set', () => {
-      render(<MonthPicker />);
+      render(<MonthPicker id="testMonthPicker" />);
       expect(monthPicker.type.displayName).to.equal('CustomMonthPicker');
     });
 
     it('should render the `NativeMonthPicker` when native is true', () => {
-      render(<MonthPicker native={true} />);
+      render(<MonthPicker id="testMonthPicker" native={true} />);
       expect(monthPicker.type.displayName).to.equal('NativeMonthPicker');
     });
   });
@@ -56,7 +56,7 @@ describe('MonthPicker', () => {
   describe('onChange', () => {
     it('should pass onChange prop through to input', () => {
       const onChange = () => {};
-      render(<MonthPicker onChange={onChange} />);
+      render(<MonthPicker id="testMonthPicker" onChange={onChange} />);
       expect(monthPicker.props.onChange).to.equal(onChange);
     });
   });
@@ -64,7 +64,7 @@ describe('MonthPicker', () => {
   describe('onBlur', () => {
     it('should pass onBlur prop through to input', () => {
       const onBlur = () => {};
-      render(<MonthPicker onBlur={onBlur} />);
+      render(<MonthPicker id="testMonthPicker" onBlur={onBlur} />);
       expect(monthPicker.props.onBlur).to.equal(onBlur);
     });
   });
@@ -72,7 +72,7 @@ describe('MonthPicker', () => {
   describe('value', () => {
     it('should pass value prop through to input', () => {
       const value = { month: 1, year: 2000 };
-      render(<MonthPicker value={value} />);
+      render(<MonthPicker id="testMonthPicker" value={value} />);
       expect(monthPicker.props.value).to.equal(value);
     });
   });
