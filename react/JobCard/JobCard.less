@@ -15,6 +15,7 @@
   @media @desktop {
     padding: 0 @grid-base * 2;
   }
+  &:hover,
   &:active {
     background-color: desaturate(@actionPastelBlue, 30%);
   }
@@ -211,6 +212,7 @@
   font-weight: @sa-semi-bold;
 }
 
+.root:hover .positionTitle,
 .root:active .positionTitle {
   color: darken(@actionBlue, 10%);
 }
