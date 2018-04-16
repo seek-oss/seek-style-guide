@@ -13,7 +13,7 @@ AsidedLayoutContainer.propTypes = {
 };
 
 export default {
-  route: 'asided-layout',
+  route: '/asided-layout',
   title: 'Asided Layout',
   category: 'Layout',
   component: AsidedLayout,

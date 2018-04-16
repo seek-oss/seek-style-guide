@@ -45,7 +45,7 @@ class TextareaContainer extends Component {
 }
 
 export default {
-  route: 'textarea',
+  route: '/textarea',
   title: 'Textarea',
   category: 'Form',
   component: Textarea,

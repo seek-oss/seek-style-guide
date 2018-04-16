@@ -39,7 +39,7 @@ export default class Header extends Component {
         <PageBlock className={headerClasses}>
           <Section className={styles.headerSection}>
             <div className={styles.sectionContent}>
-              <Link className={styles.logoLink} to="" onClick={this.handleMenuClose}>
+              <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
                 <Logo svgClassName={styles.logo} />
                 <h1 className={styles.title}><ScreenReaderOnly>SEEK </ScreenReaderOnly>Style Guide</h1>
               </Link>
@@ -63,7 +63,7 @@ export default class Header extends Component {
                   <PageBlock>
                     <Section header>
                       <Card transparent>
-                        <Text headline regular><Link className={styles.link} to="">Home</Link></Text>
+                        <Text headline regular><Link className={styles.link} to="/">Home</Link></Text>
                       </Card>
 
                       <Card transparent>
@@ -72,8 +72,8 @@ export default class Header extends Component {
                         </h2>
                       </Card>
                       <Card transparent>
-                        <Text headline regular><Link className={styles.link} to="typography">Typography</Link></Text>
-                        <Text headline regular><Link className={styles.link} to="page-layout">Page Layout</Link></Text>
+                        <Text headline regular><Link className={styles.link} to="/typography">Typography</Link></Text>
+                        <Text headline regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
                       </Card>
 
                       <Card transparent>
