@@ -25,12 +25,11 @@ const getMarkup = ({ filled, half }) => {
 };
 
 function StarIcon({ filled, half, className, svgClassName, size, ...props }) {
-  console.log(size);
   return (
 
     <Icon
       {...props}
-      markup={getMarkup({ filled, half })}
+      markup={getMarkup({filled, half})}
       className={classnames({
         [styles.filled]: filled,
         [className]: className
