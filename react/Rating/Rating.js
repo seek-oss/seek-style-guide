@@ -25,7 +25,8 @@ const getStar = (
     className: styles.star,
     svgClassName: starClassName,
     filled: percent >= 75,
-    half: percent >= 25 && percent < 75
+    half: percent >= 25 && percent < 75,
+    _large: true
   };
 
   return <StarIcon {...props} />;

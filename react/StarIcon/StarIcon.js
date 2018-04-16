@@ -24,12 +24,14 @@ const getMarkup = ({ filled, half }) => {
   return svgMarkup;
 };
 
-function StarIcon({ filled, half, className, svgClassName, size, ...props }) {
+function StarIcon({ filled, half, _large, className, svgClassName, size, ...props }) {
   return (
     <Icon
       {...props}
+      size={size}
       markup={getMarkup({ filled, half })}
       className={classnames({
+        [styles._large]: _large,
         [styles.filled]: filled,
         [className]: className
       })}
@@ -47,6 +49,7 @@ StarIcon.displayName = 'StarIcon';
 StarIcon.propTypes = {
   filled: PropTypes.bool,
   half: PropTypes.bool,
+  _large: PropTypes.bool,
   className: PropTypes.string,
   ...SizePropTypes
 };
@@ -54,6 +57,7 @@ StarIcon.propTypes = {
 StarIcon.defaultProps = {
   filled: false,
   half: false,
+  _large: false,
   className: ''
 };
 
