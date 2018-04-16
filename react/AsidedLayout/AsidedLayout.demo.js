@@ -46,6 +46,33 @@ export default {
   },
   options: [
     {
+      label: 'Position',
+      type: 'radio',
+      states: [
+        {
+          label: 'Default',
+          transformProps: props => ({
+            ...props,
+            position: undefined
+          })
+        },
+        {
+          label: 'Left',
+          transformProps: props => ({
+            ...props,
+            position: 'left'
+          })
+        },
+        {
+          label: 'Right',
+          transformProps: props => ({
+            ...props,
+            position: 'right'
+          })
+        }
+      ]
+    },
+    {
       label: 'Order',
       type: 'checkbox',
       states: [

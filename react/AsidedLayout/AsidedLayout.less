@@ -20,8 +20,19 @@
 
 .aside {
   @media @desktop {
-    padding-left: @gutter-width;
     flex-grow: 0;
     flex-shrink: 0;
+  }
+}
+
+.leftAside {
+  @media @desktop {
+    padding-right: @gutter-width;
+  }
+}
+
+.rightAside {
+  @media @desktop {
+    padding-left: @gutter-width;
   }
 }
