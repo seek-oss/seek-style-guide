@@ -49,8 +49,7 @@ const renderHtml = (Component, initialProps, options = { preview: false }) => {
   return minify(html, { collapseWhitespace: true });
 };
 
-const renderFileForLocale = (Component, props) => {
-
+const renderFiles = (Component, props = {}) => {
   if (typeof Component.displayName !== 'string') {
     throw new Error('Component must have a display name');
   }
@@ -61,18 +60,12 @@ const renderFileForLocale = (Component, props) => {
   const renderProps = { ...props };
 
   return {
-    [`/${fileName}.html`]: renderHtml(Header, renderProps),
-    [`/${fileName}__preview.html`]: renderHtml(Header, renderProps, { preview: true })
-  };
-};
-
-const renderFiles = (Component, props = {}) => {
-  return {
-    ...renderFileForLocale(Component, props),
-    ...renderFileForLocale(Component, props)
+    [`/${fileName}.html`]: renderHtml(Component, renderProps),
+    [`/${fileName}__preview.html`]: renderHtml(Component, renderProps, { preview: true })
   };
 };
 
 export default () => ({
-  ...renderFiles(Header, { language: 'en', country: 'hk', loginAvailable: true, activeTab: ACTIVE_TAB_HOME })
+  ...renderFiles(Header, { language: 'en', country: 'hk', loginAvailable: true, activeTab: ACTIVE_TAB_HOME }),
+  ...renderFiles(Footer, { language: 'en', country: 'hk' })
 });
