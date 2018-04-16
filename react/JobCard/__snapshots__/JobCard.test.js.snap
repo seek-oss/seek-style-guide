@@ -10,14 +10,19 @@ exports[`JobCard should render company with bold keyword 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -113,48 +118,53 @@ exports[`JobCard should render job title with bold keyword 1`] = `
     pullout={false}
     slim={false}
   >
-    <div>
-      <Text
-        baseline={true}
-        className="positionTitle titleKeyword"
-        key="0"
-        semiStrong={false}
-        strong={true}
-        waving={true}
-      >
-        Senior
-      </Text>
-      <Text
-        baseline={true}
-        className="positionTitle"
-        key="1"
-        semiStrong={true}
-        strong={false}
-        waving={true}
-      >
-         Software 
-      </Text>
-      <Text
-        baseline={true}
-        className="positionTitle titleKeyword"
-        key="2"
-        semiStrong={false}
-        strong={true}
-        waving={true}
-      >
-        Engineer
-      </Text>
-      <Text
-        baseline={true}
-        className="positionTitle"
-        key="3"
-        semiStrong={true}
-        strong={false}
-        waving={true}
-      >
-         (6 months Contract)
-      </Text>
-    </div>
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+    >
+      <div>
+        <Text
+          baseline={true}
+          className="positionTitle titleKeyword"
+          key="0"
+          semiStrong={false}
+          strong={true}
+          waving={true}
+        >
+          Senior
+        </Text>
+        <Text
+          baseline={true}
+          className="positionTitle"
+          key="1"
+          semiStrong={true}
+          strong={false}
+          waving={true}
+        >
+           Software 
+        </Text>
+        <Text
+          baseline={true}
+          className="positionTitle titleKeyword"
+          key="2"
+          semiStrong={false}
+          strong={true}
+          waving={true}
+        >
+          Engineer
+        </Text>
+        <Text
+          baseline={true}
+          className="positionTitle"
+          key="3"
+          semiStrong={true}
+          strong={false}
+          waving={true}
+        >
+           (6 months Contract)
+        </Text>
+      </div>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -250,14 +260,19 @@ exports[`JobCard should render jobStreet standout style 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -372,14 +387,19 @@ exports[`JobCard should render jobsDB default style 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -475,14 +495,19 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -572,14 +597,19 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -664,14 +694,19 @@ exports[`JobCard should render with default props 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -756,14 +791,19 @@ exports[`JobCard should render with featured label 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
@@ -853,14 +893,19 @@ exports[`JobCard should render with selling points props 1`] = `
     pullout={false}
     slim={false}
   >
-    <Text
-      baseline={true}
-      className="positionTitle"
-      semiStrong={true}
-      waving={true}
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
     >
-      Senior Software Engineer (6 months Contract)
-    </Text>
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
   </Section>
   <Section
     className="bodySection"
