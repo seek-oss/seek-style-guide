@@ -3,7 +3,7 @@ import Positive from './Positive';
 import Text from '../Text/Text';
 
 export default {
-  route: 'positive',
+  route: '/positive',
   title: 'Positive',
   category: 'Typography',
   component: Text,

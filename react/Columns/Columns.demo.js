@@ -24,7 +24,7 @@ const makeColumns = count => [...new Array(count)].map((x, i) => (
 ));
 
 export default {
-  route: 'columns',
+  route: '/columns',
   title: 'Columns',
   category: 'Layout',
   component: Columns,
