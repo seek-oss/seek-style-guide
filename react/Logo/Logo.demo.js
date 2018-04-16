@@ -1,7 +1,7 @@
 import Logo from './Logo';
 
 export default {
-  route: 'logo',
+  route: '/logo',
   title: 'Logo',
   component: Logo,
   initialProps: {},

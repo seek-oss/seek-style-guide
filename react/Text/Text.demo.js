@@ -2,7 +2,7 @@ import Text from './Text';
 import * as sketch from './Text.sketch';
 
 export default {
-  route: 'text',
+  route: '/text',
   title: 'Text',
   category: 'Typography',
   component: Text,
