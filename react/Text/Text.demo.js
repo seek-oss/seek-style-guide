@@ -74,6 +74,13 @@ export default {
             ...props,
             secondary: true
           })
+        },
+        {
+          label: 'Info',
+          transformProps: props => ({
+            ...props,
+            info: true
+          })
         }
       ]
     },
