@@ -46,10 +46,12 @@ export default class Pill extends Component<Props> {
           className={styles.removeButton}
           onClick={onClose}>
           <ScreenReaderOnly>Remove item {text}</ScreenReaderOnly>
-          <CrossIcon
-            className={styles.removeIcon}
-            svgClassName={styles.removeSvg}
-          />
+          <div className={styles.removeCircle}>
+            <CrossIcon
+              className={styles.removeIcon}
+              svgClassName={styles.removeSvg}
+            />
+          </div>
         </button>
       </span>
     );

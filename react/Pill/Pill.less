@@ -2,6 +2,7 @@
 
 @staticTagHeight: @row-height * 5;
 @interactiveTagHeight: @row-height * 8;
+@removeCircleDiameter: @row-height * 4;
 
 .staticPill {
   .rawText(@interaction-type-scale);
@@ -21,35 +22,57 @@
   align-items: center;
   display: inline-flex;
   font-size: 18px;
-  color: @sk-white;
-  background: @sk-form-accent;
+  background: @sk-gray-light;
   border-radius: 24px;
   height: @interactiveTagHeight;
   line-height: @interactiveTagHeight;
-  padding: 0 24px;
+  padding: 0 0 0 24px;
   margin: @row-height 10px @row-height 0;
-  overflow: hidden;
 }
 
 .removeButton {
-  margin: 0 0 0 10px;
+  margin: 0;
   padding: 0;
+  height: @interactiveTagHeight - 2;
+  width: @interactiveTagHeight - 2;
   color: @sk-white;
+  border-radius: 0;
   background: transparent;
   appearance: none;
   box-shadow: none;
-  border-radius: 0;
   border: none;
   cursor: pointer;
-  width: 16px;
 
   &:focus {
-    .focus(@sk-white);
+    outline: none;
+
+    .removeCircle {
+      .focus();
+
+      border-radius: @removeCircleDiameter / 2;
+    }
+  }
+
+  &:hover,
+  &:active {
+    .removeCircle {
+      background-color: @sk-form-accent;
+    }
   }
 }
 
+.removeCircle {
+  background-color: @sk-mid-gray;
+  height: @removeCircleDiameter;
+  width: @removeCircleDiameter;
+  border-radius: @removeCircleDiameter / 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .removeIcon {
-  height: @interactiveTagHeight;
+  height: 12px;
 }
 
 .removeSvg {

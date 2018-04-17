@@ -22,7 +22,7 @@ Container.propTypes = {
 };
 
 export default {
-  route: 'pill',
+  route: '/pill',
   title: 'Pill',
   category: 'Form',
   component: Pill,
@@ -38,7 +38,7 @@ export default {
       type: 'checklist',
       states: [
         {
-          label: 'Close button / handler',
+          label: 'Close button',
           transformProps: ({ onClose, ...props }) => ({
             ...props,
             onClose: () => console.log('On close handler called')
