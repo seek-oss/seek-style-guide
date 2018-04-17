@@ -59,6 +59,12 @@
       background-color: @sk-form-accent;
     }
   }
+
+  &:active {
+    .removeCircle {
+      transform: scale(0.85);
+    }
+  }
 }
 
 .removeCircle {
@@ -69,6 +75,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: @spring-transition;
 }
 
 .removeIcon {
