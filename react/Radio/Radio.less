@@ -1,8 +1,8 @@
-@import (reference) "~seek-style-guide/theme";
-@circumference: @row-height * 5;
+@import (reference) "~seek-asia-style-guide/theme";
+@circumference: @grid-row-height * 5;
 
 .root {
-  .touchableText(@standard-type-scale);
+  .touchableText(@conversational-type-scale);
   display: inline-flex;
   align-items: center;
 }
@@ -40,7 +40,7 @@
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: 100%;
   padding: 5px;
-  margin-right: @gutter-width / 2;
+  margin-right: @grid-gutter-width / 2;
 
   .input:not([readonly]):not([disabled]):focus + .label & {
     .focus();
@@ -51,7 +51,8 @@
 .circle {
   transition:
     opacity 0.2s ease,
-    @spring-transition;
+    transform 0.2s cubic-bezier(0.02, 1.505, 0.745, 1.235);
+
   transform-origin: 50% 50%;
   opacity: 0;
 

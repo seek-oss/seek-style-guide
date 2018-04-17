@@ -104,6 +104,7 @@ export { default as ClearField } from './ClearField/ClearField';
 export { default as Dropdown } from './Dropdown/Dropdown';
 export { default as EmailField } from './EmailField/EmailField';
 export { default as MonthPicker } from './MonthPicker/MonthPicker';
+export { default as Radio } from './Radio/Radio';
 export { default as SlideToggle } from './SlideToggle/SlideToggle';
 export { default as Textarea } from './Textarea/Textarea';
 export { default as TextField } from './TextField/TextField';
