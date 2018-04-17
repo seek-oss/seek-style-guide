@@ -47,10 +47,14 @@ exports[`Pill: should render an additional class for the interactive pill 1`] = 
       Remove item 
       I am a pill
     </ScreenReaderOnly>
-    <CrossIcon
-      className="removeIcon"
-      svgClassName="removeSvg"
-    />
+    <div
+      className="removeCircle"
+    >
+      <CrossIcon
+        className="removeIcon"
+        svgClassName="removeSvg"
+      />
+    </div>
   </button>
 </span>
 `;
@@ -88,10 +92,14 @@ exports[`Pill: should render an interactive pill 1`] = `
       Remove item 
       I am a pill
     </ScreenReaderOnly>
-    <CrossIcon
-      className="removeIcon"
-      svgClassName="removeSvg"
-    />
+    <div
+      className="removeCircle"
+    >
+      <CrossIcon
+        className="removeIcon"
+        svgClassName="removeSvg"
+      />
+    </div>
   </button>
 </span>
 `;
