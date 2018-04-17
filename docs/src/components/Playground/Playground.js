@@ -100,7 +100,7 @@ const renderJobDetailMetadata = () => (
   <div>
     <Card>
       <Section>
-        <Button color="pink" className={styles.fullWidthTextField}>Apply for this job</Button>
+        <Button color="callToAction" className={styles.fullWidthTextField}>Apply for this job</Button>
         <Text secondary>
           <br />
           {'Applications for this role will take you to the advertiser\'s site.'}
@@ -145,14 +145,14 @@ export default class Playground extends Component {
             <Card>
               <Section>
                 <ButtonGroup>
-                  <Button color="pink">Sign In</Button>
+                  <Button color="callToAction">Sign In</Button>
                 </ButtonGroup>
               </Section>
             </Card>
             <Card>
               <Section>
                 <ButtonGroup>
-                  <Button color="pink">Create a Profile</Button>
+                  <Button color="callToAction">Create a Profile</Button>
                   <Button color="transparent">Cancel</Button>
                 </ButtonGroup>
               </Section>
@@ -168,7 +168,7 @@ export default class Playground extends Component {
             <Card>
               <Section>
                 <ButtonGroup>
-                  <Button color="pink">Save</Button>
+                  <Button color="callToAction">Save</Button>
                   <Button color="transparent">Clear</Button>
                   <Button color="transparent">Cancel</Button>
                 </ButtonGroup>
@@ -177,7 +177,7 @@ export default class Playground extends Component {
             <Card>
               <Section>
                 <ButtonGroup>
-                  <Button color="pink">Save</Button>
+                  <Button color="callToAction">Save</Button>
                   <Button color="grey">Clear</Button>
                   <Button color="grey">Cancel</Button>
                 </ButtonGroup>
@@ -254,7 +254,7 @@ export default class Playground extends Component {
                 <div>
                   <TextLink href="https://www.seek.com.au">Forgot your password?</TextLink>
                 </div>
-                <Button color="pink">Sign In</Button>
+                <Button color="callToAction">Sign In</Button>
                 <Text>Don’t have an account? <TextLink href="https://www.seek.com.au">Register</TextLink></Text>
               </Section>
             </Card>
@@ -279,7 +279,7 @@ export default class Playground extends Component {
                 <TextField id="email" label="Email address" inputProps={{ type: 'email' }} className={styles.fullWidthTextField} />
                 <TextField id="password" label="Password" inputProps={{ type: 'password' }} className={styles.fullWidthTextField} />
                 <Text secondary>By registering you agree to the <TextLink href="https://www.seek.com.au">SEEK privacy policy</TextLink></Text>
-                <Button color="pink">Register</Button>
+                <Button color="callToAction">Register</Button>
                 <Text>Already have an account? <TextLink href="https://www.seek.com.au">Sign in</TextLink></Text>
               </Section>
             </Card>
@@ -383,7 +383,7 @@ export default class Playground extends Component {
                 <br />
                 <br />
               </Text>
-              <Button color="pink">Search for another job</Button>
+              <Button color="callToAction">Search for another job</Button>
             </Section>
           </Card>
         </PageBlock>
