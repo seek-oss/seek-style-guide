@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import stylesPositive from '../Positive/Positive.less';
 import stylesCritical from '../Critical/Critical.less';
 import stylesSecondary from '../Secondary/Secondary.less';
-import stylesInfo from '../info/info.less';
+import stylesInfo from '../Info/Info.less';
 import stylesStrong from '../Strong/Strong.less';
 import stylesRegular from '../Regular/Regular.less';
 
