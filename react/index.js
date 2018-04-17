@@ -20,6 +20,7 @@ export { default as Critical } from './Critical/Critical';
 export { default as Paragraph } from './Paragraph/Paragraph';
 export { default as Positive } from './Positive/Positive';
 export { default as Secondary } from './Secondary/Secondary';
+export { default as Info } from './Info/Info';
 export { default as Strong } from './Strong/Strong';
 export { default as Text } from './Text/Text';
 export { default as TextLink } from './TextLink/TextLink';
