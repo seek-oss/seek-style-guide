@@ -3,13 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+const LEFT = 'left';
+const RIGHT = 'right';
+
 const defaultRenderAside = () => null;
 
-const conditionallyRenderAside = (condition, renderAside, classNameAside, size) => (
+const conditionallyRenderAside = (condition, renderAside, classNameAside, size, position) => (
   condition ?
     <div
       className={classnames({
         [classNameAside]: classNameAside,
+        [styles.leftAside]: position === LEFT,
+        [styles.rightAside]: position !== LEFT,
         [styles.aside]: true
       })}
       style={{ flexBasis: size }}>
@@ -18,7 +23,8 @@ const conditionallyRenderAside = (condition, renderAside, classNameAside, size) 
     null
 );
 
-export default function AsidedLayout({ className, children, renderAside = defaultRenderAside, classNameAside, size, reverse, ...restProps }) {
+export default function AsidedLayout({ className, children, position, renderAside = defaultRenderAside, classNameAside, size, reverse, ...restProps }) {
+  const renderAsideBeforeContent = position === LEFT ? !reverse : reverse;
   return (
     <div
       {...restProps}
@@ -27,11 +33,11 @@ export default function AsidedLayout({ className, children, renderAside = defaul
         [styles.root]: true,
         [styles.reverse]: reverse
       })}>
-      { conditionallyRenderAside(reverse, renderAside, classNameAside, size) }
+      { conditionallyRenderAside(renderAsideBeforeContent, renderAside, classNameAside, size, position) }
       <div className={styles.content}>
         {children}
       </div>
-      { conditionallyRenderAside(!reverse, renderAside, classNameAside, size) }
+      { conditionallyRenderAside(!renderAsideBeforeContent, renderAside, classNameAside, size, position) }
     </div>
   );
 }
@@ -42,5 +48,10 @@ AsidedLayout.propTypes = {
   renderAside: PropTypes.func,
   classNameAside: PropTypes.string,
   size: PropTypes.string,
+  position: PropTypes.oneOf([LEFT, RIGHT]),
   reverse: PropTypes.bool
+};
+
+AsidedLayout.defaultProps = {
+  position: RIGHT
 };

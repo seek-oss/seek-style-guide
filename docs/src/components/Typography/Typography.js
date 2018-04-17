@@ -10,7 +10,8 @@ import {
   Strong,
   Positive,
   Critical,
-  Secondary
+  Secondary,
+  Info
 } from 'seek-style-guide/react';
 import Demo from '../Demo/Demo';
 import textDemoSpec from 'seek-style-guide/react/Text/Text.demo';
@@ -409,6 +410,40 @@ export default () => (
         initialProps: {
           // eslint-disable-next-line react/jsx-key
           children: ['The last word of this sentence is ', <Secondary>secondary.</Secondary>]
+        },
+        options: []
+      }}
+    />
+    <PageBlock>
+      <Card transparent style={{ maxWidth: 720 }}>
+        <Section>
+          <Text heading>Info Text</Text>
+          <Paragraph>
+            <Text>Any text element can be explicity marked as info with the &ldquo;info&rdquo; property or the inline &ldquo;Info&rdquo; component.</Text>
+          </Paragraph>
+        </Section>
+      </Card>
+    </PageBlock>
+    <Demo
+      spec={{
+        component: Text,
+        container: BackgroundContainer,
+        block: true,
+        initialProps: {
+          info: true,
+          children: loremIpsumShort
+        },
+        options: []
+      }}
+    />
+    <Demo
+      spec={{
+        component: Text,
+        container: BackgroundContainer,
+        block: true,
+        initialProps: {
+          // eslint-disable-next-line react/jsx-key
+          children: ['The last word of this sentence is ', <Info>info.</Info>]
         },
         options: []
       }}
