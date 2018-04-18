@@ -13,7 +13,8 @@ export default {
     language: 'en',
     country: 'hk',
     loginAvailable: true,
-    activeTab: ACTIVE_TAB_HOME
+    activeTab: ACTIVE_TAB_HOME,
+    selectCountry: true
   },
   options: [{
     label: 'States',
@@ -154,6 +155,25 @@ export default {
         transformProps: props => ({
           ...props,
           loggedIn: true
+        })
+      }
+    ]
+  }, {
+    label: 'Select Country',
+    type: 'radio',
+    states: [
+      {
+        label: 'Select Country',
+        transformProps: props => ({
+          ...props,
+          selectCountry: true
+        })
+      },
+      {
+        label: 'Not Select Country',
+        transformProps: props => ({
+          ...props,
+          selectCountry: false
         })
       }
     ]

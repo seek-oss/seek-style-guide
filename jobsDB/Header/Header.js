@@ -41,7 +41,7 @@ const getJobsDBProps = ({ country, language, loggedIn, loginAvailable }) => {
   };
 };
 
-const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, loggedIn = false, ...restProps }) => {
+const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, loggedIn = false, selectCountry = true, ...restProps }) => {
   return (
     <GlobalHeader
       LogoComponent={Logo}
@@ -53,6 +53,7 @@ const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = f
       country={country}
       language={language}
       employerSite={!loggedIn || !loginAvailable}
+      selectCountry={selectCountry}
       {...restProps}
     />
   );
@@ -63,6 +64,7 @@ Header.propTypes = {
   language: PropTypes.string,
   activeTab: PropTypes.string,
   loginAvailable: PropTypes.bool,
+  selectCountry: PropTypes.bool
 };
 
 export default Header;

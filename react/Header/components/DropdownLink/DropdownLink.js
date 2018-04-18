@@ -4,37 +4,21 @@ import classnames from 'classnames';
 import styles from './DropdownLink.less';
 import { Text, ChevronIcon, Card, Section, CardGroup, TickIcon } from 'seek-asia-style-guide/react';
 
-const renderLocales = ({localeList}) => {
-  // <Card>
-  //   <Section className={styles.node}>
-  //     <ItemIcon className={styles.icon} />
-  //     <Text whispering>
-  //       Living Style Guide
-  //     </Text>
-  //     <TickIcon className={classnames([styles.icon, styles.checkMark])} />
-  //   </Section>
-  // </Card>
-  // <Card>
-  //   <Section className={styles.node}>
-  //     <ItemIcon className={styles.icon} />
-  //     <Text whispering>
-  //       Living Style Guide
-  //     </Text>
-  //   </Section>
-  // </Card>
-  if (localeList && localeList.map) {
+const renderLinks = ({links, checked}) => {
 
-    const cards = localeList.map((key, index) => {
+  if (links && links.map) {
+
+    const cards = links.map((key, index) => {
       const ItemIcon = key.ItemIcon;
 
       return(
-        <Card onClick = { e => { window.location = key.url; } }>
+        <Card key={index} onClick = { e => { window.location = key.url; } }>
           <Section className={styles.node}>
             <ItemIcon className={styles.icon} />
             <Text whispering>
               { key.title }
             </Text>
-            { index == 0 && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />) }
+            { checked === undefined || index == checked && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />) }
           </Section>
         </Card>
       );
@@ -45,8 +29,9 @@ const renderLocales = ({localeList}) => {
   return null;
 };
 
-renderLocales.PropTypes = {
-  localeList: PropTypes.array.isRequired
+renderLinks.PropTypes = {
+  links: PropTypes.array.isRequired,
+  checked: PropTypes.bool
 }
 
 export default class DropdownLink extends Component {
@@ -81,16 +66,16 @@ export default class DropdownLink extends Component {
   };
 
   render() {
-    const { localeList, dropdownOpen } = this.props;
+    const { links, dropdownOpen, checked } = this.props;
 
-    const ItemIcon = localeList[0].ItemIcon;
+    const ItemIcon = links[0].ItemIcon;
 
     return (
       <div className={styles.root} ref={e => { this.wrapperRef = e }}>
 
         <div className={styles.currentLocale} show={dropdownOpen} onClick={e => this.handleDropdownToggle(e)}>
           <ItemIcon className={styles.icon} />
-          <Text whispering>{localeList[0].title}</Text>
+          <Text whispering>{links[0].title}</Text>
           <div className={styles.chevron}>
             <ChevronIcon svgClassName={styles.chevronSvg} direction="down" />
           </div>
@@ -105,7 +90,7 @@ export default class DropdownLink extends Component {
             </Section>
           </Card>
 
-          { renderLocales({ localeList }) }
+          { renderLinks({ links, checked }) }
         </CardGroup>
 
       </div>
@@ -115,5 +100,6 @@ export default class DropdownLink extends Component {
 
 DropdownLink.propTypes = {
   /* prototypes for validation */
-  localeList: PropTypes.array.isRequired
+  links: PropTypes.array.isRequired,
+  checked: PropTypes.number
 };

@@ -8,11 +8,25 @@ import DropdownLink from './components/DropdownLink/DropdownLink'
 import { sortCurrentLocaleToTop } from './localeUtils';
 import styles from './Header.less';
 
+const currentLocale = ({ title, ItemIcon }) => {
+  return (
+    <span className={styles.currentLocale}>
+      <ItemIcon className={styles.localeIcon} />
+      <Text whispering>{title}</Text>
+    </span>
+  );
+};
+
+currentLocale.propTypes = {
+  title: PropTypes.string,
+  ItemIcon: PropTypes.func
+};
+
 const renderSecondaryNavBtns = ({ btns }) => {
   if (btns && btns.map) {
     const secondaryNavBtns = btns.map((btn, index) => {
         return (
-          <Button color={btn.btnColor || "hyperlink"}
+          <Button key={index} color={btn.btnColor || "hyperlink"}
                   compact
                   component="a"
                   href={btn.url}>
@@ -76,14 +90,24 @@ export default class Header extends Component {
   }
 
   render() {
-    const { LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps, btns, rightLinks, employerSite, loginAvailable = false } = this.props;
+    const { LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps, btns, rightLinks, employerSite, loginAvailable = false, selectCountry = true } = this.props;
     const localeList = sortCurrentLocaleToTop({ locales, country, language });
     const menuOpen = this.state.menuOpen;
 
     return (
       <header className={styles.root}>
         <div className={styles.externalNav}>
-          <DropdownLink localeList={localeList} />
+          {
+            selectCountry &&
+            (
+              < DropdownLink links={localeList} checked={0} />
+            ) ||
+            (
+              <div className={styles.locale}>
+                {currentLocale(localeList[0])}
+              </div>
+            )
+          }
         {
           employerSite &&
           (<div>
