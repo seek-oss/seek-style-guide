@@ -31,7 +31,7 @@ const renderLinks = ({links, checked}) => {
 
 renderLinks.PropTypes = {
   links: PropTypes.array.isRequired,
-  checked: PropTypes.bool
+  checked: PropTypes.number
 }
 
 export default class DropdownLink extends Component {
