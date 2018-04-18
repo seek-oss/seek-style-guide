@@ -23,7 +23,8 @@ export default class Radio extends Component {
     className: PropTypes.string,
     label: PropTypes.string,
     labelProps: PropTypes.object,
-    inputProps: PropTypes.object
+    inputProps: PropTypes.object,
+    buttonFormat: PropTypes.string
   };
 
   static defaultProps = {
@@ -44,25 +45,32 @@ export default class Radio extends Component {
   }
 
   renderLabel() {
-    const { label, labelProps, id } = this.props;
+    const { label, labelProps, id, buttonFormat } = this.props;
     const allLabelProps = {
       htmlFor: id,
       ...combineClassNames(labelProps, styles.label)
     };
 
-    return (
-      <label {...allLabelProps}>
-        <svg
-          className={styles.svg}
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false" >
-          <circle className={classnames(styles.circle, styles.circle_isHover)} cx="100" cy="100" r="100" />
-          <circle className={classnames(styles.circle, styles.circle_isSelected)} cx="100" cy="100" r="100" />
-        </svg>
-        <Text raw baseline={false} className={styles.labelText}>{label}</Text>
-      </label>
-    );
+    return buttonFormat ?
+      (
+        <label {...allLabelProps}>
+          <div className={styles.box}>
+            <Text raw baseline={false} className={styles.buttonText}>{label}</Text>
+          </div>
+        </label>
+      ) : (
+        <label {...allLabelProps}>
+          <svg
+            className={styles.svg}
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false" >
+            <circle className={classnames(styles.circle, styles.circle_isHover)} cx="100" cy="100" r="100" />
+            <circle className={classnames(styles.circle, styles.circle_isSelected)} cx="100" cy="100" r="100" />
+          </svg>
+          <Text raw baseline={false} className={styles.labelText}>{label}</Text>
+        </label>
+      );
   }
 
   render() {

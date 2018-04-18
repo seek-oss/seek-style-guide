@@ -20,5 +20,15 @@ export const symbols = {
     <Container>
       <Radio id="radio1" label="Radio" inputProps={{ checked: false, onChange: noop }} />
     </Container>
+  ),
+  'Radio/Button/Checked': (
+    <Container>
+      <Radio id="radio2" label="Radio" buttonFormat inputProps={{ checked: true, onChange: noop }} />
+    </Container>
+  ),
+  'Radio/Button/Unchecked': (
+    <Container>
+      <Radio id="radio1" label="Radio" buttonFormat inputProps={{ checked: false, onChange: noop }} />
+    </Container>
   )
 };

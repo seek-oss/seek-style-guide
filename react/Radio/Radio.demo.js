@@ -77,5 +77,19 @@ export default {
       onChange: () => {}
     }
   },
-  options: []
+  options: [
+    {
+      label: 'Button',
+      type: 'checkbox',
+      states: [
+        {
+          label: 'Button',
+          transformProps: props => ({
+            ...props,
+            buttonFormat: true
+          })
+        }
+      ]
+    }
+  ]
 };

@@ -33,6 +33,33 @@
   }
 }
 
+.buttonText {
+  .input:checked + .label & {
+    font-weight: @sk-bold;
+    color: @sk-gray-light;
+  }
+}
+
+.box {
+  width: 100px;
+  height: @circumference * 2;
+  background-color: @sk-gray-light;
+  will-change: transition;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid @sk-teal;
+  border-radius: 5px;
+  padding-top: 7px;
+  .input:checked + .label & {
+    transition: all 300ms ease-in-out;
+    font-weight: normal;
+    background-color: @sk-teal;
+    border-color: @sk-teal;
+  }
+}
+
 .svg {
   background-color: @sk-white;
   width: @circumference;
