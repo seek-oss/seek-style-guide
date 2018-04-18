@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './DropdownLink.less';
+import { Link } from 'react-router-dom';
 import { Text, ChevronIcon, Card, Section, CardGroup, TickIcon } from 'seek-asia-style-guide/react';
 
 const renderLinks = ({links, checked}) => {
@@ -11,16 +12,24 @@ const renderLinks = ({links, checked}) => {
     const cards = links.map((key, index) => {
       const ItemIcon = key.ItemIcon;
 
+      /* Change
+       * <a href="/"></a>
+       * to
+       * <link to="/"></link>
+       * for React routering
+       */
       return(
-        <Card key={index} onClick = { e => { window.location = key.url; } }>
-          <Section className={styles.node}>
-            <ItemIcon className={styles.icon} />
-            <Text whispering>
-              { key.title }
-            </Text>
-            { checked === undefined || index == checked && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />) }
-          </Section>
-        </Card>
+          <Card key={index}>
+            <a href={key.url}>
+              <Section className={styles.node}>
+                <ItemIcon className={styles.icon} />
+                <Text whispering>
+                  { key.title }
+                </Text>
+                { checked === undefined || index == checked && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />) }
+              </Section>
+            </a>
+          </Card>
       );
     });
 
