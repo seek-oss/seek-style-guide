@@ -22,11 +22,11 @@ export default {
           })
         },
         {
-          label: 'Show rating text with comment',
+          label: 'Show rating text with description',
           transformProps: ({ ...props }) => ({
             ...props,
             showTextRating: true,
-            ratingComment: 'overall'
+            description: 'overall'
           })
         }
       ]

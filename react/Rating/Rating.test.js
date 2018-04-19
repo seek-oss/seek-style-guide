@@ -13,8 +13,8 @@ describe('Rating', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render with showTextRating and a comment', () => {
-    const wrapper = render(<Rating rating={5.0} showTextRating ratingComment=" overall rating from..." />);
+  it('should render with description', () => {
+    const wrapper = render(<Rating rating={5.0} description="overall rating from..." />);
     expect(wrapper).toMatchSnapshot();
   });
 

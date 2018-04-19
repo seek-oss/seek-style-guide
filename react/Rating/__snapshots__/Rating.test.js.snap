@@ -600,7 +600,7 @@ exports[`Rating should render with className 1`] = `
 </span>
 `;
 
-exports[`Rating should render with showTextRating and a comment 1`] = `
+exports[`Rating should render with description 1`] = `
 <span
   class="root standard raw baseline"
 >
