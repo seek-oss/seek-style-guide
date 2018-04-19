@@ -6,7 +6,9 @@ import Menu from './components/Menu/Menu';
 import ActionTray from './components/ActionTray/ActionTray';
 import DropdownLink from './components/DropdownLink/DropdownLink'
 import { sortCurrentLocaleToTop } from './localeUtils';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 import styles from './Header.less';
+import UserAccountMenu from './components/UserAccountMenu/UserAccountMenu';
 
 const currentLocale = ({ title, ItemIcon }) => {
   return (
@@ -16,6 +18,8 @@ const currentLocale = ({ title, ItemIcon }) => {
     </span>
   );
 };
+
+const defaultLinkRenderer = props => (<a {...props} />);
 
 currentLocale.propTypes = {
   title: PropTypes.string,
@@ -90,7 +94,26 @@ export default class Header extends Component {
   }
 
   render() {
-    const { LogoComponent, logoProps, activeTab, links, more, locales, messages, brandStyles, country, language, actionTrayProps, btns, rightLinks, employerSite, loginAvailable = false, selectCountry = true } = this.props;
+    const {
+      linkRenderer,
+      LogoComponent,
+      logoProps,
+      activeTab,
+      links,
+      more,
+      locales,
+      messages,
+      brandStyles,
+      country,
+      language,
+      actionTrayProps,
+      btns,
+      rightLinks,
+      employerSite,
+      loginAvailable = false,
+      selectCountry = true
+    } = this.props;
+
     const localeList = sortCurrentLocaleToTop({ locales, country, language });
     const menuOpen = this.state.menuOpen;
 
@@ -110,9 +133,16 @@ export default class Header extends Component {
           }
         {
           employerSite &&
-          (<div>
-            <Text whispering>{messages['header.employerLinkPrefix']}<a className={styles.employerLink} href={messages['header.employerSiteUrl']}>{messages['header.employerSiteTitle']}</a></Text>
-          </div>)
+          (
+            <div>
+              <Text whispering>
+                {messages['header.employerLinkPrefix']}
+                <a className={styles.employerLink} href={messages['header.employerSiteUrl']}>
+                  {messages['header.employerSiteTitle']}
+                </a>
+              </Text>
+            </div>
+          )
         }
         </div>
         <div className={loginAvailable ? styles.primaryNav : styles.primaryNavNoLogin}>
@@ -121,8 +151,37 @@ export default class Header extends Component {
           { renderPrimaryNavLinks({ brandStyles }, rightLinks, styles.secondaryNav ) }
           { !rightLinks && renderSecondaryNavBtns({ btns }) }
         </div>
-        <ActionTray {...actionTrayProps} brandStyles={brandStyles} messages={messages} menuOpen={menuOpen} handleToggleMenu={this.handleToggleMenu.bind(this)} loginAvailable={loginAvailable} activeTab={activeTab} />
-        <Menu shouldShowMenu={menuOpen} messages={messages} links={links} more={more} locales={localeList} brandStyles={brandStyles} btns={btns} loginAvailable={loginAvailable} rightLinks={rightLinks} employerSite={employerSite} />
+
+        {
+          rightLinks && (
+            <UserAccountMenu
+              rightLinks={rightLinks}
+              linkRenderer={linkRenderer}
+            />
+          )
+        }
+
+        <ActionTray
+          {...actionTrayProps}
+          brandStyles={brandStyles}
+          messages={messages}
+          menuOpen={menuOpen}
+          handleToggleMenu={this.handleToggleMenu.bind(this)}
+          loginAvailable={loginAvailable}
+          activeTab={activeTab}
+        />
+        <Menu
+          shouldShowMenu={menuOpen}
+          messages={messages}
+          links={links}
+          more={more}
+          locales={localeList}
+          brandStyles={brandStyles}
+          btns={btns}
+          loginAvailable={loginAvailable}
+          rightLinks={rightLinks}
+          employerSite={employerSite}
+        />
       </header>
     );
   }
@@ -143,5 +202,10 @@ Header.propTypes = {
   actionTrayProps: PropTypes.object,
   btn: PropTypes.array,
   rightLinks: PropTypes.array,
-  employerSite: PropTypes.bool
+  employerSite: PropTypes.bool,
+  linkRenderer: PropTypes.func,
+};
+
+Header.defaultProps = {
+  linkRenderer: defaultLinkRenderer
 };

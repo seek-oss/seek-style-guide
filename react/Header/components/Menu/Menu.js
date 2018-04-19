@@ -26,7 +26,7 @@ export default class Menu extends Component {
   renderMenuLinks = ({ more, messages, brandStyles }, links) => {
     if (links && links.map) {
       const menuItems = links.map((link, index) => (
-        <MenuItem key={index} linkUrl={link.url} ItemIcon={link.ItemIcon} brandStyles={brandStyles}>
+        <MenuItem key={index} linkUrl={link.url !== undefined ? (link.url) : (link.href)} ItemIcon={link.ItemIcon} brandStyles={brandStyles}>
           <Text>{link.title}</Text>
         </MenuItem>
       ));
@@ -60,8 +60,8 @@ export default class Menu extends Component {
         { this.renderMenuLinks({ brandStyles }, btns) }
         {
           rightLinks && rightLinks.map((link, index) => {
-            if (link.dropDown && link.dropDown.map) {
-              return this.renderMenuLinks({ brandStyles }, link.dropDown)
+            if (link.children && link.children.map) {
+              return this.renderMenuLinks({ brandStyles }, link.children)
             }
           })
         }

@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Header.less';
+import UserAccountMenuStyles from 'seek-asia-style-guide/react/Header/components/UserAccountMenu/UserAccountMenu.less'
 import { Header as GlobalHeader } from 'seek-asia-style-guide/react';
 import Logo from '../Logo/Logo';
 import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon, JobFunctionIcon, ProfileIcon } from 'seek-asia-style-guide/react';
 import { getLocalization, locales } from '../localization';
+import classnames from 'classnames';
 
 const getJobsDBProps = ({ country, language, loggedIn, loginAvailable }) => {
   const messages = getLocalization({ country, language });
@@ -25,9 +27,34 @@ const getJobsDBProps = ({ country, language, loggedIn, loginAvailable }) => {
       ];
     } else {
       rightLinks = [
-        { title: "Placeholder for Name", subTitle: "Placeholder for Job Title", dropDown: [
-          { title: messages['header.profileTitle'], url: messages['header.profileUrl'], ItemIcon: ProfileIcon },
-          { title: messages['header.invitationTitle'], url: messages['header.invitationUrl'], ItemIcon: JobFunctionIcon }
+        { title: "Placeholder for Name", subTitle: "Placeholder for Job Title", children: [
+          {
+            className: UserAccountMenuStyles.item,
+            href: messages['header.profileUrl'],
+            title: messages['header.profileTitle'],
+            ItemIcon: ProfileIcon,
+            children: [
+              messages['header.profileTitle']
+            ]
+          },
+          {
+            className: UserAccountMenuStyles.item,
+            href: messages['header.invitationUrl'],
+            title: messages['header.invitationTitle'],
+            ItemIcon: JobFunctionIcon,
+            children: [
+              messages['header.invitationTitle']
+            ]
+          },
+          {
+            className: UserAccountMenuStyles.item,
+            href: messages['header.logoutUrl'],
+            title: messages['header.logoutTitle'],
+            ItemIcon: JobFunctionIcon,
+            children: [
+              messages['header.logoutTitle']
+            ]
+          },
         ] }
       ];
     }

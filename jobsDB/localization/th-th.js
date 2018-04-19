@@ -23,6 +23,8 @@ export default {
   'header.profileUrl': 'https://www.thisisprofile.test',
   'header.invitationTitle': 'No job invitations',
   'header.invitationUrl': 'https://www.thisisjobinvitation.test',
+  'header.logoutTitle': 'Log Out',
+  'header.logoutUrl': 'https://www.thisislogoutlink.test',
   'menu.jobSeekerHeader': 'JOB SEEKER',
   'menu.settingsHeader': 'SETTINGS',
   'menu.more': 'More',
