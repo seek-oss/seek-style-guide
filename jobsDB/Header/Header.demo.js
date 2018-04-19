@@ -144,17 +144,28 @@ export default {
     type: 'radio',
     states: [
       {
-        label: 'Not logged in',
+        label: 'UnAuthenticated',
         transformProps: props => ({
           ...props,
-          loggedIn: false
+          authenticationStatus: 'unauthenticated',
+          loginAvailable: true
         })
       },
       {
-        label: 'Logged in',
+        label: 'Authenticated',
         transformProps: props => ({
           ...props,
-          loggedIn: true
+          authenticationStatus: 'authenticated',
+          loginAvailable: true,
+          userName: 'Olivia'
+        })
+      },
+      {
+        label: 'Pending',
+        transformProps: props => ({
+          ...props,
+          returnUrl: '/jobs',
+          loginAvailable: false
         })
       }
     ]

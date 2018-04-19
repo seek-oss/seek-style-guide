@@ -5,8 +5,9 @@ import { Header as GlobalHeader } from 'seek-asia-style-guide/react';
 import Logo from '../Logo/Logo';
 import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon, JobFunctionIcon, ProfileIcon } from 'seek-asia-style-guide/react';
 import { getLocalization, locales } from '../localization';
+import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../react/private/authStatusTypes';
 
-const getJobsDBProps = ({ country, language, loggedIn, loginAvailable }) => {
+const getJobsDBProps = ({ country, language, loginAvailable, authenticationStatus, userName }) => {
   const messages = getLocalization({ country, language });
 
   const links = [
@@ -18,14 +19,14 @@ const getJobsDBProps = ({ country, language, loggedIn, loginAvailable }) => {
 
   let btns, rightLinks;
   if (loginAvailable) {
-    if (!loggedIn) {
+    if (authenticationStatus === UNAUTHENTICATED) {
       btns = [
-        { title: messages['header.loginTitle'], url: messages['header.loginUrl'], ItemIcon: ProfileIcon, btnColor: "secondary" },
-        { title: messages['header.signupTitle'], url: messages['header.signupUrl'], ItemIcon: JobFunctionIcon, btnColor: "callToAction" }
+        { title: messages['header.loginTitle'], url: messages['header.loginUrl'], ItemIcon: ProfileIcon, btnColor: 'secondary' },
+        { title: messages['header.signupTitle'], url: messages['header.signupUrl'], ItemIcon: JobFunctionIcon, btnColor: 'callToAction' }
       ];
-    } else {
+    } else if (authenticationStatus === AUTHENTICATED) {
       rightLinks = [
-        { title: "Placeholder for Name", subTitle: "Placeholder for Job Title", dropDown: [
+        { title: userName, dropDown: [
           { title: messages['header.profileTitle'], url: messages['header.profileUrl'], ItemIcon: ProfileIcon },
           { title: messages['header.invitationTitle'], url: messages['header.invitationUrl'], ItemIcon: JobFunctionIcon }
         ] }
@@ -41,18 +42,18 @@ const getJobsDBProps = ({ country, language, loggedIn, loginAvailable }) => {
   };
 };
 
-const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, loggedIn = false, selectCountry = true, ...restProps }) => {
+const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, selectCountry = true, authenticationStatus = UNAUTHENTICATED, userName, ...restProps }) => {
   return (
     <GlobalHeader
       LogoComponent={Logo}
       activeTab={activeTab}
       loginAvailable={loginAvailable}
-      {...getJobsDBProps({ country, language, loggedIn, loginAvailable })}
+      {...getJobsDBProps({ country, language, loginAvailable, authenticationStatus, userName })}
       brandStyles={styles}
       locales={locales}
       country={country}
       language={language}
-      employerSite={!loggedIn || !loginAvailable}
+      employerSite={true || !loginAvailable} //TO DO: logic to be confirmed by UX
       selectCountry={selectCountry}
       {...restProps}
     />
@@ -64,7 +65,13 @@ Header.propTypes = {
   language: PropTypes.string,
   activeTab: PropTypes.string,
   loginAvailable: PropTypes.bool,
-  selectCountry: PropTypes.bool
+  selectCountry: PropTypes.bool,
+  authenticationStatus: PropTypes.oneOf([
+    AUTHENTICATED,
+    UNAUTHENTICATED,
+    AUTH_PENDING
+  ]),
+  userName: PropTypes.string
 };
 
 export default Header;
