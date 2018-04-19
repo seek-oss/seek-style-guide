@@ -63,7 +63,7 @@ const Rating = ({
         })}
         {(showTextRating || Boolean(description)) &&
           <span className={styles.textRating}>
-            {rating.toFixed(1)}{description ? ` ${description}` : ''}
+            {rating.toFixed(1)}{description ? ' ' : ''}{description}
           </span>
         }
       </span>
