@@ -62,7 +62,7 @@ const renderPrimaryNavLinks = ({ brandStyles }, links, _style) => {
         <span key={index} className={styles.primaryNavLinkWrapper}>
           <a href={link.url} className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
             <Text>{link.title}</Text>
-            {link.subTitle && <Text whisperingTitle>{link.subTitle}</Text>}
+            {link.showIcon && (<link.ItemIcon className={styles.icon} />)}
           </a>
         </span>
       );

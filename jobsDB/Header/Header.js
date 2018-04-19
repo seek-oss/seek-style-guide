@@ -4,7 +4,7 @@ import styles from './Header.less';
 import UserAccountMenuStyles from 'seek-asia-style-guide/react/Header/components/UserAccountMenu/UserAccountMenu.less'
 import { Header as GlobalHeader } from 'seek-asia-style-guide/react';
 import Logo from '../Logo/Logo';
-import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon, JobFunctionIcon, ProfileIcon } from 'seek-asia-style-guide/react';
+import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon, JobFunctionIcon, ProfileIcon, ChevronIcon } from 'seek-asia-style-guide/react';
 import { getLocalization, locales } from '../localization';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../react/private/authStatusTypes';
 
@@ -27,7 +27,7 @@ const getJobsDBProps = ({ country, language, loginAvailable, authenticationStatu
       ];
     } else if (authenticationStatus === AUTHENTICATED) {
       rightLinks = [
-        { title: userName, children: [
+        { title: userName, ItemIcon: ChevronIcon, showIcon: true, children: [
           {
             className: UserAccountMenuStyles.item,
             href: messages['header.profileUrl'],
