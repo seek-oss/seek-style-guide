@@ -600,6 +600,56 @@ exports[`Rating should render with className 1`] = `
 </span>
 `;
 
+exports[`Rating should render with showTextRating and a comment 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root filled star"
+      >
+        mock svg
+      </span>
+      <span
+        class="textRating"
+      >
+        5.0 overall rating from...
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
 exports[`Rating should render with starClassName 1`] = `
 <span
   class="root standard raw baseline"

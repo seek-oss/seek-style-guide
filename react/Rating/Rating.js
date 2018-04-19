@@ -40,6 +40,7 @@ const getStar = (
 };
 
 const Rating = ({
+  ratingComment,
   rating,
   starClassName,
   showTextRating,
@@ -68,7 +69,9 @@ const Rating = ({
           );
         })}
         {showTextRating &&
-          <span className={styles.textRating}>{rating.toFixed(1)}</span>
+          <span className={styles.textRating}>
+            {rating.toFixed(1)}{ratingComment}
+          </span>
         }
       </span>
     </Text>
@@ -82,6 +85,7 @@ Rating.propTypes = {
   className: PropTypes.string,
   starClassName: PropTypes.string,
   showTextRating: PropTypes.bool,
+  ratingComment: PropTypes.any,
   ...SizePropTypes
 };
 

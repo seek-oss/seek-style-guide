@@ -20,6 +20,14 @@ export default {
             ...props,
             showTextRating: true
           })
+        },
+        {
+          label: 'Show rating text with comment',
+          transformProps: ({ ...props }) => ({
+            ...props,
+            showTextRating: true,
+            ratingComment: 'overall'
+          })
         }
       ]
     },
