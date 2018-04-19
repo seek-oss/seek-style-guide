@@ -616,27 +616,27 @@ exports[`Rating should render with showTextRating and a comment 1`] = `
       class="rating"
     >
       <span
-        class="root filled star"
+        class="root _large filled standard star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root _large filled standard star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root _large filled standard star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root _large filled standard star"
       >
         mock svg
       </span>
       <span
-        class="root filled star"
+        class="root _large filled standard star"
       >
         mock svg
       </span>
