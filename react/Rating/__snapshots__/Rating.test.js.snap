@@ -650,6 +650,59 @@ exports[`Rating should render with description 1`] = `
 </span>
 `;
 
+exports[`Rating should render with description as a component 1`] = `
+<span
+  class="root standard raw baseline"
+>
+  <span
+    class="root"
+  >
+    <span
+      class="root"
+    >
+      5 out of 5
+    </span>
+    <span
+      class="rating"
+    >
+      <span
+        class="root _large filled standard star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root _large filled standard star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root _large filled standard star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root _large filled standard star"
+      >
+        mock svg
+      </span>
+      <span
+        class="root _large filled standard star"
+      >
+        mock svg
+      </span>
+      <span
+        class="textRating"
+      >
+        5.0 
+        <span>
+          overall rating
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
 exports[`Rating should render with starClassName 1`] = `
 <span
   class="root standard raw baseline"
