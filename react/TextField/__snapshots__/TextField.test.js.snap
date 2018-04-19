@@ -5,14 +5,16 @@ exports[`TextField clear button should be visible when value has white spaces on
   className="root canClear"
 >
   <FieldLabel
-    id=""
+    id="testTextField"
     label=""
     raw={false}
     secondaryLabel=""
     tertiaryLabel=""
   />
   <input
+    aria-describedby="testTextField-message"
     className="input"
+    id="testTextField"
     value="  "
   />
   <span
@@ -22,6 +24,7 @@ exports[`TextField clear button should be visible when value has white spaces on
     <ClearField />
   </span>
   <FieldMessage
+    id="testTextField-message"
     message=""
     messageProps={
       Object {
@@ -39,14 +42,16 @@ exports[`TextField clear button should be visible when value is provided 1`] = `
   className="root canClear"
 >
   <FieldLabel
-    id=""
+    id="testTextField"
     label=""
     raw={false}
     secondaryLabel=""
     tertiaryLabel=""
   />
   <input
+    aria-describedby="testTextField-message"
     className="input"
+    id="testTextField"
     value="abc"
   />
   <span
@@ -56,6 +61,7 @@ exports[`TextField clear button should be visible when value is provided 1`] = `
     <ClearField />
   </span>
   <FieldMessage
+    id="testTextField-message"
     message=""
     messageProps={
       Object {
@@ -73,14 +79,16 @@ exports[`TextField clear button should not be visible when value is empty 1`] = 
   className="root"
 >
   <FieldLabel
-    id=""
+    id="testTextField"
     label=""
     raw={false}
     secondaryLabel=""
     tertiaryLabel=""
   />
   <input
+    aria-describedby="testTextField-message"
     className="input"
+    id="testTextField"
     value=""
   />
   <span
@@ -90,6 +98,7 @@ exports[`TextField clear button should not be visible when value is empty 1`] = 
     <ClearField />
   </span>
   <FieldMessage
+    id="testTextField-message"
     message=""
     messageProps={
       Object {
@@ -107,14 +116,16 @@ exports[`TextField clear button should not be visible when value is provided but
   className="root"
 >
   <FieldLabel
-    id=""
+    id="testTextField"
     label=""
     raw={false}
     secondaryLabel=""
     tertiaryLabel=""
   />
   <input
+    aria-describedby="testTextField-message"
     className="input"
+    id="testTextField"
     value="abc"
   />
   <span
@@ -124,6 +135,7 @@ exports[`TextField clear button should not be visible when value is provided but
     <ClearField />
   </span>
   <FieldMessage
+    id="testTextField-message"
     message=""
     messageProps={
       Object {
@@ -141,14 +153,16 @@ exports[`TextField should render with defaults 1`] = `
   className="root"
 >
   <FieldLabel
-    id=""
+    id="testTextField"
     label=""
     raw={false}
     secondaryLabel=""
     tertiaryLabel=""
   />
   <input
+    aria-describedby="testTextField-message"
     className="input"
+    id="testTextField"
   />
   <span
     className="clearField"
@@ -157,6 +171,7 @@ exports[`TextField should render with defaults 1`] = `
     <ClearField />
   </span>
   <FieldMessage
+    id="testTextField-message"
     message=""
     messageProps={
       Object {
@@ -174,16 +189,17 @@ exports[`TextField should render with input props 1`] = `
   className="root"
 >
   <FieldLabel
-    id=""
+    id="testTextField"
     label=""
     raw={false}
     secondaryLabel=""
     tertiaryLabel=""
   />
   <input
+    aria-describedby="testTextField-message"
     className="input first-name-field"
     data-automation="first-name-field"
-    id="firstName"
+    id="testTextField"
   />
   <span
     className="clearField"
@@ -192,6 +208,7 @@ exports[`TextField should render with input props 1`] = `
     <ClearField />
   </span>
   <FieldMessage
+    id="testTextField-message"
     message=""
     messageProps={
       Object {
@@ -209,14 +226,16 @@ exports[`TextField should render with valid false 1`] = `
   className="root invalid"
 >
   <FieldLabel
-    id=""
+    id="testTextField"
     label=""
     raw={false}
     secondaryLabel=""
     tertiaryLabel=""
   />
   <input
+    aria-describedby="testTextField-message"
     className="input"
+    id="testTextField"
   />
   <span
     className="clearField"
@@ -225,6 +244,7 @@ exports[`TextField should render with valid false 1`] = `
     <ClearField />
   </span>
   <FieldMessage
+    id="testTextField-message"
     message=""
     messageProps={
       Object {

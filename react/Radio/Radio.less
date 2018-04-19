@@ -14,12 +14,17 @@
   height: @circumference;
   border: none;
   margin: 0;
+  cursor: pointer;
 }
 
 .label {
   display: flex;
   cursor: pointer;
   align-items: center;
+
+  :global(*) {
+    pointer-events: none;
+  }
 }
 
 .labelText {
@@ -63,7 +68,7 @@
   }
 
   &.circle_isHover {
-    fill: @sk-gray-lightest;
+    fill: @sk-gray-light;
 
     .input:focus:not(:checked) + .label &,
     .input:hover:not(:checked) + .label & {

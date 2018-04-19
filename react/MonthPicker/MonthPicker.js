@@ -9,7 +9,6 @@ import CustomMonthPicker from './CustomMonthPicker/CustomMonthPicker';
 import NativeMonthPicker from './NativeMonthPicker/NativeMonthPicker';
 
 import FieldMessage from '../private/FieldMessage/FieldMessage';
-import FieldLabel from '../private/FieldLabel/FieldLabel';
 
 const currYear = new Date().getFullYear();
 
@@ -17,18 +16,8 @@ export default class MonthPicker extends Component {
   static displayName = 'MonthPicker';
 
   static propTypes = {
-    /* eslint-disable consistent-return */
-    id: (props, propName, componentName) => {
-      const { id } = props;
-
-      if (typeof id !== 'string') {
-        return new Error(
-          `Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`
-        );
-      }
-    },
+    id: PropTypes.string.isRequired,
     className: PropTypes.string,
-    /* eslint-enable consistent-return */
     valid: PropTypes.bool,
     value: PropTypes.shape({
       month: PropTypes.number,
@@ -43,7 +32,6 @@ export default class MonthPicker extends Component {
   };
 
   static defaultProps = {
-    id: '',
     className: '',
     native: false,
     maxYear: currYear,
@@ -69,16 +57,23 @@ export default class MonthPicker extends Component {
       maxYear,
       ascendingYears
     } = this.props;
+    // eslint-disable-next-line react/prop-types
+    const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
+
     const monthPickerProps = {
-      className: styles.input,
-      ...(id ? { id } : {}),
+      id,
       value,
       onChange,
       onBlur,
       valid,
       minYear,
       maxYear,
-      ascendingYears
+      ascendingYears,
+      label,
+      labelProps,
+      secondaryLabel,
+      tertiaryLabel,
+      fieldMessageId: `${id}-message`
     };
 
     return native ? (
@@ -89,7 +84,7 @@ export default class MonthPicker extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { id, className } = this.props;
     const classNames = classnames({
       [styles.root]: true,
       [className]: className
@@ -97,11 +92,6 @@ export default class MonthPicker extends Component {
 
     /* eslint-disable react/prop-types */
     const {
-      id,
-      label,
-      labelProps,
-      secondaryLabel,
-      tertiaryLabel,
       invalid,
       help,
       helpProps,
@@ -113,12 +103,9 @@ export default class MonthPicker extends Component {
 
     return (
       <div className={classNames}>
-        <FieldLabel
-          {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }}
-        />
         {this.renderInput()}
         <FieldMessage
-          {...{ invalid, help, helpProps, valid, message, messageProps }}
+          {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }}
         />
       </div>
     );

@@ -3,7 +3,6 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
 import { createRenderer } from 'react-test-renderer/shallow';
-import { findAllWithClass } from 'react-shallow-testutils';
 import MonthPicker from './MonthPicker';
 
 chai.use(sinonChai);
@@ -11,7 +10,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('MonthPicker', () => {
-  let element, monthPicker, input, errors;
+  let element, monthPicker, errors;
 
   beforeEach(() => {
     errors = [];
@@ -27,12 +26,11 @@ describe('MonthPicker', () => {
 
   function render(jsx) {
     element = jsx;
-    monthPicker = renderer.render(element);
-    input = findAllWithClass(monthPicker, 'input')[0] || null;
+    monthPicker = renderer.render(element).props.children[0];
   }
 
   it('should have a displayName', () => {
-    render(<MonthPicker />);
+    render(<MonthPicker id="testMonthPicker" />);
     expect(element.type.displayName).to.equal('MonthPicker');
   });
 
@@ -44,43 +42,38 @@ describe('MonthPicker', () => {
   });
 
   describe('input', () => {
-    it('should not have an `id` if it is not specified', () => {
-      render(<MonthPicker />);
-      expect(input.props).not.to.include.keys('id');
-    });
-
     it('should render the `CustomMonthPicker` when native is not set', () => {
-      render(<MonthPicker />);
-      expect(input.type.displayName).to.equal('CustomMonthPicker');
+      render(<MonthPicker id="testMonthPicker" />);
+      expect(monthPicker.type.displayName).to.equal('CustomMonthPicker');
     });
 
     it('should render the `NativeMonthPicker` when native is true', () => {
-      render(<MonthPicker native={true} />);
-      expect(input.type.displayName).to.equal('NativeMonthPicker');
+      render(<MonthPicker id="testMonthPicker" native={true} />);
+      expect(monthPicker.type.displayName).to.equal('NativeMonthPicker');
     });
   });
 
   describe('onChange', () => {
     it('should pass onChange prop through to input', () => {
       const onChange = () => {};
-      render(<MonthPicker onChange={onChange} />);
-      expect(input.props.onChange).to.equal(onChange);
+      render(<MonthPicker id="testMonthPicker" onChange={onChange} />);
+      expect(monthPicker.props.onChange).to.equal(onChange);
     });
   });
 
   describe('onBlur', () => {
     it('should pass onBlur prop through to input', () => {
       const onBlur = () => {};
-      render(<MonthPicker onBlur={onBlur} />);
-      expect(input.props.onBlur).to.equal(onBlur);
+      render(<MonthPicker id="testMonthPicker" onBlur={onBlur} />);
+      expect(monthPicker.props.onBlur).to.equal(onBlur);
     });
   });
 
   describe('value', () => {
     it('should pass value prop through to input', () => {
       const value = { month: 1, year: 2000 };
-      render(<MonthPicker value={value} />);
-      expect(input.props.value).to.equal(value);
+      render(<MonthPicker id="testMonthPicker" value={value} />);
+      expect(monthPicker.props.value).to.equal(value);
     });
   });
 });

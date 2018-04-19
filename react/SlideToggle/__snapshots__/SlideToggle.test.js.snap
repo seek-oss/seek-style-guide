@@ -1,152 +1,133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Slide toggle: should render a checked state 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
+  <input
+    aria-label="Test toggle"
+    checked={true}
+    className="input"
+    id="testSlideToggle"
+    type="checkbox"
+  />
+  <label
     className="switch"
+    htmlFor="testSlideToggle"
   >
-    <input
-      aria-label="Test toggle"
-      checked={true}
-      className="input"
-      id="testToggle"
-      type="checkbox"
-    />
     <div
-      className="slider"
+      className="slideContainer"
     >
       <div
+        className="slider"
+      />
+      <TickIcon
         className="slideButton"
-      >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
-      </div>
+        svgClassName="svg"
+      />
     </div>
-    <Text
-      baseline={false}
-      className="label labelRight"
+    <span
+      className="labelText labelRight"
     >
-      <span
-        className="labelText"
-      >
-        Test toggle
-      </span>
-    </Text>
-  </div>
-</label>
+      Test toggle
+    </span>
+  </label>
+</div>
 `;
 
 exports[`Slide toggle: should render with default props 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
+  <input
+    aria-label="Test toggle"
+    className="input"
+    id="testSlideToggle"
+    type="checkbox"
+  />
+  <label
     className="switch"
+    htmlFor="testSlideToggle"
   >
-    <input
-      aria-label="Test toggle"
-      className="input"
-      id="testToggle"
-      type="checkbox"
-    />
     <div
-      className="slider"
+      className="slideContainer"
     >
       <div
+        className="slider"
+      />
+      <TickIcon
         className="slideButton"
-      >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
-      </div>
+        svgClassName="svg"
+      />
     </div>
-    <Text
-      baseline={false}
-      className="label labelRight"
+    <span
+      className="labelText labelRight"
     >
-      <span
-        className="labelText"
-      >
-        Test toggle
-      </span>
-    </Text>
-  </div>
-</label>
+      Test toggle
+    </span>
+  </label>
+</div>
 `;
 
 exports[`Slide toggle: should render with the label hidden 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
+  <input
+    aria-label="Test toggle"
+    className="input"
+    id="testSlideToggle"
+    type="checkbox"
+  />
+  <label
     className="switch"
+    htmlFor="testSlideToggle"
   >
-    <input
-      aria-label="Test toggle"
-      className="input"
-      id="testToggle"
-      type="checkbox"
-    />
     <div
-      className="slider"
+      className="slideContainer"
     >
       <div
+        className="slider"
+      />
+      <TickIcon
         className="slideButton"
-      >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
-      </div>
+        svgClassName="svg"
+      />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Slide toggle: should render with the label on the left 1`] = `
-<label
+<div
   className="root"
-  htmlFor="testToggle"
 >
-  <div
+  <input
+    aria-label="Test toggle"
+    className="input inputLeft"
+    id="testSlideToggle"
+    type="checkbox"
+  />
+  <label
     className="switch"
+    htmlFor="testSlideToggle"
   >
-    <input
-      aria-label="Test toggle"
-      className="input inputLeft"
-      id="testToggle"
-      type="checkbox"
-    />
-    <Text
-      baseline={false}
-      className="label labelLeft"
+    <span
+      className="labelText labelLeft"
     >
-      <span
-        className="labelText"
-      >
-        Test toggle
-      </span>
-    </Text>
+      Test toggle
+    </span>
     <div
-      className="slider"
+      className="slideContainer"
     >
       <div
+        className="slider"
+      />
+      <TickIcon
         className="slideButton"
-      >
-        <TickIcon
-          className="icon"
-          svgClassName="svg"
-        />
-      </div>
+        svgClassName="svg"
+      />
     </div>
-  </div>
-</label>
+  </label>
+</div>
 `;

@@ -44,4 +44,3 @@ Icon.defaultProps = {
 };
 
 export default withTextProps(Icon);
-

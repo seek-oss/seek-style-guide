@@ -3,10 +3,11 @@ import styles from './CustomMonthPicker.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import classnames from 'classnames';
-
 import getYearOptions from './getYearOptions';
 import Dropdown from '../../Dropdown/Dropdown';
+
+import FieldLabel from '../../private/FieldLabel/FieldLabel';
+import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const months = [
   { value: '1', label: 'Jan' },
@@ -27,6 +28,7 @@ export default class CustomMonthPicker extends Component {
   static displayName = 'CustomMonthPicker';
 
   static propTypes = {
+    id: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     value: PropTypes.shape({
@@ -34,16 +36,14 @@ export default class CustomMonthPicker extends Component {
       year: PropTypes.number
     }),
     valid: PropTypes.bool,
-    className: PropTypes.string,
-    id: PropTypes.string,
     minYear: PropTypes.number.isRequired,
     maxYear: PropTypes.number.isRequired,
-    ascendingYears: PropTypes.bool.isRequired
+    ascendingYears: PropTypes.bool.isRequired,
+    fieldMessageId: PropTypes.string.isRequired
   };
 
   static defaultProps = {
-    value: {},
-    className: ''
+    value: {}
   };
 
   constructor({ minYear, maxYear, ascendingYears }) {
@@ -132,47 +132,69 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { value, className, valid, id } = this.props;
+    const { id, value, valid, fieldMessageId } = this.props;
+    // eslint-disable-next-line react/prop-types
+    const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
+
     const { month, year } = value;
     const monthValue = String(month || '');
     const yearValue = String(year || '');
 
-    const rootClasses = classnames({
-      [styles.root]: true,
-      [className]: className
-    });
+    const sharedInputProps = {
+      onBlur: this.handleBlur,
+      'aria-describedby': fieldMessageId
+    };
 
     return (
-      <div className={rootClasses}>
-        <Dropdown
-          {...(id ? { id } : {})}
-          options={months}
-          className={styles.dropdown}
-          valid={valid}
-          message={false}
-          placeholder="Month"
-          inputProps={{
-            onBlur: this.handleBlur,
-            onChange: this.handleMonthChange,
-            value: monthValue,
-            className: styles.dropdownInput,
-            ref: this.storeMonthReference
+      <div>
+        <FieldLabel
+          {...{
+            id: `${id}-month`,
+            label: <span>{label}<ScreenReaderOnly> Month</ScreenReaderOnly></span>,
+            labelProps,
+            secondaryLabel,
+            tertiaryLabel
           }}
         />
-        <Dropdown
-          options={this.yearOptions}
-          className={styles.dropdown}
-          valid={valid}
-          message={false}
-          placeholder="Year"
-          inputProps={{
-            onBlur: this.handleBlur,
-            onChange: this.handleYearChange,
-            value: yearValue,
-            className: styles.dropdownInput,
-            ref: this.storeYearReference
+        <FieldLabel
+          {...{
+            id: `${id}-year`,
+            label: <ScreenReaderOnly>{label} Year</ScreenReaderOnly>,
+            raw: true
           }}
         />
+
+        <div className={styles.dropdownWrapper}>
+          <Dropdown
+            id={`${id}-month`}
+            options={months}
+            className={styles.dropdown}
+            valid={valid}
+            message={false}
+            placeholder="Month"
+            inputProps={{
+              onChange: this.handleMonthChange,
+              value: monthValue,
+              ref: this.storeMonthReference,
+              ...sharedInputProps
+            }}
+          />
+
+          <Dropdown
+            id={`${id}-year`}
+            options={this.yearOptions}
+            className={styles.dropdown}
+            valid={valid}
+            message={false}
+            placeholder="Year"
+            inputProps={{
+              onChange: this.handleYearChange,
+              value: yearValue,
+              ref: this.storeYearReference,
+              ...sharedInputProps
+            }}
+          />
+        </div>
       </div>
     );
   }

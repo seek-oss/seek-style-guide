@@ -8,7 +8,7 @@ exports[`Autosuggest should render with label 1`] = `
     >
       <label
         class=""
-        for="Foo"
+        for="testAutosuggest"
       >
         <span
           class="root standard baseline"
@@ -27,11 +27,12 @@ exports[`Autosuggest should render with label 1`] = `
       </label>
       <input
         aria-autocomplete="list"
+        aria-describedby="testAutosuggest-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
         class="input"
-        id="Foo"
+        id="testAutosuggest"
         role="combobox"
         type="text"
         value=""
@@ -72,7 +73,7 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
     >
       <label
         class="isLabelCoveredWithBackdrop LABEL_TEST_CLASS"
-        for="Foo"
+        for="testAutosuggest"
       >
         <span
           class="root standard baseline"
@@ -91,11 +92,12 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
       </label>
       <input
         aria-autocomplete="list"
+        aria-describedby="testAutosuggest-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
         class="input"
-        id="Foo"
+        id="testAutosuggest"
         role="combobox"
         type="text"
         value=""
@@ -136,10 +138,12 @@ exports[`Autosuggest should render with simple props 1`] = `
     >
       <input
         aria-autocomplete="list"
+        aria-describedby="testAutosuggest-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
         class="input"
+        id="testAutosuggest"
         role="combobox"
         type="text"
         value=""
@@ -180,10 +184,12 @@ exports[`Autosuggest should render with suggestions 1`] = `
     >
       <input
         aria-autocomplete="list"
+        aria-describedby="testAutosuggest-message"
         aria-expanded="true"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
         class="input"
+        id="testAutosuggest"
         role="combobox"
         type="text"
         value=""

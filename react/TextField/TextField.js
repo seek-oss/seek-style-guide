@@ -32,15 +32,7 @@ export default class TextField extends Component {
   static displayName = 'TextField';
 
   static propTypes = {
-    /* eslint-disable consistent-return */
-    id: (props, propName, componentName) => {
-      const { id } = props;
-
-      if (typeof id !== 'string') {
-        return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
-      }
-    },
-    /* eslint-enable consistent-return */
+    id: PropTypes.string.isRequired,
     className: PropTypes.string,
     valid: PropTypes.bool,
     /* eslint-disable consistent-return */
@@ -61,7 +53,6 @@ export default class TextField extends Component {
   };
 
   static defaultProps = {
-    id: '',
     className: ''
   };
 
@@ -92,12 +83,13 @@ export default class TextField extends Component {
   }
 
   renderInput() {
-    const { inputProps = {}, id } = this.props;
+    const { id, inputProps = {} } = this.props;
     const { ref } = inputProps;
     const allInputProps = {
+      id,
       ...combineClassNames(inputProps, styles.input),
-      ...(id ? { id } : {}),
-      ref: attachRefs(this.storeInputReference, ref)
+      ref: attachRefs(this.storeInputReference, ref),
+      'aria-describedby': `${id}-message`
     };
 
     return (
@@ -116,7 +108,7 @@ export default class TextField extends Component {
   }
 
   render() {
-    const { className, valid, onClear, inputProps = {} } = this.props;
+    const { id, className, valid, onClear, inputProps = {} } = this.props;
     const hasValue = (inputProps.value && inputProps.value.length > 0);
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
@@ -127,14 +119,14 @@ export default class TextField extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { id, label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
+    const { label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
       <div ref={this.storeContainerReference} className={classNames}>
         <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderInput()}
         {this.renderClear()}
-        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }

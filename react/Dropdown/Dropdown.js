@@ -23,15 +23,7 @@ export default class Dropdown extends Component {
   static displayName = 'Dropdown';
 
   static propTypes = {
-    /* eslint-disable consistent-return */
-    id: (props, propName, componentName) => {
-      const { id } = props;
-
-      if (typeof id !== 'string') {
-        return new Error(`Invalid prop \`id\` of type \`${typeof id}\` supplied to \`${componentName}\`, expected \`string\`.`);
-      }
-    },
-    /* eslint-enable consistent-return */
+    id: PropTypes.string.isRequired,
     className: PropTypes.string,
     valid: PropTypes.bool,
     /* eslint-disable consistent-return */
@@ -68,7 +60,6 @@ export default class Dropdown extends Component {
   };
 
   static defaultProps = {
-    id: '',
     className: '',
     placeholder: '',
     options: []
@@ -89,14 +80,15 @@ export default class Dropdown extends Component {
     </option>);
   }
   renderSelect() {
-    const { inputProps, id, options, placeholder } = this.props;
+    const { id, inputProps, options, placeholder } = this.props;
     const inputStyles = classnames({
       [styles.dropdown]: true,
       [styles.placeholderSelected]: !inputProps.value
     });
     const allInputProps = {
-      ...combineClassNames(inputProps, inputStyles),
-      ...(id ? { id } : {})
+      id,
+      'aria-describedby': `${id}-message`, // Order is important here so passed in inputProps can overide this if requried
+      ...combineClassNames(inputProps, inputStyles)
     };
 
     return (
@@ -130,7 +122,7 @@ export default class Dropdown extends Component {
   }
 
   render() {
-    const { className, valid } = this.props;
+    const { id, className, valid } = this.props;
     const classNames = classnames({
       [styles.root]: true,
       [styles.invalid]: valid === false,
@@ -138,14 +130,14 @@ export default class Dropdown extends Component {
     });
 
     // eslint-disable-next-line react/prop-types
-    const { id, label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
+    const { label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
       <div className={classNames}>
         <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage {...{ invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
       </div>
     );
   }

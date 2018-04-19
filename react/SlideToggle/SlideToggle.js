@@ -1,9 +1,8 @@
-import styles from './SlideToggle.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TickIcon from '../TickIcon/TickIcon';
-import Text from '../Text/Text';
 import classnames from 'classnames';
+import styles from './SlideToggle.less';
 
 const LEFT = 'left';
 const RIGHT = 'right';
@@ -28,15 +27,13 @@ export default class SlideToggle extends Component {
   renderLabel = currentPosition => {
     const { label, hideLabel, children, position } = this.props;
     const labelStyle = classnames(
-      styles.label,
+      styles.labelText,
       position === LEFT ? styles.labelLeft : styles.labelRight
     );
     return hideLabel !== true && position === currentPosition && !children && (
-      <Text
-        className={labelStyle}
-        baseline={false}>
-        <span className={styles.labelText}>{label}</span>
-      </Text>
+      <span className={labelStyle}>
+        {label}
+      </span>
     );
   }
 
@@ -49,29 +46,28 @@ export default class SlideToggle extends Component {
     });
 
     return (
-      <label htmlFor={id} className={classnames(styles.root, className)}>
-        <div className={styles.switch}>
-          <input
-            ref={this.storeInputRef}
-            type="checkbox"
-            id={id}
-            aria-label={label}
-            className={inputStyles}
-            checked={checked}
-            onChange={onChange}
-          />
+      <div className={classnames(styles.root, className)}>
+        <input
+          id={id}
+          ref={this.storeInputRef}
+          type="checkbox"
+          aria-label={label}
+          className={inputStyles}
+          checked={checked}
+          onChange={onChange}
+        />
+        <label htmlFor={id} className={styles.switch}>
           {this.renderLabel(LEFT)}
-          <div className={styles.slider}>
-            <div className={styles.slideButton}>
-              <TickIcon
-                className={styles.icon}
-                svgClassName={styles.svg}
-              />
-            </div>
+          <div className={styles.slideContainer}>
+            <div className={styles.slider} />
+            <TickIcon
+              className={styles.slideButton}
+              svgClassName={styles.svg}
+            />
           </div>
           {this.renderLabel(RIGHT)}
-        </div>
-      </label>
+        </label>
+      </div>
     );
   }
 }

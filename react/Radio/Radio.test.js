@@ -5,7 +5,7 @@ import Radio from './Radio';
 
 describe('Radio', () => {
   const requiredProps = {
-    id: 'still-in-role',
+    id: 'testRadio',
     label: 'Still in role'
   };
 

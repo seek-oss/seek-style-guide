@@ -6,7 +6,7 @@ import CustomMonthPicker from './CustomMonthPicker';
 import {
   renderIntoDocument,
   Simulate,
-  scryRenderedDOMComponentsWithClass
+  scryRenderedDOMComponentsWithTag
 } from 'react-dom/test-utils';
 import { createRenderer } from 'react-test-renderer/shallow';
 import { findAllWithClass } from 'react-shallow-testutils';
@@ -42,25 +42,25 @@ describe('CustomMonthPicker', () => {
     element = jsx;
     monthPicker = renderIntoDocument(element);
     monthDropdown =
-      scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[0] ||
+      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[0] ||
       null;
     yearDropdown =
-      scryRenderedDOMComponentsWithClass(monthPicker, 'dropdownInput')[1] ||
+      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[1] ||
       null;
   }
 
   it('should have a displayName', () => {
-    render(<CustomMonthPicker />);
+    render(<CustomMonthPicker id="testCustomMonthPicker" fieldMessageId="testCustomMonthPicker-message" />);
     expect(element.type.displayName).to.equal('CustomMonthPicker');
   });
 
   it('should render without exploding', () => {
-    render(<CustomMonthPicker />);
+    render(<CustomMonthPicker id="testCustomMonthPicker" fieldMessageId="testCustomMonthPicker-message" />);
     expect(errors.length).to.equal(0);
   });
 
   it('should send valid prop to false to both dropdowns when valid is false', () => {
-    render(<CustomMonthPicker valid={false} />);
+    render(<CustomMonthPicker id="testCustomMonthPicker" valid={false} fieldMessageId="testCustomMonthPicker-message" />);
     expect(monthDropdown.props.valid).to.equal(false);
     expect(yearDropdown.props.valid).to.equal(false);
   });
@@ -71,10 +71,12 @@ describe('CustomMonthPicker', () => {
     };
     renderToDom(
       <CustomMonthPicker
+        id="testCustomMonthPicker"
         minYear={2000}
         maxYear={2010}
         onChange={onChange}
         value={{ month: 6, year: 2010 }}
+        fieldMessageId="testCustomMonthPicker-message"
       />
     );
     monthDropdown.value = '11';
@@ -91,10 +93,12 @@ describe('CustomMonthPicker', () => {
     };
     renderToDom(
       <CustomMonthPicker
+        id="testCustomMonthPicker"
         minYear={1990}
         maxYear={2010}
         onChange={onChange}
         value={{ month: 6, year: 2010 }}
+        fieldMessageId="testCustomMonthPicker-message"
       />
     );
     yearDropdown.value = '1999';
