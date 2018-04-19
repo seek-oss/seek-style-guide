@@ -13,6 +13,11 @@ describe('Rating', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render with description', () => {
+    const wrapper = render(<Rating rating={5.0} description="overall rating from..." />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe('should render correct star rating', () => {
     const ratings = [2.74, 2.75, 3.74, 3.75, 0.0, 5.0];
 

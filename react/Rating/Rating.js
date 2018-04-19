@@ -33,6 +33,7 @@ const getStar = (
 };
 
 const Rating = ({
+  description,
   rating,
   starClassName,
   showTextRating,
@@ -60,8 +61,10 @@ const Rating = ({
             size
           );
         })}
-        {showTextRating &&
-          <span className={styles.textRating}>{rating.toFixed(1)}</span>
+        {(showTextRating || Boolean(description)) &&
+          <span className={styles.textRating}>
+            {rating.toFixed(1)}{description ? ` ${description}` : ''}
+          </span>
         }
       </span>
     </Text>
@@ -75,6 +78,7 @@ Rating.propTypes = {
   className: PropTypes.string,
   starClassName: PropTypes.string,
   showTextRating: PropTypes.bool,
+  description: PropTypes.any,
   ...SizePropTypes
 };
 
