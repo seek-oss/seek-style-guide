@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="31px" viewBox="0 0 20 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(1.000000, 1.000000)" stroke="#404040" stroke-width="1.92">
+            <path d="M8.999,0 C4.031,0 0,3.95397654 0,8.82802998 C0,10.6681838 0.572,12.3788598 1.555,13.7913446 C1.595,13.8452937 1.631,13.9012045 1.671,13.9561345 L1.891,14.2454977 C1.891,14.2454977 4.76,18.4790285 4.76,23.1000118 L4.76,25 L13.239,25 L13.239,23.1000118 C13.239,18.4790285 16.109,14.2454977 16.109,14.2454977 L16.483,13.7364146 C16.508,13.6991407 16.535,13.6608859 16.562,13.6226311 C17.472,12.240554 18,10.5955978 18,8.82802998 C18,3.95397654 13.973,0 8.999,0 Z" id="Stroke-1"></path>
+            <path d="M7.77916212,19 L6,13 C6,13 8.81358044,15.1324263 12,13 L10.6833827,19" id="Stroke-3"></path>
+            <path d="M5,29 L13,29" id="Stroke-5"></path>
+            <path d="M5,20 L13,20" id="Stroke-7"></path>
+        </g>
+    </g>
+</svg>

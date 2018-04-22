@@ -1,4 +1,7 @@
 import Rating from './Rating';
+import React from 'react';
+
+const Description = () => (<span>overall rating</span>);
 
 export default {
   route: '/rating',
@@ -19,6 +22,14 @@ export default {
           transformProps: ({ ...props }) => ({
             ...props,
             showTextRating: true
+          })
+        },
+        {
+          label: 'Show rating text with description',
+          transformProps: ({ ...props }) => ({
+            ...props,
+            showTextRating: true,
+            description: <Description />
           })
         }
       ]
