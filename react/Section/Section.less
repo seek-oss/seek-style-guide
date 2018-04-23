@@ -5,14 +5,13 @@
 
 .root {
   padding: (@row-height * 3) @gutter-width;
-  
+
   &:not(.fixedGutter) {
     @media @gutter-breakpoint {
       padding-left: @desktop-side-padding;
       padding-right: @desktop-side-padding;
     }
   }
-
 
   &.pullout {
     margin: 0 (-@gutter-width);
