@@ -14,19 +14,18 @@
   border-radius: @staticTagHeight / 2;
   height: @staticTagHeight;
   line-height: @staticTagHeight;
-  padding: 0 15px;
+  padding: 0 @field-gutter-width;
   margin: @row-height 10px @row-height 0;
 }
 
 .interactivePill {
   align-items: center;
   display: inline-flex;
-  font-size: 18px;
   background: @sk-gray-light;
-  border-radius: 24px;
+  border-radius: @interactiveTagHeight / 2;
   height: @interactiveTagHeight;
   line-height: @interactiveTagHeight;
-  padding: 0 0 0 24px;
+  padding: 0 0 0 (@interactiveTagHeight / 2);
   margin: @row-height 10px @row-height 0;
 }
 
@@ -36,7 +35,6 @@
   height: @interactiveTagHeight - 2;
   width: @interactiveTagHeight - 2;
   color: @sk-white;
-  border-radius: 0;
   background: transparent;
   appearance: none;
   box-shadow: none;
@@ -79,7 +77,7 @@
 }
 
 .removeIcon {
-  height: 12px;
+  height: @removeCircleDiameter / 2;
 }
 
 .removeSvg {
