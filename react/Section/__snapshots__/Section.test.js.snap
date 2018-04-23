@@ -65,6 +65,14 @@ exports[`Section: should render the slim style 1`] = `
 </div>
 `;
 
+exports[`Section: should render with fixed gutter 1`] = `
+<div
+  className="root fixedGutter"
+>
+  Test content
+</div>
+`;
+
 exports[`Section: types: should render critical sections 1`] = `
 <div
   className="root critical"
