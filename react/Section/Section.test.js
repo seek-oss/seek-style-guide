@@ -43,6 +43,11 @@ describe('Section:', () => {
     });
   });
 
+  it('should render with fixed gutter', () => {
+    const section = renderSection({ fixedGutter: true });
+    expect(section).toMatchSnapshot();
+  });
+
   it('should render the pullout style', () => {
     const section = renderSection({ pullout: true });
     expect(section).toMatchSnapshot();

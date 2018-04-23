@@ -55,6 +55,13 @@ export default {
           })
         },
         {
+          label: 'FixedGutter',
+          transformProps: props => ({
+            ...props,
+            fixedGutter: true
+          })
+        },
+        {
           label: 'Slim',
           transformProps: props => ({
             ...props,

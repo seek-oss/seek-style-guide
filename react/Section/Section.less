@@ -1,18 +1,25 @@
 @import (reference) "~seek-style-guide/theme";
 
 @gutter-breakpoint: %(~"only screen and (min-width: %s)", (@container-width + (@gutter-width * 2)));
+@desktop-side-padding: (@gutter-width * 1.5);
 
 .root {
   padding: (@row-height * 3) @gutter-width;
-  @media @gutter-breakpoint {
-    padding-left: (@gutter-width * 1.5);
-    padding-right: (@gutter-width * 1.5);
+
+  &:not(.fixedGutter) {
+    @media @gutter-breakpoint {
+      padding-left: @desktop-side-padding;
+      padding-right: @desktop-side-padding;
+    }
   }
 
   &.pullout {
     margin: 0 (-@gutter-width);
-    @media @gutter-breakpoint {
-      margin: 0 (-@gutter-width * 1.5);
+
+    &:not(.fixedGutter) {
+      @media @gutter-breakpoint {
+        margin: 0 -@desktop-side-padding;
+      }
     }
   }
 

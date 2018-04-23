@@ -25,6 +25,7 @@ export default function Section({
   slim,
   tone,
   level,
+  fixedGutter,
   ...restProps
 }) {
   return (
@@ -33,6 +34,7 @@ export default function Section({
       className={classnames({
         [className]: className,
         [styles.root]: true,
+        [styles.fixedGutter]: fixedGutter,
         [styles.header]: header,
         [styles.pullout]: pullout,
         [styles.slim]: slim,
@@ -49,6 +51,7 @@ Section.propTypes = {
   className: PropTypes.string,
   header: PropTypes.bool,
   pullout: PropTypes.bool,
+  fixedGutter: PropTypes.bool,
   slim: PropTypes.bool,
   tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP]),
   level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY])
@@ -58,5 +61,6 @@ Section.defaultProps = {
   className: '',
   header: false,
   pullout: false,
+  fixedGutter: false,
   slim: false
 };
