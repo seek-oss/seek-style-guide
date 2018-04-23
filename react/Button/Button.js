@@ -24,7 +24,6 @@ export default class Button extends Component {
       PropTypes.func,
       PropTypes.string
     ]),
-    ghost: PropTypes.bool,
     isJobsDB: PropTypes.bool,
     isJobStreet: PropTypes.bool,
     loading: PropTypes.bool,
@@ -36,7 +35,6 @@ export default class Button extends Component {
 
   static defaultProps = {
     className: '',
-    ghost: false,
     loading: false,
     fullWidth: false,
     component: 'button'
@@ -49,7 +47,7 @@ export default class Button extends Component {
   }
 
   render() {
-    const { color, inverse, compact, ghost, className, loading, fullWidth, children, component, disabled, ...restProps } = this.props;
+    const { color, inverse, compact, className, loading, fullWidth, children, component, disabled, ...restProps } = this.props;
 
     const combinedProps = {
       className: classnames(styles.root, className, {
@@ -65,7 +63,6 @@ export default class Button extends Component {
         [styles.root_highlight]: color === 'highlight' && !disabled,
         [styles.root_isTransparent]: color === 'transparent' && !disabled,
         [styles.root_isInverse]: inverse && color !== 'transparent' && !disabled,
-        [styles.root_isGhost]: ghost && !inverse && color !== 'transparent' && !disabled,
         [styles.disabled]: disabled,
         [styles[`root_is${capitalize(color)}`]]: color && !disabled
       }),

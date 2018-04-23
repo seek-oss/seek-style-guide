@@ -54,13 +54,6 @@ export default {
           })
         },
         {
-          label: 'Ghost',
-          transformProps: props => ({
-            ...props,
-            ghost: true
-          })
-        },
-        {
           label: 'Inverse',
           transformProps: props => ({
             ...props,

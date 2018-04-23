@@ -52,28 +52,6 @@
   });
 }
 
-.ghostColor(@color) {
-
-  .activeBackground() {
-    background-color: lighten(@color, 51%);
-  }
-
-  border-color: @color;
-  color: @color;
-
-  .hoverState({
-    background-color: lighten(@color, 56%);
-  });
-
-  .activeState({
-    .activeBackground;
-  });
-
-  .focusState({
-    .activeBackground;
-  });
-}
-
 .root {
   .touchableText(@waving-type-scale);
   display: inline-block;
@@ -117,20 +95,12 @@
   .inverseColor(@saWhite, @saBlue);
 }
 
-.root_callToAction.root_isGhost {
-  .ghostColor(@saBlue);
-}
-
 .jobStreet.root_callToAction {
   .buttonColor(@sk-black, @actionYellow);
 }
 
 .jobStreet.root_callToAction.root_isInverse {
   .inverseColor(@sk-black, @actionYellow);
-}
-
-.jobStreet.root_callToAction.root_isGhost {
-  .ghostColor(@actionYellow);
 }
 
 .jobsDB.root_callToAction {
@@ -141,20 +111,12 @@
   .inverseColor(@saWhite, @actionOrange);
 }
 
-.jobsDB.root_callToAction.root_isGhost {
-  .ghostColor(@actionOrange);
-}
-
 .root_hyperlink {
   .buttonColor(@saWhite, @actionBlue);
 }
 
 .root_hyperlink.root_isInverse {
   .inverseColor(@saWhite, @actionBlue);
-}
-
-.root_hyperlink.root_isGhost {
-  .ghostColor(@actionBlue);
 }
 
 .root_completion {
@@ -165,10 +127,6 @@
   .inverseColor(@saWhite, @actionGreen);
 }
 
-.root_completion.root_isGhost {
-  .ghostColor(@actionGreen);
-}
-
 .root_alert {
   .buttonColor(@saWhite, @actionRed);
 }
@@ -177,39 +135,13 @@
   .inverseColor(@saWhite, @actionRed);
 }
 
-.root_alert.root_isGhost {
-  .ghostColor(@actionRed);
-}
-
 .root_highlight {
   .buttonColor(@actionBlue, @actionPastelBlue);
 }
 
 .root_highlight.root_isInverse {
   .inverseColor(@actionBlue, @actionPastelBlue);
-}
-
-.root_highlight.root_isGhost {
-  .ghostColor(@actionPastelBlue);
-}
-
-.root_isGhost,
-.root_isTransparent {
-  font-weight: @sk-regular;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.root_isGhost {
-  @border-width: 2px;
-
-  border: @border-width solid;
-  font-weight: @sk-bold;
-  line-height: @touchableTextHeight - (@border-width * 2);
-
-  &.compact {
-    line-height: @compactTouchableTextHeight - 4px;
-  }
+  border: 1px solid @actionBlue;
 }
 
 .root_isTransparent {

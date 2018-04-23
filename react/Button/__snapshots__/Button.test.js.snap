@@ -27,15 +27,6 @@ exports[`Button: color variants: should render completion button 1`] = `
 </button>
 `;
 
-exports[`Button: color variants: should render ghost callToAction button 1`] = `
-<button
-  className="root root_callToAction root_isGhost root_isCalltoaction"
-  disabled={false}
->
-  SEEK
-</button>
-`;
-
 exports[`Button: color variants: should render highlight button 1`] = `
 <button
   className="root root_highlight root_isHighlight"
