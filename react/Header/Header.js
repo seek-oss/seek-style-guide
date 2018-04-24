@@ -82,7 +82,7 @@ export default class Header extends Component {
       selectCountry = true,
       authenticationStatus,
       userName,
-      menuItems
+      userAccMenuItems
 
     } = this.props;
 
@@ -124,7 +124,6 @@ export default class Header extends Component {
           {renderPrimaryNavLinks({ brandStyles }, links, styles.primaryNavLinksWrapper)}
           <div className={styles.secondaryNav} />
           <UserAccount
-            language={language}
             userName={userName}
             loginAvailable={loginAvailable}
             authenticationStatus={authenticationStatus}
@@ -133,7 +132,7 @@ export default class Header extends Component {
             loginUrl={messages['header.loginUrl']}
             signupTitle={messages['header.signupTitle']}
             signupUrl={messages['header.signupUrl']}
-            menuItems={menuItems}
+            userAccMenuItems={userAccMenuItems}
           />
         </div>
         <ActionTray
@@ -178,7 +177,7 @@ Header.propTypes = {
   selectCountry: PropTypes.bool,
   authenticationStatus: PropTypes.string,
   userName: PropTypes.string,
-  menuItems: PropTypes.array
+  userAccMenuItems: PropTypes.array
 };
 
 Header.defaultProps = {

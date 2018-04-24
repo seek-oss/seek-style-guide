@@ -27,7 +27,6 @@ export default class UserAccount extends Component {
 
   render() {
     const {
-      language,
       loginAvailable,
       authenticationStatus,
       userName,
@@ -35,7 +34,8 @@ export default class UserAccount extends Component {
       loginTitle,
       loginUrl,
       signupTitle,
-      signupUrl
+      signupUrl,
+      userAccMenuItems
     } = this.props;
 
     if (loginAvailable) {
@@ -55,7 +55,7 @@ export default class UserAccount extends Component {
                 </div>
               </span>
               <span>
-                {this.state.menuOpen && <UserAccountMenu />}
+                {this.state.menuOpen && <UserAccountMenu userAccMenuItems={userAccMenuItems} />}
               </span>
             </div>
           );
@@ -90,7 +90,6 @@ export default class UserAccount extends Component {
 }
 
 UserAccount.propTypes = {
-  language: PropTypes.string,
   loginAvailable: PropTypes.bool.isRequired,
   authenticationStatus: PropTypes.string.isRequired,
   userName: PropTypes.string,
@@ -99,5 +98,6 @@ UserAccount.propTypes = {
   loginUrl: PropTypes.string,
   signupTitle: PropTypes.string,
   signupUrl: PropTypes.string,
+  userAccMenuItems: PropTypes.array,
   onMenuToggle: PropTypes.func
 };
