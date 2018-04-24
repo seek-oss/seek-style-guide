@@ -2,6 +2,7 @@ import styles from './Button.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import * as tenant from '../private/tenant';
 
 export default class Button extends Component {
   static displayName = 'Button';
@@ -42,8 +43,8 @@ export default class Button extends Component {
     const combinedProps = {
       className: classnames(styles.root, className, {
         [styles.compact]: compact,
-        [styles.jobsDB]: isJobsDB,
-        [styles.jobStreet]: isJobStreet,
+        [styles.jobsDB]: isJobsDB || tenant.isJobsDB,
+        [styles.jobStreet]: isJobStreet || tenant.isJobStreet,
         [styles.root_callToAction]: color === 'callToAction',
         [styles.root_primary]: color === 'primary',
         [styles.root_secondary]: color === 'secondary',

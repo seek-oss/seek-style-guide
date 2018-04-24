@@ -115,7 +115,7 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'None',
+          label: 'Current Tenant',
           transformProps: props => ({
             ...props
           })
