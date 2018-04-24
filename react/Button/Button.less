@@ -31,7 +31,8 @@
   padding: 0 @grid-base * 2;
   border: 0;
   border-radius: 3px;
-  transition: background-color 0.2s,
+  transition:
+    background-color 0.2s,
     transform 0.2s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   cursor: pointer;
   white-space: nowrap;
@@ -47,7 +48,7 @@
   .compactTouchableText(@whistling-type-scale);
 }
 
-.disabled:not(.root_hyperlink){
+.disabled:not(.root_hyperlink) {
   .buttonColor(@saGrey5, @saGrey4);
   cursor: default;
 }
