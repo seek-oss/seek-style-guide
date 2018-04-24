@@ -43,8 +43,7 @@ export default class UserAccount extends Component {
         case AUTHENTICATED:
           return (
             <div >
-
-              <span>
+              <span className={styles.secondaryNav}>
                 <div onClick={this.handleMenuToggleClick}>
                   <span className={styles.primaryNavLinkWrapper}>
                     <a className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
