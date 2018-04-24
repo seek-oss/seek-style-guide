@@ -1,8 +1,4 @@
-@import (reference) "~seek-asia-style-guide/theme";
-
-@keyframes loading {
-  to { width: @grid-gutter-width; }
-}
+@import (reference) '~seek-asia-style-guide/theme';
 
 .hoverState(@rules) {
   &:hover,
@@ -18,37 +14,11 @@
   }
 }
 
-.focusState(@rules) {
-  &:focus,
-  &.rootFocus {
-    @rules();
-  }
-}
-
 .buttonColor(@color, @background-color) {
   color: @color;
   background-color: @background-color;
   .hoverState({
     background-color: darken(@background-color, 5%);
-  });
-}
-
-.inverseColor(@color, @background-color) {
-  .buttonColor(@background-color, @color);
-  border: 1px solid @background-color;
-  line-height: @touchableTextHeight - 2px;
-
-  &.compact {
-    line-height: @compactTouchableTextHeight - 2px;
-  }
-
-  .hoverState({
-    .buttonColor(@background-color, fade(@background-color, 10%));
-    border: 1px solid transparent;
-  });
-
-  .activeState({
-    .buttonColor(@color, @background-color);
   });
 }
 
@@ -61,8 +31,7 @@
   padding: 0 @grid-base * 2;
   border: 0;
   border-radius: 3px;
-  transition:
-    background-color 0.2s,
+  transition: background-color 0.2s,
     transform 0.2s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   cursor: pointer;
   white-space: nowrap;
@@ -72,17 +41,13 @@
   .activeState({
     outline: none;
   });
-  .focusState({
-    .focus();
-    box-shadow:none;
-  });
 }
 
 .compact {
   .compactTouchableText(@whistling-type-scale);
 }
 
-.disabled {
+.disabled:not(.root_hyperlink){
   .buttonColor(@saGrey5, @saGrey4);
   cursor: default;
 }
@@ -91,62 +56,26 @@
   .buttonColor(@saWhite, @saBlue);
 }
 
-.root_callToAction.root_isInverse {
-  .inverseColor(@saWhite, @saBlue);
-}
-
 .jobStreet.root_callToAction {
   .buttonColor(@sk-black, @actionYellow);
-}
-
-.jobStreet.root_callToAction.root_isInverse {
-  .inverseColor(@sk-black, @actionYellow);
 }
 
 .jobsDB.root_callToAction {
   .buttonColor(@saWhite, @actionOrange);
 }
 
-.jobsDB.root_callToAction.root_isInverse {
-  .inverseColor(@saWhite, @actionOrange);
-}
-
-.root_hyperlink {
+.root_primary {
   .buttonColor(@saWhite, @actionBlue);
 }
 
-.root_hyperlink.root_isInverse {
-  .inverseColor(@saWhite, @actionBlue);
-}
-
-.root_completion {
-  .buttonColor(@saWhite, @actionGreen);
-}
-
-.root_completion.root_isInverse {
-  .inverseColor(@saWhite, @actionGreen);
-}
-
-.root_alert {
-  .buttonColor(@saWhite, @actionRed);
-}
-
-.root_alert.root_isInverse {
-  .inverseColor(@saWhite, @actionRed);
-}
-
-.root_highlight {
+.root_secondary {
   .buttonColor(@actionBlue, @actionPastelBlue);
 }
 
-.root_highlight.root_isInverse {
-  .inverseColor(@actionBlue, @actionPastelBlue);
-  border: 1px solid @actionBlue;
-}
-
-.root_isTransparent {
+.root_hyperlink {
   .touchableText(@conversational-type-scale);
   color: @hyperlink;
+  background-color: transparent;
   padding-left: 0;
   padding-right: 0;
 
@@ -157,30 +86,16 @@
   .activeState({
     transform: none;
   });
-}
 
-.root_isTransparent.compact {
-  .compactTouchableText(@whispering-type-scale);
-}
-
-.loading {
-  padding-right: @grid-gutter-width * 2;
-
-  &::after {
-    content: ' \2026';
-    text-align: left;
-    width: 0;
-    overflow-x: hidden;
-    display: inline-block;
-    position: absolute;
-    animation-duration: 0.8s;
-    animation-name: loading;
-    animation-iteration-count: infinite;
+  &.disabled {
+    color: @saGrey4;
+    text-decoration: underline;
+    cursor: default;
   }
 }
 
-.fullWidth {
-  width: 100%;
+.root_hyperlink.compact {
+  .compactTouchableText(@whispering-type-scale);
 }
 
 .group {
@@ -191,7 +106,7 @@
     @media only screen and (max-width: 500px) {
       width: 100%;
     }
-    &:not(.root_isTransparent) {
+    &:not(.root_hyperlink) {
       @media @mobile {
         padding-left: @grid-gutter-width * 2;
         padding-right: @grid-gutter-width * 2;
@@ -204,7 +119,7 @@
         margin-left: 0;
       }
     }
-    & + .root_isTransparent {
+    & + .root_hyperlink {
       margin-left: @grid-gutter-width * 2;
       @media only screen and (max-width: 500px) {
         margin-left: 0;

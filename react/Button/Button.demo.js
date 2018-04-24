@@ -33,34 +33,6 @@ export default {
           })
         },
         {
-          label: 'Focus',
-          transformProps: ({ className, ...props }) => ({
-            ...props,
-            className: classnames(className, styles.rootFocus)
-          })
-        },
-        {
-          label: 'Loading',
-          transformProps: props => ({
-            ...props,
-            loading: true
-          })
-        },
-        {
-          label: 'Full width',
-          transformProps: props => ({
-            ...props,
-            fullWidth: true
-          })
-        },
-        {
-          label: 'Inverse',
-          transformProps: props => ({
-            ...props,
-            inverse: true
-          })
-        },
-        {
           label: 'Compact',
           transformProps: props => ({
             ...props,
@@ -116,38 +88,50 @@ export default {
           })
         },
         {
+          label: 'Primary',
+          transformProps: props => ({
+            ...props,
+            color: 'primary'
+          })
+        },
+        {
+          label: 'Secondary',
+          transformProps: props => ({
+            ...props,
+            color: 'secondary'
+          })
+        },
+        {
           label: 'Hyperlink',
           transformProps: props => ({
             ...props,
             color: 'hyperlink'
           })
-        },
+        }
+      ]
+    },
+    {
+      label: 'Brand',
+      type: 'radio',
+      states: [
         {
-          label: 'Completion',
+          label: 'None',
           transformProps: props => ({
-            ...props,
-            color: 'completion'
+            ...props
           })
         },
         {
-          label: 'Alert',
+          label: 'JobStreet',
           transformProps: props => ({
             ...props,
-            color: 'alert'
+            isJobStreet: true
           })
         },
         {
-          label: 'Highlight',
+          label: 'JobsDB',
           transformProps: props => ({
             ...props,
-            color: 'highlight'
-          })
-        },
-        {
-          label: 'Transparent',
-          transformProps: props => ({
-            ...props,
-            color: 'transparent'
+            isJobsDB: true
           })
         }
       ]
