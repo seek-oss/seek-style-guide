@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Text, Button, ButtonGroup } from 'seek-asia-style-guide/react';
+import { Text } from 'seek-asia-style-guide/react';
 import Menu from './components/Menu/Menu';
 import ActionTray from './components/ActionTray/ActionTray';
 import DropdownLink from './components/DropdownLink/DropdownLink'
 import { sortCurrentLocaleToTop } from './localeUtils';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 import styles from './Header.less';
-import UserAccountMenu from './components/UserAccountMenu/UserAccountMenu';
+import UserAccount from './components/UserAccount/UserAccount';
 
 const currentLocale = ({ title, ItemIcon }) => {
   return (
@@ -26,34 +25,6 @@ currentLocale.propTypes = {
   ItemIcon: PropTypes.func
 };
 
-const renderSecondaryNavBtns = ({ btns }) => {
-  if (btns && btns.map) {
-    const secondaryNavBtns = btns.map((btn, index) => {
-        return (
-          <Button key={index} color={btn.btnColor || "hyperlink"}
-                  compact
-                  component="a"
-                  href={btn.url}>
-            {btn.title}
-          </Button>
-        );
-    });
-
-    return (
-      <div className={styles.secondaryNav}>
-        <ButtonGroup>
-          { secondaryNavBtns }
-        </ButtonGroup>
-      </div>
-    );
-  }
-  return null;
-};
-
-renderSecondaryNavBtns.propTypes = {
-  btns: PropTypes.array
-};
-
 const renderPrimaryNavLinks = ({ brandStyles }, links, _style) => {
 
   const primaryNavLinks = (links && links.map) ?
@@ -61,7 +32,7 @@ const renderPrimaryNavLinks = ({ brandStyles }, links, _style) => {
       return (
         <span key={index} className={styles.primaryNavLinkWrapper}>
           <a href={link.url} className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
-            <Text>{link.title}</Text>
+            <Text> {link.title}</Text>
             {link.showIcon && (<link.ItemIcon className={styles.icon} />)}
           </a>
         </span>
@@ -70,7 +41,7 @@ const renderPrimaryNavLinks = ({ brandStyles }, links, _style) => {
 
   return (
     <div className={_style}>
-      { primaryNavLinks }
+      {primaryNavLinks}
     </div>
   );
 };
@@ -95,7 +66,6 @@ export default class Header extends Component {
 
   render() {
     const {
-      linkRenderer,
       LogoComponent,
       logoProps,
       activeTab,
@@ -107,11 +77,13 @@ export default class Header extends Component {
       country,
       language,
       actionTrayProps,
-      btns,
-      rightLinks,
       employerSite,
       loginAvailable = false,
-      selectCountry = true
+      selectCountry = true,
+      authenticationStatus,
+      userName,
+      menuItems
+
     } = this.props;
 
     const localeList = sortCurrentLocaleToTop({ locales, country, language });
@@ -121,9 +93,10 @@ export default class Header extends Component {
       <header className={styles.root}>
         <div className={styles.externalNav}>
           {
+            // *** Country Selector ***
             selectCountry &&
             (
-              < DropdownLink links={localeList} checked={0} />
+              <DropdownLink links={localeList} checked={0} />
             ) ||
             (
               <div className={styles.locale}>
@@ -131,36 +104,38 @@ export default class Header extends Component {
               </div>
             )
           }
-        {
-          employerSite &&
-          (
-            <div>
-              <Text whispering>
-                {messages['header.employerLinkPrefix']}
-                <a className={styles.employerLink} href={messages['header.employerSiteUrl']}>
-                  {messages['header.employerSiteTitle']}
-                </a>
-              </Text>
-            </div>
-          )
-        }
+          {
+            // *** Employer div ***
+            employerSite &&
+            (
+              <div>
+                <Text whispering>
+                  {messages['header.employerLinkPrefix']}
+                  <a className={styles.employerLink} href={messages['header.employerSiteUrl']}>
+                    {messages['header.employerSiteTitle']}
+                  </a>
+                </Text>
+              </div>
+            )
+          }
         </div>
         <div className={loginAvailable ? styles.primaryNav : styles.primaryNavNoLogin}>
           <LogoComponent {...logoProps} />
-          { renderPrimaryNavLinks({ brandStyles }, links, styles.primaryNavLinksWrapper ) }
-          { renderPrimaryNavLinks({ brandStyles }, rightLinks, styles.secondaryNav ) }
-          { !rightLinks && renderSecondaryNavBtns({ btns }) }
+          {renderPrimaryNavLinks({ brandStyles }, links, styles.primaryNavLinksWrapper)}
+          <div className={styles.secondaryNav} />
+          <UserAccount
+            language={language}
+            userName={userName}
+            loginAvailable={loginAvailable}
+            authenticationStatus={authenticationStatus}
+            brandStyles={brandStyles}
+            loginTitle={messages['header.loginTitle']}
+            loginUrl={messages['header.loginUrl']}
+            signupTitle={messages['header.signupTitle']}
+            signupUrl={messages['header.signupUrl']}
+            menuItems={menuItems}
+          />
         </div>
-
-        {
-          rightLinks && (
-            <UserAccountMenu
-              rightLinks={rightLinks}
-              linkRenderer={linkRenderer}
-            />
-          )
-        }
-
         <ActionTray
           {...actionTrayProps}
           brandStyles={brandStyles}
@@ -177,9 +152,7 @@ export default class Header extends Component {
           more={more}
           locales={localeList}
           brandStyles={brandStyles}
-          btns={btns}
           loginAvailable={loginAvailable}
-          rightLinks={rightLinks}
           employerSite={employerSite}
         />
       </header>
@@ -200,10 +173,12 @@ Header.propTypes = {
   messages: PropTypes.object.isRequired,
   brandStyles: PropTypes.object.isRequired,
   actionTrayProps: PropTypes.object,
-  btn: PropTypes.array,
-  rightLinks: PropTypes.array,
   employerSite: PropTypes.bool,
   linkRenderer: PropTypes.func,
+  selectCountry: PropTypes.bool,
+  authenticationStatus: PropTypes.string,
+  userName: PropTypes.string,
+  menuItems: PropTypes.array
 };
 
 Header.defaultProps = {

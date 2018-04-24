@@ -5,7 +5,7 @@ import styles from './DropdownLink.less';
 import { Link } from 'react-router-dom';
 import { Text, ChevronIcon, Card, Section, CardGroup, TickIcon } from 'seek-asia-style-guide/react';
 
-const renderLinks = ({links, checked}) => {
+const renderLinks = ({ links, checked }) => {
 
   if (links && links.map) {
 
@@ -18,22 +18,22 @@ const renderLinks = ({links, checked}) => {
        * <link to="/"></link>
        * for React routering
        */
-      return(
-          <Card key={index}>
-            <a href={key.url}>
-              <Section className={styles.node}>
-                <ItemIcon className={styles.icon} />
-                <Text whispering>
-                  { key.title }
-                </Text>
-                { checked === undefined || index == checked && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />) }
-              </Section>
-            </a>
-          </Card>
+      return (
+        <Card key={index}>
+          <a href={key.url}>
+            <Section className={styles.node}>
+              <ItemIcon className={styles.icon} />
+              <Text whispering>
+                {key.title}
+              </Text>
+              {checked === undefined || index === checked && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />)}
+            </Section>
+          </a>
+        </Card>
       );
     });
 
-    return ( cards );
+    return (cards);
   }
   return null;
 };
@@ -41,7 +41,7 @@ const renderLinks = ({links, checked}) => {
 renderLinks.PropTypes = {
   links: PropTypes.array.isRequired,
   checked: PropTypes.number
-}
+};
 
 export default class DropdownLink extends Component {
   constructor() {
@@ -99,7 +99,7 @@ export default class DropdownLink extends Component {
             </Section>
           </Card>
 
-          { renderLinks({ links, checked }) }
+          {renderLinks({ links, checked })}
         </CardGroup>
 
       </div>
@@ -110,5 +110,6 @@ export default class DropdownLink extends Component {
 DropdownLink.propTypes = {
   /* prototypes for validation */
   links: PropTypes.array.isRequired,
-  checked: PropTypes.number
+  checked: PropTypes.number,
+  dropdownOpen: PropTypes.bool
 };
