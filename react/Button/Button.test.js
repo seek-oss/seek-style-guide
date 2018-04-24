@@ -116,5 +116,4 @@ describe('Button:', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-
 });
