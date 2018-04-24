@@ -13,6 +13,7 @@ export { default as Loader } from './Loader/Loader';
 export { default as Logo } from './Logo/Logo';
 export { default as LogoRainbow } from './LogoRainbow/LogoRainbow';
 export { default as Rating } from './Rating/Rating';
+export { default as Pill } from './Pill/Pill';
 
 // Typography
 export { default as Critical } from './Critical/Critical';
