@@ -134,7 +134,6 @@ Menu.propTypes = {
   locales: PropTypes.array.isRequired,
   more: PropTypes.array,
   brandStyles: PropTypes.object.isRequired,
-  rightLinks: PropTypes.array,
   btns: PropTypes.array,
   employerSite: PropTypes.bool
 };

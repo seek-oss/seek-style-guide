@@ -49,7 +49,9 @@ export default class UserAccount extends Component {
                   <span className={styles.primaryNavLinkWrapper}>
                     <a className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
                       <Text>{userName}</Text>
-                      <ChevronIcon svgClassName={styles.chevronSvg} direction="down" />
+                      <div className={styles.chevron}>
+                        <ChevronIcon svgClassName={styles.chevronSvg} direction="down" />
+                      </div>
                     </a>
                   </span>
                 </div>
