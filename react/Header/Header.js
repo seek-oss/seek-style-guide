@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { Text } from 'seek-asia-style-guide/react';
 import Menu from './components/Menu/Menu';
 import ActionTray from './components/ActionTray/ActionTray';
-import DropdownLink from './components/DropdownLink/DropdownLink'
+import DropdownLink from './components/DropdownLink/DropdownLink';
 import { sortCurrentLocaleToTop } from './localeUtils';
 import styles from './Header.less';
 import UserAccount from './components/UserAccount/UserAccount';
@@ -83,7 +83,6 @@ export default class Header extends Component {
       authenticationStatus,
       userName,
       userAccMenuItems
-
     } = this.props;
 
     const localeList = sortCurrentLocaleToTop({ locales, country, language });
@@ -153,6 +152,8 @@ export default class Header extends Component {
           brandStyles={brandStyles}
           loginAvailable={loginAvailable}
           employerSite={employerSite}
+          userAccMenuItems={userAccMenuItems}
+          authenticationStatus={authenticationStatus}
         />
       </header>
     );

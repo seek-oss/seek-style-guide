@@ -37,7 +37,7 @@ const renderHtml = (Component, initialProps, options = { preview: false }) => {
         window.seek${Component.displayName}Instance = SeekHeaderFooter.render${Component.displayName}();
 
         // Simulate authenticating the user
-        seek${Component.displayName}Instance.updateProps({ authenticationStatus: 'authenticated', userName: 'Olivia' });
+        seek${Component.displayName}Instance.updateProps({ authenticationStatus: 'authenticated', userName: 'Olivia', jobsDBBaseUrl: 'hk.v8.dev.jobsdb.com/'});
 
         // Let developers know what's up
         console.log("The standalone ${Component.displayName.toLowerCase()} instance is available as 'window.seek${Component.displayName}Instance'");

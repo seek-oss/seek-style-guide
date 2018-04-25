@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './Menu.less';
 import MenuItem from './components/MenuItem/MenuItem';
-import { Text, Section, MoreIcon, ChevronIcon, CheckMarkIcon, GlobeIcon, EmployerIcon } from 'seek-asia-style-guide/react';
+import { Text, Section, MoreIcon, ChevronIcon, CheckMarkIcon, GlobeIcon, EmployerIcon, HomeIcon } from 'seek-asia-style-guide/react';
 
 export default class Menu extends Component {
   constructor() {
@@ -50,21 +50,14 @@ export default class Menu extends Component {
   }
 
   render() {
-    const { rightLinks, messages, shouldShowMenu, links, locales, more, brandStyles, btns, employerSite, loginAvailable = false} = this.props;
+    const { rightLinks, userAccMenuItems, messages, shouldShowMenu, links, locales, more, brandStyles, btns, employerSite, loginAvailable = true } = this.props;
     return (
       <div className={classnames(styles.root, { [styles.showMenu]: shouldShowMenu })}>
         <Section className={styles.headerMenu}>
           <Text whisperingTitle>{messages['menu.jobSeekerHeader']}</Text>
         </Section>
+        { this.renderMenuLinks({ more, messages, brandStyles }, userAccMenuItems)}
         { this.renderMenuLinks({ more, messages, brandStyles }, links) }
-        { this.renderMenuLinks({ brandStyles }, btns) }
-        {
-          rightLinks && rightLinks.map((link, index) => {
-            if (link.children && link.children.map) {
-              return this.renderMenuLinks({ brandStyles }, link.children)
-            }
-          })
-        }
         {
           employerSite && (<div className={styles.menuBody}>
             <MenuItem itemClass={styles.employerLink} linkUrl={messages['header.employerSiteUrl']} ItemIcon={EmployerIcon} brandStyles={brandStyles}>
@@ -134,6 +127,9 @@ Menu.propTypes = {
   locales: PropTypes.array.isRequired,
   more: PropTypes.array,
   brandStyles: PropTypes.object.isRequired,
+  rightLinks: PropTypes.array,
+  menulinks: PropTypes.array,
   btns: PropTypes.array,
-  employerSite: PropTypes.bool
+  employerSite: PropTypes.bool,
+  userAccMenuItems: PropTypes.bool
 };

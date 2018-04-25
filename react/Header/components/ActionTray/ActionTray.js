@@ -38,23 +38,23 @@ actionTrayLink.propTypes = {
   handleToggleMenu: PropTypes.func
 };
 
-const ActionTray = ({ loginAvailable, brandStyles, messages, handleToggleMenu, activeTab, menuOpen, showTray = true, showHome = true, showSearch = true, showSavedJobs = true, showMenu = true }) => {
+const ActionTray = ({ loginAvailable, brandStyles, messages, handleToggleMenu, activeTab, menuOpen, showTray = true, showHome = true, showSearch = true, showSavedJobs = false, showMenu = true }) => {
   const actionTrayLinkProps = {
     brandStyles,
     activeTab,
     menuOpen,
     handleToggleMenu
   };
-  const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH, ACTIVE_TAB_SAVED_JOBS } = Constants;
+  const { ACTIVE_TAB_HOME, ACTIVE_TAB_SEARCH } = Constants;
 
   if (showTray) {
     return (
       <div className={styles.root}>
         { actionTrayLink({ showFlag: showHome, LinkIcon: HomeIcon, linkUrl: messages['header.homeUrl'], tabName: ACTIVE_TAB_HOME, ...actionTrayLinkProps }) }
         { actionTrayLink({ showFlag: showSearch, LinkIcon: SearchIcon, linkUrl: messages['header.searchUrl'], tabName: ACTIVE_TAB_SEARCH, ...actionTrayLinkProps }) }
-        { loginAvailable &&
+        {/* { loginAvailable &&
             actionTrayLink({ showFlag: showSavedJobs, LinkIcon: BookmarkIcon, linkUrl: messages['header.savedJobsUrl'], tabName: ACTIVE_TAB_SAVED_JOBS, ...actionTrayLinkProps })
-        }
+        } */}
         { showMenu && (
           <div onClick={handleToggleMenu} className={styles.menuToggle}>
             <HamburgerIcon svgClassName={classnames(styles.svg, { [brandStyles.activeActionTrayIcon]: menuOpen })} />

@@ -7,14 +7,14 @@ import { HomeIcon, PortalIcon, LightbulbIcon, ResourcesIcon, JobFunctionIcon, Pr
 import { getLocalization, locales } from '../localization';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../react/private/authStatusTypes';
 
-const getJobsDBProps = ({ country, language, loginAvailable, authenticationStatus, userName }) => {
+const getJobsDBProps = ({ country, language, loginAvailable, authenticationStatus, userName, jobsDBBaseUrl }) => {
   const messages = getLocalization({ country, language });
 
   const links = [
-    { title: messages['header.homeTitle'], url: messages['header.homeUrl'], ItemIcon: HomeIcon },
-    { title: messages['header.myJobsDBTitle'], url: messages['header.myJobsDBUrl'], ItemIcon: PortalIcon },
-    { title: messages['header.resourcesTitle'], url: messages['header.resourcesUrl'], ItemIcon: ResourcesIcon },
-    { title: messages['header.careerInsightsTitle'], url: messages['header.careerInsightsUrl'], ItemIcon: LightbulbIcon }
+    { title: messages['header.homeTitle'], url: jobsDBBaseUrl + messages['header.homeUrl'], ItemIcon: HomeIcon },
+    { title: messages['header.myJobsDBTitle'], url: jobsDBBaseUrl + messages['header.myJobsDBUrl'], ItemIcon: PortalIcon },
+    { title: messages['header.resourcesTitle'], url: jobsDBBaseUrl + messages['header.resourcesUrl'], ItemIcon: ResourcesIcon },
+    { title: messages['header.careerInsightsTitle'], url: jobsDBBaseUrl + messages['header.careerInsightsUrl'], ItemIcon: LightbulbIcon }
   ];
 
   const userAccMenuItems = [
@@ -30,19 +30,20 @@ const getJobsDBProps = ({ country, language, loginAvailable, authenticationStatu
   };
 };
 
-const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, selectCountry = true, authenticationStatus = UNAUTHENTICATED, userName, ...restProps }) => {
+const Header = ({ country = 'hk', language = 'en', activeTab, loginAvailable = false, selectCountry = true, authenticationStatus = UNAUTHENTICATED, userName, jobsDBBaseUrl, ...restProps }) => {
   return (
+
     <GlobalHeader
       LogoComponent={Logo}
       activeTab={activeTab}
-      {...getJobsDBProps({ country, language, loginAvailable, authenticationStatus, userName }) }
+      loginAvailable={loginAvailable}
+      {...getJobsDBProps({ country, language, loginAvailable, authenticationStatus, userName, jobsDBBaseUrl })}
       brandStyles={styles}
       locales={locales}
       country={country}
       language={language}
       employerSite={true || !loginAvailable} //TO DO: logic to be confirmed by UX
       selectCountry={selectCountry}
-      loginAvailable={loginAvailable}
       userName={userName}
       authenticationStatus={authenticationStatus}
       {...restProps}
@@ -61,7 +62,8 @@ Header.propTypes = {
     UNAUTHENTICATED,
     AUTH_PENDING
   ]),
-  userName: PropTypes.string
+  userName: PropTypes.string,
+  jobsDBBaseUrl: PropTypes.string
 };
 
 export default Header;
