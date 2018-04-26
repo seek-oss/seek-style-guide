@@ -81,10 +81,26 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Call To Action',
+          label: 'Call To Action if no tenant on env variable or prop',
           transformProps: props => ({
             ...props,
             color: 'callToAction'
+          })
+        },
+        {
+          label: 'Call To Action(JobStreet)',
+          transformProps: props => ({
+            ...props,
+            color: 'callToAction',
+            isJobStreet: true
+          })
+        },
+        {
+          label: 'Call To Action(JobsDB)',
+          transformProps: props => ({
+            ...props,
+            color: 'callToAction',
+            isJobsDB: true
           })
         },
         {
@@ -106,32 +122,6 @@ export default {
           transformProps: props => ({
             ...props,
             color: 'hyperlink'
-          })
-        }
-      ]
-    },
-    {
-      label: 'Brand',
-      type: 'radio',
-      states: [
-        {
-          label: 'Current Tenant',
-          transformProps: props => ({
-            ...props
-          })
-        },
-        {
-          label: 'JobStreet',
-          transformProps: props => ({
-            ...props,
-            isJobStreet: true
-          })
-        },
-        {
-          label: 'JobsDB',
-          transformProps: props => ({
-            ...props,
-            isJobsDB: true
           })
         }
       ]
