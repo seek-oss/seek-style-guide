@@ -5,6 +5,10 @@ import { AUTHENTICATED, UNAUTHENTICATED } from '../../../private/authStatusTypes
 import styles from '../../Header.less';
 import classnames from 'classnames';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
+import { Link } from 'react-router-dom';
+
+const isStandalone = process.env.IS_STANDALONE === 'true';
+
 export default class UserAccount extends Component {
   static defaultProps = {
     onMenuToggle: () => { }
@@ -48,7 +52,7 @@ export default class UserAccount extends Component {
                   <span className={styles.primaryNavLinkWrapper}>
                     <a className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
                       <Text>{userName}</Text>
-                      <div className={styles.chevron}>
+                      <div className={styles.icon}>
                         <ChevronIcon svgClassName={styles.chevronSvg} direction="down" />
                       </div>
                     </a>
@@ -67,17 +71,21 @@ export default class UserAccount extends Component {
               <ButtonGroup>
                 <Button
                   color='secondary'
-                  compact
-                  component="a"
-                  href={loginUrl}>
-                  {loginTitle}
+                  compact>
+                  { isStandalone ? (
+                    <a href={loginUrl}>{loginTitle}</a>
+                  ) : (
+                    <Link to={loginUrl}>{loginTitle}</Link>
+                  ) }
                 </Button>
                 <Button
                   color='callToAction'
-                  compact
-                  component="a"
-                  href={signupUrl}>
-                  {signupTitle}
+                  compact>
+                  { isStandalone ? (
+                    <a href={signupUrl}>{signupTitle}</a>
+                  ) : (
+                    <Link to={signupUrl}>{signupTitle}</Link>
+                  ) }
                 </Button>
               </ButtonGroup>
             </div>

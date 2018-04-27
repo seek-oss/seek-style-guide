@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from 'seek-asia-style-guide/react';
 import styles from './MenuItem.less';
+import { Link } from 'react-router-dom';
+
+const isStandalone = process.env.IS_STANDALONE === 'true';
 
 const withIcon = ({ ItemIcon, children, brandStyles, itemClass, iconProps = {} }) => {
   iconProps.svgClassName = iconProps.svgClassName ? classnames(iconProps.svgClassName, brandStyles.menuIcon) : brandStyles.menuIcon;
@@ -13,12 +16,24 @@ const withIcon = ({ ItemIcon, children, brandStyles, itemClass, iconProps = {} }
   ];
 };
 
-const interactionButton = ({ ItemIcon, children, iconProps, brandStyles, itemClass, ...restProps }) => {
-  return (
+const interactionButton = ({ ItemIcon, children, iconProps, brandStyles, itemClass, linkUrl, ...restProps }) => {
+  const content = () => (
     <Button {...restProps}>
-      { withIcon({ ItemIcon, children, iconProps, brandStyles, itemClass }) }
+      {withIcon({ ItemIcon, children, iconProps, brandStyles, itemClass })}
     </Button>
   );
+
+  if (linkUrl && isStandalone) {
+    return (
+      <a href={linkUrl}>{content()}</a>
+    );
+  } else if (linkUrl) {
+    return (
+      <Link to={linkUrl}>{content()}</Link>
+    );
+  }
+
+  return (content());
 };
 
 interactionButton.propTypes = {
@@ -26,25 +41,25 @@ interactionButton.propTypes = {
   children: PropTypes.any,
   iconProps: PropTypes.object,
   brandStyles: PropTypes.object,
-  itemClass: PropTypes.string
+  itemClass: PropTypes.string,
+  linkUrl: PropTypes.string
 };
 
 const renderInteraction = ({ linkUrl, handleClick, children, ItemIcon, itemClass, iconProps, brandStyles }) => {
   const interactionProps = {
     color: 'transparent',
-    component: 'a',
     className: styles.item,
     children,
     ItemIcon,
     iconProps,
     brandStyles,
-    itemClass
+    itemClass,
+    linkUrl
   };
 
   if (linkUrl) {
     return interactionButton({
-      ...interactionProps,
-      href: linkUrl
+      ...interactionProps
     });
   } else if (handleClick) {
     return interactionButton({

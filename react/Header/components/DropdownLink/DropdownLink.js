@@ -5,37 +5,40 @@ import styles from './DropdownLink.less';
 import { Link } from 'react-router-dom';
 import { Text, ChevronIcon, Card, Section, CardGroup, TickIcon } from 'seek-asia-style-guide/react';
 
+const isStandalone = process.env.IS_STANDALONE === 'true';
+
 const renderLinks = ({ links, checked }) => {
+  const cards = links.map((key, index) => {
+    const ItemIcon = key.ItemIcon;
 
-  if (links && links.map) {
-
-    const cards = links.map((key, index) => {
-      const ItemIcon = key.ItemIcon;
-
-      /* Change
-       * <a href="/"></a>
-       * to
-       * <link to="/"></link>
-       * for React routering
-       */
+    const content = () => {
       return (
-        <Card key={index}>
-          <a href={key.url}>
-            <Section className={styles.node}>
-              <ItemIcon className={styles.icon} />
-              <Text whispering>
-                {key.title}
-              </Text>
-              {checked === undefined || index === checked && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />)}
-            </Section>
-          </a>
-        </Card>
+        <Section className={styles.node}>
+          <ItemIcon className={styles.icon} />
+          <Text whispering>
+            {key.title}
+          </Text>
+          {index === checked && (<TickIcon className={classnames([styles.icon, styles.checkMark])} />)}
+        </Section>
       );
-    });
+    };
 
-    return (cards);
-  }
-  return null;
+    return (
+      <Card key={index}>
+        {isStandalone ? (
+          <a href={key.url}>
+            {content()}
+          </a>
+        ) : (
+          <Link to={key.url}>
+            {content()}
+          </Link>
+        )}
+      </Card>
+    );
+  });
+
+  return (cards);
 };
 
 renderLinks.PropTypes = {
@@ -64,12 +67,12 @@ export default class DropdownLink extends Component {
 
   handleDropdownToggle = event => {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
-    event.currentTarget.parentNode.setAttribute("show", !this.state.dropdownOpen);
+    event.currentTarget.parentNode.setAttribute('show', !this.state.dropdownOpen);
   };
 
   handleClickOutside = event => {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      this.wrapperRef.setAttribute("show", false);
+      this.wrapperRef.setAttribute('show', false);
       this.setState({ dropdownOpen: false });
     }
   };
@@ -80,7 +83,10 @@ export default class DropdownLink extends Component {
     const ItemIcon = links[0].ItemIcon;
 
     return (
-      <div className={styles.root} ref={e => { this.wrapperRef = e }}>
+      <div
+        className={styles.root} ref={e => {
+          this.wrapperRef = e;
+        }}>
 
         <div className={styles.currentLocale} show={dropdownOpen} onClick={e => this.handleDropdownToggle(e)}>
           <ItemIcon className={styles.icon} />

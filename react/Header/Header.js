@@ -8,6 +8,9 @@ import DropdownLink from './components/DropdownLink/DropdownLink';
 import { sortCurrentLocaleToTop } from './localeUtils';
 import styles from './Header.less';
 import UserAccount from './components/UserAccount/UserAccount';
+import { Link } from 'react-router-dom';
+
+const isStandalone = process.env.IS_STANDALONE === 'true';
 
 const currentLocale = ({ title, ItemIcon }) => {
   return (
@@ -26,15 +29,25 @@ currentLocale.propTypes = {
 };
 
 const renderPrimaryNavLinks = ({ brandStyles }, links, _style) => {
-
   const primaryNavLinks = (links && links.map) ?
     links.map((link, index) => {
+      const content = () => {
+        return (
+          <Text> {link.title}</Text>
+        );
+      };
+
       return (
         <span key={index} className={styles.primaryNavLinkWrapper}>
-          <a href={link.url} className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
-            <Text> {link.title}</Text>
-            {link.showIcon && (<link.ItemIcon className={styles.icon} />)}
-          </a>
+          {isStandalone ? (
+            <a href={link.url} className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
+              {content()}
+            </a>
+          ) : (
+            <Link to={link.url} className={classnames(styles.primaryNavLink, brandStyles.primaryNavLink)}>
+              {content()}
+            </Link>
+          )}
         </span>
       );
     }) : [];
@@ -110,9 +123,15 @@ export default class Header extends Component {
               <div>
                 <Text whispering>
                   {messages['header.employerLinkPrefix']}
-                  <a className={styles.employerLink} href={messages['header.employerSiteUrl']}>
-                    {messages['header.employerSiteTitle']}
-                  </a>
+                  {isStandalone ? (
+                    <a className={styles.employerLink} href={messages['header.employerSiteUrl']}>
+                      {messages['header.employerSiteTitle']}
+                    </a>
+                  ) : (
+                    <Link className={styles.employerLink} to={messages['header.employerSiteUrl']}>
+                      {messages['header.employerSiteTitle']}
+                    </Link>
+                  )}
                 </Text>
               </div>
             )

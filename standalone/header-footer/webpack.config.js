@@ -110,7 +110,8 @@ const clientConfig = {
     new HtmlWebpackPlugin()
   ] : [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.IS_STANDALONE': JSON.stringify(process.env.IS_STANDALONE)
     }),
     new webpack.optimize.UglifyJsPlugin({
       output: {
@@ -152,7 +153,8 @@ const renderConfig = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF),
-      'process.env.APP_TENANT': JSON.stringify(process.env.APP_TENANT)
+      'process.env.APP_TENANT': JSON.stringify(process.env.APP_TENANT),
+      'process.env.IS_STANDALONE': JSON.stringify(process.env.IS_STANDALONE)
     })
   ]
 };

@@ -1,9 +1,11 @@
 import styles from './UserAccountMenu.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
+const isStandalone = process.env.IS_STANDALONE === 'true';
 
 export default class UserAccountMenu extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -14,7 +16,10 @@ export default class UserAccountMenu extends Component {
 
     if (userAccMenuItems && userAccMenuItems.map) {
       const tmp = userAccMenuItems.map((link, index) => {
-        return <li key={index} className={styles.item} href={link.url}>{link.title}</li>;
+        if (isStandalone) {
+          return <a key={index} className={styles.item} href={link.url}>{link.title}</a>;
+        }
+        return <Link key={index} className={styles.item} to={link.url}>{link.title}</Link>;
       });
 
       return (

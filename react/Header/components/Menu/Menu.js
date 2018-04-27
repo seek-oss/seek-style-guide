@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './Menu.less';
 import MenuItem from './components/MenuItem/MenuItem';
-import { Text, Section, MoreIcon, ChevronIcon, CheckMarkIcon, GlobeIcon, EmployerIcon, HomeIcon } from 'seek-asia-style-guide/react';
+import { Text, Section, MoreIcon, ChevronIcon, CheckMarkIcon, GlobeIcon, EmployerIcon } from 'seek-asia-style-guide/react';
 
 export default class Menu extends Component {
   constructor() {
@@ -26,7 +26,7 @@ export default class Menu extends Component {
   renderMenuLinks = ({ more, messages, brandStyles }, links) => {
     if (links && links.map) {
       const menuItems = links.map((link, index) => (
-        <MenuItem key={index} linkUrl={link.url !== undefined ? (link.url) : (link.href)} ItemIcon={link.ItemIcon} brandStyles={brandStyles}>
+        <MenuItem key={index} linkUrl={link.url} ItemIcon={link.ItemIcon} brandStyles={brandStyles}>
           <Text>{link.title}</Text>
         </MenuItem>
       ));
@@ -50,7 +50,7 @@ export default class Menu extends Component {
   }
 
   render() {
-    const { rightLinks, userAccMenuItems, messages, shouldShowMenu, links, locales, more, brandStyles, btns, employerSite, loginAvailable = true } = this.props;
+    const { userAccMenuItems, messages, shouldShowMenu, links, locales, more, brandStyles, employerSite } = this.props;
     return (
       <div className={classnames(styles.root, { [styles.showMenu]: shouldShowMenu })}>
         <Section className={styles.headerMenu}>
