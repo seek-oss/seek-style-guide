@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button: color variants: should render alert button 1`] = `
+exports[`Button: color variants: should render JobStreet callToAction button 1`] = `
 <button
-  className="root root_alert root_isAlert"
-  disabled={false}
+  className="root jobStreet root_callToAction"
+>
+  SEEK
+</button>
+`;
+
+exports[`Button: color variants: should render JobsDB callToAction button 1`] = `
+<button
+  className="root jobsDB root_callToAction"
 >
   SEEK
 </button>
@@ -11,35 +18,7 @@ exports[`Button: color variants: should render alert button 1`] = `
 
 exports[`Button: color variants: should render callToAction button 1`] = `
 <button
-  className="root root_callToAction root_isCalltoaction"
-  disabled={false}
->
-  SEEK
-</button>
-`;
-
-exports[`Button: color variants: should render completion button 1`] = `
-<button
-  className="root root_completion root_isCompletion"
-  disabled={false}
->
-  SEEK
-</button>
-`;
-
-exports[`Button: color variants: should render ghost callToAction button 1`] = `
-<button
-  className="root root_callToAction root_isGhost root_isCalltoaction"
-  disabled={false}
->
-  SEEK
-</button>
-`;
-
-exports[`Button: color variants: should render highlight button 1`] = `
-<button
-  className="root root_highlight root_isHighlight"
-  disabled={false}
+  className="root root_callToAction"
 >
   SEEK
 </button>
@@ -47,26 +26,23 @@ exports[`Button: color variants: should render highlight button 1`] = `
 
 exports[`Button: color variants: should render hyperlink color button 1`] = `
 <button
-  className="root root_hyperlink root_isHyperlink"
-  disabled={false}
+  className="root root_hyperlink"
 >
   SEEK
 </button>
 `;
 
-exports[`Button: color variants: should render inverse callToAction button 1`] = `
+exports[`Button: color variants: should render primary button 1`] = `
 <button
-  className="root root_callToAction root_isInverse root_isCalltoaction"
-  disabled={false}
+  className="root root_primary"
 >
   SEEK
 </button>
 `;
 
-exports[`Button: color variants: should render transparent button 1`] = `
+exports[`Button: color variants: should render secondary button 1`] = `
 <button
-  className="root root_isTransparent"
-  disabled={false}
+  className="root root_secondary"
 >
   SEEK
 </button>
@@ -74,27 +50,24 @@ exports[`Button: color variants: should render transparent button 1`] = `
 
 exports[`Button: should render as an anchor with href="https://www.seek.com.au" 1`] = `
 <a
-  className="root root_hyperlink root_isHyperlink"
-  disabled={false}
+  className="root root_hyperlink"
   href="https://www.seek.com.au"
 >
   SEEK
 </a>
 `;
 
-exports[`Button: should render as loading 1`] = `
-<button
-  className="root loading root_callToAction root_isCalltoaction"
-  disabled={true}
+exports[`Button: should render as div 1`] = `
+<div
+  className="root root_callToAction"
 >
   SEEK
-</button>
+</div>
 `;
 
 exports[`Button: should render compact font size 1`] = `
 <button
-  className="root compact root_callToAction root_isCalltoaction"
-  disabled={false}
+  className="root compact root_callToAction"
 >
   SEEK
 </button>
@@ -102,8 +75,7 @@ exports[`Button: should render compact font size 1`] = `
 
 exports[`Button: should render custom component based on it’s reference 1`] = `
 <CustomComponent
-  className="root root_callToAction root_isCalltoaction"
-  disabled={false}
+  className="root root_callToAction"
 >
   SEEK
 </CustomComponent>
@@ -111,17 +83,7 @@ exports[`Button: should render custom component based on it’s reference 1`] = 
 
 exports[`Button: should render disabled 1`] = `
 <button
-  className="root disabled"
-  disabled={false}
->
-  SEEK
-</button>
-`;
-
-exports[`Button: should render fullwidth button 1`] = `
-<button
-  className="root fullWidth root_isTransparent"
-  disabled={false}
+  className="root root_callToAction disabled"
 >
   SEEK
 </button>
@@ -129,8 +91,7 @@ exports[`Button: should render fullwidth button 1`] = `
 
 exports[`Button: should render with array of nodes 1`] = `
 <button
-  className="root root_callToAction root_isCalltoaction"
-  disabled={false}
+  className="root root_callToAction"
 >
   <span>
     SEEK
@@ -143,8 +104,7 @@ exports[`Button: should render with array of nodes 1`] = `
 
 exports[`Button: should render with className 1`] = `
 <button
-  className="root foo root_callToAction root_isCalltoaction"
-  disabled={false}
+  className="root foo root_callToAction"
 >
   SEEK
 </button>
@@ -152,8 +112,7 @@ exports[`Button: should render with className 1`] = `
 
 exports[`Button: should render with node 1`] = `
 <button
-  className="root root_callToAction root_isCalltoaction"
-  disabled={false}
+  className="root root_callToAction"
 >
   <h5>
     SEEK

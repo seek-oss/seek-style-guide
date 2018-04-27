@@ -33,41 +33,6 @@ export default {
           })
         },
         {
-          label: 'Focus',
-          transformProps: ({ className, ...props }) => ({
-            ...props,
-            className: classnames(className, styles.rootFocus)
-          })
-        },
-        {
-          label: 'Loading',
-          transformProps: props => ({
-            ...props,
-            loading: true
-          })
-        },
-        {
-          label: 'Full width',
-          transformProps: props => ({
-            ...props,
-            fullWidth: true
-          })
-        },
-        {
-          label: 'Ghost',
-          transformProps: props => ({
-            ...props,
-            ghost: true
-          })
-        },
-        {
-          label: 'Inverse',
-          transformProps: props => ({
-            ...props,
-            inverse: true
-          })
-        },
-        {
           label: 'Compact',
           transformProps: props => ({
             ...props,
@@ -116,10 +81,40 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Call To Action',
+          label: 'Call To Action if no tenant on env variable or prop',
           transformProps: props => ({
             ...props,
             color: 'callToAction'
+          })
+        },
+        {
+          label: 'Call To Action(JobStreet)',
+          transformProps: props => ({
+            ...props,
+            color: 'callToAction',
+            isJobStreet: true
+          })
+        },
+        {
+          label: 'Call To Action(JobsDB)',
+          transformProps: props => ({
+            ...props,
+            color: 'callToAction',
+            isJobsDB: true
+          })
+        },
+        {
+          label: 'Primary',
+          transformProps: props => ({
+            ...props,
+            color: 'primary'
+          })
+        },
+        {
+          label: 'Secondary',
+          transformProps: props => ({
+            ...props,
+            color: 'secondary'
           })
         },
         {
@@ -127,34 +122,6 @@ export default {
           transformProps: props => ({
             ...props,
             color: 'hyperlink'
-          })
-        },
-        {
-          label: 'Completion',
-          transformProps: props => ({
-            ...props,
-            color: 'completion'
-          })
-        },
-        {
-          label: 'Alert',
-          transformProps: props => ({
-            ...props,
-            color: 'alert'
-          })
-        },
-        {
-          label: 'Highlight',
-          transformProps: props => ({
-            ...props,
-            color: 'highlight'
-          })
-        },
-        {
-          label: 'Transparent',
-          transformProps: props => ({
-            ...props,
-            color: 'transparent'
           })
         }
       ]

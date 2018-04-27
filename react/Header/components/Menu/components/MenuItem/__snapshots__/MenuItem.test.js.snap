@@ -8,9 +8,6 @@ exports[`MenuItem should render with a click handler 1`] = `
     className="item"
     color="transparent"
     component="a"
-    fullWidth={false}
-    ghost={false}
-    loading={false}
     onClick={[MockFunction]}
   >
     <span
@@ -30,10 +27,7 @@ exports[`MenuItem should render with a linkUrl 1`] = `
     className="item"
     color="transparent"
     component="a"
-    fullWidth={false}
-    ghost={false}
     href="https://brand.seekasia.com/"
-    loading={false}
   >
     <span
       key="children"
