@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import JsxParser from 'react-jsx-parser';
 import Frame from 'react-frame-component';
 import CollectStyles from './CollectStyles/CollectStyles';
+import FadeIn from './FadeIn/FadeIn';
 import * as styleGuideComponents from 'seek-style-guide/react';
 import styles from './Preview.less';
 
@@ -25,11 +26,17 @@ export default class Preview extends Component {
     return (
       <div className={styles.root}>
         <CollectStyles baseHref={process.env.BASE_HREF}>
-          {collectedStyles => !collectedStyles ? null : widths.map((width, i) => (
-            <div key={i} className={styles.frameContainer}>
+          {collectedStyles => widths.map((width, i) => (
+            <div key={width} className={styles.frameContainer}>
               <Frame head={<base href={process.env.BASE_HREF || '/'} />} className={styles.frame} style={{ width }}>
-                {collectedStyles}
-                <JsxParser jsx={jsx} components={styleGuideComponents} />
+                <div className={styles.frameContents}>
+                  {collectedStyles}
+                  {collectedStyles && (
+                    <FadeIn delay={(i + 1) * 50}>
+                      <JsxParser jsx={jsx} components={styleGuideComponents} />
+                    </FadeIn>
+                  )}
+                </div>
               </Frame>
             </div>
           ))}

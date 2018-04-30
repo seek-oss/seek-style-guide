@@ -13,7 +13,7 @@
   display: inline-block;
   height: 100%;
   margin-right: @sandbox-padding;
-  border: (@row-height * 2) solid rgba(0, 0, 0, 0.4);
+  border: (@row-height * 2) solid @sandbox-preview-background;
   border-radius: @row-height;
   &:first-child {
     margin-left: @sandbox-padding;
@@ -23,4 +23,9 @@
 .frame {
   height: 100%;
   border-radius: 3px;
+  background: @sandbox-preview-background;
+}
+
+.frameContents {
+  background: @sandbox-preview-background;
 }
