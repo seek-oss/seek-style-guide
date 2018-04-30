@@ -21,7 +21,7 @@ const initialValue = `${dedent`
 
   <PageBlock>
     <Section header>
-      <Text hero>Hello world!</Text>
+      <Text hero>Style Guide Sandbox</Text>
     </Section>
   </PageBlock>
 
