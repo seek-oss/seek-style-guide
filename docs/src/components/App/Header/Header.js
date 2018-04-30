@@ -1,6 +1,7 @@
 import styles from './Header.less';
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import { Link } from 'react-router-dom';
@@ -10,6 +11,14 @@ import demoSpecExports from '../../../../../react/*/*.demo.js';
 const demoSpecs = demoSpecExports.map(x => x.default);
 
 export default class Header extends Component {
+  static propTypes = {
+    fullWidth: PropTypes.bool
+  };
+
+  static defaultProps = {
+    fullWidth: false
+  };
+
   constructor() {
     super();
 
@@ -27,11 +36,13 @@ export default class Header extends Component {
   };
 
   render() {
+    const { fullWidth } = this.props;
     const { menuOpen } = this.state;
 
     const headerClasses = classnames({
       [styles.headerBlock]: true,
-      [styles.fixedHeaderBlock]: menuOpen
+      [styles.fixedHeaderBlock]: menuOpen,
+      [styles.fullWidth]: fullWidth
     });
 
     return (
@@ -60,7 +71,7 @@ export default class Header extends Component {
                 </label>
 
                 <div className={styles.menu} onClick={this.handleMenuClose}>
-                  <PageBlock>
+                  <PageBlock className={fullWidth ? styles.fullWidth : null}>
                     <Section header>
                       <Card transparent>
                         <Text headline regular><Link className={styles.link} to="/">Home</Link></Text>
@@ -74,6 +85,15 @@ export default class Header extends Component {
                       <Card transparent>
                         <Text headline regular><Link className={styles.link} to="/typography">Typography</Link></Text>
                         <Text headline regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
+                      </Card>
+
+                      <Card transparent>
+                        <h2>
+                          <Text headline>Tools</Text>
+                        </h2>
+                      </Card>
+                      <Card transparent>
+                        <Text headline regular><Link className={styles.link} to="/sandbox">Sandbox</Link></Text>
                       </Card>
 
                       <Card transparent>

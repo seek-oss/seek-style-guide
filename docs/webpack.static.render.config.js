@@ -22,10 +22,13 @@ const appPaths = [
 ];
 
 const config = {
+  target: 'node',
+
   entry: path.resolve(__dirname, 'src/server-render'),
 
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: process.env.BASE_HREF,
     filename: 'render.js',
     libraryTarget: 'umd'
   },
@@ -67,6 +70,15 @@ const config = {
           },
           {
             loader: 'less-loader'
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [
+          {
+            loader: 'ignore-loader'
           }
         ]
       },
@@ -115,4 +127,9 @@ const config = {
   ]
 };
 
-module.exports = decorateServerConfig(config);
+module.exports = decorateServerConfig(config, {
+  extraIncludePaths: [
+    'codemirror/lib/codemirror.css',
+    'codemirror/theme/material.css'
+  ]
+});

@@ -4,7 +4,6 @@
     "stylelint-config-css-modules"
   ],
   "rules": {
-    "selector-max-type": 0,
     "rule-empty-line-before": ["always-multi-line", {
       "ignore": ["inside-block"]
     }],

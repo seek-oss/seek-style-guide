@@ -1,0 +1,26 @@
+@import (reference) "~seek-style-guide/theme";
+@import (reference) "../Sandbox.less";
+
+.root {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  padding: @sandbox-padding 0;
+}
+
+.frameContainer {
+  display: inline-block;
+  height: 100%;
+  margin-right: @sandbox-padding;
+  border: (@row-height * 2) solid rgba(0, 0, 0, 0.4);
+  border-radius: @row-height;
+  &:first-child {
+    margin-left: @sandbox-padding;
+  }
+}
+
+.frame {
+  height: 100%;
+  border-radius: 3px;
+}

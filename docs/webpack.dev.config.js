@@ -85,6 +85,18 @@ const config = decorateClientConfig({
         ]
       },
       {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
+      },
+      {
         test: /\.svg$/,
         include: appPaths,
         use: [

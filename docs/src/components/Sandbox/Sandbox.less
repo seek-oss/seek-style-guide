@@ -1,0 +1,84 @@
+@import (reference) "~seek-style-guide/theme";
+
+@sandbox-background: #15253e;
+@sandbox-line-height: 30px;
+@sandbox-marker-size: (@gutter-width / 2);
+@sandbox-editor-height: 280px;
+@sandbox-padding: (@row-height * 3);
+
+.previewContainer {
+  position: fixed;
+  top: @row-height * 12;
+  bottom: @sandbox-editor-height;
+  left: 0;
+  right: 0;
+  background: @sandbox-background;
+}
+
+.editorContainer {
+  position: fixed;
+  height: @sandbox-editor-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.gutter {
+  width: @sandbox-marker-size * 1.5;
+}
+
+.marker {
+  width: @sandbox-marker-size;
+  height: @sandbox-marker-size;
+  border-radius: 10px;
+  background-color: #7385a5;
+  position: relative;
+  top: (@sandbox-line-height - @sandbox-marker-size) / 2;
+  cursor: pointer;
+}
+
+:global {
+  .ReactCodeMirror {
+    height: 100%;
+  }
+
+  .CodeMirror {
+    height: 100%;
+    padding: 0 @sandbox-padding;
+    font-family:
+      Source Code Pro,
+      Firacode,
+      Hasklig,
+      Menlo,
+      monospace;
+  }
+
+  .CodeMirror pre,
+  .CodeMirror-linenumber {
+    @padding: 2px;
+    font-size: 18px;
+    padding: @padding 0;
+    line-height: @sandbox-line-height - (@padding * 2);
+  }
+
+  .CodeMirror-linenumber {
+    padding-right: (@grid-gutter-width * 2);
+  }
+
+  .cm-s-material {
+    &.CodeMirror {
+      color: #ffffff;
+    }
+
+    &.CodeMirror,
+    & .CodeMirror-gutters {
+      background: @sandbox-background;
+    }
+
+    .CodeMirror-linenumber { color: #7385a5; }
+    .cm-tag { color: #ffa6d3; }
+    .cm-attribute { color: #85b2ff; }
+    .cm-string { color: #dce8fd; }
+  }
+}
