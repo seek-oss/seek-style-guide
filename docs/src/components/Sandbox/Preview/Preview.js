@@ -24,7 +24,7 @@ export default class Preview extends Component {
 
     return (
       <div className={styles.root}>
-        <CollectStyles>
+        <CollectStyles baseHref={process.env.BASE_HREF}>
           {collectedStyles => !collectedStyles ? null : widths.map((width, i) => (
             <div key={i} className={styles.frameContainer}>
               <Frame head={<base href={process.env.BASE_HREF || '/'} />} className={styles.frame} style={{ width }}>
