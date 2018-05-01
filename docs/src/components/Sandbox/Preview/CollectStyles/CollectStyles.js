@@ -3,23 +3,22 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import urlJoin from 'url-join';
 
-const collectStylesheetContents = baseHref => {
-  const sheetPromises = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
-    .map(el => {
-      const href = el.getAttribute('href');
-      const url = urlJoin(baseHref, href);
+const collectStyleContent = baseHref => {
+  const styleNodes = document.querySelectorAll('style, link[rel="stylesheet"]');
 
-      return axios.get(url).then(({ data }) => data);
-    });
+  const sheetPromises = Array.from(styleNodes).map(el => {
+    if (el.nodeName === 'STYLE') {
+      return el.innerHTML;
+    }
+
+    const href = el.getAttribute('href');
+    const url = urlJoin(baseHref, href);
+
+    return axios.get(url).then(({ data }) => data);
+  });
 
   return Promise.all(sheetPromises)
     .then(sheets => sheets.join('\n'));
-};
-
-const collectStyleTagContents = () => {
-  return Array.from(document.querySelectorAll('style'))
-    .map(el => el.innerHTML)
-    .join('\n');
 };
 
 export default class CollectStyles extends Component {
@@ -38,12 +37,9 @@ export default class CollectStyles extends Component {
 
   componentDidMount() {
     const { baseHref } = this.props;
-    const styleTagContents = collectStyleTagContents();
 
-    collectStylesheetContents(baseHref).then(stylesheetContents => {
-      this.setState({
-        styleContent: `${stylesheetContents}\n${styleTagContents}`
-      });
+    collectStyleContent(baseHref).then(styleContent => {
+      this.setState({ styleContent });
     });
   }
 
