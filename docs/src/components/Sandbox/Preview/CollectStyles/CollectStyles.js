@@ -14,7 +14,12 @@ const collectStyleContent = baseHref => {
     const href = el.getAttribute('href');
     const url = urlJoin(baseHref, href);
 
-    return axios.get(url).then(({ data }) => data);
+    return axios.get(url)
+      .then(({ data }) => data)
+      .catch(err => {
+        console.error(`Failed to load CSS from ${url}`, err);
+        return '';
+      });
   });
 
   return Promise.all(sheetPromises)
