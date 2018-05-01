@@ -8,7 +8,7 @@ const collectStyleContent = baseHref => {
 
   const sheetPromises = Array.from(styleNodes).map(el => {
     if (el.nodeName === 'STYLE') {
-      return el.innerHTML;
+      return Promise.resolve(el.innerHTML);
     }
 
     const href = el.getAttribute('href');
