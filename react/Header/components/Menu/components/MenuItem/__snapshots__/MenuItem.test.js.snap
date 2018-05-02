@@ -6,7 +6,7 @@ exports[`MenuItem should render with a click handler 1`] = `
 >
   <Button
     className="item"
-    color="transparent"
+    color="hyperlink"
     component="a"
     onClick={[MockFunction]}
   >
@@ -25,7 +25,7 @@ exports[`MenuItem should render with a linkUrl 1`] = `
 >
   <Button
     className="item"
-    color="transparent"
+    color="hyperlink"
     component="a"
     href="https://brand.seekasia.com/"
   >
