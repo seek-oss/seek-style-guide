@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import urlJoin from 'url-join';
 
 const collectStyleContent = baseHref => {
@@ -14,8 +13,8 @@ const collectStyleContent = baseHref => {
     const href = el.getAttribute('href');
     const url = urlJoin(baseHref, href);
 
-    return axios.get(url)
-      .then(({ data }) => data)
+    return fetch(url)
+      .then(response => response.text())
       .catch(err => {
         console.error(`Failed to load CSS from ${url}`, err);
         return '';
