@@ -31,7 +31,7 @@ interactionButton.propTypes = {
 
 const renderInteraction = ({ linkUrl, handleClick, children, ItemIcon, itemClass, iconProps, brandStyles }) => {
   const interactionProps = {
-    color: 'transparent',
+    color: 'hyperlink',
     component: 'a',
     className: styles.item,
     children,
