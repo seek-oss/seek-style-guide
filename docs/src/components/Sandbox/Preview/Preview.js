@@ -4,8 +4,11 @@ import JsxParser from 'react-jsx-parser';
 import Frame from 'react-frame-component';
 import CollectStyles from './CollectStyles/CollectStyles';
 import FadeIn from './FadeIn/FadeIn';
+import CatchErrors from './CatchErrors/CatchErrors';
 import * as styleGuideComponents from 'seek-style-guide/react';
 import styles from './Preview.less';
+
+const { StyleGuideProvider } = styleGuideComponents;
 
 const widths = [320, 414, 740, 1024, 1280];
 
@@ -17,12 +20,6 @@ export default class Preview extends Component {
   render() {
     const { code } = this.props;
 
-    const jsx = `
-      <StyleGuideProvider title="SEEK Style Guide Sandbox">
-        ${code}
-      </StyleGuideProvider>
-    `;
-
     return (
       <div className={styles.root}>
         <CollectStyles baseHref={process.env.BASE_HREF}>
@@ -33,7 +30,11 @@ export default class Preview extends Component {
                   {collectedStyles}
                   {collectedStyles && (
                     <FadeIn delay={(i + 1) * 50}>
-                      <JsxParser jsx={jsx} components={styleGuideComponents} />
+                      <StyleGuideProvider title="SEEK Style Guide Sandbox">
+                        <CatchErrors key={code}>
+                          <JsxParser jsx={code} components={styleGuideComponents} />
+                        </CatchErrors>
+                      </StyleGuideProvider>
                     </FadeIn>
                   )}
                 </div>
