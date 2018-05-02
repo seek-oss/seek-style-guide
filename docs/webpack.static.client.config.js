@@ -22,6 +22,7 @@ const config = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: process.env.BASE_HREF,
     filename: 'index.js',
     libraryTarget: 'umd'
   },
@@ -60,7 +61,12 @@ const config = {
         test: /\.less$/,
         include: appPaths,
         loader: appCss.extract({
-          fallback: 'style-loader',
+          fallback: {
+            loader: 'style-loader',
+            options: {
+              insertInto: '[data-style-loader]'
+            }
+          },
           use: [
             {
               loader: 'css-loader',
@@ -80,6 +86,23 @@ const config = {
             }
           ]
         }),
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        loader: appCss.extract({
+          fallback: {
+            loader: 'style-loader',
+            options: {
+              insertInto: '[data-style-loader]'
+            }
+          },
+          use: [
+            {
+              loader: 'css-loader'
+            }
+          ]
+        })
       },
       {
         test: /\.svg$/,

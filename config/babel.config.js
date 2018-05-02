@@ -5,6 +5,7 @@ module.exports = ({ reactHotLoader = false }) => ({
     'react'
   ],
   plugins: [
+    'syntax-dynamic-import',
     'add-react-displayname',
     'transform-class-properties',
     'transform-object-rest-spread'
