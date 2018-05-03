@@ -17,6 +17,6 @@ export default class LoadSandbox extends Component {
 
     return !Sandbox ?
       <Loader style={{ marginTop: 6 * 10 }} /> :
-      <Sandbox />;
+      <Sandbox {...this.props} />;
   }
 }
