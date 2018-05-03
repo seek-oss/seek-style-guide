@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import dedent from 'dedent';
+import queryString from 'query-string';
+import base64url from 'base64-url';
 import debounce from 'lodash/debounce';
 import localforage from 'localforage';
 import { Parser } from 'acorn-jsx';
@@ -34,6 +37,11 @@ const store = localforage.createInstance({
 });
 
 export default class Sandbox extends Component {
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
+
   state = {
     codeReady: false,
     code: null,
@@ -41,11 +49,22 @@ export default class Sandbox extends Component {
   };
 
   componentDidMount() {
-    store.getItem('code').then(savedCode => {
+    this.getCode().then(savedCode => {
       const code = savedCode || initialValue;
       this.initialiseCode(code);
       this.validateCode(code);
     });
+  }
+
+  getCode() {
+    const { location } = this.props;
+
+    const hash = location.hash.replace(/^#/, '');
+    const query = queryString.parse(hash);
+
+    return query.code ?
+      Promise.resolve(base64url.decode(query.code)) :
+      store.getItem('code');
   }
 
   storeCodeMirrorRef = cmRef => {
@@ -61,7 +80,10 @@ export default class Sandbox extends Component {
   };
 
   updateCode = code => {
+    const { history } = this.props;
+
     this.setState({ code });
+    history.replace(!code ? {} : { hash: `?code=${base64url.encode(code)}` });
     store.setItem('code', code);
 
     this.validateCode(code);
