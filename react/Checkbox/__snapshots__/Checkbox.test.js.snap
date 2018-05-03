@@ -83,6 +83,17 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -120,6 +131,17 @@ exports[`Checkbox inputProps should render as checked 1`] = `
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -143,6 +165,17 @@ exports[`Checkbox should render with button style 1`] = `
       Still in role
     </span>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -180,6 +213,17 @@ exports[`Checkbox should render with className 1`] = `
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -217,6 +261,17 @@ exports[`Checkbox should render with simple props 1`] = `
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -254,5 +309,16 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
