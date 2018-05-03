@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Checkbox FieldMessage should render field message when passed 1`] = `
+<div
+  className="root"
+>
+  <input
+    checked={false}
+    className="input"
+    id="testCheckbox"
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="testCheckbox"
+  >
+    <div
+      className="standard"
+    >
+      <div
+        className="checkbox"
+      >
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+        />
+      </div>
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message="Field is invalid"
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    valid={false}
+  />
+</div>
+`;
+
 exports[`Checkbox inputProps should pass through other props to the input 1`] = `
 <div
   className="root"
