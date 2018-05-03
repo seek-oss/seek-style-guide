@@ -2,7 +2,7 @@
 
 exports[`Checkbox FieldMessage should render field message when passed 1`] = `
 <div
-  className="root"
+  className="root invalid"
 >
   <input
     checked={false}

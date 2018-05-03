@@ -87,10 +87,7 @@ export default class Checkbox extends Component {
   }
 
   renderMessage(id, valid, message, messageProps) {
-    if (message) {
-      return <FieldMessage {...{ id: `${id}-message`, valid, message, messageProps }} />;
-    }
-    return null;
+    return <FieldMessage {...{ id: `${id}-message`, valid, message, messageProps }} />;
   }
 
   renderInput() {
@@ -112,6 +109,7 @@ export default class Checkbox extends Component {
 
     const rootClassNames = classnames({
       [styles.root]: true,
+      [styles.invalid]: valid === false,
       [className]: className
     });
 
