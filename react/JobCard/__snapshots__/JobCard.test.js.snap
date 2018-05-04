@@ -13,6 +13,7 @@ exports[`JobCard should render company with bold keyword 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -38,22 +39,27 @@ exports[`JobCard should render company with bold keyword 1`] = `
         className="company"
         intimate={true}
       >
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
           <span
-            className="highlight"
-            key="0"
+            className="companyName"
           >
-            SEEK
+            <span
+              className="highlight"
+              key="0"
+            >
+              SEEK
+            </span>
+            <span
+              className={null}
+              key="1"
+            >
+               Asia
+            </span>
           </span>
-          <span
-            className={null}
-            key="1"
-          >
-             Asia
-          </span>
-        </span>
+        </a>
       </Text>
     </div>
   </Section>
@@ -80,8 +86,50 @@ exports[`JobCard should render company with bold keyword 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -91,8 +139,9 @@ exports[`JobCard should render company with bold keyword 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -121,6 +170,7 @@ exports[`JobCard should render job title with bold keyword 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <div>
         <Text
@@ -180,22 +230,27 @@ exports[`JobCard should render job title with bold keyword 1`] = `
         className="company"
         intimate={true}
       >
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
           <span
-            className="highlight"
-            key="0"
+            className="companyName"
           >
-            SEEK
+            <span
+              className="highlight"
+              key="0"
+            >
+              SEEK
+            </span>
+            <span
+              className={null}
+              key="1"
+            >
+               Asia
+            </span>
           </span>
-          <span
-            className={null}
-            key="1"
-          >
-             Asia
-          </span>
-        </span>
+        </a>
       </Text>
     </div>
   </Section>
@@ -222,8 +277,50 @@ exports[`JobCard should render job title with bold keyword 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -233,8 +330,9 @@ exports[`JobCard should render job title with bold keyword 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -263,6 +361,7 @@ exports[`JobCard should render jobStreet standout style 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -288,22 +387,27 @@ exports[`JobCard should render jobStreet standout style 1`] = `
         className="company"
         intimate={true}
       >
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
           <span
-            className="highlight"
-            key="0"
+            className="companyName"
           >
-            SEEK
+            <span
+              className="highlight"
+              key="0"
+            >
+              SEEK
+            </span>
+            <span
+              className={null}
+              key="1"
+            >
+               Asia
+            </span>
           </span>
-          <span
-            className={null}
-            key="1"
-          >
-             Asia
-          </span>
-        </span>
+        </a>
       </Text>
       <div
         className="jobDescriptionSection"
@@ -341,8 +445,50 @@ exports[`JobCard should render jobStreet standout style 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -352,8 +498,9 @@ exports[`JobCard should render jobStreet standout style 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -390,6 +537,7 @@ exports[`JobCard should render jobsDB default style 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -415,22 +563,27 @@ exports[`JobCard should render jobsDB default style 1`] = `
         className="company"
         intimate={true}
       >
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
           <span
-            className="highlight"
-            key="0"
+            className="companyName"
           >
-            SEEK
+            <span
+              className="highlight"
+              key="0"
+            >
+              SEEK
+            </span>
+            <span
+              className={null}
+              key="1"
+            >
+               Asia
+            </span>
           </span>
-          <span
-            className={null}
-            key="1"
-          >
-             Asia
-          </span>
-        </span>
+        </a>
       </Text>
     </div>
   </Section>
@@ -457,8 +610,50 @@ exports[`JobCard should render jobsDB default style 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -468,8 +663,9 @@ exports[`JobCard should render jobsDB default style 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -498,6 +694,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -528,11 +725,16 @@ exports[`JobCard should render with Classified in grey label 1`] = `
         >
           Classified
         </span>
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
-          SEEK Asia
-        </span>
+          <span
+            className="companyName"
+          >
+            SEEK Asia
+          </span>
+        </a>
       </Text>
     </div>
   </Section>
@@ -559,8 +761,50 @@ exports[`JobCard should render with Classified in grey label 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -570,8 +814,9 @@ exports[`JobCard should render with Classified in grey label 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -600,6 +845,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -656,8 +902,50 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -667,8 +955,9 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -697,6 +986,7 @@ exports[`JobCard should render with default props 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -722,11 +1012,16 @@ exports[`JobCard should render with default props 1`] = `
         className="company"
         intimate={true}
       >
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
-          SEEK Asia
-        </span>
+          <span
+            className="companyName"
+          >
+            SEEK Asia
+          </span>
+        </a>
       </Text>
     </div>
   </Section>
@@ -753,8 +1048,50 @@ exports[`JobCard should render with default props 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -764,8 +1101,9 @@ exports[`JobCard should render with default props 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -794,6 +1132,7 @@ exports[`JobCard should render with featured label 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -824,11 +1163,16 @@ exports[`JobCard should render with featured label 1`] = `
         >
           Feature
         </span>
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
-          SEEK Asia
-        </span>
+          <span
+            className="companyName"
+          >
+            SEEK Asia
+          </span>
+        </a>
       </Text>
     </div>
   </Section>
@@ -855,8 +1199,50 @@ exports[`JobCard should render with featured label 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -866,8 +1252,9 @@ exports[`JobCard should render with featured label 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text
@@ -896,6 +1283,7 @@ exports[`JobCard should render with selling points props 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -921,11 +1309,16 @@ exports[`JobCard should render with selling points props 1`] = `
         className="company"
         intimate={true}
       >
-        <span
-          className="companyName"
+        <a
+          className="companyLink"
+          href="/jobCard"
         >
-          SEEK Asia
-        </span>
+          <span
+            className="companyName"
+          >
+            SEEK Asia
+          </span>
+        </a>
       </Text>
     </div>
   </Section>
@@ -952,8 +1345,50 @@ exports[`JobCard should render with selling points props 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-             
-            Kuala Lumpur
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
           </Text>
           <Text
             baseline={true}
@@ -963,8 +1398,9 @@ exports[`JobCard should render with selling points props 1`] = `
             <MoneyIcon
               className="jobInfoIcon"
             />
-             
-            RM99999 - RM999999
+            <span>
+              RM99999 - RM999999
+            </span>
           </Text>
         </div>
         <Text

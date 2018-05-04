@@ -24,12 +24,26 @@ const getParts = (text, query) => {
   return parse(text, matches);
 };
 
+const renderLocation = ({ link, name, child }) => {
+  let locationComps = [];
+  if (link) {
+    locationComps.push(<a href={link} className={styles.locationLink}><span className={styles.locationName}>{name}</span></a>);
+  } else {
+    locationComps.push(<span className={styles.locationName}>{name}</span>);
+  }
+  if (child) {
+    locationComps.push(<span>&nbsp;>&nbsp;</span>)
+    locationComps = [...locationComps, ...renderLocation(child)];
+  }
+  return locationComps;
+}
+
 const JobCard = ({ job, keyword = '', jobAdType }) => {
   const jobAdTypeOption = getJobAdTypeOption(jobAdType);
   let title = <Text waving semiStrong className={styles.positionTitle}>{job.jobTitle}</Text>;
-  let company = job.company && <span className={styles.companyName}>{job.company}</span> || '';
+  let company = job.company && job.company.name && <span className={styles.companyName}>{job.company.name}</span> || '';
   const keywordParts = getParts(job.jobTitle, keyword);
-  const companyParts = getParts(job.company, keyword);
+  const companyParts = job.company && getParts(job.company.name, keyword) || null;
   if (keywordParts) {
     title = (
       <div>
@@ -70,7 +84,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
   return (
     <Card className={classnames(styles.root, { [styles.highlightedBg]: jobAdTypeOption.showHighlightedBg })}>
       <Section className={styles.headerSection}>
-        <a href={job.jobUrl} className={styles.positionLink}>{title}</a>
+        <a href={job.jobUrl} className={styles.positionLink} target="_blank">{title}</a>
       </Section>
       <Section className={styles.bodySection}>
         <div className={styles.bodyDetailsWrapper}>
@@ -78,7 +92,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
             {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
             {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
             {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-            {company}
+            {job.company && <a href={job.company.link} className={styles.companyLink}>{company}</a>}
           </Text>
           {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
             <div
@@ -108,8 +122,19 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
         <div className={styles.footerLeft}>
           <div className={styles.jobInfoContainer}>
             <div className={styles.jobInfoList}>
-              <Text intimate className={styles.jobInfo}><LocationIcon className={styles.jobInfoIcon} /> {job.location}</Text>
-              {job.salary && (<Text intimate className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /> {job.salary}</Text>)}
+              <Text intimate className={styles.jobInfo}>
+                <LocationIcon className={styles.jobInfoIcon} />
+                {job.locations && job.locations.reduce(
+                  (accLocations, location, index) => {
+                    if (index > 0) {
+                      accLocations.push(<span>,&nbsp;</span>)
+                    }
+                    accLocations.push(renderLocation(location))
+                    return accLocations;
+                  }, []
+                )}
+              </Text>
+              {job.salary && (<Text intimate className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /><span>{job.salary}</span></Text>)}
             </div>
             <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
           </div>
@@ -128,14 +153,27 @@ export default JobCard;
 JobCard.propTypes = {
   keyword: PropTypes.string,
   job: PropTypes.shape({
-    company: PropTypes.string,
+    company: PropTypes.shape({
+      name: PropTypes.string,
+      link: PropTypes.string
+    }).isRequired,
     jobTitle: PropTypes.string.isRequired,
     jobUrl: PropTypes.string.isRequired,
     sellingPoints: PropTypes.arrayOf(PropTypes.string),
     companyPictureUrl: PropTypes.string,
     companyLogoUrl: PropTypes.string,
     description: PropTypes.string,
-    location: PropTypes.string.isRequired,
+    locations: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      link: PropTypes.string,
+      child: PropTypes.shape({
+        name: PropTypes.string,
+        link: PropTypes.string,
+        child: PropTypes.shape({
+          name: PropTypes.string
+        })
+      })
+    })).isRequired,
     salary: PropTypes.string,
     postingDuration: PropTypes.string.isRequired,
     featuredLabel: PropTypes.string,
