@@ -121,4 +121,15 @@ describe('JobCard', () => {
     const wrapper = shallow(<JobCard job={descriptionJob} keyword={keyword} jobAdType={JOBADTYPE_JOBSTREET_STANDOUT} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render plain company label', () => {
+    const descriptionJob = {
+      ...defaultJob,
+      company: {
+        name: 'Seek Asia'
+      }
+    };
+    const wrapper = shallow(<JobCard job={descriptionJob} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

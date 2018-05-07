@@ -32,11 +32,11 @@ const renderLocation = ({ link, name, child }) => {
     locationComps.push(<span className={styles.locationName}>{name}</span>);
   }
   if (child) {
-    locationComps.push(<span>&nbsp;>&nbsp;</span>)
+    locationComps.push(<span>&nbsp;>&nbsp;</span>);
     locationComps = [...locationComps, ...renderLocation(child)];
   }
   return locationComps;
-}
+};
 
 const JobCard = ({ job, keyword = '', jobAdType }) => {
   const jobAdTypeOption = getJobAdTypeOption(jobAdType);
@@ -92,7 +92,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
             {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
             {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
             {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-            {job.company && <a href={job.company.link} className={styles.companyLink}>{company}</a>}
+            {(job.company && job.company.link && <a href={job.company.link} className={styles.companyLink}>{company}</a>) || company}
           </Text>
           {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
             <div
@@ -127,9 +127,9 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
                 {job.locations && job.locations.reduce(
                   (accLocations, location, index) => {
                     if (index > 0) {
-                      accLocations.push(<span>,&nbsp;</span>)
+                      accLocations.push(<span>,&nbsp;</span>);
                     }
-                    accLocations.push(renderLocation(location))
+                    accLocations.push(renderLocation(location));
                     return accLocations;
                   }, []
                 )}

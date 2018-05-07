@@ -681,6 +681,147 @@ exports[`JobCard should render jobsDB default style 1`] = `
 </Card>
 `;
 
+exports[`JobCard should render plain company label 1`] = `
+<Card
+  className="root"
+>
+  <Section
+    className="headerSection"
+    header={false}
+    pullout={false}
+    slim={false}
+  >
+    <a
+      className="positionLink"
+      href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
+    >
+      <Text
+        baseline={true}
+        className="positionTitle"
+        semiStrong={true}
+        waving={true}
+      >
+        Senior Software Engineer (6 months Contract)
+      </Text>
+    </a>
+  </Section>
+  <Section
+    className="bodySection"
+    header={false}
+    pullout={false}
+    slim={false}
+  >
+    <div
+      className="bodyDetailsWrapper"
+    >
+      <Text
+        baseline={true}
+        className="company"
+        intimate={true}
+      >
+        <span
+          className="companyName"
+        >
+          Seek Asia
+        </span>
+      </Text>
+    </div>
+  </Section>
+  <Section
+    className="footerSection"
+    header={false}
+    pullout={false}
+    slim={false}
+  >
+    <div
+      className="footerLeft"
+    >
+      <div
+        className="jobInfoContainer"
+      >
+        <div
+          className="jobInfoList"
+        >
+          <Text
+            baseline={true}
+            className="jobInfo"
+            intimate={true}
+          >
+            <LocationIcon
+              className="jobInfoIcon"
+            />
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Pahang
+              </span>
+            </a>
+            <span>
+              , 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Selangor
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <a
+              className="locationLink"
+              href="/jobCard"
+            >
+              <span
+                className="locationName"
+              >
+                Cheras
+              </span>
+            </a>
+            <span>
+               &gt; 
+            </span>
+            <span
+              className="locationName"
+            >
+              Near Leisure Mall
+            </span>
+          </Text>
+          <Text
+            baseline={true}
+            className="jobInfo"
+            intimate={true}
+          >
+            <MoneyIcon
+              className="jobInfoIcon"
+            />
+            <span>
+              RM99999 - RM999999
+            </span>
+          </Text>
+        </div>
+        <Text
+          baseline={true}
+          className="postingDuration"
+          whispering={true}
+        >
+          1 hour ago
+        </Text>
+      </div>
+    </div>
+  </Section>
+</Card>
+`;
+
 exports[`JobCard should render with Classified in grey label 1`] = `
 <Card
   className="root"
