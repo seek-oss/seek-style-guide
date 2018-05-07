@@ -70,7 +70,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
   return (
     <Card className={classnames(styles.root, { [styles.highlightedBg]: jobAdTypeOption.showHighlightedBg })}>
       <Section className={styles.headerSection}>
-        <a href={job.jobUrl} className={styles.positionLink}>{title}</a>
+        <a href={job.jobUrl} className={styles.positionLink} target="_blank">{title}</a>
       </Section>
       <Section className={styles.bodySection}>
         <div className={styles.bodyDetailsWrapper}>

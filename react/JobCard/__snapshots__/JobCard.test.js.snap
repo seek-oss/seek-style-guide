@@ -13,6 +13,7 @@ exports[`JobCard should render company with bold keyword 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -121,6 +122,7 @@ exports[`JobCard should render job title with bold keyword 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <div>
         <Text
@@ -263,6 +265,7 @@ exports[`JobCard should render jobStreet standout style 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -390,6 +393,7 @@ exports[`JobCard should render jobsDB default style 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -498,6 +502,7 @@ exports[`JobCard should render with Classified in grey label 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -600,6 +605,7 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -697,6 +703,7 @@ exports[`JobCard should render with default props 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -794,6 +801,7 @@ exports[`JobCard should render with featured label 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
@@ -896,6 +904,7 @@ exports[`JobCard should render with selling points props 1`] = `
     <a
       className="positionLink"
       href="https://www-dev.jobstreet.com.my/en/job/20171002-3-senior-front-end-developer-update-x-2-6100835/origin/dev/sources/3?fr=J"
+      target="_blank"
     >
       <Text
         baseline={true}
