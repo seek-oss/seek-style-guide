@@ -26,8 +26,7 @@ export default class RenderJsx extends Component {
   render() {
     const { jsx, scope } = this.props;
 
-    const trimmedJsx = jsx.trim();
-    const fragment = `<React.Fragment>${trimmedJsx || '<span />'}</React.Fragment>`;
+    const fragment = `<React.Fragment>${jsx.trim() || '<React.Fragment />'}</React.Fragment>`;
     const { code } = transform(fragment);
     const el = scopeEval(code, { ...scope, React, this: this });
 
