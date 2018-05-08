@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './Checkbox.less';
 import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
+import FieldMessage from '../private/FieldMessage/FieldMessage';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
@@ -28,7 +29,13 @@ export default class Checkbox extends Component {
       onChange: PropTypes.func,
       checked: PropTypes.bool.isRequired
     }),
-    type: PropTypes.oneOf([STANDARD, BUTTON])
+    type: PropTypes.oneOf([STANDARD, BUTTON]),
+    valid: PropTypes.bool,
+    message: PropTypes.oneOfType([
+      PropTypes.oneOf([false]),
+      PropTypes.node
+    ]),
+    messageProps: PropTypes.object
   }
 
   static defaultProps = {
@@ -79,6 +86,10 @@ export default class Checkbox extends Component {
     );
   }
 
+  renderMessage(id, valid, message, messageProps) {
+    return <FieldMessage {...{ id: `${id}-message`, valid, message, messageProps }} />;
+  }
+
   renderInput() {
     const { id, inputProps } = this.props;
 
@@ -94,10 +105,11 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { className, id, valid, message, messageProps } = this.props;
 
     const rootClassNames = classnames({
       [styles.root]: true,
+      [styles.invalid]: valid === false,
       [className]: className
     });
 
@@ -105,6 +117,7 @@ export default class Checkbox extends Component {
       <div className={rootClassNames}>
         { this.renderInput() }
         { this.renderLabel() }
+        { this.renderMessage(id, valid, message, messageProps) }
       </div>
     );
   }
