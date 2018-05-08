@@ -58,4 +58,11 @@ describe('Checkbox', () => {
       expect(wrapper).toMatchSnapshot();
     });
   });
+
+  describe('FieldMessage', () => {
+    it('should render field message when passed', () => {
+      const wrapper = shallow(<Checkbox {...requiredProps} inputProps={{ checked: false }} message="Field is invalid" valid={false} />);
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
 });
