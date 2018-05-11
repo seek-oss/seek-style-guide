@@ -1,18 +1,90 @@
-const baseUrl = 'https://th.jobsdb.com';
-const baseUrlWithLanguage = `${baseUrl}/th/th`;
-const wpUrlWithLanguage = `${baseUrl}/th-th`;
-const mbaseUrl = 'https://m.jobsdb.co.th';
-const mUrlWithLanguage = `${mbaseUrl}/en-th`;
 
 export default {
   'footer.copyright': 'สงวนลิขสิทธิ์ 1998-{year} jobsDB',
   'footer.rightReserved': '',
-  'footer.siteMapLink': `${baseUrlWithLanguage}/sitemap`,
+  'footer.siteMapLink': '/th/th/sitemap',
   'footer.siteMapLinkText': 'แผนที่เว็บไซต์',
-  'footer.termsLink': `${wpUrlWithLanguage}/pages/terms/terms-conditions`,
+  'footer.termsLink': '/th-th//pages/terms/terms-conditions',
   'footer.termsLinkText': 'ข้อกำหนดและเงื่อนไข',
-  'footer.privacyLink': `${wpUrlWithLanguage}/pages/terms/privacy-policy`,
+  'footer.privacyLink': '/th-th/pages/terms/privacy-policy',
   'footer.privacyLinkText': 'คำชี้แจงสิทธิส่วนบุคคล',
-  'footer.legalLink': `${mUrlWithLanguage}/legal.do`,
-  'footer.legalLinkText': 'ข้อกำหนดทางกฎหมาย'
-};
+
+  'footer.csemail': 'อีเมล: CS@jobsDB.co.th',
+  'footer.csemailLink': 'mailto:CS@jobsDB.co.th',
+  'footer.cshotline':'(662)667 0824 และ (662)667 0700 ',
+  'footer.officehour':'(เวลาทำการ จันทร์ – ศุกร์ 8.30 น. – 17.30 น.)',
+  'footer.jobpostingenquiry':'Job Posting Enquiry:',
+
+  'footer.jobseekers':'Job Seekers',
+  'footer.browsejobs':'Browse Jobs',
+  'footer.browsejobsLink': '/th/th/browse',
+  'footer.postresumes':'Post Resumes',
+  'footer.postresumesLink': '/th/th/Resumes/ResumeIndex',
+  'footer.jobalerts':'Job Alerts',
+  'footer.jobalertsLink': '/th/th/JobAlert/JobAlertCreation',
+  'footer.myjobsdb':'My jobsDB',
+  'footer.myjobsdbLink': '/th/th/MyJobsDB',
+  'footer.careerinsights':'Career Insights',
+  'footer.careerinsightsLink':'/th/th/career-insights',
+
+  'footer.employers':'Employers',
+  'footer.postajob':'Post a Job',
+  'footer.postajobLink':'/th/th/Home/EmployerIndex',
+  'footer.searchcandidates':'Search Candidates',
+  'footer.searchcandidatesLink':'/th/th/StaticContentFullContainer/EM/FindTalent.htm',
+  'footer.advertisewithus':'Advertise with us',
+  'footer.advertisewithusLink':'/th/th/StaticContent/AboutUs/Products.htm',
+
+  'footer.aboutus':'About Us',
+  'footer.aboutjobsdb':'About jobsDB',
+  'footer.aboutjobsdbLink':'/th-th/pages/aboutus',
+  'footer.faq':'FAQ',
+  'footer.faqLink':'/th/th/StaticContentFullContainer/AboutUS/faq/index.htm',
+  'footer.careenatjobsdb':'Career@jobsDB',
+  'footer.careenatjobsdbLink':'/th/th/Search/FindJobs?JSRV=1&AccNums=1&SubAccount=14',
+  'footer.contactus':'Contact Us',
+  'footer.contactusLink':'/th-th/pages/regional-coverage',
+
+  'footer.tools':'Tools',
+  'footer.mobileversion':'Mobile Version',
+  'footer.mobileversionLink':'/th-th',
+  'footer.rss':'RSS',
+  'footer.rssLink':'/th/th/Rss/RenderJobFunctionRssIndex',
+
+  'footer.internationalpartners':'International Partners',
+  'footer.babajobindia':'BabaJob (India)',
+  'footer.babajobindiaLink':'http://www.babajob.com/',
+  'footer.bdjobsbandladesh':'Bdjobs (Bandladesh)',
+  'footer.bdjobsbandladeshLink':'http://www.bdjobs.com/',
+  'footer.brightermondayeastafrica':'Brighter Monday (East Africa)',
+  'footer.brightermondayeastafricaLink':'http://www.brightermonday.com/',
+  'footer.cathobrazil':'Catho (Brazil)',
+  'footer.cathobrazilLink':'http://www.catho.com.br/',
+  'footer.jobbermanwestafrica':'Jobberman (West Africa)',
+  'footer.jobbermanwestafricaLink':'http://www.jobberman.com/',
+  'footer.jobstreetseasia':'JobStreet (S.E. Asia)',
+  'footer.jobstreetseasiaLink':'http://www.jobstreet.com/',
+  'footer.jorahongkong':'Jora (Hong Kong)',
+  'footer.jorahongkongLink':'https://hk.jora.com/',
+  'footer.managerbrazil':'Manager (Brazil)',
+  'footer.managerbrazilLink':'http://www.manager.com.br/',
+  'footer.occmundialmexico':'OCC Mundial (Mexico)',
+  'footer.dccmundialmexicoLink':'https://www.occ.com.mx/',
+  'footer.seamanjobsitephilippines':'Seaman Jobsite (Philippines)',
+  'footer.seamanjobsitephilippinesLink':'http://www.seamanjobsite.com/',
+  'footer.seekaustralia':'SEEK (Australia)',
+  'footer.seekaustraliaLink':'http://www.seek.com.au/',
+  'footer.workabroadphilippines':'Work Abroad (Philippines)',
+  'footer.workabroadphilippinesLink':'http://www.workabroad.ph/',
+  'footer.workana':'Workana',
+  'footer.workanaLink':'https://www.workana.com/',
+  'footer.zhaopinchina':'Zhaopin (China)',
+  'footer.zhaopinchinaLink':'http://www.zhaopin.com/',
+
+  'footer.facebookLink':'http://www.facebook.com/jobsDB.HongKong',
+  'footer.googleplusLink':'https://plus.google.com/+jobsdbHK',
+  'footer.weiboLink':'http://weibo.com/jobsdbhk',
+  'footer.twitterLink':'http://twitter.com/HKJobs',
+  'footer.rssLink':'http://hk.jobsdb.com/HK/EN/Rss/RenderJobFunctionRssIndex'
+
+  };

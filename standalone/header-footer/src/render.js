@@ -37,7 +37,7 @@ const renderHtml = (Component, initialProps, options = { preview: false }) => {
         window.seek${Component.displayName}Instance = SeekHeaderFooter.render${Component.displayName}();
 
         // Simulate authenticating the user
-        seek${Component.displayName}Instance.updateProps({ authenticationStatus: 'authenticated', userName: 'Olivia', jobsDBBaseUrl: 'hk.v8.dev.jobsdb.com/'});
+        seek${Component.displayName}Instance.updateProps({ authenticationStatus: 'authenticated', userName: 'Olivia'});
 
         // Let developers know what's up
         console.log("The standalone ${Component.displayName.toLowerCase()} instance is available as 'window.seek${Component.displayName}Instance'");
@@ -46,14 +46,14 @@ const renderHtml = (Component, initialProps, options = { preview: false }) => {
     `}
   `;
 
-  return minify(html, { collapseWhitespace: true });
+  return minify(html, { collapseWhitespace: false });
 };
 
 const renderFiles = (Component, props = {}) => {
   if (typeof Component.displayName !== 'string') {
     throw new Error('Component must have a display name');
   }
-
+const url ="hhjjj";
   const tabSuffix = !props.activeTab ? '' :
     `__${props.activeTab.toLowerCase().replace(/ /g, '_').replace('$', '').replace('&', 'and')}`;
   const fileName = `${Component.displayName.toLowerCase()}__HK${tabSuffix}`;
@@ -67,5 +67,5 @@ const renderFiles = (Component, props = {}) => {
 
 export default () => ({
   ...renderFiles(Header, { language: 'en', country: 'hk', loginAvailable: true, activeTab: ACTIVE_TAB_HOME }),
-  ...renderFiles(Footer, { language: 'en', country: 'hk' })
+  ...renderFiles(Footer, { language: 'en', country: 'hk',})
 });

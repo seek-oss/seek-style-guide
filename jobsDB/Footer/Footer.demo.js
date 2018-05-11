@@ -7,7 +7,10 @@ export default {
   component: Footer,
   initialProps: {
     language: 'en',
-    country: 'hk'
+    country: 'hk',
+    baseUrl: 'https://hk.jobsdb.com', 
+    mbaseUrl:'https://m.jobsdb.com', 
+    contentUrl: "https://content.jobsdbcdn.com/Content/d0416"
   },
   options: [
     {
