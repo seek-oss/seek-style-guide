@@ -9,7 +9,8 @@ export default {
   'footer.privacyLink': '/en-sg/pages/terms/privacy-policy',
   'footer.privacyLinkText': 'Privacy Statement',
 
-  'footer.csemail': 'Email: CS@jobsDB.com',
+  'footer.csemailtext': 'Email: ',
+  'footer.csemail': 'CS@jobsDB.com',
   'footer.csemailLink': 'mailto:CS@jobsDB.com',
   'footer.cshotline':'+852 2332 8832',
   'footer.officehour':'(Mon - Fri, 9am - 6pm)',

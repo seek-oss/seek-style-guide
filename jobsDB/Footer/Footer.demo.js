@@ -7,7 +7,7 @@ export default {
   component: Footer,
   initialProps: {
     language: 'en',
-    country: 'hk',
+    country: 'hk',   
     baseUrl: 'https://hk.jobsdb.com', 
     mbaseUrl:'https://m.jobsdb.com', 
     contentUrl: "https://content.jobsdbcdn.com/Content/d0416"
@@ -48,28 +48,33 @@ export default {
           label: 'Hong Kong',
           transformProps: props => ({
             ...props,
-            country: 'hk'
+            country: 'hk',   
+            baseUrl: 'https://hk.jobsdb.com'
+
           })
         },
         {
           label: 'Singapore',
           transformProps: props => ({
             ...props,
-            country: 'sg'
+            country: 'sg',   
+            baseUrl: 'https://sg.jobsdb.com'
           })
         },
         {
           label: 'Indonesia',
           transformProps: props => ({
             ...props,
-            country: 'id'
+            country: 'id',   
+            baseUrl: 'https://id.jobsdb.com'
           })
         },
         {
           label: 'Thailand',
           transformProps: props => ({
             ...props,
-            country: 'th'
+            country: 'th',   
+            baseUrl: 'https://th.jobsdb.com'
           })
         }
       ]

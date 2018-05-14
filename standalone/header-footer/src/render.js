@@ -67,5 +67,5 @@ const url ="hhjjj";
 
 export default () => ({
   ...renderFiles(Header, { language: 'en', country: 'hk', loginAvailable: true, activeTab: ACTIVE_TAB_HOME }),
-  ...renderFiles(Footer, { language: 'en', country: 'hk',})
+  ...renderFiles(Footer, { language: 'en', country: 'hk', mbaseUrl:'https://hk.jobsdb.com'})
 });

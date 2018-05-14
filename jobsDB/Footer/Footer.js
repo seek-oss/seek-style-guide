@@ -34,7 +34,7 @@ const Footer = ({ language, country, baseUrl, mbaseUrl, contentUrl }) => {
                   <div className={styles['footer-contact-info']}>
                     <div>{messages['footer.jobpostingenquiry']}</div>
                     <div>{messages['footer.cshotline']} <em>{messages['footer.officehour']}</em></div>
-                    <div><a href={messages['footer.csemailLink']}>{messages['footer.csemail']}</a></div>
+                    <div>{messages['footer.csemailtext']}<a href={messages['footer.csemailLink']}>{messages['footer.csemail']}</a></div>
                     <ul className={classnames(styles['footer-social'], styles['footer-social-icons'])}>
                       <li><a className={classnames(styles['social-icon'], styles['social-facebook'])} style={socialbackgroundimagestyle} href={messages['footer.facebookLink']} target="_blank">Facebook</a></li>
                       <li><a className={classnames(styles['social-icon'], styles['social-googleplus'])} style={socialbackgroundimagestyle} href={messages['footer.googleplusLink']} target="_blank">Google+</a></li>
@@ -126,13 +126,12 @@ const Footer = ({ language, country, baseUrl, mbaseUrl, contentUrl }) => {
 Footer.propTypes = {
   language: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
-  baseUrl: PropTypes.string,
+  baseUrl: PropTypes.string.isRequired,
   mbaseUrl: PropTypes.string,
   contentUrl: PropTypes.string
 };
 
 Footer.defaultProps = {
-  baseUrl: 'https://hk.jobsdb.com',
   mbaseUrl: 'https://m.jobsdb.com',
   contentUrl: 'https://content.jobsdbcdn.com/Content/d0416'
 };

@@ -8,7 +8,8 @@ export default {
   'footer.termsLinkText': 'Terms & Conditions',
   'footer.privacyLink': '/en-th/pages/terms/privacy-policy',
 
-  'footer.csemail': 'อีเมล: CS@jobsDB.co.th',
+  'footer.csemailtext': 'อีเมล: ',
+  'footer.csemail': 'CS@jobsDB.co.th',
   'footer.csemailLink': 'mailto:CS@jobsDB.co.th',
   'footer.cshotline':'(662)667 0824 และ (662)667 0700 ',
   'footer.officehour':'(เวลาทำการ จันทร์ – ศุกร์ 8.30 น. – 17.30 น.)',
