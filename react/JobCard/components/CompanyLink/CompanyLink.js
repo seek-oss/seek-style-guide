@@ -39,7 +39,7 @@ const CompanyLink = ({ company, keyword = '' }) => {
 
 export default CompanyLink;
 
-CompanyLink.PropTypes = {
+CompanyLink.propTypes = {
   company: CompanyLinkPropTypes.isRequired,
   keyword: PropTypes.string
 };

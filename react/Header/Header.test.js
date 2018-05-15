@@ -31,7 +31,9 @@ describe('Header', () => {
       language: 'en',
       country: 'id'
     }],
-    LogoComponent: FakeComponent
+    LogoComponent: FakeComponent,
+    country: 'hk',
+    language: 'en'
   };
 
   const mockLinks = [
@@ -71,9 +73,9 @@ describe('Header', () => {
       activeTab: 'ACTIVE_TAB_HOME',
       logoProps: { country: 'my' },
       more: [{ title: 'Space Piracy Jobs', url: 'http://seekasia.com/space-piracy' }],
-      actionTrayProps: [{
+      actionTrayProps: {
         showMenu: false
-      }]
+      }
     };
     const wrapper = shallow(<Header {...testProps} />);
     expect(wrapper).toMatchSnapshot();

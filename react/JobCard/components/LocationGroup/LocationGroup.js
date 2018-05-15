@@ -37,6 +37,6 @@ const LocationGroup = ({ locations }) => {
 
 export default LocationGroup;
 
-LocationGroup.PropTypes = {
+LocationGroup.propTypes = {
   locations: LocationsPropTypes.isRequired
 };

@@ -111,11 +111,6 @@ exports[`Header should pass through optional props 1`] = `
     </div>
   </div>
   <ActionTray
-    0={
-      Object {
-        "showMenu": false,
-      }
-    }
     activeTab="ACTIVE_TAB_HOME"
     brandStyles={
       Object {
@@ -133,6 +128,7 @@ exports[`Header should pass through optional props 1`] = `
         "header.employerSiteUrl": "http://brand.seekasia.com",
       }
     }
+    showMenu={false}
   />
   <Menu
     brandStyles={

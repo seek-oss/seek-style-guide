@@ -81,7 +81,7 @@ export default {
             ...props,
             job: {
               ...props.job,
-              company: '',
+              company: null,
               confidentialLabel: 'Company Confidential'
             }
           })
