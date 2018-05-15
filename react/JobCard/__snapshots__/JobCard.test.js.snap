@@ -86,50 +86,27 @@ exports[`JobCard should render company with bold keyword 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -277,50 +254,27 @@ exports[`JobCard should render job title with bold keyword 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -445,50 +399,27 @@ exports[`JobCard should render jobStreet standout style 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -610,50 +541,27 @@ exports[`JobCard should render jobsDB default style 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -751,50 +659,27 @@ exports[`JobCard should render plain company label 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -902,50 +787,27 @@ exports[`JobCard should render with Classified in grey label 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -1043,50 +905,27 @@ exports[`JobCard should render with company confidential in grey label 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -1189,50 +1028,27 @@ exports[`JobCard should render with default props 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -1340,50 +1156,27 @@ exports[`JobCard should render with featured label 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}
@@ -1486,50 +1279,27 @@ exports[`JobCard should render with selling points props 1`] = `
             <LocationIcon
               className="jobInfoIcon"
             />
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Pahang
-              </span>
-            </a>
-            <span>
-              , 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Selangor
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <a
-              className="locationLink"
-              href="/jobCard"
-            >
-              <span
-                className="locationName"
-              >
-                Cheras
-              </span>
-            </a>
-            <span>
-               &gt; 
-            </span>
-            <span
-              className="locationName"
-            >
-              Near Leisure Mall
-            </span>
+            <LocationGroup
+              locations={
+                Array [
+                  Object {
+                    "link": "/jobCard",
+                    "name": "Pahang",
+                  },
+                  Object {
+                    "child": Object {
+                      "child": Object {
+                        "name": "Near Leisure Mall",
+                      },
+                      "link": "/jobCard",
+                      "name": "Cheras",
+                    },
+                    "link": "/jobCard",
+                    "name": "Selangor",
+                  },
+                ]
+              }
+            />
           </Text>
           <Text
             baseline={true}

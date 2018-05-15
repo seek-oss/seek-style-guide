@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobCard - LocationGroup should render correctly 1`] = `
+Array [
+  Array [
+    <a
+      className="locationLink"
+      href="/jobCard"
+    />,
+  ],
+  <span />,
+  Array [
+    <a
+      className="locationLink"
+      href="/jobCard"
+    />,
+    <span />,
+    <a
+      className="locationLink"
+      href="/jobCard"
+    />,
+    <span />,
+    <span
+      className="locationName"
+    />,
+  ],
+]
+`;

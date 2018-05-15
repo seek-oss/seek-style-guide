@@ -11,6 +11,7 @@ import classnames from 'classnames';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 import getJobAdTypeOption from './jobCardHelper.js';
+import LocationGroup, { LocationsPropTypes } from './components/LocationGroup/LocationGroup';
 
 const getParts = (text, query) => {
   if (!text || !query) {
@@ -24,24 +25,10 @@ const getParts = (text, query) => {
   return parse(text, matches);
 };
 
-const renderLocation = ({ link, name, child }) => {
-  let locationComps = [];
-  if (link) {
-    locationComps.push(<a href={link} className={styles.locationLink}><span className={styles.locationName}>{name}</span></a>);
-  } else {
-    locationComps.push(<span className={styles.locationName}>{name}</span>);
-  }
-  if (child) {
-    locationComps.push(<span>&nbsp;>&nbsp;</span>);
-    locationComps = [...locationComps, ...renderLocation(child)];
-  }
-  return locationComps;
-};
-
 const JobCard = ({ job, keyword = '', jobAdType }) => {
   const jobAdTypeOption = getJobAdTypeOption(jobAdType);
   let title = <Text waving semiStrong className={styles.positionTitle}>{job.jobTitle}</Text>;
-  let company = job.company && job.company.name && <span className={styles.companyName}>{job.company.name}</span> || '';
+  let company = (className) => (job.company && job.company.name && <span className={className}>{job.company.name}</span> || '');
   const keywordParts = getParts(job.jobTitle, keyword);
   const companyParts = job.company && getParts(job.company.name, keyword) || null;
   if (keywordParts) {
@@ -65,8 +52,8 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
     );
   }
   if (companyParts) {
-    company = (
-      <span className={styles.companyName}>
+    company = (className) => (
+      <span className={className}>
         {
           companyParts.map((part, index) => {
             return (
@@ -92,7 +79,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
             {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
             {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
             {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-            {(job.company && job.company.link && <a href={job.company.link} className={styles.companyLink}>{company}</a>) || company}
+            {(job.company && job.company.link && <a href={job.company.link} className={styles.companyLink}>{company(styles.companyName)}</a>) || company(styles.companyName)}
           </Text>
           {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
             <div
@@ -124,15 +111,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
             <div className={styles.jobInfoList}>
               <Text intimate className={styles.jobInfo}>
                 <LocationIcon className={styles.jobInfoIcon} />
-                {job.locations && job.locations.reduce(
-                  (accLocations, location, index) => {
-                    if (index > 0) {
-                      accLocations.push(<span>,&nbsp;</span>);
-                    }
-                    accLocations.push(renderLocation(location));
-                    return accLocations;
-                  }, []
-                )}
+                {job.locations && <LocationGroup locations={job.locations} />}
               </Text>
               {job.salary && (<Text intimate className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /><span>{job.salary}</span></Text>)}
             </div>
@@ -163,17 +142,7 @@ JobCard.propTypes = {
     companyPictureUrl: PropTypes.string,
     companyLogoUrl: PropTypes.string,
     description: PropTypes.string,
-    locations: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string,
-      link: PropTypes.string,
-      child: PropTypes.shape({
-        name: PropTypes.string,
-        link: PropTypes.string,
-        child: PropTypes.shape({
-          name: PropTypes.string
-        })
-      })
-    })).isRequired,
+    locations: LocationsPropTypes,
     salary: PropTypes.string,
     postingDuration: PropTypes.string.isRequired,
     featuredLabel: PropTypes.string,

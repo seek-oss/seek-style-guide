@@ -1,9 +1,13 @@
-.link() {
-  color: @sk-link;
+.link(@color:@sk-link, @darken: false) {
+  color: @color;
   text-decoration: none;
+  pointer-events: auto;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
+    & when (@darken = true) {
+      color: darken(@color, 10%);
+    }
   }
 }
 

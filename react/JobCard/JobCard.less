@@ -59,10 +59,6 @@
   color: @saWhite;
 }
 
-.titleKeyword {
-  color: darken(@actionBlue, 10%);
-}
-
 .sellingPointsList {
   .rawText();
   list-style: disc;
@@ -210,23 +206,20 @@
 }
 
 .positionLink {
-  .link(@actionBlue);
+  .link(@actionBlue, true);
   text-decoration: none;
   pointer-events: auto;
+
+  .titleKeyword {
+    color: darken(@actionBlue, 10%);
+  }
 }
 
 .positionLink:visited {
-  .link(@saVisitedLink);
-}
+  .link(@saVisitedLink, true);
 
-.link (@color) {
-  text-decoration: none;
-  pointer-events: auto;
-  color: @color;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-    color: darken(@color, 10%);
+  .titleKeyword {
+    color: darken(@saVisitedLink, 10%);
   }
 }
 
@@ -236,13 +229,6 @@
 }
 
 .companyLink {
-  .link(@saGrey1);
-}
-
-.locationName {
-  &:extend(.jobInfo);
-}
-
-.locationLink {
-  .link(@saGrey2);
+  &:extend(.companyName);
+  .link(@saGrey1, true);
 }
