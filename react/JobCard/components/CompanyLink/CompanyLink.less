@@ -1,0 +1,16 @@
+@import (reference) "~seek-asia-style-guide/theme";
+
+.companyName {
+  color: @saGrey1;
+  font-weight: @sa-semi-bold;
+}
+
+.companyLink {
+  &:extend(.companyName);
+  .link(@saGrey1, true);
+}
+
+.highlight {
+  font-weight: @sa-bold;
+  color: @saBlack;
+}

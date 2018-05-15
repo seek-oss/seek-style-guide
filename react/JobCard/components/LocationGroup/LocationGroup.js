@@ -15,10 +15,10 @@ export const LocationsPropTypes = PropTypes.arrayOf(PropTypes.shape({
 }));
 
 const renderLocation = ({ link, name, child }) => {
-  const locations = [];
   const locationLink = (link) ? (<a href={link} className={styles.locationLink}><span>{name}</span></a>) : (<span className={styles.locationName}>{name}</span>);
   if (child) {
-    return [locationLink, (<span>&nbsp;>&nbsp;</span>), ...renderLocation(child)];
+    const seperator = (<span>&nbsp;>&nbsp;</span>);
+    return [locationLink, seperator, ...renderLocation(child)];
   }
   return [locationLink];
 };
@@ -32,11 +32,11 @@ const LocationGroup = ({ locations }) => {
       accLocations.push(renderLocation(location));
       return accLocations;
     }, []
-  )
-}
+  );
+};
 
 export default LocationGroup;
 
 LocationGroup.PropTypes = {
   locations: LocationsPropTypes.isRequired
-}
+};

@@ -8,29 +8,14 @@ import LocationIcon from '../LocationIcon/LocationIcon';
 import MoneyIcon from '../MoneyIcon/MoneyIcon';
 import styles from './JobCard.less';
 import classnames from 'classnames';
-import match from 'autosuggest-highlight/match';
-import parse from 'autosuggest-highlight/parse';
-import getJobAdTypeOption from './jobCardHelper.js';
+import { getJobAdTypeOption, getParts } from './jobCardHelper.js';
 import LocationGroup, { LocationsPropTypes } from './components/LocationGroup/LocationGroup';
+import CompanyLink, { CompanyLinkPropTypes } from './components/CompanyLink/CompanyLink';
 
-const getParts = (text, query) => {
-  if (!text || !query) {
-    return null;
-  }
-  const matches = match(text, query);
-  // No point to parse if matches is empty array
-  if (matches.length === 0) {
-    return null;
-  }
-  return parse(text, matches);
-};
-
-const JobCard = ({ job, keyword = '', jobAdType }) => {
+const JobCard = ({ job, keyword, jobAdType }) => {
   const jobAdTypeOption = getJobAdTypeOption(jobAdType);
   let title = <Text waving semiStrong className={styles.positionTitle}>{job.jobTitle}</Text>;
-  let company = (className) => (job.company && job.company.name && <span className={className}>{job.company.name}</span> || '');
   const keywordParts = getParts(job.jobTitle, keyword);
-  const companyParts = job.company && getParts(job.company.name, keyword) || null;
   if (keywordParts) {
     title = (
       <div>
@@ -51,23 +36,6 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
       </div>
     );
   }
-  if (companyParts) {
-    company = (className) => (
-      <span className={className}>
-        {
-          companyParts.map((part, index) => {
-            return (
-              <span
-                className={part.highlight ? styles.highlight : null}
-                key={index}>
-                {part.text}
-              </span>
-            );
-          })
-        }
-      </span>
-    );
-  }
   return (
     <Card className={classnames(styles.root, { [styles.highlightedBg]: jobAdTypeOption.showHighlightedBg })}>
       <Section className={styles.headerSection}>
@@ -79,7 +47,7 @@ const JobCard = ({ job, keyword = '', jobAdType }) => {
             {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
             {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
             {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-            {(job.company && job.company.link && <a href={job.company.link} className={styles.companyLink}>{company(styles.companyName)}</a>) || company(styles.companyName)}
+            {job.company && <CompanyLink company={job.company} keyword={keyword} />}
           </Text>
           {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
             <div
@@ -132,10 +100,7 @@ export default JobCard;
 JobCard.propTypes = {
   keyword: PropTypes.string,
   job: PropTypes.shape({
-    company: PropTypes.shape({
-      name: PropTypes.string,
-      link: PropTypes.string
-    }).isRequired,
+    company: CompanyLinkPropTypes,
     jobTitle: PropTypes.string.isRequired,
     jobUrl: PropTypes.string.isRequired,
     sellingPoints: PropTypes.arrayOf(PropTypes.string),

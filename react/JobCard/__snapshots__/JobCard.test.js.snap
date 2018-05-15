@@ -39,27 +39,15 @@ exports[`JobCard should render company with bold keyword 1`] = `
         className="company"
         intimate={true}
       >
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            <span
-              className="highlight"
-              key="0"
-            >
-              SEEK
-            </span>
-            <span
-              className={null}
-              key="1"
-            >
-               Asia
-            </span>
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+          keyword="Seek"
+        />
       </Text>
     </div>
   </Section>
@@ -207,27 +195,15 @@ exports[`JobCard should render job title with bold keyword 1`] = `
         className="company"
         intimate={true}
       >
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            <span
-              className="highlight"
-              key="0"
-            >
-              SEEK
-            </span>
-            <span
-              className={null}
-              key="1"
-            >
-               Asia
-            </span>
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+          keyword="Seek Senior Engineer"
+        />
       </Text>
     </div>
   </Section>
@@ -341,27 +317,15 @@ exports[`JobCard should render jobStreet standout style 1`] = `
         className="company"
         intimate={true}
       >
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            <span
-              className="highlight"
-              key="0"
-            >
-              SEEK
-            </span>
-            <span
-              className={null}
-              key="1"
-            >
-               Asia
-            </span>
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+          keyword="Seek"
+        />
       </Text>
       <div
         className="jobDescriptionSection"
@@ -494,27 +458,15 @@ exports[`JobCard should render jobsDB default style 1`] = `
         className="company"
         intimate={true}
       >
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            <span
-              className="highlight"
-              key="0"
-            >
-              SEEK
-            </span>
-            <span
-              className={null}
-              key="1"
-            >
-               Asia
-            </span>
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+          keyword="Seek"
+        />
       </Text>
     </div>
   </Section>
@@ -628,11 +580,13 @@ exports[`JobCard should render plain company label 1`] = `
         className="company"
         intimate={true}
       >
-        <span
-          className="companyName"
-        >
-          Seek Asia
-        </span>
+        <CompanyLink
+          company={
+            Object {
+              "name": "Seek Asia",
+            }
+          }
+        />
       </Text>
     </div>
   </Section>
@@ -751,16 +705,14 @@ exports[`JobCard should render with Classified in grey label 1`] = `
         >
           Classified
         </span>
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            SEEK Asia
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+        />
       </Text>
     </div>
   </Section>
@@ -992,16 +944,14 @@ exports[`JobCard should render with default props 1`] = `
         className="company"
         intimate={true}
       >
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            SEEK Asia
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+        />
       </Text>
     </div>
   </Section>
@@ -1120,16 +1070,14 @@ exports[`JobCard should render with featured label 1`] = `
         >
           Feature
         </span>
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            SEEK Asia
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+        />
       </Text>
     </div>
   </Section>
@@ -1243,16 +1191,14 @@ exports[`JobCard should render with selling points props 1`] = `
         className="company"
         intimate={true}
       >
-        <a
-          className="companyLink"
-          href="/jobCard"
-        >
-          <span
-            className="companyName"
-          >
-            SEEK Asia
-          </span>
-        </a>
+        <CompanyLink
+          company={
+            Object {
+              "link": "/jobCard",
+              "name": "SEEK Asia",
+            }
+          }
+        />
       </Text>
     </div>
   </Section>
