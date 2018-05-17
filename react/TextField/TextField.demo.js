@@ -41,10 +41,8 @@ class TextFieldContainer extends Component {
       <div style={{ width: '300px' }}>
         <DemoComponent
           {...componentProps}
-          inputProps={{
-            onChange: this.handleChange,
-            value: inputValue
-          }}
+          onChange={this.handleChange}
+          value={inputValue}
           onClear={this.handleClear}
         />
       </div>
@@ -64,10 +62,8 @@ export default {
     label: 'First Name',
     message: 'e.g. Olivia',
     // Documentation only:
-    inputProps: {
-      onChange: () => {},
-      value: '...'
-    },
+    onChange: () => {},
+    value: '...',
     onClear: () => {}
   },
   options: [

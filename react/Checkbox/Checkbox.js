@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './Checkbox.less';
 import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
@@ -24,11 +23,13 @@ export default class Checkbox extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     label: PropTypes.node.isRequired,
+    value: PropTypes.string,
     className: PropTypes.string,
-    inputProps: PropTypes.shape({
-      onChange: PropTypes.func,
-      checked: PropTypes.bool.isRequired
-    }),
+    checked: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    inputProps: PropTypes.object,
     type: PropTypes.oneOf([STANDARD, BUTTON]),
     valid: PropTypes.bool,
     message: PropTypes.oneOfType([
@@ -40,9 +41,8 @@ export default class Checkbox extends Component {
 
   static defaultProps = {
     className: '',
-    inputProps: {
-      checked: false
-    },
+    checked: false,
+    inputProps: {},
     type: STANDARD
   };
 
@@ -91,10 +91,15 @@ export default class Checkbox extends Component {
   }
 
   renderInput() {
-    const { id, inputProps } = this.props;
+    const { id, value, checked, onChange, onFocus, onBlur, inputProps } = this.props;
 
     const allInputProps = {
       id,
+      value,
+      checked,
+      onChange,
+      onFocus,
+      onBlur,
       ...combineClassNames(inputProps, styles.input),
       type: 'checkbox'
     };

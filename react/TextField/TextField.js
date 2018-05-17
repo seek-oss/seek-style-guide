@@ -1,14 +1,10 @@
 import styles from './TextField.less';
-
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
 import ClearField from '../ClearField/ClearField';
-
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
-
 import invoke from 'lodash/invoke';
 
 function combineClassNames(props = {}, ...classNames) {
@@ -33,27 +29,20 @@ export default class TextField extends Component {
 
   static propTypes = {
     id: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    type: PropTypes.string,
     className: PropTypes.string,
     valid: PropTypes.bool,
-    /* eslint-disable consistent-return */
-    inputProps: (props, propName, componentName) => {
-      const { id, inputProps } = props;
-      const { id: inputId } = inputProps || {};
-
-      if (typeof inputProps !== 'undefined' && typeof inputProps !== 'object') {
-        return new Error(`Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
-      }
-
-      if (inputId && id) {
-        return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
-      }
-    },
-    /* eslint-enable consistent-return */
+    inputProps: PropTypes.object,
     onClear: PropTypes.func
   };
 
   static defaultProps = {
-    className: ''
+    className: '',
+    inputProps: {}
   };
 
   constructor() {
@@ -83,10 +72,15 @@ export default class TextField extends Component {
   }
 
   renderInput() {
-    const { id, inputProps = {} } = this.props;
+    const { id, value, onChange, onFocus, onBlur, type, inputProps = {} } = this.props;
     const { ref } = inputProps;
     const allInputProps = {
       id,
+      value,
+      onChange,
+      onFocus,
+      onBlur,
+      type,
       ...combineClassNames(inputProps, styles.input),
       ref: attachRefs(this.storeInputReference, ref),
       'aria-describedby': `${id}-message`
@@ -108,8 +102,9 @@ export default class TextField extends Component {
   }
 
   render() {
-    const { id, className, valid, onClear, inputProps = {} } = this.props;
-    const hasValue = (inputProps.value && inputProps.value.length > 0);
+    const { id, value, className, valid, onClear, inputProps = {} } = this.props;
+    const resolvedValue = value || inputProps.value || '';
+    const hasValue = resolvedValue.length > 0;
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,

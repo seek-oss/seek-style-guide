@@ -44,12 +44,10 @@ class AutosuggestContainer extends Component {
       <div style={{ width: '300px' }}>
         <DemoComponent
           {...componentProps}
-          inputProps={{
-            type: 'search',
-            onChange: this.handleChange,
-            onFocus: this.handleFocus,
-            value: inputValue
-          }}
+          type="search"
+          value={inputValue}
+          onChange={this.handleChange}
+          onFocus={this.handleFocus}
           onClear={this.handleClear}
         />
       </div>
@@ -66,6 +64,9 @@ export default {
   initialProps: {
     id: 'jobTitles',
     label: 'Job Titles',
+    type: 'search',
+    value: '...',
+    onChange: () => {},
     autosuggestProps: {
       suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer'],
       onSuggestionsFetchRequested: () => {},
@@ -74,12 +75,6 @@ export default {
       getSuggestionValue: suggestion => suggestion
     },
     message: false,
-    // Documentation only:
-    inputProps: {
-      type: 'search',
-      value: '...',
-      onChange: () => {}
-    },
     onClear: () => {}
   },
   options: [

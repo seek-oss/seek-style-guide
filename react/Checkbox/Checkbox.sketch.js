@@ -13,22 +13,22 @@ const noop = () => {};
 export const symbols = {
   'Checkbox/Standard/Checked': (
     <Container>
-      <Checkbox id="checkbox2" label="Checkbox" inputProps={{ checked: true, onChange: noop }} />
+      <Checkbox id="checkbox2" label="Checkbox" checked={true} onChange={noop} />
     </Container>
   ),
   'Checkbox/Standard/Unchecked': (
     <Container>
-      <Checkbox id="checkbox1" label="Checkbox" inputProps={{ checked: false, onChange: noop }} />
+      <Checkbox id="checkbox1" label="Checkbox" checked={false} onChange={noop} />
     </Container>
   ),
   'Checkbox/Button/Checked': (
     <Container>
-      <Checkbox id="checkbox2" label="Checkbox" type="button" inputProps={{ checked: true, onChange: noop }} />
+      <Checkbox id="checkbox2" label="Checkbox" type="button" checked={true} onChange={noop} />
     </Container>
   ),
   'Checkbox/Button/Unchecked': (
     <Container>
-      <Checkbox id="checkbox2" label="Checkbox" type="button" inputProps={{ checked: false, onChange: noop }} />
+      <Checkbox id="checkbox2" label="Checkbox" type="button" checked={false} onChange={noop} />
     </Container>
   )
 };
