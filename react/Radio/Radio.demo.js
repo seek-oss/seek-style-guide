@@ -42,19 +42,15 @@ class RadioContainer extends Component {
           {...componentProps}
           id="Yes"
           label="Yes"
-          inputProps={{
-            checked: value === 'Yes',
-            onChange: this.handleYes
-          }}
+          checked={value === 'Yes'}
+          onChange={this.handleYes}
         />
         <DemoComponent
           {...componentProps}
           id="No"
           label="No"
-          inputProps={{
-            checked: value === 'No',
-            onChange: this.handleNo
-          }}
+          checked={value === 'No'}
+          onChange={this.handleNo}
         />
       </div>
     );
@@ -72,10 +68,8 @@ export default {
     name: 'stillInRole',
     // Documentation only:
     id: 'myRadio',
-    inputProps: {
-      checked: false,
-      onChange: () => {}
-    }
+    checked: false,
+    onChange: () => {}
   },
   options: []
 };

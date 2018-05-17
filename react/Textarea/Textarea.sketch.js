@@ -6,9 +6,8 @@ import SketchFieldContainer from '../private/SketchFieldContainer/SketchFieldCon
 const commonProps = {
   className: styles.root,
   label: 'Label',
-  inputProps: {
-    value: ''
-  },
+  value: '',
+  onChange: () => {},
   countFeedback: () => ({ count: 500 })
 };
 

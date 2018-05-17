@@ -1,7 +1,5 @@
 import styles from './Radio.less';
-
 import PropTypes from 'prop-types';
-
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Text from '../Text/Text';
@@ -20,6 +18,11 @@ export default class Radio extends Component {
 
   static propTypes = {
     id: PropTypes.string.isRequired,
+    value: PropTypes.string,
+    checked: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
     className: PropTypes.string,
     label: PropTypes.string,
     labelProps: PropTypes.object,
@@ -33,9 +36,14 @@ export default class Radio extends Component {
   };
 
   renderInput() {
-    const { id, inputProps } = this.props;
+    const { id, value, checked, onChange, onFocus, onBlur, inputProps } = this.props;
     const allInputProps = {
       id,
+      value,
+      checked,
+      onChange,
+      onFocus,
+      onBlur,
       ...combineClassNames(inputProps, styles.input),
       type: 'radio'
     };

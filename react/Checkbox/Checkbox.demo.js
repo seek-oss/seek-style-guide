@@ -33,10 +33,8 @@ class CheckboxContainer extends Component {
       <div className={demoStyles.root}>
         <DemoComponent
           {...componentProps}
-          inputProps={{
-            checked,
-            onChange: this.handleChange
-          }}
+          checked={checked}
+          onChange={this.handleChange}
         />
       </div>
     );
@@ -55,10 +53,8 @@ export default {
     label: 'Still in role',
     type: 'standard',
     // Documentation only:
-    inputProps: {
-      checked: false,
-      onChange: () => {}
-    }
+    checked: false,
+    onChange: () => {}
   },
   options: [
     {
