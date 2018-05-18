@@ -14,69 +14,61 @@ export default {
   },
   options: [
     {
-      label: 'Language',
+      label: 'Country & Language',
       type: 'radio',
       states: [
         {
-          label: 'English',
-          transformProps: props => ({
-            ...props,
-            language: 'en',   
-            domainUrl: 'jobsdb.com'
-          })
-        },
-        {
-          label: 'Bahasa',
-          transformProps: props => ({
-            ...props,
-            language: 'id',   
-            domainUrl: 'jobsdb.com'
-          })
-        },
-        {
-          label: 'Thai',
-          transformProps: props => ({
-            ...props,
-            language: 'th',   
-            domainUrl: 'jobsdb.com'
-          })
-        }
-      ]
-    },
-    {
-      label: 'Country',
-      type: 'radio',
-      states: [
-        {
-          label: 'Hong Kong',
+          label: 'Hong Kong (English)',
           transformProps: props => ({
             ...props,
             country: 'hk',   
+            language: 'en', 
             domainUrl: 'jobsdb.com'
 
           })
         },
         {
-          label: 'Singapore',
+          label: 'Singapore (English)',
           transformProps: props => ({
             ...props,
             country: 'sg',   
+            language: 'en',
             domainUrl: 'jobsdb.com'
           })
         },
         {
-          label: 'Indonesia',
+          label: 'Indonesia (English)',
           transformProps: props => ({
             ...props,
-            country: 'id',   
+            country: 'id',  
+            language: 'en', 
             domainUrl: 'jobsdb.com'
           })
         },
         {
-          label: 'Thailand',
+          label: 'Indonesia (Bahasa)',
           transformProps: props => ({
             ...props,
-            country: 'th',   
+            country: 'id',  
+            language: 'id', 
+            domainUrl: 'jobsdb.com'
+          })
+        },
+        {
+          label: 'Thailand (English)',
+          transformProps: props => ({
+            ...props,
+            country: 'th', 
+            language: 'en',  
+            domainUrl: 'jobsdb.com'
+          })
+        },
+        {
+          label: 'Thailand (Thai)',
+          transformProps: props => ({
+            ...props,
+            country: 'th', 
+            language: 'th',  
             domainUrl: 'jobsdb.com'
           })
         }

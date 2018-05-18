@@ -33,7 +33,14 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
                 <div className={classnames(styles['col-sm-6'], styles['col-md-12'])}>
                   <div className={styles['footer-contact-info']}>
                     <div>{messages['footer.jobpostingenquiry']}</div>
-                    <div>{messages['footer.cshotline']} <em>{messages['footer.officehour']}</em></div>
+                    <div>{messages['footer.cshotline']}
+                      {messages['footer.csFax'] != null &&
+                        <div>{messages['footer.csFax']}</div>
+                      }
+                      <em>{messages['footer.officehour']}</em>
+
+                    </div>
+
                     <div>{messages['footer.csemailtext']}<a href={messages['footer.csemailLink']}>{messages['footer.csemail']}</a></div>
                     <ul className={classnames(styles['footer-social'], styles['footer-social-icons'])}>
                       <li><a className={classnames(styles['social-icon'], styles['social-facebook'])} style={socialbackgroundimagestyle} href={messages['footer.facebookLink']} target="_blank">Facebook</a></li>
@@ -66,7 +73,9 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
                     <dd><a href={baseUrl + messages['footer.postajobLink']}>{messages['footer.postresumes']}</a></dd>
                     <dd><a href={baseUrl + messages['footer.jobalertsLink']}>{messages['footer.jobalerts']}</a></dd>
                     <dd><a href={baseUrl + messages['footer.myjobsdbLink']}>{messages['footer.myjobsdb']}</a></dd>
-                    <dd><a href={baseUrl + messages['footer.careerinsightsLink']}>{messages['footer.careerinsights']}</a></dd>
+                    {messages['footer.careerinsightsLink'] != null &&
+                      <dd><a href={baseUrl + messages['footer.careerinsightsLink']}>{messages['footer.careerinsights']}</a></dd>
+                    }
                   </dl>
                 </div>
                 <div className={styles['col-xs-6']}>
@@ -126,7 +135,11 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
       <div className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.copyright}>{messages['footer.copyright'].replace('{year}', year)}{messages['footer.rightReserved']}</div>
-          <div className={styles['base-links']}><a href={baseUrl + messages['footer.privacyLink']} target="_blank">{messages['footer.privacyLinkText']}</a><a href={baseUrl + messages['footer.termsLink']} target="_blank">{messages['footer.termsLinkText']}</a><a href={baseUrl + messages['footer.siteMapLink']}>{messages['footer.siteMapLinkText']}</a></div>
+          <div className={styles['base-links']}>
+            <a href={baseUrl + messages['footer.privacyLink']} target="_blank">{messages['footer.privacyLinkText']}</a>
+            <a href={baseUrl + messages['footer.termsLink']} target="_blank">{messages['footer.termsLinkText']}</a>
+            <a href={baseUrl + messages['footer.siteMapLink']}>{messages['footer.siteMapLinkText']}</a>
+          </div>
         </div>
       </div>
     </footer>

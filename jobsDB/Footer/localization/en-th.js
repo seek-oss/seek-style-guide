@@ -8,11 +8,11 @@ export default {
   'footer.termsLinkText': 'Terms & Conditions',
   'footer.privacyLink': '/en-th/pages/terms/privacy-policy',
 
-  'footer.csemailtext': 'อีเมล: ',
+  'footer.csemailtext': 'Email: ',
   'footer.csemail': 'CS@jobsDB.co.th',
   'footer.csemailLink': 'mailto:CS@jobsDB.co.th',
-  'footer.cshotline':'(662)667 0824 และ (662)667 0700 ',
-  'footer.officehour':'(เวลาทำการ จันทร์ – ศุกร์ 8.30 น. – 17.30 น.)',
+  'footer.cshotline':'(662)667 0824 and (662)667 0700 ',
+  'footer.officehour':'(Mon - Fri, 8:30am - 5:30pm)',
   'footer.jobpostingenquiry':'Job Posting Enquiry:',
 
   'footer.jobseekers':'Job Seekers',
@@ -24,8 +24,6 @@ export default {
   'footer.jobalertsLink': '/th/en/JobAlert/JobAlertCreation',
   'footer.myjobsdb':'My jobsDB',
   'footer.myjobsdbLink': '/th/en/MyJobsDB',
-  'footer.careerinsights':'Career Insights',
-  'footer.careerinsightsLink':'/th/en/career-insights',
 
   'footer.employers':'Employers',
   'footer.postajob':'Post a Job',

@@ -10,10 +10,11 @@ export default {
   'footer.privacyLinkText': 'Privacy Statement',
 
   'footer.csemailtext': 'Email: ',
-  'footer.csemail': 'CS@jobsDB.com',
-  'footer.csemailLink': 'mailto:CS@jobsDB.com',
-  'footer.cshotline':'+852 2332 8832',
-  'footer.officehour':'(Mon - Fri, 9am - 6pm)',
+  'footer.csemail': 'CS@jobsDB.co.id',
+  'footer.csemailLink': 'mailto:CS@jobsDB.co.id',
+  'footer.cshotline':'Phone: +62 21 3002 8899 ',
+  'footer.csFax':'Fax: +62 21 3002 8888 / +62 21 5795 7733',
+  'footer.officehour':'(Mon - Fri, 8:00am - 5:00pm)',
   'footer.jobpostingenquiry':'Job Posting Enquiry:',
   
   'footer.jobseekers':'Job Seekers',
@@ -25,8 +26,6 @@ export default {
   'footer.jobalertsLink': '/id/en/JobAlert/JobAlertCreation',
   'footer.myjobsdb':'My jobsDB',
   'footer.myjobsdbLink': '/id/en/MyJobsDB',
-  'footer.careerinsights':'Career Insights',
-  'footer.careerinsightsLink':'/id/en/career-insights',
 
   'footer.employers':'Employers',
   'footer.postajob':'Post a Job',
