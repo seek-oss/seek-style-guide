@@ -83,9 +83,9 @@ export default {
   'footer.zhaopinchina':'Zhaopin (China)',
   'footer.zhaopinchinaLink':'http://www.zhaopin.com/',
 
-  'footer.facebookLink':'http://www.facebook.com/jobsDB.HongKong',
-  'footer.googleplusLink':'https://plus.google.com/+jobsdbHK',
-  'footer.weiboLink':'http://weibo.com/jobsdbhk',
-  'footer.twitterLink':'http://twitter.com/HKJobs',
-  'footer.rssLink':'http://hk.jobsdb.com/HK/EN/Rss/RenderJobFunctionRssIndex'
+  'footer.facebookLink':'https://www.facebook.com/jobsDBIndonesia.FP/',
+  'footer.googleplusLink':'https://plus.google.com/111611346438127922663/posts',
+  'footer.twitterLink':'https://twitter.com/JobsDBIndonesia',
+  'footer.bloggerLink':'http://jobsdb-indonesia.blogspot.com/',
+  'footer.rssLink':'http://id.jobsdb.com/ID/en/Rss/RenderJobFunctionRssIndex'
  };

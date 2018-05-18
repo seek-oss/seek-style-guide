@@ -8,7 +8,7 @@ export default {
   initialProps: {
     language: 'en',
     country: 'hk',   
-    baseUrl: 'https://hk.jobsdb.com', 
+    domainUrl: 'jobsdb.com',
     mbaseUrl:'https://m.jobsdb.com', 
     contentUrl: "https://content.jobsdbcdn.com/Content/d0416"
   },
@@ -21,21 +21,24 @@ export default {
           label: 'English',
           transformProps: props => ({
             ...props,
-            language: 'en'
+            language: 'en',   
+            domainUrl: 'jobsdb.com'
           })
         },
         {
           label: 'Bahasa',
           transformProps: props => ({
             ...props,
-            language: 'id'
+            language: 'id',   
+            domainUrl: 'jobsdb.com'
           })
         },
         {
           label: 'Thai',
           transformProps: props => ({
             ...props,
-            language: 'th'
+            language: 'th',   
+            domainUrl: 'jobsdb.com'
           })
         }
       ]
@@ -49,7 +52,7 @@ export default {
           transformProps: props => ({
             ...props,
             country: 'hk',   
-            baseUrl: 'https://hk.jobsdb.com'
+            domainUrl: 'jobsdb.com'
 
           })
         },
@@ -58,7 +61,7 @@ export default {
           transformProps: props => ({
             ...props,
             country: 'sg',   
-            baseUrl: 'https://sg.jobsdb.com'
+            domainUrl: 'jobsdb.com'
           })
         },
         {
@@ -66,7 +69,7 @@ export default {
           transformProps: props => ({
             ...props,
             country: 'id',   
-            baseUrl: 'https://id.jobsdb.com'
+            domainUrl: 'jobsdb.com'
           })
         },
         {
@@ -74,7 +77,7 @@ export default {
           transformProps: props => ({
             ...props,
             country: 'th',   
-            baseUrl: 'https://th.jobsdb.com'
+            domainUrl: 'jobsdb.com'
           })
         }
       ]

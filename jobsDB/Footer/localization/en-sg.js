@@ -50,7 +50,6 @@ export default {
   'footer.mobileversion':'Mobile Version',
   'footer.mobileversionLink':'/en-sg',
   'footer.rss':'RSS',
-  'footer.rssLink':'/sg/en/Rss/RenderJobFunctionRssIndex',
 
   'footer.internationalpartners':'International Partners',
   'footer.babajobindia':'BabaJob (India)',
@@ -82,9 +81,7 @@ export default {
   'footer.zhaopinchina':'Zhaopin (China)',
   'footer.zhaopinchinaLink':'http://www.zhaopin.com/',
 
-  'footer.facebookLink':'http://www.facebook.com/jobsDB.HongKong',
-  'footer.googleplusLink':'https://plus.google.com/+jobsdbHK',
-  'footer.weiboLink':'http://weibo.com/jobsdbhk',
-  'footer.twitterLink':'http://twitter.com/HKJobs',
-  'footer.rssLink':'http://hk.jobsdb.com/HK/EN/Rss/RenderJobFunctionRssIndex'
+  'footer.facebookLink':'https://www.facebook.com/JobsDB.com.sg',
+  'footer.googleplusLink':'https://plus.google.com/+jobsdbsingapore',
+  'footer.twitterLink':'https://twitter.com/JobsDBSingapore'
 };

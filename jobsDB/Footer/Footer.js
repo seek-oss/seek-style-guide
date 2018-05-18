@@ -5,7 +5,7 @@ import classnames from 'classnames';
 // import FooterLinks from './components/FooterLinks/FooterLinks';
 import localization from './localization';
 
-const Footer = ({ language, country, baseUrl, mbaseUrl, contentUrl }) => {
+const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
   const year = new Date().getFullYear();
   const messages = localization[`${language}-${country}`];
   const footerbackground = `${contentUrl}/images/Shared/v8Revamp2/logo_ftr_blue.png`;
@@ -19,7 +19,7 @@ const Footer = ({ language, country, baseUrl, mbaseUrl, contentUrl }) => {
   const socialbackgroundimagestyle = {
     backgroundImage: `url(${socialbackgroundimage})`
   };
-
+  const baseUrl = `https://${country}.${domainUrl}`;
   return (
     <footer className={styles['is-full']}>
       <div className={styles['footer--full']}>
@@ -38,9 +38,19 @@ const Footer = ({ language, country, baseUrl, mbaseUrl, contentUrl }) => {
                     <ul className={classnames(styles['footer-social'], styles['footer-social-icons'])}>
                       <li><a className={classnames(styles['social-icon'], styles['social-facebook'])} style={socialbackgroundimagestyle} href={messages['footer.facebookLink']} target="_blank">Facebook</a></li>
                       <li><a className={classnames(styles['social-icon'], styles['social-googleplus'])} style={socialbackgroundimagestyle} href={messages['footer.googleplusLink']} target="_blank">Google+</a></li>
-                      <li><a className={classnames(styles['social-icon'], styles['social-weibo'])} style={socialbackgroundimagestyle} href={messages['footer.weiboLink']} target="_blank">Weibo</a></li>
+                      {messages['footer.weiboLink'] != null &&
+                        <li><a className={classnames(styles['social-icon'], styles['social-weibo'])} style={socialbackgroundimagestyle} href={messages['footer.weiboLink']} target="_blank">Weibo</a></li>
+                      }
                       <li><a className={classnames(styles['social-icon'], styles['social-twitter'])} style={socialbackgroundimagestyle} href={messages['footer.twitterLink']} target="_blank">Twitter</a></li>
-                      <li><a className={classnames(styles['social-icon'], styles['social-feed'])} style={socialbackgroundimagestyle} href={messages['footer.rssLink']} target="_blank">RSS Feed</a></li>
+                      {messages['footer.youtubeLink'] != null &&
+                        <li><a className={classnames(styles['social-icon'], styles['social-youtube'])} style={socialbackgroundimagestyle} href={messages['footer.youtubeLink']} target="_blank">Youtube</a></li>
+                      }
+                      {messages['footer.bloggerLink'] != null &&
+                        <li><a className={classnames(styles['social-icon'], styles['social-blogger'])} style={socialbackgroundimagestyle} href={messages['footer.bloggerLink']} target="_blank">Blogger</a></li>
+                      }
+                      {messages['footer.rssLink'] != null &&
+                        <li><a className={classnames(styles['social-icon'], styles['social-feed'])} style={socialbackgroundimagestyle} href={messages['footer.rssLink']} target="_blank">RSS Feed</a></li>
+                      }
                     </ul>
                     <p>&nbsp;</p>
                   </div>
@@ -126,7 +136,7 @@ const Footer = ({ language, country, baseUrl, mbaseUrl, contentUrl }) => {
 Footer.propTypes = {
   language: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
-  baseUrl: PropTypes.string.isRequired,
+  domainUrl: PropTypes.string.isRequired,
   mbaseUrl: PropTypes.string,
   contentUrl: PropTypes.string
 };
