@@ -56,7 +56,7 @@ describe('JobCard', () => {
     const descriptionJob = {
       ...defaultJob,
       confidentialLabel: 'Company Confidential',
-      company: null
+      company: ''
     };
 
     const wrapper = shallow(<JobCard job={descriptionJob} />);
@@ -119,17 +119,6 @@ describe('JobCard', () => {
     };
     const keyword = 'Seek';
     const wrapper = shallow(<JobCard job={descriptionJob} keyword={keyword} jobAdType={JOBADTYPE_JOBSTREET_STANDOUT} />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render plain company label', () => {
-    const descriptionJob = {
-      ...defaultJob,
-      company: {
-        name: 'Seek Asia'
-      }
-    };
-    const wrapper = shallow(<JobCard job={descriptionJob} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
