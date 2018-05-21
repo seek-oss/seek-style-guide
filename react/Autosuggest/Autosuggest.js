@@ -13,6 +13,7 @@ import TextField from '../TextField/TextField';
 import smoothScroll from '../private/smoothScroll';
 import smallDeviceOnly from '../private/smallDeviceOnly';
 
+/* eslint-disable react/no-deprecated */
 export default class Autosuggest extends Component {
   static displayName = 'Autosuggest';
 
@@ -58,7 +59,6 @@ export default class Autosuggest extends Component {
     areSuggestionsShown: false
   }
 
-  /* eslint-disable react/no-deprecated */
   componentWillUpdate(nextProps, nextState) {
     if (!this.state.areSuggestionsShown && nextState.areSuggestionsShown && smallDeviceOnly()) {
       smoothScroll(this.textField);
