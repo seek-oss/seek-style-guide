@@ -103,11 +103,13 @@ export default class JobCard extends React.Component {
               </div>
               <div>
                 <Text whispering className={styles.postingDuration}>{job.postingDuration}</Text>
-                <Button color="hyperlink" className={styles.shelfToggle}>
-                  <Text whispering baseline={false} className={styles.shelfToggleText} onClick={this.handleShelfSectionToggle}>
-                    {shelfSectionOpen ? 'less' : 'more'} <ChevronIcon direction={shelfSectionOpen ? 'up' : 'down'} svgClassName={styles.shelfToggleIcon} />
-                  </Text>
-                </Button>
+                {job.shelf &&
+                  <Button color="hyperlink" className={styles.shelfToggle}>
+                    <Text whispering baseline={false} className={styles.shelfToggleText} onClick={this.handleShelfSectionToggle}>
+                      {shelfSectionOpen ? 'less' : 'more'} <ChevronIcon direction={shelfSectionOpen ? 'up' : 'down'} svgClassName={styles.shelfToggleIcon} />
+                    </Text>
+                  </Button>
+                }
               </div>
             </div>
           </div>

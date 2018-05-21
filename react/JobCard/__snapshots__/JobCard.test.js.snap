@@ -117,26 +117,6 @@ exports[`JobCard should not render shelf section 1`] = `
           >
             1 hour ago
           </Text>
-          <Button
-            className="shelfToggle"
-            color="hyperlink"
-            component="button"
-          >
-            <Text
-              baseline={false}
-              className="shelfToggleText"
-              onClick={[Function]}
-              whispering={true}
-            >
-              more
-               
-              <ChevronIcon
-                className=""
-                direction="down"
-                svgClassName="shelfToggleIcon"
-              />
-            </Text>
-          </Button>
         </div>
       </div>
     </div>

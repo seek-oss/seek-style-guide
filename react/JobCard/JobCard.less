@@ -217,13 +217,17 @@
     color: darken(@saVisitedLink, 10%);
   }
 }
+
 .shelfToggle {
   .link(@saGrey2);
-  display: inline;
+  display: none;
   line-height: unset;
   height: unset;
   &:focus {
     outline: none;
+  }
+  @media @desktop {
+    display: inline-block;
   }
 }
 
