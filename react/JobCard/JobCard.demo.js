@@ -58,7 +58,45 @@ export default {
         'We support a safe environment for our employees'
       ]
     },
-    jobAdType: JOBADTYPE_JOBSDB_DEFAULT
+    jobAdType: JOBADTYPE_JOBSDB_DEFAULT,
+    shelfLinks: [
+      {
+        label: 'Job function',
+        child: [
+          {
+            name: 'Accountant',
+            link: '#'
+          },
+          {
+            name: 'Accounting Clerk / Supervisor',
+            link: '#'
+          },
+          {
+            name: 'Financial Analyst',
+            link: '#'
+          }
+        ]
+      },
+      {
+        label: 'Industry',
+        child: [
+          {
+            name: 'Accounting / Audit / Tax Services',
+            link: '#'
+          }
+        ]
+      }
+    ],
+    tagLinks: [
+      {
+        name: 'keyword 1',
+        link: '#'
+      },
+      {
+        name: 'keyword 2',
+        link: '#'
+      }
+    ]
   },
   options: [
     {
@@ -81,7 +119,7 @@ export default {
             ...props,
             job: {
               ...props.job,
-              company: null,
+              company: '',
               confidentialLabel: 'Company Confidential'
             }
           })

@@ -59,6 +59,10 @@
   color: @saWhite;
 }
 
+.titleKeyword {
+  color: darken(@actionBlue, 10%);
+}
+
 .sellingPointsList {
   .rawText();
   list-style: disc;
@@ -194,6 +198,11 @@
   align-self: flex-start;
 }
 
+.highlight {
+  font-weight: @sa-bold;
+  color: @saBlack;
+}
+
 .positionTitle {
   padding-bottom: @job-card-text-space;
   display: inline;
@@ -201,19 +210,84 @@
 }
 
 .positionLink {
-  .link(@actionBlue, true);
+  .link(@actionBlue);
   text-decoration: none;
   pointer-events: auto;
-
-  .titleKeyword {
-    color: darken(@actionBlue, 10%);
-  }
 }
 
 .positionLink:visited {
-  .link(@saVisitedLink, true);
+  .link(@saVisitedLink);
+}
 
-  .titleKeyword {
-    color: darken(@saVisitedLink, 10%);
+.link (@color) {
+  text-decoration: none;
+  pointer-events: auto;
+  color: @color;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    color: darken(@color, 10%);
   }
+}
+
+.companyName {
+  color: @saGrey1;
+  font-weight: @sa-semi-bold;
+}
+
+.companyLink {
+  .link(@saGrey1);
+}
+
+.locationName {
+  &:extend(.jobInfo);
+}
+
+.locationLink {
+  .link(@saGrey2);
+}
+
+.shelfToggle {
+  .link(@saGrey2);
+  display: inline;
+  line-height: unset;
+  height: unset;
+  &:focus {
+    outline: none;
+  }
+}
+
+.shelfToggleText {
+  padding-bottom: @grid-base;
+}
+
+.shelfToggleIcon {
+  width: @grid-base * 2;
+  height: @grid-base * 2;
+}
+
+.shelfSection {
+  padding-top: @job-card-section-space;
+  color: @saGrey2;
+}
+
+.shelfDivider {
+  border-top: 1px solid @saGrey4;
+}
+
+.shelfLinksContainer {
+  margin: @grid-base * 2 0;
+}
+
+.shelfLink {
+  .link(@actionBlue);
+}
+
+.tagLinksContainer {
+  margin: @grid-base * 2 0;
+}
+
+.tagLink {
+  line-height: @grid-base * 6;
+  height: @grid-base * 6;
 }
