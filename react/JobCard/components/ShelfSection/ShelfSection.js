@@ -51,10 +51,10 @@ const ShelfSection = ({ shelf }) => {
         ))}
       </ButtonGroup>
     }
-  </Section>)
-}
+  </Section>);
+};
 
 export default ShelfSection;
 ShelfSection.propTypes = {
   shelf: ShelfSectionPropTypes
-}
+};

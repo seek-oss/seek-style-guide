@@ -9,20 +9,20 @@ const defaultShelf = {
       label: 'Job function',
       child: [{
         name: 'Accountant',
-        link: '/jobCard',
+        link: '/jobCard'
       }]
     },
     {
       label: 'Industry',
       child: [{
         name: 'Accounting / Audit / Tax Services',
-        link: '/jobCard',
+        link: '/jobCard'
       }]
     }
   ],
   tagLinks: [{
     name: 'keyword 1',
-    link: '/jobCard',
+    link: '/jobCard'
   }
   ]
 };
