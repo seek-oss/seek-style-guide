@@ -58,6 +58,7 @@ export default class Autosuggest extends Component {
     areSuggestionsShown: false
   }
 
+  /* eslint-disable react/no-deprecated */
   componentWillUpdate(nextProps, nextState) {
     if (!this.state.areSuggestionsShown && nextState.areSuggestionsShown && smallDeviceOnly()) {
       smoothScroll(this.textField);
@@ -99,7 +100,7 @@ export default class Autosuggest extends Component {
     const textFieldProps = {
       ref: this.storeTextFieldReference,
       inputProps,
-      ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ])
+      ...omit(this.props, ['inputProps', 'labelProps', 'autosuggestProps'])
     };
 
     if (label) {

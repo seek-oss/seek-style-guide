@@ -59,6 +59,7 @@ export default class CustomMonthPicker extends Component {
     this.yearOptions = getYearOptions(minYear, maxYear, ascendingYears);
   }
 
+  /* eslint-disable react/no-deprecated */
   componentWillUpdate(newProps) {
     if (
       ['minYear', 'maxYear', 'ascendingYears'].filter(
