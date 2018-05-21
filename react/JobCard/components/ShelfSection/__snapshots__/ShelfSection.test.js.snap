@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobCard - ShelfSection should render correctly 1`] = `
+<Section
+  className="root"
+  header={false}
+  pullout={false}
+  slim={false}
+>
+  <div
+    className="shelfDivider"
+  />
+  <Text
+    baseline={true}
+    className="shelfLinksContainer"
+    intimate={true}
+  >
+    <div
+      key="0"
+    >
+      Job function: 
+      <a
+        className="shelfLink"
+        href="/jobCard"
+        key="0"
+      >
+        Accountant
+      </a>
+    </div>
+    <div
+      key="1"
+    >
+      Industry: 
+      <a
+        className="shelfLink"
+        href="/jobCard"
+        key="0"
+      >
+        Accounting / Audit / Tax Services
+      </a>
+    </div>
+  </Text>
+  <ButtonGroup
+    className="tagLinksContainer"
+  >
+    <Button
+      className="tagLink"
+      color="primary"
+      compact={true}
+      component="a"
+      href="/jobCard"
+      key="0"
+    >
+      keyword 1
+    </Button>
+  </ButtonGroup>
+</Section>
+`;

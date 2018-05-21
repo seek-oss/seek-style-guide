@@ -33,7 +33,25 @@ const defaultJob = {
   description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...',
   companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png',
   postingDuration: '1 hour ago',
-  salary: 'RM99999 - RM999999'
+  salary: 'RM99999 - RM999999',
+  shelf: {
+    shelfLinks: [
+      {
+        label: 'Job function',
+        child: [{
+          name: 'Accountant',
+          link: '/jobCard',
+        }]
+      },
+      {
+        label: 'Industry',
+        child: [{
+          name: 'Accounting / Audit / Tax Services',
+          link: '/jobCard',
+        }]
+      }
+    ]
+  }
 };
 
 describe('JobCard', () => {
@@ -56,7 +74,7 @@ describe('JobCard', () => {
     const descriptionJob = {
       ...defaultJob,
       confidentialLabel: 'Company Confidential',
-      company: ''
+      company: null
     };
 
     const wrapper = shallow(<JobCard job={descriptionJob} />);
@@ -119,6 +137,47 @@ describe('JobCard', () => {
     };
     const keyword = 'Seek';
     const wrapper = shallow(<JobCard job={descriptionJob} keyword={keyword} jobAdType={JOBADTYPE_JOBSTREET_STANDOUT} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render plain company label', () => {
+    const descriptionJob = {
+      ...defaultJob,
+      company: {
+        name: 'Seek Asia'
+      }
+    };
+    const wrapper = shallow(<JobCard job={descriptionJob} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render tag links', () => {
+    const descriptionJob = {
+      ...defaultJob,
+      shelf: {
+        ...defaultJob.shelf,
+        tagLinks: [
+          {
+            child: 'keyword 1',
+            link: '/jobCard'
+          },
+          {
+            child: 'keyword 2',
+            link: '/jobCard'
+          }
+        ]
+      }
+    };
+    const wrapper = shallow(<JobCard job={descriptionJob} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should not render shelf section', () => {
+    const descriptionJob = {
+      ...defaultJob,
+      shelf: null
+    };
+    const wrapper = shallow(<JobCard job={descriptionJob} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
