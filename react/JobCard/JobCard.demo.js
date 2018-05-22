@@ -24,10 +24,29 @@ export default {
   container: JobCardContainer,
   initialProps: {
     job: {
-      company: 'SEEK Asia',
+      company: {
+        name: 'SEEK Asia',
+        link: '/jobCard'
+      },
       jobTitle: 'Senior Software Engineer (6 months Contract)',
       jobUrl: 'https://www.jobstreet.com.my/en/job/senior-software-engineer-3565614?fr=21',
-      location: 'Kuala Lumpur, Selangor, Johor Bahru',
+      locations: [
+        {
+          name: 'Pahang',
+          link: '/jobCard'
+        },
+        {
+          name: 'Selangor',
+          link: '/jobCard',
+          child: {
+            name: 'Cheras',
+            link: '/jobCard',
+            child: {
+              name: 'Near Leisure Mall'
+            }
+          }
+        }
+      ],
       description: 'Responsibilities :Responsible for Client Relationship Management and Worker Performance Management. Responsible for full spectrum of human resource and admin function, include...',
       companyLogoUrl: 'https://siva.jsstatic.com/my/94463/images/logo/94463_logo_0_48885.png',
       companyPictureUrl: 'https://siva.jsstatic.com/my/94463/images/photo/94463_photo_0_621506.jpg',
@@ -95,6 +114,68 @@ export default {
               ...props.job
             },
             keyword: 'seek senior engineer'
+          })
+        },
+        {
+          label: 'Shelf links',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              shelf: {
+                ...props.job.shelf,
+                shelfLinks: [
+                  {
+                    label: 'Job function',
+                    child: [
+                      {
+                        name: 'Accountant',
+                        link: '#'
+                      },
+                      {
+                        name: 'Accounting Clerk / Supervisor',
+                        link: '#'
+                      },
+                      {
+                        name: 'Financial Analyst',
+                        link: '#'
+                      }
+                    ]
+                  },
+                  {
+                    label: 'Industry',
+                    child: [
+                      {
+                        name: 'Accounting / Audit / Tax Services',
+                        link: '#'
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          })
+        },
+        {
+          label: 'Tag links',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            job: {
+              ...props.job,
+              shelf: {
+                ...props.job.shelf,
+                tagLinks: [
+                  {
+                    name: 'keyword 1',
+                    link: '#'
+                  },
+                  {
+                    name: 'keyword 2',
+                    link: '#'
+                  }
+                ]
+              }
+            }
           })
         }
       ]

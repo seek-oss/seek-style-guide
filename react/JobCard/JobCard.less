@@ -59,17 +59,6 @@
   color: @saWhite;
 }
 
-.positionTitle {
-  color: @actionBlue;
-  padding-bottom: @job-card-text-space;
-  display: inline;
-  word-wrap: break-word;
-}
-
-.titleKeyword {
-  color: darken(@actionBlue, 10%);
-}
-
 .sellingPointsList {
   .rawText();
   list-style: disc;
@@ -159,8 +148,10 @@
 }
 
 .postingDuration {
+  display: inline;
   padding-bottom: @job-card-bottom-text-space;
   color: @saGrey2;
+  margin-right: @grid-base * 2;
 }
 
 .companyPicWrapper {
@@ -203,25 +194,48 @@
   align-self: flex-start;
 }
 
-.highlight {
-  font-weight: @sa-bold;
-  color: @saBlack;
-}
-
-.companyName {
-  font-weight: @sa-semi-bold;
-}
-
-.root:hover .positionTitle,
-.root:active .positionTitle {
-  color: darken(@actionBlue, 10%);
+.positionTitle {
+  padding-bottom: @job-card-text-space;
+  display: inline;
+  word-wrap: break-word;
 }
 
 .positionLink {
+  .link(@actionBlue, true);
   text-decoration: none;
   pointer-events: auto;
+
+  .titleKeyword {
+    color: darken(@actionBlue, 10%);
+  }
 }
 
-.positionLink:visited .positionTitle {
-  color: @saVisitedLink;
+.positionLink:visited {
+  .link(@saVisitedLink, true);
+
+  .titleKeyword {
+    color: darken(@saVisitedLink, 10%);
+  }
+}
+
+.shelfToggle {
+  .link(@saGrey2);
+  display: none;
+  line-height: unset;
+  height: unset;
+  &:focus {
+    outline: none;
+  }
+  @media @desktop {
+    display: inline-block;
+  }
+}
+
+.shelfToggleText {
+  padding-bottom: @grid-base;
+}
+
+.shelfToggleIcon {
+  width: @grid-base * 2;
+  height: @grid-base * 2;
 }

@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types';
 import Constants from '../Constants/Constants';
+import match from 'autosuggest-highlight/match';
+import parse from 'autosuggest-highlight/parse';
 
 const { JOBADTYPE_JOBSDB_DEFAULT, JOBADTYPE_JOBSDB_BRANDED, JOBADTYPE_JOBSTREET_DEFAULT, JOBADTYPE_JOBSTREET_STANDOUT } = Constants;
 
@@ -32,7 +33,7 @@ const jobstreetStandout = {
   showDescription: true
 };
 
-const getJobAdTypeOption = jobAdType => {
+export const getJobAdTypeOption = jobAdType => {
   switch (jobAdType) {
     case JOBADTYPE_JOBSDB_DEFAULT:
       return jobsdbDefault;
@@ -47,7 +48,14 @@ const getJobAdTypeOption = jobAdType => {
   }
 };
 
-export default getJobAdTypeOption;
-getJobAdTypeOption.propTypes = {
-  jobAdType: PropTypes.string
+export const getParts = (text, query) => {
+  if (!text || !query) {
+    return null;
+  }
+  const matches = match(text, query);
+  // No point to parse if matches is empty array
+  if (matches.length === 0) {
+    return null;
+  }
+  return parse(text, matches);
 };

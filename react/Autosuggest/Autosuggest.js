@@ -13,6 +13,7 @@ import TextField from '../TextField/TextField';
 import smoothScroll from '../private/smoothScroll';
 import smallDeviceOnly from '../private/smallDeviceOnly';
 
+/* eslint-disable react/no-deprecated */
 export default class Autosuggest extends Component {
   static displayName = 'Autosuggest';
 
@@ -99,7 +100,7 @@ export default class Autosuggest extends Component {
     const textFieldProps = {
       ref: this.storeTextFieldReference,
       inputProps,
-      ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ])
+      ...omit(this.props, ['inputProps', 'labelProps', 'autosuggestProps'])
     };
 
     if (label) {

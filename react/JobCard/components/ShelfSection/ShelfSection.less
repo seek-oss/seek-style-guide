@@ -1,0 +1,32 @@
+@import (reference) "~seek-asia-style-guide/theme";
+@import (reference) '../../JobCard.less';
+
+.root {
+  padding-top: @job-card-section-space;
+  color: @saGrey2;
+  display: none;
+  @media @desktop {
+    display: block;
+  }
+}
+
+.shelfDivider {
+  border-top: 1px solid @saGrey4;
+}
+
+.shelfLinksContainer {
+  margin: @grid-base * 2 0;
+}
+
+.shelfLink {
+  .link(@actionBlue, true);
+}
+
+.tagLinksContainer {
+  margin: @grid-base * 2 0;
+}
+
+.tagLink {
+  line-height: @grid-base * 6;
+  height: @grid-base * 6;
+}

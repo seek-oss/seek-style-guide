@@ -23,6 +23,7 @@ const months = [
   { value: '12', label: 'Dec' }
 ];
 
+/* eslint-disable react/no-deprecated */
 export default class CustomMonthPicker extends Component {
   static displayName = 'CustomMonthPicker';
 
