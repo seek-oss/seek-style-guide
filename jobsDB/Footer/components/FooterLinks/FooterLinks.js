@@ -7,17 +7,17 @@ const FooterLinks = ({ messages }) => {
   return (
     <ul className={styles.list}>
       <li className={styles.itemMobile}>
-        <a className={styles.link} href={messages['footer.legalLink']}>
+        <a className={styles.link} href={messages['footer.legalLink']} rel="nofollow">
           {messages['footer.legalLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={messages['footer.privacyLink']}>
+        <a className={styles.link} href={messages['footer.privacyLink']} rel="nofollow">
           {messages['footer.privacyLinkText']}
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href={messages['footer.termsLink']}>
+        <a className={styles.link} href={messages['footer.termsLink']} rel="nofollow">
           {messages['footer.termsLinkText']}
         </a>
       </li>
