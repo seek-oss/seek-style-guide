@@ -48,6 +48,7 @@ export { default as DownRightArrowIcon } from './DownRightArrowIcon/DownRightArr
 export { default as EducationIcon } from './EducationIcon/EducationIcon';
 export { default as EmployerIcon } from './EmployerIcon/EmployerIcon';
 export { default as ErrorIcon } from './ErrorIcon/ErrorIcon';
+export { default as EventIcon } from './EventIcon/EventIcon';
 export { default as FacebookIcon } from './FacebookIcon/FacebookIcon';
 export { default as FlagHKIcon } from './FlagHKIcon/FlagHKIcon';
 export { default as FlagIDIcon } from './FlagIDIcon/FlagIDIcon';
