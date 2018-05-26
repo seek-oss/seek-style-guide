@@ -25,7 +25,8 @@ export default class JobCard extends React.Component {
     };
   }
 
-  handleShelfSectionToggle = () => {
+  handleShelfSectionToggle = e => {
+    e.stopPropagation();
     this.setState({ shelfSectionOpen: !this.state.shelfSectionOpen });
   };
 
