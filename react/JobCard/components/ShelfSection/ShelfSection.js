@@ -40,17 +40,17 @@ const ShelfSection = ({ shelf, LinkComponent = defaultLink }) => {
             {
               shelfItem.items.map((item, j) => {
                 const link = (<LinkComponent link={item.link} className={styles.shelfLink} key={j} >{item.name}</LinkComponent>);
-                if (item.children) {
+                if (item.children && item.children.length) {
                   return [
                     link,
                     ' > ',
-                    ...item.children.map((child, k) => (
+                    item.children.map((child, k) => (
                       <LinkComponent link={child.link} className={styles.shelfLink} key={`${j}${k}`} >{child.name}</LinkComponent>
                     )).reduce((prev, curr) => [prev, ' | ', curr])
                   ];
                 }
                 return [link];
-              }).reduce((prev, curr) => [prev, ', ', ...curr])
+              }).reduce((prev, curr) => [prev, ', ', curr])
             }
           </div>
         ))}

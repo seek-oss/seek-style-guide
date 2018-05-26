@@ -154,10 +154,6 @@ export default {
                           {
                             name: 'Receptionist',
                             link: '/jobCard'
-                          },
-                          {
-                            name: 'Others',
-                            link: '/jobCard'
                           }
                         ]
                       }

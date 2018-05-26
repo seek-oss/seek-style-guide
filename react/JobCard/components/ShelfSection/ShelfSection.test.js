@@ -33,10 +33,6 @@ const defaultShelf = {
             {
               name: 'Receptionist',
               link: '/jobCard'
-            },
-            {
-              name: 'Others',
-              link: '/jobCard'
             }
           ]
         }

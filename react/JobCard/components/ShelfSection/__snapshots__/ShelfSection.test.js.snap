@@ -66,14 +66,6 @@ exports[`JobCard - ShelfSection should render correctly 1`] = `
       >
         Receptionist
       </Link>
-       | 
-      <Link
-        className="shelfLink"
-        key="11"
-        link="/jobCard"
-      >
-        Others
-      </Link>
     </div>
     <div
       key="1"
@@ -170,14 +162,6 @@ exports[`JobCard - ShelfSection should render custom link 1`] = `
         link="/jobCard"
       >
         Receptionist
-      </customLink>
-       | 
-      <customLink
-        className="shelfLink"
-        key="11"
-        link="/jobCard"
-      >
-        Others
       </customLink>
     </div>
     <div
