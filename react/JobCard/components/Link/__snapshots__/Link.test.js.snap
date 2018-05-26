@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobCard - Link should render correctly 1`] = `
+<a
+  href="/JobCard"
+>
+  link
+</a>
+`;

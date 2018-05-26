@@ -3,26 +3,28 @@
 exports[`JobCard - LocationGroup should render correctly 1`] = `
 Array [
   Array [
-    <a
+    <Link
       className="locationLink"
-      href="/jobCard"
+      key="0"
+      link="/jobCard"
     />,
   ],
-  <span />,
-  Array [
-    <a
-      className="locationLink"
-      href="/jobCard"
-    />,
-    <span />,
-    <a
-      className="locationLink"
-      href="/jobCard"
-    />,
-    <span />,
-    <span
-      className="locationName"
-    />,
-  ],
+  ", ",
+  <Link
+    className="locationLink"
+    key="1"
+    link="/jobCard"
+  />,
+  " > ",
+  <Link
+    className="locationLink"
+    key="11"
+    link="/jobCard"
+  />,
+  " > ",
+  <span
+    className="locationName"
+    key="111"
+  />,
 ]
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './LocationGroup.less';
+import defaultLink from '../Link/Link';
 
 export const LocationsPropTypes = PropTypes.arrayOf(PropTypes.shape({
   name: PropTypes.string,
@@ -14,29 +15,25 @@ export const LocationsPropTypes = PropTypes.arrayOf(PropTypes.shape({
   })
 }));
 
-const renderLocation = ({ link, name, child }) => {
-  const locationLink = (link) ? (<a href={link} className={styles.locationLink}><span>{name}</span></a>) : (<span className={styles.locationName}>{name}</span>);
+const renderLocation = ({ link, name, child, LinkComponent, key }) => {
+  const locationLink = (link) ?
+    (<LinkComponent link={link} className={styles.locationLink} key={key} >{name}</LinkComponent>) :
+    (<span className={styles.locationName} key={key}>{name}</span>);
   if (child) {
-    const seperator = (<span>&nbsp;>&nbsp;</span>);
-    return [locationLink, seperator, ...renderLocation(child)];
+    return [locationLink, ' > ', ...renderLocation({ ...child, LinkComponent, key: `${key}1` })];
   }
   return [locationLink];
 };
 
-const LocationGroup = ({ locations }) => {
-  return locations.reduce(
-    (accLocations, location, index) => {
-      if (index > 0) {
-        accLocations.push(<span>,&nbsp;</span>);
-      }
-      accLocations.push(renderLocation(location));
-      return accLocations;
-    }, []
-  );
+const LocationGroup = ({ locations, LinkComponent = defaultLink }) => {
+  return locations.map((location, index) =>
+    renderLocation({ ...location, LinkComponent, key: index })
+  ).reduce((prev, curr) => [prev, ', ', ...curr]);
 };
 
 export default LocationGroup;
 
 LocationGroup.propTypes = {
-  locations: LocationsPropTypes.isRequired
+  locations: LocationsPropTypes.isRequired,
+  LinkComponent: PropTypes.func
 };
