@@ -173,12 +173,10 @@ export default class CustomMonthPicker extends Component {
             valid={valid}
             message={false}
             placeholder="Month"
-            inputProps={{
-              onChange: this.handleMonthChange,
-              value: monthValue,
-              ref: this.storeMonthReference,
-              ...sharedInputProps
-            }}
+            onChange={this.handleMonthChange}
+            value={monthValue}
+            ref={this.storeMonthReference}
+            {...sharedInputProps}
           />
 
           <Dropdown
@@ -188,12 +186,10 @@ export default class CustomMonthPicker extends Component {
             valid={valid}
             message={false}
             placeholder="Year"
-            inputProps={{
-              onChange: this.handleYearChange,
-              value: yearValue,
-              ref: this.storeYearReference,
-              ...sharedInputProps
-            }}
+            onChange={this.handleYearChange}
+            value={yearValue}
+            ref={this.storeYearReference}
+            {...sharedInputProps}
           />
         </div>
       </div>
