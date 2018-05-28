@@ -14,6 +14,7 @@ import { getJobAdTypeOption, getParts } from './jobCardHelper.js';
 import LocationGroup, { LocationsPropTypes } from './components/LocationGroup/LocationGroup';
 import CompanyLink, { CompanyLinkPropTypes } from './components/CompanyLink/CompanyLink';
 import ShelfSection, { ShelfSectionPropTypes } from './components/ShelfSection/ShelfSection';
+import defaultLink from './components/Link/Link';
 
 export default class JobCard extends React.Component {
   constructor() {
@@ -24,13 +25,14 @@ export default class JobCard extends React.Component {
     };
   }
 
-  handleShelfSectionToggle = () => {
+  handleShelfSectionToggle = e => {
+    e.stopPropagation();
     this.setState({ shelfSectionOpen: !this.state.shelfSectionOpen });
   };
 
   render() {
     const { shelfSectionOpen } = this.state;
-    const { job, keyword = '', jobAdType } = this.props;
+    const { job, keyword = '', jobAdType, LinkComponent = defaultLink } = this.props;
     const jobAdTypeOption = getJobAdTypeOption(jobAdType);
     let title = (<Text waving semiStrong className={styles.positionTitle}>{job.jobTitle}</Text>);
     const keywordParts = getParts(job.jobTitle, keyword);
@@ -65,7 +67,7 @@ export default class JobCard extends React.Component {
               {job.featuredLabel && (<span className={styles.featuredLabel}>{job.featuredLabel}</span>)}
               {job.classifiedLabel && (<span className={styles.classifiedLabel}>{job.classifiedLabel}</span>)}
               {job.confidentialLabel && (<span className={styles.confidentialLabel}>{job.confidentialLabel}</span>)}
-              {job.company && <CompanyLink company={job.company} keyword={keyword} />}
+              {job.company && <CompanyLink company={job.company} keyword={keyword} LinkComponent={LinkComponent} />}
             </Text>
             {jobAdTypeOption.showSellingPoint && job.sellingPoints && (
               <div
@@ -97,7 +99,7 @@ export default class JobCard extends React.Component {
               <div className={styles.jobInfoList}>
                 <Text intimate className={styles.jobInfo}>
                   <LocationIcon className={styles.jobInfoIcon} />
-                  {job.locations && <LocationGroup locations={job.locations} />}
+                  {job.locations && <LocationGroup locations={job.locations} LinkComponent={LinkComponent} />}
                 </Text>
                 {job.salary && (<Text intimate className={styles.jobInfo}><MoneyIcon className={styles.jobInfoIcon} /><span>{job.salary}</span></Text>)}
               </div>
@@ -119,7 +121,7 @@ export default class JobCard extends React.Component {
             </div>
           )}
         </Section>
-        {job.shelf && shelfSectionOpen && <ShelfSection shelf={job.shelf} />}
+        {job.shelf && shelfSectionOpen && <ShelfSection shelf={job.shelf} LinkComponent={LinkComponent} />}
       </Card>
     );
   }
@@ -142,5 +144,6 @@ JobCard.propTypes = {
     confidentialLabel: PropTypes.string,
     shelf: ShelfSectionPropTypes
   }).isRequired,
-  jobAdType: PropTypes.string
+  jobAdType: PropTypes.string,
+  LinkComponent: PropTypes.func
 };

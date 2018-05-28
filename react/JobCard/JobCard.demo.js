@@ -13,10 +13,11 @@ const JobCardContainer = ({ component: DemoComponent, componentProps }) => {
 };
 
 JobCardContainer.propTypes = {
-  component: PropTypes.element,
+  component: PropTypes.func,
   componentProps: PropTypes.object
 };
 
+/* eslint-disable react/prop-types */
 export default {
   route: '/jobCard',
   title: 'Job Card',
@@ -127,29 +128,43 @@ export default {
                 shelfLinks: [
                   {
                     label: 'Job function',
-                    child: [
+                    items: [
                       {
-                        name: 'Accountant',
-                        link: '#'
+                        name: 'Accounting',
+                        link: '/jobCard',
+                        children: [
+                          {
+                            name: 'Accountant',
+                            link: '/jobCard'
+                          },
+                          {
+                            name: 'Audit',
+                            link: '/jobCard'
+                          },
+                          {
+                            name: 'Others',
+                            link: '/jobCard'
+                          }
+                        ]
                       },
                       {
-                        name: 'Accounting Clerk / Supervisor',
-                        link: '#'
-                      },
-                      {
-                        name: 'Financial Analyst',
-                        link: '#'
+                        name: 'Admin & HR',
+                        link: '/jobCard',
+                        children: [
+                          {
+                            name: 'Receptionist',
+                            link: '/jobCard'
+                          }
+                        ]
                       }
                     ]
                   },
                   {
                     label: 'Industry',
-                    child: [
-                      {
-                        name: 'Accounting / Audit / Tax Services',
-                        link: '#'
-                      }
-                    ]
+                    items: [{
+                      name: 'Accounting / Audit / Tax Services',
+                      link: '/jobCard'
+                    }]
                   }
                 ]
               }
@@ -176,6 +191,15 @@ export default {
                 ]
               }
             }
+          })
+        },
+        {
+          label: 'Custom Link (e.g. text only)',
+          transformProps: ({ className, ...props }) => ({
+            ...props,
+            LinkComponent: ({ link, children, ...restProps }) => (
+              <span {...restProps}>{children}</span>
+            )
           })
         }
       ]

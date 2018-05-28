@@ -4,14 +4,19 @@ import Section from '../../../Section/Section';
 import Text from '../../../Text/Text';
 import Button from '../../../Button/Button';
 import ButtonGroup from '../../../ButtonGroup/ButtonGroup';
+import defaultLink from '../Link/Link';
 import styles from './ShelfSection.less';
 
 export const ShelfSectionPropTypes = PropTypes.shape({
   shelfLinks: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string,
-    child: PropTypes.arrayOf(PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
-      link: PropTypes.string
+      link: PropTypes.string,
+      children: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        link: PropTypes.string
+      }))
     }))
   })),
   tagLinks: PropTypes.arrayOf(PropTypes.shape({
@@ -20,7 +25,7 @@ export const ShelfSectionPropTypes = PropTypes.shape({
   }))
 });
 
-const ShelfSection = ({ shelf }) => {
+const ShelfSection = ({ shelf, LinkComponent = defaultLink }) => {
   const { shelfLinks, tagLinks } = shelf;
   if (!shelfLinks && !tagLinks) {
     return null;
@@ -29,13 +34,23 @@ const ShelfSection = ({ shelf }) => {
     <div className={styles.shelfDivider} />
     {shelfLinks &&
       <Text intimate className={styles.shelfLinksContainer}>
-        {shelfLinks.map((item, i) => (
+        {shelfLinks.map((shelfItem, i) => (
           <div key={i}>
-            {`${item.label}: `}
+            {`${shelfItem.label}: `}
             {
-              item.child.map((child, j) => (
-                <a href={child.link} className={styles.shelfLink} key={j}>{child.name}</a>
-              )).reduce((prev, curr) => [prev, ', ', curr])
+              shelfItem.items.map((item, j) => {
+                const link = (<LinkComponent link={item.link} className={styles.shelfLink} key={j} >{item.name}</LinkComponent>);
+                if (item.children && item.children.length) {
+                  return [
+                    link,
+                    ' > ',
+                    item.children.map((child, k) => (
+                      <LinkComponent link={child.link} className={styles.shelfLink} key={`${j}${k}`} >{child.name}</LinkComponent>
+                    )).reduce((prev, curr) => [prev, ' | ', curr])
+                  ];
+                }
+                return [link];
+              }).reduce((prev, curr) => [prev, ', ', curr])
             }
           </div>
         ))}
@@ -56,5 +71,6 @@ const ShelfSection = ({ shelf }) => {
 
 export default ShelfSection;
 ShelfSection.propTypes = {
-  shelf: ShelfSectionPropTypes
+  shelf: ShelfSectionPropTypes,
+  LinkComponent: PropTypes.func
 };

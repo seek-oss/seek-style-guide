@@ -19,25 +19,162 @@ exports[`JobCard - ShelfSection should render correctly 1`] = `
       key="0"
     >
       Job function: 
-      <a
+      <Link
         className="shelfLink"
-        href="/jobCard"
         key="0"
+        link="/jobCard"
+      >
+        Accounting
+      </Link>
+       &gt; 
+      <Link
+        className="shelfLink"
+        key="00"
+        link="/jobCard"
       >
         Accountant
-      </a>
+      </Link>
+       | 
+      <Link
+        className="shelfLink"
+        key="01"
+        link="/jobCard"
+      >
+        Audit
+      </Link>
+       | 
+      <Link
+        className="shelfLink"
+        key="02"
+        link="/jobCard"
+      >
+        Others
+      </Link>
+      , 
+      <Link
+        className="shelfLink"
+        key="1"
+        link="/jobCard"
+      >
+        Admin & HR
+      </Link>
+       &gt; 
+      <Link
+        className="shelfLink"
+        key="10"
+        link="/jobCard"
+      >
+        Receptionist
+      </Link>
     </div>
     <div
       key="1"
     >
       Industry: 
-      <a
+      <Link
         className="shelfLink"
-        href="/jobCard"
         key="0"
+        link="/jobCard"
       >
         Accounting / Audit / Tax Services
-      </a>
+      </Link>
+    </div>
+  </Text>
+  <ButtonGroup
+    className="tagLinksContainer"
+  >
+    <Button
+      className="tagLink"
+      color="primary"
+      compact={true}
+      component="a"
+      href="/jobCard"
+      key="0"
+    >
+      keyword 1
+    </Button>
+  </ButtonGroup>
+</Section>
+`;
+
+exports[`JobCard - ShelfSection should render custom link 1`] = `
+<Section
+  className="root"
+  header={false}
+  pullout={false}
+  slim={false}
+>
+  <div
+    className="shelfDivider"
+  />
+  <Text
+    baseline={true}
+    className="shelfLinksContainer"
+    intimate={true}
+  >
+    <div
+      key="0"
+    >
+      Job function: 
+      <customLink
+        className="shelfLink"
+        key="0"
+        link="/jobCard"
+      >
+        Accounting
+      </customLink>
+       &gt; 
+      <customLink
+        className="shelfLink"
+        key="00"
+        link="/jobCard"
+      >
+        Accountant
+      </customLink>
+       | 
+      <customLink
+        className="shelfLink"
+        key="01"
+        link="/jobCard"
+      >
+        Audit
+      </customLink>
+       | 
+      <customLink
+        className="shelfLink"
+        key="02"
+        link="/jobCard"
+      >
+        Others
+      </customLink>
+      , 
+      <customLink
+        className="shelfLink"
+        key="1"
+        link="/jobCard"
+      >
+        Admin & HR
+      </customLink>
+       &gt; 
+      <customLink
+        className="shelfLink"
+        key="10"
+        link="/jobCard"
+      >
+        Receptionist
+      </customLink>
+    </div>
+    <div
+      key="1"
+    >
+      Industry: 
+      <customLink
+        className="shelfLink"
+        key="0"
+        link="/jobCard"
+      >
+        Accounting / Audit / Tax Services
+      </customLink>
     </div>
   </Text>
   <ButtonGroup
