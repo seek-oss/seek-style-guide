@@ -40,6 +40,9 @@
   box-shadow: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:focus {
     outline: none;
@@ -70,10 +73,11 @@
   height: @removeCircleDiameter;
   width: @removeCircleDiameter;
   border-radius: @removeCircleDiameter / 2;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   transition: @spring-transition;
+  line-height: normal;
 }
 
 .removeIcon {
