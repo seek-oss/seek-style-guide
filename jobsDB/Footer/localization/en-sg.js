@@ -1,6 +1,6 @@
 
 export default {
-  'footer.copyright': 'Copyright © 1998-{year}, jobsDB.',
+  'footer.copyright': 'Copyright © 1998-{year}, jobsDB. ',
   'footer.rightReserved': 'All Rights Reserved.',
   'footer.siteMapLink': '/sg/en/sitemap',
   'footer.siteMapLinkText': 'Site Map',
@@ -33,7 +33,7 @@ export default {
   'footer.postajobLink':'/sg/en/Home/EmployerIndex',
   'footer.searchcandidates':'Search Candidates',
   'footer.searchcandidatesLink':'/sg/en/StaticContentFullContainer/EM/FindTalent.htm',
-  'footer.advertisewithus':'Advertise with us',
+  'footer.advertisewithus':'Advertise with Us',
   'footer.advertisewithusLink':'/sg/en/StaticContent/AboutUs/Products.htm',
 
   'footer.aboutus':'About Us',
@@ -54,7 +54,7 @@ export default {
   'footer.internationalpartners':'International Partners',
   'footer.babajobindia':'BabaJob (India)',
   'footer.babajobindiaLink':'http://www.babajob.com/',
-  'footer.bdjobsbandladesh':'Bdjobs (Bandladesh)',
+  'footer.bdjobsbandladesh':'Bdjobs (Bangladesh)',
   'footer.bdjobsbandladeshLink':'http://www.bdjobs.com/',
   'footer.brightermondayeastafrica':'Brighter Monday (East Africa)',
   'footer.brightermondayeastafricaLink':'http://www.brightermonday.com/',

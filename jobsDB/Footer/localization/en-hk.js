@@ -1,7 +1,7 @@
 export default {
-  'footer.copyright': 'Copyright © 1998-{year}, jobsDB.',
+  'footer.copyright': 'Copyright © 1998-{year}, jobsDB. ',
   'footer.rightReserved': 'All Rights Reserved.',
-  'footer.siteMapLink': '/hk/en/sitemap',
+  'footer.siteMapLink': '/hk/en/sitemap', 
   'footer.siteMapLinkText': 'Site Map',
   'footer.termsLink': '/en-hk/pages/terms/terms-conditions',
   'footer.termsLinkText': 'Terms & Conditions',
@@ -31,9 +31,9 @@ export default {
   'footer.postajob':'Post a Job',
   'footer.postajobLink':'/hk/en/Home/EmployerIndex',
   'footer.searchcandidates':'Search Candidates',
-  'footer.searchcandidatesLink':'/hk/en/StaticContentFullContainer/EM/FindTalent.htm',
-  'footer.advertisewithus':'Advertise with us',
-  'footer.advertisewithusLink':'/hk/en/StaticContent/AboutUs/Products.htm',
+  'footer.searchcandidatesLink':'/hk/en/home/employerindex',
+  'footer.advertisewithus':'Advertise with Us',
+  'footer.advertisewithusLink':'/en-hk/cms/employer/product-and-services/',
 
   'footer.aboutus':'About Us',
   'footer.aboutjobsdb':'About jobsDB',
@@ -54,7 +54,7 @@ export default {
   'footer.internationalpartners':'International Partners',
   'footer.babajobindia':'BabaJob (India)',
   'footer.babajobindiaLink':'http://www.babajob.com/',
-  'footer.bdjobsbandladesh':'Bdjobs (Bandladesh)',
+  'footer.bdjobsbandladesh':'Bdjobs (Bangladesh)',
   'footer.bdjobsbandladeshLink':'http://www.bdjobs.com/',
   'footer.brightermondayeastafrica':'Brighter Monday (East Africa)',
   'footer.brightermondayeastafricaLink':'http://www.brightermonday.com/',
@@ -85,5 +85,5 @@ export default {
   'footer.googleplusLink':'https://plus.google.com/+jobsdbHK',
   'footer.weiboLink':'http://weibo.com/jobsdbhk',
   'footer.twitterLink':'http://twitter.com/HKJobs',
-  'footer.rssLink':'http://hk.jobsdb.com/HK/EN/Rss/RenderJobFunctionRssIndex'
+  'footer.socialrssLink':'http://hk.jobsdb.com/HK/EN/Rss/RenderJobFunctionRssIndex'
 };

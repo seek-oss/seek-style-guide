@@ -1,6 +1,6 @@
 
 export default {
-  'footer.copyright': 'Copyright © 1998-{year}, jobsDB.',
+  'footer.copyright': 'Copyright © 1998-{year}, jobsDB. ',
   'footer.rightReserved': 'All Rights Reserved.',
   'footer.siteMapLink': '/id/en/sitemap',
   'footer.siteMapLinkText': 'Site Map',
@@ -31,9 +31,9 @@ export default {
   'footer.postajob':'Post a Job',
   'footer.postajobLink':'/id/en/Home/EmployerIndex',
   'footer.searchcandidates':'Search Candidates',
-  'footer.searchcandidatesLink':'/id/en/StaticContentFullContainer/EM/FindTalent.htm',
-  'footer.advertisewithus':'Advertise with us',
-  'footer.advertisewithusLink':'/id/en/StaticContent/AboutUs/Products.htm',
+  'footer.searchcandidatesLink':'/ID/en/StaticContentFullContainer/EM/FindTalent.htm',
+  'footer.advertisewithus':'Advertise with Us',
+  'footer.advertisewithusLink':'/en-id/pages/products-services',
 
   'footer.aboutus':'About Us',
   'footer.aboutjobsdb':'About jobsDB',
@@ -41,7 +41,7 @@ export default {
   'footer.faq':'FAQ',
   'footer.faqLink':'/id/en/StaticContentFullContainer/AboutUS/faq/index.htm',
   'footer.careenatjobsdb':'Career@jobsDB',
-  'footer.careenatjobsdbLink':'/id/en/Search/FindJobs?JSRV=1&AccNums=1&SubAccount=14',
+  'footer.careenatjobsdbLink':'/ID/en/Search/FindJobs?PN=JobListing&Companies=%22jobsDB%22',
   'footer.contactus':'Contact Us',
   'footer.contactusLink':'/en-id/pages/regional-coverage',
 
@@ -54,7 +54,7 @@ export default {
   'footer.internationalpartners':'International Partners',
   'footer.babajobindia':'BabaJob (India)',
   'footer.babajobindiaLink':'http://www.babajob.com/',
-  'footer.bdjobsbandladesh':'Bdjobs (Bandladesh)',
+  'footer.bdjobsbandladesh':'Bdjobs (Bangladesh)',
   'footer.bdjobsbandladeshLink':'http://www.bdjobs.com/',
   'footer.brightermondayeastafrica':'Brighter Monday (East Africa)',
   'footer.brightermondayeastafricaLink':'http://www.brightermonday.com/',
@@ -64,8 +64,8 @@ export default {
   'footer.jobbermanwestafricaLink':'http://www.jobberman.com/',
   'footer.jobstreetseasia':'JobStreet (S.E. Asia)',
   'footer.jobstreetseasiaLink':'http://www.jobstreet.com/',
-  'footer.jorahongkong':'Jora (Hong Kong)',
-  'footer.jorahongkongLink':'https://hk.jora.com/',
+  'footer.jorahongkong':'Jora (Indonesia)',
+  'footer.jorahongkongLink':'https://id.jora.com/',
   'footer.managerbrazil':'Manager (Brazil)',
   'footer.managerbrazilLink':'http://www.manager.com.br/',
   'footer.occmundialmexico':'OCC Mundial (Mexico)',
@@ -84,6 +84,6 @@ export default {
   'footer.facebookLink':'https://www.facebook.com/jobsDBIndonesia.FP/',
   'footer.googleplusLink':'https://plus.google.com/111611346438127922663/posts',
   'footer.twitterLink':'https://twitter.com/JobsDBIndonesia',
-  'footer.bloggerLink':'http://jobsdb-indonesia.blogspot.com/',
-  'footer.rssLink':'http://id.jobsdb.com/ID/en/Rss/RenderJobFunctionRssIndex'
+  'footer.bloggerLink':'https://id.jobsdb.com/id-id/career-recruitment-advice/',
+  'footer.socialrssLink':'http://id.jobsdb.com/ID/en/Rss/RenderJobFunctionRssIndex'
 };

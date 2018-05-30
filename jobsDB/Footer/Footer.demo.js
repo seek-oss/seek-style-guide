@@ -23,7 +23,8 @@ export default {
             ...props,
             country: 'hk',   
             language: 'en', 
-            domainUrl: 'jobsdb.com'
+            domainUrl: 'jobsdb.com',
+            mbaseUrl:'https://m.jobsdb.com'
 
           })
         },
@@ -33,7 +34,8 @@ export default {
             ...props,
             country: 'sg',   
             language: 'en',
-            domainUrl: 'jobsdb.com'
+            domainUrl: 'jobsdb.com',
+            mbaseUrl:'https://m.jobsdb.com'
           })
         },
         {
@@ -42,7 +44,8 @@ export default {
             ...props,
             country: 'id',  
             language: 'en', 
-            domainUrl: 'jobsdb.com'
+            domainUrl: 'jobsdb.com',
+            mbaseUrl:'https://m.jobsdb.co.id'
           })
         },
         {
@@ -51,7 +54,8 @@ export default {
             ...props,
             country: 'id',  
             language: 'id', 
-            domainUrl: 'jobsdb.com'
+            domainUrl: 'jobsdb.com',
+            mbaseUrl:'https://m.jobsdb.co.id'
           })
         },
         {
@@ -60,7 +64,8 @@ export default {
             ...props,
             country: 'th', 
             language: 'en',  
-            domainUrl: 'jobsdb.com'
+            domainUrl: 'jobsdb.com',
+            mbaseUrl:'https://m.jobsdb.co.th'
           })
         },
         {
@@ -69,7 +74,8 @@ export default {
             ...props,
             country: 'th', 
             language: 'th',  
-            domainUrl: 'jobsdb.com'
+            domainUrl: 'jobsdb.com',
+            mbaseUrl:'https://m.jobsdb.co.th'
           })
         }
       ]

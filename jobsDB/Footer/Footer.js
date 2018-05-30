@@ -28,7 +28,7 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
             <div className={styles['col-md-4']}>
               <div className={styles.row}>
                 <div className={classnames(styles['col-sm-6'], styles['col-md-12'])}>
-                  <h2 className={classnames(styles['footer-logo'], styles['hidden-xs'])}><a style={backgroudstyle} href="#">jobsDB.com</a></h2>
+                  <h2 className={classnames(styles['footer-logo'], styles['hidden-xs'])}><a style={backgroudstyle} href="https://www.jobsdb.com">jobsDB.com Home</a></h2>
                 </div>
                 <div className={classnames(styles['col-sm-6'], styles['col-md-12'])}>
                   <div className={styles['footer-contact-info']}>
@@ -55,8 +55,8 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
                       {messages['footer.bloggerLink'] != null &&
                         <li><a className={classnames(styles['social-icon'], styles['social-blogger'])} style={socialbackgroundimagestyle} href={messages['footer.bloggerLink']} target="_blank">Blogger</a></li>
                       }
-                      {messages['footer.rssLink'] != null &&
-                        <li><a className={classnames(styles['social-icon'], styles['social-feed'])} style={socialbackgroundimagestyle} href={messages['footer.rssLink']} target="_blank">RSS Feed</a></li>
+                      {messages['footer.socialrssLink'] != null &&
+                        <li><a className={classnames(styles['social-icon'], styles['social-feed'])} style={socialbackgroundimagestyle} href={messages['footer.socialrssLink']} target="_blank">RSS Feed</a></li>
                       }
                     </ul>
                     <p>&nbsp;</p>
@@ -70,7 +70,7 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
                   <dl className={classnames(styles['footer-list'], styles.first)}>
                     <dt>{messages['footer.jobseekers']}</dt>
                     <dd><a href={baseUrl + messages['footer.browsejobsLink']}>{messages['footer.browsejobs']}</a></dd>
-                    <dd><a href={baseUrl + messages['footer.postajobLink']}>{messages['footer.postresumes']}</a></dd>
+                    <dd><a href={baseUrl + messages['footer.postresumesLink']}>{messages['footer.postresumes']}</a></dd>
                     <dd><a href={baseUrl + messages['footer.jobalertsLink']}>{messages['footer.jobalerts']}</a></dd>
                     <dd><a href={baseUrl + messages['footer.myjobsdbLink']}>{messages['footer.myjobsdb']}</a></dd>
                     {messages['footer.careerinsightsLink'] != null &&
@@ -83,7 +83,7 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
                     <dt>{messages['footer.employers']}</dt>
                     <dd><a href={baseUrl + messages['footer.postajobLink']}>{messages['footer.postajob']}</a></dd>
                     <dd><a href={baseUrl + messages['footer.searchcandidatesLink']}>{messages['footer.searchcandidates']}</a></dd>
-                    <dd><a href={baseUrl + messages['footer.advertisewithusLink']}>{messages['footer.advertisewithus']}</a></dd>
+                    <dd><a href={baseUrl + messages['footer.advertisewithusLink']} target="_blank">{messages['footer.advertisewithus']}</a></dd>
                   </dl>
                 </div>
               </div>
@@ -93,10 +93,10 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
                 <div className={styles['col-xs-6']}>
                   <dl className={styles['footer-list']}>
                     <dt>{messages['footer.aboutus']}</dt>
-                    <dd><a href={baseUrl + messages['footer.aboutjobsdbLink']}>{messages['footer.aboutjobsdb']}</a></dd>
+                    <dd><a href={baseUrl + messages['footer.aboutjobsdbLink']} target="_blank">{messages['footer.aboutjobsdb']}</a></dd>
                     <dd><a href={baseUrl + messages['footer.faqLink']}>{messages['footer.faq']}</a></dd>
                     <dd><a href={baseUrl + messages['footer.careenatjobsdbLink']}>{messages['footer.careenatjobsdb']}</a></dd>
-                    <dd><a href={baseUrl + messages['footer.contactusLink']}>{messages['footer.contactus']}</a></dd>
+                    <dd><a href={baseUrl + messages['footer.contactusLink']} target="_blank">{messages['footer.contactus']}</a></dd>
                   </dl>
                 </div>
                 <div className={styles['col-xs-6']}>
@@ -135,6 +135,10 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
       <div className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.copyright}>{messages['footer.copyright'].replace('{year}', year)}{messages['footer.rightReserved']}</div>
+          <div className={styles['base-links']}>
+          {messages['footer.truehitsLink'] != null && 
+              <a href={messages['footer.truehitsLink']} target="_blank"><img src={messages['footer.truehitsImgLink']}/></a>
+            }</div>
           <div className={styles['base-links']}>
             <a href={baseUrl + messages['footer.privacyLink']} target="_blank">{messages['footer.privacyLinkText']}</a>
             <a href={baseUrl + messages['footer.termsLink']} target="_blank">{messages['footer.termsLinkText']}</a>

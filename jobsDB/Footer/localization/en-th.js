@@ -1,12 +1,13 @@
 
 export default {
-  'footer.copyright': 'Copyright © 1998-{year}, jobsDB.',
+  'footer.copyright': 'Copyright © 1998-{year}, jobsDB. ',
   'footer.rightReserved': 'All Rights Reserved.',
   'footer.siteMapLink': '/th/en/sitemap',
   'footer.siteMapLinkText': 'Site Map',
   'footer.termsLink': '/en-th/pages/terms/terms-conditions',
   'footer.termsLinkText': 'Terms & Conditions',
   'footer.privacyLink': '/en-th/pages/terms/privacy-policy',
+  'footer.privacyLinkText': 'Privacy Statement',
 
   'footer.csemailtext': 'Email: ',
   'footer.csemail': 'CS@jobsDB.co.th',
@@ -29,9 +30,9 @@ export default {
   'footer.postajob':'Post a Job',
   'footer.postajobLink':'/th/en/Home/EmployerIndex',
   'footer.searchcandidates':'Search Candidates',
-  'footer.searchcandidatesLink':'/th/en/StaticContentFullContainer/EM/FindTalent.htm',
-  'footer.advertisewithus':'Advertise with us',
-  'footer.advertisewithusLink':'/th/en/StaticContent/AboutUs/Products.htm',
+  'footer.searchcandidatesLink':'/en-th/cms/employer/product-services/talent-search/',
+  'footer.advertisewithus':'Advertise with Us',
+  'footer.advertisewithusLink':'/en-th/cms/employer/product-and-services/',
 
   'footer.aboutus':'About Us',
   'footer.aboutjobsdb':'About jobsDB',
@@ -39,7 +40,7 @@ export default {
   'footer.faq':'FAQ',
   'footer.faqLink':'/th/en/StaticContentFullContainer/AboutUS/faq/index.htm',
   'footer.careenatjobsdb':'Career@jobsDB',
-  'footer.careenatjobsdbLink':'/th/en/Search/FindJobs?JSRV=1&AccNums=1&SubAccount=14',
+  'footer.careenatjobsdbLink':'/TH/en/Search/FindJobs?PN=JobListing&Companies=%22jobsDB%22',
   'footer.contactus':'Contact Us',
   'footer.contactusLink':'/en-th/pages/regional-coverage',
 
@@ -52,7 +53,7 @@ export default {
   'footer.internationalpartners':'International Partners',
   'footer.babajobindia':'BabaJob (India)',
   'footer.babajobindiaLink':'http://www.babajob.com/',
-  'footer.bdjobsbandladesh':'Bdjobs (Bandladesh)',
+  'footer.bdjobsbandladesh':'Bdjobs (Bangladesh)',
   'footer.bdjobsbandladeshLink':'http://www.bdjobs.com/',
   'footer.brightermondayeastafrica':'Brighter Monday (East Africa)',
   'footer.brightermondayeastafricaLink':'http://www.brightermonday.com/',
@@ -62,8 +63,8 @@ export default {
   'footer.jobbermanwestafricaLink':'http://www.jobberman.com/',
   'footer.jobstreetseasia':'JobStreet (S.E. Asia)',
   'footer.jobstreetseasiaLink':'http://www.jobstreet.com/',
-  'footer.jorahongkong':'Jora (Hong Kong)',
-  'footer.jorahongkongLink':'https://hk.jora.com/',
+  'footer.jorahongkong':'Jora (Thailand)',
+  'footer.jorahongkongLink':'https://th.jora.com/',
   'footer.managerbrazil':'Manager (Brazil)',
   'footer.managerbrazilLink':'http://www.manager.com.br/',
   'footer.occmundialmexico':'OCC Mundial (Mexico)',
@@ -84,6 +85,8 @@ export default {
   'footer.twitterLink':'https://twitter.com/jobsdbth',
   'footer.youtubeLink':'http://www.youtube.com/JobsdbThai',
   'footer.bloggerLink':'http://jobsdbthailand.blogspot.com/',
-  'footer.rssLink':'http://th.jobsdb.com/TH/EN/Rss/RenderJobFunctionRssIndex'
+  'footer.socialrssLink':'http://th.jobsdb.com/TH/EN/Rss/RenderJobFunctionRssIndex',
+  'footer.truehitsLink':'http://datawarehouse.dbd.go.th/bdw/search/search1.html',
+  'footer.truehitsImgLink':'https://th.content.jobsdbcdn.com/Content/v327/Images/shared/v8revamp/dbd_registered.png'
 
 };
