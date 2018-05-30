@@ -135,10 +135,12 @@ const Footer = ({ language, country, domainUrl, mbaseUrl, contentUrl }) => {
       <div className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.copyright}>{messages['footer.copyright'].replace('{year}', year)}{messages['footer.rightReserved']}</div>
-          <div className={styles['base-links']}>
-          {messages['footer.truehitsLink'] != null && 
-              <a href={messages['footer.truehitsLink']} target="_blank"><img src={messages['footer.truehitsImgLink']}/></a>
-            }</div>
+          
+          {messages['footer.datawarehouseLink'] != null && 
+            <div className={classnames(styles['datawarehouse'], styles['base-links'])}>
+              <a href={messages['footer.datawarehouseLink']} target="_blank">
+                       <img src={messages['footer.datawarehouseImgLink']}/></a>
+            </div>}
           <div className={styles['base-links']}>
             <a href={baseUrl + messages['footer.privacyLink']} target="_blank">{messages['footer.privacyLinkText']}</a>
             <a href={baseUrl + messages['footer.termsLink']} target="_blank">{messages['footer.termsLinkText']}</a>

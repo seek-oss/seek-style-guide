@@ -87,8 +87,7 @@ export default {
   'footer.youtubeLink':'http://www.youtube.com/JobsdbThai',
   'footer.bloggerLink':'http://jobsdbthailand.blogspot.com/',
   'footer.socialrssLink':'http://th.jobsdb.com/TH/EN/Rss/RenderJobFunctionRssIndex',
-
-  'footer.truehitsLink':'http://datawarehouse.dbd.go.th/bdw/search/search1.html',
-  'footer.truehitsImgLink':'https://th.content.jobsdbcdn.com/Content/v327/Images/shared/v8revamp/dbd_registered.png'
+  'footer.datawarehouseLink':'http://datawarehouse.dbd.go.th/bdw/search/search1.html',
+  'footer.datawarehouseImgLink':'https://th.content.jobsdbcdn.com/Content/v327/Images/shared/v8revamp/dbd_registered.png'
 
   };
