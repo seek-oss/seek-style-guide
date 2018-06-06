@@ -141,11 +141,6 @@ export default class CustomMonthPicker extends Component {
     const monthValue = String(month || '');
     const yearValue = String(year || '');
 
-    const sharedInputProps = {
-      onBlur: this.handleBlur,
-      'aria-describedby': fieldMessageId
-    };
-
     return (
       <div>
         <FieldLabel
@@ -173,11 +168,12 @@ export default class CustomMonthPicker extends Component {
             valid={valid}
             message={false}
             placeholder="Month"
+            onChange={this.handleMonthChange}
+            onBlur={this.handleBlur}
+            value={monthValue}
             inputProps={{
-              onChange: this.handleMonthChange,
-              value: monthValue,
               ref: this.storeMonthReference,
-              ...sharedInputProps
+              'aria-describedby': fieldMessageId
             }}
           />
 
@@ -188,11 +184,12 @@ export default class CustomMonthPicker extends Component {
             valid={valid}
             message={false}
             placeholder="Year"
+            onChange={this.handleYearChange}
+            onBlur={this.handleBlur}
+            value={yearValue}
             inputProps={{
-              onChange: this.handleYearChange,
-              value: yearValue,
               ref: this.storeYearReference,
-              ...sharedInputProps
+              'aria-describedby': fieldMessageId
             }}
           />
         </div>
