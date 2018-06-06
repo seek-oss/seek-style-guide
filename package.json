@@ -11,6 +11,7 @@
     "start-header-footer": "webpack-dev-server --config standalone/header-footer/webpack.config.js --content-base dist",
     "pretest": "npm run lint",
     "test": "BABEL_ENV=test jest --config ./jest.config.json",
+    "posttest": "npm run build",
     "update-snapshot": "npm test -- --updateSnapshot",
     "lint": "concurrently \"npm run lint-js\" \"npm run lint-less\" \"npm run flow\"",
     "lint-js": "eslint app standalone/*/src docs/src react test",
