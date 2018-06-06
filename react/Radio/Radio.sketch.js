@@ -13,12 +13,12 @@ const noop = () => {};
 export const symbols = {
   'Radio/Checked': (
     <Container>
-      <Radio id="radio2" label="Radio" inputProps={{ checked: true, onChange: noop }} />
+      <Radio id="radio2" label="Radio" checked={true} onChange={noop} />
     </Container>
   ),
   'Radio/Unchecked': (
     <Container>
-      <Radio id="radio1" label="Radio" inputProps={{ checked: false, onChange: noop }} />
+      <Radio id="radio1" label="Radio" checked={false} onChange={noop} />
     </Container>
   )
 };

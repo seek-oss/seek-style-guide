@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import JsxParser from 'react-jsx-parser';
 import Frame from 'react-frame-component';
 import CollectStyles from './CollectStyles/CollectStyles';
 import FadeIn from './FadeIn/FadeIn';
 import CatchErrors from './CatchErrors/CatchErrors';
+import RenderJsx from './RenderJsx/RenderJsx';
 import * as styleGuideComponents from 'seek-style-guide/react';
 import styles from './Preview.less';
 
@@ -32,7 +32,7 @@ export default class Preview extends Component {
                     <FadeIn delay={(i + 1) * 50}>
                       <StyleGuideProvider title="SEEK Style Guide Sandbox">
                         <CatchErrors key={code}>
-                          <JsxParser jsx={code} components={styleGuideComponents} />
+                          <RenderJsx jsx={code} initialState={{}} scope={styleGuideComponents} />
                         </CatchErrors>
                       </StyleGuideProvider>
                     </FadeIn>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './Checkbox.less';
 import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
+import FieldMessage from '../private/FieldMessage/FieldMessage';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
@@ -23,19 +23,26 @@ export default class Checkbox extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     label: PropTypes.node.isRequired,
+    value: PropTypes.string,
     className: PropTypes.string,
-    inputProps: PropTypes.shape({
-      onChange: PropTypes.func,
-      checked: PropTypes.bool.isRequired
-    }),
-    type: PropTypes.oneOf([STANDARD, BUTTON])
+    checked: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    inputProps: PropTypes.object,
+    type: PropTypes.oneOf([STANDARD, BUTTON]),
+    valid: PropTypes.bool,
+    message: PropTypes.oneOfType([
+      PropTypes.oneOf([false]),
+      PropTypes.node
+    ]),
+    messageProps: PropTypes.object
   }
 
   static defaultProps = {
     className: '',
-    inputProps: {
-      checked: false
-    },
+    checked: false,
+    inputProps: {},
     type: STANDARD
   };
 
@@ -79,11 +86,20 @@ export default class Checkbox extends Component {
     );
   }
 
+  renderMessage(id, valid, message, messageProps) {
+    return <FieldMessage {...{ id: `${id}-message`, valid, message, messageProps }} />;
+  }
+
   renderInput() {
-    const { id, inputProps } = this.props;
+    const { id, value, checked, onChange, onFocus, onBlur, inputProps } = this.props;
 
     const allInputProps = {
       id,
+      value,
+      checked,
+      onChange,
+      onFocus,
+      onBlur,
       ...combineClassNames(inputProps, styles.input),
       type: 'checkbox'
     };
@@ -94,10 +110,11 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { className, id, valid, message, messageProps } = this.props;
 
     const rootClassNames = classnames({
       [styles.root]: true,
+      [styles.invalid]: valid === false,
       [className]: className
     });
 
@@ -105,6 +122,7 @@ export default class Checkbox extends Component {
       <div className={rootClassNames}>
         { this.renderInput() }
         { this.renderLabel() }
+        { this.renderMessage(id, valid, message, messageProps) }
       </div>
     );
   }

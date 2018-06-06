@@ -1,9 +1,7 @@
 import styles from './Textarea.less';
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
 import Text from '../Text/Text';
@@ -22,32 +20,24 @@ export default class Textarea extends Component {
 
   static propTypes = {
     id: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
     className: PropTypes.string,
     valid: PropTypes.bool,
     description: PropTypes.string,
+    inputProps: PropTypes.object,
     /* eslint-disable consistent-return */
-    inputProps: (props, propName, componentName) => {
-      const { id, inputProps } = props;
-      const { id: inputId } = inputProps || {};
-
-      if (typeof inputProps !== 'undefined' && typeof inputProps !== 'object') {
-        return new Error(`Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
-      }
-
-      if (inputId && id) {
-        return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
-      }
-    },
     countFeedback: (props, propName, componentName) => {
-      const { inputProps = {} } = props;
-      const { value } = inputProps;
+      const { value, inputProps = {} } = props;
 
       if (typeof props[propName] !== 'function' && typeof props[propName] !== 'undefined') {
         return new Error(`Invalid prop \`${propName}\` of type \`${typeof props[propName]}\` supplied to \`${componentName}\`, expected \`function\`.`);
       }
 
-      if (props[propName] && typeof value !== 'string') {
-        return new Error(`\`inputProps.value\` must be supplied if \`${propName}\` is set`);
+      if (props[propName] && typeof value !== 'string' && typeof inputProps.value !== 'string') {
+        return new Error(`\`value\` must be supplied if \`${propName}\` is set`);
       }
     },
     secondaryLabel: PropTypes.string
@@ -56,7 +46,8 @@ export default class Textarea extends Component {
 
   static defaultProps = {
     className: '',
-    description: ''
+    description: '',
+    inputProps: {}
   };
 
   constructor() {
@@ -68,14 +59,14 @@ export default class Textarea extends Component {
 
   /* eslint-disable consistent-return */
   renderCharacterCount() {
-    const { countFeedback, inputProps = {} } = this.props;
-    const { value } = inputProps;
+    const { value, countFeedback, inputProps = {} } = this.props;
+    const resolvedValue = value || inputProps.value || '';
 
-    if (typeof countFeedback !== 'function' || typeof value !== 'string') {
+    if (typeof countFeedback !== 'function') {
       return;
     }
 
-    const { show = true, count } = countFeedback(value);
+    const { show = true, count } = countFeedback(resolvedValue);
 
     if (!show) {
       return;
@@ -95,9 +86,13 @@ export default class Textarea extends Component {
   /* eslint-enable consistent-return */
 
   renderInput() {
-    const { id, inputProps } = this.props;
+    const { id, value, onChange, onFocus, onBlur, inputProps } = this.props;
     const allInputProps = {
       id,
+      value,
+      onChange,
+      onFocus,
+      onBlur,
       ...combineClassNames(inputProps, styles.textarea),
       'aria-describedby': `${id}-message`
     };

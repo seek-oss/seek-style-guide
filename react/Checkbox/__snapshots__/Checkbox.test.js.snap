@@ -1,13 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Checkbox FieldMessage should render field message when passed 1`] = `
+<div
+  className="root invalid"
+>
+  <input
+    checked={false}
+    className="input"
+    id="testCheckbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="testCheckbox"
+  >
+    <div
+      className="standard"
+    >
+      <div
+        className="checkbox"
+      >
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="checkMark"
+          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+        />
+      </div>
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message="Field is invalid"
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    valid={false}
+  />
+</div>
+`;
+
 exports[`Checkbox inputProps should pass through other props to the input 1`] = `
 <div
   className="root"
 >
   <input
+    checked={false}
     className="input"
     data-automation="first-name-field"
     id="testCheckbox"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
@@ -34,43 +86,17 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
       </span>
     </div>
   </label>
-</div>
-`;
-
-exports[`Checkbox inputProps should render as checked 1`] = `
-<div
-  className="root"
->
-  <input
-    checked={true}
-    className="input"
-    id="testCheckbox"
-    type="checkbox"
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
   />
-  <label
-    className="label"
-    htmlFor="testCheckbox"
-  >
-    <div
-      className="standard"
-    >
-      <div
-        className="checkbox"
-      >
-        <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
-    </div>
-  </label>
 </div>
 `;
 
@@ -82,6 +108,7 @@ exports[`Checkbox should render with button style 1`] = `
     checked={false}
     className="input"
     id="testCheckbox"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
@@ -94,6 +121,17 @@ exports[`Checkbox should render with button style 1`] = `
       Still in role
     </span>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -105,6 +143,7 @@ exports[`Checkbox should render with className 1`] = `
     checked={false}
     className="input"
     id="testCheckbox"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
@@ -131,6 +170,17 @@ exports[`Checkbox should render with className 1`] = `
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -142,6 +192,7 @@ exports[`Checkbox should render with simple props 1`] = `
     checked={false}
     className="input"
     id="testCheckbox"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
@@ -168,6 +219,17 @@ exports[`Checkbox should render with simple props 1`] = `
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;
 
@@ -179,6 +241,7 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
     checked={false}
     className="input"
     id="testCheckbox"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
@@ -205,5 +268,16 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
       </span>
     </div>
   </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
 </div>
 `;

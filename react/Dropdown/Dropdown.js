@@ -1,12 +1,8 @@
 import styles from './Dropdown.less';
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import classnames from 'classnames';
-
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
-
 import FieldMessage from '../private/FieldMessage/FieldMessage';
 import FieldLabel from '../private/FieldLabel/FieldLabel';
 
@@ -26,24 +22,11 @@ export default class Dropdown extends Component {
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
     valid: PropTypes.bool,
-    /* eslint-disable consistent-return */
-    inputProps: (props, propName, componentName) => {
-      const { id, inputProps } = props;
-      const { id: inputId, value } = inputProps || {};
-
-      if (typeof inputProps !== 'object') {
-        return new Error(`Invalid prop \`inputProps\` of type \`${typeof inputProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
-      }
-
-      if (typeof value !== 'string') {
-        return new Error(`Invalid prop \`inputProps.value\` of type \`${typeof value}\` supplied to \`${componentName}\`, expected \`string\`.`);
-      }
-
-      if (inputId && id) {
-        return new Error(`\`inputProps.id\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
-      }
-    },
-    /* eslint-enable consistent-return */
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    inputProps: PropTypes.object,
     options: PropTypes.arrayOf(
       PropTypes.shape({
         value: PropTypes.oneOfType([
@@ -62,7 +45,8 @@ export default class Dropdown extends Component {
   static defaultProps = {
     className: '',
     placeholder: '',
-    options: []
+    options: [],
+    inputProps: {}
   };
 
   constructor() {
@@ -79,14 +63,19 @@ export default class Dropdown extends Component {
       { label }
     </option>);
   }
+
   renderSelect() {
-    const { id, inputProps, options, placeholder } = this.props;
+    const { id, value, onChange, onFocus, onBlur, inputProps, options, placeholder } = this.props;
     const inputStyles = classnames({
       [styles.dropdown]: true,
-      [styles.placeholderSelected]: !inputProps.value
+      [styles.placeholderSelected]: !value && !inputProps.value
     });
     const allInputProps = {
       id,
+      value,
+      onChange,
+      onFocus,
+      onBlur,
       'aria-describedby': `${id}-message`, // Order is important here so passed in inputProps can overide this if requried
       ...combineClassNames(inputProps, inputStyles)
     };
@@ -99,11 +88,11 @@ export default class Dropdown extends Component {
           { placeholder }
         </option>
         {
-          options.map(({ value, label }) => {
-            if (Array.isArray(value)) {
-              return (<optgroup value="" label={label} key={label}>{value.map(this.renderOption)}</optgroup>);
+          options.map(option => {
+            if (Array.isArray(option.value)) {
+              return (<optgroup value="" label={option.label} key={option.label}>{option.value.map(this.renderOption)}</optgroup>);
             }
-            return this.renderOption({ value, label });
+            return this.renderOption(option);
           })
         }
       </select>

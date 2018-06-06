@@ -8,10 +8,8 @@ const commonProps = {
   label: 'Label',
   placeholder: 'Placeholder text',
   options: [],
-  inputProps: {
-    value: '',
-    onChange: () => {}
-  }
+  value: '',
+  onChange: () => {}
 };
 
 export const symbols = {
