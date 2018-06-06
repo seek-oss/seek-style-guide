@@ -69,13 +69,13 @@ export const seekSites = [
   },
   {
     name: 'Courses',
-    href: 'https://www.seeklearning.com.au/?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
+    href: 'https://www.seek.com.au/learning?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
     analytics: 'toolbar:courses',
     specificLocale: 'AU'
   },
   {
     name: 'Courses',
-    href: 'https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
+    href: 'https://www.seek.co.nz/learning?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
     analytics: 'toolbar:courses',
     specificLocale: 'NZ'
   },
