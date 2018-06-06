@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Checkbox from './Checkbox';
 import * as sketch from './Checkbox.sketch';
 import demoStyles from './Checkbox.demo.less';
+import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
 
 class CheckboxContainer extends Component {
   static propTypes = {
@@ -32,10 +33,8 @@ class CheckboxContainer extends Component {
       <div className={demoStyles.root}>
         <DemoComponent
           {...componentProps}
-          inputProps={{
-            checked,
-            onChange: this.handleChange
-          }}
+          checked={checked}
+          onChange={this.handleChange}
         />
       </div>
     );
@@ -54,10 +53,8 @@ export default {
     label: 'Still in role',
     type: 'standard',
     // Documentation only:
-    inputProps: {
-      checked: false,
-      onChange: () => {}
-    }
+    checked: false,
+    onChange: () => {}
   },
   options: [
     {
@@ -76,6 +73,7 @@ export default {
           })
         }
       ]
-    }
+    },
+    ...fieldMessageOptions
   ]
 };

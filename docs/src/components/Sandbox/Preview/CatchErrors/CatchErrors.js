@@ -28,11 +28,11 @@ export default class CatchErrors extends Component {
     // Ensure the stack only contains user-provided components
     const componentStack = info.componentStack
       .split('\n')
-      .filter(line => /JsxParser/.test(line))
+      .filter(line => /RenderJsx/.test(line))
       .map(line => line.replace(/ \(created by .*/g, ''));
 
-    // Ignore the JsxParser container components
-    const lines = componentStack.slice(0, componentStack.length - 2);
+    // Ignore the RenderJsx container component
+    const lines = componentStack.slice(0, componentStack.length - 1);
 
     return (
       <div className={styles.root}>

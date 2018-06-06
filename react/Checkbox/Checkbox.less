@@ -45,6 +45,11 @@
   border-radius: @field-border-radius;
   margin-right: @field-gutter-width;
   position: relative;
+
+  .invalid & {
+    border-color: transparent;
+    box-shadow: 0 0 0 @field-border-width @sk-pink;
+  }
 }
 
 .checkMark {
