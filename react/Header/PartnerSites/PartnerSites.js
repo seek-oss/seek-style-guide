@@ -7,7 +7,7 @@ import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const linksObject = {
   AU: {
-    learningUrl: 'https://www.seeklearning.com.au/?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
+    learningUrl: 'https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
     businessUrl: 'https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus',
     volunteerUrl: 'https://www.volunteer.com.au/?tracking=SKMAU:main+header'
   },
