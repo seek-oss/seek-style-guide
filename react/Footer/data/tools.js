@@ -13,6 +13,7 @@ export default [
     name: 'Saved searches',
     href: '/myactivity',
     rel: 'nofollow',
+    authRequired: true,
     analytics: 'toolbar:my+activity'
   },
   {
