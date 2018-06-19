@@ -4,8 +4,8 @@ import Dropdown from './Dropdown';
 import styles from './Dropdown.less';
 import * as sketch from './Dropdown.sketch';
 import classnames from 'classnames';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.privateDemo';
-import fieldLabelOptions from '../FieldLabel/FieldLabel.privateDemo';
+import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
+import fieldLabelOptions from '../FieldLabel/FieldLabel.demoFragment';
 
 class DropdownContainer extends Component {
   static propTypes = {

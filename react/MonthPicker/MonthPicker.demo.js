@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import MonthPicker from './MonthPicker';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.privateDemo';
-import fieldLabelOptions from '../FieldLabel/FieldLabel.privateDemo';
+import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
+import fieldLabelOptions from '../FieldLabel/FieldLabel.demoFragment';
 
 class MonthPickerContainer extends Component {
   static propTypes = {

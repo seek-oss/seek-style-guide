@@ -4,8 +4,8 @@ import TextField from './TextField';
 import styles from './TextField.less';
 import * as sketch from './TextField.sketch';
 import classnames from 'classnames';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.privateDemo';
-import fieldLabelOptions from '../FieldLabel/FieldLabel.privateDemo';
+import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
+import fieldLabelOptions from '../FieldLabel/FieldLabel.demoFragment';
 
 class TextFieldContainer extends Component {
   static propTypes = {

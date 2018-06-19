@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Autosuggest from './Autosuggest';
 import styles from '../TextField/TextField.less';
 import classnames from 'classnames';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.privateDemo';
-import fieldLabelOptions from '../FieldLabel/FieldLabel.privateDemo';
+import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
+import fieldLabelOptions from '../FieldLabel/FieldLabel.demoFragment';
 
 class AutosuggestContainer extends Component {
   static propTypes = {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Checkbox from './Checkbox';
 import * as sketch from './Checkbox.sketch';
 import demoStyles from './Checkbox.demo.less';
-import fieldMessageOptions from '../FieldMessage/FieldMessage.privateDemo';
+import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
 
 class CheckboxContainer extends Component {
   static propTypes = {
