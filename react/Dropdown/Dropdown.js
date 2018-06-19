@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
-import FieldMessage from '../private/FieldMessage/FieldMessage';
-import FieldLabel from '../private/FieldLabel/FieldLabel';
+import FieldMessage from '../FieldMessage/FieldMessage';
+import FieldLabel from '../FieldLabel/FieldLabel';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;

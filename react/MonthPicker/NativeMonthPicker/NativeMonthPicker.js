@@ -8,7 +8,7 @@ import pad from 'pad-left';
 
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 
-import FieldLabel from '../../private/FieldLabel/FieldLabel';
+import FieldLabel from '../../FieldLabel/FieldLabel';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const makeMonthString = ({ month, year }) => {

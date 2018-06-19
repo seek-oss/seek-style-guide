@@ -73,6 +73,8 @@ export { default as SlideToggle } from './SlideToggle/SlideToggle';
 export { default as Textarea } from './Textarea/Textarea';
 export { default as TextField } from './TextField/TextField';
 export { default as Radio } from './Radio/Radio';
+export { default as FieldLabel } from './FieldLabel/FieldLabel';
+export { default as FieldMessage } from './FieldMessage/FieldMessage';
 
 // Accessibility
 export { default as ScreenReaderOnly } from './ScreenReaderOnly/ScreenReaderOnly';

@@ -8,7 +8,7 @@ import classnames from 'classnames';
 import CustomMonthPicker from './CustomMonthPicker/CustomMonthPicker';
 import NativeMonthPicker from './NativeMonthPicker/NativeMonthPicker';
 
-import FieldMessage from '../private/FieldMessage/FieldMessage';
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 const currYear = new Date().getFullYear();
 
