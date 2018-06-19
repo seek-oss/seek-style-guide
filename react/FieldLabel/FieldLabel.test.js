@@ -5,9 +5,9 @@ import React from 'react';
 import { createRenderer } from 'react-test-renderer/shallow';
 import { findAllWithType, findAllWithClass } from 'react-shallow-testutils';
 import FieldLabel from './FieldLabel';
-import Secondary from '../../Secondary/Secondary';
-import Strong from '../../Strong/Strong';
-import TextLink from '../../TextLink/TextLink';
+import Secondary from '../Secondary/Secondary';
+import Strong from '../Strong/Strong';
+import TextLink from '../TextLink/TextLink';
 
 chai.use(sinonChai);
 

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Textarea from './Textarea';
 import styles from './Textarea.less';
 import classnames from 'classnames';
-import fieldMessageOptions from '../private/FieldMessage/FieldMessage.demo';
-import fieldLabelOptions from '../private/FieldLabel/FieldLabel.demo';
+import fieldMessageOptions from '../FieldMessage/FieldMessage.privateDemo';
+import fieldLabelOptions from '../FieldLabel/FieldLabel.privateDemo';
 import * as sketch from './Textarea.sketch';
 
 class TextareaContainer extends Component {

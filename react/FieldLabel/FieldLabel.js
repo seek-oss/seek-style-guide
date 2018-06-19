@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-import Text from '../../Text/Text';
-import Strong from '../../Strong/Strong';
-import Secondary from '../../Secondary/Secondary';
+import Text from '../Text/Text';
+import Strong from '../Strong/Strong';
+import Secondary from '../Secondary/Secondary';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
