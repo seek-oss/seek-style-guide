@@ -62,10 +62,7 @@ const config = {
         include: appPaths,
         loader: appCss.extract({
           fallback: {
-            loader: 'style-loader',
-            options: {
-              insertInto: '[data-style-loader]'
-            }
+            loader: 'style-loader'
           },
           use: [
             {
@@ -92,10 +89,7 @@ const config = {
         include: /node_modules/,
         loader: appCss.extract({
           fallback: {
-            loader: 'style-loader',
-            options: {
-              insertInto: '[data-style-loader]'
-            }
+            loader: 'style-loader'
           },
           use: [
             {
