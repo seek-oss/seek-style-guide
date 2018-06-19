@@ -20,8 +20,8 @@ class FieldLabelContainer extends Component {
 }
 
 export default {
-  route: '/fieldLabel',
-  title: 'FieldLabel',
+  route: '/field-label',
+  title: 'Field Label',
   category: 'Form',
   component: FieldLabel,
   container: FieldLabelContainer,

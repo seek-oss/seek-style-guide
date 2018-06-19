@@ -2,8 +2,8 @@ import FieldMessage from './FieldMessage';
 import demoFragment from './FieldMessage.demoFragment';
 
 export default {
-  route: '/fieldMessage',
-  title: 'FieldMessage',
+  route: '/field-message',
+  title: 'Field Message',
   category: 'Form',
   component: FieldMessage,
   initialProps: {
