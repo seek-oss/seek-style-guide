@@ -1,5 +1,5 @@
 import React from 'react';
-import TextLink from '../../TextLink/TextLink';
+import TextLink from '../TextLink/TextLink';
 
 export default [
   {

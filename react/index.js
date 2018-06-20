@@ -37,6 +37,7 @@ export { default as PageBlock } from './PageBlock/PageBlock';
 export { default as Section } from './Section/Section';
 
 // Icons
+export { default as CheckMarkIcon } from './CheckMarkIcon/CheckMarkIcon';
 export { default as ChevronIcon } from './ChevronIcon/ChevronIcon';
 export { default as ClearIcon } from './ClearIcon/ClearIcon';
 export { default as CloseIcon } from './CloseIcon/CloseIcon';
@@ -72,9 +73,10 @@ export { default as SlideToggle } from './SlideToggle/SlideToggle';
 export { default as Textarea } from './Textarea/Textarea';
 export { default as TextField } from './TextField/TextField';
 export { default as Radio } from './Radio/Radio';
+export { default as FieldLabel } from './FieldLabel/FieldLabel';
+export { default as FieldMessage } from './FieldMessage/FieldMessage';
 
 // Accessibility
 export { default as ScreenReaderOnly } from './ScreenReaderOnly/ScreenReaderOnly';
 export { default as ScreenReaderSkipLink } from './ScreenReaderSkipLink/ScreenReaderSkipLink';
 export { default as ScreenReaderSkipTarget } from './ScreenReaderSkipTarget/ScreenReaderSkipTarget';
-

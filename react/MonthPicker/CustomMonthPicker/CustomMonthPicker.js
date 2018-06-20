@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import getYearOptions from './getYearOptions';
 import Dropdown from '../../Dropdown/Dropdown';
 
-import FieldLabel from '../../private/FieldLabel/FieldLabel';
+import FieldLabel from '../../FieldLabel/FieldLabel';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const months = [

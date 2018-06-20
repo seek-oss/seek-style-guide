@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Checkbox.less';
 import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
-import FieldMessage from '../private/FieldMessage/FieldMessage';
+import FieldMessage from '../FieldMessage/FieldMessage';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
