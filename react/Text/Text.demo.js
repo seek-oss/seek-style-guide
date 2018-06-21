@@ -121,6 +121,13 @@ export default {
           })
         },
         {
+          label: 'Large',
+          transformProps: ({ hero, ...props }) => ({
+            ...props,
+            large: true
+          })
+        },
+        {
           label: 'Standard',
           transformProps: ({ hero, ...props }) => props
         },
