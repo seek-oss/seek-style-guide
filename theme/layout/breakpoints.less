@@ -1,6 +1,19 @@
 // Breakpoint
 @responsive-breakpoint: 740px;
+@responsive-breakpoint-lg: 910px;
 
+@small: %(~"only screen and (max-width: %s)", (@responsive-breakpoint - 1));
+
+@medium: %(~"only screen and (min-width: %s)", @responsive-breakpoint);
+
+@mediumMax: %(
+  ~"only screen and (max-width: %s)",
+  @responsive-breakpoint-lg - 1
+);
+
+@large: %(~"only screen and (min-width: %s)", @responsive-breakpoint-lg);
+
+// Legacy variables to avoid breaking changes
 @mobile: %(~"only screen and (max-width: %s)", (@responsive-breakpoint - 1));
 
 @desktop: %(~"only screen and (min-width: %s)", @responsive-breakpoint);
