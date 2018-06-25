@@ -14,6 +14,24 @@ exports[`Pill: should pass through additional props 1`] = `
 </span>
 `;
 
+exports[`Pill: should render a child component 1`] = `
+<span
+  class="staticPill"
+>
+  <span
+    class="root standard raw"
+  >
+    <span
+      class=""
+    >
+      <div>
+        Hello
+      </div>
+    </span>
+  </span>
+</span>
+`;
+
 exports[`Pill: should render a static pill 1`] = `
 <span
   className="staticPill"
