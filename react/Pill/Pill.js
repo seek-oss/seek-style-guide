@@ -1,6 +1,5 @@
 // @flow
 import styles from './Pill.less';
-import PropTypes from 'prop-types';
 
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -10,7 +9,7 @@ import CrossIcon from '../CrossIcon/CrossIcon';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 type Props = {
-  text: PropTypes.node,
+  text: React$Node,
   onClose?: Function,
   className?: string
 };
