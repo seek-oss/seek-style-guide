@@ -7,6 +7,7 @@ import classnames from 'classnames';
 import stylesPositive from '../Positive/Positive.less';
 import stylesCritical from '../Critical/Critical.less';
 import stylesSecondary from '../Secondary/Secondary.less';
+import stylesHighlight from '../Highlight/Highlight.less';
 import stylesInfo from '../Info/Info.less';
 import stylesStrong from '../Strong/Strong.less';
 import stylesRegular from '../Regular/Regular.less';
@@ -23,6 +24,7 @@ const Text = ({
   positive,
   critical,
   secondary,
+  highlight,
   info,
   strong,
   regular,
@@ -47,6 +49,8 @@ const Text = ({
           [stylesPositive.root]: positive,
           [stylesCritical.root]: critical,
           [stylesSecondary.root]: secondary,
+          [stylesHighlight.root]: highlight,
+          [stylesHighlight.secondary]: highlight && secondary,
           [stylesInfo.root]: info,
           [stylesStrong.root]: strong,
           [stylesRegular.root]: regular,
@@ -74,6 +78,7 @@ Text.propTypes = {
   positive: PropTypes.bool,
   critical: PropTypes.bool,
   secondary: PropTypes.bool,
+  highlight: PropTypes.bool,
   info: PropTypes.bool,
   strong: PropTypes.bool,
   regular: PropTypes.bool,
