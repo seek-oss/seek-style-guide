@@ -11,10 +11,12 @@ import {
   Positive,
   Critical,
   Secondary,
+  Highlight,
   Info
 } from 'seek-style-guide/react';
 import Demo from '../Demo/Demo';
 import textDemoSpec from 'seek-style-guide/react/Text/Text.demo';
+import omit from 'lodash/omit';
 
 const BackgroundContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>
@@ -59,7 +61,7 @@ export default () => (
     </PageBlock>
     <Demo
       spec={{
-        ...textDemoSpec,
+        ...omit(textDemoSpec, 'sketch'),
         title: null
       }}
     />
@@ -410,6 +412,40 @@ export default () => (
         initialProps: {
           // eslint-disable-next-line react/jsx-key
           children: ['The last word of this sentence is ', <Secondary>secondary.</Secondary>]
+        },
+        options: []
+      }}
+    />
+    <PageBlock>
+      <Card transparent style={{ maxWidth: 720 }}>
+        <Section>
+          <Text heading>Highlighted Text</Text>
+          <Paragraph>
+            <Text>Any text element can be explicity marked as highlighted with the &ldquo;highlight&rdquo; property or the inline &ldquo;Highlight&rdquo; component.</Text>
+          </Paragraph>
+        </Section>
+      </Card>
+    </PageBlock>
+    <Demo
+      spec={{
+        component: Text,
+        container: BackgroundContainer,
+        block: true,
+        initialProps: {
+          highlight: true,
+          children: loremIpsumShort
+        },
+        options: []
+      }}
+    />
+    <Demo
+      spec={{
+        component: Text,
+        container: BackgroundContainer,
+        block: true,
+        initialProps: {
+          // eslint-disable-next-line react/jsx-key
+          children: ['The last word of this sentence is ', <Highlight>highlighted.</Highlight>]
         },
         options: []
       }}

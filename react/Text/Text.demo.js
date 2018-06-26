@@ -38,6 +38,13 @@ export default {
           })
         },
         {
+          label: 'Highlight',
+          transformProps: props => ({
+            ...props,
+            highlight: true
+          })
+        },
+        {
           label: 'Disable baseline',
           transformProps: props => ({
             ...props,
