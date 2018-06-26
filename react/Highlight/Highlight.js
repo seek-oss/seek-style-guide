@@ -1,9 +1,18 @@
+// @flow
 import styles from './Highlight.less';
 import React from 'react';
-import PropTypes from 'prop-types';
+import type { Node } from 'react';
 import classnames from 'classnames';
 
-export default function Highlight({ children, secondary, className, ...restProps }) {
+type Props = {
+  children: Node,
+  secondary?: boolean,
+  className?: string
+};
+
+export default function Highlight(props: Props) {
+  const { children, secondary, className, ...restProps } = props;
+
   return (
     <mark
       {...restProps}
@@ -16,9 +25,3 @@ export default function Highlight({ children, secondary, className, ...restProps
     </mark>
   );
 }
-
-Highlight.propTypes = {
-  children: PropTypes.node.isRequired,
-  secondary: PropTypes.bool,
-  className: PropTypes.string
-};
