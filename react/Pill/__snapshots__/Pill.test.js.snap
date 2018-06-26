@@ -16,19 +16,14 @@ exports[`Pill: should pass through additional props 1`] = `
 
 exports[`Pill: should render a child component 1`] = `
 <span
-  class="staticPill"
+  className="staticPill"
 >
-  <span
-    class="root standard raw"
+  <Text
+    baseline={false}
+    raw={true}
   >
-    <span
-      class=""
-    >
-      <div>
-        Hello
-      </div>
-    </span>
-  </span>
+    <ChildComponent />
+  </Text>
 </span>
 `;
 

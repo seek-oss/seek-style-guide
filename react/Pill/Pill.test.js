@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, render } from 'enzyme';
+import { shallow } from 'enzyme';
 import Pill from './Pill';
 
 const renderPill = props => shallow(
@@ -17,7 +17,8 @@ describe('Pill:', () => {
 
   it('should render a child component', () => {
     const ChildComponent = () => (<div>Hello</div>);
-    expect(render(<Pill text={<ChildComponent />} />)).toMatchSnapshot();
+    const pill = renderPill({ text: <ChildComponent /> });
+    expect(pill).toMatchSnapshot();
   });
 
   it('should render an interactive pill', () => {
