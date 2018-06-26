@@ -69,7 +69,7 @@ export default () => (
       <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
-            <Text>To better understand these options, let's step through them one by one.</Text>
+            <Text>To better understand these options, let&rsquo;s step through them one by one.</Text>
           </Paragraph>
         </Section>
         <Section>
