@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 export default function Highlight({ children, secondary, className, ...restProps }) {
   return (
-    <span
+    <mark
       {...restProps}
       className={classnames({
         [styles.root]: true,
@@ -13,7 +13,7 @@ export default function Highlight({ children, secondary, className, ...restProps
         className
       })}>
       {children}
-    </span>
+    </mark>
   );
 }
 
