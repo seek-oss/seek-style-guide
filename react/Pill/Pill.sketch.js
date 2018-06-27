@@ -7,12 +7,12 @@ const noop = () => {};
 export const symbols = {
   'Pill/Static': (
     <SketchFieldContainer>
-      <Pill text="Pill text" />
+      <Pill>Pill text</Pill>
     </SketchFieldContainer>
   ),
   'Pill/Interactive': (
     <SketchFieldContainer>
-      <Pill text="Pill text" onClose={noop} />
+      <Pill onClose={noop}>Pill text</Pill>
     </SketchFieldContainer>
   )
 };

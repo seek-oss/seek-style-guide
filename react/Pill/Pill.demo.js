@@ -29,7 +29,7 @@ export default {
   container: Container,
   sketch,
   initialProps: {
-    text: 'I\'m a pill',
+    children: 'I\'m a pill',
     onClose: null
   },
   options: [

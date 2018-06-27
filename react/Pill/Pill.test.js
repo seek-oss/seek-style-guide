@@ -4,7 +4,7 @@ import Pill from './Pill';
 
 const renderPill = props => shallow(
   <Pill
-    text="I am a pill"
+    children="I am a pill"
     {...props}
   />
 );
@@ -17,12 +17,23 @@ describe('Pill:', () => {
 
   it('should render a child component', () => {
     const ChildComponent = () => (<div>Hello</div>);
-    const pill = renderPill({ text: <ChildComponent /> });
+    const pill = renderPill({ children: <ChildComponent /> });
+    expect(pill).toMatchSnapshot();
+  });
+
+  it('should support the legacy "text" prop', () => {
+    const ChildComponent = () => (<div>Hello</div>);
+    const pill = renderPill({ children: null, text: <ChildComponent /> });
     expect(pill).toMatchSnapshot();
   });
 
   it('should render an interactive pill', () => {
     const pill = renderPill({ onClose: () => {} });
+    expect(pill).toMatchSnapshot();
+  });
+
+  it('should render an interactive pill with the legacy "text" prop', () => {
+    const pill = renderPill({ onClose: () => {}, children: null, text: 'I am a pill' });
     expect(pill).toMatchSnapshot();
   });
 
