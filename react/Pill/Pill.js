@@ -1,15 +1,15 @@
 // @flow
 import styles from './Pill.less';
-
 import React, { Component } from 'react';
+import type { Node } from 'react';
 import classnames from 'classnames';
-
 import Text from '../Text/Text';
 import CrossIcon from '../CrossIcon/CrossIcon';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 type Props = {
-  text: string,
+  children?: Node,
+  text?: Node,
   onClose?: Function,
   className?: string
 };
@@ -27,25 +27,29 @@ export default class Pill extends Component<Props> {
   }
 
   renderStaticPill() {
-    const { text, className, ...restProps } = this.props;
+    const { children, text, className, ...restProps } = this.props;
+    const content = children || text;
+
     return (
       <span className={classnames(className, styles.staticPill)} {...restProps}>
-        <Text baseline={false} raw>{text}</Text>
+        <Text baseline={false} raw>{content}</Text>
       </span>
     );
   }
 
   renderInteractivePill() {
-    const { text, onClose, className, ...restProps } = this.props;
+    const { children, text, onClose, className, ...restProps } = this.props;
+    const content = children || text;
+
     return (
       <span
         className={classnames(className, styles.interactivePill)}
         {...restProps}>
-        <Text baseline={false} raw>{text}</Text>
+        <Text baseline={false} raw>{content}</Text>
         <button
           className={styles.removeButton}
           onClick={onClose}>
-          <ScreenReaderOnly>Remove item {text}</ScreenReaderOnly>
+          <ScreenReaderOnly>Remove item {content}</ScreenReaderOnly>
           <div className={styles.removeCircle}>
             <CrossIcon
               className={styles.removeIcon}
@@ -59,6 +63,7 @@ export default class Pill extends Component<Props> {
 
   render() {
     const { onClose } = this.props;
+
     return onClose ?
       this.renderInteractivePill() :
       this.renderStaticPill();
