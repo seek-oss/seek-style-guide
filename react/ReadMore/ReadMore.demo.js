@@ -106,6 +106,10 @@ export default {
           })
         },
         {
+          label: '0 rows/lines',
+          transformProps: props => omit(props, ['maxLines', 'maxRows'])
+        },
+        {
           label: '10 rows',
           transformProps: props => ({
             ...omit(props, 'maxLines'),
