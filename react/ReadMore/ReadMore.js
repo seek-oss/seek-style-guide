@@ -10,11 +10,24 @@ import ChevronIcon from '../ChevronIcon/ChevronIcon';
 const { rowHeight, standardTypeRowSpan, interactionTypeRowSpan } = themeVars;
 const buttonHeight = rowHeight * interactionTypeRowSpan;
 
-const getMaxHeight = (maxLines: number) => maxLines * rowHeight * standardTypeRowSpan;
+const getMaxHeight = (maxLines?: number, maxRows?: number) => {
+  if (maxLines) {
+    return maxLines * rowHeight * standardTypeRowSpan;
+  }
+
+  if (maxRows) {
+    return maxRows * rowHeight;
+  }
+
+  return 0;
+};
 
 type Props = {|
   children: React$Element<*>,
-  maxLines: number
+  maxLines?: number,
+  maxRows?: number,
+  moreLabel: string,
+  lessLabel: string
 |};
 type State = {|
   showMore: boolean,
@@ -22,6 +35,11 @@ type State = {|
   mounted: boolean
 |};
 class ReadMore extends PureComponent<Props, State> {
+  static defaultProps = {
+    moreLabel: 'More',
+    lessLabel: 'Less'
+  };
+
   constructor(props: Props) {
     super(props);
 
@@ -45,11 +63,13 @@ class ReadMore extends PureComponent<Props, State> {
   contentRef: ?HTMLDivElement;
 
   update = () => {
+    const { maxLines, maxRows } = this.props;
+
     if (this.contentRef) {
       const { scrollHeight } = this.contentRef;
 
       const tooLong =
-        scrollHeight > getMaxHeight(this.props.maxLines) + buttonHeight;
+        scrollHeight > getMaxHeight(maxLines, maxRows) + buttonHeight;
 
       this.setState({ tooLong, mounted: true }); // eslint-disable-line
     }
@@ -66,7 +86,7 @@ class ReadMore extends PureComponent<Props, State> {
   };
 
   render() {
-    const { children, maxLines } = this.props;
+    const { children, maxLines, maxRows, moreLabel, lessLabel } = this.props;
     const { tooLong, showMore, mounted } = this.state;
 
     const truncate = mounted ? !showMore && tooLong : true;
@@ -74,7 +94,7 @@ class ReadMore extends PureComponent<Props, State> {
     const showMoreLessButton = tooLong && mounted;
 
     const contentStyle = truncate ? {
-      maxHeight: getMaxHeight(maxLines),
+      maxHeight: getMaxHeight(maxLines, maxRows),
       overflow: 'hidden'
     } : {};
 
@@ -86,7 +106,7 @@ class ReadMore extends PureComponent<Props, State> {
         </div>
         {showMoreLessButton ? (
           <Button color="transparent" onClick={this.handleShowMore}>
-            {showMore ? 'Less' : 'More'}
+            {showMore ? lessLabel : moreLabel}
             <ChevronIcon
               direction={showMore ? 'up' : 'down'}
               size="standard"

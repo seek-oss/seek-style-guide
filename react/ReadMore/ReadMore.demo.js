@@ -1,4 +1,5 @@
 import React from 'react';
+import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
 
 import ReadMore from './ReadMore';
@@ -87,21 +88,49 @@ export default {
       ]
     },
     {
-      label: 'Max lines',
+      label: 'Max',
       type: 'radio',
       states: [
         {
           label: '3 lines',
           transformProps: props => ({
-            ...props,
+            ...omit(props, 'maxRows'),
             maxLines: 3
           })
         },
         {
           label: '5 lines',
           transformProps: props => ({
-            ...props,
+            ...omit(props, 'maxRows'),
             maxLines: 5
+          })
+        },
+        {
+          label: '10 rows',
+          transformProps: props => ({
+            ...omit(props, 'maxLines'),
+            maxRows: 10
+          })
+        },
+        {
+          label: '20 rows',
+          transformProps: props => ({
+            ...omit(props, 'maxLines'),
+            maxRows: 20
+          })
+        }
+      ]
+    },
+    {
+      label: 'labels',
+      type: 'checklist',
+      states: [
+        {
+          label: 'Alternative labels',
+          transformProps: props => ({
+            ...props,
+            moreLabel: 'Tell me more!',
+            lessLabel: 'Go away'
           })
         }
       ]
