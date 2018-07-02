@@ -3,10 +3,11 @@ import styles from './ReadMore.less';
 
 import React, { PureComponent } from 'react';
 
-import { rowHeight, standardTypeRowSpan, interactionTypeRowSpan } from '../private/themeVars.json';
+import themeVars from '../private/themeVars.json';
 import Button from '../Button/Button';
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
 
+const { rowHeight, standardTypeRowSpan, interactionTypeRowSpan } = themeVars;
 const buttonHeight = rowHeight * interactionTypeRowSpan;
 
 const getMaxHeight = (maxLines: number) => maxLines * rowHeight * standardTypeRowSpan;
