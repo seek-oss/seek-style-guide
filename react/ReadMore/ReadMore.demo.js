@@ -7,7 +7,7 @@ import Card from '../Card/Card';
 import Section from '../Section/Section';
 
 const longText = (
-  <Text raw>
+  <Text>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae nulla
     venenatis purus placerat sodales. Aenean ipsum metus, imperdiet eu iaculis
     at, sollicitudin sed felis. Mauris faucibus risus at ex facilisis volutpat.
@@ -20,7 +20,7 @@ const longText = (
 );
 
 const mediumText = (
-  <Text raw>
+  <Text>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae nulla
     venenatis purus placerat sodales. Aenean ipsum metus, imperdiet eu iaculis
     at, sollicitudin sed felis. Mauris faucibus risus at ex facilisis volutpat.
@@ -29,7 +29,7 @@ const mediumText = (
 );
 
 const shortText = (
-  <Text raw>
+  <Text>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae nulla
     venenatis purus placerat sodales.
   </Text>
