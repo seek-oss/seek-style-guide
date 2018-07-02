@@ -3,7 +3,7 @@ import styles from './ReadMore.less';
 
 import React, { PureComponent } from 'react';
 
-import themeVars from '../private/themeVars.json';
+import themeVars from '../private/themeVars';
 import Button from '../Button/Button';
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
 
