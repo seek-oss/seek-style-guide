@@ -52,7 +52,7 @@ ReadMoreContainer.propTypes = {
 export default {
   route: '/read-more',
   title: 'Read More',
-  category: 'Typography',
+  category: 'Layout',
   component: ReadMore,
   container: ReadMoreContainer,
   initialProps: {
