@@ -27,6 +27,7 @@ export { default as Text } from './Text/Text';
 export { default as TextLink } from './TextLink/TextLink';
 export { default as BulletList } from './BulletList/BulletList';
 export { default as Bullet } from './Bullet/Bullet';
+export { default as ReadMore } from './ReadMore/ReadMore';
 
 // Layout
 export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';
