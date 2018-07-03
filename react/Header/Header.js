@@ -1,13 +1,12 @@
 import styles from './Header.less';
 
-import classnames from 'classnames';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import Locales from './Locales/Locales';
+import GlobalNav from '../GlobalNav/GlobalNav';
 import Logo from '../Logo/Logo';
 import Navigation from './Navigation/Navigation';
-import PartnerSites from './PartnerSites/PartnerSites';
 import Hidden from '../Hidden/Hidden';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import SignInRegister from './SignInRegister/SignInRegister';
@@ -122,14 +121,8 @@ export default function Header({
             divider={divider}
           />
         </Hidden>
-        <Hidden print mobile className={styles.topBanner}>
-          <div className={styles.topBannerContent}>
-            <PartnerSites locale={locale} linkRenderer={linkRenderer} />
-            <div className={styles.locale}>
-              <Locales locale={locale} linkRenderer={linkRenderer} />
-            </div>
-          </div>
-        </Hidden>
+        <GlobalNav locale={locale} linkRenderer={linkRenderer} activePartnerSite='jobs' />
+        
       </section>
     </header>
   );

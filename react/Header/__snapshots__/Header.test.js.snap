@@ -476,10 +476,10 @@ exports[`Header: should append returnUrl to signin and register links if present
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -499,7 +499,7 @@ exports[`Header: should append returnUrl to signin and register links if present
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -1071,10 +1071,10 @@ exports[`Header: should render first part of email address when username isn't p
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -1094,7 +1094,7 @@ exports[`Header: should render first part of email address when username isn't p
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -1658,10 +1658,10 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -1681,7 +1681,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -2253,10 +2253,10 @@ exports[`Header: should render when authenticated 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -2276,7 +2276,7 @@ exports[`Header: should render when authenticated 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -2844,10 +2844,10 @@ exports[`Header: should render when authenticated but username and email is not 
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -2867,7 +2867,7 @@ exports[`Header: should render when authenticated but username and email is not 
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -3431,10 +3431,10 @@ exports[`Header: should render when authentication is pending 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -3454,7 +3454,7 @@ exports[`Header: should render when authentication is pending 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -4028,10 +4028,10 @@ exports[`Header: should render when unauthenticated 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -4051,7 +4051,7 @@ exports[`Header: should render when unauthenticated 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -4583,10 +4583,10 @@ exports[`Header: should render with a custom logo 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -4606,7 +4606,7 @@ exports[`Header: should render with a custom logo 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -5170,10 +5170,10 @@ exports[`Header: should render with locale of AU 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -5193,7 +5193,7 @@ exports[`Header: should render with locale of AU 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -5706,10 +5706,10 @@ exports[`Header: should render with locale of NZ 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -5729,7 +5729,7 @@ exports[`Header: should render with locale of NZ 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs
@@ -6293,10 +6293,10 @@ exports[`Header: should render with no divider 1`] = `
       </nav>
     </span>
     <span
-      class="topBanner mobile print"
+      class="root mobile print"
     >
       <div
-        class="topBannerContent"
+        class="content"
       >
         <nav
           aria-labelledby="PartnerSites"
@@ -6316,7 +6316,7 @@ exports[`Header: should render with no divider 1`] = `
           >
             <li>
               <span
-                class="link link_isJobs"
+                class="link link_isActive"
                 title="SEEK Jobs"
               >
                 Jobs

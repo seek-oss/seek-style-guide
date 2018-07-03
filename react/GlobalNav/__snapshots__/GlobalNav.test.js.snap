@@ -1,0 +1,734 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GlobalNav: active partner site: should render with businesses link as active 1`] = `
+<span
+  class="root mobile print"
+>
+  <div
+    class="content"
+  >
+    <nav
+      aria-labelledby="PartnerSites"
+      role="navigation"
+    >
+      <span
+        class="root"
+      >
+        <h1
+          id="PartnerSites"
+        >
+          Partner Sites
+        </h1>
+      </span>
+      <ul
+        class="list"
+      >
+        <li>
+          <a
+            class="link link_isJobs"
+            data-analytics="header:jobs"
+            href="https://www.seek.com.au"
+            title="SEEK Jobs"
+          >
+            Jobs
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isLearning"
+            data-analytics="header:courses"
+            href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+            title="SEEK Learning"
+          >
+            Courses
+          </a>
+        </li>
+        <li>
+          <span
+            class="link link_isActive"
+            title="SEEK Business"
+          >
+            Businesses for sale
+          </span>
+        </li>
+        <li>
+          <a
+            class="link link_isVolunteering"
+            data-analytics="header:volunteering"
+            href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+            title="SEEK Volunteer"
+          >
+            Volunteering
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="locale"
+    >
+      <nav
+        aria-labelledby="Locales"
+        class="root"
+        role="navigation"
+      >
+        <span
+          class="root"
+        >
+          <h1
+            id="Locales"
+          >
+            Select your country
+          </h1>
+        </span>
+        <ul
+          class="list"
+        >
+          <li
+            class="listItem"
+          >
+            <span
+              class="locale_isActive"
+            >
+              AU
+            </span>
+          </li>
+          <li
+            class="listItem"
+          >
+            <a
+              class="localeLink"
+              data-analytics="header:nz+homepage"
+              href="https://www.seek.co.nz"
+              title="SEEK New Zealand"
+            >
+              NZ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`GlobalNav: active partner site: should render with courses link as active 1`] = `
+<span
+  class="root mobile print"
+>
+  <div
+    class="content"
+  >
+    <nav
+      aria-labelledby="PartnerSites"
+      role="navigation"
+    >
+      <span
+        class="root"
+      >
+        <h1
+          id="PartnerSites"
+        >
+          Partner Sites
+        </h1>
+      </span>
+      <ul
+        class="list"
+      >
+        <li>
+          <a
+            class="link link_isJobs"
+            data-analytics="header:jobs"
+            href="https://www.seek.com.au"
+            title="SEEK Jobs"
+          >
+            Jobs
+          </a>
+        </li>
+        <li>
+          <span
+            class="link link_isActive"
+            title="SEEK Learning"
+          >
+            Courses
+          </span>
+        </li>
+        <li>
+          <a
+            class="link link_isBusiness"
+            data-analytics="header:business+for+sale"
+            href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+            title="SEEK Business"
+          >
+            Businesses for sale
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isVolunteering"
+            data-analytics="header:volunteering"
+            href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+            title="SEEK Volunteer"
+          >
+            Volunteering
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="locale"
+    >
+      <nav
+        aria-labelledby="Locales"
+        class="root"
+        role="navigation"
+      >
+        <span
+          class="root"
+        >
+          <h1
+            id="Locales"
+          >
+            Select your country
+          </h1>
+        </span>
+        <ul
+          class="list"
+        >
+          <li
+            class="listItem"
+          >
+            <span
+              class="locale_isActive"
+            >
+              AU
+            </span>
+          </li>
+          <li
+            class="listItem"
+          >
+            <a
+              class="localeLink"
+              data-analytics="header:nz+homepage"
+              href="https://www.seek.co.nz"
+              title="SEEK New Zealand"
+            >
+              NZ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`GlobalNav: active partner site: should render with jobs link as active 1`] = `
+<span
+  class="root mobile print"
+>
+  <div
+    class="content"
+  >
+    <nav
+      aria-labelledby="PartnerSites"
+      role="navigation"
+    >
+      <span
+        class="root"
+      >
+        <h1
+          id="PartnerSites"
+        >
+          Partner Sites
+        </h1>
+      </span>
+      <ul
+        class="list"
+      >
+        <li>
+          <span
+            class="link link_isActive"
+            title="SEEK Jobs"
+          >
+            Jobs
+          </span>
+        </li>
+        <li>
+          <a
+            class="link link_isLearning"
+            data-analytics="header:courses"
+            href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+            title="SEEK Learning"
+          >
+            Courses
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isBusiness"
+            data-analytics="header:business+for+sale"
+            href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+            title="SEEK Business"
+          >
+            Businesses for sale
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isVolunteering"
+            data-analytics="header:volunteering"
+            href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+            title="SEEK Volunteer"
+          >
+            Volunteering
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="locale"
+    >
+      <nav
+        aria-labelledby="Locales"
+        class="root"
+        role="navigation"
+      >
+        <span
+          class="root"
+        >
+          <h1
+            id="Locales"
+          >
+            Select your country
+          </h1>
+        </span>
+        <ul
+          class="list"
+        >
+          <li
+            class="listItem"
+          >
+            <span
+              class="locale_isActive"
+            >
+              AU
+            </span>
+          </li>
+          <li
+            class="listItem"
+          >
+            <a
+              class="localeLink"
+              data-analytics="header:nz+homepage"
+              href="https://www.seek.co.nz"
+              title="SEEK New Zealand"
+            >
+              NZ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`GlobalNav: active partner site: should render with volunteering link as active 1`] = `
+<span
+  class="root mobile print"
+>
+  <div
+    class="content"
+  >
+    <nav
+      aria-labelledby="PartnerSites"
+      role="navigation"
+    >
+      <span
+        class="root"
+      >
+        <h1
+          id="PartnerSites"
+        >
+          Partner Sites
+        </h1>
+      </span>
+      <ul
+        class="list"
+      >
+        <li>
+          <a
+            class="link link_isJobs"
+            data-analytics="header:jobs"
+            href="https://www.seek.com.au"
+            title="SEEK Jobs"
+          >
+            Jobs
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isLearning"
+            data-analytics="header:courses"
+            href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+            title="SEEK Learning"
+          >
+            Courses
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isBusiness"
+            data-analytics="header:business+for+sale"
+            href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+            title="SEEK Business"
+          >
+            Businesses for sale
+          </a>
+        </li>
+        <li>
+          <span
+            class="link link_isActive"
+            title="SEEK Volunteer"
+          >
+            Volunteering
+          </span>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="locale"
+    >
+      <nav
+        aria-labelledby="Locales"
+        class="root"
+        role="navigation"
+      >
+        <span
+          class="root"
+        >
+          <h1
+            id="Locales"
+          >
+            Select your country
+          </h1>
+        </span>
+        <ul
+          class="list"
+        >
+          <li
+            class="listItem"
+          >
+            <span
+              class="locale_isActive"
+            >
+              AU
+            </span>
+          </li>
+          <li
+            class="listItem"
+          >
+            <a
+              class="localeLink"
+              data-analytics="header:nz+homepage"
+              href="https://www.seek.co.nz"
+              title="SEEK New Zealand"
+            >
+              NZ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`GlobalNav: locale states: should render with locale of AU 1`] = `
+<span
+  class="root mobile print"
+>
+  <div
+    class="content"
+  >
+    <nav
+      aria-labelledby="PartnerSites"
+      role="navigation"
+    >
+      <span
+        class="root"
+      >
+        <h1
+          id="PartnerSites"
+        >
+          Partner Sites
+        </h1>
+      </span>
+      <ul
+        class="list"
+      >
+        <li>
+          <span
+            class="link link_isActive"
+            title="SEEK Jobs"
+          >
+            Jobs
+          </span>
+        </li>
+        <li>
+          <a
+            class="link link_isLearning"
+            data-analytics="header:courses"
+            href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+            title="SEEK Learning"
+          >
+            Courses
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isBusiness"
+            data-analytics="header:business+for+sale"
+            href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+            title="SEEK Business"
+          >
+            Businesses for sale
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isVolunteering"
+            data-analytics="header:volunteering"
+            href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+            title="SEEK Volunteer"
+          >
+            Volunteering
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="locale"
+    >
+      <nav
+        aria-labelledby="Locales"
+        class="root"
+        role="navigation"
+      >
+        <span
+          class="root"
+        >
+          <h1
+            id="Locales"
+          >
+            Select your country
+          </h1>
+        </span>
+        <ul
+          class="list"
+        >
+          <li
+            class="listItem"
+          >
+            <span
+              class="locale_isActive"
+            >
+              AU
+            </span>
+          </li>
+          <li
+            class="listItem"
+          >
+            <a
+              class="localeLink"
+              data-analytics="header:nz+homepage"
+              href="https://www.seek.co.nz"
+              title="SEEK New Zealand"
+            >
+              NZ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`GlobalNav: locale states: should render with locale of NZ 1`] = `
+<span
+  class="root mobile print"
+>
+  <div
+    class="content"
+  >
+    <nav
+      aria-labelledby="PartnerSites"
+      role="navigation"
+    >
+      <span
+        class="root"
+      >
+        <h1
+          id="PartnerSites"
+        >
+          Partner Sites
+        </h1>
+      </span>
+      <ul
+        class="list"
+      >
+        <li>
+          <span
+            class="link link_isActive"
+            title="SEEK Jobs"
+          >
+            Jobs
+          </span>
+        </li>
+        <li>
+          <a
+            class="link link_isLearning"
+            data-analytics="header:courses"
+            href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+            title="SEEK Learning"
+          >
+            Courses
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isBusiness"
+            data-analytics="header:business+for+sale"
+            href="https://www.seekbusiness.com.au/?site=nz&tracking=sk:main:nz:nav:bus"
+            title="SEEK Business"
+          >
+            Businesses for sale
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isVolunteering"
+            data-analytics="header:volunteering"
+            href="https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header"
+            title="SEEK Volunteer"
+          >
+            Volunteering
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="locale"
+    >
+      <nav
+        aria-labelledby="Locales"
+        class="root"
+        role="navigation"
+      >
+        <span
+          class="root"
+        >
+          <h1
+            id="Locales"
+          >
+            Select your country
+          </h1>
+        </span>
+        <ul
+          class="list list_isNZ"
+        >
+          <li
+            class="listItem"
+          >
+            <a
+              class="localeLink"
+              data-analytics="header:au+homepage"
+              href="https://www.seek.com.au"
+              title="SEEK Australia"
+            >
+              AU
+            </a>
+          </li>
+          <li
+            class="listItem"
+          >
+            <span
+              class="locale_isActive"
+            >
+              NZ
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`GlobalNav: locale states: should render without locales if specified 1`] = `
+<span
+  class="root mobile print"
+>
+  <div
+    class="content"
+  >
+    <nav
+      aria-labelledby="PartnerSites"
+      role="navigation"
+    >
+      <span
+        class="root"
+      >
+        <h1
+          id="PartnerSites"
+        >
+          Partner Sites
+        </h1>
+      </span>
+      <ul
+        class="list"
+      >
+        <li>
+          <span
+            class="link link_isActive"
+            title="SEEK Jobs"
+          >
+            Jobs
+          </span>
+        </li>
+        <li>
+          <a
+            class="link link_isLearning"
+            data-analytics="header:courses"
+            href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+            title="SEEK Learning"
+          >
+            Courses
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isBusiness"
+            data-analytics="header:business+for+sale"
+            href="https://www.seekbusiness.com.au/?site=nz&tracking=sk:main:nz:nav:bus"
+            title="SEEK Business"
+          >
+            Businesses for sale
+          </a>
+        </li>
+        <li>
+          <a
+            class="link link_isVolunteering"
+            data-analytics="header:volunteering"
+            href="https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header"
+            title="SEEK Volunteer"
+          >
+            Volunteering
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</span>
+`;

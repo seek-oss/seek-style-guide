@@ -7,11 +7,13 @@ import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 const linksObject = {
   AU: {
+    jobsUrl: 'https://www.seek.com.au',
     learningUrl: 'https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
     businessUrl: 'https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus',
     volunteerUrl: 'https://www.volunteer.com.au/?tracking=SKMAU:main+header'
   },
   NZ: {
+    jobsUrl: 'https://www.seek.co.nz',
     learningUrl: 'https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link',
     businessUrl: 'https://www.seekbusiness.com.au/?site=nz&tracking=sk:main:nz:nav:bus',
     volunteerUrl: 'https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header'
@@ -27,8 +29,13 @@ const err = () => {
 const localeLens = links => locale => links ? links[locale] : err();
 const linkLens = locale => link => typeof locale[link] === 'string' && locale[link] || err();
 
-export default function PartnerSites({ locale, linkRenderer }) {
+export default function PartnerSites({ locale, linkRenderer, activePartnerSite }) {
   const linkView = linkLens(localeLens(linksObject)(locale));
+
+  const isJobsActive = activePartnerSite === 'jobs';
+  const isCoursesActive = activePartnerSite === 'courses';
+  const isBusinessesActive = activePartnerSite === 'businesses';
+  const isVolunteeringActive = activePartnerSite === 'volunteering';
 
   return (
     <nav role="navigation" aria-labelledby="PartnerSites">
@@ -39,10 +46,20 @@ export default function PartnerSites({ locale, linkRenderer }) {
 
       <ul className={styles.list}>
         <li>
-          <span className={`${styles.link} ${styles.link_isJobs}`} title="SEEK Jobs">Jobs</span>
+          {isJobsActive ?
+            <span className={`${styles.link} ${styles.link_isActive}`} title="SEEK Jobs">Jobs</span> :
+            linkRenderer({
+              'data-analytics': 'header:jobs',
+              className: `${styles.link} ${styles.link_isJobs}`,
+              href: linkView('jobsUrl'),
+              title: 'SEEK Jobs',
+              children: 'Jobs'
+            })
+          }
         </li>
         <li>
-          {
+          {isCoursesActive ?
+            <span className={`${styles.link} ${styles.link_isActive}`} title="SEEK Learning">Courses</span> :
             linkRenderer({
               'data-analytics': 'header:courses',
               className: `${styles.link} ${styles.link_isLearning}`,
@@ -53,7 +70,8 @@ export default function PartnerSites({ locale, linkRenderer }) {
           }
         </li>
         <li>
-          {
+          {isBusinessesActive ?
+            <span className={`${styles.link} ${styles.link_isActive}`} title="SEEK Business">Businesses for sale</span> :
             linkRenderer({
               'data-analytics': 'header:business+for+sale',
               className: `${styles.link} ${styles.link_isBusiness}`,
@@ -64,7 +82,8 @@ export default function PartnerSites({ locale, linkRenderer }) {
           }
         </li>
         <li>
-          {
+          {isVolunteeringActive ?
+            <span className={`${styles.link} ${styles.link_isActive}`} title="SEEK Volunteer">Volunteering</span> :
             linkRenderer({
               'data-analytics': 'header:volunteering',
               className: `${styles.link} ${styles.link_isVolunteering}`,
@@ -80,6 +99,7 @@ export default function PartnerSites({ locale, linkRenderer }) {
 }
 
 PartnerSites.propTypes = {
-  locale: PropTypes.string.isRequired,
-  linkRenderer: PropTypes.func.isRequired
+  locale: PropTypes.oneOf(['AU', 'NZ']).isRequired,
+  linkRenderer: PropTypes.func.isRequired,
+  activePartnerSite: PropTypes.oneOf(['jobs', 'courses', 'businesses', 'volunteering']).isRequired
 };

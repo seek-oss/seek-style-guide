@@ -1,0 +1,22 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  order: 0;
+  width: 100%;
+  background-color: @sk-background;
+  padding: 0 (@gutter-width / 2);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  max-width: @container-width;
+  margin: 0 auto;
+}
+
+.locale {
+  position: absolute;
+  right: 0;
+}
