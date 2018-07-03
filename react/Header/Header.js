@@ -122,7 +122,6 @@ export default function Header({
           />
         </Hidden>
         <GlobalNav locale={locale} linkRenderer={linkRenderer} activePartnerSite='jobs' />
-        
       </section>
     </header>
   );

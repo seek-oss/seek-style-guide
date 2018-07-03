@@ -20,7 +20,7 @@ describe('GlobalNav:', () => {
       expect(renderGlobalNav({ locale: 'NZ', linkRenderer, activePartnerSite: 'jobs', hideLocales: true })).toMatchSnapshot();
     });
   });
-  describe('active partner site:', () => {
+  describe('active partner states:', () => {
     it('should render with jobs link as active', () => {
       expect(renderGlobalNav({ locale: 'AU', linkRenderer, activePartnerSite: 'jobs' })).toMatchSnapshot();
     });

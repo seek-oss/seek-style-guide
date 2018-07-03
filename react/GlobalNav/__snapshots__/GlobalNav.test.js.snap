@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GlobalNav: active partner site: should render with businesses link as active 1`] = `
+exports[`GlobalNav: active partner states: should render with businesses link as active 1`] = `
 <span
   class="root mobile print"
 >
@@ -111,7 +111,7 @@ exports[`GlobalNav: active partner site: should render with businesses link as a
 </span>
 `;
 
-exports[`GlobalNav: active partner site: should render with courses link as active 1`] = `
+exports[`GlobalNav: active partner states: should render with courses link as active 1`] = `
 <span
   class="root mobile print"
 >
@@ -222,7 +222,7 @@ exports[`GlobalNav: active partner site: should render with courses link as acti
 </span>
 `;
 
-exports[`GlobalNav: active partner site: should render with jobs link as active 1`] = `
+exports[`GlobalNav: active partner states: should render with jobs link as active 1`] = `
 <span
   class="root mobile print"
 >
@@ -333,7 +333,7 @@ exports[`GlobalNav: active partner site: should render with jobs link as active 
 </span>
 `;
 
-exports[`GlobalNav: active partner site: should render with volunteering link as active 1`] = `
+exports[`GlobalNav: active partner states: should render with volunteering link as active 1`] = `
 <span
   class="root mobile print"
 >
