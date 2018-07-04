@@ -1,4 +1,4 @@
-import styles from './PartnerSites.less';
+import styles from './Products.less';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -29,19 +29,19 @@ const err = () => {
 const localeLens = links => locale => links ? links[locale] : err();
 const linkLens = locale => link => typeof locale[link] === 'string' && locale[link] || err();
 
-export default function PartnerSites({ locale, linkRenderer, activePartnerSite }) {
+export default function Products({ locale, linkRenderer, activeProduct }) {
   const linkView = linkLens(localeLens(linksObject)(locale));
 
-  const isJobsActive = activePartnerSite === 'jobs';
-  const isCoursesActive = activePartnerSite === 'courses';
-  const isBusinessesActive = activePartnerSite === 'businesses';
-  const isVolunteeringActive = activePartnerSite === 'volunteering';
+  const isJobsActive = activeProduct === 'Jobs';
+  const isCoursesActive = activeProduct === 'Courses';
+  const isBusinessesActive = activeProduct === 'Businesses for sale';
+  const isVolunteeringActive = activeProduct === 'Volunteering';
 
   return (
-    <nav role="navigation" aria-labelledby="PartnerSites">
+    <nav role="navigation" aria-labelledby="Products">
 
       <ScreenReaderOnly>
-        <h1 id="PartnerSites">Partner Sites</h1>
+        <h1 id="Products">SEEK Products</h1>
       </ScreenReaderOnly>
 
       <ul className={styles.list}>
@@ -98,8 +98,12 @@ export default function PartnerSites({ locale, linkRenderer, activePartnerSite }
   );
 }
 
-PartnerSites.propTypes = {
+Products.propTypes = {
   locale: PropTypes.oneOf(['AU', 'NZ']).isRequired,
   linkRenderer: PropTypes.func.isRequired,
-  activePartnerSite: PropTypes.oneOf(['jobs', 'courses', 'businesses', 'volunteering']).isRequired
+  activeProduct: PropTypes.oneOf(['Jobs', 'Courses', 'Businesses for sale', 'Volunteering'])
+};
+
+Products.defaultProps = {
+  activeProduct: null
 };

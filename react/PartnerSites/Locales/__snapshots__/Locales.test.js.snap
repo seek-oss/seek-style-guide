@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Locales: locale states: should render with locale of AU first and active 1`] = `
+<nav
+  aria-labelledby="Locales"
+  class="root"
+  role="navigation"
+>
+  <span
+    class="root"
+  >
+    <h1
+      id="Locales"
+    >
+      Select your country
+    </h1>
+  </span>
+  <ul
+    class="list"
+  >
+    <li
+      class="listItem"
+    >
+      <span
+        class="locale_isActive"
+      >
+        AU
+      </span>
+    </li>
+    <li
+      class="listItem"
+    >
+      <a
+        class="localeLink"
+        data-analytics="header:nz+homepage"
+        href="https://www.seek.co.nz"
+        title="SEEK New Zealand"
+      >
+        NZ
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Locales: locale states: should render with locale of NZ first and active 1`] = `
+<nav
+  aria-labelledby="Locales"
+  class="root"
+  role="navigation"
+>
+  <span
+    class="root"
+  >
+    <h1
+      id="Locales"
+    >
+      Select your country
+    </h1>
+  </span>
+  <ul
+    class="list list_isNZ"
+  >
+    <li
+      class="listItem"
+    >
+      <a
+        class="localeLink"
+        data-analytics="header:au+homepage"
+        href="https://www.seek.com.au"
+        title="SEEK Australia"
+      >
+        AU
+      </a>
+    </li>
+    <li
+      class="listItem"
+    >
+      <span
+        class="locale_isActive"
+      >
+        NZ
+      </span>
+    </li>
+  </ul>
+</nav>
+`;

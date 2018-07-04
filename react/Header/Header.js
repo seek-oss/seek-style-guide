@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import GlobalNav from '../GlobalNav/GlobalNav';
+import PartnerSites from '../PartnerSites/PartnerSites';
 import Logo from '../Logo/Logo';
 import Navigation from './Navigation/Navigation';
 import Hidden from '../Hidden/Hidden';
@@ -121,7 +121,7 @@ export default function Header({
             divider={divider}
           />
         </Hidden>
-        <GlobalNav locale={locale} linkRenderer={linkRenderer} activePartnerSite='jobs' />
+        <PartnerSites locale={locale} linkRenderer={linkRenderer} activeProduct='Jobs' />
       </section>
     </header>
   );

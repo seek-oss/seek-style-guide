@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import GlobalNav from './GlobalNav';
+import PartnerSites from './PartnerSites';
 
 export const makeDummyLinkRendererForPath = path => {
   const DummyLinkRenderer = ({ href, ...props }) => (
@@ -16,30 +16,22 @@ export const makeDummyLinkRendererForPath = path => {
   return DummyLinkRenderer;
 };
 
-const ROUTE = '/global-nav';
+const ROUTE = '/partner-sites';
 
 export default {
   route: ROUTE,
-  title: 'Global Nav',
+  title: 'Partner Sites',
   category: 'Layout',
-  component: GlobalNav,
+  component: PartnerSites,
   initialProps: {
     locale: 'AU',
-    linkRenderer: makeDummyLinkRendererForPath(ROUTE),
-    hideLocales: false
+    linkRenderer: makeDummyLinkRendererForPath(ROUTE)
   },
   options: [
     {
       label: 'Locale States',
       type: 'checklist',
       states: [
-        {
-          label: 'Hide locales',
-          transformProps: props => ({
-            ...props,
-            hideLocales: true
-          })
-        },
         {
           label: 'Switch to NZ site',
           transformProps: props => ({
@@ -50,19 +42,19 @@ export default {
       ]
     },
     {
-      label: 'Active Partner Site',
+      label: 'Active Product',
       type: 'radio',
       states: [
         null,
-        'jobs',
-        'courses',
-        'businesses',
-        'volunteering'
-      ].map(activePartnerSite => ({
-        label: activePartnerSite || 'No active partner',
+        'Jobs',
+        'Courses',
+        'Businesses for sale',
+        'Volunteering'
+      ].map(activeProduct => ({
+        label: activeProduct || 'No active product',
         transformProps: props => ({
           ...props,
-          activePartnerSite
+          activeProduct
         })
       }))
     }
