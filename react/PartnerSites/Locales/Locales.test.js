@@ -7,13 +7,11 @@ const renderLocales = props => render(<Locales {...props} />);
 const linkRenderer = props => (<a {...props} />);
 
 describe('Locales:', () => {
-  describe('locale states:', () => {
-    it('should render with locale of AU first and active', () => {
-      expect(renderLocales({ locale: 'AU', linkRenderer })).toMatchSnapshot();
-    });
+  it('should render with locale of AU first and active', () => {
+    expect(renderLocales({ locale: 'AU', linkRenderer })).toMatchSnapshot();
+  });
 
-    it('should render with locale of NZ first and active', () => {
-      expect(renderLocales({ locale: 'NZ', linkRenderer })).toMatchSnapshot();
-    });
+  it('should render with locale of NZ first and active', () => {
+    expect(renderLocales({ locale: 'NZ', linkRenderer })).toMatchSnapshot();
   });
 });

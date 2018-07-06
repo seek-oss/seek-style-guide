@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Locales: locale states: should render with locale of AU first and active 1`] = `
+exports[`Locales: should render with locale of AU first and active 1`] = `
 <nav
   aria-labelledby="Locales"
   class="root"
@@ -43,7 +43,7 @@ exports[`Locales: locale states: should render with locale of AU first and activ
 </nav>
 `;
 
-exports[`Locales: locale states: should render with locale of NZ first and active 1`] = `
+exports[`Locales: should render with locale of NZ first and active 1`] = `
 <nav
   aria-labelledby="Locales"
   class="root"
