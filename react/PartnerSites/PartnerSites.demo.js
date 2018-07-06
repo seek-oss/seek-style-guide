@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {
+  PartnerSites,
+  Hidden,
+  PageBlock,
+  Section,
+  Text
+} from 'seek-style-guide/react';
 
-import PartnerSites from './PartnerSites';
+const Container = ({ component: DemoComponent, componentProps }) => (
+  <Fragment>
+    <DemoComponent {...componentProps} />
+    <Hidden desktop>
+      <PageBlock>
+        <Section>
+          <Text strong>This component is not visible on mobile.</Text>
+        </Section>
+      </PageBlock>
+    </Hidden>
+  </Fragment>
+);
+
+Container.propTypes = {
+  component: PropTypes.any,
+  componentProps: PropTypes.object.isRequired
+};
 
 export const makeDummyLinkRendererForPath = path => {
   const DummyLinkRenderer = ({ href, ...props }) => (
@@ -23,6 +46,7 @@ export default {
   title: 'Partner Sites',
   category: 'Layout',
   component: PartnerSites,
+  container: Container,
   initialProps: {
     locale: 'AU',
     linkRenderer: makeDummyLinkRendererForPath(ROUTE)
