@@ -475,114 +475,118 @@ exports[`Header: should append returnUrl to signin and register links if present
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -1070,114 +1074,118 @@ exports[`Header: should render first part of email address when username isn't p
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -1657,114 +1665,118 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -2252,114 +2264,118 @@ exports[`Header: should render when authenticated 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -2843,114 +2859,118 @@ exports[`Header: should render when authenticated but username and email is not 
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -3430,114 +3450,118 @@ exports[`Header: should render when authentication is pending 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -4027,114 +4051,118 @@ exports[`Header: should render when unauthenticated 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -4582,114 +4610,118 @@ exports[`Header: should render with a custom logo 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -5169,114 +5201,118 @@ exports[`Header: should render with locale of AU 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -5705,114 +5741,118 @@ exports[`Header: should render with locale of NZ 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?site=nz&tracking=sk:main:nz:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
-              class="list list_isNZ"
+              class="list"
             >
-              <li
-                class="listItem"
-              >
-                <a
-                  class="localeLink"
-                  data-analytics="header:au+homepage"
-                  href="https://www.seek.com.au"
-                  title="SEEK Australia"
+              <li>
+                <span
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
+                </span>
+              </li>
+              <li>
+                <a
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
+                >
+                  Courses
                 </a>
               </li>
-              <li
-                class="listItem"
-              >
-                <span
-                  class="locale_isActive"
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?site=nz&tracking=sk:main:nz:nav:bus"
+                  title="SEEK Business"
                 >
-                  NZ
-                </span>
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
+                </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list list_isNZ"
+              >
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:au+homepage"
+                    href="https://www.seek.com.au"
+                    title="SEEK Australia"
+                  >
+                    AU
+                  </a>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    NZ
+                  </span>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;
@@ -6292,114 +6332,118 @@ exports[`Header: should render with no divider 1`] = `
         </ul>
       </nav>
     </span>
-    <span
-      class="root mobile print"
+    <div
+      class="topBanner"
     >
-      <div
-        class="content"
+      <span
+        class="root mobile print"
       >
-        <nav
-          aria-labelledby="Products"
-          role="navigation"
-        >
-          <span
-            class="root"
-          >
-            <h1
-              id="Products"
-            >
-              SEEK Products
-            </h1>
-          </span>
-          <ul
-            class="list"
-          >
-            <li>
-              <span
-                class="link link_isActive"
-                title="SEEK Jobs"
-              >
-                Jobs
-              </span>
-            </li>
-            <li>
-              <a
-                class="link link_isLearning"
-                data-analytics="header:courses"
-                href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-                title="SEEK Learning"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isBusiness"
-                data-analytics="header:business+for+sale"
-                href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-                title="SEEK Business"
-              >
-                Businesses for sale
-              </a>
-            </li>
-            <li>
-              <a
-                class="link link_isVolunteering"
-                data-analytics="header:volunteering"
-                href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-                title="SEEK Volunteer"
-              >
-                Volunteering
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div
-          class="locale"
+          class="content"
         >
           <nav
-            aria-labelledby="Locales"
-            class="root"
+            aria-labelledby="Products"
             role="navigation"
           >
             <span
               class="root"
             >
               <h1
-                id="Locales"
+                id="Products"
               >
-                Select your country
+                SEEK Products
               </h1>
             </span>
             <ul
               class="list"
             >
-              <li
-                class="listItem"
-              >
+              <li>
                 <span
-                  class="locale_isActive"
+                  class="link link_isActive"
+                  title="SEEK Jobs"
                 >
-                  AU
+                  Jobs
                 </span>
               </li>
-              <li
-                class="listItem"
-              >
+              <li>
                 <a
-                  class="localeLink"
-                  data-analytics="header:nz+homepage"
-                  href="https://www.seek.co.nz"
-                  title="SEEK New Zealand"
+                  class="link link_isLearning"
+                  data-analytics="header:courses"
+                  href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                  title="SEEK Learning"
                 >
-                  NZ
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isBusiness"
+                  data-analytics="header:business+for+sale"
+                  href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                  title="SEEK Business"
+                >
+                  Businesses for sale
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link link_isVolunteering"
+                  data-analytics="header:volunteering"
+                  href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                  title="SEEK Volunteer"
+                >
+                  Volunteering
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            class="locale"
+          >
+            <nav
+              aria-labelledby="Locales"
+              class="root"
+              role="navigation"
+            >
+              <span
+                class="root"
+              >
+                <h1
+                  id="Locales"
+                >
+                  Select your country
+                </h1>
+              </span>
+              <ul
+                class="list"
+              >
+                <li
+                  class="listItem"
+                >
+                  <span
+                    class="locale_isActive"
+                  >
+                    AU
+                  </span>
+                </li>
+                <li
+                  class="listItem"
+                >
+                  <a
+                    class="localeLink"
+                    data-analytics="header:nz+homepage"
+                    href="https://www.seek.co.nz"
+                    title="SEEK New Zealand"
+                  >
+                    NZ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </span>
+      </span>
+    </div>
   </section>
 </header>
 `;

@@ -6,6 +6,8 @@ import Hidden from '../Hidden/Hidden';
 import Locales from './Locales/Locales';
 import Products from './Products/Products';
 
+const defaultLinkRenderer = props => (<a {...props} />);
+
 export default function PartnerSites({ locale, linkRenderer, activeProduct }) {
   return (<Hidden print mobile className={styles.root}>
     <div className={styles.content}>
@@ -20,11 +22,13 @@ export default function PartnerSites({ locale, linkRenderer, activeProduct }) {
 PartnerSites.displayName = 'PartnerSites';
 
 PartnerSites.propTypes = {
-  locale: PropTypes.oneOf(['AU', 'NZ']).isRequired,
-  linkRenderer: PropTypes.func.isRequired,
+  locale: PropTypes.oneOf(['AU', 'NZ']),
+  linkRenderer: PropTypes.func,
   activeProduct: PropTypes.oneOf(['Jobs', 'Courses', 'Businesses for sale', 'Volunteering'])
 };
 
 PartnerSites.defaultProps = {
+  locale: 'AU',
+  linkRenderer: defaultLinkRenderer,
   activeProduct: null
 };

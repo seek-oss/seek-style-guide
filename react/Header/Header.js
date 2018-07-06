@@ -121,7 +121,9 @@ export default function Header({
             divider={divider}
           />
         </Hidden>
-        <PartnerSites locale={locale} linkRenderer={linkRenderer} activeProduct='Jobs' />
+        <div className={styles.topBanner}>
+          <PartnerSites locale={locale} linkRenderer={linkRenderer} activeProduct='Jobs' />
+        </div>
       </section>
     </header>
   );

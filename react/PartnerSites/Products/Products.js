@@ -99,11 +99,12 @@ export default function Products({ locale, linkRenderer, activeProduct }) {
 }
 
 Products.propTypes = {
-  locale: PropTypes.oneOf(['AU', 'NZ']).isRequired,
+  locale: PropTypes.oneOf(['AU', 'NZ']),
   linkRenderer: PropTypes.func.isRequired,
   activeProduct: PropTypes.oneOf(['Jobs', 'Courses', 'Businesses for sale', 'Volunteering'])
 };
 
 Products.defaultProps = {
+  locale: 'AU',
   activeProduct: null
 };
