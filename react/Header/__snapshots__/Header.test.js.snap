@@ -488,28 +488,30 @@ exports[`Header: should append returnUrl to signin and register links if present
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -1091,28 +1093,30 @@ exports[`Header: should render first part of email address when username isn't p
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -1686,28 +1690,30 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -2289,28 +2295,30 @@ exports[`Header: should render when authenticated 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -2888,28 +2896,30 @@ exports[`Header: should render when authenticated but username and email is not 
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -3483,28 +3493,30 @@ exports[`Header: should render when authentication is pending 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -4088,28 +4100,30 @@ exports[`Header: should render when unauthenticated 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -4651,28 +4665,30 @@ exports[`Header: should render with a custom logo 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -5246,28 +5262,30 @@ exports[`Header: should render with locale of AU 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -5790,28 +5808,30 @@ exports[`Header: should render with locale of NZ 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.co.nz"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a
@@ -6385,28 +6405,30 @@ exports[`Header: should render with no divider 1`] = `
             class="content"
           >
             <nav
-              aria-labelledby="Products"
+              aria-labelledby="Sites"
               role="navigation"
             >
               <span
                 class="root"
               >
                 <h1
-                  id="Products"
+                  id="Sites"
                 >
-                  SEEK Products
+                  SEEK Sites
                 </h1>
               </span>
               <ul
                 class="list"
               >
                 <li>
-                  <span
-                    class="link link_isActive"
+                  <a
+                    class="link link_isJobs"
+                    data-analytics="header:jobs"
+                    href="https://www.seek.com.au"
                     title="SEEK Jobs"
                   >
                     Jobs
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <a

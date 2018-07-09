@@ -44,11 +44,11 @@ export default {
         'Courses',
         'Businesses for sale',
         'Volunteering'
-      ].map(activeProduct => ({
-        label: activeProduct || 'No active product',
+      ].map(activeSite => ({
+        label: activeSite || 'No active site',
         transformProps: props => ({
           ...props,
-          activeProduct
+          activeSite
         })
       }))
     },

@@ -1,194 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Products: active product states: should render with businesses link as active 1`] = `
+exports[`Sites: active product states: should render with businesses link as active 1`] = `
 <nav
-  aria-labelledby="Products"
+  aria-labelledby="Sites"
   role="navigation"
 >
   <span
     class="root"
   >
     <h1
-      id="Products"
+      id="Sites"
     >
-      SEEK Products
-    </h1>
-  </span>
-  <ul
-    class="list"
-  >
-    <li>
-      <a
-        class="link link_isJobs"
-        data-analytics="header:jobs"
-        href="https://www.seek.com.au"
-        title="SEEK Jobs"
-      >
-        Jobs
-      </a>
-    </li>
-    <li>
-      <a
-        class="link link_isLearning"
-        data-analytics="header:courses"
-        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-        title="SEEK Learning"
-      >
-        Courses
-      </a>
-    </li>
-    <li>
-      <span
-        class="link link_isActive"
-        title="SEEK Business"
-      >
-        Businesses for sale
-      </span>
-    </li>
-    <li>
-      <a
-        class="link link_isVolunteering"
-        data-analytics="header:volunteering"
-        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-        title="SEEK Volunteer"
-      >
-        Volunteering
-      </a>
-    </li>
-  </ul>
-</nav>
-`;
-
-exports[`Products: active product states: should render with courses link as active 1`] = `
-<nav
-  aria-labelledby="Products"
-  role="navigation"
->
-  <span
-    class="root"
-  >
-    <h1
-      id="Products"
-    >
-      SEEK Products
-    </h1>
-  </span>
-  <ul
-    class="list"
-  >
-    <li>
-      <a
-        class="link link_isJobs"
-        data-analytics="header:jobs"
-        href="https://www.seek.com.au"
-        title="SEEK Jobs"
-      >
-        Jobs
-      </a>
-    </li>
-    <li>
-      <span
-        class="link link_isActive"
-        title="SEEK Learning"
-      >
-        Courses
-      </span>
-    </li>
-    <li>
-      <a
-        class="link link_isBusiness"
-        data-analytics="header:business+for+sale"
-        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-        title="SEEK Business"
-      >
-        Businesses for sale
-      </a>
-    </li>
-    <li>
-      <a
-        class="link link_isVolunteering"
-        data-analytics="header:volunteering"
-        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-        title="SEEK Volunteer"
-      >
-        Volunteering
-      </a>
-    </li>
-  </ul>
-</nav>
-`;
-
-exports[`Products: active product states: should render with jobs link as active 1`] = `
-<nav
-  aria-labelledby="Products"
-  role="navigation"
->
-  <span
-    class="root"
-  >
-    <h1
-      id="Products"
-    >
-      SEEK Products
-    </h1>
-  </span>
-  <ul
-    class="list"
-  >
-    <li>
-      <span
-        class="link link_isActive"
-        title="SEEK Jobs"
-      >
-        Jobs
-      </span>
-    </li>
-    <li>
-      <a
-        class="link link_isLearning"
-        data-analytics="header:courses"
-        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-        title="SEEK Learning"
-      >
-        Courses
-      </a>
-    </li>
-    <li>
-      <a
-        class="link link_isBusiness"
-        data-analytics="header:business+for+sale"
-        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-        title="SEEK Business"
-      >
-        Businesses for sale
-      </a>
-    </li>
-    <li>
-      <a
-        class="link link_isVolunteering"
-        data-analytics="header:volunteering"
-        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
-        title="SEEK Volunteer"
-      >
-        Volunteering
-      </a>
-    </li>
-  </ul>
-</nav>
-`;
-
-exports[`Products: active product states: should render with no link as active by default 1`] = `
-<nav
-  aria-labelledby="Products"
-  role="navigation"
->
-  <span
-    class="root"
-  >
-    <h1
-      id="Products"
-    >
-      SEEK Products
+      SEEK Sites
     </h1>
   </span>
   <ul
@@ -238,77 +61,18 @@ exports[`Products: active product states: should render with no link as active b
 </nav>
 `;
 
-exports[`Products: active product states: should render with volunteering link as active 1`] = `
+exports[`Sites: active product states: should render with courses link as active 1`] = `
 <nav
-  aria-labelledby="Products"
+  aria-labelledby="Sites"
   role="navigation"
 >
   <span
     class="root"
   >
     <h1
-      id="Products"
+      id="Sites"
     >
-      SEEK Products
-    </h1>
-  </span>
-  <ul
-    class="list"
-  >
-    <li>
-      <a
-        class="link link_isJobs"
-        data-analytics="header:jobs"
-        href="https://www.seek.com.au"
-        title="SEEK Jobs"
-      >
-        Jobs
-      </a>
-    </li>
-    <li>
-      <a
-        class="link link_isLearning"
-        data-analytics="header:courses"
-        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
-        title="SEEK Learning"
-      >
-        Courses
-      </a>
-    </li>
-    <li>
-      <a
-        class="link link_isBusiness"
-        data-analytics="header:business+for+sale"
-        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
-        title="SEEK Business"
-      >
-        Businesses for sale
-      </a>
-    </li>
-    <li>
-      <span
-        class="link link_isActive"
-        title="SEEK Volunteer"
-      >
-        Volunteering
-      </span>
-    </li>
-  </ul>
-</nav>
-`;
-
-exports[`Products: locale states: should render with locale of AU 1`] = `
-<nav
-  aria-labelledby="Products"
-  role="navigation"
->
-  <span
-    class="root"
-  >
-    <h1
-      id="Products"
-    >
-      SEEK Products
+      SEEK Sites
     </h1>
   </span>
   <ul
@@ -358,18 +122,262 @@ exports[`Products: locale states: should render with locale of AU 1`] = `
 </nav>
 `;
 
-exports[`Products: locale states: should render with locale of NZ 1`] = `
+exports[`Sites: active product states: should render with jobs link as active 1`] = `
 <nav
-  aria-labelledby="Products"
+  aria-labelledby="Sites"
   role="navigation"
 >
   <span
     class="root"
   >
     <h1
-      id="Products"
+      id="Sites"
     >
-      SEEK Products
+      SEEK Sites
+    </h1>
+  </span>
+  <ul
+    class="list"
+  >
+    <li>
+      <a
+        class="link link_isJobs"
+        data-analytics="header:jobs"
+        href="https://www.seek.com.au"
+        title="SEEK Jobs"
+      >
+        Jobs
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isLearning"
+        data-analytics="header:courses"
+        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+        title="SEEK Learning"
+      >
+        Courses
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isBusiness"
+        data-analytics="header:business+for+sale"
+        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+        title="SEEK Business"
+      >
+        Businesses for sale
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isVolunteering"
+        data-analytics="header:volunteering"
+        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+        title="SEEK Volunteer"
+      >
+        Volunteering
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Sites: active product states: should render with no link as active by default 1`] = `
+<nav
+  aria-labelledby="Sites"
+  role="navigation"
+>
+  <span
+    class="root"
+  >
+    <h1
+      id="Sites"
+    >
+      SEEK Sites
+    </h1>
+  </span>
+  <ul
+    class="list"
+  >
+    <li>
+      <a
+        class="link link_isJobs"
+        data-analytics="header:jobs"
+        href="https://www.seek.com.au"
+        title="SEEK Jobs"
+      >
+        Jobs
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isLearning"
+        data-analytics="header:courses"
+        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+        title="SEEK Learning"
+      >
+        Courses
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isBusiness"
+        data-analytics="header:business+for+sale"
+        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+        title="SEEK Business"
+      >
+        Businesses for sale
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isVolunteering"
+        data-analytics="header:volunteering"
+        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+        title="SEEK Volunteer"
+      >
+        Volunteering
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Sites: active product states: should render with volunteering link as active 1`] = `
+<nav
+  aria-labelledby="Sites"
+  role="navigation"
+>
+  <span
+    class="root"
+  >
+    <h1
+      id="Sites"
+    >
+      SEEK Sites
+    </h1>
+  </span>
+  <ul
+    class="list"
+  >
+    <li>
+      <a
+        class="link link_isJobs"
+        data-analytics="header:jobs"
+        href="https://www.seek.com.au"
+        title="SEEK Jobs"
+      >
+        Jobs
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isLearning"
+        data-analytics="header:courses"
+        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+        title="SEEK Learning"
+      >
+        Courses
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isBusiness"
+        data-analytics="header:business+for+sale"
+        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+        title="SEEK Business"
+      >
+        Businesses for sale
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isVolunteering"
+        data-analytics="header:volunteering"
+        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+        title="SEEK Volunteer"
+      >
+        Volunteering
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Sites: locale states: should render with locale of AU 1`] = `
+<nav
+  aria-labelledby="Sites"
+  role="navigation"
+>
+  <span
+    class="root"
+  >
+    <h1
+      id="Sites"
+    >
+      SEEK Sites
+    </h1>
+  </span>
+  <ul
+    class="list"
+  >
+    <li>
+      <a
+        class="link link_isJobs"
+        data-analytics="header:jobs"
+        href="https://www.seek.com.au"
+        title="SEEK Jobs"
+      >
+        Jobs
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isLearning"
+        data-analytics="header:courses"
+        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+        title="SEEK Learning"
+      >
+        Courses
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isBusiness"
+        data-analytics="header:business+for+sale"
+        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+        title="SEEK Business"
+      >
+        Businesses for sale
+      </a>
+    </li>
+    <li>
+      <a
+        class="link link_isVolunteering"
+        data-analytics="header:volunteering"
+        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+        title="SEEK Volunteer"
+      >
+        Volunteering
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Sites: locale states: should render with locale of NZ 1`] = `
+<nav
+  aria-labelledby="Sites"
+  role="navigation"
+>
+  <span
+    class="root"
+  >
+    <h1
+      id="Sites"
+    >
+      SEEK Sites
     </h1>
   </span>
   <ul
