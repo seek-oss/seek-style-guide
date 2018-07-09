@@ -20,5 +20,5 @@ export const blockSymbols = {
   'PartnerSites/New Zealand/Jobs Product Active': <PartnerSites locale='NZ' linkRenderer={DummyLinkRenderer} activeProduct='Jobs' />,
   'PartnerSites/New Zealand/Courses Product Active': <PartnerSites locale='NZ' linkRenderer={DummyLinkRenderer} activeProduct='Courses' />,
   'PartnerSites/New Zealand/BusinessesForSale Product Active': <PartnerSites locale='NZ' linkRenderer={DummyLinkRenderer} activeProduct='Businesses for sale' />,
-  'PartnerSites/New Zealand/Volunteering Product Active': <PartnerSites locale='NZ' linkRenderer={DummyLinkRenderer} activeProduct='Volunteering' />,
+  'PartnerSites/New Zealand/Volunteering Product Active': <PartnerSites locale='NZ' linkRenderer={DummyLinkRenderer} activeProduct='Volunteering' />
 };
