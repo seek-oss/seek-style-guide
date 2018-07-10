@@ -122,7 +122,7 @@ export default function Header({
           />
         </Hidden>
         <div className={styles.topBanner}>
-          <PartnerSites locale={locale} linkRenderer={linkRenderer} activeProduct='Jobs' />
+          <PartnerSites locale={locale} linkRenderer={linkRenderer} activeSite='Jobs' />
         </div>
       </section>
     </header>
