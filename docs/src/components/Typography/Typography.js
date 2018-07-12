@@ -97,6 +97,28 @@ export default () => (
     <PageBlock>
       <Card transparent style={{ maxWidth: 720 }}>
         <Section>
+          <Text heading>Large Text</Text>
+          <Paragraph>
+            <Text>In rare cases where larger text is required, you can use the &ldquo;large&rdquo; text variant, which is 18px over 5 grid rows on both desktop and mobile.</Text>
+          </Paragraph>
+        </Section>
+      </Card>
+    </PageBlock>
+    <Demo
+      spec={{
+        component: Text,
+        container: BackgroundContainer,
+        block: true,
+        initialProps: {
+          large: true,
+          children: loremIpsum
+        },
+        options: []
+      }}
+    />
+    <PageBlock>
+      <Card transparent style={{ maxWidth: 720 }}>
+        <Section>
           <Text heading>Small Text</Text>
           <Paragraph>
             <Text>In rare cases where smaller text is required, you can use the &ldquo;small&rdquo; text variant, which is 14px over 3 grid rows on both desktop and mobile.</Text>

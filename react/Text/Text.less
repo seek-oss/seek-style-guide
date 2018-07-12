@@ -32,6 +32,12 @@
   padding-bottom: @row-height;
 }
 
+.large {
+  &:not(.baseline) { .largeTextResponsive(@baseline: false); }
+  &.baseline { .largeTextResponsive(@baseline: true); }
+  padding-bottom: @row-height;
+}
+
 .subheading {
   &:not(.baseline) { .subheadingTextResponsive(@baseline: false); }
   &.baseline { .subheadingTextResponsive(@baseline: true); }

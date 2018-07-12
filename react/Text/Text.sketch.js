@@ -10,6 +10,7 @@ const sizes = [
   'headline',
   'heading',
   'subheading',
+  'large',
   'standard',
   'small'
 ];
@@ -32,6 +33,7 @@ export const text = {
   [`${symbolNames.headline}`]: <Text headline>Headline text</Text>,
   [`${symbolNames.heading}`]: <Text heading>Heading text</Text>,
   [`${symbolNames.subheading}`]: <Text subheading>Subheading text</Text>,
+  [`${symbolNames.large}`]: <Text large>Large text</Text>,
   [`${symbolNames.standard}/1. Default`]: <Text>Standard text</Text>,
   [`${symbolNames.standard}/2. Secondary`]: <Text secondary>Standard critical text</Text>,
   [`${symbolNames.standard}/3. Strong`]: <Text strong>Standard strong text</Text>,

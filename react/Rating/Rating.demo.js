@@ -49,7 +49,7 @@ export default {
     {
       label: 'Size',
       type: 'radio',
-      states: ['Hero', 'Headline', 'Heading', 'Standard', 'Small']
+      states: ['Hero', 'Headline', 'Heading', 'Large', 'Standard', 'Small']
         .map(size => ({
           label: `${String(size)}`,
           transformProps: ({ hero, ...props }) => ({
