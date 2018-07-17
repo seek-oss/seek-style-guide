@@ -4,7 +4,7 @@ module.exports = {
   process: src => {
     const classNames = [];
 
-    const classNameRegEx = /\.([_a-zA-Z0-9]+)(?=[\.:\[\s{])/gm;
+    const classNameRegEx = /\.([-_a-zA-Z0-9]+)(?=[\.:\[\s{])/gm;
     let match = classNameRegEx.exec(src);
     while (match !== null) {
       classNames.push(match[1]);
