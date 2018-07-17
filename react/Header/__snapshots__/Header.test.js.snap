@@ -135,7 +135,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -548,7 +548,6 @@ exports[`Header: should append returnUrl to signin and register links if present
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -563,18 +562,14 @@ exports[`Header: should append returnUrl to signin and register links if present
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -734,7 +729,7 @@ exports[`Header: should render first part of email address when username isn't p
                   </span>
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -1151,7 +1146,6 @@ exports[`Header: should render first part of email address when username isn't p
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -1166,18 +1160,14 @@ exports[`Header: should render first part of email address when username isn't p
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -1333,7 +1323,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -1746,7 +1736,6 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -1761,18 +1750,14 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -1932,7 +1917,7 @@ exports[`Header: should render when authenticated 1`] = `
                   </span>
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -2349,7 +2334,6 @@ exports[`Header: should render when authenticated 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -2364,18 +2348,14 @@ exports[`Header: should render when authenticated 1`] = `
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -2531,7 +2511,7 @@ exports[`Header: should render when authenticated but username and email is not 
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -2948,7 +2928,6 @@ exports[`Header: should render when authenticated but username and email is not 
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -2963,18 +2942,14 @@ exports[`Header: should render when authenticated but username and email is not 
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -3130,7 +3105,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -3543,7 +3518,6 @@ exports[`Header: should render when authentication is pending 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -3558,18 +3532,14 @@ exports[`Header: should render when authentication is pending 1`] = `
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -3727,7 +3697,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -4148,7 +4118,6 @@ exports[`Header: should render when unauthenticated 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -4163,18 +4132,14 @@ exports[`Header: should render when unauthenticated 1`] = `
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -4298,7 +4263,7 @@ exports[`Header: should render with a custom logo 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -4711,7 +4676,6 @@ exports[`Header: should render with a custom logo 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -4726,18 +4690,14 @@ exports[`Header: should render with a custom logo 1`] = `
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -4893,7 +4853,7 @@ exports[`Header: should render with locale of AU 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -5306,7 +5266,6 @@ exports[`Header: should render with locale of AU 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -5321,18 +5280,14 @@ exports[`Header: should render with locale of AU 1`] = `
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
@@ -5488,7 +5443,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -5850,7 +5805,6 @@ exports[`Header: should render with locale of NZ 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -5865,9 +5819,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                 <ul
                   class="list list_isNZ"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:au+homepage"
@@ -5877,9 +5829,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       AU
                     </a>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
@@ -6032,7 +5982,7 @@ exports[`Header: should render with no divider 1`] = `
                   />
                 </span>
                 <span
-                  class="root root down chevron"
+                  class="root root chevron"
                 >
                   mock svg
                 </span>
@@ -6445,7 +6395,6 @@ exports[`Header: should render with no divider 1`] = `
             >
               <nav
                 aria-labelledby="Locales"
-                class="root"
                 role="navigation"
               >
                 <span
@@ -6460,18 +6409,14 @@ exports[`Header: should render with no divider 1`] = `
                 <ul
                   class="list"
                 >
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <span
                       class="locale_isActive"
                     >
                       AU
                     </span>
                   </li>
-                  <li
-                    class="listItem"
-                  >
+                  <li>
                     <a
                       class="localeLink"
                       data-analytics="header:nz+homepage"
