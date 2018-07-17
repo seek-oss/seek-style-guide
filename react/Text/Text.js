@@ -1,18 +1,13 @@
 import styles from './Text.less';
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import classnames from 'classnames';
-
-import stylesPositive from '../Positive/Positive.less';
-import stylesCritical from '../Critical/Critical.less';
-import stylesSecondary from '../Secondary/Secondary.less';
+import colorStyles from '../../theme/atoms/color.less';
 import stylesHighlight from '../Highlight/Highlight.less';
-import stylesInfo from '../Info/Info.less';
 import stylesStrong from '../Strong/Strong.less';
 import stylesRegular from '../Regular/Regular.less';
-
 import withTextProps, { SizePropTypes } from '../private/withTextProps';
+import withColorProps from '../private/withColorProps';
 
 const Text = ({
   component,
@@ -21,11 +16,8 @@ const Text = ({
   className,
   size,
   raw,
-  positive,
-  critical,
-  secondary,
+  color,
   highlight,
-  info,
   strong,
   regular,
   light,
@@ -46,12 +38,9 @@ const Text = ({
       })}>
       <span
         className={classnames({
-          [stylesPositive.root]: positive,
-          [stylesCritical.root]: critical,
-          [stylesSecondary.root]: secondary,
+          [colorStyles[color]]: color && colorStyles[color],
           [stylesHighlight.root]: highlight,
-          [stylesHighlight.secondary]: highlight && secondary,
-          [stylesInfo.root]: info,
+          [stylesHighlight.secondary]: highlight && color === 'secondary',
           [stylesStrong.root]: strong,
           [stylesRegular.root]: regular,
           [styles.light]: light
@@ -74,12 +63,9 @@ Text.propTypes = {
   className: PropTypes.string,
   bullet: PropTypes.bool,
   ...SizePropTypes,
+  color: PropTypes.oneOf(Object.keys(colorStyles)),
   raw: PropTypes.bool,
-  positive: PropTypes.bool,
-  critical: PropTypes.bool,
-  secondary: PropTypes.bool,
   highlight: PropTypes.bool,
-  info: PropTypes.bool,
   strong: PropTypes.bool,
   regular: PropTypes.bool,
   light: PropTypes.bool,
@@ -92,4 +78,4 @@ Text.defaultProps = {
   size: 'standard'
 };
 
-export default withTextProps(Text);
+export default withTextProps(withColorProps(Text));

@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Text boolean colors should render as critical 1`] = `
+<span
+  class="root standard baseline"
+>
+  <span
+    class="critical"
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text boolean colors should render as info 1`] = `
+<span
+  class="root standard baseline"
+>
+  <span
+    class="info"
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text boolean colors should render as positive 1`] = `
+<span
+  class="root standard baseline"
+>
+  <span
+    class="positive"
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text boolean colors should render as secondary 1`] = `
+<span
+  class="root standard baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
 exports[`Text should render a bullet point 1`] = `
 <li
   class="root standard bullet baseline"

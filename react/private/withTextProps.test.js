@@ -1,9 +1,11 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import withTextProps, { sizes } from './withTextProps';
+import withTextProps, { sizes, SizePropTypes } from './withTextProps';
 
 const OriginalComponent = props => <div {...props} />;
+OriginalComponent.propTypes = { ...SizePropTypes };
+
 const DecoratedComponent = withTextProps(OriginalComponent);
 
 describe('withTextProps:', () => {
