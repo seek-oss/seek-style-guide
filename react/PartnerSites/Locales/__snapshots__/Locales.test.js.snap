@@ -3,7 +3,6 @@
 exports[`Locales: should render with locale of AU first and active 1`] = `
 <nav
   aria-labelledby="Locales"
-  class="root"
   role="navigation"
 >
   <span
@@ -18,18 +17,14 @@ exports[`Locales: should render with locale of AU first and active 1`] = `
   <ul
     class="list"
   >
-    <li
-      class="listItem"
-    >
+    <li>
       <span
         class="locale_isActive"
       >
         AU
       </span>
     </li>
-    <li
-      class="listItem"
-    >
+    <li>
       <a
         class="localeLink"
         data-analytics="header:nz+homepage"
@@ -46,7 +41,6 @@ exports[`Locales: should render with locale of AU first and active 1`] = `
 exports[`Locales: should render with locale of NZ first and active 1`] = `
 <nav
   aria-labelledby="Locales"
-  class="root"
   role="navigation"
 >
   <span
@@ -61,9 +55,7 @@ exports[`Locales: should render with locale of NZ first and active 1`] = `
   <ul
     class="list list_isNZ"
   >
-    <li
-      class="listItem"
-    >
+    <li>
       <a
         class="localeLink"
         data-analytics="header:au+homepage"
@@ -73,9 +65,7 @@ exports[`Locales: should render with locale of NZ first and active 1`] = `
         AU
       </a>
     </li>
-    <li
-      class="listItem"
-    >
+    <li>
       <span
         class="locale_isActive"
       >
