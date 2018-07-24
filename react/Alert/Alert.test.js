@@ -63,7 +63,8 @@ describe('Alert:', () => {
   });
 
   it('should render a close button', () => {
-    const alert = renderAlert({ onClose: true });
+    const onClose = jest.fn();
+    const alert = renderAlert({ onClose });
     expect(alert).toMatchSnapshot();
   });
 

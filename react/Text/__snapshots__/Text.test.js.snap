@@ -108,6 +108,30 @@ exports[`Text sizes should render as hero 2`] = `
 </span>
 `;
 
+exports[`Text sizes should render as large 1`] = `
+<span
+  class="root large baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Text sizes should render as large 2`] = `
+<span
+  class="root large baseline"
+>
+  <span
+    class=""
+  >
+    Hello
+  </span>
+</span>
+`;
+
 exports[`Text sizes should render as small 1`] = `
 <span
   class="root small baseline"

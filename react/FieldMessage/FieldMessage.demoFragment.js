@@ -6,8 +6,7 @@ export default [
       {
         label: 'No message',
         transformProps: props => ({
-          ...props,
-          message: false
+          ...props
         })
       },
       {
@@ -31,6 +30,13 @@ export default [
           ...props,
           valid: true,
           message: 'Looking good!'
+        })
+      },
+      {
+        label: 'Message disabled',
+        transformProps: props => ({
+          ...props,
+          message: false
         })
       }
     ]

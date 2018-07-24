@@ -38,6 +38,13 @@ export default {
           })
         },
         {
+          label: 'Highlight',
+          transformProps: props => ({
+            ...props,
+            highlight: true
+          })
+        },
+        {
           label: 'Disable baseline',
           transformProps: props => ({
             ...props,
@@ -111,6 +118,13 @@ export default {
           transformProps: ({ hero, ...props }) => ({
             ...props,
             subheading: true
+          })
+        },
+        {
+          label: 'Large',
+          transformProps: ({ hero, ...props }) => ({
+            ...props,
+            large: true
           })
         },
         {

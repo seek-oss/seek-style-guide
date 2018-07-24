@@ -36,6 +36,18 @@ exports[`withTextProps: *hero*: should pass down string size 1`] = `
 />
 `;
 
+exports[`withTextProps: *large*: should convert boolean size into string size 1`] = `
+<OriginalComponent
+  size="large"
+/>
+`;
+
+exports[`withTextProps: *large*: should pass down string size 1`] = `
+<OriginalComponent
+  size="large"
+/>
+`;
+
 exports[`withTextProps: *small*: should convert boolean size into string size 1`] = `
 <OriginalComponent
   size="small"
