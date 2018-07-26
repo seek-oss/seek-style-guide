@@ -32,11 +32,13 @@ class DropdownContainer extends Component {
     const { value } = this.state;
 
     return (
-      <DemoComponent
-        {...componentProps}
-        value={value}
-        onChange={this.handleChange}
-      />
+      <div style={{ width: '300px' }}>
+        <DemoComponent
+          {...componentProps}
+          value={value}
+          onChange={this.handleChange}
+        />
+      </div>
     );
   }
 }
