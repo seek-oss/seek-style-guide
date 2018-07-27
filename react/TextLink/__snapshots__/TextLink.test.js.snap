@@ -2,11 +2,11 @@
 
 exports[`TextLink should render with chevron props 1`] = `
 <a
-  className="link"
+  className="TextLink__link"
 >
   Google
   <ChevronIcon
-    className="chevronRightSide"
+    className="TextLink__chevronRightSide"
     direction="up"
     size="hero"
   />
@@ -15,7 +15,7 @@ exports[`TextLink should render with chevron props 1`] = `
 
 exports[`TextLink should render with children 1`] = `
 <a
-  className="link"
+  className="TextLink__link"
 >
   Google
 </a>
@@ -23,23 +23,23 @@ exports[`TextLink should render with children 1`] = `
 
 exports[`TextLink should render with className 1`] = `
 <a
-  className="link foo"
+  className="TextLink__link foo"
 />
 `;
 
 exports[`TextLink should render with defaults 1`] = `
 <a
-  className="link"
+  className="TextLink__link"
 />
 `;
 
 exports[`TextLink should render with down chevron 1`] = `
 <a
-  className="link"
+  className="TextLink__link"
 >
   Google
   <ChevronIcon
-    className="chevronRightSide"
+    className="TextLink__chevronRightSide"
     direction="down"
     size="standard"
   />
@@ -48,10 +48,10 @@ exports[`TextLink should render with down chevron 1`] = `
 
 exports[`TextLink should render with left chevron 1`] = `
 <a
-  className="link"
+  className="TextLink__link"
 >
   <ChevronIcon
-    className="chevronLeftSide"
+    className="TextLink__chevronLeftSide"
     direction="left"
     size="standard"
   />
@@ -61,11 +61,11 @@ exports[`TextLink should render with left chevron 1`] = `
 
 exports[`TextLink should render with right chevron 1`] = `
 <a
-  className="link"
+  className="TextLink__link"
 >
   Google
   <ChevronIcon
-    className="chevronRightSide"
+    className="TextLink__chevronRightSide"
     direction="right"
     size="standard"
   />
@@ -74,11 +74,11 @@ exports[`TextLink should render with right chevron 1`] = `
 
 exports[`TextLink should render with up chevron 1`] = `
 <a
-  className="link"
+  className="TextLink__link"
 >
   Google
   <ChevronIcon
-    className="chevronRightSide"
+    className="TextLink__chevronRightSide"
     direction="up"
     size="standard"
   />

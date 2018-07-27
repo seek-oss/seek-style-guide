@@ -33,14 +33,14 @@ describe('NativeMonthPicker', () => {
   function render(jsx) {
     element = jsx;
     monthPicker = renderer.render(element);
-    rootElement = findAllWithClass(monthPicker, 'root')[0] || null;
-    input = findAllWithClass(monthPicker, 'input')[0] || null;
+    rootElement = findAllWithClass(monthPicker, 'NativeMonthPicker__root')[0] || null;
+    input = findAllWithClass(monthPicker, 'NativeMonthPicker__input')[0] || null;
   }
 
   function renderToDom(jsx) {
     element = jsx;
     monthPicker = renderIntoDocument(element);
-    input = findRenderedDOMComponentWithClass(monthPicker, 'input');
+    input = findRenderedDOMComponentWithClass(monthPicker, 'NativeMonthPicker__input');
   }
 
   it('should have a displayName', () => {
