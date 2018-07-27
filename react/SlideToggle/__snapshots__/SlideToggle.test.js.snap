@@ -2,32 +2,32 @@
 
 exports[`Slide toggle: should render a checked state 1`] = `
 <div
-  className="root"
+  className="SlideToggle__root"
 >
   <input
     aria-label="Test toggle"
     checked={true}
-    className="input"
+    className="SlideToggle__input"
     id="testSlideToggle"
     type="checkbox"
   />
   <label
-    className="switch"
+    className="SlideToggle__switch"
     htmlFor="testSlideToggle"
   >
     <div
-      className="slideContainer"
+      className="SlideToggle__slideContainer"
     >
       <div
-        className="slider"
+        className="SlideToggle__slider"
       />
       <TickIcon
-        className="slideButton"
-        svgClassName="svg"
+        className="SlideToggle__slideButton"
+        svgClassName="SlideToggle__svg"
       />
     </div>
     <span
-      className="labelText labelRight"
+      className="SlideToggle__labelText SlideToggle__labelRight"
     >
       Test toggle
     </span>
@@ -37,31 +37,31 @@ exports[`Slide toggle: should render a checked state 1`] = `
 
 exports[`Slide toggle: should render with default props 1`] = `
 <div
-  className="root"
+  className="SlideToggle__root"
 >
   <input
     aria-label="Test toggle"
-    className="input"
+    className="SlideToggle__input"
     id="testSlideToggle"
     type="checkbox"
   />
   <label
-    className="switch"
+    className="SlideToggle__switch"
     htmlFor="testSlideToggle"
   >
     <div
-      className="slideContainer"
+      className="SlideToggle__slideContainer"
     >
       <div
-        className="slider"
+        className="SlideToggle__slider"
       />
       <TickIcon
-        className="slideButton"
-        svgClassName="svg"
+        className="SlideToggle__slideButton"
+        svgClassName="SlideToggle__svg"
       />
     </div>
     <span
-      className="labelText labelRight"
+      className="SlideToggle__labelText SlideToggle__labelRight"
     >
       Test toggle
     </span>
@@ -71,27 +71,27 @@ exports[`Slide toggle: should render with default props 1`] = `
 
 exports[`Slide toggle: should render with the label hidden 1`] = `
 <div
-  className="root"
+  className="SlideToggle__root"
 >
   <input
     aria-label="Test toggle"
-    className="input"
+    className="SlideToggle__input"
     id="testSlideToggle"
     type="checkbox"
   />
   <label
-    className="switch"
+    className="SlideToggle__switch"
     htmlFor="testSlideToggle"
   >
     <div
-      className="slideContainer"
+      className="SlideToggle__slideContainer"
     >
       <div
-        className="slider"
+        className="SlideToggle__slider"
       />
       <TickIcon
-        className="slideButton"
-        svgClassName="svg"
+        className="SlideToggle__slideButton"
+        svgClassName="SlideToggle__svg"
       />
     </div>
   </label>
@@ -100,32 +100,32 @@ exports[`Slide toggle: should render with the label hidden 1`] = `
 
 exports[`Slide toggle: should render with the label on the left 1`] = `
 <div
-  className="root"
+  className="SlideToggle__root"
 >
   <input
     aria-label="Test toggle"
-    className="input inputLeft"
+    className="SlideToggle__input SlideToggle__inputLeft"
     id="testSlideToggle"
     type="checkbox"
   />
   <label
-    className="switch"
+    className="SlideToggle__switch"
     htmlFor="testSlideToggle"
   >
     <span
-      className="labelText labelLeft"
+      className="SlideToggle__labelText SlideToggle__labelLeft"
     >
       Test toggle
     </span>
     <div
-      className="slideContainer"
+      className="SlideToggle__slideContainer"
     >
       <div
-        className="slider"
+        className="SlideToggle__slider"
       />
       <TickIcon
-        className="slideButton"
-        svgClassName="svg"
+        className="SlideToggle__slideButton"
+        svgClassName="SlideToggle__svg"
       />
     </div>
   </label>

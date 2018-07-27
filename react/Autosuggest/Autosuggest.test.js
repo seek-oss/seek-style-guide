@@ -48,7 +48,7 @@ describe('Autosuggest', () => {
 
   it('should render with suggestions', () => {
     const wrapper = render(<Autosuggest {...getAutosuggestProps(['test', 'test 2'])} id="testAutosuggest" />);
-    const suggestions = wrapper.find('.suggestionsContainer').find('li');
+    const suggestions = wrapper.find('.Autosuggest__suggestionsContainer').find('li');
     expect(wrapper).toMatchSnapshot();
     expect(suggestions.length).toEqual(2);
   });

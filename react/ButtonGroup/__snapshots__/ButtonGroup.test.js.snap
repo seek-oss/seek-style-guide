@@ -2,7 +2,7 @@
 
 exports[`ButtonGroup: should combine className when passed in 1`] = `
 <div
-  className="combineMe group"
+  className="combineMe Button__group"
 >
   <Button
     className=""
@@ -21,7 +21,7 @@ exports[`ButtonGroup: should combine className when passed in 1`] = `
 
 exports[`ButtonGroup: should render a button group with node 1`] = `
 <div
-  className="group"
+  className="Button__group"
 >
   <Button
     className=""

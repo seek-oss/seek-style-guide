@@ -95,7 +95,7 @@ describe('TextField', () => {
 
       const wrapper = mount(<TextField {...requiredProps} onClear={clickHandlerSpy} />);
       const input = wrapper.find('input').html();
-      const clearButton = wrapper.find('.clearField');
+      const clearButton = wrapper.find('.TextField__clearField');
 
       clearButton.simulate('mouseDown');
       expect(clickHandlerSpy).toBeCalled();

@@ -2,41 +2,41 @@
 
 exports[`Rating should render correct size when size is: heading 1`] = `
 <span
-  class="root heading raw baseline"
+  class="Text__root Text__heading Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       3.5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled heading star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled heading star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled heading star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large heading star"
+        class="Icon__root StarIcon___large StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large heading star"
+        class="Icon__root StarIcon___large StarIcon__heading Rating__star"
       >
         mock svg
       </span>
@@ -47,46 +47,46 @@ exports[`Rating should render correct size when size is: heading 1`] = `
 
 exports[`Rating should render correct size when size is: heading and rating text is shown 1`] = `
 <span
-  class="root heading raw baseline"
+  class="Text__root Text__heading Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       4 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled heading star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled heading star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled heading star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled heading star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large heading star"
+        class="Icon__root StarIcon___large StarIcon__heading Rating__star"
       >
         mock svg
       </span>
       <span
-        class="textRating"
+        class="Rating__textRating"
       >
         4.0
       </span>
@@ -97,41 +97,41 @@ exports[`Rating should render correct size when size is: heading and rating text
 
 exports[`Rating should render correct size when size is: headline 1`] = `
 <span
-  class="root headline raw baseline"
+  class="Text__root Text__headline Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       3.5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled headline star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled headline star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled headline star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large headline star"
+        class="Icon__root StarIcon___large StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large headline star"
+        class="Icon__root StarIcon___large StarIcon__headline Rating__star"
       >
         mock svg
       </span>
@@ -142,46 +142,46 @@ exports[`Rating should render correct size when size is: headline 1`] = `
 
 exports[`Rating should render correct size when size is: headline and rating text is shown 1`] = `
 <span
-  class="root headline raw baseline"
+  class="Text__root Text__headline Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       4 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled headline star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled headline star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled headline star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled headline star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large headline star"
+        class="Icon__root StarIcon___large StarIcon__headline Rating__star"
       >
         mock svg
       </span>
       <span
-        class="textRating"
+        class="Rating__textRating"
       >
         4.0
       </span>
@@ -192,41 +192,41 @@ exports[`Rating should render correct size when size is: headline and rating tex
 
 exports[`Rating should render correct size when size is: hero 1`] = `
 <span
-  class="root hero raw baseline"
+  class="Text__root Text__hero Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       3.5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled hero star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled hero star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled hero star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large hero star"
+        class="Icon__root StarIcon___large StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large hero star"
+        class="Icon__root StarIcon___large StarIcon__hero Rating__star"
       >
         mock svg
       </span>
@@ -237,46 +237,46 @@ exports[`Rating should render correct size when size is: hero 1`] = `
 
 exports[`Rating should render correct size when size is: hero and rating text is shown 1`] = `
 <span
-  class="root hero raw baseline"
+  class="Text__root Text__hero Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       4 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled hero star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled hero star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled hero star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled hero star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large hero star"
+        class="Icon__root StarIcon___large StarIcon__hero Rating__star"
       >
         mock svg
       </span>
       <span
-        class="textRating"
+        class="Rating__textRating"
       >
         4.0
       </span>
@@ -287,41 +287,41 @@ exports[`Rating should render correct size when size is: hero and rating text is
 
 exports[`Rating should render correct star rating when rating is: 0 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       0 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
@@ -332,41 +332,41 @@ exports[`Rating should render correct star rating when rating is: 0 1`] = `
 
 exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       2.74 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
@@ -377,41 +377,41 @@ exports[`Rating should render correct star rating when rating is: 2.74 1`] = `
 
 exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       2.75 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
@@ -422,41 +422,41 @@ exports[`Rating should render correct star rating when rating is: 2.75 1`] = `
 
 exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       3.74 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
@@ -467,41 +467,41 @@ exports[`Rating should render correct star rating when rating is: 3.74 1`] = `
 
 exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       3.75 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large standard star"
+        class="Icon__root StarIcon___large StarIcon__standard Rating__star"
       >
         mock svg
       </span>
@@ -512,41 +512,41 @@ exports[`Rating should render correct star rating when rating is: 3.75 1`] = `
 
 exports[`Rating should render correct star rating when rating is: 5 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
@@ -557,41 +557,41 @@ exports[`Rating should render correct star rating when rating is: 5 1`] = `
 
 exports[`Rating should render with className 1`] = `
 <span
-  class="root root-class-name standard raw baseline"
+  class="Text__root root-class-name Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
@@ -602,46 +602,46 @@ exports[`Rating should render with className 1`] = `
 
 exports[`Rating should render with description 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="textRating"
+        class="Rating__textRating"
       >
         5.0 overall rating from...
       </span>
@@ -652,46 +652,46 @@ exports[`Rating should render with description 1`] = `
 
 exports[`Rating should render with description as a component 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="textRating"
+        class="Rating__textRating"
       >
         5.0 
         <span>
@@ -705,41 +705,41 @@ exports[`Rating should render with description as a component 1`] = `
 
 exports[`Rating should render with starClassName 1`] = `
 <span
-  class="root standard raw baseline"
+  class="Text__root Text__standard Text__raw Text__baseline"
 >
   <span
-    class="root"
+    class="Regular__root"
   >
     <span
-      class="root"
+      class="ScreenReaderOnly__root"
     >
       5 out of 5
     </span>
     <span
-      class="rating"
+      class="Rating__rating"
     >
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>
       <span
-        class="root _large filled standard star"
+        class="Icon__root StarIcon___large StarIcon__filled StarIcon__standard Rating__star"
       >
         mock svg
       </span>

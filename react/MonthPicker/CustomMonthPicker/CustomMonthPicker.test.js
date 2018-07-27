@@ -34,8 +34,8 @@ describe('CustomMonthPicker', () => {
   function render(jsx) {
     element = jsx;
     monthPicker = renderer.render(element);
-    monthDropdown = findAllWithClass(monthPicker, 'dropdown')[0] || null;
-    yearDropdown = findAllWithClass(monthPicker, 'dropdown')[1] || null;
+    monthDropdown = findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[0] || null;
+    yearDropdown = findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[1] || null;
   }
 
   function renderToDom(jsx) {
