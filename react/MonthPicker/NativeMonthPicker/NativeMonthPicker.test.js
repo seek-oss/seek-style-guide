@@ -88,4 +88,11 @@ describe('NativeMonthPicker', () => {
       year: 2012
     });
   });
+
+  it('should call onFocus when field has the focus', () => {
+    const onFocus = jest.fn();
+    renderToDom(<NativeMonthPicker id="testNativeMonthPicker" onFocus={onFocus} value={{ month: 6, year: 2010 }} fieldMessageId="testNativeMonthPicker-message" />);
+    Simulate.focus(input);
+    expect(onFocus.mock.calls.length).equal(1);
+  });
 });
