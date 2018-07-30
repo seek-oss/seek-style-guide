@@ -65,7 +65,6 @@ describe('CustomMonthPicker', () => {
     expect(yearDropdown.props.valid).to.equal(false);
   });
 
-
   it('should call onFocus when field has the focus', () => {
     const onFocus = jest.fn();
     renderToDom(<CustomMonthPicker id="testCustomMonthPicker" onFocus={onFocus} value={{ month: 6, year: 2010 }} fieldMessageId="testCustomMonthPicker-message" />);
