@@ -7,6 +7,8 @@ import Text from '../Text/Text';
 import Card from '../Card/Card';
 import Section from '../Section/Section';
 
+import styles from './ReadMore.demo.less';
+
 const longText = (
   <Text>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae nulla
@@ -37,7 +39,11 @@ const shortText = (
 );
 
 const ReadMoreContainer = ({ component: DemoComponent, componentProps }) => (
-  <Card style={{ width: 500 }}>
+  <Card
+    style={{ width: 500 }}
+    className={
+      componentProps.backgroundColor === 'body' ? styles.grayBackground : ''
+    }>
     <Section>
       <DemoComponent {...componentProps} />
     </Section>
@@ -121,6 +127,32 @@ export default {
           transformProps: props => ({
             ...omit(props, 'maxLines'),
             maxRows: 20
+          })
+        }
+      ]
+    },
+    {
+      label: 'Color',
+      type: 'radio',
+      states: [
+        {
+          label: 'Default Background',
+          transformProps: props => ({
+            ...omit(props, 'backgroundColor')
+          })
+        },
+        {
+          label: 'Card',
+          transformProps: props => ({
+            ...props,
+            backgroundColor: 'card'
+          })
+        },
+        {
+          label: 'Body',
+          transformProps: props => ({
+            ...props,
+            backgroundColor: 'body'
           })
         }
       ]
