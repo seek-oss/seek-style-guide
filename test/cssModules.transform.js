@@ -1,7 +1,8 @@
-// Really naive, regex-based class name extractor
+const path = require('path');
 
 module.exports = {
-  process: src => {
+  process: (src, srcPath) => {
+    const fileName = path.parse(srcPath).name;
     const classNames = [];
 
     const classNameRegEx = /\.([-_a-zA-Z0-9]+)(?=[\.:\[\s{])/gm;
@@ -13,7 +14,7 @@ module.exports = {
 
     const cssModule = {};
     classNames.forEach(className => {
-      cssModule[className] = className;
+      cssModule[className] = `${fileName}__${className}`;
     });
 
     return `module.exports = ${JSON.stringify(cssModule)}`;

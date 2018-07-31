@@ -2,7 +2,7 @@
 
 exports[`Button: color variants: should render blue button 1`] = `
 <button
-  className="root root_isBlue"
+  className="Button__root Button__root_isBlue"
   disabled={false}
 >
   SEEK
@@ -11,7 +11,7 @@ exports[`Button: color variants: should render blue button 1`] = `
 
 exports[`Button: color variants: should render gray button 1`] = `
 <button
-  className="root root_isGray"
+  className="Button__root Button__root_isGray"
   disabled={false}
 >
   SEEK
@@ -20,7 +20,7 @@ exports[`Button: color variants: should render gray button 1`] = `
 
 exports[`Button: color variants: should render pink button 1`] = `
 <button
-  className="root root_isPink"
+  className="Button__root Button__root_isPink"
   disabled={false}
 >
   SEEK
@@ -29,7 +29,7 @@ exports[`Button: color variants: should render pink button 1`] = `
 
 exports[`Button: color variants: should render transparent button 1`] = `
 <button
-  className="root root_isTransparent"
+  className="Button__root Button__root_isTransparent"
   disabled={false}
 >
   SEEK
@@ -38,7 +38,7 @@ exports[`Button: color variants: should render transparent button 1`] = `
 
 exports[`Button: color variants: should render white ghost button 1`] = `
 <button
-  className="root root_isGhost root_isWhite"
+  className="Button__root Button__root_isGhost Button__root_isWhite"
   disabled={false}
 >
   SEEK
@@ -47,7 +47,7 @@ exports[`Button: color variants: should render white ghost button 1`] = `
 
 exports[`Button: should render as an anchor with href="https://www.seek.com.au" 1`] = `
 <a
-  className="root root_isPink"
+  className="Button__root Button__root_isPink"
   disabled={false}
   href="https://www.seek.com.au"
 >
@@ -57,7 +57,7 @@ exports[`Button: should render as an anchor with href="https://www.seek.com.au" 
 
 exports[`Button: should render as loading 1`] = `
 <button
-  className="root loading root_isBlue"
+  className="Button__root Button__loading Button__root_isBlue"
   disabled={true}
 >
   SEEK
@@ -66,7 +66,7 @@ exports[`Button: should render as loading 1`] = `
 
 exports[`Button: should render custom component based on it’s reference 1`] = `
 <CustomComponent
-  className="root root_isPink"
+  className="Button__root Button__root_isPink"
   disabled={false}
 >
   SEEK
@@ -75,7 +75,7 @@ exports[`Button: should render custom component based on it’s reference 1`] = 
 
 exports[`Button: should render fullwidth button 1`] = `
 <button
-  className="root fullWidth root_isTransparent"
+  className="Button__root Button__fullWidth Button__root_isTransparent"
   disabled={false}
 >
   SEEK
@@ -84,7 +84,7 @@ exports[`Button: should render fullwidth button 1`] = `
 
 exports[`Button: should render with array of nodes 1`] = `
 <button
-  className="root root_isBlue"
+  className="Button__root Button__root_isBlue"
   disabled={false}
 >
   <span>
@@ -98,7 +98,7 @@ exports[`Button: should render with array of nodes 1`] = `
 
 exports[`Button: should render with className 1`] = `
 <button
-  className="root foo root_isGray"
+  className="Button__root foo Button__root_isGray"
   disabled={false}
 >
   SEEK
@@ -107,7 +107,7 @@ exports[`Button: should render with className 1`] = `
 
 exports[`Button: should render with node 1`] = `
 <button
-  className="root root_isBlue"
+  className="Button__root Button__root_isBlue"
   disabled={false}
 >
   <h5>

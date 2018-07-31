@@ -26,7 +26,7 @@ exports[`components/grid/hidden should render with component 1`] = `
 
 exports[`components/grid/hidden should render with desktop 1`] = `
 <span
-  className="desktop"
+  className="Hidden__desktop"
 >
   Text
 </span>
@@ -34,7 +34,7 @@ exports[`components/grid/hidden should render with desktop 1`] = `
 
 exports[`components/grid/hidden should render with mobile 1`] = `
 <span
-  className="mobile"
+  className="Hidden__mobile"
 >
   Text
 </span>
@@ -42,7 +42,7 @@ exports[`components/grid/hidden should render with mobile 1`] = `
 
 exports[`components/grid/hidden should render with print 1`] = `
 <span
-  className="print"
+  className="Hidden__print"
 >
   Text
 </span>
@@ -59,7 +59,7 @@ exports[`components/grid/hidden should render with props 1`] = `
 
 exports[`components/grid/hidden should render with screen 1`] = `
 <span
-  className="screen"
+  className="Hidden__screen"
 >
   Text
 </span>

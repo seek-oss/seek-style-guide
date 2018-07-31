@@ -40,7 +40,7 @@ describe('Dropdown', () => {
   function render(jsx) {
     element = jsx;
     dropdown = renderer.render(element);
-    input = findAllWithClass(dropdown, 'dropdown')[0] || null;
+    input = findAllWithClass(dropdown, 'Dropdown__dropdown')[0] || null;
     placeholder = findAllWithType(dropdown, 'option')[0] || null;
     optionGroup = findAllWithType(dropdown, 'optgroup')[0] || null;
     childOptions = findAllWithType(optionGroup, 'option') || null;

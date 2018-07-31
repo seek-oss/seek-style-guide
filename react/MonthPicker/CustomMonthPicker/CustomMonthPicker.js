@@ -33,6 +33,7 @@ export default class CustomMonthPicker extends Component {
     id: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
     value: PropTypes.shape({
       month: PropTypes.number,
       year: PropTypes.number
@@ -57,6 +58,7 @@ export default class CustomMonthPicker extends Component {
     this.storeMonthReference = this.storeMonthReference.bind(this);
     this.storeYearReference = this.storeYearReference.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
     this.blurIfNotFocussed = this.blurIfNotFocussed.bind(this);
 
     this.yearOptions = getYearOptions(minYear, maxYear, ascendingYears);
@@ -134,6 +136,13 @@ export default class CustomMonthPicker extends Component {
     }
   }
 
+  handleFocus(evt) {
+    const { onFocus } = this.props;
+    if (typeof onFocus === 'function') {
+      onFocus(evt);
+    }
+  }
+
   render() {
     const { id, value, valid, tone, fieldMessageId } = this.props;
     // eslint-disable-next-line react/prop-types
@@ -173,6 +182,7 @@ export default class CustomMonthPicker extends Component {
             placeholder="Month"
             onChange={this.handleMonthChange}
             onBlur={this.handleBlur}
+            onFocus={this.handleFocus}
             value={monthValue}
             inputProps={{
               ref: this.storeMonthReference,
@@ -190,6 +200,7 @@ export default class CustomMonthPicker extends Component {
             placeholder="Year"
             onChange={this.handleYearChange}
             onBlur={this.handleBlur}
+            onFocus={this.handleFocus}
             value={yearValue}
             inputProps={{
               ref: this.storeYearReference,

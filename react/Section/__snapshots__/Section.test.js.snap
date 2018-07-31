@@ -2,7 +2,7 @@
 
 exports[`Section: levels: should render primary sections 1`] = `
 <div
-  className="root primary"
+  className="Section__root Section__primary"
 >
   Test content
 </div>
@@ -10,7 +10,7 @@ exports[`Section: levels: should render primary sections 1`] = `
 
 exports[`Section: levels: should render secondary sections 1`] = `
 <div
-  className="root secondary"
+  className="Section__root Section__secondary"
 >
   Test content
 </div>
@@ -18,7 +18,7 @@ exports[`Section: levels: should render secondary sections 1`] = `
 
 exports[`Section: should accept additional classnames and place them on the root 1`] = `
 <div
-  className="testClass root secondary"
+  className="testClass Section__root Section__secondary"
 >
   Test content
 </div>
@@ -26,7 +26,7 @@ exports[`Section: should accept additional classnames and place them on the root
 
 exports[`Section: should accept additional props 1`] = `
 <div
-  className="root"
+  className="Section__root"
   testProp={true}
 >
   Test content
@@ -35,7 +35,7 @@ exports[`Section: should accept additional props 1`] = `
 
 exports[`Section: should render multiple classes together 1`] = `
 <div
-  className="root slim info secondary"
+  className="Section__root Section__slim Section__info Section__secondary"
 >
   Test content
 </div>
@@ -43,7 +43,7 @@ exports[`Section: should render multiple classes together 1`] = `
 
 exports[`Section: should render the header style 1`] = `
 <div
-  className="root header"
+  className="Section__root Section__header"
 >
   Test content
 </div>
@@ -51,7 +51,7 @@ exports[`Section: should render the header style 1`] = `
 
 exports[`Section: should render the pullout style 1`] = `
 <div
-  className="root pullout"
+  className="Section__root Section__pullout"
 >
   Test content
 </div>
@@ -59,7 +59,7 @@ exports[`Section: should render the pullout style 1`] = `
 
 exports[`Section: should render the slim style 1`] = `
 <div
-  className="root slim"
+  className="Section__root Section__slim"
 >
   Test content
 </div>
@@ -67,7 +67,7 @@ exports[`Section: should render the slim style 1`] = `
 
 exports[`Section: types: should render critical sections 1`] = `
 <div
-  className="root critical"
+  className="Section__root Section__critical"
 >
   Test content
 </div>
@@ -75,7 +75,7 @@ exports[`Section: types: should render critical sections 1`] = `
 
 exports[`Section: types: should render help sections 1`] = `
 <div
-  className="root help"
+  className="Section__root Section__help"
 >
   Test content
 </div>
@@ -83,7 +83,7 @@ exports[`Section: types: should render help sections 1`] = `
 
 exports[`Section: types: should render info sections 1`] = `
 <div
-  className="root info"
+  className="Section__root Section__info"
 >
   Test content
 </div>
@@ -91,7 +91,7 @@ exports[`Section: types: should render info sections 1`] = `
 
 exports[`Section: types: should render positive sections 1`] = `
 <div
-  className="root positive"
+  className="Section__root Section__positive"
 >
   Test content
 </div>

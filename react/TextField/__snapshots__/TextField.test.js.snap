@@ -2,7 +2,7 @@
 
 exports[`TextField clear button inputProps should be visible when value has white spaces only 1`] = `
 <div
-  className="root canClear"
+  className="TextField__root TextField__canClear"
 >
   <FieldLabel
     id="testTextField"
@@ -13,13 +13,13 @@ exports[`TextField clear button inputProps should be visible when value has whit
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value="  "
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -40,7 +40,7 @@ exports[`TextField clear button inputProps should be visible when value has whit
 
 exports[`TextField clear button inputProps should be visible when value is provided 1`] = `
 <div
-  className="root canClear"
+  className="TextField__root TextField__canClear"
 >
   <FieldLabel
     id="testTextField"
@@ -51,13 +51,13 @@ exports[`TextField clear button inputProps should be visible when value is provi
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value="abc"
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -78,7 +78,7 @@ exports[`TextField clear button inputProps should be visible when value is provi
 
 exports[`TextField clear button inputProps should not be visible when value is empty 1`] = `
 <div
-  className="root"
+  className="TextField__root"
 >
   <FieldLabel
     id="testTextField"
@@ -89,13 +89,13 @@ exports[`TextField clear button inputProps should not be visible when value is e
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value=""
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -116,7 +116,7 @@ exports[`TextField clear button inputProps should not be visible when value is e
 
 exports[`TextField clear button inputProps should not be visible when value is provided but no clear handler 1`] = `
 <div
-  className="root"
+  className="TextField__root"
 >
   <FieldLabel
     id="testTextField"
@@ -127,13 +127,13 @@ exports[`TextField clear button inputProps should not be visible when value is p
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value="abc"
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -154,7 +154,7 @@ exports[`TextField clear button inputProps should not be visible when value is p
 
 exports[`TextField clear button should be visible when value has white spaces only 1`] = `
 <div
-  className="root canClear"
+  className="TextField__root TextField__canClear"
 >
   <FieldLabel
     id="testTextField"
@@ -165,13 +165,13 @@ exports[`TextField clear button should be visible when value has white spaces on
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value="  "
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -192,7 +192,7 @@ exports[`TextField clear button should be visible when value has white spaces on
 
 exports[`TextField clear button should be visible when value is provided 1`] = `
 <div
-  className="root canClear"
+  className="TextField__root TextField__canClear"
 >
   <FieldLabel
     id="testTextField"
@@ -203,13 +203,13 @@ exports[`TextField clear button should be visible when value is provided 1`] = `
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value="abc"
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -230,7 +230,7 @@ exports[`TextField clear button should be visible when value is provided 1`] = `
 
 exports[`TextField clear button should not be visible when value is empty 1`] = `
 <div
-  className="root"
+  className="TextField__root"
 >
   <FieldLabel
     id="testTextField"
@@ -241,13 +241,13 @@ exports[`TextField clear button should not be visible when value is empty 1`] = 
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value=""
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -268,7 +268,7 @@ exports[`TextField clear button should not be visible when value is empty 1`] = 
 
 exports[`TextField clear button should not be visible when value is provided but no clear handler 1`] = `
 <div
-  className="root"
+  className="TextField__root"
 >
   <FieldLabel
     id="testTextField"
@@ -279,13 +279,13 @@ exports[`TextField clear button should not be visible when value is provided but
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value="abc"
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -306,7 +306,7 @@ exports[`TextField clear button should not be visible when value is provided but
 
 exports[`TextField should render with defaults 1`] = `
 <div
-  className="root"
+  className="TextField__root"
 >
   <FieldLabel
     id="testTextField"
@@ -317,13 +317,13 @@ exports[`TextField should render with defaults 1`] = `
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value=""
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -344,7 +344,7 @@ exports[`TextField should render with defaults 1`] = `
 
 exports[`TextField should render with input props 1`] = `
 <div
-  className="root"
+  className="TextField__root"
 >
   <FieldLabel
     id="testTextField"
@@ -355,14 +355,14 @@ exports[`TextField should render with input props 1`] = `
   />
   <input
     aria-describedby="testTextField-message"
-    className="input first-name-field"
+    className="TextField__input first-name-field"
     data-automation="first-name-field"
     id="testTextField"
     onChange={[Function]}
     value="value"
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -461,7 +461,7 @@ exports[`TextField valid / tone should render the invalid style for tone="critic
 
 exports[`TextField valid / tone should render the invalid style for valid={false} where no tone is set. It should also pass the valid prop 1`] = `
 <div
-  className="root invalid"
+  className="TextField__root TextField__invalid"
 >
   <FieldLabel
     id="testTextField"
@@ -472,13 +472,13 @@ exports[`TextField valid / tone should render the invalid style for valid={false
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value=""
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />

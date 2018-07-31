@@ -34,8 +34,8 @@ describe('CustomMonthPicker', () => {
   function render(jsx) {
     element = jsx;
     monthPicker = renderer.render(element);
-    monthDropdown = findAllWithClass(monthPicker, 'dropdown')[0] || null;
-    yearDropdown = findAllWithClass(monthPicker, 'dropdown')[1] || null;
+    monthDropdown = findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[0] || null;
+    yearDropdown = findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[1] || null;
   }
 
   function renderToDom(jsx) {
@@ -69,6 +69,14 @@ describe('CustomMonthPicker', () => {
     render(<CustomMonthPicker id="testCustomMonthPicker" tone="critical" fieldMessageId="testCustomMonthPicker-message" />);
     expect(monthDropdown.props.tone).to.equal('critical');
     expect(yearDropdown.props.tone).to.equal('critical');
+  });
+
+  it('should call onFocus when field has the focus', () => {
+    const onFocus = jest.fn();
+    renderToDom(<CustomMonthPicker id="testCustomMonthPicker" onFocus={onFocus} value={{ month: 6, year: 2010 }} fieldMessageId="testCustomMonthPicker-message" />);
+    Simulate.focus(monthDropdown);
+    Simulate.focus(yearDropdown);
+    expect(onFocus.mock.calls.length).equal(2);
   });
 
   it('should send correct month year format in onChange handler when month is changed', () => {

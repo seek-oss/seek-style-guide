@@ -2,34 +2,34 @@
 
 exports[`Radio inputProps should pass through other props to the input 1`] = `
 <div
-  className="root"
+  className="Radio__root"
 >
   <input
     checked={true}
-    className="input"
+    className="Radio__input"
     data-automation="first-name-field"
     id="testRadio"
     onChange={[Function]}
     type="radio"
   />
   <label
-    className="label"
+    className="Radio__label"
     htmlFor="testRadio"
   >
     <svg
-      className="svg"
+      className="Radio__svg"
       focusable="false"
       viewBox="0 0 200 200"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="circle circle_isHover"
+        className="Radio__circle Radio__circle_isHover"
         cx="100"
         cy="100"
         r="100"
       />
       <circle
-        className="circle circle_isSelected"
+        className="Radio__circle Radio__circle_isSelected"
         cx="100"
         cy="100"
         r="100"
@@ -37,7 +37,7 @@ exports[`Radio inputProps should pass through other props to the input 1`] = `
     </svg>
     <Text
       baseline={false}
-      className="labelText"
+      className="Radio__labelText"
       raw={true}
     >
       Still in role
@@ -48,33 +48,33 @@ exports[`Radio inputProps should pass through other props to the input 1`] = `
 
 exports[`Radio should render with className 1`] = `
 <div
-  className="root testClassname"
+  className="Radio__root testClassname"
 >
   <input
     checked={false}
-    className="input"
+    className="Radio__input"
     id="testRadio"
     onChange={[Function]}
     type="radio"
   />
   <label
-    className="label"
+    className="Radio__label"
     htmlFor="testRadio"
   >
     <svg
-      className="svg"
+      className="Radio__svg"
       focusable="false"
       viewBox="0 0 200 200"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="circle circle_isHover"
+        className="Radio__circle Radio__circle_isHover"
         cx="100"
         cy="100"
         r="100"
       />
       <circle
-        className="circle circle_isSelected"
+        className="Radio__circle Radio__circle_isSelected"
         cx="100"
         cy="100"
         r="100"
@@ -82,7 +82,7 @@ exports[`Radio should render with className 1`] = `
     </svg>
     <Text
       baseline={false}
-      className="labelText"
+      className="Radio__labelText"
       raw={true}
     >
       Still in role
@@ -93,33 +93,33 @@ exports[`Radio should render with className 1`] = `
 
 exports[`Radio should render with simple props 1`] = `
 <div
-  className="root"
+  className="Radio__root"
 >
   <input
     checked={false}
-    className="input"
+    className="Radio__input"
     id="testRadio"
     onChange={[Function]}
     type="radio"
   />
   <label
-    className="label"
+    className="Radio__label"
     htmlFor="testRadio"
   >
     <svg
-      className="svg"
+      className="Radio__svg"
       focusable="false"
       viewBox="0 0 200 200"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="circle circle_isHover"
+        className="Radio__circle Radio__circle_isHover"
         cx="100"
         cy="100"
         r="100"
       />
       <circle
-        className="circle circle_isSelected"
+        className="Radio__circle Radio__circle_isSelected"
         cx="100"
         cy="100"
         r="100"
@@ -127,7 +127,7 @@ exports[`Radio should render with simple props 1`] = `
     </svg>
     <Text
       baseline={false}
-      className="labelText"
+      className="Radio__labelText"
       raw={true}
     >
       Still in role
