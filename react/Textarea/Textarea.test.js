@@ -92,10 +92,24 @@ describe('Textarea', () => {
     });
   });
 
-  describe('valid', () => {
-    describe('set to false', () => {
-      it('Textarea should have the invalid className', () => {
+  describe('valid and tone', () => {
+    describe('if valid is set to false', () => {
+      it('should have the invalid className', () => {
         render(<Textarea id="testTextarea" valid={false} />);
+        expect(textarea.props.className).to.contain('invalid');
+      });
+    });
+
+    describe('if valid is set to false but a tone is provided', () => {
+      it('should not render the invalid style if tone is set to positive', () => {
+        render(<Textarea id="testTextarea" valid={false} tone="positive" />);
+        expect(textarea.props.className).to.not.contain('invalid');
+      });
+    });
+
+    describe('if valid is set to true but a critical tone is set', () => {
+      it('should render the invalid style for tone="critical" even if the field is valid', () => {
+        render(<Textarea id="testTextarea" tone="critical" valid="true" />);
         expect(textarea.props.className).to.contain('invalid');
       });
     });

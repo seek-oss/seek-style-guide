@@ -1,32 +1,31 @@
+// @flow
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './Section.less';
+import type { Tone } from '../private/tone';
+import type { Level } from '../private/level';
 
-export const TONE = {
-  POSITIVE: 'positive',
-  INFO: 'info',
-  CRITICAL: 'critical',
-  HELP: 'help'
-};
-
-export const LEVEL = {
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-  TERTIARY: 'tertiary'
-};
+type Props = {
+  children: any,
+  className?: string,
+  header?: boolean,
+  pullout?: boolean,
+  slim?: boolean,
+  tone?: Tone,
+  level?: Level
+}
 
 export default function Section({
   children,
-  className,
+  className = '',
   header,
   pullout,
   slim,
   tone,
   level,
   ...restProps
-}) {
+}: Props) {
   return (
     <div
       {...restProps}
@@ -43,16 +42,6 @@ export default function Section({
     </div>
   );
 }
-
-Section.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  header: PropTypes.bool,
-  pullout: PropTypes.bool,
-  slim: PropTypes.bool,
-  tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP]),
-  level: PropTypes.oneOf([LEVEL.PRIMARY, LEVEL.SECONDARY])
-};
 
 Section.defaultProps = {
   className: '',

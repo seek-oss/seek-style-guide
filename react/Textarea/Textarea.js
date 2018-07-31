@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import Text from '../Text/Text';
+import { TONE } from '../private/tone';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -40,7 +41,8 @@ export default class Textarea extends Component {
         return new Error(`\`value\` must be supplied if \`${propName}\` is set`);
       }
     },
-    secondaryLabel: PropTypes.string
+    secondaryLabel: PropTypes.string,
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP])
     /* eslint-enable consistent-return */
   };
 
@@ -103,10 +105,10 @@ export default class Textarea extends Component {
   }
 
   render() {
-    const { id, className, valid } = this.props;
+    const { id, className, valid, tone } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: valid === false,
+      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [className]: className
     });
 
@@ -122,7 +124,7 @@ export default class Textarea extends Component {
         }
         {this.renderInput()}
         <div className={styles.footer}>
-          <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
+          <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, message, messageProps, tone, ...(tone ? {} : { valid }) }} />
           {this.renderCharacterCount()}
         </div>
       </div>

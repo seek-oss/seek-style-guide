@@ -381,7 +381,85 @@ exports[`TextField should render with input props 1`] = `
 </div>
 `;
 
-exports[`TextField should render with valid false 1`] = `
+exports[`TextField valid / tone should not render the invalid style if tone is set to positive 1`] = `
+<div
+  className="root"
+>
+  <FieldLabel
+    id="testTextField"
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    aria-describedby="testTextField-message"
+    className="input"
+    id="testTextField"
+    onChange={[Function]}
+    value=""
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    id="testTextField-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    tone="positive"
+  />
+</div>
+`;
+
+exports[`TextField valid / tone should render the invalid style for tone="critical" even if the field is valid 1`] = `
+<div
+  className="root invalid"
+>
+  <FieldLabel
+    id="testTextField"
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
+    aria-describedby="testTextField-message"
+    className="input"
+    id="testTextField"
+    onChange={[Function]}
+    value=""
+  />
+  <span
+    className="clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    id="testTextField-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    tone="critical"
+  />
+</div>
+`;
+
+exports[`TextField valid / tone should render the invalid style for valid={false} where no tone is set. It should also pass the valid prop 1`] = `
 <div
   className="root invalid"
 >

@@ -65,6 +65,12 @@ describe('CustomMonthPicker', () => {
     expect(yearDropdown.props.valid).to.equal(false);
   });
 
+  it('should send a tone prop to both dropdowns', () => {
+    render(<CustomMonthPicker id="testCustomMonthPicker" tone="critical" fieldMessageId="testCustomMonthPicker-message" />);
+    expect(monthDropdown.props.tone).to.equal('critical');
+    expect(yearDropdown.props.tone).to.equal('critical');
+  });
+
   it('should send correct month year format in onChange handler when month is changed', () => {
     const onChange = newValue => {
       value = newValue;

@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import ChevronIcon from '../ChevronIcon/ChevronIcon';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
+import { TONE } from '../private/tone';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -39,7 +40,8 @@ export default class Dropdown extends Component {
         label: PropTypes.string
       })
     ),
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP])
   };
 
   static defaultProps = {
@@ -111,10 +113,10 @@ export default class Dropdown extends Component {
   }
 
   render() {
-    const { id, className, valid } = this.props;
+    const { id, className, valid, tone } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: valid === false,
+      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [className]: className
     });
 
@@ -126,7 +128,7 @@ export default class Dropdown extends Component {
         <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, message, messageProps, tone, ...(tone ? {} : { valid }) }} />
       </div>
     );
   }

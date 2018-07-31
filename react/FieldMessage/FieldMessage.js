@@ -1,7 +1,7 @@
+// @flow
 import styles from './FieldMessage.less';
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
@@ -9,22 +9,26 @@ import ErrorIcon from '../ErrorIcon/ErrorIcon';
 import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
 
 import Text from '../Text/Text';
+import type { Tone } from '../private/tone';
+import { TONE } from '../private/tone';
 
-export default class FieldMessage extends Component {
+type Props = {
+  id: string,
+  invalid?: boolean,
+  help?: string,
+  helpProps?: Object,
+  valid?: boolean,
+  message: false | Node | string,
+  messageProps: {
+    critical?: boolean,
+    positive?: boolean,
+    secondary?: boolean
+  },
+  tone?: Tone
+};
+
+export default class FieldMessage extends Component<Props> {
   static displayName = 'FieldMessage';
-
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    invalid: PropTypes.bool,
-    help: PropTypes.string,
-    helpProps: PropTypes.object,
-    valid: PropTypes.bool,
-    message: PropTypes.oneOfType([
-      PropTypes.oneOf([false]),
-      PropTypes.node
-    ]),
-    messageProps: PropTypes.object
-  };
 
   static defaultProps = {
     message: '',
@@ -35,27 +39,25 @@ export default class FieldMessage extends Component {
     }
   };
 
-  constructor() {
-    super();
-
-    this.renderMessage = this.renderMessage.bind(this);
-    this.renderMessageIcon = this.renderMessageIcon.bind(this);
-  }
-
-  renderMessage() {
-    const { id, message, valid } = this.props;
+  renderMessage = () => {
+    const { id, message, tone, valid } = this.props;
 
     if (message) {
       const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
+
+      const toneDefined = typeof tone !== 'undefined';
+      const showCritical = toneDefined ? tone === TONE.CRITICAL : valid === false;
+      const showPositive = toneDefined ? tone === TONE.POSITIVE : valid === true;
+      const showSecondary = toneDefined ? tone === TONE.HELP : typeof valid === 'undefined';
 
       return (
         <Text
           id={id}
           small
           {...restMessageProps}
-          critical={(valid === false && !secondary) || critical}
-          positive={(valid === true && !secondary) || positive}
-          secondary={typeof valid === 'undefined' || secondary}
+          critical={(showCritical && !secondary) || critical}
+          positive={(showPositive && !secondary) || positive}
+          secondary={showSecondary || secondary}
           tabIndex='-1'>
           {this.renderMessageIcon()}
           {message}
@@ -66,10 +68,13 @@ export default class FieldMessage extends Component {
     return null;
   }
 
-  renderMessageIcon() {
-    const { valid } = this.props;
+  renderMessageIcon = () => {
+    const { tone, valid } = this.props;
+    const toneDefined = typeof tone !== 'undefined';
+    const showErrorIcon = toneDefined ? tone === TONE.CRITICAL : valid === false;
+    const showTickIcon = toneDefined ? tone === TONE.POSITIVE : valid === true;
 
-    if (valid === false) {
+    if (showErrorIcon) {
       return (
         <ErrorIcon
           filled={true}
@@ -79,7 +84,7 @@ export default class FieldMessage extends Component {
       );
     }
 
-    if (valid === true) {
+    if (showTickIcon) {
       return (
         <TickCircleIcon
           filled={true}
@@ -93,10 +98,14 @@ export default class FieldMessage extends Component {
   }
 
   render() {
-    const { invalid, help, helpProps, message } = this.props;
+    const { invalid, help, helpProps, message, valid, tone } = this.props;
 
     if (invalid || help || helpProps) {
       throw new Error('WARNING: "invalid", "help", and "helpProps" have been deprecated in favour of "valid" and "message" props');
+    }
+
+    if (typeof valid !== 'undefined' && typeof tone === 'undefined') {
+      console.error('Warning: "valid" has been deprecated as a method to display positive / critical text. Use "tone" instead');
     }
 
     const classNames = classnames({

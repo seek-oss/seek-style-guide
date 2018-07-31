@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Section, { TONE, LEVEL } from './Section';
+import Section from './Section';
+import { TONE } from '../private/tone';
+import { LEVEL } from '../private/level';
 
 const renderSection = props => shallow(
   <Section {...props} >
