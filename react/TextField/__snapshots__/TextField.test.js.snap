@@ -383,7 +383,7 @@ exports[`TextField should render with input props 1`] = `
 
 exports[`TextField valid / tone should not render the invalid style if tone is set to positive 1`] = `
 <div
-  className="root"
+  className="TextField__root"
 >
   <FieldLabel
     id="testTextField"
@@ -394,13 +394,13 @@ exports[`TextField valid / tone should not render the invalid style if tone is s
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value=""
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />
@@ -422,7 +422,7 @@ exports[`TextField valid / tone should not render the invalid style if tone is s
 
 exports[`TextField valid / tone should render the invalid style for tone="critical" even if the field is valid 1`] = `
 <div
-  className="root invalid"
+  className="TextField__root TextField__invalid"
 >
   <FieldLabel
     id="testTextField"
@@ -433,13 +433,13 @@ exports[`TextField valid / tone should render the invalid style for tone="critic
   />
   <input
     aria-describedby="testTextField-message"
-    className="input"
+    className="TextField__input"
     id="testTextField"
     onChange={[Function]}
     value=""
   />
   <span
-    className="clearField"
+    className="TextField__clearField"
     onMouseDown={[Function]}
   >
     <ClearField />

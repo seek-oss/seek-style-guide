@@ -111,7 +111,7 @@ describe('FieldMessage', () => {
 
     describe('tone and valid props', () => {
       it('will use the tone prop over the valid prop for tone="critical"', () => {
-        render(<FieldMessage valid={true} tone="critical" message="Something went right" messageProps={{ className: 'message' }} />);
+        render(<FieldMessage valid={true} tone="critical" message="Something went right" messageProps={{ className: 'TEST_MESSAGE_CLASS' }} />);
         expect(messageIcon).not.to.equal(null);
         expect(message.props.positive).not.to.equal(true);
         expect(message.props.secondary).not.to.equal(true);
@@ -119,7 +119,7 @@ describe('FieldMessage', () => {
       });
 
       it('will use the tone prop over the valid prop for tone="positive"', () => {
-        render(<FieldMessage valid={false} tone="positive" message="Something went right" messageProps={{ className: 'message' }} />);
+        render(<FieldMessage valid={false} tone="positive" message="Something went right" messageProps={{ className: 'TEST_MESSAGE_CLASS' }} />);
         expect(messageIcon).not.to.equal(null);
         expect(message.props.critical).not.to.equal(true);
         expect(message.props.secondary).not.to.equal(true);
@@ -127,7 +127,7 @@ describe('FieldMessage', () => {
       });
 
       it('will use the tone prop over the valid prop for tone="positive"', () => {
-        render(<FieldMessage valid={false} tone="help" message="Something went right" messageProps={{ className: 'message' }} />);
+        render(<FieldMessage valid={false} tone="help" message="Something went right" messageProps={{ className: 'TEST_MESSAGE_CLASS' }} />);
         expect(messageIcon).to.equal(null);
         expect(message.props.critical).not.to.equal(true);
         expect(message.props.positive).not.to.equal(true);

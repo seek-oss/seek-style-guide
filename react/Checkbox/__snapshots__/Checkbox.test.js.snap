@@ -102,32 +102,32 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
 
 exports[`Checkbox should not render the invalid style if tone is set to positive 1`] = `
 <div
-  className="root"
+  className="Checkbox__root"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
@@ -152,32 +152,32 @@ exports[`Checkbox should not render the invalid style if tone is set to positive
 
 exports[`Checkbox should render the invalid style for tone="critical" even if the field is valid 1`] = `
 <div
-  className="root invalid"
+  className="Checkbox__root Checkbox__invalid"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
@@ -202,32 +202,32 @@ exports[`Checkbox should render the invalid style for tone="critical" even if th
 
 exports[`Checkbox should render the invalid style for valid={false} where no tone is set. It should also pass the valid prop 1`] = `
 <div
-  className="root invalid"
+  className="Checkbox__root Checkbox__invalid"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
