@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import (reference) '~seek-style-guide/theme';
 
 .content {
   position: relative;
@@ -8,11 +8,26 @@
 }
 
 .fadeOut {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
   position: absolute;
   height: (@row-height * 4);
   width: 100%;
   bottom: 0;
+}
+
+.card {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    @sk-white 100%
+  );
+}
+
+.body {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    @sk-background 100%
+  );
 }
 
 .chevron {

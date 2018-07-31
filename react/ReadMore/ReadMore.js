@@ -27,7 +27,8 @@ type Props = {|
   maxLines?: number,
   maxRows?: number,
   moreLabel: string,
-  lessLabel: string
+  lessLabel: string,
+  backgroundColor: 'card' | 'body'
 |};
 type State = {|
   showMore: boolean,
@@ -86,11 +87,19 @@ class ReadMore extends PureComponent<Props, State> {
   };
 
   render() {
-    const { children, maxLines, maxRows, moreLabel, lessLabel } = this.props;
+    const {
+      children,
+      maxLines,
+      maxRows,
+      moreLabel,
+      lessLabel,
+      backgroundColor
+    } = this.props;
     const { tooLong, showMore, mounted } = this.state;
 
     const truncate = mounted ? !showMore && tooLong : true;
     const showFade = truncate && mounted;
+    const fadeColor = styles[backgroundColor || 'card'];
     const showMoreLessButton = tooLong && mounted;
 
     const contentStyle = truncate ? {
@@ -102,7 +111,9 @@ class ReadMore extends PureComponent<Props, State> {
       <div>
         <div className={styles.content} style={contentStyle}>
           <div ref={this.setTextRef}>{children}</div>
-          {showFade ? <div className={styles.fadeOut} /> : null}
+          {showFade ? (
+            <div className={[styles.fadeOut, fadeColor].join(' ')} />
+          ) : null}
         </div>
         {showMoreLessButton ? (
           <Button color="transparent" onClick={this.handleShowMore}>
