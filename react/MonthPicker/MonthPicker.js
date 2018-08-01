@@ -31,7 +31,7 @@ export default class MonthPicker extends Component {
     minYear: PropTypes.number,
     maxYear: PropTypes.number,
     ascendingYears: PropTypes.bool,
-    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP])
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL])
   };
 
   static defaultProps = {

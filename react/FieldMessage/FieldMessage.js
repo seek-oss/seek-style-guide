@@ -9,7 +9,6 @@ import ErrorIcon from '../ErrorIcon/ErrorIcon';
 import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
 
 import Text from '../Text/Text';
-import type { Tone } from '../private/tone';
 import { TONE } from '../private/tone';
 
 type Props = {
@@ -24,7 +23,7 @@ type Props = {
     positive?: boolean,
     secondary?: boolean
   },
-  tone?: Tone
+  tone?: 'positive' | 'critical' | 'neutral'
 };
 
 export default class FieldMessage extends Component<Props> {
@@ -48,7 +47,7 @@ export default class FieldMessage extends Component<Props> {
       const toneDefined = typeof tone !== 'undefined';
       const showCritical = toneDefined ? tone === TONE.CRITICAL : valid === false;
       const showPositive = toneDefined ? tone === TONE.POSITIVE : valid === true;
-      const showSecondary = toneDefined ? tone === TONE.HELP : typeof valid === 'undefined';
+      const showSecondary = tone === TONE.NEUTRAL || typeof valid === 'undefined';
 
       return (
         <Text

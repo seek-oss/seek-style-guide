@@ -8,7 +8,6 @@ import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import invoke from 'lodash/invoke';
 import { TONE } from '../private/tone';
-import type { Tone } from '../private/tone';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -52,7 +51,7 @@ type FieldMessageProps = {
   invalid?: boolean,
   help?: string,
   helpProps?: Object,
-  tone?: Tone,
+  tone?: 'positive' | 'critical' | 'neutral',
   messageProps?: Object
 };
 

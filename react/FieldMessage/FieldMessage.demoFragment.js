@@ -12,11 +12,11 @@ export default [
         })
       },
       {
-        label: 'Help text',
+        label: 'Default text',
         transformProps: props => ({
           ...props,
-          tone: TONE.HELP,
-          message: 'Help message'
+          tone: TONE.NEUTRAL,
+          message: 'Text input is fun!'
         })
       },
       {

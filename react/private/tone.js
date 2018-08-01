@@ -1,11 +1,12 @@
 // @flow
-export type Tone = 'positive' | 'info' | 'critical' | 'help';
+type Tone = 'positive' | 'info' | 'critical' | 'help' | 'neutral';
 
 export const TONE: {
-  ['POSITIVE' | 'INFO' | 'CRITICAL' | 'HELP']: Tone
+  ['POSITIVE' | 'INFO' | 'CRITICAL' | 'HELP' | 'NEUTRAL']: Tone
 } = {
   POSITIVE: 'positive',
   INFO: 'info',
   CRITICAL: 'critical',
-  HELP: 'help'
+  HELP: 'help',
+  NEUTRAL: 'neutral'
 };

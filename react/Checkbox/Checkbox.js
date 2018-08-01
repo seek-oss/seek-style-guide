@@ -38,7 +38,7 @@ export default class Checkbox extends Component {
       PropTypes.node
     ]),
     messageProps: PropTypes.object,
-    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.HELP])
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL])
   }
 
   static defaultProps = {
