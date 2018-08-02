@@ -136,23 +136,17 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Default Background',
+          label: 'Card Background',
           transformProps: props => ({
-            ...omit(props, 'backgroundColor')
+            ...props,
+            backgroundComponentName: 'card'
           })
         },
         {
-          label: 'Card',
+          label: 'Body Background',
           transformProps: props => ({
             ...props,
-            backgroundColor: 'card'
-          })
-        },
-        {
-          label: 'Body',
-          transformProps: props => ({
-            ...props,
-            backgroundColor: 'body'
+            backgroundComponentName: 'body'
           })
         }
       ]

@@ -2,6 +2,7 @@
 import styles from './ReadMore.less';
 
 import React, { PureComponent } from 'react';
+import classnames from 'classnames';
 
 import themeVars from '../private/themeVars';
 import Button from '../Button/Button';
@@ -28,7 +29,7 @@ type Props = {|
   maxRows?: number,
   moreLabel: string,
   lessLabel: string,
-  backgroundComponentName: 'card' | 'body'
+  backgroundComponentName?: 'card' | 'body'
 |};
 type State = {|
   showMore: boolean,
@@ -38,7 +39,8 @@ type State = {|
 class ReadMore extends PureComponent<Props, State> {
   static defaultProps = {
     moreLabel: 'More',
-    lessLabel: 'Less'
+    lessLabel: 'Less',
+    backgroundComponentName: 'card'
   };
 
   constructor(props: Props) {
@@ -99,7 +101,7 @@ class ReadMore extends PureComponent<Props, State> {
 
     const truncate = mounted ? !showMore && tooLong : true;
     const showFade = truncate && mounted;
-    const fadeColor = styles[backgroundComponentName || 'card'];
+    const fadeColor = styles[backgroundComponentName];
     const showMoreLessButton = tooLong && mounted;
 
     const contentStyle = truncate ? {
@@ -112,7 +114,7 @@ class ReadMore extends PureComponent<Props, State> {
         <div className={styles.content} style={contentStyle}>
           <div ref={this.setTextRef}>{children}</div>
           {showFade ? (
-            <div className={[styles.fadeOut, fadeColor].join(' ')} />
+            <div className={classnames(styles.fadeOut, fadeColor)} />
           ) : null}
         </div>
         {showMoreLessButton ? (
