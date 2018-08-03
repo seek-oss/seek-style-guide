@@ -42,7 +42,7 @@ const ReadMoreContainer = ({ component: DemoComponent, componentProps }) => (
   <Card
     style={{ width: 500 }}
     className={
-      componentProps.backgroundColor === 'body' ? styles.grayBackground : ''
+      componentProps.backgroundComponentName === 'body' ? styles.grayBackground : ''
     }>
     <Section>
       <DemoComponent {...componentProps} />
