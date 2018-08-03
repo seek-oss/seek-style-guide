@@ -54,7 +54,7 @@
     "lodash": "^4.17.4",
     "pad-left": "^2.1.0",
     "prop-types": "^15.6.0",
-    "react-autosuggest": "^9.3.2",
+    "react-autosuggest": "9.3.2",
     "react-autowhatever": "10.1.1",
     "react-isolated-scroll": "^0.1.1"
   },
