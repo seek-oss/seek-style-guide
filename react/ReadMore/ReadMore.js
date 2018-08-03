@@ -2,6 +2,7 @@
 import styles from './ReadMore.less';
 
 import React, { PureComponent } from 'react';
+import classnames from 'classnames';
 
 import themeVars from '../private/themeVars';
 import Button from '../Button/Button';
@@ -27,7 +28,8 @@ type Props = {|
   maxLines?: number,
   maxRows?: number,
   moreLabel: string,
-  lessLabel: string
+  lessLabel: string,
+  backgroundComponentName?: 'card' | 'body'
 |};
 type State = {|
   showMore: boolean,
@@ -37,7 +39,8 @@ type State = {|
 class ReadMore extends PureComponent<Props, State> {
   static defaultProps = {
     moreLabel: 'More',
-    lessLabel: 'Less'
+    lessLabel: 'Less',
+    backgroundComponentName: 'card'
   };
 
   constructor(props: Props) {
@@ -86,11 +89,19 @@ class ReadMore extends PureComponent<Props, State> {
   };
 
   render() {
-    const { children, maxLines, maxRows, moreLabel, lessLabel } = this.props;
+    const {
+      children,
+      maxLines,
+      maxRows,
+      moreLabel,
+      lessLabel,
+      backgroundComponentName
+    } = this.props;
     const { tooLong, showMore, mounted } = this.state;
 
     const truncate = mounted ? !showMore && tooLong : true;
     const showFade = truncate && mounted;
+    const fadeColor = styles[backgroundComponentName];
     const showMoreLessButton = tooLong && mounted;
 
     const contentStyle = truncate ? {
@@ -102,7 +113,9 @@ class ReadMore extends PureComponent<Props, State> {
       <div>
         <div className={styles.content} style={contentStyle}>
           <div ref={this.setTextRef}>{children}</div>
-          {showFade ? <div className={styles.fadeOut} /> : null}
+          {showFade ? (
+            <div className={classnames(styles.fadeOut, fadeColor)} />
+          ) : null}
         </div>
         {showMoreLessButton ? (
           <Button color="transparent" onClick={this.handleShowMore}>
