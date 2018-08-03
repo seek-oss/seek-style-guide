@@ -2,7 +2,7 @@
 
 exports[`Pill: should pass through additional props 1`] = `
 <span
-  className="staticPill"
+  className="Pill__staticPill"
   custom-prop={true}
 >
   <Text
@@ -16,7 +16,7 @@ exports[`Pill: should pass through additional props 1`] = `
 
 exports[`Pill: should render a child component 1`] = `
 <span
-  className="staticPill"
+  className="Pill__staticPill"
 >
   <Text
     baseline={false}
@@ -29,7 +29,7 @@ exports[`Pill: should render a child component 1`] = `
 
 exports[`Pill: should render a static pill 1`] = `
 <span
-  className="staticPill"
+  className="Pill__staticPill"
 >
   <Text
     baseline={false}
@@ -42,7 +42,7 @@ exports[`Pill: should render a static pill 1`] = `
 
 exports[`Pill: should render an additional class for the interactive pill 1`] = `
 <span
-  className="test-class interactivePill"
+  className="test-class Pill__interactivePill"
 >
   <Text
     baseline={false}
@@ -51,7 +51,7 @@ exports[`Pill: should render an additional class for the interactive pill 1`] = 
     I am a pill
   </Text>
   <button
-    className="removeButton"
+    className="Pill__removeButton"
     onClick={[Function]}
   >
     <ScreenReaderOnly
@@ -61,11 +61,11 @@ exports[`Pill: should render an additional class for the interactive pill 1`] = 
       I am a pill
     </ScreenReaderOnly>
     <div
-      className="removeCircle"
+      className="Pill__removeCircle"
     >
       <CrossIcon
-        className="removeIcon"
-        svgClassName="removeSvg"
+        className="Pill__removeIcon"
+        svgClassName="Pill__removeSvg"
       />
     </div>
   </button>
@@ -74,7 +74,7 @@ exports[`Pill: should render an additional class for the interactive pill 1`] = 
 
 exports[`Pill: should render an additional class for the static pill 1`] = `
 <span
-  className="test-class staticPill"
+  className="test-class Pill__staticPill"
 >
   <Text
     baseline={false}
@@ -87,7 +87,7 @@ exports[`Pill: should render an additional class for the static pill 1`] = `
 
 exports[`Pill: should render an interactive pill 1`] = `
 <span
-  className="interactivePill"
+  className="Pill__interactivePill"
 >
   <Text
     baseline={false}
@@ -96,7 +96,7 @@ exports[`Pill: should render an interactive pill 1`] = `
     I am a pill
   </Text>
   <button
-    className="removeButton"
+    className="Pill__removeButton"
     onClick={[Function]}
   >
     <ScreenReaderOnly
@@ -106,11 +106,11 @@ exports[`Pill: should render an interactive pill 1`] = `
       I am a pill
     </ScreenReaderOnly>
     <div
-      className="removeCircle"
+      className="Pill__removeCircle"
     >
       <CrossIcon
-        className="removeIcon"
-        svgClassName="removeSvg"
+        className="Pill__removeIcon"
+        svgClassName="Pill__removeSvg"
       />
     </div>
   </button>
@@ -119,7 +119,7 @@ exports[`Pill: should render an interactive pill 1`] = `
 
 exports[`Pill: should render an interactive pill with the legacy "text" prop 1`] = `
 <span
-  className="interactivePill"
+  className="Pill__interactivePill"
 >
   <Text
     baseline={false}
@@ -128,7 +128,7 @@ exports[`Pill: should render an interactive pill with the legacy "text" prop 1`]
     I am a pill
   </Text>
   <button
-    className="removeButton"
+    className="Pill__removeButton"
     onClick={[Function]}
   >
     <ScreenReaderOnly
@@ -138,11 +138,11 @@ exports[`Pill: should render an interactive pill with the legacy "text" prop 1`]
       I am a pill
     </ScreenReaderOnly>
     <div
-      className="removeCircle"
+      className="Pill__removeCircle"
     >
       <CrossIcon
-        className="removeIcon"
-        svgClassName="removeSvg"
+        className="Pill__removeIcon"
+        svgClassName="Pill__removeSvg"
       />
     </div>
   </button>
@@ -151,7 +151,7 @@ exports[`Pill: should render an interactive pill with the legacy "text" prop 1`]
 
 exports[`Pill: should support the legacy "text" prop 1`] = `
 <span
-  className="staticPill"
+  className="Pill__staticPill"
 >
   <Text
     baseline={false}

@@ -6,23 +6,24 @@ exports[`Autosuggest should render with label 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-owns="react-autowhatever-1"
+    class="Autosuggest__container"
     role="combobox"
   >
     <div
-      class="root"
+      class="TextField__root"
     >
       <label
         class=""
         for="testAutosuggest"
       >
         <span
-          class="root standard baseline"
+          class="Text__root Text__standard Text__baseline"
         >
           <span
             class=""
           >
             <strong
-              class="root"
+              class="Strong__root"
             >
               Foo
             </strong>
@@ -35,36 +36,36 @@ exports[`Autosuggest should render with label 1`] = `
         aria-controls="react-autowhatever-1"
         aria-describedby="testAutosuggest-message"
         autocomplete="off"
-        class="input"
+        class="TextField__input"
         id="testAutosuggest"
         type="text"
         value=""
       />
       <span
-        class="clearField"
+        class="TextField__clearField"
       >
         <div
-          class="root"
+          class="ClearField__root"
         >
           <span
-            class="root"
+            class="Icon__root"
           >
             mock svg
           </span>
         </div>
       </span>
       <div
-        class="root"
+        class="FieldMessage__root"
       />
     </div>
     <div
-      class="suggestionsContainer suggestionsContainer_withLabel"
+      class="Autosuggest__suggestionsContainer Autosuggest__suggestionsContainer_withLabel"
       id="react-autowhatever-1"
       role="listbox"
     />
   </div>
   <div
-    class="autosuggestBackdrop"
+    class="Autosuggest__autosuggestBackdrop"
   />
 </div>
 `;
@@ -75,23 +76,24 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-owns="react-autowhatever-1"
+    class="Autosuggest__container"
     role="combobox"
   >
     <div
-      class="root"
+      class="TextField__root"
     >
       <label
-        class="isLabelCoveredWithBackdrop LABEL_TEST_CLASS"
+        class="Autosuggest__isLabelCoveredWithBackdrop LABEL_TEST_CLASS"
         for="testAutosuggest"
       >
         <span
-          class="root standard baseline"
+          class="Text__root Text__standard Text__baseline"
         >
           <span
             class=""
           >
             <strong
-              class="root"
+              class="Strong__root"
             >
               Foo
             </strong>
@@ -104,36 +106,36 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
         aria-controls="react-autowhatever-1"
         aria-describedby="testAutosuggest-message"
         autocomplete="off"
-        class="input"
+        class="TextField__input"
         id="testAutosuggest"
         type="text"
         value=""
       />
       <span
-        class="clearField"
+        class="TextField__clearField"
       >
         <div
-          class="root"
+          class="ClearField__root"
         >
           <span
-            class="root"
+            class="Icon__root"
           >
             mock svg
           </span>
         </div>
       </span>
       <div
-        class="root"
+        class="FieldMessage__root"
       />
     </div>
     <div
-      class="suggestionsContainer suggestionsContainer_withLabel"
+      class="Autosuggest__suggestionsContainer Autosuggest__suggestionsContainer_withLabel"
       id="react-autowhatever-1"
       role="listbox"
     />
   </div>
   <div
-    class="autosuggestBackdrop backdrop_isMobile"
+    class="Autosuggest__autosuggestBackdrop Autosuggest__backdrop_isMobile"
   />
 </div>
 `;
@@ -144,46 +146,47 @@ exports[`Autosuggest should render with simple props 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-owns="react-autowhatever-1"
+    class="Autosuggest__container"
     role="combobox"
   >
     <div
-      class="root"
+      class="TextField__root"
     >
       <input
         aria-autocomplete="list"
         aria-controls="react-autowhatever-1"
         aria-describedby="testAutosuggest-message"
         autocomplete="off"
-        class="input"
+        class="TextField__input"
         id="testAutosuggest"
         type="text"
         value=""
       />
       <span
-        class="clearField"
+        class="TextField__clearField"
       >
         <div
-          class="root"
+          class="ClearField__root"
         >
           <span
-            class="root"
+            class="Icon__root"
           >
             mock svg
           </span>
         </div>
       </span>
       <div
-        class="root"
+        class="FieldMessage__root"
       />
     </div>
     <div
-      class="suggestionsContainer"
+      class="Autosuggest__suggestionsContainer"
       id="react-autowhatever-1"
       role="listbox"
     />
   </div>
   <div
-    class="autosuggestBackdrop"
+    class="Autosuggest__autosuggestBackdrop"
   />
 </div>
 `;
@@ -194,40 +197,41 @@ exports[`Autosuggest should render with suggestions 1`] = `
     aria-expanded="true"
     aria-haspopup="listbox"
     aria-owns="react-autowhatever-1"
+    class="Autosuggest__container Autosuggest__containerOpen"
     role="combobox"
   >
     <div
-      class="root"
+      class="TextField__root"
     >
       <input
         aria-autocomplete="list"
         aria-controls="react-autowhatever-1"
         aria-describedby="testAutosuggest-message"
         autocomplete="off"
-        class="input"
+        class="TextField__input"
         id="testAutosuggest"
         type="text"
         value=""
       />
       <span
-        class="clearField"
+        class="TextField__clearField"
       >
         <div
-          class="root"
+          class="ClearField__root"
         >
           <span
-            class="root"
+            class="Icon__root"
           >
             mock svg
           </span>
         </div>
       </span>
       <div
-        class="root"
+        class="FieldMessage__root"
       />
     </div>
     <div
-      class="suggestionsContainer"
+      class="Autosuggest__suggestionsContainer Autosuggest__suggestionsContainerOpen"
       id="react-autowhatever-1"
       role="listbox"
     >
@@ -236,6 +240,7 @@ exports[`Autosuggest should render with suggestions 1`] = `
       >
         <li
           aria-selected="false"
+          class="Autosuggest__suggestion"
           data-suggestion-index="0"
           id="react-autowhatever-1--item-0"
           role="option"
@@ -248,6 +253,7 @@ exports[`Autosuggest should render with suggestions 1`] = `
         </li>
         <li
           aria-selected="false"
+          class="Autosuggest__suggestion"
           data-suggestion-index="1"
           id="react-autowhatever-1--item-1"
           role="option"
@@ -262,7 +268,7 @@ exports[`Autosuggest should render with suggestions 1`] = `
     </div>
   </div>
   <div
-    class="autosuggestBackdrop"
+    class="Autosuggest__autosuggestBackdrop"
   />
 </div>
 `;

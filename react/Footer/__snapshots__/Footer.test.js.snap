@@ -3,15 +3,15 @@
 exports[`Footer: should render when authenticated 1`] = `
 <footer
   aria-labelledby="FooterHeading"
-  class="root"
+  class="Footer__root"
   role="contentinfo"
 >
   <span
-    class="print"
+    class="Hidden__print"
   >
     <section>
       <span
-        class="root"
+        class="ScreenReaderOnly__root"
       >
         <h1
           id="FooterHeading"
@@ -20,17 +20,17 @@ exports[`Footer: should render when authenticated 1`] = `
         </h1>
       </span>
       <div
-        class="content"
+        class="Footer__content"
       >
         <div
-          class="columns"
+          class="Footer__columns"
         >
           <nav
             aria-label="Tools"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Tools
             </h1>
@@ -39,7 +39,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:jobs"
                   href="/"
                 >
@@ -50,7 +50,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:profile"
                   href="/profile/"
                 >
@@ -61,7 +61,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:my+activity"
                   href="/myactivity"
                   rel="nofollow"
@@ -73,7 +73,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:favourite"
                   href="/my-activity/saved-jobs"
                   rel="nofollow"
@@ -85,7 +85,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:applied"
                   href="/my-activity/applied-jobs"
                   rel="nofollow"
@@ -97,7 +97,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
@@ -108,7 +108,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:companies"
                   href="/companies/"
                 >
@@ -119,29 +119,29 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerSitesToggle"
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.com.au/"
                     >
@@ -152,7 +152,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:nz+homepage"
                       href="https://www.seek.co.nz/"
                     >
@@ -163,7 +163,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:courses"
                       href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
@@ -174,7 +174,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:business+for+sale"
                       href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
                     >
@@ -185,7 +185,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:volunteering"
                       href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
                     >
@@ -198,19 +198,19 @@ exports[`Footer: should render when authenticated 1`] = `
           </nav>
           <nav
             aria-label="Company"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Company
             </h1>
             <ul>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:about+seek"
                   href="/about"
                 >
@@ -218,10 +218,10 @@ exports[`Footer: should render when authenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:media"
                   href="/about/news"
                 >
@@ -229,10 +229,10 @@ exports[`Footer: should render when authenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:investor+centre"
                   href="/about/investors"
                 >
@@ -240,39 +240,39 @@ exports[`Footer: should render when authenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="InternationalPartnersToggle"
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:bdjobs"
                       href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Bangladesh
                     </span>
@@ -281,14 +281,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:brighter+monday"
                       href="https://www.brightermonday.com"
                     >
                       Brighter Monday
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — E Africa
                     </span>
@@ -297,14 +297,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:catho"
                       href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Brazil
                     </span>
@@ -313,14 +313,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobberman"
                       href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — W Africa
                     </span>
@@ -329,14 +329,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobsdb"
                       href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -345,14 +345,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobstreet"
                       href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -361,14 +361,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+int"
                       href="https://www.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Worldwide
                     </span>
@@ -377,14 +377,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:occ+mundial"
                       href="https://www.occ.com.mx"
                     >
                       OCC Mundial
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Mexico
                     </span>
@@ -393,14 +393,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:workana"
                       href="https://www.workana.com"
                     >
                       Workana
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Latin America
                     </span>
@@ -409,14 +409,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:zhaopin"
                       href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — China
                     </span>
@@ -425,14 +425,14 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+au"
                       href="https://au.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Australia
                     </span>
@@ -440,33 +440,33 @@ exports[`Footer: should render when authenticated 1`] = `
                 </ul>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerServicesToggle"
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobadder"
                       href="https://jobadder.com/au"
                     >
@@ -477,7 +477,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+local"
                       data-automation="jora-local-link"
                       href="http://www.joralocal.com.au"
@@ -489,7 +489,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:realestate+au"
                       href="https://www.realestate.com.au/buy"
                     >
@@ -500,7 +500,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sidekicker"
                       href="https://www.sidekicker.com.au/"
                     >
@@ -511,7 +511,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:ximble"
                       href="https://www.ximble.com"
                     >
@@ -522,7 +522,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sparkhire"
                       href="https://anz.sparkhire.com/"
                     >
@@ -535,10 +535,10 @@ exports[`Footer: should render when authenticated 1`] = `
           </nav>
           <nav
             aria-label="Connect"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Connect
             </h1>
@@ -547,7 +547,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:contact+us"
                   href="/contact-us"
                 >
@@ -555,10 +555,10 @@ exports[`Footer: should render when authenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:work+for+seek"
                   href="/work-for-seek"
                 >
@@ -566,10 +566,10 @@ exports[`Footer: should render when authenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:product+blog"
                   href="http://productblog.seek.com.au"
                 >
@@ -580,29 +580,29 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="SocialToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="SocialToggle"
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:facebook"
                       href="https://www.facebook.com/SEEK/"
                     >
@@ -613,7 +613,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:instagram"
                       href="https://www.instagram.com/seekau/"
                     >
@@ -624,7 +624,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:twitter"
                       href="https://twitter.com/seekjobs"
                     >
@@ -635,7 +635,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:youtube"
                       href="https://www.youtube.com/user/SEEKJobs"
                     >
@@ -648,10 +648,10 @@ exports[`Footer: should render when authenticated 1`] = `
           </nav>
           <nav
             aria-label="Employers"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Employers
             </h1>
@@ -660,7 +660,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
                   rel="nofollow"
@@ -672,7 +672,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:post+a+job+ad"
                   href="https://talent.seek.com.au/"
                 >
@@ -683,7 +683,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:products+prices"
                   href="https://talent.seek.com.au/Support/OurProducts"
                 >
@@ -694,7 +694,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:customer+service"
                   href="https://talent.seek.com.au/ContactUs"
                 >
@@ -705,7 +705,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:insight+blog"
                   href="http://insightsresources.seek.com.au"
                 >
@@ -716,17 +716,17 @@ exports[`Footer: should render when authenticated 1`] = `
           </nav>
         </div>
         <nav
-          class="copyright"
+          class="Footer__copyright"
         >
           <span
-            class="root"
+            class="ScreenReaderOnly__root"
           >
             <h1>
               Additional Links
             </h1>
           </span>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
             rel="nofollow"
@@ -734,7 +734,7 @@ exports[`Footer: should render when authenticated 1`] = `
             Privacy
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
             rel="nofollow"
@@ -742,7 +742,7 @@ exports[`Footer: should render when authenticated 1`] = `
             Terms & Conditions
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
             rel="nofollow"
@@ -750,14 +750,14 @@ exports[`Footer: should render when authenticated 1`] = `
             Protect yourself online
           </a>
           <a
-            class="copyrightLink secondaryLink"
+            class="Footer__copyrightLink Footer__secondaryLink"
             data-analytics="toolbar:site+map"
             href="/sitemap"
           >
             Site Map
           </a>
           <p
-            class="copyrightMessage"
+            class="Footer__copyrightMessage"
           >
             © SEEK. All rights reserved.
           </p>
@@ -771,15 +771,15 @@ exports[`Footer: should render when authenticated 1`] = `
 exports[`Footer: should render when authentication is pending 1`] = `
 <footer
   aria-labelledby="FooterHeading"
-  class="root"
+  class="Footer__root"
   role="contentinfo"
 >
   <span
-    class="print"
+    class="Hidden__print"
   >
     <section>
       <span
-        class="root"
+        class="ScreenReaderOnly__root"
       >
         <h1
           id="FooterHeading"
@@ -788,17 +788,17 @@ exports[`Footer: should render when authentication is pending 1`] = `
         </h1>
       </span>
       <div
-        class="content"
+        class="Footer__content"
       >
         <div
-          class="columns"
+          class="Footer__columns"
         >
           <nav
             aria-label="Tools"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Tools
             </h1>
@@ -807,7 +807,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:jobs"
                   href="/"
                 >
@@ -818,7 +818,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:profile"
                   href="/profile/"
                 >
@@ -829,7 +829,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:my+activity"
                   href="/sign-in?returnUrl=%2Fmyactivity"
                   rel="nofollow"
@@ -841,7 +841,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                   rel="nofollow"
@@ -853,7 +853,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                   rel="nofollow"
@@ -865,7 +865,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
@@ -876,7 +876,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:companies"
                   href="/companies/"
                 >
@@ -887,29 +887,29 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerSitesToggle"
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.com.au/"
                     >
@@ -920,7 +920,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:nz+homepage"
                       href="https://www.seek.co.nz/"
                     >
@@ -931,7 +931,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:courses"
                       href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
@@ -942,7 +942,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:business+for+sale"
                       href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
                     >
@@ -953,7 +953,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:volunteering"
                       href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
                     >
@@ -966,19 +966,19 @@ exports[`Footer: should render when authentication is pending 1`] = `
           </nav>
           <nav
             aria-label="Company"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Company
             </h1>
             <ul>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:about+seek"
                   href="/about"
                 >
@@ -986,10 +986,10 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:media"
                   href="/about/news"
                 >
@@ -997,10 +997,10 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:investor+centre"
                   href="/about/investors"
                 >
@@ -1008,39 +1008,39 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="InternationalPartnersToggle"
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:bdjobs"
                       href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Bangladesh
                     </span>
@@ -1049,14 +1049,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:brighter+monday"
                       href="https://www.brightermonday.com"
                     >
                       Brighter Monday
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — E Africa
                     </span>
@@ -1065,14 +1065,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:catho"
                       href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Brazil
                     </span>
@@ -1081,14 +1081,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobberman"
                       href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — W Africa
                     </span>
@@ -1097,14 +1097,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobsdb"
                       href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -1113,14 +1113,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobstreet"
                       href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -1129,14 +1129,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+int"
                       href="https://www.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Worldwide
                     </span>
@@ -1145,14 +1145,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:occ+mundial"
                       href="https://www.occ.com.mx"
                     >
                       OCC Mundial
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Mexico
                     </span>
@@ -1161,14 +1161,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:workana"
                       href="https://www.workana.com"
                     >
                       Workana
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Latin America
                     </span>
@@ -1177,14 +1177,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:zhaopin"
                       href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — China
                     </span>
@@ -1193,14 +1193,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+au"
                       href="https://au.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Australia
                     </span>
@@ -1208,33 +1208,33 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 </ul>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerServicesToggle"
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobadder"
                       href="https://jobadder.com/au"
                     >
@@ -1245,7 +1245,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+local"
                       data-automation="jora-local-link"
                       href="http://www.joralocal.com.au"
@@ -1257,7 +1257,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:realestate+au"
                       href="https://www.realestate.com.au/buy"
                     >
@@ -1268,7 +1268,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sidekicker"
                       href="https://www.sidekicker.com.au/"
                     >
@@ -1279,7 +1279,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:ximble"
                       href="https://www.ximble.com"
                     >
@@ -1290,7 +1290,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sparkhire"
                       href="https://anz.sparkhire.com/"
                     >
@@ -1303,10 +1303,10 @@ exports[`Footer: should render when authentication is pending 1`] = `
           </nav>
           <nav
             aria-label="Connect"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Connect
             </h1>
@@ -1315,7 +1315,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:contact+us"
                   href="/contact-us"
                 >
@@ -1323,10 +1323,10 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:work+for+seek"
                   href="/work-for-seek"
                 >
@@ -1334,10 +1334,10 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:product+blog"
                   href="http://productblog.seek.com.au"
                 >
@@ -1348,29 +1348,29 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="SocialToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="SocialToggle"
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:facebook"
                       href="https://www.facebook.com/SEEK/"
                     >
@@ -1381,7 +1381,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:instagram"
                       href="https://www.instagram.com/seekau/"
                     >
@@ -1392,7 +1392,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:twitter"
                       href="https://twitter.com/seekjobs"
                     >
@@ -1403,7 +1403,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:youtube"
                       href="https://www.youtube.com/user/SEEKJobs"
                     >
@@ -1416,10 +1416,10 @@ exports[`Footer: should render when authentication is pending 1`] = `
           </nav>
           <nav
             aria-label="Employers"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Employers
             </h1>
@@ -1428,7 +1428,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
                   rel="nofollow"
@@ -1440,7 +1440,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:post+a+job+ad"
                   href="https://talent.seek.com.au/"
                 >
@@ -1451,7 +1451,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:products+prices"
                   href="https://talent.seek.com.au/Support/OurProducts"
                 >
@@ -1462,7 +1462,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:customer+service"
                   href="https://talent.seek.com.au/ContactUs"
                 >
@@ -1473,7 +1473,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:insight+blog"
                   href="http://insightsresources.seek.com.au"
                 >
@@ -1484,17 +1484,17 @@ exports[`Footer: should render when authentication is pending 1`] = `
           </nav>
         </div>
         <nav
-          class="copyright"
+          class="Footer__copyright"
         >
           <span
-            class="root"
+            class="ScreenReaderOnly__root"
           >
             <h1>
               Additional Links
             </h1>
           </span>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
             rel="nofollow"
@@ -1502,7 +1502,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
             Privacy
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
             rel="nofollow"
@@ -1510,7 +1510,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
             Terms & Conditions
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
             rel="nofollow"
@@ -1518,14 +1518,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
             Protect yourself online
           </a>
           <a
-            class="copyrightLink secondaryLink"
+            class="Footer__copyrightLink Footer__secondaryLink"
             data-analytics="toolbar:site+map"
             href="/sitemap"
           >
             Site Map
           </a>
           <p
-            class="copyrightMessage"
+            class="Footer__copyrightMessage"
           >
             © SEEK. All rights reserved.
           </p>
@@ -1539,15 +1539,15 @@ exports[`Footer: should render when authentication is pending 1`] = `
 exports[`Footer: should render when unauthenticated 1`] = `
 <footer
   aria-labelledby="FooterHeading"
-  class="root"
+  class="Footer__root"
   role="contentinfo"
 >
   <span
-    class="print"
+    class="Hidden__print"
   >
     <section>
       <span
-        class="root"
+        class="ScreenReaderOnly__root"
       >
         <h1
           id="FooterHeading"
@@ -1556,17 +1556,17 @@ exports[`Footer: should render when unauthenticated 1`] = `
         </h1>
       </span>
       <div
-        class="content"
+        class="Footer__content"
       >
         <div
-          class="columns"
+          class="Footer__columns"
         >
           <nav
             aria-label="Tools"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Tools
             </h1>
@@ -1575,7 +1575,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:jobs"
                   href="/"
                 >
@@ -1586,7 +1586,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:profile"
                   href="/profile/"
                 >
@@ -1597,7 +1597,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:my+activity"
                   href="/sign-in?returnUrl=%2Fmyactivity"
                   rel="nofollow"
@@ -1609,7 +1609,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                   rel="nofollow"
@@ -1621,7 +1621,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                   rel="nofollow"
@@ -1633,7 +1633,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
@@ -1644,7 +1644,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:companies"
                   href="/companies/"
                 >
@@ -1655,29 +1655,29 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerSitesToggle"
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.com.au/"
                     >
@@ -1688,7 +1688,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:nz+homepage"
                       href="https://www.seek.co.nz/"
                     >
@@ -1699,7 +1699,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:courses"
                       href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
@@ -1710,7 +1710,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:business+for+sale"
                       href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
                     >
@@ -1721,7 +1721,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:volunteering"
                       href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
                     >
@@ -1734,19 +1734,19 @@ exports[`Footer: should render when unauthenticated 1`] = `
           </nav>
           <nav
             aria-label="Company"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Company
             </h1>
             <ul>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:about+seek"
                   href="/about"
                 >
@@ -1754,10 +1754,10 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:media"
                   href="/about/news"
                 >
@@ -1765,10 +1765,10 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:investor+centre"
                   href="/about/investors"
                 >
@@ -1776,39 +1776,39 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="InternationalPartnersToggle"
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:bdjobs"
                       href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Bangladesh
                     </span>
@@ -1817,14 +1817,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:brighter+monday"
                       href="https://www.brightermonday.com"
                     >
                       Brighter Monday
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — E Africa
                     </span>
@@ -1833,14 +1833,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:catho"
                       href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Brazil
                     </span>
@@ -1849,14 +1849,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobberman"
                       href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — W Africa
                     </span>
@@ -1865,14 +1865,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobsdb"
                       href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -1881,14 +1881,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobstreet"
                       href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -1897,14 +1897,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+int"
                       href="https://www.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Worldwide
                     </span>
@@ -1913,14 +1913,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:occ+mundial"
                       href="https://www.occ.com.mx"
                     >
                       OCC Mundial
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Mexico
                     </span>
@@ -1929,14 +1929,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:workana"
                       href="https://www.workana.com"
                     >
                       Workana
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Latin America
                     </span>
@@ -1945,14 +1945,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:zhaopin"
                       href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — China
                     </span>
@@ -1961,14 +1961,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+au"
                       href="https://au.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Australia
                     </span>
@@ -1976,33 +1976,33 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 </ul>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerServicesToggle"
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobadder"
                       href="https://jobadder.com/au"
                     >
@@ -2013,7 +2013,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+local"
                       data-automation="jora-local-link"
                       href="http://www.joralocal.com.au"
@@ -2025,7 +2025,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:realestate+au"
                       href="https://www.realestate.com.au/buy"
                     >
@@ -2036,7 +2036,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sidekicker"
                       href="https://www.sidekicker.com.au/"
                     >
@@ -2047,7 +2047,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:ximble"
                       href="https://www.ximble.com"
                     >
@@ -2058,7 +2058,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sparkhire"
                       href="https://anz.sparkhire.com/"
                     >
@@ -2071,10 +2071,10 @@ exports[`Footer: should render when unauthenticated 1`] = `
           </nav>
           <nav
             aria-label="Connect"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Connect
             </h1>
@@ -2083,7 +2083,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:contact+us"
                   href="/contact-us"
                 >
@@ -2091,10 +2091,10 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:work+for+seek"
                   href="/work-for-seek"
                 >
@@ -2102,10 +2102,10 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:product+blog"
                   href="http://productblog.seek.com.au"
                 >
@@ -2116,29 +2116,29 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="SocialToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="SocialToggle"
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:facebook"
                       href="https://www.facebook.com/SEEK/"
                     >
@@ -2149,7 +2149,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:instagram"
                       href="https://www.instagram.com/seekau/"
                     >
@@ -2160,7 +2160,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:twitter"
                       href="https://twitter.com/seekjobs"
                     >
@@ -2171,7 +2171,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:youtube"
                       href="https://www.youtube.com/user/SEEKJobs"
                     >
@@ -2184,10 +2184,10 @@ exports[`Footer: should render when unauthenticated 1`] = `
           </nav>
           <nav
             aria-label="Employers"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Employers
             </h1>
@@ -2196,7 +2196,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
                   rel="nofollow"
@@ -2208,7 +2208,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:post+a+job+ad"
                   href="https://talent.seek.com.au/"
                 >
@@ -2219,7 +2219,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:products+prices"
                   href="https://talent.seek.com.au/Support/OurProducts"
                 >
@@ -2230,7 +2230,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:customer+service"
                   href="https://talent.seek.com.au/ContactUs"
                 >
@@ -2241,7 +2241,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:insight+blog"
                   href="http://insightsresources.seek.com.au"
                 >
@@ -2252,17 +2252,17 @@ exports[`Footer: should render when unauthenticated 1`] = `
           </nav>
         </div>
         <nav
-          class="copyright"
+          class="Footer__copyright"
         >
           <span
-            class="root"
+            class="ScreenReaderOnly__root"
           >
             <h1>
               Additional Links
             </h1>
           </span>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
             rel="nofollow"
@@ -2270,7 +2270,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
             Privacy
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
             rel="nofollow"
@@ -2278,7 +2278,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
             Terms & Conditions
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
             rel="nofollow"
@@ -2286,14 +2286,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
             Protect yourself online
           </a>
           <a
-            class="copyrightLink secondaryLink"
+            class="Footer__copyrightLink Footer__secondaryLink"
             data-analytics="toolbar:site+map"
             href="/sitemap"
           >
             Site Map
           </a>
           <p
-            class="copyrightMessage"
+            class="Footer__copyrightMessage"
           >
             © SEEK. All rights reserved.
           </p>
@@ -2307,15 +2307,15 @@ exports[`Footer: should render when unauthenticated 1`] = `
 exports[`Footer: should render with locale of AU 1`] = `
 <footer
   aria-labelledby="FooterHeading"
-  class="root"
+  class="Footer__root"
   role="contentinfo"
 >
   <span
-    class="print"
+    class="Hidden__print"
   >
     <section>
       <span
-        class="root"
+        class="ScreenReaderOnly__root"
       >
         <h1
           id="FooterHeading"
@@ -2324,17 +2324,17 @@ exports[`Footer: should render with locale of AU 1`] = `
         </h1>
       </span>
       <div
-        class="content"
+        class="Footer__content"
       >
         <div
-          class="columns"
+          class="Footer__columns"
         >
           <nav
             aria-label="Tools"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Tools
             </h1>
@@ -2343,7 +2343,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:jobs"
                   href="/"
                 >
@@ -2354,7 +2354,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:profile"
                   href="/profile/"
                 >
@@ -2365,7 +2365,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:my+activity"
                   href="/sign-in?returnUrl=%2Fmyactivity"
                   rel="nofollow"
@@ -2377,7 +2377,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                   rel="nofollow"
@@ -2389,7 +2389,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                   rel="nofollow"
@@ -2401,7 +2401,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
@@ -2412,7 +2412,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:companies"
                   href="/companies/"
                 >
@@ -2423,29 +2423,29 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerSitesToggle"
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.com.au/"
                     >
@@ -2456,7 +2456,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:nz+homepage"
                       href="https://www.seek.co.nz/"
                     >
@@ -2467,7 +2467,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:courses"
                       href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
@@ -2478,7 +2478,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:business+for+sale"
                       href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
                     >
@@ -2489,7 +2489,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:volunteering"
                       href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
                     >
@@ -2502,19 +2502,19 @@ exports[`Footer: should render with locale of AU 1`] = `
           </nav>
           <nav
             aria-label="Company"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Company
             </h1>
             <ul>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:about+seek"
                   href="/about"
                 >
@@ -2522,10 +2522,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:media"
                   href="/about/news"
                 >
@@ -2533,10 +2533,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:investor+centre"
                   href="/about/investors"
                 >
@@ -2544,39 +2544,39 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="InternationalPartnersToggle"
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:bdjobs"
                       href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Bangladesh
                     </span>
@@ -2585,14 +2585,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:brighter+monday"
                       href="https://www.brightermonday.com"
                     >
                       Brighter Monday
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — E Africa
                     </span>
@@ -2601,14 +2601,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:catho"
                       href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Brazil
                     </span>
@@ -2617,14 +2617,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobberman"
                       href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — W Africa
                     </span>
@@ -2633,14 +2633,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobsdb"
                       href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -2649,14 +2649,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobstreet"
                       href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -2665,14 +2665,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+int"
                       href="https://www.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Worldwide
                     </span>
@@ -2681,14 +2681,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:occ+mundial"
                       href="https://www.occ.com.mx"
                     >
                       OCC Mundial
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Mexico
                     </span>
@@ -2697,14 +2697,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:workana"
                       href="https://www.workana.com"
                     >
                       Workana
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Latin America
                     </span>
@@ -2713,14 +2713,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:zhaopin"
                       href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — China
                     </span>
@@ -2729,14 +2729,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+au"
                       href="https://au.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Australia
                     </span>
@@ -2744,33 +2744,33 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </ul>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   data-automation="partner-services-toggle"
                   id="PartnerServicesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerServicesToggle"
                 >
                   Partner services
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobadder"
                       href="https://jobadder.com/au"
                     >
@@ -2781,7 +2781,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+local"
                       data-automation="jora-local-link"
                       href="http://www.joralocal.com.au"
@@ -2793,7 +2793,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:realestate+au"
                       href="https://www.realestate.com.au/buy"
                     >
@@ -2804,7 +2804,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sidekicker"
                       href="https://www.sidekicker.com.au/"
                     >
@@ -2815,7 +2815,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:ximble"
                       href="https://www.ximble.com"
                     >
@@ -2826,7 +2826,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:sparkhire"
                       href="https://anz.sparkhire.com/"
                     >
@@ -2839,10 +2839,10 @@ exports[`Footer: should render with locale of AU 1`] = `
           </nav>
           <nav
             aria-label="Connect"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Connect
             </h1>
@@ -2851,7 +2851,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:contact+us"
                   href="/contact-us"
                 >
@@ -2859,10 +2859,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:work+for+seek"
                   href="/work-for-seek"
                 >
@@ -2870,10 +2870,10 @@ exports[`Footer: should render with locale of AU 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:product+blog"
                   href="http://productblog.seek.com.au"
                 >
@@ -2884,29 +2884,29 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="SocialToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="SocialToggle"
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:facebook"
                       href="https://www.facebook.com/SEEK/"
                     >
@@ -2917,7 +2917,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:instagram"
                       href="https://www.instagram.com/seekau/"
                     >
@@ -2928,7 +2928,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:twitter"
                       href="https://twitter.com/seekjobs"
                     >
@@ -2939,7 +2939,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:youtube"
                       href="https://www.youtube.com/user/SEEKJobs"
                     >
@@ -2952,10 +2952,10 @@ exports[`Footer: should render with locale of AU 1`] = `
           </nav>
           <nav
             aria-label="Employers"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Employers
             </h1>
@@ -2964,7 +2964,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.com.au/"
                   rel="nofollow"
@@ -2976,7 +2976,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:post+a+job+ad"
                   href="https://talent.seek.com.au/"
                 >
@@ -2987,7 +2987,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:products+prices"
                   href="https://talent.seek.com.au/Support/OurProducts"
                 >
@@ -2998,7 +2998,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:customer+service"
                   href="https://talent.seek.com.au/ContactUs"
                 >
@@ -3009,7 +3009,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:insight+blog"
                   href="http://insightsresources.seek.com.au"
                 >
@@ -3020,17 +3020,17 @@ exports[`Footer: should render with locale of AU 1`] = `
           </nav>
         </div>
         <nav
-          class="copyright"
+          class="Footer__copyright"
         >
           <span
-            class="root"
+            class="ScreenReaderOnly__root"
           >
             <h1>
               Additional Links
             </h1>
           </span>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
             rel="nofollow"
@@ -3038,7 +3038,7 @@ exports[`Footer: should render with locale of AU 1`] = `
             Privacy
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
             rel="nofollow"
@@ -3046,7 +3046,7 @@ exports[`Footer: should render with locale of AU 1`] = `
             Terms & Conditions
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
             rel="nofollow"
@@ -3054,14 +3054,14 @@ exports[`Footer: should render with locale of AU 1`] = `
             Protect yourself online
           </a>
           <a
-            class="copyrightLink secondaryLink"
+            class="Footer__copyrightLink Footer__secondaryLink"
             data-analytics="toolbar:site+map"
             href="/sitemap"
           >
             Site Map
           </a>
           <p
-            class="copyrightMessage"
+            class="Footer__copyrightMessage"
           >
             © SEEK. All rights reserved.
           </p>
@@ -3075,15 +3075,15 @@ exports[`Footer: should render with locale of AU 1`] = `
 exports[`Footer: should render with locale of NZ 1`] = `
 <footer
   aria-labelledby="FooterHeading"
-  class="root"
+  class="Footer__root"
   role="contentinfo"
 >
   <span
-    class="print"
+    class="Hidden__print"
   >
     <section>
       <span
-        class="root"
+        class="ScreenReaderOnly__root"
       >
         <h1
           id="FooterHeading"
@@ -3092,17 +3092,17 @@ exports[`Footer: should render with locale of NZ 1`] = `
         </h1>
       </span>
       <div
-        class="content"
+        class="Footer__content"
       >
         <div
-          class="columns"
+          class="Footer__columns"
         >
           <nav
             aria-label="Tools"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Tools
             </h1>
@@ -3111,7 +3111,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:jobs"
                   href="/"
                 >
@@ -3122,7 +3122,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:profile"
                   href="/profile/"
                 >
@@ -3133,7 +3133,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:my+activity"
                   href="/sign-in?returnUrl=%2Fmyactivity"
                   rel="nofollow"
@@ -3145,7 +3145,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:favourite"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                   rel="nofollow"
@@ -3157,7 +3157,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:applied"
                   href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                   rel="nofollow"
@@ -3169,7 +3169,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:advice+tips"
                   href="/career-advice/"
                 >
@@ -3180,29 +3180,29 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="PartnerSitesToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="PartnerSitesToggle"
                 >
                   SEEK sites
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:post+a+job+ad"
                       href="https://talent.seek.co.nz/"
                     >
@@ -3213,7 +3213,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:au+homepage"
                       href="https://www.seek.com.au/"
                     >
@@ -3224,7 +3224,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:courses"
                       href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
                     >
@@ -3235,7 +3235,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:business+for+sale"
                       href="https://www.seekbusiness.co.nz/?tracking=sk:main:nz:nav:bus"
                     >
@@ -3246,7 +3246,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:volunteering"
                       href="https://www.volunteer.co.nz/?tracking=SKMNZ:main+header"
                     >
@@ -3259,19 +3259,19 @@ exports[`Footer: should render with locale of NZ 1`] = `
           </nav>
           <nav
             aria-label="Company"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Company
             </h1>
             <ul>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:about+seek"
                   href="/about"
                 >
@@ -3279,10 +3279,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:media"
                   href="/about/news"
                 >
@@ -3290,10 +3290,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:investor+centre"
                   href="/about/investors"
                 >
@@ -3301,39 +3301,39 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="ToggleContainer__secondary"
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="InternationalPartnersToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="InternationalPartnersToggle"
                 >
                   International partners
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:bdjobs"
                       href="https://www.bdjobs.com"
                     >
                       Bdjobs
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Bangladesh
                     </span>
@@ -3342,14 +3342,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:brighter+monday"
                       href="https://www.brightermonday.com"
                     >
                       Brighter Monday
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — E Africa
                     </span>
@@ -3358,14 +3358,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:catho"
                       href="https://www.catho.com.br"
                     >
                       Catho
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Brazil
                     </span>
@@ -3374,14 +3374,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobberman"
                       href="https://www.jobberman.com"
                     >
                       Jobberman
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — W Africa
                     </span>
@@ -3390,14 +3390,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobsdb"
                       href="https://www.jobsdb.com"
                     >
                       jobsDB
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -3406,14 +3406,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jobstreet"
                       href="https://www.jobstreet.com"
                     >
                       JobStreet
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — SE Asia
                     </span>
@@ -3422,14 +3422,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+int"
                       href="https://www.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Worldwide
                     </span>
@@ -3438,14 +3438,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:occ+mundial"
                       href="https://www.occ.com.mx"
                     >
                       OCC Mundial
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Mexico
                     </span>
@@ -3454,14 +3454,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:workana"
                       href="https://www.workana.com"
                     >
                       Workana
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Latin America
                     </span>
@@ -3470,14 +3470,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:zhaopin"
                       href="https://www.zhaopin.com"
                     >
                       Zhaopin
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — China
                     </span>
@@ -3486,14 +3486,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:jora+au"
                       href="https://au.jora.com"
                     >
                       Jora
                     </a>
                     <span
-                      class="partnerCountry"
+                      class="FooterLink__partnerCountry"
                     >
                        — Australia
                     </span>
@@ -3504,10 +3504,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
           </nav>
           <nav
             aria-label="Connect"
-            class="category"
+            class="FooterNav__category"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Connect
             </h1>
@@ -3516,7 +3516,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:contact+us"
                   href="/contact-us"
                 >
@@ -3524,10 +3524,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:work+for+seek"
                   href="/work-for-seek"
                 >
@@ -3535,10 +3535,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 </a>
               </li>
               <li
-                class="secondary"
+                class="FooterLink__secondary"
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:product+blog"
                   href="http://productblog.seek.com.au"
                 >
@@ -3549,29 +3549,29 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <input
-                  class="toggle"
+                  class="ToggleContainer__toggle"
                   id="SocialToggle"
                   type="checkbox"
                 />
                 <label
-                  class="toggleLink toggleLabel"
+                  class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                   for="SocialToggle"
                 >
                   Social
                   <span
-                    class="root root down chevron"
+                    class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                   >
                     mock svg
                   </span>
                 </label>
                 <ul
-                  class="toggleContainer"
+                  class="ToggleContainer__toggleContainer"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:facebook"
                       href="https://www.facebook.com/seeknz/"
                     >
@@ -3582,7 +3582,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:instagram"
                       href="https://www.instagram.com/seeknz/"
                     >
@@ -3593,7 +3593,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:twitter"
                       href="https://twitter.com/seekjobsnz"
                     >
@@ -3604,7 +3604,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="link"
+                      class="FooterLink__link"
                       data-analytics="toolbar:youtube"
                       href="https://www.youtube.com/user/SEEKJobs"
                     >
@@ -3617,10 +3617,10 @@ exports[`Footer: should render with locale of NZ 1`] = `
           </nav>
           <nav
             aria-label="Employers"
-            class="category secondary"
+            class="FooterNav__category FooterNav__secondary"
           >
             <h1
-              class="heading"
+              class="FooterNav__heading"
             >
               Employers
             </h1>
@@ -3629,7 +3629,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:register+for+free"
                   href="https://talent.seek.co.nz/"
                   rel="nofollow"
@@ -3641,7 +3641,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:post+a+job+ad"
                   href="https://talent.seek.co.nz/"
                 >
@@ -3652,7 +3652,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:products+prices"
                   href="https://talent.seek.co.nz/Support/OurProducts"
                 >
@@ -3663,7 +3663,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:customer+service"
                   href="https://talent.seek.co.nz/ContactUs"
                 >
@@ -3674,7 +3674,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class=""
               >
                 <a
-                  class="link"
+                  class="FooterLink__link"
                   data-analytics="toolbar:insight+blog"
                   href="http://insightsresources.seek.co.nz"
                 >
@@ -3685,17 +3685,17 @@ exports[`Footer: should render with locale of NZ 1`] = `
           </nav>
         </div>
         <nav
-          class="copyright"
+          class="Footer__copyright"
         >
           <span
-            class="root"
+            class="ScreenReaderOnly__root"
           >
             <h1>
               Additional Links
             </h1>
           </span>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:privacy"
             href="/privacy"
             rel="nofollow"
@@ -3703,7 +3703,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
             Privacy
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:terms+conditions"
             href="/terms"
             rel="nofollow"
@@ -3711,7 +3711,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
             Terms & Conditions
           </a>
           <a
-            class="copyrightLink"
+            class="Footer__copyrightLink"
             data-analytics="toolbar:seek+safely"
             href="/safe-job-searching"
             rel="nofollow"
@@ -3719,14 +3719,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
             Protect yourself online
           </a>
           <a
-            class="copyrightLink secondaryLink"
+            class="Footer__copyrightLink Footer__secondaryLink"
             data-analytics="toolbar:site+map"
             href="/sitemap"
           >
             Site Map
           </a>
           <p
-            class="copyrightMessage"
+            class="Footer__copyrightMessage"
           >
             © SEEK. All rights reserved.
           </p>

@@ -26,6 +26,7 @@ export default class MonthPicker extends Component {
     native: PropTypes.bool,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
     minYear: PropTypes.number,
     maxYear: PropTypes.number,
     ascendingYears: PropTypes.bool
@@ -53,6 +54,7 @@ export default class MonthPicker extends Component {
       native,
       valid,
       onBlur,
+      onFocus,
       minYear,
       maxYear,
       ascendingYears
@@ -65,6 +67,7 @@ export default class MonthPicker extends Component {
       value,
       onChange,
       onBlur,
+      onFocus,
       valid,
       minYear,
       maxYear,

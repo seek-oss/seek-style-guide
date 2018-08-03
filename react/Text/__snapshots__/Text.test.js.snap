@@ -2,7 +2,7 @@
 
 exports[`Text should render a bullet point 1`] = `
 <li
-  class="root standard bullet baseline"
+  class="Text__root Text__standard Text__bullet Text__baseline"
 >
   <span
     class=""
@@ -14,7 +14,7 @@ exports[`Text should render a bullet point 1`] = `
 
 exports[`Text should render with a custom component 1`] = `
 <div
-  class="root standard baseline"
+  class="Text__root Text__standard Text__baseline"
 >
   <span
     class=""
@@ -26,7 +26,7 @@ exports[`Text should render with a custom component 1`] = `
 
 exports[`Text should render with defaults 1`] = `
 <span
-  class="root standard baseline"
+  class="Text__root Text__standard Text__baseline"
 >
   <span
     class=""
@@ -38,7 +38,7 @@ exports[`Text should render with defaults 1`] = `
 
 exports[`Text sizes should render as heading 1`] = `
 <span
-  class="root heading baseline"
+  class="Text__root Text__heading Text__baseline"
 >
   <span
     class=""
@@ -50,7 +50,7 @@ exports[`Text sizes should render as heading 1`] = `
 
 exports[`Text sizes should render as heading 2`] = `
 <span
-  class="root heading baseline"
+  class="Text__root Text__heading Text__baseline"
 >
   <span
     class=""
@@ -62,7 +62,7 @@ exports[`Text sizes should render as heading 2`] = `
 
 exports[`Text sizes should render as headline 1`] = `
 <span
-  class="root headline baseline"
+  class="Text__root Text__headline Text__baseline"
 >
   <span
     class=""
@@ -74,7 +74,7 @@ exports[`Text sizes should render as headline 1`] = `
 
 exports[`Text sizes should render as headline 2`] = `
 <span
-  class="root headline baseline"
+  class="Text__root Text__headline Text__baseline"
 >
   <span
     class=""
@@ -86,7 +86,7 @@ exports[`Text sizes should render as headline 2`] = `
 
 exports[`Text sizes should render as hero 1`] = `
 <span
-  class="root hero baseline"
+  class="Text__root Text__hero Text__baseline"
 >
   <span
     class=""
@@ -98,7 +98,7 @@ exports[`Text sizes should render as hero 1`] = `
 
 exports[`Text sizes should render as hero 2`] = `
 <span
-  class="root hero baseline"
+  class="Text__root Text__hero Text__baseline"
 >
   <span
     class=""
@@ -110,7 +110,7 @@ exports[`Text sizes should render as hero 2`] = `
 
 exports[`Text sizes should render as large 1`] = `
 <span
-  class="root large baseline"
+  class="Text__root Text__large Text__baseline"
 >
   <span
     class=""
@@ -122,7 +122,7 @@ exports[`Text sizes should render as large 1`] = `
 
 exports[`Text sizes should render as large 2`] = `
 <span
-  class="root large baseline"
+  class="Text__root Text__large Text__baseline"
 >
   <span
     class=""
@@ -134,7 +134,7 @@ exports[`Text sizes should render as large 2`] = `
 
 exports[`Text sizes should render as small 1`] = `
 <span
-  class="root small baseline"
+  class="Text__root Text__small Text__baseline"
 >
   <span
     class=""
@@ -146,7 +146,7 @@ exports[`Text sizes should render as small 1`] = `
 
 exports[`Text sizes should render as small 2`] = `
 <span
-  class="root small baseline"
+  class="Text__root Text__small Text__baseline"
 >
   <span
     class=""
@@ -158,7 +158,7 @@ exports[`Text sizes should render as small 2`] = `
 
 exports[`Text sizes should render as standard 1`] = `
 <span
-  class="root standard baseline"
+  class="Text__root Text__standard Text__baseline"
 >
   <span
     class=""
@@ -170,7 +170,7 @@ exports[`Text sizes should render as standard 1`] = `
 
 exports[`Text sizes should render as standard 2`] = `
 <span
-  class="root standard baseline"
+  class="Text__root Text__standard Text__baseline"
 >
   <span
     class=""
@@ -182,7 +182,7 @@ exports[`Text sizes should render as standard 2`] = `
 
 exports[`Text sizes should render as subheading 1`] = `
 <span
-  class="root subheading baseline"
+  class="Text__root Text__subheading Text__baseline"
 >
   <span
     class=""
@@ -194,7 +194,7 @@ exports[`Text sizes should render as subheading 1`] = `
 
 exports[`Text sizes should render as subheading 2`] = `
 <span
-  class="root subheading baseline"
+  class="Text__root Text__subheading Text__baseline"
 >
   <span
     class=""

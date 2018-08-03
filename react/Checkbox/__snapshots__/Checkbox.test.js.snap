@@ -2,32 +2,32 @@
 
 exports[`Checkbox FieldMessage should render field message when passed 1`] = `
 <div
-  className="root invalid"
+  className="Checkbox__root Checkbox__invalid"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
@@ -52,33 +52,33 @@ exports[`Checkbox FieldMessage should render field message when passed 1`] = `
 
 exports[`Checkbox inputProps should pass through other props to the input 1`] = `
 <div
-  className="root"
+  className="Checkbox__root"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     data-automation="first-name-field"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
@@ -102,21 +102,21 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
 
 exports[`Checkbox should render with button style 1`] = `
 <div
-  className="root"
+  className="Checkbox__root"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <span
-      className="button"
+      className="Checkbox__button"
     >
       Still in role
     </span>
@@ -137,32 +137,32 @@ exports[`Checkbox should render with button style 1`] = `
 
 exports[`Checkbox should render with className 1`] = `
 <div
-  className="root testClassname"
+  className="Checkbox__root testClassname"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
@@ -186,32 +186,32 @@ exports[`Checkbox should render with className 1`] = `
 
 exports[`Checkbox should render with simple props 1`] = `
 <div
-  className="root"
+  className="Checkbox__root"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
@@ -235,32 +235,32 @@ exports[`Checkbox should render with simple props 1`] = `
 
 exports[`Checkbox should render with standard checkbox style 1`] = `
 <div
-  className="root"
+  className="Checkbox__root"
 >
   <input
     checked={false}
-    className="input"
+    className="Checkbox__input"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="label"
+    className="Checkbox__label"
     htmlFor="testCheckbox"
   >
     <div
-      className="standard"
+      className="Checkbox__standard"
     >
       <div
-        className="checkbox"
+        className="Checkbox__checkbox"
       >
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isHover"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
         />
         <CheckMarkIcon
-          className="checkMark"
-          svgClassName="checkMarkSvg checkMarkSvg_isSelected"
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
       <span>
