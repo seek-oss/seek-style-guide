@@ -86,13 +86,16 @@ class ReadMore extends PureComponent<Props, State> {
   handleShowMore = () => {
     const { onShowMore } = this.props;
 
-    this.setState({
-      showMore: !this.state.showMore
-    });
-
-    if (onShowMore) {
-      onShowMore();
-    }
+    this.setState(
+      {
+        showMore: !this.state.showMore
+      },
+      () => {
+        if (onShowMore) {
+          onShowMore(this.state.showMore);
+        }
+      }
+    );
   };
 
   render() {
