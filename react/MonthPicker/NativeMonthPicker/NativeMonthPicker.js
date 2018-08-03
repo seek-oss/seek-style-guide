@@ -35,6 +35,7 @@ export default class NativeMonthPicker extends Component {
     id: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
     value: PropTypes.shape({
       month: PropTypes.number,
       year: PropTypes.number
@@ -52,6 +53,7 @@ export default class NativeMonthPicker extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
   }
 
   handleChange({ target: { value } }) {
@@ -67,6 +69,14 @@ export default class NativeMonthPicker extends Component {
 
     if (typeof onBlur === 'function') {
       onBlur(getValueFromString(value));
+    }
+  }
+
+  handleFocus(evt) {
+    const { onFocus } = this.props;
+
+    if (typeof onFocus === 'function') {
+      onFocus(evt);
     }
   }
 
@@ -105,6 +115,7 @@ export default class NativeMonthPicker extends Component {
           value={inputValue}
           onChange={this.handleChange}
           onBlur={this.handleBlur}
+          onFocus={this.handleFocus}
           aria-describedby={fieldMessageId}
         />
       </div>

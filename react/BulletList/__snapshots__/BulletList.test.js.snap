@@ -2,7 +2,7 @@
 
 exports[`BulletList renders with standard text 1`] = `
 <ul
-  className="root"
+  className="BulletList__root"
 >
   <Bullet>
     Foo

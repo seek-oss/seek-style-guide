@@ -2,16 +2,16 @@
 
 exports[`Columns: should render columns 1`] = `
 <div
-  className="columns"
+  className="Columns__columns"
 >
   <div
-    className="column"
+    className="Columns__column"
     key="0"
   >
     <div />
   </div>
   <div
-    className="column"
+    className="Columns__column"
     key="1"
   >
     <div />
@@ -21,10 +21,10 @@ exports[`Columns: should render columns 1`] = `
 
 exports[`Columns: should render columns in reverse 1`] = `
 <div
-  className="columns columns_reverse"
+  className="Columns__columns Columns__columns_reverse"
 >
   <div
-    className="column"
+    className="Columns__column"
     key="0"
   >
     <div
@@ -32,7 +32,7 @@ exports[`Columns: should render columns in reverse 1`] = `
     />
   </div>
   <div
-    className="column"
+    className="Columns__column"
     key="1"
   >
     <div
@@ -44,16 +44,16 @@ exports[`Columns: should render columns in reverse 1`] = `
 
 exports[`Columns: should render flexible columns 1`] = `
 <div
-  className="columns columns_flexible"
+  className="Columns__columns Columns__columns_flexible"
 >
   <div
-    className="column"
+    className="Columns__column"
     key="0"
   >
     <div />
   </div>
   <div
-    className="column"
+    className="Columns__column"
     key="1"
   >
     <div />
@@ -63,16 +63,16 @@ exports[`Columns: should render flexible columns 1`] = `
 
 exports[`Columns: should render tight columns 1`] = `
 <div
-  className="columns columns_tight"
+  className="Columns__columns Columns__columns_tight"
 >
   <div
-    className="column"
+    className="Columns__column"
     key="0"
   >
     <div />
   </div>
   <div
-    className="column"
+    className="Columns__column"
     key="1"
   >
     <div />

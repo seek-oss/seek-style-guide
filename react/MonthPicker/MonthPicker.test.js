@@ -69,6 +69,14 @@ describe('MonthPicker', () => {
     });
   });
 
+  describe('onFocus', () => {
+    it('should pass onFocus prop through to input', () => {
+      const onFocus = () => {};
+      render(<MonthPicker id="testMonthPicker" onFocus={onFocus} />);
+      expect(monthPicker.props.onFocus).to.equal(onFocus);
+    });
+  });
+
   describe('value', () => {
     it('should pass value prop through to input', () => {
       const value = { month: 1, year: 2000 };

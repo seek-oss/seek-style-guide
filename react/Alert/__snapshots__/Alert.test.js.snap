@@ -2,7 +2,7 @@
 
 exports[`Alert: levels: should render primary alerts 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -10,14 +10,14 @@ exports[`Alert: levels: should render primary alerts 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -32,7 +32,7 @@ exports[`Alert: levels: should render primary alerts 1`] = `
 
 exports[`Alert: levels: should render secondary alerts 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="secondary"
   pullout={false}
@@ -40,14 +40,14 @@ exports[`Alert: levels: should render secondary alerts 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -62,17 +62,17 @@ exports[`Alert: levels: should render secondary alerts 1`] = `
 
 exports[`Alert: levels: should render tertiary alerts 1`] = `
 <div
-  className="root positive"
+  className="Alert__root Alert__positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -87,7 +87,7 @@ exports[`Alert: levels: should render tertiary alerts 1`] = `
 
 exports[`Alert: should pass through additional props 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   custom-prop={true}
   header={false}
   level="primary"
@@ -96,14 +96,14 @@ exports[`Alert: should pass through additional props 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -118,7 +118,7 @@ exports[`Alert: should pass through additional props 1`] = `
 
 exports[`Alert: should render a close button 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -126,14 +126,14 @@ exports[`Alert: should render a close button 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -143,7 +143,7 @@ exports[`Alert: should render a close button 1`] = `
       </Text>
     </div>
     <button
-      className="close"
+      className="Alert__close"
       onClick={[Function]}
     >
       <CrossIcon />
@@ -154,7 +154,7 @@ exports[`Alert: should render a close button 1`] = `
 
 exports[`Alert: should render the pullout style 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={true}
@@ -162,14 +162,14 @@ exports[`Alert: should render the pullout style 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -184,7 +184,7 @@ exports[`Alert: should render the pullout style 1`] = `
 
 exports[`Alert: should render with a hidden icon 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -192,10 +192,10 @@ exports[`Alert: should render with a hidden icon 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -210,7 +210,7 @@ exports[`Alert: should render with a hidden icon 1`] = `
 
 exports[`Alert: types: should render critical alerts 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -218,13 +218,13 @@ exports[`Alert: types: should render critical alerts 1`] = `
   tone="critical"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <CriticalIcon
-      className="icon"
+      className="Alert__icon"
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -239,7 +239,7 @@ exports[`Alert: types: should render critical alerts 1`] = `
 
 exports[`Alert: types: should render help alerts 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -247,13 +247,13 @@ exports[`Alert: types: should render help alerts 1`] = `
   tone="help"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <HelpIcon
-      className="icon"
+      className="Alert__icon"
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -268,7 +268,7 @@ exports[`Alert: types: should render help alerts 1`] = `
 
 exports[`Alert: types: should render info alerts 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -276,13 +276,13 @@ exports[`Alert: types: should render info alerts 1`] = `
   tone="info"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <InfoIcon
-      className="icon"
+      className="Alert__icon"
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -297,7 +297,7 @@ exports[`Alert: types: should render info alerts 1`] = `
 
 exports[`Alert: types: should render positive alerts 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -305,14 +305,14 @@ exports[`Alert: types: should render positive alerts 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}
@@ -327,7 +327,7 @@ exports[`Alert: types: should render positive alerts 1`] = `
 
 exports[`Alert: will accept a node in a the message prop 1`] = `
 <Section
-  className="root"
+  className="Alert__root"
   header={false}
   level="primary"
   pullout={false}
@@ -335,14 +335,14 @@ exports[`Alert: will accept a node in a the message prop 1`] = `
   tone="positive"
 >
   <div
-    className="alert"
+    className="Alert__alert"
   >
     <TickCircleIcon
-      className="icon"
+      className="Alert__icon"
       filled={false}
     />
     <div
-      className="text"
+      className="Alert__text"
     >
       <Text
         baseline={false}

@@ -29,8 +29,8 @@ describe('Textarea', () => {
   function render(jsx) {
     element = jsx;
     textarea = renderer.render(element);
-    input = findAllWithClass(textarea, 'textarea')[0] || null;
-    characterCount = findAllWithClass(textarea, 'characterCount')[0] || null;
+    input = findAllWithClass(textarea, 'Textarea__textarea')[0] || null;
+    characterCount = findAllWithClass(textarea, 'Textarea__characterCount')[0] || null;
   }
 
   it('should have a displayName', () => {

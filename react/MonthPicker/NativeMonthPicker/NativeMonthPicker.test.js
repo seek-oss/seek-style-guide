@@ -33,14 +33,14 @@ describe('NativeMonthPicker', () => {
   function render(jsx) {
     element = jsx;
     monthPicker = renderer.render(element);
-    rootElement = findAllWithClass(monthPicker, 'root')[0] || null;
-    input = findAllWithClass(monthPicker, 'input')[0] || null;
+    rootElement = findAllWithClass(monthPicker, 'NativeMonthPicker__root')[0] || null;
+    input = findAllWithClass(monthPicker, 'NativeMonthPicker__input')[0] || null;
   }
 
   function renderToDom(jsx) {
     element = jsx;
     monthPicker = renderIntoDocument(element);
-    input = findRenderedDOMComponentWithClass(monthPicker, 'input');
+    input = findRenderedDOMComponentWithClass(monthPicker, 'NativeMonthPicker__input');
   }
 
   it('should have a displayName', () => {
@@ -87,5 +87,12 @@ describe('NativeMonthPicker', () => {
       month: 11,
       year: 2012
     });
+  });
+
+  it('should call onFocus when field has the focus', () => {
+    const onFocus = jest.fn();
+    renderToDom(<NativeMonthPicker id="testNativeMonthPicker" onFocus={onFocus} value={{ month: 6, year: 2010 }} fieldMessageId="testNativeMonthPicker-message" />);
+    Simulate.focus(input);
+    expect(onFocus.mock.calls.length).equal(1);
   });
 });

@@ -34,7 +34,7 @@ describe('FieldLabel', () => {
     label = findAllWithType(fieldLabel, 'label')[0] || null;
     labelText = findAllWithType(fieldLabel, Strong)[0] || null;
     secondaryLabel = findAllWithType(fieldLabel, Secondary)[0] || null;
-    tertiaryLabel = findAllWithClass(fieldLabel, 'tertiary')[0] || null;
+    tertiaryLabel = findAllWithClass(fieldLabel, 'FieldLabel__tertiary')[0] || null;
   }
 
   it('should have a displayName', () => {

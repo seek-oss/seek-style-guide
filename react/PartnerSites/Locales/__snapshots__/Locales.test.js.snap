@@ -3,11 +3,10 @@
 exports[`Locales: should render with locale of AU first and active 1`] = `
 <nav
   aria-labelledby="Locales"
-  class="root"
   role="navigation"
 >
   <span
-    class="root"
+    class="ScreenReaderOnly__root"
   >
     <h1
       id="Locales"
@@ -16,22 +15,18 @@ exports[`Locales: should render with locale of AU first and active 1`] = `
     </h1>
   </span>
   <ul
-    class="list"
+    class="Locales__list"
   >
-    <li
-      class="listItem"
-    >
+    <li>
       <span
-        class="locale_isActive"
+        class="Locales__locale_isActive"
       >
         AU
       </span>
     </li>
-    <li
-      class="listItem"
-    >
+    <li>
       <a
-        class="localeLink"
+        class="Locales__localeLink"
         data-analytics="header:nz+homepage"
         href="https://www.seek.co.nz"
         title="SEEK New Zealand"
@@ -46,11 +41,10 @@ exports[`Locales: should render with locale of AU first and active 1`] = `
 exports[`Locales: should render with locale of NZ first and active 1`] = `
 <nav
   aria-labelledby="Locales"
-  class="root"
   role="navigation"
 >
   <span
-    class="root"
+    class="ScreenReaderOnly__root"
   >
     <h1
       id="Locales"
@@ -59,13 +53,11 @@ exports[`Locales: should render with locale of NZ first and active 1`] = `
     </h1>
   </span>
   <ul
-    class="list list_isNZ"
+    class="Locales__list Locales__list_isNZ"
   >
-    <li
-      class="listItem"
-    >
+    <li>
       <a
-        class="localeLink"
+        class="Locales__localeLink"
         data-analytics="header:au+homepage"
         href="https://www.seek.com.au"
         title="SEEK Australia"
@@ -73,11 +65,9 @@ exports[`Locales: should render with locale of NZ first and active 1`] = `
         AU
       </a>
     </li>
-    <li
-      class="listItem"
-    >
+    <li>
       <span
-        class="locale_isActive"
+        class="Locales__locale_isActive"
       >
         NZ
       </span>
