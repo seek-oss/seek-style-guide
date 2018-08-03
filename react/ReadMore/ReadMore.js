@@ -29,7 +29,8 @@ type Props = {|
   maxRows?: number,
   moreLabel: string,
   lessLabel: string,
-  backgroundComponentName?: 'card' | 'body'
+  backgroundComponentName?: 'card' | 'body',
+  onShowMore?: Function
 |};
 type State = {|
   showMore: boolean,
@@ -83,9 +84,15 @@ class ReadMore extends PureComponent<Props, State> {
   };
 
   handleShowMore = () => {
+    const { onShowMore } = this.props;
+
     this.setState({
       showMore: !this.state.showMore
     });
+
+    if (onShowMore) {
+      onShowMore();
+    }
   };
 
   render() {
