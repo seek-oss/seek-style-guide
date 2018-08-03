@@ -58,6 +58,9 @@
     "react-autowhatever": "10.1.1",
     "react-isolated-scroll": "^0.1.1"
   },
+  "resolutions": { 
+    "react-autowhatever": "10.1.1"
+  },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
