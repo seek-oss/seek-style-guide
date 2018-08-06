@@ -2,7 +2,7 @@ import styles from './Autosuggest.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import ReactAutosuggest from 'react-autosuggest';
+import ReactAutosuggest from '@seek/react-autosuggest';
 import IsolatedScroll from 'react-isolated-scroll';
 import omit from 'lodash/omit';
 import TextField from '../TextField/TextField';
