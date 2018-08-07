@@ -29,7 +29,7 @@ type Props = {|
   maxRows?: number,
   moreLabel: string,
   lessLabel: string,
-  backgroundComponentName?: 'card' | 'body',
+  backgroundComponentName: 'card' | 'body',
   onShowMore?: Function
 |};
 type State = {|
@@ -111,7 +111,7 @@ class ReadMore extends PureComponent<Props, State> {
 
     const truncate = mounted ? !showMore && tooLong : true;
     const showFade = truncate && mounted;
-    const fadeColor = backgroundComponentName === 'body' ? styles.body : styles.card;
+    const fadeColor = styles[backgroundComponentName];
     const showMoreLessButton = tooLong && mounted;
 
     const contentStyle = truncate ? {
