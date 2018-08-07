@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
-export default function Locales({ locale, linkRenderer }) {
+export default function Locales({ locale, linkRenderer, localeLinks }) {
   const isAU = locale === 'AU';
   const isNZ = locale === 'NZ';
 
@@ -15,46 +15,41 @@ export default function Locales({ locale, linkRenderer }) {
   });
 
   return (
-    <nav aria-labelledby="Locales" role="navigation" className={styles.root}>
-
+    <nav aria-labelledby='Locales' role='navigation' className={styles.root}>
       <ScreenReaderOnly>
-        <h1 id="Locales">Select your country</h1>
+        <h1 id='Locales'>Select your country</h1>
       </ScreenReaderOnly>
 
       <ul className={listClasses}>
         <li className={styles.listItem}>
-          {
-            isAU ?
-              <span className={styles.locale_isActive}>AU</span> :
-              linkRenderer({
-                'data-analytics': 'header:au+homepage',
-                className: styles.localeLink,
-                href: 'https://www.seek.com.au',
-                title: 'SEEK Australia',
-                children: 'AU'
-              })
-          }
+          {isAU ? (
+            <span className={styles.locale_isActive}>AU</span>
+          ) : (
+            linkRenderer({
+              className: styles.localeLink,
+              children: 'AU',
+              ...localeLinks.AU
+            })
+          )}
         </li>
         <li className={styles.listItem}>
-          {
-            isNZ ?
-              <span className={styles.locale_isActive}>NZ</span> :
-              linkRenderer({
-                'data-analytics': 'header:nz+homepage',
-                className: styles.localeLink,
-                href: 'https://www.seek.co.nz',
-                title: 'SEEK New Zealand',
-                children: 'NZ'
-              })
-          }
+          {isNZ ? (
+            <span className={styles.locale_isActive}>NZ</span>
+          ) : (
+            linkRenderer({
+              className: styles.localeLink,
+              children: 'NZ',
+              ...localeLinks.NZ
+            })
+          )}
         </li>
       </ul>
-
     </nav>
   );
 }
 
 Locales.propTypes = {
   locale: PropTypes.string.isRequired,
-  linkRenderer: PropTypes.func.isRequired
+  linkRenderer: PropTypes.func.isRequired,
+  localeLinks: PropTypes.object.isRequired
 };
