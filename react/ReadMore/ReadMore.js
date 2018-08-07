@@ -111,7 +111,7 @@ class ReadMore extends PureComponent<Props, State> {
 
     const truncate = mounted ? !showMore && tooLong : true;
     const showFade = truncate && mounted;
-    const fadeColor = styles[backgroundComponentName];
+    const fadeColor = backgroundComponentName === 'body' ? styles.body : styles.card;
     const showMoreLessButton = tooLong && mounted;
 
     const contentStyle = truncate ? {
