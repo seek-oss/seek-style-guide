@@ -1,4 +1,13 @@
-@import (reference) "~seek-style-guide/theme";
+@import (reference) '~seek-style-guide/theme';
+
+.fadeOutBackground(@fadeColor: @sk-card-bg) {
+  background:
+    linear-gradient(
+      to bottom,
+      fade(@fadeColor, 0) 0%,
+      @fadeColor 100%
+    );
+}
 
 .content {
   position: relative;
@@ -8,11 +17,18 @@
 }
 
 .fadeOut {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
   position: absolute;
   height: (@row-height * 4);
   width: 100%;
   bottom: 0;
+}
+
+.card {
+  .fadeOutBackground(@sk-card-bg);
+}
+
+.body {
+  .fadeOutBackground(@sk-background);
 }
 
 .chevron {
