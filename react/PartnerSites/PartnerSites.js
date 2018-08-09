@@ -38,9 +38,9 @@ export default function PartnerSites({
 PartnerSites.displayName = 'PartnerSites';
 
 const localeLink = PropTypes.shape({
-  'data-analytics': PropTypes.String,
-  href: PropTypes.String,
-  title: PropTypes.String
+  'data-analytics': PropTypes.string,
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 });
 
 PartnerSites.propTypes = {
@@ -53,8 +53,8 @@ PartnerSites.propTypes = {
     'Volunteering'
   ]),
   localeLinks: PropTypes.shape({
-    AU: localeLink,
-    NZ: localeLink
+    AU: localeLink.isRequired,
+    NZ: localeLink.isRequired
   })
 };
 

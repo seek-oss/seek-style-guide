@@ -15,9 +15,9 @@ export default function Locales({ locale, linkRenderer, localeLinks }) {
   });
 
   return (
-    <nav aria-labelledby='Locales' role='navigation' className={styles.root}>
+    <nav aria-labelledby="Locales" role="navigation" className={styles.root}>
       <ScreenReaderOnly>
-        <h1 id='Locales'>Select your country</h1>
+        <h1 id="Locales">Select your country</h1>
       </ScreenReaderOnly>
 
       <ul className={listClasses}>
@@ -48,8 +48,17 @@ export default function Locales({ locale, linkRenderer, localeLinks }) {
   );
 }
 
+const localeLink = PropTypes.shape({
+  'data-analytics': PropTypes.string,
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
+});
+
 Locales.propTypes = {
   locale: PropTypes.string.isRequired,
   linkRenderer: PropTypes.func.isRequired,
-  localeLinks: PropTypes.object.isRequired
+  localeLinks: PropTypes.shape({
+    AU: localeLink.isRequired,
+    NZ: localeLink.isRequired
+  }).isRequired
 };
