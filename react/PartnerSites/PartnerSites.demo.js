@@ -79,12 +79,12 @@ export default {
             ...props,
             localeLinks: {
               AU: {
-                'data-analytics': 'header:au+talent',
+                'data-analytics': 'header:au+employer',
                 href: 'https://talent.seek.com.au',
                 title: 'SEEK Employer Australia'
               },
               NZ: {
-                'data-analytics': 'header:nz+talent',
+                'data-analytics': 'header:nz+employer',
                 href: 'https://talent.seek.co.nz',
                 title: 'SEEK Employer New Zealand'
               }

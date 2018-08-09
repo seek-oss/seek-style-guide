@@ -37,6 +37,12 @@ export default function PartnerSites({
 
 PartnerSites.displayName = 'PartnerSites';
 
+const localeLink = PropTypes.shape({
+  'data-analytics': PropTypes.String,
+  href: PropTypes.String,
+  title: PropTypes.String
+});
+
 PartnerSites.propTypes = {
   locale: PropTypes.oneOf(['AU', 'NZ']),
   linkRenderer: PropTypes.func,
@@ -46,7 +52,10 @@ PartnerSites.propTypes = {
     'Businesses for sale',
     'Volunteering'
   ]),
-  localeLinks: PropTypes.object
+  localeLinks: PropTypes.shape({
+    AU: localeLink,
+    NZ: localeLink
+  })
 };
 
 PartnerSites.defaultProps = {
