@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header: should render with locale of AU 1`] = `
+<div
+  class="PartnerSites__root Hidden__mobile Hidden__print"
+>
+  <div
+    class="PageBlock__content"
+  >
+    <div
+      class="PartnerSites__content"
+    >
+      <nav
+        aria-labelledby="Sites"
+        role="navigation"
+      >
+        <span
+          class="ScreenReaderOnly__root"
+        >
+          <h1
+            id="Sites"
+          >
+            SEEK Sites
+          </h1>
+        </span>
+        <ul
+          class="Sites__list"
+        >
+          <li>
+            <a
+              class="Sites__link Sites__link_isJobs"
+              data-analytics="header:jobs"
+              href="https://www.seek.com.au"
+              title="SEEK Jobs"
+            >
+              Jobs
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isLearning"
+              data-analytics="header:courses"
+              href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+              title="SEEK Learning"
+            >
+              Courses
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isBusiness"
+              data-analytics="header:business+for+sale"
+              href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+              title="SEEK Business"
+            >
+              Businesses for sale
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isVolunteering"
+              data-analytics="header:volunteering"
+              href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+              title="SEEK Volunteer"
+            >
+              Volunteering
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="PartnerSites__locale"
+      >
+        <nav
+          aria-labelledby="Locales"
+          role="navigation"
+        >
+          <span
+            class="ScreenReaderOnly__root"
+          >
+            <h1
+              id="Locales"
+            >
+              Select your country
+            </h1>
+          </span>
+          <ul
+            class="Locales__list"
+          >
+            <li>
+              <span
+                class="Locales__locale_isActive"
+              >
+                AU
+              </span>
+            </li>
+            <li>
+              <a
+                class="Locales__localeLink"
+                data-analytics="header:nz+homepage"
+                href="https://www.seek.co.nz"
+                title="SEEK New Zealand"
+              >
+                NZ
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header: should render with locale of NZ 1`] = `
+<div
+  class="PartnerSites__root Hidden__mobile Hidden__print"
+>
+  <div
+    class="PageBlock__content"
+  >
+    <div
+      class="PartnerSites__content"
+    >
+      <nav
+        aria-labelledby="Sites"
+        role="navigation"
+      >
+        <span
+          class="ScreenReaderOnly__root"
+        >
+          <h1
+            id="Sites"
+          >
+            SEEK Sites
+          </h1>
+        </span>
+        <ul
+          class="Sites__list"
+        >
+          <li>
+            <a
+              class="Sites__link Sites__link_isJobs"
+              data-analytics="header:jobs"
+              href="https://www.seek.co.nz"
+              title="SEEK Jobs"
+            >
+              Jobs
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isLearning"
+              data-analytics="header:courses"
+              href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+              title="SEEK Learning"
+            >
+              Courses
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isBusiness"
+              data-analytics="header:business+for+sale"
+              href="https://www.seekbusiness.com.au/?site=nz&tracking=sk:main:nz:nav:bus"
+              title="SEEK Business"
+            >
+              Businesses for sale
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isVolunteering"
+              data-analytics="header:volunteering"
+              href="https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header"
+              title="SEEK Volunteer"
+            >
+              Volunteering
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="PartnerSites__locale"
+      >
+        <nav
+          aria-labelledby="Locales"
+          role="navigation"
+        >
+          <span
+            class="ScreenReaderOnly__root"
+          >
+            <h1
+              id="Locales"
+            >
+              Select your country
+            </h1>
+          </span>
+          <ul
+            class="Locales__list Locales__list_isNZ"
+          >
+            <li>
+              <a
+                class="Locales__localeLink"
+                data-analytics="header:au+homepage"
+                href="https://www.seek.com.au"
+                title="SEEK Australia"
+              >
+                AU
+              </a>
+            </li>
+            <li>
+              <span
+                class="Locales__locale_isActive"
+              >
+                NZ
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header: should render with overridden AU Locale link 1`] = `
+<div
+  class="PartnerSites__root Hidden__mobile Hidden__print"
+>
+  <div
+    class="PageBlock__content"
+  >
+    <div
+      class="PartnerSites__content"
+    >
+      <nav
+        aria-labelledby="Sites"
+        role="navigation"
+      >
+        <span
+          class="ScreenReaderOnly__root"
+        >
+          <h1
+            id="Sites"
+          >
+            SEEK Sites
+          </h1>
+        </span>
+        <ul
+          class="Sites__list"
+        >
+          <li>
+            <a
+              class="Sites__link Sites__link_isJobs"
+              data-analytics="header:jobs"
+              href="https://www.seek.co.nz"
+              title="SEEK Jobs"
+            >
+              Jobs
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isLearning"
+              data-analytics="header:courses"
+              href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+              title="SEEK Learning"
+            >
+              Courses
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isBusiness"
+              data-analytics="header:business+for+sale"
+              href="https://www.seekbusiness.com.au/?site=nz&tracking=sk:main:nz:nav:bus"
+              title="SEEK Business"
+            >
+              Businesses for sale
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isVolunteering"
+              data-analytics="header:volunteering"
+              href="https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header"
+              title="SEEK Volunteer"
+            >
+              Volunteering
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="PartnerSites__locale"
+      >
+        <nav
+          aria-labelledby="Locales"
+          role="navigation"
+        >
+          <span
+            class="ScreenReaderOnly__root"
+          >
+            <h1
+              id="Locales"
+            >
+              Select your country
+            </h1>
+          </span>
+          <ul
+            class="Locales__list Locales__list_isNZ"
+          >
+            <li>
+              <a
+                class="Locales__localeLink"
+                data-analytics="header:au+employer"
+                href="https://talent.seek.com.au"
+                title="SEEK Employer Australia"
+              >
+                AU
+              </a>
+            </li>
+            <li>
+              <span
+                class="Locales__locale_isActive"
+              >
+                NZ
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header: should render with overridden NZ Locale link 1`] = `
+<div
+  class="PartnerSites__root Hidden__mobile Hidden__print"
+>
+  <div
+    class="PageBlock__content"
+  >
+    <div
+      class="PartnerSites__content"
+    >
+      <nav
+        aria-labelledby="Sites"
+        role="navigation"
+      >
+        <span
+          class="ScreenReaderOnly__root"
+        >
+          <h1
+            id="Sites"
+          >
+            SEEK Sites
+          </h1>
+        </span>
+        <ul
+          class="Sites__list"
+        >
+          <li>
+            <a
+              class="Sites__link Sites__link_isJobs"
+              data-analytics="header:jobs"
+              href="https://www.seek.com.au"
+              title="SEEK Jobs"
+            >
+              Jobs
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isLearning"
+              data-analytics="header:courses"
+              href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+              title="SEEK Learning"
+            >
+              Courses
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isBusiness"
+              data-analytics="header:business+for+sale"
+              href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+              title="SEEK Business"
+            >
+              Businesses for sale
+            </a>
+          </li>
+          <li>
+            <a
+              class="Sites__link Sites__link_isVolunteering"
+              data-analytics="header:volunteering"
+              href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+              title="SEEK Volunteer"
+            >
+              Volunteering
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="PartnerSites__locale"
+      >
+        <nav
+          aria-labelledby="Locales"
+          role="navigation"
+        >
+          <span
+            class="ScreenReaderOnly__root"
+          >
+            <h1
+              id="Locales"
+            >
+              Select your country
+            </h1>
+          </span>
+          <ul
+            class="Locales__list"
+          >
+            <li>
+              <span
+                class="Locales__locale_isActive"
+              >
+                AU
+              </span>
+            </li>
+            <li>
+              <a
+                class="Locales__localeLink"
+                data-analytics="header:nz+employer"
+                href="https://talent.seek.co.nz"
+                title="SEEK Employer New Zealand"
+              >
+                NZ
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;
