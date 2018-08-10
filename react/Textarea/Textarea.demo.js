@@ -1,8 +1,8 @@
-import React, { Component } from '../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import PropTypes from '../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Textarea from './Textarea';
 import styles from './Textarea.less';
-import classnames from '../../../../Library/Caches/typescript/2.9/node_modules/@types/classnames';
+import classnames from 'classnames';
 import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
 import fieldLabelOptions from '../FieldLabel/FieldLabel.demoFragment';
 import * as sketch from './Textarea.sketch';
@@ -90,8 +90,8 @@ export default {
           label: 'Highlight invalid text',
           transformProps: props => ({
             ...props,
-            invalidText: 'shit',
-            description: 'The word "shit" is invalid'
+            invalidText: 'no',
+            description: 'The word "no" is invalid'
           })
         }
       ]

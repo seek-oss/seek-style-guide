@@ -54,14 +54,14 @@ export const setCaretPosition = (d: CaretData) => {
   }
 };
 
-export const formatInvalidText = (value: string, invalidText: string, style: string): string => {
-  let contentEditableText = '';
+const stripErrorTags = (html: string): string =>
+  html.replace(/<em[^>]*>|<\/em>/g, '');
 
+export const formatInvalidText = (value: string, invalidText: string, style: string): string => {
   if (invalidText && value.indexOf(invalidText) !== -1) {
-    const textInError = value
-      .replace(/<em[^>]*>|<\/em>/g, '')
-      .split(invalidText);
-    contentEditableText = textInError
+    let formattedText = '';
+    const textInError = stripErrorTags(value).split(invalidText);
+    formattedText = textInError
       .map(
         (text, i) =>
           i !== textInError.length - 1 ?
@@ -69,7 +69,9 @@ export const formatInvalidText = (value: string, invalidText: string, style: str
             text
       )
       .join('');
+
+    return formattedText;
   }
 
-  return contentEditableText;
+  return stripErrorTags(value);
 };
