@@ -53,3 +53,23 @@ export const setCaretPosition = (d: CaretData) => {
     sel.addRange(range);
   }
 };
+
+export const formatInvalidText = (value: string, invalidText: string, style: string): string => {
+  let contentEditableText = '';
+
+  if (invalidText && value.indexOf(invalidText) !== -1) {
+    const textInError = value
+      .replace(/<em[^>]*>|<\/em>/g, '')
+      .split(invalidText);
+    contentEditableText = textInError
+      .map(
+        (text, i) =>
+          i !== textInError.length - 1 ?
+            `${text}<em class="${style}">${invalidText}</em>` :
+            text
+      )
+      .join('');
+  }
+
+  return contentEditableText;
+};

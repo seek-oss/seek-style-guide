@@ -1,4 +1,5 @@
 // @flow
+// Based on https://github.com/lovasoa/react-contenteditable
 import React from 'react';
 import deepEqual from 'fast-deep-equal';
 import { normalizeHtml, getCaretData, setCaretPosition } from './contentEditableUtils';

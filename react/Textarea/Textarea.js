@@ -1,11 +1,12 @@
 import styles from './Textarea.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from '../../../../Library/Caches/typescript/2.9/node_modules/@types/classnames';
+import classnames from 'classnames';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import Text from '../Text/Text';
 import ContentEditable from './ContentEditable/ContentEditable';
+import { formatInvalidText } from './ContentEditable/contentEditableUtils';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -14,21 +15,6 @@ function combineClassNames(props = {}, ...classNames) {
     className: classnames.apply(null, [...classNames, className]), // eslint-disable-line no-useless-call
     ...restProps
   };
-}
-
-function formatInvalidText(value, invalidText) {
-  let contentEditableText = '';
-
-  if (invalidText && value.indexOf(invalidText) !== -1) {
-    const textInError = value.replace(/<em[^>]*>|<\/em>/g, '').split(invalidText);
-    contentEditableText = textInError.map((text, i) =>
-      i !== (textInError.length - 1) ?
-        `${text}<em class="${styles.invalidText}">${invalidText}</em>` :
-        text
-    ).join('');
-  }
-
-  return contentEditableText;
 }
 
 /* eslint-disable react/no-deprecated */
@@ -115,7 +101,7 @@ export default class Textarea extends Component {
     };
 
     if (invalidText) {
-      const html = formatInvalidText(value, invalidText);
+      const html = formatInvalidText(value, invalidText, styles.invalidText);
       return (
         <ContentEditable
           html={html}
