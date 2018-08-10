@@ -8,7 +8,8 @@ export default [
     name: 'Work for SEEK',
     href: '/work-for-seek',
     analytics: 'toolbar:work+for+seek',
-    secondary: true
+    secondary: true,
+    badge: 'new'
   },
   {
     name: 'Product & Tech Blog',

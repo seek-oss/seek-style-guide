@@ -35,86 +35,100 @@ exports[`Footer: should render when authenticated 1`] = `
               Tools
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:jobs"
-                  href="/"
+              <div>
+                <li
+                  class=""
                 >
-                  Job search
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:profile"
-                  href="/profile/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:jobs"
+                    href="/"
+                  >
+                    Job search
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Profile
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:my+activity"
-                  href="/myactivity"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:profile"
+                    href="/profile/"
+                  >
+                    Profile
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved searches
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:favourite"
-                  href="/my-activity/saved-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:my+activity"
+                    href="/myactivity"
+                    rel="nofollow"
+                  >
+                    Saved searches
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:applied"
-                  href="/my-activity/applied-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:favourite"
+                    href="/my-activity/saved-jobs"
+                    rel="nofollow"
+                  >
+                    Saved jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Applied jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:advice+tips"
-                  href="/career-advice/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:applied"
+                    href="/my-activity/applied-jobs"
+                    rel="nofollow"
+                  >
+                    Applied jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Career Advice
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:companies"
-                  href="/companies/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:advice+tips"
+                    href="/career-advice/"
+                  >
+                    Career Advice
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Company reviews
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:companies"
+                    href="/companies/"
+                  >
+                    Company reviews
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -137,61 +151,71 @@ exports[`Footer: should render when authenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.com.au/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Employer site
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:nz+homepage"
-                      href="https://www.seek.co.nz/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:post+a+job+ad"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer site
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      SEEK NZ
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:courses"
-                      href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:nz+homepage"
+                        href="https://www.seek.co.nz/"
+                      >
+                        SEEK NZ
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Courses
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:business+for+sale"
-                      href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:courses"
+                        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      >
+                        Courses
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Business for sale
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:volunteering"
-                      href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:business+for+sale"
+                        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      >
+                        Business for sale
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Volunteering
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:volunteering"
+                        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      >
+                        Volunteering
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -206,39 +230,45 @@ exports[`Footer: should render when authenticated 1`] = `
               Company
             </h1>
             <ul>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:about+seek"
-                  href="/about"
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  About SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:media"
-                  href="/about/news"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:about+seek"
+                    href="/about"
+                  >
+                    About SEEK
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Newsroom
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:investor+centre"
-                  href="/about/investors"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:media"
+                    href="/about/news"
+                  >
+                    Newsroom
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Investors
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:investor+centre"
+                    href="/about/investors"
+                  >
+                    Investors
+                  </a>
+                </li>
+              </div>
               <li
                 class="ToggleContainer__secondary"
               >
@@ -261,182 +291,204 @@ exports[`Footer: should render when authenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:bdjobs"
-                      href="https://www.bdjobs.com"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Bdjobs
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:bdjobs"
+                        href="https://www.bdjobs.com"
+                      >
+                        Bdjobs
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Bangladesh
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Bangladesh
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:brighter+monday"
-                      href="https://www.brightermonday.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:brighter+monday"
+                        href="https://www.brightermonday.com"
+                      >
+                        Brighter Monday
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — E Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Brighter Monday
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:catho"
+                        href="https://www.catho.com.br"
+                      >
+                        Catho
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Brazil
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — E Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:catho"
-                      href="https://www.catho.com.br"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobberman"
+                        href="https://www.jobberman.com"
+                      >
+                        Jobberman
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — W Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Catho
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobsdb"
+                        href="https://www.jobsdb.com"
+                      >
+                        jobsDB
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Brazil
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobberman"
-                      href="https://www.jobberman.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobstreet"
+                        href="https://www.jobstreet.com"
+                      >
+                        JobStreet
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jobberman
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+int"
+                        href="https://www.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Worldwide
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — W Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobsdb"
-                      href="https://www.jobsdb.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:occ+mundial"
+                        href="https://www.occ.com.mx"
+                      >
+                        OCC Mundial
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Mexico
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      jobsDB
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:workana"
+                        href="https://www.workana.com"
+                      >
+                        Workana
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Latin America
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobstreet"
-                      href="https://www.jobstreet.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:zhaopin"
+                        href="https://www.zhaopin.com"
+                      >
+                        Zhaopin
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — China
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobStreet
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+int"
-                      href="https://www.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:occ+mundial"
-                      href="https://www.occ.com.mx"
-                    >
-                      OCC Mundial
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Mexico
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:workana"
-                      href="https://www.workana.com"
-                    >
-                      Workana
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Latin America
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:zhaopin"
-                      href="https://www.zhaopin.com"
-                    >
-                      Zhaopin
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — China
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+au"
-                      href="https://au.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Australia
-                    </span>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+au"
+                        href="https://au.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Australia
+                      </span>
+                    </li>
+                  </div>
                 </ul>
               </li>
               <li
@@ -462,73 +514,85 @@ exports[`Footer: should render when authenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobadder"
-                      href="https://jobadder.com/au"
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobAdder
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+local"
-                      data-automation="jora-local-link"
-                      href="http://www.joralocal.com.au"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobadder"
+                        href="https://jobadder.com/au"
+                      >
+                        JobAdder
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jora Local
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:realestate+au"
-                      href="https://www.realestate.com.au/buy"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+local"
+                        data-automation="jora-local-link"
+                        href="http://www.joralocal.com.au"
+                      >
+                        Jora Local
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      realestate.com.au
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sidekicker"
-                      href="https://www.sidekicker.com.au/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:realestate+au"
+                        href="https://www.realestate.com.au/buy"
+                      >
+                        realestate.com.au
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Sidekicker
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:ximble"
-                      href="https://www.ximble.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sidekicker"
+                        href="https://www.sidekicker.com.au/"
+                      >
+                        Sidekicker
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Ximble
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sparkhire"
-                      href="https://anz.sparkhire.com/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:ximble"
+                        href="https://www.ximble.com"
+                      >
+                        Ximble
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Spark Hire
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sparkhire"
+                        href="https://anz.sparkhire.com/"
+                      >
+                        Spark Hire
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -543,39 +607,58 @@ exports[`Footer: should render when authenticated 1`] = `
               Connect
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:contact+us"
-                  href="/contact-us"
+              <div>
+                <li
+                  class=""
                 >
-                  Contact us / FAQs
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:work+for+seek"
-                  href="/work-for-seek"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:contact+us"
+                    href="/contact-us"
+                  >
+                    Contact us / FAQs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Work for SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:product+blog"
-                  href="http://productblog.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:work+for+seek"
+                    href="/work-for-seek"
+                  >
+                    Work for SEEK
+                  </a>
+                  <span
+                    class="Pill__footerBadge Pill__staticPill"
+                  >
+                    <span
+                      class="Text__root Text__standard Text__raw"
+                    >
+                      <span
+                        class=""
+                      >
+                        new
+                      </span>
+                    </span>
+                  </span>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Product & Tech Blog
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:product+blog"
+                    href="http://productblog.seek.com.au"
+                  >
+                    Product & Tech Blog
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -598,50 +681,58 @@ exports[`Footer: should render when authenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:facebook"
-                      href="https://www.facebook.com/SEEK/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Facebook
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:instagram"
-                      href="https://www.instagram.com/seekau/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:facebook"
+                        href="https://www.facebook.com/SEEK/"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Instagram
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:twitter"
-                      href="https://twitter.com/seekjobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:instagram"
+                        href="https://www.instagram.com/seekau/"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Twitter
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:youtube"
-                      href="https://www.youtube.com/user/SEEKJobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:twitter"
+                        href="https://twitter.com/seekjobs"
+                      >
+                        Twitter
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      YouTube
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:youtube"
+                        href="https://www.youtube.com/user/SEEKJobs"
+                      >
+                        YouTube
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -656,62 +747,72 @@ exports[`Footer: should render when authenticated 1`] = `
               Employers
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:register+for+free"
-                  href="https://talent.seek.com.au/"
-                  rel="nofollow"
+              <div>
+                <li
+                  class=""
                 >
-                  Register for free
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:post+a+job+ad"
-                  href="https://talent.seek.com.au/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:register+for+free"
+                    href="https://talent.seek.com.au/"
+                    rel="nofollow"
+                  >
+                    Register for free
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Post a job ad
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:products+prices"
-                  href="https://talent.seek.com.au/Support/OurProducts"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:post+a+job+ad"
+                    href="https://talent.seek.com.au/"
+                  >
+                    Post a job ad
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Products & prices
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:customer+service"
-                  href="https://talent.seek.com.au/ContactUs"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:products+prices"
+                    href="https://talent.seek.com.au/Support/OurProducts"
+                  >
+                    Products & prices
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Customer service
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:insight+blog"
-                  href="http://insightsresources.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:customer+service"
+                    href="https://talent.seek.com.au/ContactUs"
+                  >
+                    Customer service
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Insights & Resources
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:insight+blog"
+                    href="http://insightsresources.seek.com.au"
+                  >
+                    Insights & Resources
+                  </a>
+                </li>
+              </div>
             </ul>
           </nav>
         </div>
@@ -803,86 +904,100 @@ exports[`Footer: should render when authentication is pending 1`] = `
               Tools
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:jobs"
-                  href="/"
+              <div>
+                <li
+                  class=""
                 >
-                  Job search
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:profile"
-                  href="/profile/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:jobs"
+                    href="/"
+                  >
+                    Job search
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Profile
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:my+activity"
-                  href="/sign-in?returnUrl=%2Fmyactivity"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:profile"
+                    href="/profile/"
+                  >
+                    Profile
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved searches
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:my+activity"
+                    href="/sign-in?returnUrl=%2Fmyactivity"
+                    rel="nofollow"
+                  >
+                    Saved searches
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:favourite"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                    rel="nofollow"
+                  >
+                    Saved jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Applied jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:advice+tips"
-                  href="/career-advice/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:applied"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    rel="nofollow"
+                  >
+                    Applied jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Career Advice
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:companies"
-                  href="/companies/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:advice+tips"
+                    href="/career-advice/"
+                  >
+                    Career Advice
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Company reviews
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:companies"
+                    href="/companies/"
+                  >
+                    Company reviews
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -905,61 +1020,71 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.com.au/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Employer site
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:nz+homepage"
-                      href="https://www.seek.co.nz/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:post+a+job+ad"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer site
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      SEEK NZ
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:courses"
-                      href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:nz+homepage"
+                        href="https://www.seek.co.nz/"
+                      >
+                        SEEK NZ
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Courses
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:business+for+sale"
-                      href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:courses"
+                        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      >
+                        Courses
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Business for sale
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:volunteering"
-                      href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:business+for+sale"
+                        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      >
+                        Business for sale
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Volunteering
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:volunteering"
+                        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      >
+                        Volunteering
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -974,39 +1099,45 @@ exports[`Footer: should render when authentication is pending 1`] = `
               Company
             </h1>
             <ul>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:about+seek"
-                  href="/about"
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  About SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:media"
-                  href="/about/news"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:about+seek"
+                    href="/about"
+                  >
+                    About SEEK
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Newsroom
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:investor+centre"
-                  href="/about/investors"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:media"
+                    href="/about/news"
+                  >
+                    Newsroom
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Investors
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:investor+centre"
+                    href="/about/investors"
+                  >
+                    Investors
+                  </a>
+                </li>
+              </div>
               <li
                 class="ToggleContainer__secondary"
               >
@@ -1029,182 +1160,204 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:bdjobs"
-                      href="https://www.bdjobs.com"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Bdjobs
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:bdjobs"
+                        href="https://www.bdjobs.com"
+                      >
+                        Bdjobs
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Bangladesh
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Bangladesh
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:brighter+monday"
-                      href="https://www.brightermonday.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:brighter+monday"
+                        href="https://www.brightermonday.com"
+                      >
+                        Brighter Monday
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — E Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Brighter Monday
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:catho"
+                        href="https://www.catho.com.br"
+                      >
+                        Catho
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Brazil
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — E Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:catho"
-                      href="https://www.catho.com.br"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobberman"
+                        href="https://www.jobberman.com"
+                      >
+                        Jobberman
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — W Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Catho
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobsdb"
+                        href="https://www.jobsdb.com"
+                      >
+                        jobsDB
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Brazil
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobberman"
-                      href="https://www.jobberman.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobstreet"
+                        href="https://www.jobstreet.com"
+                      >
+                        JobStreet
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jobberman
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+int"
+                        href="https://www.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Worldwide
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — W Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobsdb"
-                      href="https://www.jobsdb.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:occ+mundial"
+                        href="https://www.occ.com.mx"
+                      >
+                        OCC Mundial
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Mexico
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      jobsDB
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:workana"
+                        href="https://www.workana.com"
+                      >
+                        Workana
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Latin America
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobstreet"
-                      href="https://www.jobstreet.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:zhaopin"
+                        href="https://www.zhaopin.com"
+                      >
+                        Zhaopin
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — China
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobStreet
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+int"
-                      href="https://www.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:occ+mundial"
-                      href="https://www.occ.com.mx"
-                    >
-                      OCC Mundial
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Mexico
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:workana"
-                      href="https://www.workana.com"
-                    >
-                      Workana
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Latin America
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:zhaopin"
-                      href="https://www.zhaopin.com"
-                    >
-                      Zhaopin
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — China
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+au"
-                      href="https://au.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Australia
-                    </span>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+au"
+                        href="https://au.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Australia
+                      </span>
+                    </li>
+                  </div>
                 </ul>
               </li>
               <li
@@ -1230,73 +1383,85 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobadder"
-                      href="https://jobadder.com/au"
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobAdder
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+local"
-                      data-automation="jora-local-link"
-                      href="http://www.joralocal.com.au"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobadder"
+                        href="https://jobadder.com/au"
+                      >
+                        JobAdder
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jora Local
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:realestate+au"
-                      href="https://www.realestate.com.au/buy"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+local"
+                        data-automation="jora-local-link"
+                        href="http://www.joralocal.com.au"
+                      >
+                        Jora Local
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      realestate.com.au
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sidekicker"
-                      href="https://www.sidekicker.com.au/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:realestate+au"
+                        href="https://www.realestate.com.au/buy"
+                      >
+                        realestate.com.au
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Sidekicker
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:ximble"
-                      href="https://www.ximble.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sidekicker"
+                        href="https://www.sidekicker.com.au/"
+                      >
+                        Sidekicker
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Ximble
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sparkhire"
-                      href="https://anz.sparkhire.com/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:ximble"
+                        href="https://www.ximble.com"
+                      >
+                        Ximble
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Spark Hire
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sparkhire"
+                        href="https://anz.sparkhire.com/"
+                      >
+                        Spark Hire
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -1311,39 +1476,58 @@ exports[`Footer: should render when authentication is pending 1`] = `
               Connect
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:contact+us"
-                  href="/contact-us"
+              <div>
+                <li
+                  class=""
                 >
-                  Contact us / FAQs
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:work+for+seek"
-                  href="/work-for-seek"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:contact+us"
+                    href="/contact-us"
+                  >
+                    Contact us / FAQs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Work for SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:product+blog"
-                  href="http://productblog.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:work+for+seek"
+                    href="/work-for-seek"
+                  >
+                    Work for SEEK
+                  </a>
+                  <span
+                    class="Pill__footerBadge Pill__staticPill"
+                  >
+                    <span
+                      class="Text__root Text__standard Text__raw"
+                    >
+                      <span
+                        class=""
+                      >
+                        new
+                      </span>
+                    </span>
+                  </span>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Product & Tech Blog
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:product+blog"
+                    href="http://productblog.seek.com.au"
+                  >
+                    Product & Tech Blog
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -1366,50 +1550,58 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:facebook"
-                      href="https://www.facebook.com/SEEK/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Facebook
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:instagram"
-                      href="https://www.instagram.com/seekau/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:facebook"
+                        href="https://www.facebook.com/SEEK/"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Instagram
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:twitter"
-                      href="https://twitter.com/seekjobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:instagram"
+                        href="https://www.instagram.com/seekau/"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Twitter
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:youtube"
-                      href="https://www.youtube.com/user/SEEKJobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:twitter"
+                        href="https://twitter.com/seekjobs"
+                      >
+                        Twitter
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      YouTube
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:youtube"
+                        href="https://www.youtube.com/user/SEEKJobs"
+                      >
+                        YouTube
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -1424,62 +1616,72 @@ exports[`Footer: should render when authentication is pending 1`] = `
               Employers
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:register+for+free"
-                  href="https://talent.seek.com.au/"
-                  rel="nofollow"
+              <div>
+                <li
+                  class=""
                 >
-                  Register for free
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:post+a+job+ad"
-                  href="https://talent.seek.com.au/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:register+for+free"
+                    href="https://talent.seek.com.au/"
+                    rel="nofollow"
+                  >
+                    Register for free
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Post a job ad
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:products+prices"
-                  href="https://talent.seek.com.au/Support/OurProducts"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:post+a+job+ad"
+                    href="https://talent.seek.com.au/"
+                  >
+                    Post a job ad
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Products & prices
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:customer+service"
-                  href="https://talent.seek.com.au/ContactUs"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:products+prices"
+                    href="https://talent.seek.com.au/Support/OurProducts"
+                  >
+                    Products & prices
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Customer service
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:insight+blog"
-                  href="http://insightsresources.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:customer+service"
+                    href="https://talent.seek.com.au/ContactUs"
+                  >
+                    Customer service
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Insights & Resources
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:insight+blog"
+                    href="http://insightsresources.seek.com.au"
+                  >
+                    Insights & Resources
+                  </a>
+                </li>
+              </div>
             </ul>
           </nav>
         </div>
@@ -1571,86 +1773,100 @@ exports[`Footer: should render when unauthenticated 1`] = `
               Tools
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:jobs"
-                  href="/"
+              <div>
+                <li
+                  class=""
                 >
-                  Job search
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:profile"
-                  href="/profile/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:jobs"
+                    href="/"
+                  >
+                    Job search
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Profile
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:my+activity"
-                  href="/sign-in?returnUrl=%2Fmyactivity"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:profile"
+                    href="/profile/"
+                  >
+                    Profile
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved searches
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:my+activity"
+                    href="/sign-in?returnUrl=%2Fmyactivity"
+                    rel="nofollow"
+                  >
+                    Saved searches
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:favourite"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                    rel="nofollow"
+                  >
+                    Saved jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Applied jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:advice+tips"
-                  href="/career-advice/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:applied"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    rel="nofollow"
+                  >
+                    Applied jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Career Advice
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:companies"
-                  href="/companies/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:advice+tips"
+                    href="/career-advice/"
+                  >
+                    Career Advice
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Company reviews
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:companies"
+                    href="/companies/"
+                  >
+                    Company reviews
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -1673,61 +1889,71 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.com.au/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Employer site
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:nz+homepage"
-                      href="https://www.seek.co.nz/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:post+a+job+ad"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer site
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      SEEK NZ
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:courses"
-                      href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:nz+homepage"
+                        href="https://www.seek.co.nz/"
+                      >
+                        SEEK NZ
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Courses
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:business+for+sale"
-                      href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:courses"
+                        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      >
+                        Courses
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Business for sale
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:volunteering"
-                      href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:business+for+sale"
+                        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      >
+                        Business for sale
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Volunteering
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:volunteering"
+                        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      >
+                        Volunteering
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -1742,39 +1968,45 @@ exports[`Footer: should render when unauthenticated 1`] = `
               Company
             </h1>
             <ul>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:about+seek"
-                  href="/about"
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  About SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:media"
-                  href="/about/news"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:about+seek"
+                    href="/about"
+                  >
+                    About SEEK
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Newsroom
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:investor+centre"
-                  href="/about/investors"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:media"
+                    href="/about/news"
+                  >
+                    Newsroom
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Investors
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:investor+centre"
+                    href="/about/investors"
+                  >
+                    Investors
+                  </a>
+                </li>
+              </div>
               <li
                 class="ToggleContainer__secondary"
               >
@@ -1797,182 +2029,204 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:bdjobs"
-                      href="https://www.bdjobs.com"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Bdjobs
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:bdjobs"
+                        href="https://www.bdjobs.com"
+                      >
+                        Bdjobs
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Bangladesh
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Bangladesh
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:brighter+monday"
-                      href="https://www.brightermonday.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:brighter+monday"
+                        href="https://www.brightermonday.com"
+                      >
+                        Brighter Monday
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — E Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Brighter Monday
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:catho"
+                        href="https://www.catho.com.br"
+                      >
+                        Catho
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Brazil
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — E Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:catho"
-                      href="https://www.catho.com.br"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobberman"
+                        href="https://www.jobberman.com"
+                      >
+                        Jobberman
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — W Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Catho
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobsdb"
+                        href="https://www.jobsdb.com"
+                      >
+                        jobsDB
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Brazil
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobberman"
-                      href="https://www.jobberman.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobstreet"
+                        href="https://www.jobstreet.com"
+                      >
+                        JobStreet
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jobberman
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+int"
+                        href="https://www.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Worldwide
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — W Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobsdb"
-                      href="https://www.jobsdb.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:occ+mundial"
+                        href="https://www.occ.com.mx"
+                      >
+                        OCC Mundial
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Mexico
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      jobsDB
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:workana"
+                        href="https://www.workana.com"
+                      >
+                        Workana
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Latin America
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobstreet"
-                      href="https://www.jobstreet.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:zhaopin"
+                        href="https://www.zhaopin.com"
+                      >
+                        Zhaopin
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — China
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobStreet
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+int"
-                      href="https://www.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:occ+mundial"
-                      href="https://www.occ.com.mx"
-                    >
-                      OCC Mundial
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Mexico
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:workana"
-                      href="https://www.workana.com"
-                    >
-                      Workana
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Latin America
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:zhaopin"
-                      href="https://www.zhaopin.com"
-                    >
-                      Zhaopin
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — China
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+au"
-                      href="https://au.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Australia
-                    </span>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+au"
+                        href="https://au.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Australia
+                      </span>
+                    </li>
+                  </div>
                 </ul>
               </li>
               <li
@@ -1998,73 +2252,85 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobadder"
-                      href="https://jobadder.com/au"
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobAdder
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+local"
-                      data-automation="jora-local-link"
-                      href="http://www.joralocal.com.au"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobadder"
+                        href="https://jobadder.com/au"
+                      >
+                        JobAdder
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jora Local
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:realestate+au"
-                      href="https://www.realestate.com.au/buy"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+local"
+                        data-automation="jora-local-link"
+                        href="http://www.joralocal.com.au"
+                      >
+                        Jora Local
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      realestate.com.au
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sidekicker"
-                      href="https://www.sidekicker.com.au/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:realestate+au"
+                        href="https://www.realestate.com.au/buy"
+                      >
+                        realestate.com.au
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Sidekicker
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:ximble"
-                      href="https://www.ximble.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sidekicker"
+                        href="https://www.sidekicker.com.au/"
+                      >
+                        Sidekicker
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Ximble
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sparkhire"
-                      href="https://anz.sparkhire.com/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:ximble"
+                        href="https://www.ximble.com"
+                      >
+                        Ximble
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Spark Hire
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sparkhire"
+                        href="https://anz.sparkhire.com/"
+                      >
+                        Spark Hire
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -2079,39 +2345,58 @@ exports[`Footer: should render when unauthenticated 1`] = `
               Connect
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:contact+us"
-                  href="/contact-us"
+              <div>
+                <li
+                  class=""
                 >
-                  Contact us / FAQs
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:work+for+seek"
-                  href="/work-for-seek"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:contact+us"
+                    href="/contact-us"
+                  >
+                    Contact us / FAQs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Work for SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:product+blog"
-                  href="http://productblog.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:work+for+seek"
+                    href="/work-for-seek"
+                  >
+                    Work for SEEK
+                  </a>
+                  <span
+                    class="Pill__footerBadge Pill__staticPill"
+                  >
+                    <span
+                      class="Text__root Text__standard Text__raw"
+                    >
+                      <span
+                        class=""
+                      >
+                        new
+                      </span>
+                    </span>
+                  </span>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Product & Tech Blog
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:product+blog"
+                    href="http://productblog.seek.com.au"
+                  >
+                    Product & Tech Blog
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -2134,50 +2419,58 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:facebook"
-                      href="https://www.facebook.com/SEEK/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Facebook
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:instagram"
-                      href="https://www.instagram.com/seekau/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:facebook"
+                        href="https://www.facebook.com/SEEK/"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Instagram
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:twitter"
-                      href="https://twitter.com/seekjobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:instagram"
+                        href="https://www.instagram.com/seekau/"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Twitter
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:youtube"
-                      href="https://www.youtube.com/user/SEEKJobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:twitter"
+                        href="https://twitter.com/seekjobs"
+                      >
+                        Twitter
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      YouTube
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:youtube"
+                        href="https://www.youtube.com/user/SEEKJobs"
+                      >
+                        YouTube
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -2192,62 +2485,72 @@ exports[`Footer: should render when unauthenticated 1`] = `
               Employers
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:register+for+free"
-                  href="https://talent.seek.com.au/"
-                  rel="nofollow"
+              <div>
+                <li
+                  class=""
                 >
-                  Register for free
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:post+a+job+ad"
-                  href="https://talent.seek.com.au/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:register+for+free"
+                    href="https://talent.seek.com.au/"
+                    rel="nofollow"
+                  >
+                    Register for free
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Post a job ad
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:products+prices"
-                  href="https://talent.seek.com.au/Support/OurProducts"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:post+a+job+ad"
+                    href="https://talent.seek.com.au/"
+                  >
+                    Post a job ad
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Products & prices
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:customer+service"
-                  href="https://talent.seek.com.au/ContactUs"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:products+prices"
+                    href="https://talent.seek.com.au/Support/OurProducts"
+                  >
+                    Products & prices
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Customer service
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:insight+blog"
-                  href="http://insightsresources.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:customer+service"
+                    href="https://talent.seek.com.au/ContactUs"
+                  >
+                    Customer service
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Insights & Resources
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:insight+blog"
+                    href="http://insightsresources.seek.com.au"
+                  >
+                    Insights & Resources
+                  </a>
+                </li>
+              </div>
             </ul>
           </nav>
         </div>
@@ -2339,86 +2642,100 @@ exports[`Footer: should render with locale of AU 1`] = `
               Tools
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:jobs"
-                  href="/"
+              <div>
+                <li
+                  class=""
                 >
-                  Job search
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:profile"
-                  href="/profile/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:jobs"
+                    href="/"
+                  >
+                    Job search
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Profile
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:my+activity"
-                  href="/sign-in?returnUrl=%2Fmyactivity"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:profile"
+                    href="/profile/"
+                  >
+                    Profile
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved searches
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:my+activity"
+                    href="/sign-in?returnUrl=%2Fmyactivity"
+                    rel="nofollow"
+                  >
+                    Saved searches
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:favourite"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                    rel="nofollow"
+                  >
+                    Saved jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Applied jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:advice+tips"
-                  href="/career-advice/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:applied"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    rel="nofollow"
+                  >
+                    Applied jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Career Advice
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:companies"
-                  href="/companies/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:advice+tips"
+                    href="/career-advice/"
+                  >
+                    Career Advice
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Company reviews
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:companies"
+                    href="/companies/"
+                  >
+                    Company reviews
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -2441,61 +2758,71 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.com.au/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Employer site
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:nz+homepage"
-                      href="https://www.seek.co.nz/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:post+a+job+ad"
+                        href="https://talent.seek.com.au/"
+                      >
+                        Employer site
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      SEEK NZ
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:courses"
-                      href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:nz+homepage"
+                        href="https://www.seek.co.nz/"
+                      >
+                        SEEK NZ
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Courses
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:business+for+sale"
-                      href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:courses"
+                        href="https://www.seek.com.au/learning/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      >
+                        Courses
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Business for sale
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:volunteering"
-                      href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:business+for+sale"
+                        href="https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus"
+                      >
+                        Business for sale
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Volunteering
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:volunteering"
+                        href="https://www.volunteer.com.au/?tracking=SKMAU:main+header"
+                      >
+                        Volunteering
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -2510,39 +2837,45 @@ exports[`Footer: should render with locale of AU 1`] = `
               Company
             </h1>
             <ul>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:about+seek"
-                  href="/about"
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  About SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:media"
-                  href="/about/news"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:about+seek"
+                    href="/about"
+                  >
+                    About SEEK
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Newsroom
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:investor+centre"
-                  href="/about/investors"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:media"
+                    href="/about/news"
+                  >
+                    Newsroom
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Investors
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:investor+centre"
+                    href="/about/investors"
+                  >
+                    Investors
+                  </a>
+                </li>
+              </div>
               <li
                 class="ToggleContainer__secondary"
               >
@@ -2565,182 +2898,204 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:bdjobs"
-                      href="https://www.bdjobs.com"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Bdjobs
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:bdjobs"
+                        href="https://www.bdjobs.com"
+                      >
+                        Bdjobs
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Bangladesh
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Bangladesh
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:brighter+monday"
-                      href="https://www.brightermonday.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:brighter+monday"
+                        href="https://www.brightermonday.com"
+                      >
+                        Brighter Monday
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — E Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Brighter Monday
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:catho"
+                        href="https://www.catho.com.br"
+                      >
+                        Catho
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Brazil
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — E Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:catho"
-                      href="https://www.catho.com.br"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobberman"
+                        href="https://www.jobberman.com"
+                      >
+                        Jobberman
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — W Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Catho
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobsdb"
+                        href="https://www.jobsdb.com"
+                      >
+                        jobsDB
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Brazil
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobberman"
-                      href="https://www.jobberman.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobstreet"
+                        href="https://www.jobstreet.com"
+                      >
+                        JobStreet
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jobberman
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+int"
+                        href="https://www.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Worldwide
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — W Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobsdb"
-                      href="https://www.jobsdb.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:occ+mundial"
+                        href="https://www.occ.com.mx"
+                      >
+                        OCC Mundial
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Mexico
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      jobsDB
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:workana"
+                        href="https://www.workana.com"
+                      >
+                        Workana
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Latin America
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobstreet"
-                      href="https://www.jobstreet.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:zhaopin"
+                        href="https://www.zhaopin.com"
+                      >
+                        Zhaopin
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — China
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobStreet
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+int"
-                      href="https://www.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:occ+mundial"
-                      href="https://www.occ.com.mx"
-                    >
-                      OCC Mundial
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Mexico
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:workana"
-                      href="https://www.workana.com"
-                    >
-                      Workana
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Latin America
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:zhaopin"
-                      href="https://www.zhaopin.com"
-                    >
-                      Zhaopin
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — China
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+au"
-                      href="https://au.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Australia
-                    </span>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+au"
+                        href="https://au.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Australia
+                      </span>
+                    </li>
+                  </div>
                 </ul>
               </li>
               <li
@@ -2766,73 +3121,85 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobadder"
-                      href="https://jobadder.com/au"
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobAdder
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+local"
-                      data-automation="jora-local-link"
-                      href="http://www.joralocal.com.au"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobadder"
+                        href="https://jobadder.com/au"
+                      >
+                        JobAdder
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jora Local
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:realestate+au"
-                      href="https://www.realestate.com.au/buy"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+local"
+                        data-automation="jora-local-link"
+                        href="http://www.joralocal.com.au"
+                      >
+                        Jora Local
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      realestate.com.au
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sidekicker"
-                      href="https://www.sidekicker.com.au/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:realestate+au"
+                        href="https://www.realestate.com.au/buy"
+                      >
+                        realestate.com.au
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Sidekicker
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:ximble"
-                      href="https://www.ximble.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sidekicker"
+                        href="https://www.sidekicker.com.au/"
+                      >
+                        Sidekicker
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Ximble
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:sparkhire"
-                      href="https://anz.sparkhire.com/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:ximble"
+                        href="https://www.ximble.com"
+                      >
+                        Ximble
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Spark Hire
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:sparkhire"
+                        href="https://anz.sparkhire.com/"
+                      >
+                        Spark Hire
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -2847,39 +3214,58 @@ exports[`Footer: should render with locale of AU 1`] = `
               Connect
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:contact+us"
-                  href="/contact-us"
+              <div>
+                <li
+                  class=""
                 >
-                  Contact us / FAQs
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:work+for+seek"
-                  href="/work-for-seek"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:contact+us"
+                    href="/contact-us"
+                  >
+                    Contact us / FAQs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Work for SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:product+blog"
-                  href="http://productblog.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:work+for+seek"
+                    href="/work-for-seek"
+                  >
+                    Work for SEEK
+                  </a>
+                  <span
+                    class="Pill__footerBadge Pill__staticPill"
+                  >
+                    <span
+                      class="Text__root Text__standard Text__raw"
+                    >
+                      <span
+                        class=""
+                      >
+                        new
+                      </span>
+                    </span>
+                  </span>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Product & Tech Blog
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:product+blog"
+                    href="http://productblog.seek.com.au"
+                  >
+                    Product & Tech Blog
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -2902,50 +3288,58 @@ exports[`Footer: should render with locale of AU 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:facebook"
-                      href="https://www.facebook.com/SEEK/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Facebook
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:instagram"
-                      href="https://www.instagram.com/seekau/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:facebook"
+                        href="https://www.facebook.com/SEEK/"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Instagram
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:twitter"
-                      href="https://twitter.com/seekjobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:instagram"
+                        href="https://www.instagram.com/seekau/"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Twitter
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:youtube"
-                      href="https://www.youtube.com/user/SEEKJobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:twitter"
+                        href="https://twitter.com/seekjobs"
+                      >
+                        Twitter
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      YouTube
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:youtube"
+                        href="https://www.youtube.com/user/SEEKJobs"
+                      >
+                        YouTube
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -2960,62 +3354,72 @@ exports[`Footer: should render with locale of AU 1`] = `
               Employers
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:register+for+free"
-                  href="https://talent.seek.com.au/"
-                  rel="nofollow"
+              <div>
+                <li
+                  class=""
                 >
-                  Register for free
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:post+a+job+ad"
-                  href="https://talent.seek.com.au/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:register+for+free"
+                    href="https://talent.seek.com.au/"
+                    rel="nofollow"
+                  >
+                    Register for free
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Post a job ad
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:products+prices"
-                  href="https://talent.seek.com.au/Support/OurProducts"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:post+a+job+ad"
+                    href="https://talent.seek.com.au/"
+                  >
+                    Post a job ad
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Products & prices
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:customer+service"
-                  href="https://talent.seek.com.au/ContactUs"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:products+prices"
+                    href="https://talent.seek.com.au/Support/OurProducts"
+                  >
+                    Products & prices
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Customer service
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:insight+blog"
-                  href="http://insightsresources.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:customer+service"
+                    href="https://talent.seek.com.au/ContactUs"
+                  >
+                    Customer service
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Insights & Resources
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:insight+blog"
+                    href="http://insightsresources.seek.com.au"
+                  >
+                    Insights & Resources
+                  </a>
+                </li>
+              </div>
             </ul>
           </nav>
         </div>
@@ -3107,75 +3511,87 @@ exports[`Footer: should render with locale of NZ 1`] = `
               Tools
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:jobs"
-                  href="/"
+              <div>
+                <li
+                  class=""
                 >
-                  Job search
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:profile"
-                  href="/profile/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:jobs"
+                    href="/"
+                  >
+                    Job search
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Profile
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:my+activity"
-                  href="/sign-in?returnUrl=%2Fmyactivity"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:profile"
+                    href="/profile/"
+                  >
+                    Profile
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved searches
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:favourite"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:my+activity"
+                    href="/sign-in?returnUrl=%2Fmyactivity"
+                    rel="nofollow"
+                  >
+                    Saved searches
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Saved jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:applied"
-                  href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                  rel="nofollow"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:favourite"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
+                    rel="nofollow"
+                  >
+                    Saved jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Applied jobs
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:advice+tips"
-                  href="/career-advice/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:applied"
+                    href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
+                    rel="nofollow"
+                  >
+                    Applied jobs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Career Advice
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:advice+tips"
+                    href="/career-advice/"
+                  >
+                    Career Advice
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -3198,61 +3614,71 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:post+a+job+ad"
-                      href="https://talent.seek.co.nz/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Employer site
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:au+homepage"
-                      href="https://www.seek.com.au/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:post+a+job+ad"
+                        href="https://talent.seek.co.nz/"
+                      >
+                        Employer site
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      SEEK AU
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:courses"
-                      href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:au+homepage"
+                        href="https://www.seek.com.au/"
+                      >
+                        SEEK AU
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Courses
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:business+for+sale"
-                      href="https://www.seekbusiness.co.nz/?tracking=sk:main:nz:nav:bus"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:courses"
+                        href="https://www.seeklearning.co.nz/?campaigncode=seek_banner_29&sc_trk=skj-courses-link"
+                      >
+                        Courses
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Business for sale
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:volunteering"
-                      href="https://www.volunteer.co.nz/?tracking=SKMNZ:main+header"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:business+for+sale"
+                        href="https://www.seekbusiness.co.nz/?tracking=sk:main:nz:nav:bus"
+                      >
+                        Business for sale
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Volunteering
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:volunteering"
+                        href="https://www.volunteer.co.nz/?tracking=SKMNZ:main+header"
+                      >
+                        Volunteering
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -3267,39 +3693,45 @@ exports[`Footer: should render with locale of NZ 1`] = `
               Company
             </h1>
             <ul>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:about+seek"
-                  href="/about"
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  About SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:media"
-                  href="/about/news"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:about+seek"
+                    href="/about"
+                  >
+                    About SEEK
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Newsroom
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:investor+centre"
-                  href="/about/investors"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:media"
+                    href="/about/news"
+                  >
+                    Newsroom
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Investors
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:investor+centre"
+                    href="/about/investors"
+                  >
+                    Investors
+                  </a>
+                </li>
+              </div>
               <li
                 class="ToggleContainer__secondary"
               >
@@ -3322,182 +3754,204 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:bdjobs"
-                      href="https://www.bdjobs.com"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Bdjobs
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:bdjobs"
+                        href="https://www.bdjobs.com"
+                      >
+                        Bdjobs
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Bangladesh
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Bangladesh
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:brighter+monday"
-                      href="https://www.brightermonday.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:brighter+monday"
+                        href="https://www.brightermonday.com"
+                      >
+                        Brighter Monday
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — E Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Brighter Monday
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:catho"
+                        href="https://www.catho.com.br"
+                      >
+                        Catho
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Brazil
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — E Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:catho"
-                      href="https://www.catho.com.br"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobberman"
+                        href="https://www.jobberman.com"
+                      >
+                        Jobberman
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — W Africa
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Catho
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobsdb"
+                        href="https://www.jobsdb.com"
+                      >
+                        jobsDB
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — Brazil
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobberman"
-                      href="https://www.jobberman.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jobstreet"
+                        href="https://www.jobstreet.com"
+                      >
+                        JobStreet
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — SE Asia
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Jobberman
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+int"
+                        href="https://www.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Worldwide
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — W Africa
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobsdb"
-                      href="https://www.jobsdb.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:occ+mundial"
+                        href="https://www.occ.com.mx"
+                      >
+                        OCC Mundial
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Mexico
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      jobsDB
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:workana"
+                        href="https://www.workana.com"
+                      >
+                        Workana
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Latin America
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jobstreet"
-                      href="https://www.jobstreet.com"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:zhaopin"
+                        href="https://www.zhaopin.com"
+                      >
+                        Zhaopin
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — China
+                      </span>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      JobStreet
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — SE Asia
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+int"
-                      href="https://www.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Worldwide
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:occ+mundial"
-                      href="https://www.occ.com.mx"
-                    >
-                      OCC Mundial
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Mexico
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:workana"
-                      href="https://www.workana.com"
-                    >
-                      Workana
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Latin America
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:zhaopin"
-                      href="https://www.zhaopin.com"
-                    >
-                      Zhaopin
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — China
-                    </span>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:jora+au"
-                      href="https://au.jora.com"
-                    >
-                      Jora
-                    </a>
-                    <span
-                      class="FooterLink__partnerCountry"
-                    >
-                       — Australia
-                    </span>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:jora+au"
+                        href="https://au.jora.com"
+                      >
+                        Jora
+                      </a>
+                      <span
+                        class="FooterLink__partnerCountry"
+                      >
+                         — Australia
+                      </span>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -3512,39 +3966,58 @@ exports[`Footer: should render with locale of NZ 1`] = `
               Connect
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:contact+us"
-                  href="/contact-us"
+              <div>
+                <li
+                  class=""
                 >
-                  Contact us / FAQs
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:work+for+seek"
-                  href="/work-for-seek"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:contact+us"
+                    href="/contact-us"
+                  >
+                    Contact us / FAQs
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Work for SEEK
-                </a>
-              </li>
-              <li
-                class="FooterLink__secondary"
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:product+blog"
-                  href="http://productblog.seek.com.au"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:work+for+seek"
+                    href="/work-for-seek"
+                  >
+                    Work for SEEK
+                  </a>
+                  <span
+                    class="Pill__footerBadge Pill__staticPill"
+                  >
+                    <span
+                      class="Text__root Text__standard Text__raw"
+                    >
+                      <span
+                        class=""
+                      >
+                        new
+                      </span>
+                    </span>
+                  </span>
+                </li>
+              </div>
+              <div>
+                <li
+                  class="FooterLink__secondary"
                 >
-                  Product & Tech Blog
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:product+blog"
+                    href="http://productblog.seek.com.au"
+                  >
+                    Product & Tech Blog
+                  </a>
+                </li>
+              </div>
               <li
                 class=""
               >
@@ -3567,50 +4040,58 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 <ul
                   class="ToggleContainer__toggleContainer"
                 >
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:facebook"
-                      href="https://www.facebook.com/seeknz/"
+                  <div>
+                    <li
+                      class=""
                     >
-                      Facebook
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:instagram"
-                      href="https://www.instagram.com/seeknz/"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:facebook"
+                        href="https://www.facebook.com/seeknz/"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Instagram
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:twitter"
-                      href="https://twitter.com/seekjobsnz"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:instagram"
+                        href="https://www.instagram.com/seeknz/"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      Twitter
-                    </a>
-                  </li>
-                  <li
-                    class=""
-                  >
-                    <a
-                      class="FooterLink__link"
-                      data-analytics="toolbar:youtube"
-                      href="https://www.youtube.com/user/SEEKJobs"
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:twitter"
+                        href="https://twitter.com/seekjobsnz"
+                      >
+                        Twitter
+                      </a>
+                    </li>
+                  </div>
+                  <div>
+                    <li
+                      class=""
                     >
-                      YouTube
-                    </a>
-                  </li>
+                      <a
+                        class="FooterLink__link"
+                        data-analytics="toolbar:youtube"
+                        href="https://www.youtube.com/user/SEEKJobs"
+                      >
+                        YouTube
+                      </a>
+                    </li>
+                  </div>
                 </ul>
               </li>
             </ul>
@@ -3625,62 +4106,72 @@ exports[`Footer: should render with locale of NZ 1`] = `
               Employers
             </h1>
             <ul>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:register+for+free"
-                  href="https://talent.seek.co.nz/"
-                  rel="nofollow"
+              <div>
+                <li
+                  class=""
                 >
-                  Register for free
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:post+a+job+ad"
-                  href="https://talent.seek.co.nz/"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:register+for+free"
+                    href="https://talent.seek.co.nz/"
+                    rel="nofollow"
+                  >
+                    Register for free
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Post a job ad
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:products+prices"
-                  href="https://talent.seek.co.nz/Support/OurProducts"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:post+a+job+ad"
+                    href="https://talent.seek.co.nz/"
+                  >
+                    Post a job ad
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Products & prices
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:customer+service"
-                  href="https://talent.seek.co.nz/ContactUs"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:products+prices"
+                    href="https://talent.seek.co.nz/Support/OurProducts"
+                  >
+                    Products & prices
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Customer service
-                </a>
-              </li>
-              <li
-                class=""
-              >
-                <a
-                  class="FooterLink__link"
-                  data-analytics="toolbar:insight+blog"
-                  href="http://insightsresources.seek.co.nz"
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:customer+service"
+                    href="https://talent.seek.co.nz/ContactUs"
+                  >
+                    Customer service
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li
+                  class=""
                 >
-                  Insights & Resources
-                </a>
-              </li>
+                  <a
+                    class="FooterLink__link"
+                    data-analytics="toolbar:insight+blog"
+                    href="http://insightsresources.seek.co.nz"
+                  >
+                    Insights & Resources
+                  </a>
+                </li>
+              </div>
             </ul>
           </nav>
         </div>

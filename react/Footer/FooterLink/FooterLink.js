@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import urlForAuthStatus from '../../private/urlForAuthStatus';
+import Pill from '../../Pill/Pill';
 
-export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, authRequired, authenticationStatus, ...props }) {
+export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, badge, authRequired, authenticationStatus, ...props }) {
   return (
     <li
       className={classnames(
@@ -21,6 +22,11 @@ export default function FooterLink({ secondary, partner, analytics, className, l
         })
       }
       {
+        badge ?
+          <Pill text={badge} footer /> :
+          null
+      }
+      {
         partner ?
           <span className={styles.partnerCountry}>{` — ${partner}`}</span> :
           null
@@ -33,6 +39,7 @@ FooterLink.propTypes = {
   secondary: PropTypes.bool,
   analytics: PropTypes.string,
   href: PropTypes.string,
+  badge: PropTypes.string,
   className: PropTypes.string,
   partner: PropTypes.string,
   children: PropTypes.oneOfType([

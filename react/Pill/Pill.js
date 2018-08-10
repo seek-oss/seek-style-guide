@@ -11,6 +11,7 @@ type Props = {
   children?: Node,
   text?: Node,
   onClose?: Function,
+  footer?: boolean,
   className?: string
 };
 
@@ -28,10 +29,11 @@ export default class Pill extends Component<Props> {
 
   renderStaticPill() {
     const { children, text, className, ...restProps } = this.props;
+    const footerStyle = this.props.footer ? styles.footerBadge : null;
     const content = children || text;
 
     return (
-      <span className={classnames(className, styles.staticPill)} {...restProps}>
+      <span className={classnames(className, footerStyle, styles.staticPill)} {...restProps}>
         <Text baseline={false} raw>{content}</Text>
       </span>
     );
