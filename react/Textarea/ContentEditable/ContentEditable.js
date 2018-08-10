@@ -12,7 +12,7 @@ type Props = {
   tagName?: string,
   className?: string,
   style?: Object,
-  children: any
+  children?: any
 }
 
 /**

@@ -23,10 +23,11 @@ export const getAllTextnodes = (el: HTMLElement): Array<HTMLElement> => {
 
 export const getCaretData = (el: HTMLElement, position: number): CaretData => {
   let node;
-  let newPosition: number = position;
   const nodes = getAllTextnodes(el);
+  let newPosition = position;
+
   for (let n = 0; n < nodes.length; n++) {
-    if (position > nodes[n].nodeValue.length && nodes[n + 1]) {
+    if (newPosition > nodes[n].nodeValue.length && nodes[n + 1]) {
       // remove amount from the position, go to next node
       newPosition -= nodes[n].nodeValue.length;
     } else {
@@ -46,7 +47,7 @@ export const setCaretPosition = (d: CaretData) => {
   const sel = window.getSelection();
   const range = document.createRange();
 
-  if (d.node && d.position) {
+  if (d.node) {
     range.setStart(d.node, d.position);
     range.collapse(true);
     sel.removeAllRanges();
