@@ -1,10 +1,11 @@
 import styles from './Textarea.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classnames from '../../../../Library/Caches/typescript/2.9/node_modules/@types/classnames';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import Text from '../Text/Text';
+import ContentEditable from './ContentEditable/ContentEditable';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -15,6 +16,22 @@ function combineClassNames(props = {}, ...classNames) {
   };
 }
 
+function formatInvalidText(value, invalidText) {
+  let contentEditableText = '';
+
+  if (invalidText && value.indexOf(invalidText) !== -1) {
+    const textInError = value.replace(/<em[^>]*>|<\/em>/g, '').split(invalidText);
+    contentEditableText = textInError.map((text, i) =>
+      i !== (textInError.length - 1) ?
+        `${text}<em class="${styles.invalidText}">${invalidText}</em>` :
+        text
+    ).join('');
+  }
+
+  return contentEditableText;
+}
+
+/* eslint-disable react/no-deprecated */
 export default class Textarea extends Component {
   static displayName = 'Textarea';
 
@@ -40,7 +57,8 @@ export default class Textarea extends Component {
         return new Error(`\`value\` must be supplied if \`${propName}\` is set`);
       }
     },
-    secondaryLabel: PropTypes.string
+    secondaryLabel: PropTypes.string,
+    invalidText: PropTypes.string
     /* eslint-enable consistent-return */
   };
 
@@ -86,10 +104,9 @@ export default class Textarea extends Component {
   /* eslint-enable consistent-return */
 
   renderInput() {
-    const { id, value, onChange, onFocus, onBlur, inputProps } = this.props;
+    const { id, value, invalidText, onChange, onFocus, onBlur, inputProps } = this.props;
     const allInputProps = {
       id,
-      value,
       onChange,
       onFocus,
       onBlur,
@@ -97,9 +114,19 @@ export default class Textarea extends Component {
       'aria-describedby': `${id}-message`
     };
 
-    return (
-      <textarea {...allInputProps} />
-    );
+    if (invalidText) {
+      const html = formatInvalidText(value, invalidText);
+      return (
+        <ContentEditable
+          html={html}
+          role="textbox"
+          aria-multiline="true"
+          {...allInputProps}
+        />
+      );
+    }
+
+    return <textarea {...allInputProps} />;
   }
 
   render() {

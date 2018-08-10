@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from '../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import PropTypes from '../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
 import Textarea from './Textarea';
 import styles from './Textarea.less';
-import classnames from 'classnames';
+import classnames from '../../../../Library/Caches/typescript/2.9/node_modules/@types/classnames';
 import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
 import fieldLabelOptions from '../FieldLabel/FieldLabel.demoFragment';
 import * as sketch from './Textarea.sketch';
@@ -32,11 +32,13 @@ class TextareaContainer extends Component {
     const { inputValue } = this.state;
 
     return (
-      <DemoComponent
-        {...componentProps}
-        onChange={this.handleChange}
-        value={inputValue}
-      />
+      <div style={{ width: '300px' }}>
+        <DemoComponent
+          {...componentProps}
+          onChange={this.handleChange}
+          value={inputValue}
+        />
+      </div>
     );
   }
 }
@@ -82,6 +84,14 @@ export default {
           transformProps: props => ({
             ...props,
             description: 'Describe a descriptive description descriptively'
+          })
+        },
+        {
+          label: 'Highlight invalid text',
+          transformProps: props => ({
+            ...props,
+            invalidText: 'shit',
+            description: 'The word "shit" is invalid'
           })
         }
       ]

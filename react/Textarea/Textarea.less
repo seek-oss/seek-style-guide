@@ -1,15 +1,16 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  display: inline-block;
   position: relative;
 }
 
 .textarea {
   .touchableText();
   width: 100%;
+  display: inline-block;
   height: @row-height * 15;
   resize: vertical;
+  overflow: auto;
   max-height: @row-height * 30;
   line-height: 25px; // Deliberate deviation to avoid looking like body copy
   color: @sk-charcoal;
@@ -61,4 +62,9 @@
 
 .invalidCharacterCount {
   color: @sk-pink;
+}
+
+.invalidText {
+  background-color: fade(@sk-pink, 30);
+  margin: 0 1px;
 }
