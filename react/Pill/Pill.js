@@ -11,7 +11,6 @@ type Props = {
   children?: Node,
   text?: Node,
   onClose?: Function,
-  footer?: boolean,
   className?: string
 };
 
