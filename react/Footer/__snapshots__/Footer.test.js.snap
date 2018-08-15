@@ -622,7 +622,7 @@ exports[`Footer: should render when authenticated 1`] = `
               </div>
               <div>
                 <li
-                  class="FooterLink__secondary"
+                  class=""
                 >
                   <a
                     class="FooterLink__link"
@@ -632,17 +632,9 @@ exports[`Footer: should render when authenticated 1`] = `
                     Work for SEEK
                   </a>
                   <span
-                    class="Pill__footerBadge Pill__staticPill"
+                    class="FooterLink__newBadge"
                   >
-                    <span
-                      class="Text__root Text__standard Text__raw"
-                    >
-                      <span
-                        class=""
-                      >
-                        new
-                      </span>
-                    </span>
+                    new
                   </span>
                 </li>
               </div>
@@ -1491,7 +1483,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               </div>
               <div>
                 <li
-                  class="FooterLink__secondary"
+                  class=""
                 >
                   <a
                     class="FooterLink__link"
@@ -1501,17 +1493,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     Work for SEEK
                   </a>
                   <span
-                    class="Pill__footerBadge Pill__staticPill"
+                    class="FooterLink__newBadge"
                   >
-                    <span
-                      class="Text__root Text__standard Text__raw"
-                    >
-                      <span
-                        class=""
-                      >
-                        new
-                      </span>
-                    </span>
+                    new
                   </span>
                 </li>
               </div>
@@ -2360,7 +2344,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               </div>
               <div>
                 <li
-                  class="FooterLink__secondary"
+                  class=""
                 >
                   <a
                     class="FooterLink__link"
@@ -2370,17 +2354,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     Work for SEEK
                   </a>
                   <span
-                    class="Pill__footerBadge Pill__staticPill"
+                    class="FooterLink__newBadge"
                   >
-                    <span
-                      class="Text__root Text__standard Text__raw"
-                    >
-                      <span
-                        class=""
-                      >
-                        new
-                      </span>
-                    </span>
+                    new
                   </span>
                 </li>
               </div>
@@ -3229,7 +3205,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               </div>
               <div>
                 <li
-                  class="FooterLink__secondary"
+                  class=""
                 >
                   <a
                     class="FooterLink__link"
@@ -3239,17 +3215,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                     Work for SEEK
                   </a>
                   <span
-                    class="Pill__footerBadge Pill__staticPill"
+                    class="FooterLink__newBadge"
                   >
-                    <span
-                      class="Text__root Text__standard Text__raw"
-                    >
-                      <span
-                        class=""
-                      >
-                        new
-                      </span>
-                    </span>
+                    new
                   </span>
                 </li>
               </div>
@@ -3981,7 +3949,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </div>
               <div>
                 <li
-                  class="FooterLink__secondary"
+                  class=""
                 >
                   <a
                     class="FooterLink__link"
@@ -3991,17 +3959,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                     Work for SEEK
                   </a>
                   <span
-                    class="Pill__footerBadge Pill__staticPill"
+                    class="FooterLink__newBadge"
                   >
-                    <span
-                      class="Text__root Text__standard Text__raw"
-                    >
-                      <span
-                        class=""
-                      >
-                        new
-                      </span>
-                    </span>
+                    new
                   </span>
                 </li>
               </div>

@@ -38,7 +38,7 @@ FooterLink.propTypes = {
   secondary: PropTypes.bool,
   analytics: PropTypes.string,
   href: PropTypes.string,
-  newBadge: PropTypes.string,
+  newBadge: PropTypes.bool,
   className: PropTypes.string,
   partner: PropTypes.string,
   children: PropTypes.oneOfType([

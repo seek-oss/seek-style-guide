@@ -50,7 +50,7 @@ export default class Footer extends Component {
     const { locale, linkRenderer, authenticationStatus } = this.props;
 
     return (!specificLocale || specificLocale === locale) ?
-      <div><FooterLink secondary={secondary} linkRenderer={linkRenderer} authenticationStatus={authenticationStatus} key={i} {...restProps}>{name}</FooterLink></div> :
+      <div key={i}><FooterLink secondary={secondary} linkRenderer={linkRenderer} authenticationStatus={authenticationStatus} {...restProps}>{name}</FooterLink></div> :
       null;
   }
 
