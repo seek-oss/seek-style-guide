@@ -61,9 +61,31 @@
 }
 
 .invalidCharacterCount {
-  color: @sk-pink;
+  color: @sk-critical;
 }
 
-.invalidText {
-  background-color: fade(@sk-pink, 30);
+.highlightTextareaWrapper {
+  position: relative;
+}
+
+.highlightTextarea {
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  resize: none;
+}
+
+.backdrop {
+  background-color: @sk-white;
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.invalidTextChunk {
+  background-color: lighten(@sk-critical, 40);
+  border-radius: 2px;
+  white-space: pre-wrap;
 }

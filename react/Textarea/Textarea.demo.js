@@ -85,13 +85,63 @@ export default {
             ...props,
             description: 'Describe a descriptive description descriptively'
           })
+        }
+      ]
+    },
+    {
+      label: 'Highlight invalid text',
+      type: 'radio',
+      states: [
+        {
+          label: 'No highlighting',
+          transformProps: props => ({
+            ...props
+          })
         },
         {
-          label: 'Highlight invalid text',
+          label: 'Disallowed word(s)',
           transformProps: props => ({
             ...props,
-            invalidText: 'no',
-            description: 'The word "no" is invalid'
+            invalidText: 'bad',
+            description: 'The word "bad" is invalid'
+          })
+        },
+        {
+          label: 'Invalid range',
+          transformProps: props => ({
+            ...props,
+            invalidText: {
+              start: 10,
+              end: 20
+            },
+            description: 'Characters 10-20 are invalid'
+          })
+        },
+        {
+          label: 'Multiple invalid ranges',
+          transformProps: props => ({
+            ...props,
+            invalidText: [
+              {
+                start: 10,
+                end: 20
+              },
+              {
+                start: 30,
+                end: 40
+              }
+            ],
+            description: 'Characters 10-20 and 30-40 are invalid'
+          })
+        },
+        {
+          label: 'Character limit',
+          transformProps: props => ({
+            ...props,
+            invalidText: {
+              start: 50
+            },
+            description: 'No more than 50 characters allowed'
           })
         }
       ]

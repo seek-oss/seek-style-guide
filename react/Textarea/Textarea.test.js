@@ -180,4 +180,12 @@ describe('Textarea', () => {
       });
     });
   });
+
+  // describe('textarea with highlighting', () => {
+  //   it('should format invalid text', () => {
+  //     const wrapper = getContentEditableTextarea({ value: 'this is badText' });
+  //     const textareaValue = wrapper.find('div[id="testTextarea"]').html();
+  //     expect(textareaValue).to.contain('<mark class="Textarea__invalidText">badText</mark>');
+  //   });
+  // });
 });

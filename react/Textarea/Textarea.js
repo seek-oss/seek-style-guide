@@ -5,8 +5,7 @@ import classnames from 'classnames';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import Text from '../Text/Text';
-import ContentEditable from './ContentEditable/ContentEditable';
-import { formatInvalidText } from './ContentEditable/contentEditableUtils';
+import { formatInvalidText } from './textAreaUtils';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -17,7 +16,7 @@ function combineClassNames(props = {}, ...classNames) {
   };
 }
 
-/* eslint-disable react/no-deprecated */
+/* eslint-disable react/no-deprecated, react/no-danger */
 export default class Textarea extends Component {
   static displayName = 'Textarea';
 
@@ -44,7 +43,9 @@ export default class Textarea extends Component {
       }
     },
     secondaryLabel: PropTypes.string,
-    invalidText: PropTypes.string
+    invalidText: PropTypes.oneOfType([
+      PropTypes.string, PropTypes.object, PropTypes.arrayOf(PropTypes.object)
+    ])
     /* eslint-enable consistent-return */
   };
 
@@ -60,6 +61,18 @@ export default class Textarea extends Component {
     this.renderInput = this.renderInput.bind(this);
     this.renderCharacterCount = this.renderCharacterCount.bind(this);
   }
+
+  storeTextareaRef = textarea => {
+    if (textarea !== null) {
+      this.textarea = textarea;
+    }
+  };
+
+  storeTextareaBackdropRef = textareaBackdrop => {
+    if (textareaBackdrop !== null) {
+      this.textareaBackdrop = textareaBackdrop;
+    }
+  };
 
   /* eslint-disable consistent-return */
   renderCharacterCount() {
@@ -89,30 +102,45 @@ export default class Textarea extends Component {
   }
   /* eslint-enable consistent-return */
 
+  onScroll = () => {
+    const scrollTop = this.textarea.scrollTop;
+    this.textareaBackdrop.scrollTop = scrollTop;
+  }
+
   renderInput() {
     const { id, value, invalidText, onChange, onFocus, onBlur, inputProps } = this.props;
-    const allInputProps = {
-      id,
-      onChange,
-      onFocus,
-      onBlur,
-      ...combineClassNames(inputProps, styles.textarea),
-      'aria-describedby': `${id}-message`
-    };
-
-    if (invalidText) {
-      const html = formatInvalidText(value, invalidText, styles.invalidText);
-      return (
-        <ContentEditable
-          html={html}
-          role="textbox"
-          aria-multiline="true"
-          {...allInputProps}
-        />
-      );
+    let html;
+    const highlightErrors = typeof invalidText !== 'undefined';
+    if (highlightErrors) {
+      html = formatInvalidText(value, invalidText, styles.invalidTextChunk);
     }
 
-    return <textarea {...allInputProps} />;
+    const textarea = (props, classname) => (
+      <textarea
+        {...{
+          id,
+          value,
+          onChange,
+          onFocus,
+          onBlur,
+          ...combineClassNames(inputProps, styles.textarea, classname),
+          'aria-describedby': `${id}-message`,
+          ref: this.storeTextareaRef,
+          ...props
+        }}
+      />
+    );
+
+    return highlightErrors ? (
+      <div className={styles.highlightTextareaWrapper}>
+        <div
+          ref={this.storeTextareaBackdropRef}
+          className={classnames(styles.textarea, styles.backdrop)}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        {textarea({ onScroll: this.onScroll }, styles.highlightTextarea)}
+      </div>
+    ) : textarea();
   }
 
   render() {
