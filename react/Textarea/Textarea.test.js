@@ -181,11 +181,11 @@ describe('Textarea', () => {
     });
   });
 
-  // describe('textarea with highlighting', () => {
-  //   it('should format invalid text', () => {
-  //     const wrapper = getContentEditableTextarea({ value: 'this is badText' });
-  //     const textareaValue = wrapper.find('div[id="testTextarea"]').html();
-  //     expect(textareaValue).to.contain('<mark class="Textarea__invalidText">badText</mark>');
-  //   });
-  // });
+  describe('textarea with highlighting', () => {
+    it('should format invalid text', () => {
+      const wrapper = shallow(<Textarea id="testTextarea" value="test input" invalidText="test" />);
+      const textareaBackdrop = wrapper.find('[data-automation="backdrop"]').html();
+      expect(textareaBackdrop).to.contain('<mark class="Textarea__invalidTextChunk">test</mark> input</div>');
+    });
+  });
 });

@@ -72,7 +72,6 @@
   background-color: transparent;
   position: relative;
   z-index: 2;
-  resize: none;
 }
 
 .backdrop {
@@ -81,7 +80,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   z-index: 1;
+  resize: none;
+  -ms-overflow-style: none;  // IE 10+
+  &::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+  }
 }
 
 .invalidTextChunk {

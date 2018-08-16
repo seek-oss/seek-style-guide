@@ -134,6 +134,7 @@ export default class Textarea extends Component {
     return highlightErrors ? (
       <div className={styles.highlightTextareaWrapper}>
         <div
+          data-automation="backdrop"
           ref={this.storeTextareaBackdropRef}
           className={classnames(styles.textarea, styles.backdrop)}
           dangerouslySetInnerHTML={{ __html: html }}
