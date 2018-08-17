@@ -9,7 +9,7 @@ type Props = {
   children: Node,
   secondary?: boolean,
   className?: string,
-  tone: TONE.POSITIVE | TONE.CRITICAL | TONE.INFO | 'neutral'
+  tone: TONE.POSITIVE | TONE.CRITICAL | TONE.INFO | 'neutral' | 'focus' | 'secondary'
 };
 
 export default function Highlight(props: Props) {
@@ -19,7 +19,7 @@ export default function Highlight(props: Props) {
       {...restProps}
       className={classnames({
         [styles.root]: true,
-        [styles.secondary]: secondary,
+        [styles.secondaryText]: secondary,
         [styles[tone]]: true,
         className
       })}>

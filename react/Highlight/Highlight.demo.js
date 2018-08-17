@@ -3,6 +3,8 @@ import Highlight from './Highlight';
 import Text from '../Text/Text';
 import { TONE } from '../Section/Section';
 const NEUTRAL = 'neutral';
+const FOCUS = 'focus';
+const SECONDARY = 'secondary';
 
 const renderChildren = props => ([
   'This text is ',
@@ -24,7 +26,7 @@ export default {
       type: 'checklist',
       states: [
         {
-          label: 'Secondary',
+          label: 'Secondary text',
           transformProps: props => ({
             ...props,
             secondary: true,
@@ -44,6 +46,16 @@ export default {
             children: renderChildren({
               secondary: props.secondary,
               tone: NEUTRAL
+            })
+          })
+        },
+        {
+          label: 'Secondary',
+          transformProps: props => ({
+            ...props,
+            children: renderChildren({
+              secondary: props.secondary,
+              tone: SECONDARY
             })
           })
         },
@@ -74,6 +86,16 @@ export default {
             children: renderChildren({
               secondary: props.secondary,
               tone: TONE.INFO
+            })
+          })
+        },
+        {
+          label: 'Focus',
+          transformProps: props => ({
+            ...props,
+            children: renderChildren({
+              secondary: props.secondary,
+              tone: FOCUS
             })
           })
         }

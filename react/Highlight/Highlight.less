@@ -11,8 +11,20 @@
   background-color: fade(@color, 12%);
 }
 
+.secondaryText {
+  color: @sk-charcoal;
+}
+
 .neutral {
-  .highlightBackground(@sk-focus);
+  .highlightBackground(@sk-black);
+}
+
+.secondary {
+  .highlightBackground(@sk-mid-gray-dark);
+}
+
+.info {
+  .highlightBackground(@sk-info);
 }
 
 .critical {
@@ -23,10 +35,6 @@
   .highlightBackground(@sk-positive);
 }
 
-.info {
-  .highlightBackground(@sk-info);
-}
-
-.secondary {
-  color: @sk-charcoal;
+.focus {
+  .highlightBackground(@sk-focus);
 }
