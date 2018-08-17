@@ -1,11 +1,30 @@
 @import (reference) "~seek-style-guide/theme";
 
 .root {
-  background-color: fade(@sk-blue-lighter, 12%);
   border-radius: 2px;
   display: inline-block;
   margin: -2px;
   padding: 2px;
+}
+
+.highlightBackground(@color) {
+  background-color: fade(@color, 12%);
+}
+
+.neutral {
+  .highlightBackground(@sk-focus);
+}
+
+.critical {
+  .highlightBackground(@sk-critical);
+}
+
+.positive {
+  .highlightBackground(@sk-positive);
+}
+
+.info {
+  .highlightBackground(@sk-info);
 }
 
 .secondary {
