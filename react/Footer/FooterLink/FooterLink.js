@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import urlForAuthStatus from '../../private/urlForAuthStatus';
 
-export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, authRequired, authenticationStatus, ...props }) {
+export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, newBadge, authRequired, authenticationStatus, ...props }) {
   return (
     <li
       className={classnames(
@@ -21,6 +21,11 @@ export default function FooterLink({ secondary, partner, analytics, className, l
         })
       }
       {
+        newBadge ?
+          <span className={styles.newBadge}>new</span> :
+          null
+      }
+      {
         partner ?
           <span className={styles.partnerCountry}>{` — ${partner}`}</span> :
           null
@@ -33,6 +38,7 @@ FooterLink.propTypes = {
   secondary: PropTypes.bool,
   analytics: PropTypes.string,
   href: PropTypes.string,
+  newBadge: PropTypes.bool,
   className: PropTypes.string,
   partner: PropTypes.string,
   children: PropTypes.oneOfType([
