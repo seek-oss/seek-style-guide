@@ -115,7 +115,7 @@ export default class Textarea extends Component {
       html = formatInvalidText(value, invalidText, styles.invalidTextChunk);
     }
 
-    const textarea = (props, classname) => (
+    const renderTextarea = (props = {}, classname) => (
       <textarea
         {...{
           id,
@@ -139,9 +139,9 @@ export default class Textarea extends Component {
           className={classnames(styles.textarea, styles.backdrop)}
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        {textarea({ onScroll: this.onScroll }, styles.highlightTextarea)}
+        {renderTextarea({ onScroll: this.onScroll }, styles.highlightTextarea)}
       </div>
-    ) : textarea();
+    ) : renderTextarea();
   }
 
   render() {
