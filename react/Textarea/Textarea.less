@@ -1,4 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
+@backdropZIndex: 1;
+@textareaZIndex: 2;
 
 .root {
   position: relative;
@@ -71,7 +73,7 @@
 .highlightTextarea {
   background-color: transparent;
   position: relative;
-  z-index: 2;
+  z-index: @textareaZIndex;
 }
 
 .backdrop {
@@ -81,7 +83,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  z-index: 1;
+  z-index: @backdropZIndex;
   resize: none;
   -ms-overflow-style: none; // IE 10+
 

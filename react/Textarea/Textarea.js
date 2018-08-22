@@ -16,7 +16,7 @@ function combineClassNames(props = {}, ...classNames) {
   };
 }
 
-/* eslint-disable react/no-deprecated, react/no-danger */
+/* eslint-disable react/no-deprecated */
 export default class Textarea extends Component {
   static displayName = 'Textarea';
 
@@ -30,7 +30,6 @@ export default class Textarea extends Component {
     valid: PropTypes.bool,
     description: PropTypes.string,
     inputProps: PropTypes.object,
-    /* eslint-disable consistent-return */
     countFeedback: (props, propName, componentName) => {
       const { value, inputProps = {} } = props;
 
@@ -41,12 +40,13 @@ export default class Textarea extends Component {
       if (props[propName] && typeof value !== 'string' && typeof inputProps.value !== 'string') {
         return new Error(`\`value\` must be supplied if \`${propName}\` is set`);
       }
+
+      return null;
     },
     secondaryLabel: PropTypes.string,
     invalidText: PropTypes.oneOfType([
       PropTypes.string, PropTypes.object, PropTypes.arrayOf(PropTypes.object)
     ])
-    /* eslint-enable consistent-return */
   };
 
   static defaultProps = {
@@ -137,7 +137,7 @@ export default class Textarea extends Component {
           data-automation="backdrop"
           ref={this.storeTextareaBackdropRef}
           className={classnames(styles.textarea, styles.backdrop)}
-          dangerouslySetInnerHTML={{ __html: html }}
+          dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line react/no-danger
         />
         {renderTextarea({ onScroll: this.onScroll }, styles.highlightTextarea)}
       </div>
