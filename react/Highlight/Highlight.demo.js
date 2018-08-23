@@ -1,6 +1,15 @@
 import React from 'react';
 import Highlight from './Highlight';
 import Text from '../Text/Text';
+import { TONE } from '../Section/Section';
+const NEUTRAL = 'neutral';
+
+const renderChildren = props => [
+  'This text is ',
+  <Highlight key="highlight" {...props}>
+    highlighted
+  </Highlight>
+];
 
 export default {
   route: '/highlight',
@@ -9,10 +18,7 @@ export default {
   component: Text,
   initialProps: {
     headline: true,
-    children: [
-      'This text is ',
-      <Highlight key="highlight">highlighted</Highlight>
-    ]
+    children: renderChildren({ tone: NEUTRAL })
   },
   options: [
     {
@@ -20,14 +26,30 @@ export default {
       type: 'checklist',
       states: [
         {
-          label: 'Secondary',
+          label: 'Secondary text',
           transformProps: props => ({
             ...props,
             secondary: true,
-            children: [
-              'This text is ',
-              <Highlight key="highlight" secondary>highlighted</Highlight>
-            ]
+            children: renderChildren({ secondary: true })
+          })
+        }
+      ]
+    },
+    {
+      label: 'Tone',
+      type: 'radio',
+      states: [
+        {
+          label: 'Select tone...'
+        },
+        {
+          label: 'Critical',
+          transformProps: props => ({
+            ...props,
+            children: renderChildren({
+              secondary: props.secondary,
+              tone: TONE.CRITICAL
+            })
           })
         }
       ]
