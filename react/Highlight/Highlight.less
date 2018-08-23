@@ -5,6 +5,7 @@
   display: inline-block;
   margin: -2px;
   padding: 2px;
+  .highlightBackground(@sk-focus);
 }
 
 .highlightBackground(@color) {
@@ -15,26 +16,6 @@
   color: @sk-charcoal;
 }
 
-.neutral {
-  .highlightBackground(@sk-black);
-}
-
-.secondary {
-  .highlightBackground(@sk-mid-gray-dark);
-}
-
-.info {
-  .highlightBackground(@sk-info);
-}
-
 .critical {
   .highlightBackground(@sk-critical);
-}
-
-.positive {
-  .highlightBackground(@sk-positive);
-}
-
-.focus {
-  .highlightBackground(@sk-focus);
 }

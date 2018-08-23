@@ -9,7 +9,7 @@ type Props = {
   children: Node,
   secondary?: boolean,
   className?: string,
-  tone: TONE.POSITIVE | TONE.CRITICAL | TONE.INFO | 'neutral' | 'focus' | 'secondary'
+  tone: TONE.CRITICAL | 'neutral'
 };
 
 export default function Highlight(props: Props) {

@@ -3,13 +3,13 @@ import Highlight from './Highlight';
 import Text from '../Text/Text';
 import { TONE } from '../Section/Section';
 const NEUTRAL = 'neutral';
-const FOCUS = 'focus';
-const SECONDARY = 'secondary';
 
-const renderChildren = props => ([
+const renderChildren = props => [
   'This text is ',
-  <Highlight key="highlight" {...props}>highlighted</Highlight>
-]);
+  <Highlight key="highlight" {...props}>
+    highlighted
+  </Highlight>
+];
 
 export default {
   route: '/highlight',
@@ -40,24 +40,7 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Neutral',
-          transformProps: props => ({
-            ...props,
-            children: renderChildren({
-              secondary: props.secondary,
-              tone: NEUTRAL
-            })
-          })
-        },
-        {
-          label: 'Secondary',
-          transformProps: props => ({
-            ...props,
-            children: renderChildren({
-              secondary: props.secondary,
-              tone: SECONDARY
-            })
-          })
+          label: 'Select tone...'
         },
         {
           label: 'Critical',
@@ -66,36 +49,6 @@ export default {
             children: renderChildren({
               secondary: props.secondary,
               tone: TONE.CRITICAL
-            })
-          })
-        },
-        {
-          label: 'Positive',
-          transformProps: props => ({
-            ...props,
-            children: renderChildren({
-              secondary: props.secondary,
-              tone: TONE.POSITIVE
-            })
-          })
-        },
-        {
-          label: 'Info',
-          transformProps: props => ({
-            ...props,
-            children: renderChildren({
-              secondary: props.secondary,
-              tone: TONE.INFO
-            })
-          })
-        },
-        {
-          label: 'Focus',
-          transformProps: props => ({
-            ...props,
-            children: renderChildren({
-              secondary: props.secondary,
-              tone: FOCUS
             })
           })
         }
