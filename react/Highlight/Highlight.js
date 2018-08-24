@@ -21,7 +21,7 @@ export default function Highlight(props: Props) {
         [styles.root]: true,
         [styles.secondaryText]: secondary,
         [styles[tone]]: true,
-        className
+        ...(className ? { [className]: className } : {})
       })}>
       {children}
     </mark>

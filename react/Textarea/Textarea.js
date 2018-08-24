@@ -109,10 +109,10 @@ export default class Textarea extends Component {
 
   renderInput() {
     const { id, value, invalidText, onChange, onFocus, onBlur, inputProps } = this.props;
-    let html;
+    let formattedText;
     const highlightErrors = typeof invalidText !== 'undefined';
     if (highlightErrors) {
-      html = formatInvalidText(value, invalidText, styles.invalidTextChunk);
+      formattedText = formatInvalidText(value, invalidText, styles.invalidTextChunk);
     }
 
     const renderTextarea = (props = {}, classname) => (
@@ -136,9 +136,9 @@ export default class Textarea extends Component {
         <div
           data-automation="backdrop"
           ref={this.storeTextareaBackdropRef}
-          className={classnames(styles.textarea, styles.backdrop)}
-          dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line react/no-danger
-        />
+          className={classnames(styles.textarea, styles.backdrop)}>
+          {formattedText}
+        </div>
         {renderTextarea({ onScroll: this.onScroll }, styles.highlightTextarea)}
       </div>
     ) : renderTextarea();

@@ -1,4 +1,8 @@
 // @flow
+import React from 'react';
+import Highlight from '../Highlight/Highlight';
+import flatten from 'lodash/flatten';
+
 type Range = {
   start: number,
   end: number
@@ -6,9 +10,10 @@ type Range = {
 
 type InvalidText = string | Range | Array<Range>;
 
-const formatText = (text, style) => `<mark class="${style}">${text}</mark>`;
+const formatText = (text: string, style: string) =>
+  <Highlight tone="critical" className={style}>{text}</Highlight>;
 
-export const formatInvalidText = (value: string, invalidText: InvalidText, style: string): string => {
+export const formatInvalidText = (value: string, invalidText: InvalidText, style: string): [Node | string] => {
   if (invalidText && value) {
     const textToHighlight: Array<string> = [];
     let splitText: Array<string> = [];
@@ -35,19 +40,19 @@ export const formatInvalidText = (value: string, invalidText: InvalidText, style
       splitText = value.split(invalidText);
     }
 
-    return splitText.map((text, i) => {
+    return flatten(splitText.map((text, i) => {
       if (i !== splitText.length - 1) {
         if (typeof invalidText !== 'string') {
           if (textToHighlight[i]) {
-            return `${text}${formatText(textToHighlight[i], style)}`;
+            return [text, formatText(textToHighlight[i], style)];
           }
           return null;
         }
-        return `${text}${formatText(textToHighlight[0], style)}`;
+        return [text, formatText(textToHighlight[0], style)];
       }
       return text;
-    }).join('');
+    })).filter(item => item !== null && item !== '');
   }
 
-  return value;
+  return [value];
 };

@@ -1,4 +1,7 @@
+/* eslint-disable react/jsx-key */
+import React from 'react';
 import { formatInvalidText } from './textAreaUtils.js';
+import Highlight from '../Highlight/Highlight';
 
 describe('contentEditableUtils', () => {
   describe('formatInvalidText', () => {
@@ -8,29 +11,35 @@ describe('contentEditableUtils', () => {
       it('should do nothing if there is no invalid text', () => {
         const value = 'my text';
         const invalidText = '';
-        expect(formatInvalidText(value, invalidText, style)).toEqual('my text');
+        expect(formatInvalidText(value, invalidText, style)).toEqual(['my text']);
       });
 
       it('should render text with no required formatting correctly', () => {
         const value = 'text';
         const invalidText = 'bad text';
-        expect(formatInvalidText(value, invalidText, style)).toEqual('text');
+        expect(formatInvalidText(value, invalidText, style)).toEqual(['text']);
       });
 
       it('should render text with formatting correctly', () => {
         const value = 'my bad text';
         const invalidText = 'bad text';
-        expect(formatInvalidText(value, invalidText, style)).toEqual(
-          'my <mark class="my-class-name">bad text</mark>'
-        );
+        expect(formatInvalidText(value, invalidText, style)).toEqual([
+          'my ',
+          <Highlight className="my-class-name" tone="critical">bad text</Highlight>
+        ]);
       });
 
       it('should apply formatting to multiple instances of matched values', () => {
         const value = 'very very very bad text';
         const invalidText = 'very';
-        expect(formatInvalidText(value, invalidText, style)).toEqual(
-          '<mark class="my-class-name">very</mark> <mark class="my-class-name">very</mark> <mark class="my-class-name">very</mark> bad text'
-        );
+        expect(formatInvalidText(value, invalidText, style)).toEqual([
+          <Highlight className="my-class-name" tone="critical">very</Highlight>,
+          ' ',
+          <Highlight className="my-class-name" tone="critical">very</Highlight>,
+          ' ',
+          <Highlight className="my-class-name" tone="critical">very</Highlight>,
+          ' bad text'
+        ]);
       });
     });
 
@@ -40,9 +49,10 @@ describe('contentEditableUtils', () => {
         const invalidText = {
           start: 6
         };
-        expect(formatInvalidText(value, invalidText, style)).toEqual(
-          'my str<mark class="my-class-name">ing of text</mark>'
-        );
+        expect(formatInvalidText(value, invalidText, style)).toEqual([
+          'my str',
+          <Highlight className="my-class-name" tone="critical">ing of text</Highlight>
+        ]);
       });
 
       it('should do nothing if there is no invalid text', () => {
@@ -51,9 +61,11 @@ describe('contentEditableUtils', () => {
           start: 3,
           end: 9
         };
-        expect(formatInvalidText(value, invalidText, style)).toEqual(
-          'my <mark class="my-class-name">longer</mark> text'
-        );
+        expect(formatInvalidText(value, invalidText, style)).toEqual([
+          'my ',
+          <Highlight className="my-class-name" tone="critical">longer</Highlight>,
+          ' text'
+        ]);
       });
 
       describe('highlighting multiple ranges', () => {
@@ -73,9 +85,15 @@ describe('contentEditableUtils', () => {
               end: 13
             }
           ];
-          expect(formatInvalidText(value, invalidText, style)).toEqual(
-            'my <mark class="my-class-name">lon</mark>g<mark class="my-class-name">e</mark>r te<mark class="my-class-name">x</mark>t'
-          );
+          expect(formatInvalidText(value, invalidText, style)).toEqual([
+            'my ',
+            <Highlight className="my-class-name" tone="critical">lon</Highlight>,
+            'g',
+            <Highlight className="my-class-name" tone="critical">e</Highlight>,
+            'r te',
+            <Highlight className="my-class-name" tone="critical">x</Highlight>,
+            't'
+          ]);
         });
 
         it('highlights correctly when only the first range is present', () => {
@@ -90,9 +108,10 @@ describe('contentEditableUtils', () => {
               end: 40
             }
           ];
-          expect(formatInvalidText(value, invalidText, style)).toEqual(
-            'aaaaaaaaaa<mark class="my-class-name">bbb</mark>'
-          );
+          expect(formatInvalidText(value, invalidText, style)).toEqual([
+            'aaaaaaaaaa',
+            <Highlight className="my-class-name" tone="critical">bbb</Highlight>
+          ]);
         });
       });
     });
