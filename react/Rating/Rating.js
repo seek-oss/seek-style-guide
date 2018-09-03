@@ -1,6 +1,6 @@
 import styles from './Rating.less';
 
-import React from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -17,7 +17,9 @@ const getStar = (
   percent,
   key,
   starClassName,
-  size
+  size,
+  onMouseEnter,
+  onMouseLeave
 ) => {
   const props = {
     key,
@@ -26,50 +28,75 @@ const getStar = (
     svgClassName: starClassName,
     filled: percent >= 75,
     half: percent >= 25 && percent < 75,
-    _large: true
+    _large: true,
+    onMouseEnter,
+    onMouseLeave
   };
 
   return <StarIcon {...props} />;
 };
 
-const Rating = ({
-  description,
-  rating,
-  starClassName,
-  showTextRating,
-  size,
-  ...restProps
-}) => {
-  const extendedStarClassName = classnames({ [starClassName]: starClassName });
+class Rating extends Component {
+  state = {
+    initialRating: this.props.rating,
+    hoverRating: this.props.rating
+  }
 
-  return (
-    <Text
-      raw
-      size={size}
-      regular
-      {...restProps}>
-      <ScreenReaderOnly>
-        {rating} out of 5
-      </ScreenReaderOnly>
-      <span className={styles.rating}>
-        {[...Array(5)].map((v, position) => {
-          const percent = getPercent(rating, position);
-          return getStar(
-            percent,
-            position,
-            extendedStarClassName,
-            size
-          );
-        })}
-        {(showTextRating || Boolean(description)) &&
-          <span className={styles.textRating}>
-            {rating.toFixed(1)}{description ? ' ' : ''}{description}
-          </span>
-        }
-      </span>
-    </Text>
-  );
-};
+  hoverOn(position) {
+    console.log('Enter', position);
+    this.setState({ hoverRating: position });
+  }
+
+  hoverOff(position) {
+    console.log('Leave', position);
+    this.setState({ hoverRating: this.props.rating });
+  }
+
+  render() {
+    const {
+      description,
+      rating,
+      starClassName,
+      showTextRating,
+      size,
+      ...restProps
+    } = this.props;
+
+    console.log('Hover rating', this.state.hoverRating);
+
+    const extendedStarClassName = classnames({ [starClassName]: starClassName });
+
+    return (
+      <Text
+        raw
+        size={size}
+        regular
+        {...restProps}>
+        <ScreenReaderOnly>
+          {rating} out of 5
+        </ScreenReaderOnly>
+        <span className={styles.rating}>
+          {[...Array(5)].map((v, position) => {
+            const percent = getPercent(this.state.hoverRating, position);
+            return getStar(
+              percent,
+              position,
+              extendedStarClassName,
+              size,
+              () => this.hoverOn(position),
+              () => this.hoverOff(position)
+            );
+          })}
+          {(showTextRating || Boolean(description)) &&
+            <span className={styles.textRating}>
+              {rating.toFixed(1)}{description ? ' ' : ''}{description}
+            </span>
+          }
+        </span>
+      </Text>
+    );
+  }
+}
 
 Rating.displayName = 'Rating';
 
