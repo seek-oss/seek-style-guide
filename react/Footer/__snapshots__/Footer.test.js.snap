@@ -529,6 +529,17 @@ exports[`Footer: should render when authenticated 1`] = `
                       Spark Hire
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="FooterLink__link"
+                      data-analytics="toolbar:certsy"
+                      href="https://certsy.com/"
+                    >
+                      Certsy
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -1300,6 +1311,17 @@ exports[`Footer: should render when authentication is pending 1`] = `
                       href="https://anz.sparkhire.com/"
                     >
                       Spark Hire
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="FooterLink__link"
+                      data-analytics="toolbar:certsy"
+                      href="https://certsy.com/"
+                    >
+                      Certsy
                     </a>
                   </li>
                 </ul>
@@ -2075,6 +2097,17 @@ exports[`Footer: should render when unauthenticated 1`] = `
                       Spark Hire
                     </a>
                   </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="FooterLink__link"
+                      data-analytics="toolbar:certsy"
+                      href="https://certsy.com/"
+                    >
+                      Certsy
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -2846,6 +2879,17 @@ exports[`Footer: should render with locale of AU 1`] = `
                       href="https://anz.sparkhire.com/"
                     >
                       Spark Hire
+                    </a>
+                  </li>
+                  <li
+                    class=""
+                  >
+                    <a
+                      class="FooterLink__link"
+                      data-analytics="toolbar:certsy"
+                      href="https://certsy.com/"
+                    >
+                      Certsy
                     </a>
                   </li>
                 </ul>
