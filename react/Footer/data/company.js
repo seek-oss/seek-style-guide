@@ -119,5 +119,10 @@ export const services = [
     name: 'Spark Hire',
     href: 'https://anz.sparkhire.com/',
     analytics: 'toolbar:sparkhire'
+  },
+  {
+    name: 'Certsy',
+    href: 'https://certsy.com/',
+    analytics: 'toolbar:certsy'
   }
 ];
