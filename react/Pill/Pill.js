@@ -1,7 +1,6 @@
 // @flow
 import styles from './Pill.less';
 import React, { Component } from 'react';
-import type { Node } from 'react';
 import classnames from 'classnames';
 import Text from '../Text/Text';
 import CrossIcon from '../CrossIcon/CrossIcon';
@@ -9,7 +8,7 @@ import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 type Props = {
   children?: React$Node,
-  text?: Node,
+  text?: React$Node,
   onClose?: Function,
   className?: string
 };
