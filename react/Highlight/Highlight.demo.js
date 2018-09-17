@@ -2,7 +2,7 @@ import React from 'react';
 import Highlight from './Highlight';
 import Text from '../Text/Text';
 import { TONE } from '../Section/Section';
-const NEUTRAL = 'neutral';
+import { NEUTRAL } from './Highlight';
 
 const renderChildren = props => [
   'This text is ',

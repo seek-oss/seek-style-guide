@@ -4,15 +4,17 @@ import React from 'react';
 import classnames from 'classnames';
 import { TONE } from '../Section/Section';
 
+export const NEUTRAL = 'neutral';
+
 type Props = {
   children: React$Node,
   secondary?: boolean,
   className?: string,
-  tone: TONE.CRITICAL | 'neutral'
+  tone: TONE.CRITICAL | typeof NEUTRAL
 };
 
 export default function Highlight(props: Props) {
-  const { children, secondary, tone = 'neutral', className, ...restProps } = props;
+  const { children, secondary, tone = NEUTRAL, className, ...restProps } = props;
 
   return (
     <mark
