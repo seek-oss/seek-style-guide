@@ -6,14 +6,15 @@ import classnames from 'classnames';
 import { TONE } from '../Section/Section';
 
 type Props = {
-  children: Node,
+  children: React$Node,
   secondary?: boolean,
   className?: string,
   tone: TONE.CRITICAL | 'neutral'
 };
 
 export default function Highlight(props: Props) {
-  const { children, secondary, tone, className, ...restProps } = props;
+  const { children, secondary, tone = 'neutral', className, ...restProps } = props;
+
   return (
     <mark
       {...restProps}

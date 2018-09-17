@@ -8,7 +8,7 @@ import CrossIcon from '../CrossIcon/CrossIcon';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 type Props = {
-  children?: Node,
+  children?: React$Node,
   text?: Node,
   onClose?: Function,
   className?: string
