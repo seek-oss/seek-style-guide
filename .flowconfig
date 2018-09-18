@@ -5,6 +5,7 @@
 .*/node_modules/jsx-to-string/.*
 .*/node_modules/immutable/.*
 .*/node_modules/npmconf/.*
+.*/node_modules/fbjs.*
 
 [include]
 
