@@ -86,6 +86,7 @@
   z-index: @backdropZIndex;
   resize: none;
   -ms-overflow-style: none; // IE 10+
+  white-space: pre-wrap;
 
   &::-webkit-scrollbar {
     display: none; // Safari and Chrome
@@ -93,6 +94,9 @@
 }
 
 .invalidTextChunk {
-  white-space: pre-wrap;
   display: inline;
+
+  &:last-child:after {
+    content: '\A';
+  }
 }
