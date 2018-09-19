@@ -5,17 +5,17 @@ import classnames from 'classnames';
 
 export default function FooterNav({ secondary, label, children, className }) {
   return (
-    <nav
+    <div
       aria-label={label}
       className={classnames(
         className || styles.category,
         { [styles.secondary]: secondary }
       )}>
-      <h1 className={styles.heading}>{label}</h1>
+      <h2 className={styles.heading}>{label}</h2>
       <ul>
         { children }
       </ul>
-    </nav>
+    </div>
   );
 }
 
