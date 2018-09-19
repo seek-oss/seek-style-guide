@@ -67,7 +67,7 @@ export default function Header({
   return (
     <header className={styles.root} role="banner" aria-label="Primary navigation">
       <StructuredDataSchema locale={locale} />
-      <section className={styles.content}>
+      <div className={styles.content}>
         <div className={styles.banner}>
           <div data-automation="logo" className={styles.logo}>
             <LogoComponent locale={locale} svgClassName={styles.logoSvg} />
@@ -124,7 +124,7 @@ export default function Header({
         <div className={styles.topBanner}>
           <PartnerSites locale={locale} linkRenderer={linkRenderer} activeSite='Jobs' />
         </div>
-      </section>
+      </div>
     </header>
   );
 }
