@@ -11,7 +11,7 @@ export default function FooterNav({ secondary, label, children, className }) {
         className || styles.category,
         { [styles.secondary]: secondary }
       )}>
-      <h2 className={styles.heading}>{label}</h2>
+      <h5 className={styles.heading}>{label}</h5>
       <ul>
         { children }
       </ul>
