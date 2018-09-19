@@ -1,19 +1,13 @@
 import styles from './SignInRegister.less';
 import React from 'react';
 import PropTypes from 'prop-types';
-import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import appendReturnUrl from '../../private/appendReturnUrl';
 
 export default function SignInRegister({ linkRenderer, returnUrl }) {
   return (
-    <nav
-      aria-labelledby="SignInOrRegister"
+    <div
       data-automation="sign-in-register"
       className={styles.root}>
-
-      <ScreenReaderOnly>
-        <h1 id="SignInOrRegister">Sign in or register</h1>
-      </ScreenReaderOnly>
       {
         linkRenderer({
           'data-analytics': 'header:sign-in',
@@ -35,7 +29,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
           children: 'Register'
         })
       }
-    </nav>
+    </div>
   );
 }
 

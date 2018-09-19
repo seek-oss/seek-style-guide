@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
-import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 
 export default function Locales({ locale, linkRenderer, localeLinks }) {
   const isAU = locale === 'AU';
@@ -15,11 +14,7 @@ export default function Locales({ locale, linkRenderer, localeLinks }) {
   });
 
   return (
-    <nav aria-labelledby="Locales" role="navigation" className={styles.root}>
-      <ScreenReaderOnly>
-        <h1 id="Locales">Select your country</h1>
-      </ScreenReaderOnly>
-
+    <div role="navigation" className={styles.root}>
       <ul className={listClasses}>
         <li className={styles.listItem}>
           {isAU ? (
@@ -44,7 +39,7 @@ export default function Locales({ locale, linkRenderer, localeLinks }) {
           )}
         </li>
       </ul>
-    </nav>
+    </div>
   );
 }
 

@@ -64,15 +64,10 @@ export default class UserAccount extends Component {
     const desktopMenuLabel = userName;
 
     return (
-      <nav
+      <div
         role="navigation"
-        aria-labelledby="UserMenu"
         data-automation="user-account"
         className={styles.root}>
-
-        <ScreenReaderOnly>
-          <h1 id="UserMenu">User menu</h1>
-        </ScreenReaderOnly>
 
         <input
           id="user-account-menu-toggle"
@@ -116,7 +111,7 @@ export default class UserAccount extends Component {
           />
         </div>
 
-      </nav>
+      </div>
     );
   }
 }
