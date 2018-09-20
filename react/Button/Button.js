@@ -29,12 +29,6 @@ export default class Button extends Component<Props> {
   button: ?HTMLElement;
   props: Props;
 
-  storeButtonReference = (button: ?HTMLElement) => {
-    if (button !== null) {
-      this.button = button;
-    }
-  };
-
   render() {
     const {
       color,
@@ -55,7 +49,6 @@ export default class Button extends Component<Props> {
         [styles[`root_is${capitalize(color)}`]]: color
       }),
       disabled: loading,
-      ref: this.storeButtonReference,
       ...restProps
     };
 
