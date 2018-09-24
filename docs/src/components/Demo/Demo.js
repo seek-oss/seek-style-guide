@@ -8,6 +8,7 @@ import Baseline from './Baseline/Baseline';
 import Code from './Code/Code';
 import flatten from 'lodash/flatten';
 import map from 'lodash/map';
+import get from 'lodash/get';
 
 const DefaultContainer = ({ component: DemoComponent, componentProps }) => (
   <DemoComponent {...componentProps} />
@@ -111,7 +112,8 @@ export default class Demo extends Component {
 
       return states.reduce((innerProps, state) => {
         if (activeStates[option.label] && activeStates[option.label].indexOf(state.label) > -1) {
-          return state.transformProps(innerProps);
+          const transform = get(state, 'transformProps', props => props);
+          return transform(innerProps);
         }
 
         return innerProps;
