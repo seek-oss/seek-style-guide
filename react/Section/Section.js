@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import React from 'react';
 
 import styles from './Section.less';
+import { TONE } from '../private/tone';
 import type { Level } from '../private/level';
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
   header?: boolean,
   pullout?: boolean,
   slim?: boolean,
-  tone?: 'positive' | 'critical' | 'neutral',
+  tone?: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.NEUTRAL | typeof TONE.HELP,
   level?: Level
 }
 

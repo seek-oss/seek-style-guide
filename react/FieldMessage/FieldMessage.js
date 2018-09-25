@@ -17,7 +17,7 @@ type Props = {
   help?: string,
   helpProps?: Object,
   valid?: boolean,
-  message: false | Node | string,
+  message: false | string | Node,
   messageProps: {
     critical?: boolean,
     positive?: boolean,
@@ -38,16 +38,23 @@ export default class FieldMessage extends Component<Props> {
     }
   };
 
+  calculateMessageDisplay = () => {
+    const { tone, valid } = this.props;
+    const toneDefined = typeof tone !== 'undefined';
+
+    return {
+      showCritical: toneDefined ? tone === TONE.CRITICAL : valid === false,
+      showPositive: toneDefined ? tone === TONE.POSITIVE : valid === true,
+      showSecondary: toneDefined ? tone === TONE.NEUTRAL : typeof valid === 'undefined'
+    };
+  }
+
   renderMessage = () => {
-    const { id, message, tone, valid } = this.props;
+    const { id, message } = this.props;
 
     if (message) {
       const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
-
-      const toneDefined = typeof tone !== 'undefined';
-      const showCritical = toneDefined ? tone === TONE.CRITICAL : valid === false;
-      const showPositive = toneDefined ? tone === TONE.POSITIVE : valid === true;
-      const showSecondary = tone === TONE.NEUTRAL || typeof valid === 'undefined';
+      const { showCritical, showPositive, showSecondary } = this.calculateMessageDisplay();
 
       return (
         <Text
@@ -68,10 +75,10 @@ export default class FieldMessage extends Component<Props> {
   }
 
   renderMessageIcon = () => {
-    const { tone, valid } = this.props;
-    const toneDefined = typeof tone !== 'undefined';
-    const showErrorIcon = toneDefined ? tone === TONE.CRITICAL : valid === false;
-    const showTickIcon = toneDefined ? tone === TONE.POSITIVE : valid === true;
+    const {
+      showCritical: showErrorIcon,
+      showPositive: showTickIcon
+    } = this.calculateMessageDisplay();
 
     if (showErrorIcon) {
       return (
