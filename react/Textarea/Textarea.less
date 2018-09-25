@@ -92,12 +92,12 @@
   &::-webkit-scrollbar {
     display: none; // Safari and Chrome
   }
+
+  &::after {
+    content: '\A';
+  }
 }
 
 .invalidTextChunk {
   display: inline;
-
-  &:last-child::after {
-    content: '\A';
-  }
 }
