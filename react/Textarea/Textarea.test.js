@@ -194,4 +194,12 @@ describe('Textarea', () => {
       });
     });
   });
+
+  describe('textarea with highlighting', () => {
+    it('should format invalid text', () => {
+      const wrapper = shallow(<Textarea id="testTextarea" value="test input" invalidText="test" />);
+      const textareaBackdrop = wrapper.find('[data-automation="backdrop"]').html();
+      expect(textareaBackdrop).to.contain('<mark class="Highlight__root Highlight__critical Textarea__invalidTextChunk">test</mark> input</div>');
+    });
+  });
 });
