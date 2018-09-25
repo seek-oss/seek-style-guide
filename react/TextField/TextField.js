@@ -2,7 +2,6 @@
 import styles from './TextField.less';
 import classnames from 'classnames';
 import React, { Component } from 'react';
-import type { ElementType } from 'react';
 import ClearField from '../ClearField/ClearField';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
@@ -62,11 +61,11 @@ export default class TextField extends Component<Props> {
 
   static defaultProps = { className: '', inputProps: {} };
 
-  container: React$ElementRef<ElementType>;
+  container: React$ElementRef<'div'>;
   input: React$ElementRef<'input'>;
 
-  storeContainerReference = (textField: ?React$ElementRef<ElementType>): void => {
-    if (textField !== null) {
+  storeContainerReference = (textField: ?React$ElementRef<'div'>): void => {
+    if (textField && textField !== null) {
       this.container = textField;
     }
   };
