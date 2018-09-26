@@ -10,8 +10,8 @@ type Range = {
 
 type InvalidText = string | Range | Array<Range>;
 
-const formatText = (text: string, style: string) =>
-  <Highlight tone="critical" className={style}>{text}</Highlight>;
+const formatText = (text: string, style: string, key: number) =>
+  <Highlight tone="critical" className={style} key={key}>{text}</Highlight>;
 
 export const formatInvalidText = (value: string, invalidText: InvalidText, style: string): [Node | string] => {
   if (invalidText && value) {
@@ -44,11 +44,11 @@ export const formatInvalidText = (value: string, invalidText: InvalidText, style
       if (i !== splitText.length - 1) {
         if (typeof invalidText !== 'string') {
           if (textToHighlight[i]) {
-            return [text, formatText(textToHighlight[i], style)];
+            return [text, formatText(textToHighlight[i], style, i)];
           }
-          return null;
+          return [text];
         }
-        return [text, formatText(textToHighlight[0], style)];
+        return [text, formatText(textToHighlight[0], style, i)];
       }
       return text;
     })).filter(item => item !== null && item !== '');
