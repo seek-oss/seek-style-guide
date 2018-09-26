@@ -25,7 +25,7 @@ describe('contentEditableUtils', () => {
         const invalidText = 'bad text';
         expect(formatInvalidText(value, invalidText, style)).toEqual([
           'my ',
-          <Highlight className="my-class-name" tone="critical">bad text</Highlight>
+          <Highlight className="my-class-name" tone="critical" key="0">bad text</Highlight>
         ]);
       });
 
@@ -33,29 +33,37 @@ describe('contentEditableUtils', () => {
         const value = 'very very very bad text';
         const invalidText = 'very';
         expect(formatInvalidText(value, invalidText, style)).toEqual([
-          <Highlight className="my-class-name" tone="critical">very</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="0">very</Highlight>,
           ' ',
-          <Highlight className="my-class-name" tone="critical">very</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="1">very</Highlight>,
           ' ',
-          <Highlight className="my-class-name" tone="critical">very</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="2">very</Highlight>,
           ' bad text'
         ]);
       });
     });
 
     describe('invalidText is an object / range', () => {
-      it('should do nothing if there is no invalid text', () => {
+      it('should return the unformatted text if no highlighting is required', () => {
+        const value = 'aaaaaaaaa bbbbbbbbbb';
+        const invalidText = { start: 30 };
+        expect(formatInvalidText(value, invalidText, style)).toEqual([
+          'aaaaaaaaa bbbbbbbbbb'
+        ]);
+      });
+
+      it('should highlight from a start point to the end of a string', () => {
         const value = 'my string of text';
         const invalidText = {
           start: 6
         };
         expect(formatInvalidText(value, invalidText, style)).toEqual([
           'my str',
-          <Highlight className="my-class-name" tone="critical">ing of text</Highlight>
+          <Highlight className="my-class-name" tone="critical" key="0">ing of text</Highlight>
         ]);
       });
 
-      it('should do nothing if there is no invalid text', () => {
+      it('should highlight a range', () => {
         const value = 'my longer text';
         const invalidText = {
           start: 3,
@@ -63,7 +71,7 @@ describe('contentEditableUtils', () => {
         };
         expect(formatInvalidText(value, invalidText, style)).toEqual([
           'my ',
-          <Highlight className="my-class-name" tone="critical">longer</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="0">longer</Highlight>,
           ' text'
         ]);
       });
@@ -87,11 +95,11 @@ describe('contentEditableUtils', () => {
           ];
           expect(formatInvalidText(value, invalidText, style)).toEqual([
             'my ',
-            <Highlight className="my-class-name" tone="critical">lon</Highlight>,
+            <Highlight className="my-class-name" tone="critical" key="0">lon</Highlight>,
             'g',
-            <Highlight className="my-class-name" tone="critical">e</Highlight>,
+            <Highlight className="my-class-name" tone="critical" key="1">e</Highlight>,
             'r te',
-            <Highlight className="my-class-name" tone="critical">x</Highlight>,
+            <Highlight className="my-class-name" tone="critical" key="2">x</Highlight>,
             't'
           ]);
         });
@@ -110,7 +118,7 @@ describe('contentEditableUtils', () => {
           ];
           expect(formatInvalidText(value, invalidText, style)).toEqual([
             'aaaaaaaaaa',
-            <Highlight className="my-class-name" tone="critical">bbb</Highlight>
+            <Highlight className="my-class-name" tone="critical" key="0">bbb</Highlight>
           ]);
         });
       });
