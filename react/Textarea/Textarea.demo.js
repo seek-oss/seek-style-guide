@@ -139,7 +139,7 @@ export default {
           transformProps: props => ({
             ...props,
             invalidText: {
-              start: 50
+              start: 51
             },
             description: 'No more than 50 characters allowed'
           })
