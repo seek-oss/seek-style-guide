@@ -22,15 +22,15 @@ export const formatInvalidText = (value: string, invalidText: InvalidText, style
       const highlightRanges: Array<Range> = Array.isArray(invalidText) ? invalidText : [invalidText];
       highlightRanges.forEach((range, i) => {
         const { start, end } = range;
-        const highlightedText: string = value.slice(start, end);
+        const highlightedText: string = value.slice(start - 1, end);
         if (highlightedText) {
           textToHighlight.push(highlightedText);
         }
         if (i === 0) {
-          splitText.push(value.slice(0, start));
+          splitText.push(value.slice(0, start - 1));
         }
         if (highlightRanges[i + 1]) {
-          splitText.push(end ? value.slice(end, highlightRanges[i + 1].start) : '');
+          splitText.push(end ? value.slice(end, highlightRanges[i + 1].start - 1) : '');
         } else {
           splitText.push(end ? value.slice(end, value.length) : '');
         }
