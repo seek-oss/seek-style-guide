@@ -274,4 +274,3 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
     }
   </ul>
 );
-
