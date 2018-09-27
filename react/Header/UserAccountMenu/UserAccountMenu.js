@@ -107,10 +107,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             'data-analytics': 'header:applied+jobs',
             className: `${styles.item} ${styles.subItem}`,
             href: urlForAuthStatus(authenticationStatus, '/my-activity/applied-jobs'),
-            children: [
-              'Applied Jobs',
-              <div key="iconSpacer" className={styles.iconSpacer} />
-            ]
+            children: 'Applied Jobs'
           })
         }
       </Hidden>
@@ -159,10 +156,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             'data-analytics': 'header:settings',
             className: styles.item,
             href: '/settings/',
-            children: [
-              'Settings',
-              <div key="iconSpacer" className={styles.iconSpacer} />
-            ]
+            children: 'Settings'
           })
         }
       </Hidden>
@@ -201,13 +195,13 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
               href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',
               children: [
                 'Sign Out',
-                <div key="iconSpacer" className={styles.iconSpacer} />
+                <Hidden desktop key="iconSpacer" className={styles.iconSpacer} />
               ]
             });
             default: return (
               <span className={classnames(styles.item, styles.pendingAuth)}>
                 <Loader _small />
-                <div key="iconSpacer" className={styles.iconSpacer} />
+                <Hidden desktop key="iconSpacer" className={styles.iconSpacer} />
               </span>
             );
           }
@@ -256,10 +250,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
                 className: styles.item,
                 onClick: clearLocalStorage,
                 href: returnUrl ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl) : '/Login/Logout',
-                children: [
-                  'Sign Out',
-                  <div key="iconSpacer" className={styles.iconSpacer} />
-                ]
+                children: 'Sign Out'
               })
             }
           </Hidden>

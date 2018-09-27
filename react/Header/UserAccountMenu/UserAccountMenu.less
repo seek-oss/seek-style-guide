@@ -76,18 +76,21 @@
   }
 }
 
-.icon.jobSearch { color: @sk-blue-lighter; }
+.icon.jobSearch { color: @sk-teal }
 .icon.profile { color: @sk-purple; }
 .icon.saveJobs { color: @sk-pink; }
-.icon.saveSearches { color: @sk-blue-lighter; }
+.icon.saveSearches {
+  color: @sk-blue-lighter;
+
+  @media @mobile {
+    color: @sk-highlight;
+  }
+}
 .icon.recommendedJobs { color: @sk-green-light; }
 
 .iconSpacer {
   margin-left: (@gutter-width / 2);
   width: @gutter-width;
-  @media @desktop {
-    display: none;
-  }
 }
 
 .newBadge {
