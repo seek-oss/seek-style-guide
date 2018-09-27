@@ -151,7 +151,11 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
               children: [
                 newBadgeTab === 'Company Reviews' && <NewBadge key="new" className={styles.newBadge} />,
                 'Company Reviews',
-                <div key="iconSpacer" className={styles.iconSpacer} />
+                <ThumbsUpIcon
+                  key="icon"
+                  className={classnames(styles.icon, styles.recommendedJobs)}
+                  svgClassName={styles.iconSvg}
+                />
               ]
             })
           }
