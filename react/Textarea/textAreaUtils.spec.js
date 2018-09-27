@@ -58,22 +58,48 @@ describe('contentEditableUtils', () => {
           start: 6
         };
         expect(formatInvalidText(value, invalidText, style)).toEqual([
-          'my str',
-          <Highlight className="my-class-name" tone="critical" key="0">ing of text</Highlight>
+          'my st',
+          <Highlight className="my-class-name" tone="critical" key="0">ring of text</Highlight>
         ]);
       });
 
-      it('should highlight a range', () => {
-        const value = 'my longer text';
+      it('should highlight a single character', () => {
+        const value = 'my string of text';
         const invalidText = {
-          start: 3,
-          end: 9
+          start: 1,
+          end: 1
         };
         expect(formatInvalidText(value, invalidText, style)).toEqual([
-          'my ',
-          <Highlight className="my-class-name" tone="critical" key="0">longer</Highlight>,
-          ' text'
+          <Highlight className="my-class-name" tone="critical" key="0">m</Highlight>,
+          'y string of text'
         ]);
+      });
+
+      describe('should highlight a range', () => {
+        it('should highlight correctly', () => {
+          const value = 'my longer text';
+          const invalidText = {
+            start: 3,
+            end: 10
+          };
+          expect(formatInvalidText(value, invalidText, style)).toEqual([
+            'my',
+            <Highlight className="my-class-name" tone="critical" key="0"> longer </Highlight>,
+            'text'
+          ]);
+        });
+        it('should highlight correctly', () => {
+          const value = 'this is a test string of text';
+          const invalidText = {
+            start: 10,
+            end: 20
+          };
+          expect(formatInvalidText(value, invalidText, style)).toEqual([
+            'this is a',
+            <Highlight className="my-class-name" tone="critical" key="0"> test strin</Highlight>,
+            'g of text'
+          ]);
+        });
       });
 
       describe('highlighting multiple ranges', () => {
@@ -81,15 +107,15 @@ describe('contentEditableUtils', () => {
           const value = 'my longer text';
           const invalidText = [
             {
-              start: 3,
+              start: 4,
               end: 6
             },
             {
-              start: 7,
+              start: 8,
               end: 8
             },
             {
-              start: 12,
+              start: 13,
               end: 13
             }
           ];
@@ -117,8 +143,8 @@ describe('contentEditableUtils', () => {
             }
           ];
           expect(formatInvalidText(value, invalidText, style)).toEqual([
-            'aaaaaaaaaa',
-            <Highlight className="my-class-name" tone="critical" key="0">bbb</Highlight>
+            'aaaaaaaaa',
+            <Highlight className="my-class-name" tone="critical" key="0">abbb</Highlight>
           ]);
         });
       });
