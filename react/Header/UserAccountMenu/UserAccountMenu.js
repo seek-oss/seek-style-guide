@@ -5,6 +5,7 @@ import styles from './UserAccountMenu.less';
 import React from 'react';
 import classnames from 'classnames';
 
+import BuildingIcon from '../../BuildingIcon/BuildingIcon';
 import SearchIcon from '../../SearchIcon/SearchIcon';
 import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import HeartIcon from '../../HeartIcon/HeartIcon';
@@ -151,9 +152,9 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
               children: [
                 newBadgeTab === 'Company Reviews' && <NewBadge key="new" className={styles.newBadge} />,
                 'Company Reviews',
-                <ThumbsUpIcon
+                <BuildingIcon
                   key="icon"
-                  className={classnames(styles.icon, styles.recommendedJobs)}
+                  className={classnames(styles.icon, styles.companyReviews)}
                   svgClassName={styles.iconSvg}
                 />
               ]
