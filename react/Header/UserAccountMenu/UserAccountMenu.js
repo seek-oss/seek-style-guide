@@ -34,6 +34,8 @@ const clearLocalStorage = () => {
   }
 };
 
+const BadgeComponent = () => <Hidden desktop component={NewBadge} key="new" className={styles.newBadge} />;
+
 export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab, newBadgeTab }: Props) => (
   <ul className={styles.root}>
     <Hidden desktop component="li" className={classnames(activeTab === 'Job Search' && styles.activeTab)}>
@@ -43,7 +45,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
           className: styles.item,
           href: '/',
           children: [
-            newBadgeTab === 'Job Search' && <NewBadge key="new" className={styles.newBadge} />,
+            newBadgeTab === 'Job Search' && <BadgeComponent />,
             <span key="label">Job Search</span>,
             <SearchIcon
               key="icon"
@@ -62,7 +64,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
           className: styles.item,
           href: '/profile/',
           children: [
-            newBadgeTab === 'Profile' && <NewBadge key="new" className={styles.newBadge} />,
+            newBadgeTab === 'Profile' && <BadgeComponent />,
             <span key="label">Profile</span>,
             <ProfileIcon
               key="icon"
@@ -99,7 +101,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
           className: `${styles.item} ${styles.subItem}`,
           href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
           children: [
-            newBadgeTab === 'Saved & Applied Jobs' && <NewBadge key="new" className={styles.newBadge} />,
+            newBadgeTab === 'Saved & Applied Jobs' && <BadgeComponent />,
             <span key="label">Saved <Hidden desktop>& Applied </Hidden>Jobs</span>,
             <StarIcon
               key="icon"
@@ -129,7 +131,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
           className: `${styles.item} ${styles.subItem}`,
           href: urlForAuthStatus(authenticationStatus, '/recommended'),
           children: [
-            newBadgeTab === 'Recommended Jobs' && <NewBadge key="new" className={styles.newBadge} />,
+            newBadgeTab === 'Recommended Jobs' && <BadgeComponent />,
             <span key="label">Recommended Jobs</span>,
             <ThumbsUpIcon
               key="icon"
@@ -150,7 +152,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
               className: `${styles.item} ${styles.subItem}`,
               href: '/companies/',
               children: [
-                newBadgeTab === 'Company Reviews' && <NewBadge key="new" className={styles.newBadge} />,
+                newBadgeTab === 'Company Reviews' && <BadgeComponent />,
                 'Company Reviews',
                 <BuildingIcon
                   key="icon"
@@ -231,7 +233,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
               className: styles.item,
               href: '/career-advice/',
               children: [
-                newBadgeTab === 'Career Advice' && <NewBadge key="new" className={styles.newBadge} />,
+                newBadgeTab === 'Career Advice' && <BadgeComponent />,
                 'Career Advice',
                 <div key="iconSpacer" className={styles.iconSpacer} />
               ]
