@@ -64,12 +64,12 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
         }
       </li>
 
-      <Hidden mobile component="li" className={classnames(activeTab === 'Saved Searches' && styles.activeTab)}>
+      <li className={classnames(activeTab === 'Saved Searches' && styles.activeTab)}>
         {
           linkRenderer({
             'data-analytics': 'header:saved+searches',
             className: `${styles.item} ${styles.subItem}`,
-            href: '/myactivity',
+            href: '/my-activity/saved-searches',
             children: [
               <span key="label">Saved Searches</span>,
               <HeartIcon
@@ -80,7 +80,7 @@ export default function UserAccountMenu({ locale, authenticationStatus, linkRend
             ]
           })
         }
-      </Hidden>
+      </li>
 
       <li className={classnames(activeTab === 'Saved & Applied Jobs' && styles.activeTab)}>
         {

@@ -1,15 +1,18 @@
 @import (reference) "~seek-style-guide/theme";
+@backdropZIndex: 1;
+@textareaZIndex: 2;
 
 .root {
-  display: inline-block;
   position: relative;
 }
 
 .textarea {
   .touchableText();
   width: 100%;
+  display: inline-block;
   height: @row-height * 15;
   resize: vertical;
+  overflow: auto;
   max-height: @row-height * 30;
   line-height: 25px; // Deliberate deviation to avoid looking like body copy
   color: @sk-charcoal;
@@ -60,5 +63,41 @@
 }
 
 .invalidCharacterCount {
-  color: @sk-pink;
+  color: @sk-critical;
+}
+
+.highlightTextareaWrapper {
+  position: relative;
+}
+
+.highlightTextarea {
+  background-color: transparent;
+  position: relative;
+  z-index: @textareaZIndex;
+}
+
+.backdrop {
+  background-color: @sk-white;
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: @backdropZIndex;
+  resize: none;
+  -ms-overflow-style: none; // IE 10+
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  &::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
+
+  &::after {
+    content: '\A';
+  }
+}
+
+.invalidTextChunk {
+  display: inline;
 }

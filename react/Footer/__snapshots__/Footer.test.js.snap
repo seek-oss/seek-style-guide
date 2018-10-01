@@ -18,11 +18,11 @@ exports[`Footer: should render when authenticated 1`] = `
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Tools
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -52,7 +52,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
-                href="/myactivity"
+                href="/my-activity/saved-searches"
                 rel="nofollow"
               >
                 Saved searches
@@ -189,11 +189,11 @@ exports[`Footer: should render when authenticated 1`] = `
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Company
-          </h2>
+          </span>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -537,11 +537,11 @@ exports[`Footer: should render when authenticated 1`] = `
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Connect
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -655,11 +655,11 @@ exports[`Footer: should render when authenticated 1`] = `
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Employers
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -783,11 +783,11 @@ exports[`Footer: should render when authentication is pending 1`] = `
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Tools
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -817,7 +817,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
-                href="/sign-in?returnUrl=%2Fmyactivity"
+                href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-searches"
                 rel="nofollow"
               >
                 Saved searches
@@ -954,11 +954,11 @@ exports[`Footer: should render when authentication is pending 1`] = `
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Company
-          </h2>
+          </span>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -1302,11 +1302,11 @@ exports[`Footer: should render when authentication is pending 1`] = `
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Connect
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -1420,11 +1420,11 @@ exports[`Footer: should render when authentication is pending 1`] = `
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Employers
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -1548,11 +1548,11 @@ exports[`Footer: should render when unauthenticated 1`] = `
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Tools
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -1582,7 +1582,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
-                href="/sign-in?returnUrl=%2Fmyactivity"
+                href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-searches"
                 rel="nofollow"
               >
                 Saved searches
@@ -1719,11 +1719,11 @@ exports[`Footer: should render when unauthenticated 1`] = `
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Company
-          </h2>
+          </span>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -2067,11 +2067,11 @@ exports[`Footer: should render when unauthenticated 1`] = `
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Connect
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -2185,11 +2185,11 @@ exports[`Footer: should render when unauthenticated 1`] = `
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Employers
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -2313,11 +2313,11 @@ exports[`Footer: should render with locale of AU 1`] = `
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Tools
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -2347,7 +2347,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
-                href="/sign-in?returnUrl=%2Fmyactivity"
+                href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-searches"
                 rel="nofollow"
               >
                 Saved searches
@@ -2484,11 +2484,11 @@ exports[`Footer: should render with locale of AU 1`] = `
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Company
-          </h2>
+          </span>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -2832,11 +2832,11 @@ exports[`Footer: should render with locale of AU 1`] = `
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Connect
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -2950,11 +2950,11 @@ exports[`Footer: should render with locale of AU 1`] = `
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Employers
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -3078,11 +3078,11 @@ exports[`Footer: should render with locale of NZ 1`] = `
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Tools
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -3112,7 +3112,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
-                href="/sign-in?returnUrl=%2Fmyactivity"
+                href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-searches"
                 rel="nofollow"
               >
                 Saved searches
@@ -3238,11 +3238,11 @@ exports[`Footer: should render with locale of NZ 1`] = `
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Company
-          </h2>
+          </span>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -3483,11 +3483,11 @@ exports[`Footer: should render with locale of NZ 1`] = `
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Connect
-          </h2>
+          </span>
           <ul>
             <li
               class=""
@@ -3601,11 +3601,11 @@ exports[`Footer: should render with locale of NZ 1`] = `
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <h2
+          <span
             class="FooterNav__heading"
           >
             Employers
-          </h2>
+          </span>
           <ul>
             <li
               class=""

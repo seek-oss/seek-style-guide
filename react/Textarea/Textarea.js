@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import Text from '../Text/Text';
+import { formatInvalidText } from './textAreaUtils';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -15,6 +16,7 @@ function combineClassNames(props = {}, ...classNames) {
   };
 }
 
+/* eslint-disable react/no-deprecated */
 export default class Textarea extends Component {
   static displayName = 'Textarea';
 
@@ -28,7 +30,6 @@ export default class Textarea extends Component {
     valid: PropTypes.bool,
     description: PropTypes.string,
     inputProps: PropTypes.object,
-    /* eslint-disable consistent-return */
     countFeedback: (props, propName, componentName) => {
       const { value, inputProps = {} } = props;
 
@@ -39,9 +40,13 @@ export default class Textarea extends Component {
       if (props[propName] && typeof value !== 'string' && typeof inputProps.value !== 'string') {
         return new Error(`\`value\` must be supplied if \`${propName}\` is set`);
       }
+
+      return null;
     },
-    secondaryLabel: PropTypes.string
-    /* eslint-enable consistent-return */
+    secondaryLabel: PropTypes.string,
+    invalidText: PropTypes.oneOfType([
+      PropTypes.string, PropTypes.object, PropTypes.arrayOf(PropTypes.object)
+    ])
   };
 
   static defaultProps = {
@@ -56,6 +61,18 @@ export default class Textarea extends Component {
     this.renderInput = this.renderInput.bind(this);
     this.renderCharacterCount = this.renderCharacterCount.bind(this);
   }
+
+  storeTextareaRef = textarea => {
+    if (textarea !== null) {
+      this.textarea = textarea;
+    }
+  };
+
+  storeTextareaBackdropRef = textareaBackdrop => {
+    if (textareaBackdrop !== null) {
+      this.textareaBackdrop = textareaBackdrop;
+    }
+  };
 
   /* eslint-disable consistent-return */
   renderCharacterCount() {
@@ -85,21 +102,46 @@ export default class Textarea extends Component {
   }
   /* eslint-enable consistent-return */
 
-  renderInput() {
-    const { id, value, onChange, onFocus, onBlur, inputProps } = this.props;
-    const allInputProps = {
-      id,
-      value,
-      onChange,
-      onFocus,
-      onBlur,
-      ...combineClassNames(inputProps, styles.textarea),
-      'aria-describedby': `${id}-message`
-    };
+  onScroll = () => {
+    const scrollTop = this.textarea.scrollTop;
+    this.textareaBackdrop.scrollTop = scrollTop;
+  }
 
-    return (
-      <textarea {...allInputProps} />
+  renderInput() {
+    const { id, value, invalidText, onChange, onFocus, onBlur, inputProps } = this.props;
+    let formattedText;
+    const highlightErrors = typeof invalidText !== 'undefined';
+    if (highlightErrors) {
+      formattedText = formatInvalidText(value, invalidText, styles.invalidTextChunk);
+    }
+
+    const renderTextarea = (props = {}, classname) => (
+      <textarea
+        {...{
+          id,
+          value,
+          onChange,
+          onFocus,
+          onBlur,
+          ...combineClassNames(inputProps, styles.textarea, classname),
+          'aria-describedby': `${id}-message`,
+          ref: this.storeTextareaRef,
+          ...props
+        }}
+      />
     );
+
+    return highlightErrors ? (
+      <div className={styles.highlightTextareaWrapper}>
+        <div
+          data-automation="backdrop"
+          ref={this.storeTextareaBackdropRef}
+          className={classnames(styles.textarea, styles.backdrop)}>
+          {formattedText}
+        </div>
+        {renderTextarea({ onScroll: this.onScroll }, styles.highlightTextarea)}
+      </div>
+    ) : renderTextarea();
   }
 
   render() {
