@@ -1,7 +1,4 @@
-<svg height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" fill-rule="evenodd" stroke="#f57c00">
-    <path d="M.5.5h11v11H.5z"/>
-    <path d="M4.5 6.5h3v5h-3z"/>
-    <path d="M.5 3.5h11" stroke-linecap="square"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path stroke-width="0" d="M11.5,0 L0.5,0 C0.223857625,0 0,0.223857625 0,0.5 L0,11.5 C0,11.7761424 0.223857625,12 0.5,12 L11.5,12 C11.7761424,12 12,11.7761424 12,11.5 L12,0.5 C12,0.223857625 11.7761424,0 11.5,0 Z M11,1 L11,3 L1,3 L1,1 L11,1 Z M5,11 L5,7 L7,7 L7,11 L5,11 Z M8,11 L8,6.5 C8,6.22385763 7.77614237,6 7.5,6 L4.5,6 C4.22385763,6 4,6.22385763 4,6.5 L4,11 L1,11 L1,4 L11,4 L11,11 L8,11 Z"></path>
 </svg>
