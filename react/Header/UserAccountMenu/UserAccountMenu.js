@@ -19,13 +19,33 @@ import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/auth
 import appendReturnUrl from '../../private/appendReturnUrl';
 import urlForAuthStatus from '../../private/urlForAuthStatus';
 
+const JOB_SEARCH = 'Job Search';
+const PROFILE = 'Profile';
+const SAVED_SEARCHES = 'Saved Searches';
+const SAVED_AND_APPLIED = 'Saved & Applied Jobs';
+const APPLIED_JOBS = 'Applied Jobs';
+const RECOMMENDED_JOBS = 'Recommended Jobs';
+const SETTINGS = 'Settings';
+const CAREER_ADVICE = 'Career Advice';
+const COMPANY_REVIEWS = 'Company Reviews';
+
+type TabsType = typeof JOB_SEARCH |
+  typeof PROFILE |
+  typeof SAVED_SEARCHES |
+  typeof SAVED_AND_APPLIED |
+  typeof APPLIED_JOBS |
+  typeof RECOMMENDED_JOBS |
+  typeof SETTINGS |
+  typeof CAREER_ADVICE |
+  typeof COMPANY_REVIEWS;
+
 type Props = {
   locale?: 'AU' | 'NZ',
   authenticationStatus?: AUTHENTICATED | UNAUTHENTICATED | AUTH_PENDING,
   linkRenderer: Function,
   returnUrl?: string,
-  activeTab?: string,
-  newBadgeTab?: string
+  activeTab?: TabsType,
+  newBadgeTab?: TabsType
 }
 
 const clearLocalStorage = () => {
@@ -38,15 +58,15 @@ const BadgeComponent = () => <Hidden desktop component={NewBadge} key="new" clas
 
 export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab, newBadgeTab }: Props) => (
   <ul className={styles.root}>
-    <Hidden desktop component="li" className={classnames(activeTab === 'Job Search' && styles.activeTab)}>
+    <Hidden desktop component="li" className={classnames(activeTab === JOB_SEARCH && styles.activeTab)}>
       {
         linkRenderer({
           'data-analytics': 'header:jobs',
           className: styles.item,
           href: '/',
           children: [
-            newBadgeTab === 'Job Search' && <BadgeComponent />,
-            <span key="label">Job Search</span>,
+            newBadgeTab === JOB_SEARCH && <BadgeComponent />,
+            <span key="label">{JOB_SEARCH}</span>,
             <SearchIcon
               key="icon"
               className={classnames(styles.icon, styles.jobSearch)}
@@ -57,15 +77,15 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
       }
     </Hidden>
 
-    <li className={classnames(activeTab === 'Profile' && styles.activeTab)}>
+    <li className={classnames(activeTab === PROFILE && styles.activeTab)}>
       {
         linkRenderer({
           'data-analytics': 'header:profile',
           className: styles.item,
           href: '/profile/',
           children: [
-            newBadgeTab === 'Profile' && <BadgeComponent />,
-            <span key="label">Profile</span>,
+            newBadgeTab === PROFILE && <BadgeComponent />,
+            <span key="label">{PROFILE}</span>,
             <ProfileIcon
               key="icon"
               className={classnames(styles.icon, styles.profile)}
@@ -76,14 +96,14 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
       }
     </li>
 
-    <li className={classnames(activeTab === 'Saved Searches' && styles.activeTab)}>
+    <li className={classnames(activeTab === SAVED_SEARCHES && styles.activeTab)}>
       {
         linkRenderer({
           'data-analytics': 'header:saved+searches',
           className: `${styles.item} ${styles.subItem}`,
           href: '/my-activity/saved-searches',
           children: [
-            <span key="label">Saved Searches</span>,
+            <span key="label">{SAVED_SEARCHES}</span>,
             <HeartIcon
               key="icon"
               className={classnames(styles.icon, styles.saveSearches)}
@@ -94,14 +114,14 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
       }
     </li>
 
-    <li className={classnames(activeTab === 'Saved & Applied Jobs' && styles.activeTab)}>
+    <li className={classnames(activeTab === SAVED_AND_APPLIED && styles.activeTab)}>
       {
         linkRenderer({
           'data-analytics': 'header:saved+jobs',
           className: `${styles.item} ${styles.subItem}`,
           href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
           children: [
-            newBadgeTab === 'Saved & Applied Jobs' && <BadgeComponent />,
+            newBadgeTab === SAVED_AND_APPLIED && <BadgeComponent />,
             <span key="label">Saved <Hidden desktop>& Applied </Hidden>Jobs</span>,
             <StarIcon
               key="icon"
@@ -113,26 +133,26 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
       }
     </li>
 
-    <Hidden mobile component="li" className={classnames(activeTab === 'Applied Jobs' && styles.activeTab)}>
+    <Hidden mobile component="li" className={classnames(activeTab === APPLIED_JOBS && styles.activeTab)}>
       {
         linkRenderer({
           'data-analytics': 'header:applied+jobs',
           className: `${styles.item} ${styles.subItem}`,
           href: urlForAuthStatus(authenticationStatus, '/my-activity/applied-jobs'),
-          children: 'Applied Jobs'
+          children: APPLIED_JOBS
         })
       }
     </Hidden>
 
-    <Hidden desktop component="li" className={classnames(activeTab === 'Recommended Jobs' && styles.activeTab)}>
+    <Hidden desktop component="li" className={classnames(activeTab === RECOMMENDED_JOBS && styles.activeTab)}>
       {
         linkRenderer({
           'data-analytics': 'header:recommended+jobs',
           className: `${styles.item} ${styles.subItem}`,
           href: urlForAuthStatus(authenticationStatus, '/recommended'),
           children: [
-            newBadgeTab === 'Recommended Jobs' && <BadgeComponent />,
-            <span key="label">Recommended Jobs</span>,
+            newBadgeTab === RECOMMENDED_JOBS && <BadgeComponent />,
+            <span key="label">{RECOMMENDED_JOBS}</span>,
             <ThumbsUpIcon
               key="icon"
               className={classnames(styles.icon, styles.recommendedJobs)}
@@ -145,15 +165,15 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
 
     {
       locale === 'NZ' ? null : (
-        <Hidden desktop component="li" className={classnames(activeTab === 'Company Reviews' && styles.activeTab)}>
+        <Hidden desktop component="li" className={classnames(activeTab === COMPANY_REVIEWS && styles.activeTab)}>
           {
             linkRenderer({
               'data-analytics': 'header:companies',
               className: `${styles.item} ${styles.subItem}`,
               href: '/companies/',
               children: [
-                newBadgeTab === 'Company Reviews' && <BadgeComponent />,
-                'Company Reviews',
+                newBadgeTab === COMPANY_REVIEWS && <BadgeComponent />,
+                COMPANY_REVIEWS,
                 <BuildingIcon
                   key="icon"
                   className={styles.icon}
@@ -166,13 +186,13 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
       )
     }
 
-    <Hidden mobile component="li" className={classnames(activeTab === 'Settings' && styles.activeTab)}>
+    <Hidden mobile component="li" className={classnames(activeTab === SETTINGS && styles.activeTab)}>
       {
         linkRenderer({
           'data-analytics': 'header:settings',
           className: styles.item,
           href: '/settings/',
-          children: 'Settings'
+          children: SETTINGS
         })
       }
     </Hidden>
@@ -226,15 +246,15 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
 
     {
       locale === 'NZ' ? null : (
-        <Hidden desktop component="li" className={classnames(activeTab === 'Career Advice' && styles.activeTab, styles.firstItemInGroup)}>
+        <Hidden desktop component="li" className={classnames(activeTab === CAREER_ADVICE && styles.activeTab, styles.firstItemInGroup)}>
           {
             linkRenderer({
               'data-analytics': 'header:advice',
               className: styles.item,
               href: '/career-advice/',
               children: [
-                newBadgeTab === 'Career Advice' && <BadgeComponent />,
-                'Career Advice',
+                newBadgeTab === CAREER_ADVICE && <BadgeComponent />,
+                CAREER_ADVICE,
                 <div key="iconSpacer" className={styles.iconSpacer} />
               ]
             })
