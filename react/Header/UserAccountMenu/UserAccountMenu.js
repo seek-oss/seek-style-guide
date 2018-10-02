@@ -156,7 +156,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
                 'Company Reviews',
                 <BuildingIcon
                   key="icon"
-                  className={classnames(styles.icon, styles.companyReviews)}
+                  className={styles.icon}
                   svgClassName={styles.crSvg}
                 />
               ]

@@ -263,7 +263,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -853,7 +853,7 @@ exports[`Header: should render first part of email address when username isn't p
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -1440,7 +1440,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -2030,7 +2030,7 @@ exports[`Header: should render when authenticated 1`] = `
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -2617,7 +2617,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -3204,7 +3204,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -3792,7 +3792,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -4354,7 +4354,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -4940,7 +4940,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
@@ -6059,7 +6059,7 @@ exports[`Header: should render with no divider 1`] = `
                     >
                       Company Reviews
                       <span
-                        class="Icon__root UserAccountMenu__icon UserAccountMenu__companyReviews"
+                        class="Icon__root UserAccountMenu__icon"
                       >
                         mock svg
                       </span>
