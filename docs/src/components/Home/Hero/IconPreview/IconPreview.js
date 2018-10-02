@@ -12,8 +12,7 @@ import {
   ErrorIcon,
   TickIcon,
   TickCircleIcon,
-  HelpIcon,
-  BuildingIcon
+  HelpIcon
 } from 'seek-style-guide/react';
 
 export default function IconPreview() {
@@ -21,7 +20,6 @@ export default function IconPreview() {
     <div className={styles.root}>
       <HeartIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <ProfileIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <BuildingIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <TickIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <TickCircleIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <CloseIcon className={styles.icon} svgClassName={styles.iconSvg} />
