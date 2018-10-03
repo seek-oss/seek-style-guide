@@ -14,15 +14,15 @@ exports[`Footer: should render when authenticated 1`] = `
       <div
         class="Footer__columns"
       >
-        <div
+        <nav
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Tools
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -184,16 +184,16 @@ exports[`Footer: should render when authenticated 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Company
-          </span>
+          </h4>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -532,16 +532,16 @@ exports[`Footer: should render when authenticated 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Connect
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -650,16 +650,16 @@ exports[`Footer: should render when authenticated 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Employers
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -718,7 +718,7 @@ exports[`Footer: should render when authenticated 1`] = `
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div
         class="Footer__copyright"
@@ -779,15 +779,15 @@ exports[`Footer: should render when authentication is pending 1`] = `
       <div
         class="Footer__columns"
       >
-        <div
+        <nav
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Tools
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -949,16 +949,16 @@ exports[`Footer: should render when authentication is pending 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Company
-          </span>
+          </h4>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -1297,16 +1297,16 @@ exports[`Footer: should render when authentication is pending 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Connect
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -1415,16 +1415,16 @@ exports[`Footer: should render when authentication is pending 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Employers
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -1483,7 +1483,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div
         class="Footer__copyright"
@@ -1544,15 +1544,15 @@ exports[`Footer: should render when unauthenticated 1`] = `
       <div
         class="Footer__columns"
       >
-        <div
+        <nav
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Tools
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -1714,16 +1714,16 @@ exports[`Footer: should render when unauthenticated 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Company
-          </span>
+          </h4>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -2062,16 +2062,16 @@ exports[`Footer: should render when unauthenticated 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Connect
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -2180,16 +2180,16 @@ exports[`Footer: should render when unauthenticated 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Employers
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -2248,7 +2248,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div
         class="Footer__copyright"
@@ -2309,15 +2309,15 @@ exports[`Footer: should render with locale of AU 1`] = `
       <div
         class="Footer__columns"
       >
-        <div
+        <nav
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Tools
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -2479,16 +2479,16 @@ exports[`Footer: should render with locale of AU 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Company
-          </span>
+          </h4>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -2827,16 +2827,16 @@ exports[`Footer: should render with locale of AU 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Connect
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -2945,16 +2945,16 @@ exports[`Footer: should render with locale of AU 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Employers
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -3013,7 +3013,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div
         class="Footer__copyright"
@@ -3074,15 +3074,15 @@ exports[`Footer: should render with locale of NZ 1`] = `
       <div
         class="Footer__columns"
       >
-        <div
+        <nav
           aria-label="Tools"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Tools
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -3233,16 +3233,16 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Company"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Company
-          </span>
+          </h4>
           <ul>
             <li
               class="FooterLink__secondary"
@@ -3478,16 +3478,16 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Connect"
           class="FooterNav__category"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Connect
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -3596,16 +3596,16 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </ul>
             </li>
           </ul>
-        </div>
-        <div
+        </nav>
+        <nav
           aria-label="Employers"
           class="FooterNav__category FooterNav__secondary"
         >
-          <span
+          <h4
             class="FooterNav__heading"
           >
             Employers
-          </span>
+          </h4>
           <ul>
             <li
               class=""
@@ -3664,7 +3664,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div
         class="Footer__copyright"

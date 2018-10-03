@@ -10,7 +10,8 @@ exports[`Header: should render with locale of AU 1`] = `
     <div
       class="PartnerSites__content"
     >
-      <div
+      <nav
+        aria-label="SEEK sites"
         role="navigation"
       >
         <ul
@@ -57,11 +58,12 @@ exports[`Header: should render with locale of AU 1`] = `
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
       <div
         class="PartnerSites__locale"
       >
-        <div
+        <nav
+          aria-label="country"
           role="navigation"
         >
           <ul
@@ -85,7 +87,7 @@ exports[`Header: should render with locale of AU 1`] = `
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   </div>
@@ -102,7 +104,8 @@ exports[`Header: should render with locale of NZ 1`] = `
     <div
       class="PartnerSites__content"
     >
-      <div
+      <nav
+        aria-label="SEEK sites"
         role="navigation"
       >
         <ul
@@ -149,11 +152,12 @@ exports[`Header: should render with locale of NZ 1`] = `
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
       <div
         class="PartnerSites__locale"
       >
-        <div
+        <nav
+          aria-label="country"
           role="navigation"
         >
           <ul
@@ -177,7 +181,7 @@ exports[`Header: should render with locale of NZ 1`] = `
               </span>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   </div>
@@ -194,7 +198,8 @@ exports[`Header: should render with overridden AU Locale link 1`] = `
     <div
       class="PartnerSites__content"
     >
-      <div
+      <nav
+        aria-label="SEEK sites"
         role="navigation"
       >
         <ul
@@ -241,11 +246,12 @@ exports[`Header: should render with overridden AU Locale link 1`] = `
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
       <div
         class="PartnerSites__locale"
       >
-        <div
+        <nav
+          aria-label="country"
           role="navigation"
         >
           <ul
@@ -269,7 +275,7 @@ exports[`Header: should render with overridden AU Locale link 1`] = `
               </span>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   </div>
@@ -286,7 +292,8 @@ exports[`Header: should render with overridden NZ Locale link 1`] = `
     <div
       class="PartnerSites__content"
     >
-      <div
+      <nav
+        aria-label="SEEK sites"
         role="navigation"
       >
         <ul
@@ -333,11 +340,12 @@ exports[`Header: should render with overridden NZ Locale link 1`] = `
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
       <div
         class="PartnerSites__locale"
       >
-        <div
+        <nav
+          aria-label="country"
           role="navigation"
         >
           <ul
@@ -361,7 +369,7 @@ exports[`Header: should render with overridden NZ Locale link 1`] = `
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   </div>

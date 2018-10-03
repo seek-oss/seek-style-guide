@@ -14,7 +14,10 @@ export default function Locales({ locale, linkRenderer, localeLinks }) {
   });
 
   return (
-    <div role="navigation" className={styles.root}>
+    <nav
+      aria-label="country"
+      role="navigation"
+      className={styles.root}>
       <ul className={listClasses}>
         <li className={styles.listItem}>
           {isAU ? (
@@ -39,7 +42,7 @@ export default function Locales({ locale, linkRenderer, localeLinks }) {
           )}
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 

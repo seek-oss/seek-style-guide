@@ -5,7 +5,8 @@ import appendReturnUrl from '../../private/appendReturnUrl';
 
 export default function SignInRegister({ linkRenderer, returnUrl }) {
   return (
-    <div
+    <nav
+      aria-label="Sign in or register"
       data-automation="sign-in-register"
       className={styles.root}>
       {
@@ -29,7 +30,7 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
           children: 'Register'
         })
       }
-    </div>
+    </nav>
   );
 }
 

@@ -64,7 +64,8 @@ export default class UserAccount extends Component {
     const desktopMenuLabel = userName;
 
     return (
-      <div
+      <nav
+        aria-label="my account"
         role="navigation"
         data-automation="user-account"
         className={styles.root}>
@@ -111,7 +112,7 @@ export default class UserAccount extends Component {
           />
         </div>
 
-      </div>
+      </nav>
     );
   }
 }

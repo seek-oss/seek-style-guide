@@ -41,7 +41,8 @@ const items = [
 
 export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTab, divider }) {
   return (
-    <div
+    <nav
+      aria-label="Primary Links"
       role="navigation"
       className={classnames({
         [styles.root]: true,
@@ -85,7 +86,7 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
         }
       </ul>
 
-    </div>
+    </nav>
   );
 }
 

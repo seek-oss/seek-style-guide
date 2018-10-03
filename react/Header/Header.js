@@ -65,7 +65,7 @@ export default function Header({
   const displayName = userName || userEmail.split('@')[0];
 
   return (
-    <header className={styles.root} role="banner" aria-label="Primary navigation">
+    <header className={styles.root} role="banner">
       <StructuredDataSchema locale={locale} />
       <div className={styles.content}>
         <div className={styles.banner}>

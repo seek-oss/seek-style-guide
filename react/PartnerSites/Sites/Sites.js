@@ -36,7 +36,7 @@ export default function Sites({ locale, linkRenderer, activeSite }) {
   const isVolunteeringActive = activeSite === 'Volunteering';
 
   return (
-    <div role="navigation">
+    <nav aria-label="SEEK sites" role="navigation">
       <ul className={styles.list}>
         <li>
           {isJobsActive ?
@@ -87,7 +87,7 @@ export default function Sites({ locale, linkRenderer, activeSite }) {
           }
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 
