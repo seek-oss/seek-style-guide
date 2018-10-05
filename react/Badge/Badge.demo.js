@@ -1,6 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Card, Text, PageBlock, Section, Badge } from 'seek-style-guide/react';
+import { Badge } from 'seek-style-guide/react';
 
 export default {
   route: '/badge',
@@ -8,7 +6,7 @@ export default {
   component: Badge,
 
   initialProps: {
-    children: '2 new',
+    children: '13 new',
     info: true
   },
   options: [
@@ -16,7 +14,6 @@ export default {
       label: 'Text',
       type: 'radio',
       states: [
-        ,
         {
           label: 'Info',
           transformProps: props => ({

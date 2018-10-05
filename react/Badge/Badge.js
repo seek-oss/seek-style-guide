@@ -42,8 +42,7 @@ export default class Badge extends PureComponent<Props> {
           [styles.positive]: positive,
           [styles.strong]: strong
         })}
-        {...this.props}
-      >
+        {...this.props}>
         {children}
       </div>
     );
