@@ -1,0 +1,40 @@
+@import (reference) '~seek-style-guide/theme';
+
+@height: @row-height * @small-type-row-span;
+
+.root {
+  .rawText(1.2);
+  font-weight: @sk-medium;
+  height: @height;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0 10px;
+  .__style(@sk-black);
+}
+
+.__style(@color) {
+  background-color: fade(@color, 10%);
+  color: @color;
+
+  &.strong {
+    background-color: @color;
+    color: @sk-white;
+  }
+}
+
+.info {
+  .__style(@sk-info);
+}
+.accent {
+  .__style(@sk-blue-lighter);
+}
+.critical {
+  .__style(@sk-pink);
+}
+.secondary {
+  .__style(@sk-mid-gray-dark);
+}
+.positive {
+  .__style(@sk-positive);
+}
