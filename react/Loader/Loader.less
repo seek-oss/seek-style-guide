@@ -49,10 +49,14 @@
 
 .root.inline {
   display: inline;
+
+  > .ball {
+    background-color: currentColor;
+  }
 }
 
 .root.xsmall {
-  ._coreLoader(4px, 0, currentColor);
+  ._coreLoader(4px, 0);
 }
 
 .root.small {
