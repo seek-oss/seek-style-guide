@@ -42,7 +42,7 @@ const items = [
 export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTab, divider }) {
   return (
     <nav
-      aria-label="Primary Links"
+      aria-label="Primary navigation"
       role="navigation"
       className={classnames({
         [styles.root]: true,
