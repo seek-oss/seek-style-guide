@@ -236,7 +236,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
           });
           default: return (
             <span className={classnames(styles.item, styles.pendingAuth)}>
-              <Loader _small />
+              <Loader inline xsmall />
               <Hidden desktop key="iconSpacer" className={styles.iconSpacer} />
             </span>
           );
