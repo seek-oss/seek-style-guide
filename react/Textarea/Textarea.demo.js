@@ -114,7 +114,7 @@ export default {
               start: 10,
               end: 20
             },
-            description: 'Characters 10-20 are invalid'
+            description: 'Characters 11-20 are invalid'
           })
         },
         {
@@ -131,7 +131,7 @@ export default {
                 end: 40
               }
             ],
-            description: 'Characters 10-20 and 30-40 are invalid'
+            description: 'Characters 11-20 and 31-40 are invalid'
           })
         },
         {
