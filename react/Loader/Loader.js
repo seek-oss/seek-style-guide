@@ -1,11 +1,16 @@
+// @flow
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Loader.less';
 import classnames from 'classnames';
 
-export default function Loader({ _small }) {
+export default function Loader({ inline, small }: { inline?: boolean, small?: boolean }) {
   return (
-    <div className={classnames(styles.root, { [styles._small]: _small })}>
+    <div
+      className={classnames(styles.root, {
+        [styles.inline]: inline,
+        [styles.small]: small
+      })}>
       <div className={styles.ball} />
       <div className={styles.ball} />
       <div className={styles.ball} />
@@ -13,10 +18,3 @@ export default function Loader({ _small }) {
   );
 }
 
-Loader.propTypes = {
-  _small: PropTypes.bool
-};
-
-Loader.defaultProps = {
-  _small: false
-};
