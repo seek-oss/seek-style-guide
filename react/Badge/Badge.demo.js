@@ -15,13 +15,6 @@ export default {
       type: 'radio',
       states: [
         {
-          label: 'Info',
-          transformProps: props => ({
-            ...props,
-            info: true
-          })
-        },
-        {
           label: 'Accent',
           transformProps: props => ({
             ...props,
@@ -29,10 +22,17 @@ export default {
           })
         },
         {
-          label: 'Secondary',
+          label: 'Critical',
           transformProps: props => ({
             ...props,
-            secondary: true
+            critical: true
+          })
+        },
+        {
+          label: 'Info',
+          transformProps: props => ({
+            ...props,
+            info: true
           })
         },
         {
@@ -43,10 +43,17 @@ export default {
           })
         },
         {
-          label: 'Critical',
+          label: 'Neutral',
           transformProps: props => ({
             ...props,
-            critical: true
+            neutral: true
+          })
+        },
+        {
+          label: 'Secondary',
+          transformProps: props => ({
+            ...props,
+            secondary: true
           })
         }
       ]

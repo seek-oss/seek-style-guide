@@ -8,11 +8,12 @@ import styles from './Badge.less';
 type Props = {
   children: React$Node,
   strong?: boolean,
-  info?: boolean,
   accent?: boolean,
   critical?: boolean,
-  secondary?: boolean,
-  positive?: boolean
+  info?: boolean,
+  neutral?: boolean,
+  positive?: boolean,
+  secondary?: boolean
 };
 
 export default class Badge extends PureComponent<Props> {
@@ -22,24 +23,26 @@ export default class Badge extends PureComponent<Props> {
 
   render() {
     const {
-      info,
+      children,
       accent,
       critical,
-      secondary,
+      info,
+      neutral,
       positive,
-      strong,
-      children
+      secondary,
+      strong
     } = this.props;
 
     return (
       <div
         className={classnames({
           [styles.root]: true,
-          [styles.info]: info,
           [styles.accent]: accent,
           [styles.critical]: critical,
-          [styles.secondary]: secondary,
+          [styles.info]: info,
+          [styles.neutral]: neutral,
           [styles.positive]: positive,
+          [styles.secondary]: secondary,
           [styles.strong]: strong
         })}
         {...this.props}>
