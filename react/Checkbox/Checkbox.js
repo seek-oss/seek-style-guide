@@ -4,6 +4,7 @@ import styles from './Checkbox.less';
 import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
 import FieldMessage from '../FieldMessage/FieldMessage';
+import { TONE } from '../private/tone';
 
 const STANDARD = 'standard';
 const BUTTON = 'button';
@@ -36,7 +37,8 @@ export default class Checkbox extends Component {
       PropTypes.oneOf([false]),
       PropTypes.node
     ]),
-    messageProps: PropTypes.object
+    messageProps: PropTypes.object,
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL])
   }
 
   static defaultProps = {
@@ -86,8 +88,8 @@ export default class Checkbox extends Component {
     );
   }
 
-  renderMessage(id, valid, message, messageProps) {
-    return <FieldMessage {...{ id: `${id}-message`, valid, message, messageProps }} />;
+  renderMessage(id, valid, message, messageProps, tone) {
+    return <FieldMessage {...{ id: `${id}-message`, message, messageProps, tone, ...(tone ? {} : { valid }) }} />;
   }
 
   renderInput() {
@@ -110,11 +112,11 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const { className, id, valid, message, messageProps } = this.props;
+    const { className, id, valid, message, messageProps, tone } = this.props;
 
     const rootClassNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: valid === false,
+      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [className]: className
     });
 
@@ -122,7 +124,7 @@ export default class Checkbox extends Component {
       <div className={rootClassNames}>
         { this.renderInput() }
         { this.renderLabel() }
-        { this.renderMessage(id, valid, message, messageProps) }
+        { this.renderMessage(id, valid, message, messageProps, tone) }
       </div>
     );
   }
