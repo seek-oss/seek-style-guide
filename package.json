@@ -137,7 +137,7 @@
     "react-router-dom": "^4.2.2",
     "react-shallow-testutils": "^3.0.0",
     "react-test-renderer": "^16.0.0",
-    "renovate-config-seek": "^0.3.0",
+    "renovate-config-seek": "^0.4.0",
     "scope-eval": "^1.0.0",
     "seek-style-guide-webpack": "^2.2.0",
     "semantic-release": "^8.1.2",
