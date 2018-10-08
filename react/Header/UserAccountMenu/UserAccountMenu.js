@@ -180,7 +180,13 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
                   svgClassName={styles.crSvg}
                 />
               ]
-            })
+            });
+            default: return (
+              <span className={classnames(styles.item, styles.pendingAuth)}>
+                <Loader inline xsmall />
+                <div key="iconSpacer" className={styles.iconSpacer} />
+              </span>
+            );
           }
         </Hidden>
       )

@@ -65,6 +65,12 @@ describe('CustomMonthPicker', () => {
     expect(yearDropdown.props.valid).to.equal(false);
   });
 
+  it('should send a tone prop to both dropdowns', () => {
+    render(<CustomMonthPicker id="testCustomMonthPicker" tone="critical" fieldMessageId="testCustomMonthPicker-message" />);
+    expect(monthDropdown.props.tone).to.equal('critical');
+    expect(yearDropdown.props.tone).to.equal('critical');
+  });
+
   it('should call onFocus when field has the focus', () => {
     const onFocus = jest.fn();
     renderToDom(<CustomMonthPicker id="testCustomMonthPicker" onFocus={onFocus} value={{ month: 6, year: 2010 }} fieldMessageId="testCustomMonthPicker-message" />);

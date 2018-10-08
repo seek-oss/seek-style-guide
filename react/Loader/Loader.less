@@ -1,6 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
 
-._coreLoader(@ball-size, @margin, @background-color) {
+._coreLoader(@ball-size, @margin, @background-color: @sk-mid-gray-light) {
   @ball-spacing: 2px;
   @keyframes bounce {
     33% { transform: translateY(-@ball-size); }
@@ -19,7 +19,7 @@
 }
 
 .root {
-  ._coreLoader(@row-height * 3, (@row-height * 11) auto, @sk-mid-gray-light);
+  ._coreLoader(@row-height * 3, (@row-height * 11) auto);
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -47,7 +47,18 @@
   }
 }
 
-.root._small {
-  ._coreLoader(4px, 0, currentColor);
+.root.inline {
   display: inline;
+
+  > .ball {
+    background-color: currentColor;
+  }
+}
+
+.root.xsmall {
+  ._coreLoader(4px, 0);
+}
+
+.root.small {
+  ._coreLoader(@row-height * 1.5, 0);
 }

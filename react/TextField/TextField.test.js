@@ -67,8 +67,18 @@ describe('TextField', () => {
       />)).toMatchSnapshot();
   });
 
-  it('should render with valid false', () => {
-    expect(shallow(<TextField {...requiredProps} valid={false} />)).toMatchSnapshot();
+  describe('valid / tone', () => {
+    it('should render the invalid style for tone="critical" even if the field is valid', () => {
+      expect(shallow(<TextField {...requiredProps} tone="critical" valid={true} />)).toMatchSnapshot();
+    });
+
+    it('should render the invalid style for valid={false} where no tone is set. It should also pass the valid prop', () => {
+      expect(shallow(<TextField {...requiredProps} valid={false} />)).toMatchSnapshot();
+    });
+
+    it('should not render the invalid style if tone is set to positive', () => {
+      expect(shallow(<TextField {...requiredProps} valid={false} tone="positive" />)).toMatchSnapshot();
+    });
   });
 
   describe('clear button', () => {
