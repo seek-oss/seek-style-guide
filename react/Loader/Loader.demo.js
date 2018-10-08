@@ -19,6 +19,13 @@ export default {
             ...props,
             small: true
           })
+        },
+        {
+          label: 'Extra small',
+          transformProps: props => ({
+            ...props,
+            xsmall: true
+          })
         }
       ]
     },
