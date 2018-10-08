@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert, Card, Section } from 'seek-style-guide/react';
-import { LEVEL, TONE } from '../Section/Section';
+import { TONE } from '../private/tone';
+import { LEVEL } from '../private/level';
 import * as sketch from './Alert.sketch';
 
 const Container = ({ component: DemoComponent, componentProps }) => (

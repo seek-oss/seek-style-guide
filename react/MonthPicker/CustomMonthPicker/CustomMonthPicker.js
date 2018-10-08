@@ -8,6 +8,7 @@ import Dropdown from '../../Dropdown/Dropdown';
 
 import FieldLabel from '../../FieldLabel/FieldLabel';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
+import { TONE } from '../../private/tone';
 
 const months = [
   { value: '1', label: 'Jan' },
@@ -38,6 +39,7 @@ export default class CustomMonthPicker extends Component {
       year: PropTypes.number
     }),
     valid: PropTypes.bool,
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL]),
     minYear: PropTypes.number.isRequired,
     maxYear: PropTypes.number.isRequired,
     ascendingYears: PropTypes.bool.isRequired,
@@ -142,7 +144,7 @@ export default class CustomMonthPicker extends Component {
   }
 
   render() {
-    const { id, value, valid, fieldMessageId } = this.props;
+    const { id, value, valid, tone, fieldMessageId } = this.props;
     // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel } = this.props;
 
@@ -175,6 +177,7 @@ export default class CustomMonthPicker extends Component {
             options={months}
             className={styles.dropdown}
             valid={valid}
+            tone={tone}
             message={false}
             placeholder="Month"
             onChange={this.handleMonthChange}
@@ -192,6 +195,7 @@ export default class CustomMonthPicker extends Component {
             options={this.yearOptions}
             className={styles.dropdown}
             valid={valid}
+            tone={tone}
             message={false}
             placeholder="Year"
             onChange={this.handleYearChange}

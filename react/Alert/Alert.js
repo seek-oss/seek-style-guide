@@ -13,7 +13,8 @@ import CriticalIcon from '../CriticalIcon/CriticalIcon';
 import HelpIcon from '../HelpIcon/HelpIcon';
 import CrossIcon from '../CrossIcon/CrossIcon';
 
-import { TONE, LEVEL } from '../Section/Section';
+import { TONE } from '../private/tone';
+import { LEVEL } from '../private/level';
 
 const ICONS = {
   [TONE.POSITIVE]: TickCircleIcon,

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Section from './Section';
 import PageBlock from '../PageBlock/PageBlock';
 import Text from '../Text/Text';
-import { LEVEL, TONE } from '../Section/Section';
+import { TONE } from '../private/tone';
+import { LEVEL } from '../private/level';
 
 const SectionContainer = ({ component: DemoComponent, componentProps }) => (
   <PageBlock>
