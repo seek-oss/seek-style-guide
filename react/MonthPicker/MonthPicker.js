@@ -9,6 +9,7 @@ import CustomMonthPicker from './CustomMonthPicker/CustomMonthPicker';
 import NativeMonthPicker from './NativeMonthPicker/NativeMonthPicker';
 
 import FieldMessage from '../FieldMessage/FieldMessage';
+import { TONE } from '../private/tone';
 
 const currYear = new Date().getFullYear();
 
@@ -29,7 +30,8 @@ export default class MonthPicker extends Component {
     onFocus: PropTypes.func,
     minYear: PropTypes.number,
     maxYear: PropTypes.number,
-    ascendingYears: PropTypes.bool
+    ascendingYears: PropTypes.bool,
+    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL])
   };
 
   static defaultProps = {
@@ -53,6 +55,7 @@ export default class MonthPicker extends Component {
       onChange,
       native,
       valid,
+      tone,
       onBlur,
       onFocus,
       minYear,
@@ -69,6 +72,7 @@ export default class MonthPicker extends Component {
       onBlur,
       onFocus,
       valid,
+      tone,
       minYear,
       maxYear,
       ascendingYears,
@@ -100,7 +104,8 @@ export default class MonthPicker extends Component {
       helpProps,
       valid,
       message,
-      messageProps
+      messageProps,
+      tone
     } = this.props;
     /* eslint-enable react/prop-types */
 
@@ -108,7 +113,7 @@ export default class MonthPicker extends Component {
       <div className={classNames}>
         {this.renderInput()}
         <FieldMessage
-          {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }}
+          {...{ id: `${id}-message`, invalid, help, helpProps, message, messageProps, tone, ...(tone ? {} : { valid }) }}
         />
       </div>
     );

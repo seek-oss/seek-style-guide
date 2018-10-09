@@ -100,6 +100,156 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
 </div>
 `;
 
+exports[`Checkbox should not render the invalid style if tone is set to positive 1`] = `
+<div
+  className="Checkbox__root"
+>
+  <input
+    checked={false}
+    className="Checkbox__input"
+    id="testCheckbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="Checkbox__label"
+    htmlFor="testCheckbox"
+  >
+    <div
+      className="Checkbox__standard"
+    >
+      <div
+        className="Checkbox__checkbox"
+      >
+        <CheckMarkIcon
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+        />
+      </div>
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    tone="positive"
+  />
+</div>
+`;
+
+exports[`Checkbox should render the invalid style for tone="critical" even if the field is valid 1`] = `
+<div
+  className="Checkbox__root Checkbox__invalid"
+>
+  <input
+    checked={false}
+    className="Checkbox__input"
+    id="testCheckbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="Checkbox__label"
+    htmlFor="testCheckbox"
+  >
+    <div
+      className="Checkbox__standard"
+    >
+      <div
+        className="Checkbox__checkbox"
+      >
+        <CheckMarkIcon
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+        />
+      </div>
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    tone="critical"
+  />
+</div>
+`;
+
+exports[`Checkbox should render the invalid style for valid={false} where no tone is set. It should also pass the valid prop 1`] = `
+<div
+  className="Checkbox__root Checkbox__invalid"
+>
+  <input
+    checked={false}
+    className="Checkbox__input"
+    id="testCheckbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="Checkbox__label"
+    htmlFor="testCheckbox"
+  >
+    <div
+      className="Checkbox__standard"
+    >
+      <div
+        className="Checkbox__checkbox"
+      >
+        <CheckMarkIcon
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+        />
+        <CheckMarkIcon
+          className="Checkbox__checkMark"
+          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+        />
+      </div>
+      <span>
+        Still in role
+      </span>
+    </div>
+  </label>
+  <FieldMessage
+    id="testCheckbox-message"
+    message=""
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+    valid={false}
+  />
+</div>
+`;
+
 exports[`Checkbox should render with button style 1`] = `
 <div
   className="Checkbox__root"

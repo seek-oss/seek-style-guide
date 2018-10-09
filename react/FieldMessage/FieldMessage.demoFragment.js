@@ -1,3 +1,5 @@
+import { TONE } from '../private/tone';
+
 export default [
   {
     label: 'Message',
@@ -10,17 +12,18 @@ export default [
         })
       },
       {
-        label: 'Help text',
+        label: 'Default text',
         transformProps: props => ({
           ...props,
-          message: 'Help message'
+          tone: TONE.NEUTRAL,
+          message: 'Text input is fun!'
         })
       },
       {
         label: 'Critical message',
         transformProps: props => ({
           ...props,
-          valid: false,
+          tone: TONE.CRITICAL,
           message: 'Something went wrong'
         })
       },
@@ -28,7 +31,7 @@ export default [
         label: 'Positive message',
         transformProps: props => ({
           ...props,
-          valid: true,
+          tone: TONE.POSITIVE,
           message: 'Looking good!'
         })
       },

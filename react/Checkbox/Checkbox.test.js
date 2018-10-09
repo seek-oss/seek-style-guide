@@ -33,6 +33,18 @@ describe('Checkbox', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render the invalid style for tone="critical" even if the field is valid', () => {
+    expect(shallow(<Checkbox {...requiredProps} tone="critical" valid={true} />)).toMatchSnapshot();
+  });
+
+  it('should render the invalid style for valid={false} where no tone is set. It should also pass the valid prop', () => {
+    expect(shallow(<Checkbox {...requiredProps} valid={false} />)).toMatchSnapshot();
+  });
+
+  it('should not render the invalid style if tone is set to positive', () => {
+    expect(shallow(<Checkbox {...requiredProps} valid={false} tone="positive" />)).toMatchSnapshot();
+  });
+
   it('should render with standard checkbox style', () => {
     const wrapper = shallow(<Checkbox {...requiredProps} type="standard" />);
     expect(wrapper).toMatchSnapshot();

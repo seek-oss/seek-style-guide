@@ -1,11 +1,12 @@
+// @flow
 import styles from './TextField.less';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import ClearField from '../ClearField/ClearField';
 import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import invoke from 'lodash/invoke';
+import { TONE } from '../private/tone';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -16,7 +17,7 @@ function combineClassNames(props = {}, ...classNames) {
   };
 }
 
-const attachRefs = (...refs) => ref => {
+const attachRefs = (...refs): Object => (ref: React$ElementRef<'input'>): void => {
   refs.forEach(callRef => {
     if (typeof callRef === 'function') {
       callRef(ref);
@@ -24,55 +25,73 @@ const attachRefs = (...refs) => ref => {
   });
 };
 
-export default class TextField extends Component {
+type ComponentProps = {
+  id: string,
+  value: string,
+  onChange: Function,
+  onFocus?: Function,
+  onBlur?: Function,
+  type?: string,
+  className?: string,
+  valid?: boolean,
+  inputProps?: Object,
+  onClear?: Function
+};
+
+type FieldLabelProps = {
+  label?: string,
+  labelProps?: Object,
+  secondaryLabel?: string,
+  tertiaryLabel?: string
+};
+
+type FieldMessageProps = {
+  message?: false | Node | string,
+  invalid?: boolean,
+  help?: string,
+  helpProps?: Object,
+  tone?: 'positive' | 'critical' | 'neutral',
+  messageProps?: Object
+};
+
+type Props = ComponentProps & FieldLabelProps & FieldMessageProps;
+
+export default class TextField extends Component<Props> {
   static displayName = 'TextField';
 
-  static propTypes = {
-    id: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    onFocus: PropTypes.func,
-    onBlur: PropTypes.func,
-    type: PropTypes.string,
-    className: PropTypes.string,
-    valid: PropTypes.bool,
-    inputProps: PropTypes.object,
-    onClear: PropTypes.func
-  };
+  static defaultProps = { className: '', inputProps: {} };
 
-  static defaultProps = {
-    className: '',
-    inputProps: {}
-  };
+  container: React$ElementRef<'div'>;
+  input: React$ElementRef<'input'>;
 
-  constructor() {
-    super();
-
-    this.storeInputReference = this.storeInputReference.bind(this);
-    this.renderInput = this.renderInput.bind(this);
-    this.handleMouseDownOnClear = this.handleMouseDownOnClear.bind(this);
-  }
-
-  storeContainerReference = textField => {
-    if (textField !== null) {
+  storeContainerReference = (textField: ?React$ElementRef<'div'>): void => {
+    if (textField && textField !== null) {
       this.container = textField;
     }
-  }
+  };
 
-  storeInputReference(input) {
+  storeInputReference = (input: React$ElementRef<'input'>): void => {
     if (input !== null) {
       this.input = input;
     }
-  }
+  };
 
-  handleMouseDownOnClear(event) {
+  handleMouseDownOnClear = (event: Event): void => {
     event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
     invoke(this.props, 'onClear', event);
     this.input.focus();
-  }
+  };
 
-  renderInput() {
-    const { id, value, onChange, onFocus, onBlur, type, inputProps = {} } = this.props;
+  renderInput = () => {
+    const {
+      id,
+      value,
+      onChange,
+      onFocus,
+      onBlur,
+      type,
+      inputProps = {}
+    } = this.props;
     const { ref } = inputProps;
     const allInputProps = {
       id,
@@ -86,10 +105,8 @@ export default class TextField extends Component {
       'aria-describedby': `${id}-message`
     };
 
-    return (
-      <input {...allInputProps} />
-    );
-  }
+    return <input {...allInputProps} />;
+  };
 
   renderClear() {
     return (
@@ -102,26 +119,38 @@ export default class TextField extends Component {
   }
 
   render() {
-    const { id, value, className, valid, onClear, inputProps = {} } = this.props;
+    const { id, value, className, tone, onClear, inputProps = {}, valid } = this.props;
     const resolvedValue = value || inputProps.value || '';
     const hasValue = resolvedValue.length > 0;
     const canClear = hasValue && (typeof onClear === 'function');
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: valid === false,
+      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [styles.canClear]: canClear,
-      [className]: className
+      ...(className ? { [className]: className } : {})
     });
 
-    // eslint-disable-next-line react/prop-types
     const { label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
 
     return (
       <div ref={this.storeContainerReference} className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
+        <FieldLabel
+          {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }}
+        />
         {this.renderInput()}
         {this.renderClear()}
-        <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, valid, message, messageProps }} />
+        <FieldMessage
+          {...{
+            id: `${id}-message`,
+            invalid,
+            help,
+            helpProps,
+            tone,
+            ...(tone ? {} : { valid }),
+            message,
+            messageProps
+          }}
+        />
       </div>
     );
   }

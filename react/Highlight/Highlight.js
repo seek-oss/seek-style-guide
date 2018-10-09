@@ -2,19 +2,17 @@
 import styles from './Highlight.less';
 import React from 'react';
 import classnames from 'classnames';
-import { TONE } from '../Section/Section';
-
-export const NEUTRAL = 'neutral';
+import { TONE } from '../private/tone';
 
 type Props = {
   children: React$Node,
   secondary?: boolean,
   className?: string,
-  tone: TONE.CRITICAL | typeof NEUTRAL
+  tone: typeof TONE.CRITICAL | typeof TONE.NEUTRAL
 };
 
 export default function Highlight(props: Props) {
-  const { children, secondary, tone = NEUTRAL, className, ...restProps } = props;
+  const { children, secondary, tone = TONE.NEUTRAL, className, ...restProps } = props;
 
   return (
     <mark
