@@ -1,0 +1,73 @@
+@import (reference) '~seek-style-guide/theme';
+
+@height: @row-height * @small-type-row-span;
+
+.__strong(@color) {
+  background-color: @color;
+  color: @sk-white;
+}
+
+.root {
+  .rawText(1.2);
+  font-weight: @sk-medium;
+  height: @height;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0 10px;
+
+  background-color: fade(@sk-black, 10%);
+  color: @sk-black;
+
+  &.strong {
+    .__strong(@sk-black);
+  }
+}
+
+.info {
+  background-color: fade(@sk-info, 10%);
+  color: @sk-info-dark;
+  &.strong {
+    .__strong(@sk-info);
+  }
+}
+
+.accent {
+  background-color: fade(@sk-focus, 10%);
+  color: @sk-focus;
+  &.strong {
+    .__strong(@sk-focus);
+  }
+}
+
+.critical {
+  background-color: fade(@sk-pink, 10%);
+  color: @sk-critical-dark;
+  &.strong {
+    .__strong(@sk-pink);
+  }
+}
+
+.secondary {
+  background-color: fade(@sk-mid-gray-dark, 10%);
+  color: @sk-charcoal;
+  &.strong {
+    .__strong(@sk-mid-gray-dark);
+  }
+}
+
+.neutral {
+  background-color: fade(@sk-black, 10%);
+  color: @sk-black;
+  &.strong {
+    .__strong(@sk-black);
+  }
+}
+
+.positive {
+  background-color: fade(@sk-positive, 10%);
+  color: @sk-positive-dark;
+  &.strong {
+    .__strong(@sk-positive);
+  }
+}
