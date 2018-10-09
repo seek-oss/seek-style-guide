@@ -2,7 +2,7 @@
 
 @height: @row-height * @small-type-row-span;
 
-.__primary(@color) {
+.__strong(@color) {
   background-color: @color;
   color: @sk-white;
 }
@@ -19,55 +19,55 @@
   background-color: fade(@sk-black, 10%);
   color: @sk-black;
 
-  &.primary {
-    .__primary(@sk-black);
+  &.strong {
+    .__strong(@sk-black);
   }
 }
 
 .info {
   background-color: fade(@sk-info, 10%);
   color: @sk-info-dark;
-  &.primary {
-    .__primary(@sk-info);
+  &.strong {
+    .__strong(@sk-info);
   }
 }
 
 .accent {
   background-color: fade(@sk-focus, 10%);
   color: @sk-focus;
-  &.primary {
-    .__primary(@sk-focus);
+  &.strong {
+    .__strong(@sk-focus);
   }
 }
 
 .critical {
   background-color: fade(@sk-pink, 10%);
-  color: @sk-pink;
-  &.primary {
-    .__primary(@sk-pink);
+  color: @sk-critical-dark;
+  &.strong {
+    .__strong(@sk-pink);
   }
 }
 
 .secondary {
   background-color: fade(@sk-mid-gray-dark, 10%);
   color: @sk-charcoal;
-  &.primary {
-    .__primary(@sk-mid-gray-dark);
+  &.strong {
+    .__strong(@sk-mid-gray-dark);
   }
 }
 
 .neutral {
   background-color: fade(@sk-black, 10%);
   color: @sk-black;
-  &.primary {
-    .__primary(@sk-black);
+  &.strong {
+    .__strong(@sk-black);
   }
 }
 
 .positive {
   background-color: fade(@sk-positive, 10%);
   color: @sk-positive-dark;
-  &.primary {
-    .__primary(@sk-positive);
+  &.strong {
+    .__strong(@sk-positive);
   }
 }

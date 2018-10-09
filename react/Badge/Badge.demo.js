@@ -67,10 +67,10 @@ export default {
       type: 'checkbox',
       states: [
         {
-          label: 'Primary',
+          label: 'Strong',
           transformProps: props => ({
             ...props,
-            primary: true
+            strong: true
           })
         }
       ]
