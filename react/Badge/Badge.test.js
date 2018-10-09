@@ -36,7 +36,7 @@ test('should render secondary Badge', () => {
   expect(badge).toMatchSnapshot();
 });
 
-test('should render primary accent Badge', () => {
-  const badge = renderBadge({ tone: 'secondary', primary: true });
+test('should render a strong positive Badge', () => {
+  const badge = renderBadge({ tone: 'secondary', strong: true });
   expect(badge).toMatchSnapshot();
 });

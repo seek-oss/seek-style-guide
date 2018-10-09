@@ -8,6 +8,16 @@ exports[`should render Badge 1`] = `
 </div>
 `;
 
+exports[`should render a strong positive Badge 1`] = `
+<div
+  className="Badge__root Badge__secondary Badge__strong"
+  strong={true}
+  tone="secondary"
+>
+  2 new
+</div>
+`;
+
 exports[`should render accent Badge 1`] = `
 <div
   className="Badge__root Badge__accent"
@@ -39,16 +49,6 @@ exports[`should render neutral Badge 1`] = `
 <div
   className="Badge__root Badge__neutral"
   tone="neutral"
->
-  2 new
-</div>
-`;
-
-exports[`should render primary accent Badge 1`] = `
-<div
-  className="Badge__root Badge__secondary Badge__primary"
-  primary={true}
-  tone="secondary"
 >
   2 new
 </div>
