@@ -76,25 +76,33 @@
   }
 }
 
-.icon.jobSearch { color: @sk-blue-lighter; }
+.icon.jobSearch { color: @sk-teal; }
 .icon.profile { color: @sk-purple; }
 .icon.saveJobs { color: @sk-pink; }
-.icon.saveSearches { color: @sk-blue-lighter; }
+
+.icon.saveSearches {
+  color: @sk-blue-lighter;
+  @media @mobile {
+    color: @sk-teal;
+  }
+}
+
 .icon.recommendedJobs { color: @sk-green-light; }
+
+.crSvg {
+  width: 14px;
+  height: 14px;
+  margin-bottom: -1px;
+  stroke: @sk-orange;
+}
 
 .iconSpacer {
   margin-left: (@gutter-width / 2);
   width: @gutter-width;
-  @media @desktop {
-    display: none;
-  }
 }
 
 .newBadge {
   margin-right: 5px;
-  @media @desktop {
-    display: none;
-  }
 }
 
 .iconSvg {
