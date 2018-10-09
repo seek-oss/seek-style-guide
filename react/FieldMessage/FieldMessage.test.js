@@ -108,5 +108,44 @@ describe('FieldMessage', () => {
         expect(message.props.secondary).to.equal(true);
       });
     });
+
+    describe('tone and valid props', () => {
+      it('will use the tone prop over the valid prop for tone="critical"', () => {
+        render(<FieldMessage valid={true} tone="critical" message="Something went right" messageProps={{ className: 'TEST_MESSAGE_CLASS' }} />);
+        expect(messageIcon).not.to.equal(null);
+        expect(message.props.positive).not.to.equal(true);
+        expect(message.props.secondary).not.to.equal(true);
+        expect(message.props.critical).to.equal(true);
+      });
+
+      it('will use the tone prop over the valid prop for tone="positive"', () => {
+        render(<FieldMessage valid={false} tone="positive" message="Something went right" messageProps={{ className: 'TEST_MESSAGE_CLASS' }} />);
+        expect(messageIcon).not.to.equal(null);
+        expect(message.props.critical).not.to.equal(true);
+        expect(message.props.secondary).not.to.equal(true);
+        expect(message.props.positive).to.equal(true);
+      });
+
+      it('will use the tone prop over the valid prop for tone="positive"', () => {
+        render(<FieldMessage valid={false} tone="neutral" message="Something went right" messageProps={{ className: 'TEST_MESSAGE_CLASS' }} />);
+        expect(messageIcon).to.equal(null);
+        expect(message.props.critical).not.to.equal(true);
+        expect(message.props.positive).not.to.equal(true);
+        expect(message.props.secondary).to.equal(true);
+      });
+    });
+
+    describe('warning message', () => {
+      it('will log an error when valid is passed without a tone prop', () => {
+        render(<FieldMessage valid={false} message="Something went right" />);
+        expect(errors.length).to.equal(1);
+        expect(errors[0]).to.equal('Warning: "valid" has been deprecated as a method to display positive / critical text. Use "tone" instead');
+      });
+
+      it('will not log an error when there is a tone prop', () => {
+        render(<FieldMessage valid={false} tone="positive" message="Something went right" />);
+        expect(errors.length).to.equal(0);
+      });
+    });
   });
 });

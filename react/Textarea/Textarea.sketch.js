@@ -24,12 +24,12 @@ export const symbols = {
   ),
   'Textarea/With Critical Text': (
     <SketchFieldContainer>
-      <Textarea {...commonProps} id="textarea3" message="Critical text" valid={false} countFeedback={() => ({ count: -20 })} />
+      <Textarea {...commonProps} id="textarea3" message="Critical text" tone="critical" countFeedback={() => ({ count: -20 })} />
     </SketchFieldContainer>
   ),
   'Textarea/With Positive Text': (
     <SketchFieldContainer>
-      <Textarea {...commonProps} id="textarea4" message="Positive text" valid={true} />
+      <Textarea {...commonProps} id="textarea4" message="Positive text" tone="positive" />
     </SketchFieldContainer>
   )
 };

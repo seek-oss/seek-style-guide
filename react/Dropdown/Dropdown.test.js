@@ -161,10 +161,24 @@ describe('Dropdown', () => {
     });
   });
 
-  describe('valid', () => {
-    describe('set to false', () => {
-      it('Dropdown should have the invalid className', () => {
-        render(<Dropdown id="testDropdown" value="" valid={false} />);
+  describe('valid and tone', () => {
+    describe('if valid is set to false', () => {
+      it('should have the invalid className', () => {
+        render(<Dropdown id="testDropdown" valid={false} />);
+        expect(dropdown.props.className).to.contain('invalid');
+      });
+    });
+
+    describe('if valid is set to false but a tone is provided', () => {
+      it('should not render the invalid style if tone is set to positive', () => {
+        render(<Dropdown id="testDropdown" valid={false} tone="positive" />);
+        expect(dropdown.props.className).to.not.contain('invalid');
+      });
+    });
+
+    describe('if valid is set to true but a critical tone is set', () => {
+      it('should render the invalid style for tone="critical" even if the field is valid', () => {
+        render(<Dropdown id="testDropdown" tone="critical" valid="true" />);
         expect(dropdown.props.className).to.contain('invalid');
       });
     });

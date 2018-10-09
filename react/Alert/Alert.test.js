@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Alert from './Alert';
-import { TONE, LEVEL } from '../Section/Section';
+import { TONE } from '../private/tone';
+import { LEVEL } from '../private/level';
 
 const renderAlert = props => shallow(
   <Alert

@@ -223,9 +223,6 @@ exports[`Header: should append returnUrl to signin and register links if present
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -255,9 +252,11 @@ exports[`Header: should append returnUrl to signin and register links if present
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -269,9 +268,6 @@ exports[`Header: should append returnUrl to signin and register links if present
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -281,7 +277,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-                        class="Loader__root Loader___small"
+                        class="Loader__root Loader__inline Loader__xsmall"
                       >
                         <div
                           class="Loader__ball"
@@ -293,8 +289,8 @@ exports[`Header: should append returnUrl to signin and register links if present
                           class="Loader__ball"
                         />
                       </div>
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </span>
                   </li>
@@ -771,9 +767,6 @@ exports[`Header: should render first part of email address when username isn't p
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -803,9 +796,11 @@ exports[`Header: should render first part of email address when username isn't p
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -817,9 +812,6 @@ exports[`Header: should render first part of email address when username isn't p
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -831,8 +823,8 @@ exports[`Header: should render first part of email address when username isn't p
                       href="/Login/Logout"
                     >
                       Sign Out
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </a>
                   </li>
@@ -873,9 +865,6 @@ exports[`Header: should render first part of email address when username isn't p
                       href="/Login/Logout"
                     >
                       Sign Out
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                 </ul>
@@ -1319,9 +1308,6 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -1351,9 +1337,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -1365,9 +1353,6 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -1377,7 +1362,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-                        class="Loader__root Loader___small"
+                        class="Loader__root Loader__inline Loader__xsmall"
                       >
                         <div
                           class="Loader__ball"
@@ -1389,8 +1374,8 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                           class="Loader__ball"
                         />
                       </div>
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </span>
                   </li>
@@ -1867,9 +1852,6 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -1899,9 +1881,11 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -1913,9 +1897,6 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -1927,8 +1908,8 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
                     >
                       Sign Out
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </a>
                   </li>
@@ -1969,9 +1950,6 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
                     >
                       Sign Out
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                 </ul>
@@ -2415,9 +2393,6 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="/my-activity/applied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -2447,9 +2422,11 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -2461,9 +2438,6 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -2475,8 +2449,8 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="/Login/Logout"
                     >
                       Sign Out
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </a>
                   </li>
@@ -2517,9 +2491,6 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="/Login/Logout"
                     >
                       Sign Out
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                 </ul>
@@ -2963,9 +2934,6 @@ exports[`Header: should render when authentication is pending 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -2995,9 +2963,11 @@ exports[`Header: should render when authentication is pending 1`] = `
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -3009,9 +2979,6 @@ exports[`Header: should render when authentication is pending 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -3021,7 +2988,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-                        class="Loader__root Loader___small"
+                        class="Loader__root Loader__inline Loader__xsmall"
                       >
                         <div
                           class="Loader__ball"
@@ -3033,8 +3000,8 @@ exports[`Header: should render when authentication is pending 1`] = `
                           class="Loader__ball"
                         />
                       </div>
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </span>
                   </li>
@@ -3509,9 +3476,6 @@ exports[`Header: should render when unauthenticated 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -3541,9 +3505,11 @@ exports[`Header: should render when unauthenticated 1`] = `
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -3555,9 +3521,6 @@ exports[`Header: should render when unauthenticated 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -4029,9 +3992,6 @@ exports[`Header: should render with a custom logo 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -4061,9 +4021,11 @@ exports[`Header: should render with a custom logo 1`] = `
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -4075,9 +4037,6 @@ exports[`Header: should render with a custom logo 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -4087,7 +4046,7 @@ exports[`Header: should render with a custom logo 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-                        class="Loader__root Loader___small"
+                        class="Loader__root Loader__inline Loader__xsmall"
                       >
                         <div
                           class="Loader__ball"
@@ -4099,8 +4058,8 @@ exports[`Header: should render with a custom logo 1`] = `
                           class="Loader__ball"
                         />
                       </div>
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </span>
                   </li>
@@ -4573,9 +4532,6 @@ exports[`Header: should render with locale of AU 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -4605,9 +4561,11 @@ exports[`Header: should render with locale of AU 1`] = `
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -4619,9 +4577,6 @@ exports[`Header: should render with locale of AU 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -4631,7 +4586,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-                        class="Loader__root Loader___small"
+                        class="Loader__root Loader__inline Loader__xsmall"
                       >
                         <div
                           class="Loader__ball"
@@ -4643,8 +4598,8 @@ exports[`Header: should render with locale of AU 1`] = `
                           class="Loader__ball"
                         />
                       </div>
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </span>
                   </li>
@@ -5117,9 +5072,6 @@ exports[`Header: should render with locale of NZ 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -5149,9 +5101,6 @@ exports[`Header: should render with locale of NZ 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -5161,7 +5110,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-                        class="Loader__root Loader___small"
+                        class="Loader__root Loader__inline Loader__xsmall"
                       >
                         <div
                           class="Loader__ball"
@@ -5173,8 +5122,8 @@ exports[`Header: should render with locale of NZ 1`] = `
                           class="Loader__ball"
                         />
                       </div>
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </span>
                   </li>
@@ -5610,9 +5559,6 @@ exports[`Header: should render with no divider 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
                       Applied Jobs
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -5642,9 +5588,11 @@ exports[`Header: should render with no divider 1`] = `
                       href="/companies/"
                     >
                       Company Reviews
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
+                      <span
+                        class="Icon__root UserAccountMenu__icon"
+                      >
+                        mock svg
+                      </span>
                     </a>
                   </li>
                   <li
@@ -5656,9 +5604,6 @@ exports[`Header: should render with no divider 1`] = `
                       href="/settings/"
                     >
                       Settings
-                      <div
-                        class="UserAccountMenu__iconSpacer"
-                      />
                     </a>
                   </li>
                   <li
@@ -5668,7 +5613,7 @@ exports[`Header: should render with no divider 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-                        class="Loader__root Loader___small"
+                        class="Loader__root Loader__inline Loader__xsmall"
                       >
                         <div
                           class="Loader__ball"
@@ -5680,8 +5625,8 @@ exports[`Header: should render with no divider 1`] = `
                           class="Loader__ball"
                         />
                       </div>
-                      <div
-                        class="UserAccountMenu__iconSpacer"
+                      <span
+                        class="UserAccountMenu__iconSpacer Hidden__desktop"
                       />
                     </span>
                   </li>
