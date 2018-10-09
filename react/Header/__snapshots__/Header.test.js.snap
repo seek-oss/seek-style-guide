@@ -287,11 +287,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-<<<<<<< HEAD
-                        class="Loader__root"
-=======
                         class="Loader__root Loader__inline Loader__xsmall"
->>>>>>> af2a5bde1bfdbae8118128ad4679cdefeb8c3b96
                       >
                         <div
                           class="Loader__ball"
@@ -1468,11 +1464,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-<<<<<<< HEAD
-                        class="Loader__root"
-=======
                         class="Loader__root Loader__inline Loader__xsmall"
->>>>>>> af2a5bde1bfdbae8118128ad4679cdefeb8c3b96
                       >
                         <div
                           class="Loader__ball"
@@ -3236,11 +3228,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-<<<<<<< HEAD
-                        class="Loader__root"
-=======
                         class="Loader__root Loader__inline Loader__xsmall"
->>>>>>> af2a5bde1bfdbae8118128ad4679cdefeb8c3b96
                       >
                         <div
                           class="Loader__ball"
@@ -4390,11 +4378,7 @@ exports[`Header: should render with a custom logo 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-<<<<<<< HEAD
-                        class="Loader__root"
-=======
                         class="Loader__root Loader__inline Loader__xsmall"
->>>>>>> af2a5bde1bfdbae8118128ad4679cdefeb8c3b96
                       >
                         <div
                           class="Loader__ball"
@@ -4980,11 +4964,7 @@ exports[`Header: should render with locale of AU 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-<<<<<<< HEAD
-                        class="Loader__root"
-=======
                         class="Loader__root Loader__inline Loader__xsmall"
->>>>>>> af2a5bde1bfdbae8118128ad4679cdefeb8c3b96
                       >
                         <div
                           class="Loader__ball"
@@ -5554,11 +5534,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-<<<<<<< HEAD
-                        class="Loader__root"
-=======
                         class="Loader__root Loader__inline Loader__xsmall"
->>>>>>> af2a5bde1bfdbae8118128ad4679cdefeb8c3b96
                       >
                         <div
                           class="Loader__ball"
@@ -6107,11 +6083,7 @@ exports[`Header: should render with no divider 1`] = `
                       class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                     >
                       <div
-<<<<<<< HEAD
-                        class="Loader__root"
-=======
                         class="Loader__root Loader__inline Loader__xsmall"
->>>>>>> af2a5bde1bfdbae8118128ad4679cdefeb8c3b96
                       >
                         <div
                           class="Loader__ball"
