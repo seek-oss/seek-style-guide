@@ -41,6 +41,7 @@ export { default as PageBlock } from './PageBlock/PageBlock';
 export { default as Section } from './Section/Section';
 
 // Icons
+export { default as BuildingIcon } from './BuildingIcon/BuildingIcon';
 export { default as CheckMarkIcon } from './CheckMarkIcon/CheckMarkIcon';
 export { default as ChevronIcon } from './ChevronIcon/ChevronIcon';
 export { default as ClearIcon } from './ClearIcon/ClearIcon';
