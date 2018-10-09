@@ -4,69 +4,73 @@ export default {
   route: '/badge',
   title: 'Badge',
   component: Badge,
-
   initialProps: {
-    children: '13 new',
-    info: true
+    children: '13 new'
   },
   options: [
     {
-      label: 'Text',
+      label: 'Tone',
       type: 'radio',
       states: [
+        {
+          label: '',
+          transformProps: props => ({
+            ...props
+          })
+        },
         {
           label: 'Accent',
           transformProps: props => ({
             ...props,
-            accent: true
+            tone: 'accent'
           })
         },
         {
           label: 'Critical',
           transformProps: props => ({
             ...props,
-            critical: true
+            tone: 'critical'
           })
         },
         {
           label: 'Info',
           transformProps: props => ({
             ...props,
-            info: true
+            tone: 'info'
           })
         },
         {
           label: 'Positive',
           transformProps: props => ({
             ...props,
-            positive: true
+            tone: 'positive'
           })
         },
         {
           label: 'Neutral',
           transformProps: props => ({
             ...props,
-            neutral: true
+            tone: 'neutral'
           })
         },
         {
           label: 'Secondary',
           transformProps: props => ({
             ...props,
-            secondary: true
+            tone: 'secondary'
           })
         }
       ]
     },
     {
-      label: 'States',
+      label: 'Levels',
       type: 'checkbox',
       states: [
         {
-          label: 'Strong',
+          label: 'Primary',
           transformProps: props => ({
             ...props,
-            strong: true
+            primary: true
           })
         }
       ]

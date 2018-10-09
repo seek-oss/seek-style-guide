@@ -7,3 +7,58 @@ exports[`should render Badge 1`] = `
   2 new
 </div>
 `;
+
+exports[`should render accent Badge 1`] = `
+<div
+  className="Badge__root Badge__accent"
+  tone="accent"
+>
+  2 new
+</div>
+`;
+
+exports[`should render critical Badge 1`] = `
+<div
+  className="Badge__root Badge__critical"
+  tone="critical"
+>
+  2 new
+</div>
+`;
+
+exports[`should render info Badge 1`] = `
+<div
+  className="Badge__root Badge__info"
+  tone="info"
+>
+  2 new
+</div>
+`;
+
+exports[`should render neutral Badge 1`] = `
+<div
+  className="Badge__root Badge__neutral"
+  tone="neutral"
+>
+  2 new
+</div>
+`;
+
+exports[`should render primary accent Badge 1`] = `
+<div
+  className="Badge__root Badge__secondary Badge__primary"
+  primary={true}
+  tone="secondary"
+>
+  2 new
+</div>
+`;
+
+exports[`should render secondary Badge 1`] = `
+<div
+  className="Badge__root Badge__secondary"
+  tone="secondary"
+>
+  2 new
+</div>
+`;
