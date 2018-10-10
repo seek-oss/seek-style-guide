@@ -104,14 +104,10 @@ export default class FieldMessage extends Component<Props> {
   }
 
   render() {
-    const { invalid, help, helpProps, message, valid, tone } = this.props;
+    const { invalid, help, helpProps, message } = this.props;
 
     if (invalid || help || helpProps) {
       throw new Error('WARNING: "invalid", "help", and "helpProps" have been deprecated in favour of "valid" and "message" props');
-    }
-
-    if (typeof valid !== 'undefined' && typeof tone === 'undefined') {
-      console.error('Warning: "valid" has been deprecated as a method to display positive / critical text. Use "tone" instead');
     }
 
     const classNames = classnames({

@@ -1,5 +1,4 @@
 import chai, { expect } from 'chai';
-import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import React from 'react';
 import { createRenderer } from 'react-test-renderer/shallow';
@@ -11,19 +10,7 @@ chai.use(sinonChai);
 const renderer = createRenderer();
 
 describe('FieldMessage', () => {
-  let element, fieldMessage, message, messageIcon, errors;
-
-  beforeEach(() => {
-    errors = [];
-
-    sinon.stub(console, 'error').callsFake(errorMessage => {
-      errors.push(errorMessage);
-    });
-  });
-
-  afterEach(() => {
-    console.error.restore();
-  });
+  let element, fieldMessage, message, messageIcon;
 
   function render(jsx) {
     element = jsx;
@@ -132,19 +119,6 @@ describe('FieldMessage', () => {
         expect(message.props.critical).not.to.equal(true);
         expect(message.props.positive).not.to.equal(true);
         expect(message.props.secondary).to.equal(true);
-      });
-    });
-
-    describe('warning message', () => {
-      it('will log an error when valid is passed without a tone prop', () => {
-        render(<FieldMessage valid={false} message="Something went right" />);
-        expect(errors.length).to.equal(1);
-        expect(errors[0]).to.equal('Warning: "valid" has been deprecated as a method to display positive / critical text. Use "tone" instead');
-      });
-
-      it('will not log an error when there is a tone prop', () => {
-        render(<FieldMessage valid={false} tone="positive" message="Something went right" />);
-        expect(errors.length).to.equal(0);
       });
     });
   });
