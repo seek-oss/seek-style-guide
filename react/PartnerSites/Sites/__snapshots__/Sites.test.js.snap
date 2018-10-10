@@ -2,18 +2,9 @@
 
 exports[`Sites: active product states: should render with businesses link as active 1`] = `
 <nav
-  aria-labelledby="Sites"
+  aria-label="SEEK sites"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Sites"
-    >
-      SEEK Sites
-    </h1>
-  </span>
   <ul
     class="Sites__list"
   >
@@ -63,18 +54,9 @@ exports[`Sites: active product states: should render with businesses link as act
 
 exports[`Sites: active product states: should render with courses link as active 1`] = `
 <nav
-  aria-labelledby="Sites"
+  aria-label="SEEK sites"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Sites"
-    >
-      SEEK Sites
-    </h1>
-  </span>
   <ul
     class="Sites__list"
   >
@@ -124,18 +106,9 @@ exports[`Sites: active product states: should render with courses link as active
 
 exports[`Sites: active product states: should render with jobs link as active 1`] = `
 <nav
-  aria-labelledby="Sites"
+  aria-label="SEEK sites"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Sites"
-    >
-      SEEK Sites
-    </h1>
-  </span>
   <ul
     class="Sites__list"
   >
@@ -185,18 +158,9 @@ exports[`Sites: active product states: should render with jobs link as active 1`
 
 exports[`Sites: active product states: should render with no link as active by default 1`] = `
 <nav
-  aria-labelledby="Sites"
+  aria-label="SEEK sites"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Sites"
-    >
-      SEEK Sites
-    </h1>
-  </span>
   <ul
     class="Sites__list"
   >
@@ -246,18 +210,9 @@ exports[`Sites: active product states: should render with no link as active by d
 
 exports[`Sites: active product states: should render with volunteering link as active 1`] = `
 <nav
-  aria-labelledby="Sites"
+  aria-label="SEEK sites"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Sites"
-    >
-      SEEK Sites
-    </h1>
-  </span>
   <ul
     class="Sites__list"
   >
@@ -307,18 +262,9 @@ exports[`Sites: active product states: should render with volunteering link as a
 
 exports[`Sites: locale states: should render with locale of AU 1`] = `
 <nav
-  aria-labelledby="Sites"
+  aria-label="SEEK sites"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Sites"
-    >
-      SEEK Sites
-    </h1>
-  </span>
   <ul
     class="Sites__list"
   >
@@ -368,18 +314,9 @@ exports[`Sites: locale states: should render with locale of AU 1`] = `
 
 exports[`Sites: locale states: should render with locale of NZ 1`] = `
 <nav
-  aria-labelledby="Sites"
+  aria-label="SEEK sites"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Sites"
-    >
-      SEEK Sites
-    </h1>
-  </span>
   <ul
     class="Sites__list"
   >

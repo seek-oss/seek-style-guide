@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import NewBadge from '../NewBadge/NewBadge';
 
 const items = [
@@ -43,16 +42,12 @@ const items = [
 export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTab, divider }) {
   return (
     <nav
-      aria-labelledby="MainNavigation"
+      aria-label="Primary navigation"
       role="navigation"
       className={classnames({
         [styles.root]: true,
         [styles.divider]: divider
       })}>
-
-      <ScreenReaderOnly>
-        <h1 id="MainNavigation">Primary Links</h1>
-      </ScreenReaderOnly>
 
       <ul className={styles.list} data-automation="nav-tabs">
         {

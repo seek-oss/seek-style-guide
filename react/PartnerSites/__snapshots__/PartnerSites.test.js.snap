@@ -11,18 +11,9 @@ exports[`Header: should render with locale of AU 1`] = `
       class="PartnerSites__content"
     >
       <nav
-        aria-labelledby="Sites"
+        aria-label="SEEK sites"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="Sites"
-          >
-            SEEK Sites
-          </h1>
-        </span>
         <ul
           class="Sites__list"
         >
@@ -72,18 +63,9 @@ exports[`Header: should render with locale of AU 1`] = `
         class="PartnerSites__locale"
       >
         <nav
-          aria-labelledby="Locales"
+          aria-label="country"
           role="navigation"
         >
-          <span
-            class="ScreenReaderOnly__root"
-          >
-            <h1
-              id="Locales"
-            >
-              Select your country
-            </h1>
-          </span>
           <ul
             class="Locales__list"
           >
@@ -123,18 +105,9 @@ exports[`Header: should render with locale of NZ 1`] = `
       class="PartnerSites__content"
     >
       <nav
-        aria-labelledby="Sites"
+        aria-label="SEEK sites"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="Sites"
-          >
-            SEEK Sites
-          </h1>
-        </span>
         <ul
           class="Sites__list"
         >
@@ -184,18 +157,9 @@ exports[`Header: should render with locale of NZ 1`] = `
         class="PartnerSites__locale"
       >
         <nav
-          aria-labelledby="Locales"
+          aria-label="country"
           role="navigation"
         >
-          <span
-            class="ScreenReaderOnly__root"
-          >
-            <h1
-              id="Locales"
-            >
-              Select your country
-            </h1>
-          </span>
           <ul
             class="Locales__list Locales__list_isNZ"
           >
@@ -235,18 +199,9 @@ exports[`Header: should render with overridden AU Locale link 1`] = `
       class="PartnerSites__content"
     >
       <nav
-        aria-labelledby="Sites"
+        aria-label="SEEK sites"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="Sites"
-          >
-            SEEK Sites
-          </h1>
-        </span>
         <ul
           class="Sites__list"
         >
@@ -296,18 +251,9 @@ exports[`Header: should render with overridden AU Locale link 1`] = `
         class="PartnerSites__locale"
       >
         <nav
-          aria-labelledby="Locales"
+          aria-label="country"
           role="navigation"
         >
-          <span
-            class="ScreenReaderOnly__root"
-          >
-            <h1
-              id="Locales"
-            >
-              Select your country
-            </h1>
-          </span>
           <ul
             class="Locales__list Locales__list_isNZ"
           >
@@ -347,18 +293,9 @@ exports[`Header: should render with overridden NZ Locale link 1`] = `
       class="PartnerSites__content"
     >
       <nav
-        aria-labelledby="Sites"
+        aria-label="SEEK sites"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="Sites"
-          >
-            SEEK Sites
-          </h1>
-        </span>
         <ul
           class="Sites__list"
         >
@@ -408,18 +345,9 @@ exports[`Header: should render with overridden NZ Locale link 1`] = `
         class="PartnerSites__locale"
       >
         <nav
-          aria-labelledby="Locales"
+          aria-label="country"
           role="navigation"
         >
-          <span
-            class="ScreenReaderOnly__root"
-          >
-            <h1
-              id="Locales"
-            >
-              Select your country
-            </h1>
-          </span>
           <ul
             class="Locales__list"
           >

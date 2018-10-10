@@ -2,18 +2,9 @@
 
 exports[`Locales: should render with locale of AU first and active 1`] = `
 <nav
-  aria-labelledby="Locales"
+  aria-label="country"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Locales"
-    >
-      Select your country
-    </h1>
-  </span>
   <ul
     class="Locales__list"
   >
@@ -40,18 +31,9 @@ exports[`Locales: should render with locale of AU first and active 1`] = `
 
 exports[`Locales: should render with locale of NZ first and active 1`] = `
 <nav
-  aria-labelledby="Locales"
+  aria-label="country"
   role="navigation"
 >
-  <span
-    class="ScreenReaderOnly__root"
-  >
-    <h1
-      id="Locales"
-    >
-      Select your country
-    </h1>
-  </span>
   <ul
     class="Locales__list Locales__list_isNZ"
   >

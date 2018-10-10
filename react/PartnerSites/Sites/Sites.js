@@ -3,8 +3,6 @@ import styles from './Sites.less';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
-
 const linksObject = {
   AU: {
     jobsUrl: 'https://www.seek.com.au',
@@ -38,12 +36,7 @@ export default function Sites({ locale, linkRenderer, activeSite }) {
   const isVolunteeringActive = activeSite === 'Volunteering';
 
   return (
-    <nav role="navigation" aria-labelledby="Sites">
-
-      <ScreenReaderOnly>
-        <h1 id="Sites">SEEK Sites</h1>
-      </ScreenReaderOnly>
-
+    <nav aria-label="SEEK sites" role="navigation">
       <ul className={styles.list}>
         <li>
           {isJobsActive ?

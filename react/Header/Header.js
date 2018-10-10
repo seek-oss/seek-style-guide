@@ -65,11 +65,11 @@ export default function Header({
   const displayName = userName || userEmail.split('@')[0];
 
   return (
-    <header className={styles.root} role="banner" aria-label="Primary navigation">
+    <header className={styles.root} role="banner">
       <StructuredDataSchema locale={locale} />
-      <section className={styles.content}>
+      <div className={styles.content}>
         <div className={styles.banner}>
-          <h1 data-automation="logo" className={styles.logo}>
+          <div data-automation="logo" className={styles.logo}>
             <LogoComponent locale={locale} svgClassName={styles.logoSvg} />
             {
               linkRenderer({
@@ -79,7 +79,7 @@ export default function Header({
                 children: <ScreenReaderOnly>SEEK</ScreenReaderOnly>
               })
             }
-          </h1>
+          </div>
           <Hidden screen className={styles.logoNote}>Australia’s #1 job site</Hidden>
           <Hidden print className={styles.userWrapper}>
             <div className={userClasses}>
@@ -124,7 +124,7 @@ export default function Header({
         <div className={styles.topBanner}>
           <PartnerSites locale={locale} linkRenderer={linkRenderer} activeSite='Jobs' />
         </div>
-      </section>
+      </div>
     </header>
   );
 }

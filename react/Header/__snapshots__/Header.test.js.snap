@@ -2,17 +2,16 @@
 
 exports[`Header: should append returnUrl to signin and register links if present 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -62,7 +61,7 @@ exports[`Header: should append returnUrl to signin and register links if present
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -78,20 +77,11 @@ exports[`Header: should append returnUrl to signin and register links if present
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -340,19 +330,10 @@ exports[`Header: should append returnUrl to signin and register links if present
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -395,19 +376,10 @@ exports[`Header: should append returnUrl to signin and register links if present
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -484,18 +456,9 @@ exports[`Header: should append returnUrl to signin and register links if present
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -543,18 +506,9 @@ exports[`Header: should append returnUrl to signin and register links if present
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -582,23 +536,22 @@ exports[`Header: should append returnUrl to signin and register links if present
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render first part of email address when username isn't present 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -648,7 +601,7 @@ exports[`Header: should render first part of email address when username isn't p
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -664,20 +617,11 @@ exports[`Header: should render first part of email address when username isn't p
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -931,19 +875,10 @@ exports[`Header: should render first part of email address when username isn't p
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -986,19 +921,10 @@ exports[`Header: should render first part of email address when username isn't p
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -1075,18 +1001,9 @@ exports[`Header: should render first part of email address when username isn't p
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -1134,18 +1051,9 @@ exports[`Header: should render first part of email address when username isn't p
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -1173,23 +1081,22 @@ exports[`Header: should render first part of email address when username isn't p
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render when activeTab is 'Profile' 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -1239,7 +1146,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -1255,20 +1162,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -1517,19 +1415,10 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -1572,19 +1461,10 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -1661,18 +1541,9 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -1720,18 +1591,9 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -1759,23 +1621,22 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render when authenticated 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -1825,7 +1686,7 @@ exports[`Header: should render when authenticated 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -1841,20 +1702,11 @@ exports[`Header: should render when authenticated 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -2108,19 +1960,10 @@ exports[`Header: should render when authenticated 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -2163,19 +2006,10 @@ exports[`Header: should render when authenticated 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -2252,18 +2086,9 @@ exports[`Header: should render when authenticated 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -2311,18 +2136,9 @@ exports[`Header: should render when authenticated 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -2350,23 +2166,22 @@ exports[`Header: should render when authenticated 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render when authenticated but username and email is not yet provided 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -2416,7 +2231,7 @@ exports[`Header: should render when authenticated but username and email is not 
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -2432,20 +2247,11 @@ exports[`Header: should render when authenticated but username and email is not 
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -2695,19 +2501,10 @@ exports[`Header: should render when authenticated but username and email is not 
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -2750,19 +2547,10 @@ exports[`Header: should render when authenticated but username and email is not 
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -2839,18 +2627,9 @@ exports[`Header: should render when authenticated but username and email is not 
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -2898,18 +2677,9 @@ exports[`Header: should render when authenticated but username and email is not 
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -2937,23 +2707,22 @@ exports[`Header: should render when authenticated but username and email is not 
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render when authentication is pending 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -3003,7 +2772,7 @@ exports[`Header: should render when authentication is pending 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -3019,20 +2788,11 @@ exports[`Header: should render when authentication is pending 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -3281,19 +3041,10 @@ exports[`Header: should render when authentication is pending 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -3336,19 +3087,10 @@ exports[`Header: should render when authentication is pending 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -3425,18 +3167,9 @@ exports[`Header: should render when authentication is pending 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -3484,18 +3217,9 @@ exports[`Header: should render when authentication is pending 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -3523,23 +3247,22 @@ exports[`Header: should render when authentication is pending 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render when unauthenticated 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -3589,7 +3312,7 @@ exports[`Header: should render when unauthenticated 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -3605,20 +3328,11 @@ exports[`Header: should render when unauthenticated 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -3877,19 +3591,10 @@ exports[`Header: should render when unauthenticated 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -3932,19 +3637,10 @@ exports[`Header: should render when unauthenticated 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -4021,18 +3717,9 @@ exports[`Header: should render when unauthenticated 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -4080,18 +3767,9 @@ exports[`Header: should render when unauthenticated 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -4119,23 +3797,22 @@ exports[`Header: should render when unauthenticated 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render with a custom logo 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -4153,7 +3830,7 @@ exports[`Header: should render with a custom logo 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -4169,20 +3846,11 @@ exports[`Header: should render with a custom logo 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -4431,19 +4099,10 @@ exports[`Header: should render with a custom logo 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -4486,19 +4145,10 @@ exports[`Header: should render with a custom logo 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -4575,18 +4225,9 @@ exports[`Header: should render with a custom logo 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -4634,18 +4275,9 @@ exports[`Header: should render with a custom logo 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -4673,23 +4305,22 @@ exports[`Header: should render with a custom logo 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render with locale of AU 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -4739,7 +4370,7 @@ exports[`Header: should render with locale of AU 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -4755,20 +4386,11 @@ exports[`Header: should render with locale of AU 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -5017,19 +4639,10 @@ exports[`Header: should render with locale of AU 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -5072,19 +4685,10 @@ exports[`Header: should render with locale of AU 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -5161,18 +4765,9 @@ exports[`Header: should render with locale of AU 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -5220,18 +4815,9 @@ exports[`Header: should render with locale of AU 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -5259,23 +4845,22 @@ exports[`Header: should render with locale of AU 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render with locale of NZ 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -5325,7 +4910,7 @@ exports[`Header: should render with locale of NZ 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -5341,20 +4926,11 @@ exports[`Header: should render with locale of NZ 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -5573,19 +5149,10 @@ exports[`Header: should render with locale of NZ 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -5628,19 +5195,10 @@ exports[`Header: should render with locale of NZ 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root Navigation__divider"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -5694,18 +5252,9 @@ exports[`Header: should render with locale of NZ 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -5753,18 +5302,9 @@ exports[`Header: should render with locale of NZ 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list Locales__list_isNZ"
                 >
@@ -5792,23 +5332,22 @@ exports[`Header: should render with locale of NZ 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
 
 exports[`Header: should render with no divider 1`] = `
 <header
-  aria-label="Primary navigation"
   class="Header__root"
   role="banner"
 >
-  <section
+  <div
     class="Header__content"
   >
     <div
       class="Header__banner"
     >
-      <h1
+      <div
         class="Header__logo"
         data-automation="logo"
       >
@@ -5858,7 +5397,7 @@ exports[`Header: should render with no divider 1`] = `
             SEEK
           </span>
         </a>
-      </h1>
+      </div>
       <span
         class="Header__logoNote Hidden__screen"
       >
@@ -5874,20 +5413,11 @@ exports[`Header: should render with no divider 1`] = `
             class="Header__userAccountWrapper"
           >
             <nav
-              aria-labelledby="UserMenu"
+              aria-label="my account"
               class="UserAccount__root"
               data-automation="user-account"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="UserMenu"
-                >
-                  User menu
-                </h1>
-              </span>
               <input
                 autocomplete="off"
                 class="UserAccount__toggle"
@@ -6136,19 +5666,10 @@ exports[`Header: should render with no divider 1`] = `
             class="Header__signInRegisterWrapper"
           >
             <nav
-              aria-labelledby="SignInOrRegister"
+              aria-label="Sign in or register"
               class="SignInRegister__root"
               data-automation="sign-in-register"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="SignInOrRegister"
-                >
-                  Sign in or register
-                </h1>
-              </span>
               <a
                 class="SignInRegister__link"
                 data-analytics="header:sign-in"
@@ -6191,19 +5712,10 @@ exports[`Header: should render with no divider 1`] = `
       class="Header__navigation Hidden__print"
     >
       <nav
-        aria-labelledby="MainNavigation"
+        aria-label="Primary navigation"
         class="Navigation__root"
         role="navigation"
       >
-        <span
-          class="ScreenReaderOnly__root"
-        >
-          <h1
-            id="MainNavigation"
-          >
-            Primary Links
-          </h1>
-        </span>
         <ul
           class="Navigation__list"
           data-automation="nav-tabs"
@@ -6280,18 +5792,9 @@ exports[`Header: should render with no divider 1`] = `
             class="PartnerSites__content"
           >
             <nav
-              aria-labelledby="Sites"
+              aria-label="SEEK sites"
               role="navigation"
             >
-              <span
-                class="ScreenReaderOnly__root"
-              >
-                <h1
-                  id="Sites"
-                >
-                  SEEK Sites
-                </h1>
-              </span>
               <ul
                 class="Sites__list"
               >
@@ -6339,18 +5842,9 @@ exports[`Header: should render with no divider 1`] = `
               class="PartnerSites__locale"
             >
               <nav
-                aria-labelledby="Locales"
+                aria-label="country"
                 role="navigation"
               >
-                <span
-                  class="ScreenReaderOnly__root"
-                >
-                  <h1
-                    id="Locales"
-                  >
-                    Select your country
-                  </h1>
-                </span>
                 <ul
                   class="Locales__list"
                 >
@@ -6378,6 +5872,6 @@ exports[`Header: should render with no divider 1`] = `
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </header>
 `;
