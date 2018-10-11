@@ -12,7 +12,7 @@ type Props = {
   header?: boolean,
   pullout?: boolean,
   slim?: boolean,
-  tone?: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.NEUTRAL | typeof TONE.HELP,
+  tone?: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.INFO | typeof TONE.HELP,
   level?: Level
 }
 
