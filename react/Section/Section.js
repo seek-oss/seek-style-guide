@@ -22,8 +22,8 @@ export default function Section({
   header,
   pullout,
   slim,
-  tone,
-  level,
+  tone = '',
+  level = '',
   ...restProps
 }: Props) {
   return (
