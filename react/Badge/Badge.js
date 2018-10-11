@@ -26,7 +26,7 @@ export default class Badge extends PureComponent<Props> {
   props: Props;
 
   render() {
-    const { children, tone, strong, className, ...restProps } = this.props;
+    const { children, tone, strong, className = '', ...restProps } = this.props;
 
     return (
       <div
