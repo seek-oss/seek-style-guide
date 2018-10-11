@@ -8,7 +8,7 @@ import type { Level } from '../private/level';
 
 type Props = {
   children: any,
-  className?: string,
+  className: string,
   header: boolean,
   pullout: boolean,
   slim: boolean,
@@ -18,7 +18,7 @@ type Props = {
 
 export default function Section({
   children,
-  className = '',
+  className,
   header,
   pullout,
   slim,
