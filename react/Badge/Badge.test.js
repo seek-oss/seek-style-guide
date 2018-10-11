@@ -14,6 +14,11 @@ test('should render accent Badge', () => {
   expect(badge).toMatchSnapshot();
 });
 
+test('should render Badge with external className', () => {
+  const badge = renderBadge({ className: 'foo' });
+  expect(badge).toMatchSnapshot();
+});
+
 test('should render critical Badge', () => {
   const badge = renderBadge({ tone: 'critical' });
 
