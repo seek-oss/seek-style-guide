@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import urlForAuthStatus from '../../private/urlForAuthStatus';
+import Badge from '../../Badge/Badge';
 
 export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, newBadge, authRequired, authenticationStatus, ...props }) {
   return (
@@ -20,11 +21,7 @@ export default function FooterLink({ secondary, partner, analytics, className, l
           ...props
         })
       }
-      {
-        newBadge ?
-          <span className={styles.newBadge}>new</span> :
-          null
-      }
+      {newBadge && <Badge children="new" strong tone="accent" className={styles.newBadge} /> }
       {
         partner ?
           <span className={styles.partnerCountry}>{` — ${partner}`}</span> :

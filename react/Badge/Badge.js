@@ -16,7 +16,8 @@ type Tone =
 type Props = {
   children: React$Node,
   tone?: Tone,
-  strong?: boolean
+  strong?: boolean,
+  className?: string
 };
 
 export default class Badge extends PureComponent<Props> {
@@ -25,16 +26,17 @@ export default class Badge extends PureComponent<Props> {
   props: Props;
 
   render() {
-    const { children, tone, strong } = this.props;
+    const { children, tone, strong, className, ...restProps } = this.props;
 
     return (
       <div
         className={classnames({
+          [className]: className,
           [styles.root]: true,
           [styles[tone]]: tone,
           [styles.strong]: strong
         })}
-        {...this.props}>
+        {...restProps}>
         {children}
       </div>
     );

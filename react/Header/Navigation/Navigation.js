@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-import NewBadge from '../NewBadge/NewBadge';
+import Badge from '../../Badge/Badge';
 
 const items = [
   {
@@ -51,23 +51,24 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
 
       <ul className={styles.list} data-automation="nav-tabs">
         {
-          items.map(({ specificLocale = locale, analytics, name, isShort, ...restProps }, i) => {
-            const badgeStyles = classnames({
-              [styles.newBadge]: true,
-              [styles.newBadge_isShort]: isShort
-            });
-
+          items.map(({ specificLocale = locale, analytics, name, isShort, ...restProps }) => {
             return (
               (specificLocale === locale) ?
-                <li className={styles.item} key={i}>
+                <li className={styles.item} key={name}>
                   {
                     linkRenderer({
                       children: [
                         name,
                         name === newBadgeTab && (
-                          <NewBadge
+                          <Badge
                             key={name}
-                            className={badgeStyles}
+                            strong
+                            tone="accent"
+                            className={classnames({
+                              [styles.newBadge]: true,
+                              [styles.newBadge_isShort]: isShort
+                            })}
+                            children="new"
                           />
                         )
                       ],

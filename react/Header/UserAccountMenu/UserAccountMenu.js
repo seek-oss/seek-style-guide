@@ -13,7 +13,7 @@ import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
 import Hidden from '../../Hidden/Hidden';
 import Loader from '../../Loader/Loader';
-import NewBadge from '../NewBadge/NewBadge';
+import Badge from '../../Badge/Badge';
 import employerLinkForLocale from '../employerLinkForLocale';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
 import appendReturnUrl from '../../private/appendReturnUrl';
@@ -54,7 +54,7 @@ const clearLocalStorage = () => {
   }
 };
 
-const BadgeComponent = () => <Hidden desktop component={NewBadge} key="new" className={styles.newBadge} />;
+const BadgeComponent = () => <Hidden desktop component={() => <Badge strong tone="accent" key="new" className={styles.newBadge}>New</Badge>} />;
 
 export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab, newBadgeTab }: Props) => (
   <ul className={styles.root}>
