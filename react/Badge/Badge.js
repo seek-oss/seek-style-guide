@@ -4,13 +4,14 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 
 import styles from './Badge.less';
+import { TONE } from '../private/tone';
 
 type Tone =
   | 'accent'
-  | 'critical'
-  | 'info'
-  | 'neutral'
-  | 'positive'
+  | typeof TONE.CRITICAL
+  | typeof TONE.INFO
+  | typeof TONE.NEUTRAL
+  | typeof TONE.POSITIVE
   | 'secondary';
 
 type Props = {
@@ -25,7 +26,7 @@ export default class Badge extends PureComponent<Props> {
   props: Props;
 
   render() {
-    const { children, tone = '', strong } = this.props;
+    const { children, tone = TONE.NEUTRAL, strong } = this.props;
 
     return (
       <div

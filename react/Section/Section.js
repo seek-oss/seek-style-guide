@@ -47,5 +47,7 @@ Section.defaultProps = {
   className: '',
   header: false,
   pullout: false,
-  slim: false
+  slim: false,
+  tone: '',
+  level: ''
 };
