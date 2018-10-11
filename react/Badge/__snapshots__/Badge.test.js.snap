@@ -3,6 +3,7 @@
 exports[`should render Badge 1`] = `
 <div
   className="Badge__root Badge__neutral"
+  tone="neutral"
 >
   2 new
 </div>
