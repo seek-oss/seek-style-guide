@@ -54,7 +54,7 @@ const clearLocalStorage = () => {
   }
 };
 
-const BadgeComponent = () => <Hidden desktop component={() => <Badge strong tone="info" key="new" className={styles.newBadge}>New</Badge>} />;
+const BadgeComponent = () => <Hidden desktop className={styles.newBadge}><Badge strong tone="info" key="new">New</Badge></Hidden>;
 
 export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeTab, newBadgeTab }: Props) => (
   <ul className={styles.root}>

@@ -60,17 +60,19 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
                       children: [
                         name,
                         name === newBadgeTab && (
-                          <Badge
-                            key={name}
-                            strong
-                            tone="info"
+                          <span
                             className={classnames({
                               [styles.newBadge]: true,
                               [styles.newBadge_isShort]: isShort,
                               [styles.newBadge_isLast]: items.length - 1 === key
-                            })}
-                            children="New"
-                          />
+                            })}>
+                            <Badge
+                              key={name}
+                              strong
+                              tone="info"
+                              children="New"
+                            />
+                          </span>
                         )
                       ],
                       'data-analytics': analytics,

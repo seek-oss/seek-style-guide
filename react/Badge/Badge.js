@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import classnames from 'classnames';
+import { omit } from 'lodash';
 
 import styles from './Badge.less';
 
@@ -26,17 +27,16 @@ export default class Badge extends PureComponent<Props> {
   props: Props;
 
   render() {
-    const { children, tone, strong, className = '', ...restProps } = this.props;
+    const { children, tone, strong, ...restProps } = this.props;
 
     return (
       <div
         className={classnames({
-          [className]: className,
           [styles.root]: true,
           [styles[tone]]: tone,
           [styles.strong]: strong
         })}
-        {...restProps}>
+        {...omit(restProps, 'className')}>
         {children}
       </div>
     );
