@@ -16,14 +16,6 @@ exports[`should render Badge 1`] = `
 </div>
 `;
 
-exports[`should render Badge with external className 1`] = `
-<div
-  className="foo Badge__root"
->
-  2 new
-</div>
-`;
-
 exports[`should render a strong positive Badge 1`] = `
 <div
   className="Badge__root Badge__secondary Badge__strong"
