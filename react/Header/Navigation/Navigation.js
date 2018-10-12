@@ -51,7 +51,7 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
 
       <ul className={styles.list} data-automation="nav-tabs">
         {
-          items.map(({ specificLocale = locale, analytics, name, isShort, ...restProps }) => {
+          items.map(({ specificLocale = locale, analytics, name, isShort, ...restProps }, key) => {
             return (
               (specificLocale === locale) ?
                 <li className={styles.item} key={name}>
@@ -66,7 +66,8 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
                             tone="info"
                             className={classnames({
                               [styles.newBadge]: true,
-                              [styles.newBadge_isShort]: isShort
+                              [styles.newBadge_isShort]: isShort,
+                              [styles.newBadge_isLast]: items.length - 1 === key
                             })}
                             children="New"
                           />
