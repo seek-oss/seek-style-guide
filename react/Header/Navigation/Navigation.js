@@ -63,12 +63,12 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
                           <Badge
                             key={name}
                             strong
-                            tone="accent"
+                            tone="info"
                             className={classnames({
                               [styles.newBadge]: true,
                               [styles.newBadge_isShort]: isShort
                             })}
-                            children="new"
+                            children="New"
                           />
                         )
                       ],

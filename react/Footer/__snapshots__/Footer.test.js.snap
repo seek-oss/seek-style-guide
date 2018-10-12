@@ -565,9 +565,9 @@ exports[`Footer: should render when authenticated 1`] = `
                 Work for SEEK
               </a>
               <div
-                class="FooterLink__newBadge Badge__root Badge__accent Badge__strong"
+                class="FooterLink__newBadge Badge__root Badge__info Badge__strong"
               >
-                new
+                New
               </div>
             </li>
             <li
@@ -1330,9 +1330,9 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 Work for SEEK
               </a>
               <div
-                class="FooterLink__newBadge Badge__root Badge__accent Badge__strong"
+                class="FooterLink__newBadge Badge__root Badge__info Badge__strong"
               >
-                new
+                New
               </div>
             </li>
             <li
@@ -2095,9 +2095,9 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 Work for SEEK
               </a>
               <div
-                class="FooterLink__newBadge Badge__root Badge__accent Badge__strong"
+                class="FooterLink__newBadge Badge__root Badge__info Badge__strong"
               >
-                new
+                New
               </div>
             </li>
             <li
@@ -2860,9 +2860,9 @@ exports[`Footer: should render with locale of AU 1`] = `
                 Work for SEEK
               </a>
               <div
-                class="FooterLink__newBadge Badge__root Badge__accent Badge__strong"
+                class="FooterLink__newBadge Badge__root Badge__info Badge__strong"
               >
-                new
+                New
               </div>
             </li>
             <li
@@ -3511,9 +3511,9 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 Work for SEEK
               </a>
               <div
-                class="FooterLink__newBadge Badge__root Badge__accent Badge__strong"
+                class="FooterLink__newBadge Badge__root Badge__info Badge__strong"
               >
-                new
+                New
               </div>
             </li>
             <li
