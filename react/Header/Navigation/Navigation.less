@@ -63,10 +63,10 @@
 .newBadge {
   @media only screen and (max-width: @container-width) {
     position: absolute;
-    right: -5px;
-    top: -21px;
+    right: 0;
+    top: -@touchableTextHeight / 2 + 2px;
     &.newBadge_isShort {
-      right: 30px;
+      right: 17%;
     }
     &.newBadge_isLast {
       right: @gutter-width;
