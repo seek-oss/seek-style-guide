@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import classnames from 'classnames';
-import { omit } from 'lodash';
+import omit from 'lodash/omit';
 
 import styles from './Badge.less';
 
