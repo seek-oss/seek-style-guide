@@ -21,7 +21,7 @@ export default function FooterLink({ secondary, partner, analytics, className, l
           ...props
         })
       }
-      {newBadge && <span className={styles.newBadge}><Badge children="New" strong tone="info" /></span> }
+      {newBadge && <span>&nbsp;&nbsp;<Badge children="New" strong tone="info" /></span> }
       {
         partner ?
           <span className={styles.partnerCountry}>{` — ${partner}`}</span> :

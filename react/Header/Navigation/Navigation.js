@@ -65,7 +65,7 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
                               [styles.newBadge]: true,
                               [styles.newBadge_isShort]: isShort,
                               [styles.newBadge_isLast]: items.length - 1 === key
-                            })}>
+                            })}>&nbsp;
                             <Badge
                               key={name}
                               strong
