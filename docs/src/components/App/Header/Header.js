@@ -8,6 +8,7 @@ import { Link, withRouter } from 'react-router-dom';
 import {
   PageBlock,
   Card,
+  Highlight,
   Section,
   Text,
   TextField,
@@ -25,6 +26,14 @@ const allRoutes = [
 
 const SEARCH_BAR_ID = 'search-bar-field';
 
+const WithHighlighting = ({ highlighted, children }) => {
+  if (highlighted) {
+    return <Highlight>{children}</Highlight>;
+  }
+
+  return children;
+};
+
 const generousCompareStrings = (input, searchTerm) =>
   input
     .toLowerCase()
@@ -40,6 +49,30 @@ const buildRoutes = inputRoutes =>
       [category]: [...initialArrayVal, route]
     };
   }, {});
+
+const sortRoutes = (routeA, routeB) => {
+  if (!routeA.component && routeB.component) {
+    return -1;
+  }
+
+  if (!routeB.component && routeA.component) {
+    return 1;
+  }
+
+  if ((routeA.category || 'Other') < (routeB.category || 'Other')) {
+    return -1;
+  }
+
+  if ((routeA.category || 'Other') > (routeB.category || 'Other')) {
+    return 1;
+  }
+
+  if (routeA.title < routeB.title) {
+    return -1;
+  }
+
+  return 1;
+};
 
 class Header extends Component {
   static propTypes = {
@@ -61,10 +94,11 @@ class Header extends Component {
       displayComponents: allRoutes
     };
     this.searchBarRef = React.createRef();
+    this.highlightedRef = React.createRef();
   }
 
   componentDidMount = () => {
-    const searchbar = document.getElementById(SEARCH_BAR_ID);
+    const searchbar = this.searchBarRef.current.input;
 
     document.addEventListener('keydown', event => {
       if (event.key === '/' && event.target.id !== SEARCH_BAR_ID) {
@@ -79,7 +113,7 @@ class Header extends Component {
     searchbar.addEventListener('keydown', event => {
       const { highlightedElement, displayComponents } = this.state;
       if (event.key === 'Enter') {
-        const route = this.state.displayComponents[0].route;
+        const route = this.highlightedRef.current.props.to;
         this.props.history.push(route);
         this.handleMenuClose({ target: { id: '' } });
       } else if (event.key === 'ArrowUp') {
@@ -93,7 +127,8 @@ class Header extends Component {
         const newIndex = highlightedElement + 1;
         const totalLength = displayComponents.length;
         this.setState({
-          highlightedElement: newIndex > totalLength ? totalLength : newIndex
+          highlightedElement:
+            newIndex < totalLength ? newIndex : totalLength - 1
         });
       }
     });
@@ -122,6 +157,14 @@ class Header extends Component {
     this.setState({ displayComponents: filteredResults, searchTerm });
   };
 
+  applyHighlighting = routeList => {
+    const { highlightedElement } = this.state;
+    return routeList.map((route, index) => ({
+      ...route,
+      highlighted: index === highlightedElement
+    }));
+  };
+
   render() {
     const { fullWidth } = this.props;
     const { menuOpen, displayComponents } = this.state;
@@ -131,6 +174,8 @@ class Header extends Component {
       [styles.fixedHeaderBlock]: menuOpen,
       [styles.fullWidth]: fullWidth
     });
+
+    const sortedRoutes = displayComponents.sort(sortRoutes);
 
     return (
       <div>
@@ -183,30 +228,42 @@ class Header extends Component {
                         />
                       </Card>
 
-                      {Object.entries(buildRoutes(displayComponents)).map(
-                        ([category, routes]) => {
-                          return (
-                            <Fragment key={category}>
-                              <Card transparent>
-                                <h2>
-                                  <Text headline>{category} Components</Text>
-                                </h2>
-                              </Card>
-                              <Card transparent>
-                                {routes.map(demoSpec => (
-                                  <Text headline regular key={demoSpec.title}>
+                      {Object.entries(
+                        buildRoutes(this.applyHighlighting(sortedRoutes))
+                      ).map(([category, routes]) => {
+                        const title = routes[0].component ?
+                          `${category} Components` :
+                          category;
+                        return (
+                          <Fragment key={category}>
+                            <Card transparent>
+                              <h2>
+                                <Text headline>{title}</Text>
+                              </h2>
+                            </Card>
+                            <Card transparent>
+                              {routes.map(demoSpec => (
+                                <WithHighlighting
+                                  key={demoSpec.title}
+                                  highlighted={demoSpec.highlighted}>
+                                  <Text headline regular>
                                     <Link
+                                      ref={
+                                        demoSpec.highlighted ?
+                                          this.highlightedRef :
+                                          ''
+                                      }
                                       className={styles.link}
                                       to={demoSpec.route}>
                                       {demoSpec.title}
                                     </Link>
                                   </Text>
-                                ))}
-                              </Card>
-                            </Fragment>
-                          );
-                        }
-                      )}
+                                </WithHighlighting>
+                              ))}
+                            </Card>
+                          </Fragment>
+                        );
+                      })}
                     </Section>
                   </PageBlock>
                 </div>
