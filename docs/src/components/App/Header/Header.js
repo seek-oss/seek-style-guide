@@ -28,7 +28,7 @@ const SEARCH_BAR_ID = 'search-bar-field';
 
 const WithHighlighting = ({ highlighted, children }) => {
   if (highlighted) {
-    return <Highlight>{children}</Highlight>;
+    return <Highlight tone="neutral">{children}</Highlight>;
   }
 
   return children;
