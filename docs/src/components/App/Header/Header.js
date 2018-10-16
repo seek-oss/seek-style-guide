@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import {
   PageBlock,
   Card,
@@ -16,6 +16,12 @@ import {
 import Logo from './Logo/Logo';
 import demoSpecExports from '../../../../../react/*/*.demo.js';
 const demoSpecs = demoSpecExports.map(x => x.default);
+const allRoutes = [
+  { route: '/typography', title: 'Typography', category: 'Guides' },
+  { route: '/page-layout', title: 'Page Layout', category: 'Guides' },
+  { route: '/sandbox', title: 'Sandbox', category: 'Tools' },
+  ...demoSpecs
+];
 
 const SEARCH_BAR_ID = 'search-bar-field';
 
@@ -25,9 +31,20 @@ const generousCompareStrings = (input, searchTerm) =>
     .replace(' ', '')
     .indexOf(searchTerm) !== -1;
 
-export default class Header extends Component {
+const buildRoutes = inputRoutes =>
+  inputRoutes.reduce((acc, route) => {
+    const category = route.category ? route.category : 'Other';
+    const initialArrayVal = acc[category] ? acc[category] : [];
+    return {
+      ...acc,
+      [category]: [...initialArrayVal, route]
+    };
+  }, {});
+
+class Header extends Component {
   static propTypes = {
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    history: PropTypes.any
   };
 
   static defaultProps = {
@@ -40,12 +57,15 @@ export default class Header extends Component {
     this.state = {
       menuOpen: false,
       searchTerm: '',
-      displayComponents: demoSpecs
+      highlightedElement: 0,
+      displayComponents: allRoutes
     };
     this.searchBarRef = React.createRef();
   }
 
   componentDidMount = () => {
+    const searchbar = document.getElementById(SEARCH_BAR_ID);
+
     document.addEventListener('keydown', event => {
       if (event.key === '/' && event.target.id !== SEARCH_BAR_ID) {
         event.preventDefault();
@@ -53,6 +73,28 @@ export default class Header extends Component {
       } else if (event.key === 'Escape') {
         event.preventDefault();
         this.handleMenuClose({ target: { id: '' } });
+      }
+    });
+
+    searchbar.addEventListener('keydown', event => {
+      const { highlightedElement, displayComponents } = this.state;
+      if (event.key === 'Enter') {
+        const route = this.state.displayComponents[0].route;
+        this.props.history.push(route);
+        this.handleMenuClose({ target: { id: '' } });
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        const newIndex = highlightedElement - 1;
+        this.setState({
+          highlightedElement: newIndex < 0 ? 0 : newIndex
+        });
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        const newIndex = highlightedElement + 1;
+        const totalLength = displayComponents.length;
+        this.setState({
+          highlightedElement: newIndex > totalLength ? totalLength : newIndex
+        });
       }
     });
   };
@@ -73,15 +115,12 @@ export default class Header extends Component {
   };
 
   handleSearch = event => {
-    const searchTerm = event.target.value.toLowerCase();
-    const filteredResults = demoSpecs.filter(component =>
+    const searchTerm = event.target.value.toLowerCase().replace(' ', '');
+    const filteredResults = allRoutes.filter(component =>
       generousCompareStrings(component.title, searchTerm)
     );
     this.setState({ displayComponents: filteredResults, searchTerm });
   };
-
-  searchMatch = inputArray =>
-    inputArray.some(str => generousCompareStrings(str, this.state.searchTerm));
 
   render() {
     const { fullWidth } = this.props;
@@ -92,19 +131,6 @@ export default class Header extends Component {
       [styles.fixedHeaderBlock]: menuOpen,
       [styles.fullWidth]: fullWidth
     });
-
-    const layoutComponents = displayComponents.filter(
-      ({ category }) => category === 'Layout'
-    );
-    const typographyComponents = displayComponents.filter(
-      ({ category }) => category === 'Typography'
-    );
-    const formComponents = displayComponents.filter(
-      ({ category }) => category === 'Form'
-    );
-    const otherComponents = displayComponents.filter(
-      ({ category }) => !category
-    );
 
     return (
       <div>
@@ -157,131 +183,29 @@ export default class Header extends Component {
                         />
                       </Card>
 
-                      {this.searchMatch(['Typography', 'Page Layout']) && (
-                        <Fragment>
-                          <Card transparent>
-                            <h2>
-                              <Text headline>Guides</Text>
-                            </h2>
-                          </Card>
-                          <Card transparent>
-                            {this.searchMatch(['Typography']) && (
-                              <Text headline regular>
-                                <Link className={styles.link} to="/typography">
-                                  Typography
-                                </Link>
-                              </Text>
-                            )}
-                            {this.searchMatch(['Page Layout']) && (
-                              <Text headline regular>
-                                <Link className={styles.link} to="/page-layout">
-                                  Page Layout
-                                </Link>
-                              </Text>
-                            )}
-                          </Card>
-                        </Fragment>
-                      )}
-
-                      {this.searchMatch(['Sandbox']) && (
-                        <Fragment>
-                          <Card transparent>
-                            <h2>
-                              <Text headline>Tools</Text>
-                            </h2>
-                          </Card>
-                          <Card transparent>
-                            <Text headline regular>
-                              <Link className={styles.link} to="/sandbox">
-                                Sandbox
-                              </Link>
-                            </Text>
-                          </Card>
-                        </Fragment>
-                      )}
-
-                      {layoutComponents.length > 0 && (
-                        <Fragment>
-                          <Card transparent>
-                            <h2>
-                              <Text headline>Layout Components</Text>
-                            </h2>
-                          </Card>
-                          <Card transparent>
-                            {layoutComponents.map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link
-                                  className={styles.link}
-                                  to={demoSpec.route}>
-                                  {demoSpec.title}
-                                </Link>
-                              </Text>
-                            ))}
-                          </Card>
-                        </Fragment>
-                      )}
-
-                      {typographyComponents.length > 0 && (
-                        <Fragment>
-                          <Card transparent>
-                            <h2>
-                              <Text headline>Typography Components</Text>
-                            </h2>
-                          </Card>
-                          <Card transparent>
-                            {typographyComponents.map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link
-                                  className={styles.link}
-                                  to={demoSpec.route}>
-                                  {demoSpec.title}
-                                </Link>
-                              </Text>
-                            ))}
-                          </Card>
-                        </Fragment>
-                      )}
-
-                      {formComponents.length > 0 && (
-                        <Fragment>
-                          <Card transparent>
-                            <h2>
-                              <Text headline>Form Components</Text>
-                            </h2>
-                          </Card>
-                          <Card transparent>
-                            {formComponents.map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link
-                                  className={styles.link}
-                                  to={demoSpec.route}>
-                                  {demoSpec.title}
-                                </Link>
-                              </Text>
-                            ))}
-                          </Card>
-                        </Fragment>
-                      )}
-
-                      {otherComponents.length > 0 && (
-                        <Fragment>
-                          <Card transparent>
-                            <h2>
-                              <Text headline>Other Components</Text>
-                            </h2>
-                          </Card>
-                          <Card transparent>
-                            {otherComponents.map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link
-                                  className={styles.link}
-                                  to={demoSpec.route}>
-                                  {demoSpec.title}
-                                </Link>
-                              </Text>
-                            ))}
-                          </Card>
-                        </Fragment>
+                      {Object.entries(buildRoutes(displayComponents)).map(
+                        ([category, routes]) => {
+                          return (
+                            <Fragment key={category}>
+                              <Card transparent>
+                                <h2>
+                                  <Text headline>{category} Components</Text>
+                                </h2>
+                              </Card>
+                              <Card transparent>
+                                {routes.map(demoSpec => (
+                                  <Text headline regular key={demoSpec.title}>
+                                    <Link
+                                      className={styles.link}
+                                      to={demoSpec.route}>
+                                      {demoSpec.title}
+                                    </Link>
+                                  </Text>
+                                ))}
+                              </Card>
+                            </Fragment>
+                          );
+                        }
                       )}
                     </Section>
                   </PageBlock>
@@ -294,3 +218,5 @@ export default class Header extends Component {
     );
   }
 }
+
+export default withRouter(Header);
