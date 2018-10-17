@@ -75,7 +75,7 @@ const sortRoutes = (routeA, routeB) => {
 class Header extends Component {
   static propTypes = {
     fullWidth: PropTypes.bool,
-    history: PropTypes.any
+    history: PropTypes.object
   };
 
   static defaultProps = {
