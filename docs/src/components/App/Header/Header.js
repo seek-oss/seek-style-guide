@@ -154,7 +154,11 @@ class Header extends Component {
     const filteredResults = allRoutes.filter(component =>
       generousCompareStrings(component.title, searchTerm)
     );
-    this.setState({ displayComponents: filteredResults, searchTerm });
+    this.setState({
+      displayComponents: filteredResults,
+      searchTerm,
+      highlightedElement: 0
+    });
   };
 
   applyHighlighting = routeList => {
