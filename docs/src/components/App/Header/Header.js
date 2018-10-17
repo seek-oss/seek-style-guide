@@ -212,14 +212,6 @@ class Header extends Component {
                   <PageBlock className={fullWidth ? styles.fullWidth : null}>
                     <Section header>
                       <Card transparent>
-                        <Text headline regular>
-                          <Link className={styles.link} to="/">
-                            Home
-                          </Link>
-                        </Text>
-                      </Card>
-
-                      <Card transparent>
                         <TextField
                           id={SEARCH_BAR_ID}
                           label="Search"
