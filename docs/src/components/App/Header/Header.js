@@ -42,12 +42,6 @@ const WithHighlighting = ({ highlighted, children }) => {
   return children;
 };
 
-const generousCompareStrings = (input, searchTerm) =>
-  input
-    .toLowerCase()
-    .replace(' ', '')
-    .indexOf(searchTerm) !== -1;
-
 const buildRoutes = inputRoutes =>
   inputRoutes.reduce((acc, route) => {
     const category = route.category ? route.category : 'Other';
@@ -62,19 +56,15 @@ const sortRoutes = (routeA, routeB) => {
   if (!routeA.component && routeB.component) {
     return -1;
   }
-
   if (!routeB.component && routeA.component) {
     return 1;
   }
-
   if ((routeA.category || 'Other') < (routeB.category || 'Other')) {
     return -1;
   }
-
   if ((routeA.category || 'Other') > (routeB.category || 'Other')) {
     return 1;
   }
-
   if (routeA.title < routeB.title) {
     return -1;
   }
@@ -120,24 +110,29 @@ class Header extends Component {
 
     searchbar.addEventListener('keydown', event => {
       const { highlightedElement, displayComponents } = this.state;
-      if (event.key === 'Enter') {
-        const route = this.highlightedRef.current.props.to;
-        this.props.history.push(route);
-        this.handleMenuClose({ target: { id: '' } });
-      } else if (event.key === 'ArrowUp') {
-        event.preventDefault();
-        const newIndex = highlightedElement - 1;
-        this.setState({
-          highlightedElement: newIndex < 0 ? 0 : newIndex
-        });
-      } else if (event.key === 'ArrowDown') {
-        event.preventDefault();
-        const newIndex = highlightedElement + 1;
-        const totalLength = displayComponents.length;
-        this.setState({
-          highlightedElement:
-            newIndex < totalLength ? newIndex : totalLength - 1
-        });
+      switch (event.key) {
+        case 'Enter':
+          const route = this.highlightedRef.current.props.to;
+          this.props.history.push(route);
+          this.handleMenuClose();
+          break;
+        case 'ArrowUp':
+          event.preventDefault();
+          const newIndexUp = highlightedElement - 1;
+          this.setState({
+            highlightedElement: newIndexUp < 0 ? 0 : newIndexUp
+          });
+          break;
+        case 'ArrowDown':
+          event.preventDefault();
+          const newIndexDown = highlightedElement + 1;
+          const totalLength = displayComponents.length;
+          this.setState({
+            highlightedElement:
+              newIndexDown < totalLength ? newIndexDown : totalLength - 1
+          });
+          break;
+        default:
       }
     });
   };
@@ -152,20 +147,24 @@ class Header extends Component {
   };
 
   handleMenuClose = event => {
-    if (event.target.id !== SEARCH_BAR_ID) {
+    if (!event.target.id || event.target.id !== SEARCH_BAR_ID) {
       this.setState({ menuOpen: false });
     }
   };
 
   handleSearch = event => {
     const searchTerm = event.target.value.toLowerCase().replace(' ', '');
-    const filteredResults = allRoutes.filter(component =>
-      generousCompareStrings(component.title, searchTerm)
+    const filteredResults = allRoutes.filter(
+      component =>
+        component.title
+          .toLowerCase()
+          .replace(' ', '')
+          .indexOf(searchTerm) !== -1
     );
     this.setState({
       displayComponents: filteredResults,
-      searchTerm,
-      highlightedElement: 0
+      highlightedElement: 0,
+      searchTerm
     });
   };
 
@@ -180,14 +179,13 @@ class Header extends Component {
   render() {
     const { fullWidth } = this.props;
     const { menuOpen, displayComponents } = this.state;
+    const sortedRoutes = displayComponents.sort(sortRoutes);
 
     const headerClasses = classnames({
       [styles.headerBlock]: true,
       [styles.fixedHeaderBlock]: menuOpen,
       [styles.fullWidth]: fullWidth
     });
-
-    const sortedRoutes = displayComponents.sort(sortRoutes);
 
     return (
       <div>
