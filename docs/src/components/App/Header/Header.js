@@ -32,7 +32,7 @@ const WithHighlighting = ({ highlighted, children }) => {
     return (
       <Highlight tone="neutral">
         <div className={styles.highlightWrapper}>
-          <ChevronIcon className={styles.highlightedIcon} />
+          <ChevronIcon direction="right" className={styles.highlightedIcon} />
           {children}
         </div>
       </Highlight>
