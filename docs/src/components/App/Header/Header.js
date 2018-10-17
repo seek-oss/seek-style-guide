@@ -8,14 +8,15 @@ import { Link, withRouter } from 'react-router-dom';
 import {
   PageBlock,
   Card,
-  Highlight,
   Section,
-  ChevronIcon,
   Text,
   TextField,
   ScreenReaderOnly
 } from 'seek-style-guide/react';
 import Logo from './Logo/Logo';
+import WithHighlighting from './WithHighlighting/WithHighlighting';
+import { generateRouteList } from './headerUtils';
+
 import demoSpecExports from '../../../../../react/*/*.demo.js';
 const demoSpecs = demoSpecExports.map(x => x.default);
 const allRoutes = [
@@ -26,51 +27,6 @@ const allRoutes = [
 ];
 
 const SEARCH_BAR_ID = 'search-bar-field';
-
-const WithHighlighting = ({ highlighted, children }) => {
-  if (highlighted) {
-    return (
-      <Highlight tone="neutral">
-        <div className={styles.highlightWrapper}>
-          <ChevronIcon direction="right" className={styles.highlightedIcon} />
-          {children}
-        </div>
-      </Highlight>
-    );
-  }
-
-  return children;
-};
-
-const buildRoutes = inputRoutes =>
-  inputRoutes.reduce((acc, route) => {
-    const category = route.category || 'Other';
-    const initialArrayVal = acc[category] || [];
-    return {
-      ...acc,
-      [category]: [...initialArrayVal, route]
-    };
-  }, {});
-
-const sortRoutes = (routeA, routeB) => {
-  if (!routeA.component && routeB.component) {
-    return -1;
-  }
-  if (!routeB.component && routeA.component) {
-    return 1;
-  }
-  if ((routeA.category || 'Other') < (routeB.category || 'Other')) {
-    return -1;
-  }
-  if ((routeA.category || 'Other') > (routeB.category || 'Other')) {
-    return 1;
-  }
-  if (routeA.title < routeB.title) {
-    return -1;
-  }
-
-  return 1;
-};
 
 class Header extends Component {
   static propTypes = {
@@ -97,44 +53,46 @@ class Header extends Component {
 
   componentDidMount = () => {
     const searchbar = this.searchBarRef.current.input;
+    document.addEventListener('keydown', this.handleDocumentKeydown);
+    searchbar.addEventListener('keydown', this.handleSearchbarKeydown);
+  };
 
-    document.addEventListener('keydown', event => {
-      if (event.key === '/' && event.target.id !== SEARCH_BAR_ID) {
-        event.preventDefault();
-        this.handleMenuToggle({ target: { checked: true } });
-      } else if (event.key === 'Escape') {
-        event.preventDefault();
+  handleDocumentKeydown = event => {
+    if (event.key === '/' && event.target.id !== SEARCH_BAR_ID) {
+      event.preventDefault();
+      this.handleMenuToggle({ target: { checked: true } });
+    } else if (event.key === 'Escape') {
+      event.preventDefault();
+      this.handleMenuClose();
+    }
+  };
+
+  handleSearchbarKeydown = event => {
+    const { highlightedElement, displayComponents } = this.state;
+    switch (event.key) {
+      case 'Enter':
+        const route = this.highlightedRef.current.props.to;
+        this.props.history.push(route);
         this.handleMenuClose();
-      }
-    });
-
-    searchbar.addEventListener('keydown', event => {
-      const { highlightedElement, displayComponents } = this.state;
-      switch (event.key) {
-        case 'Enter':
-          const route = this.highlightedRef.current.props.to;
-          this.props.history.push(route);
-          this.handleMenuClose();
-          break;
-        case 'ArrowUp':
-          event.preventDefault();
-          const newIndexUp = highlightedElement - 1;
-          this.setState({
-            highlightedElement: newIndexUp < 0 ? 0 : newIndexUp
-          });
-          break;
-        case 'ArrowDown':
-          event.preventDefault();
-          const newIndexDown = highlightedElement + 1;
-          const totalLength = displayComponents.length;
-          this.setState({
-            highlightedElement:
-              newIndexDown < totalLength ? newIndexDown : totalLength - 1
-          });
-          break;
-        default:
-      }
-    });
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        const newIndexUp = highlightedElement - 1;
+        this.setState({
+          highlightedElement: newIndexUp < 0 ? 0 : newIndexUp
+        });
+        break;
+      case 'ArrowDown':
+        event.preventDefault();
+        const newIndexDown = highlightedElement + 1;
+        const totalLength = displayComponents.length;
+        this.setState({
+          highlightedElement:
+            newIndexDown < totalLength ? newIndexDown : totalLength - 1
+        });
+        break;
+      default:
+    }
   };
 
   handleMenuToggle = event => {
@@ -168,18 +126,10 @@ class Header extends Component {
     });
   };
 
-  applyHighlighting = routeList => {
-    const { highlightedElement } = this.state;
-    return routeList.map((route, index) => ({
-      ...route,
-      highlighted: index === highlightedElement
-    }));
-  };
-
   render() {
     const { fullWidth } = this.props;
-    const { menuOpen, displayComponents } = this.state;
-    const sortedRoutes = displayComponents.sort(sortRoutes);
+    const { menuOpen, displayComponents, highlightedElement } = this.state;
+    const routeList = generateRouteList(highlightedElement)(displayComponents);
 
     const headerClasses = classnames({
       [styles.headerBlock]: true,
@@ -230,9 +180,7 @@ class Header extends Component {
                         />
                       </Card>
 
-                      {Object.entries(
-                        buildRoutes(this.applyHighlighting(sortedRoutes))
-                      ).map(([category, routes]) => {
+                      {routeList.map(([category, routes]) => {
                         const title = routes[0].component ?
                           `${category} Components` :
                           category;
