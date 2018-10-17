@@ -104,7 +104,7 @@ class Header extends Component {
         this.handleMenuToggle({ target: { checked: true } });
       } else if (event.key === 'Escape') {
         event.preventDefault();
-        this.handleMenuClose({ target: { id: '' } });
+        this.handleMenuClose();
       }
     });
 
@@ -147,7 +147,7 @@ class Header extends Component {
   };
 
   handleMenuClose = event => {
-    if (!event.target.id || event.target.id !== SEARCH_BAR_ID) {
+    if (!event || event.target.id !== SEARCH_BAR_ID) {
       this.setState({ menuOpen: false });
     }
   };
