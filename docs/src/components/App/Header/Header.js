@@ -44,8 +44,8 @@ const WithHighlighting = ({ highlighted, children }) => {
 
 const buildRoutes = inputRoutes =>
   inputRoutes.reduce((acc, route) => {
-    const category = route.category ? route.category : 'Other';
-    const initialArrayVal = acc[category] ? acc[category] : [];
+    const category = route.category || 'Other';
+    const initialArrayVal = acc[category] || [];
     return {
       ...acc,
       [category]: [...initialArrayVal, route]
