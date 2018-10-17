@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import (reference) '~seek-style-guide/theme';
 
 .headerBlock {
   background: @sk-blue;
@@ -139,4 +139,15 @@
   @media @desktop {
     margin-bottom: @row-height;
   }
+}
+
+.highlightWrapper {
+  position: relative;
+}
+
+.highlightedIcon {
+  position: absolute;
+  top: 16px;
+  left: -24px;
+  transform: rotate(-90deg);
 }

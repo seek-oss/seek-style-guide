@@ -10,6 +10,7 @@ import {
   Card,
   Highlight,
   Section,
+  ChevronIcon,
   Text,
   TextField,
   ScreenReaderOnly
@@ -28,7 +29,14 @@ const SEARCH_BAR_ID = 'search-bar-field';
 
 const WithHighlighting = ({ highlighted, children }) => {
   if (highlighted) {
-    return <Highlight tone="neutral">{children}</Highlight>;
+    return (
+      <Highlight tone="neutral">
+        <div className={styles.highlightWrapper}>
+          <ChevronIcon className={styles.highlightedIcon} />
+          {children}
+        </div>
+      </Highlight>
+    );
   }
 
   return children;
