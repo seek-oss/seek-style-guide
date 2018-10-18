@@ -52,9 +52,11 @@ class Header extends Component {
   }
 
   componentDidMount = () => {
-    const searchbar = this.searchBarRef.current.input;
     document.addEventListener('keydown', this.handleDocumentKeydown);
-    searchbar.addEventListener('keydown', this.handleSearchbarKeydown);
+  };
+
+  componentWillUnmount = () => {
+    document.removeEventListener(this.handleDocumentKeydown);
   };
 
   handleDocumentKeydown = event => {
@@ -177,6 +179,9 @@ class Header extends Component {
                           label="Search"
                           ref={this.searchBarRef}
                           onChange={this.handleSearch}
+                          inputProps={{
+                            onKeyDown: this.handleSearchbarKeydown
+                          }}
                         />
                       </Card>
 
