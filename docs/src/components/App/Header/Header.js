@@ -1,18 +1,37 @@
 import styles from './Header.less';
 
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { Link } from 'react-router-dom';
-import { PageBlock, Card, Section, Text, ScreenReaderOnly } from 'seek-style-guide/react';
+import { Link, withRouter } from 'react-router-dom';
+import {
+  PageBlock,
+  Card,
+  Section,
+  Text,
+  TextField,
+  ScreenReaderOnly
+} from 'seek-style-guide/react';
 import Logo from './Logo/Logo';
+import WithHighlighting from './WithHighlighting/WithHighlighting';
+import { generateRouteList } from './headerUtils';
+
 import demoSpecExports from '../../../../../react/*/*.demo.js';
 const demoSpecs = demoSpecExports.map(x => x.default);
+const allRoutes = [
+  { route: '/typography', title: 'Typography', category: 'Guides' },
+  { route: '/page-layout', title: 'Page Layout', category: 'Guides' },
+  { route: '/sandbox', title: 'Sandbox', category: 'Tools' },
+  ...demoSpecs
+];
 
-export default class Header extends Component {
+const SEARCH_BAR_ID = 'search-bar-field';
+
+class Header extends Component {
   static propTypes = {
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    history: PropTypes.object
   };
 
   static defaultProps = {
@@ -23,21 +42,97 @@ export default class Header extends Component {
     super();
 
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+      searchTerm: '',
+      highlightedElement: 0,
+      displayComponents: allRoutes
     };
+    this.searchBarRef = React.createRef();
+    this.highlightedRef = React.createRef();
   }
 
-  handleMenuToggle = event => {
-    this.setState({ menuOpen: event.target.checked });
+  componentDidMount = () => {
+    document.addEventListener('keydown', this.handleDocumentKeydown);
   };
 
-  handleMenuClose = () => {
-    this.setState({ menuOpen: false });
+  componentWillUnmount = () => {
+    document.removeEventListener('keydown', this.handleDocumentKeydown);
+  };
+
+  handleDocumentKeydown = event => {
+    if (event.key === '/' && event.target.id !== SEARCH_BAR_ID) {
+      event.preventDefault();
+      this.handleMenuToggle({ target: { checked: true } });
+    } else if (event.key === 'Escape') {
+      event.preventDefault();
+      this.handleMenuClose();
+    }
+  };
+
+  handleSearchbarKeydown = event => {
+    switch (event.key) {
+      case 'Enter':
+        const route = this.highlightedRef.current.props.to;
+        this.props.history.push(route);
+        this.handleMenuClose();
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        this.setState(currentState => {
+          const newIndexUp = currentState.highlightedElement - 1;
+          return { highlightedElement: newIndexUp < 0 ? 0 : newIndexUp };
+        });
+        break;
+      case 'ArrowDown':
+        event.preventDefault();
+        this.setState(currentState => {
+          const newIndexDown = currentState.highlightedElement + 1;
+          const totalLength = currentState.displayComponents.length;
+          return {
+            highlightedElement:
+              newIndexDown < totalLength ? newIndexDown : totalLength - 1
+          };
+        });
+        break;
+      default:
+    }
+  };
+
+  handleMenuToggle = event => {
+    this.setState({ menuOpen: event.target.checked }, () => {
+      if (this.state.menuOpen) {
+        this.searchBarRef.current.input.focus();
+        this.searchBarRef.current.input.select();
+      }
+    });
+  };
+
+  handleMenuClose = event => {
+    if (!event || event.target.id !== SEARCH_BAR_ID) {
+      this.setState({ menuOpen: false });
+    }
+  };
+
+  handleSearch = event => {
+    const searchTerm = event.target.value.toLowerCase().replace(' ', '');
+    const filteredResults = allRoutes.filter(
+      component =>
+        component.title
+          .toLowerCase()
+          .replace(' ', '')
+          .indexOf(searchTerm) !== -1
+    );
+    this.setState({
+      displayComponents: filteredResults,
+      highlightedElement: 0,
+      searchTerm
+    });
   };
 
   render() {
     const { fullWidth } = this.props;
-    const { menuOpen } = this.state;
+    const { menuOpen, displayComponents, highlightedElement } = this.state;
+    const routeList = generateRouteList(highlightedElement)(displayComponents);
 
     const headerClasses = classnames({
       [styles.headerBlock]: true,
@@ -50,9 +145,15 @@ export default class Header extends Component {
         <PageBlock className={headerClasses}>
           <Section className={styles.headerSection}>
             <div className={styles.sectionContent}>
-              <Link className={styles.logoLink} to="/" onClick={this.handleMenuClose}>
+              <Link
+                className={styles.logoLink}
+                to="/"
+                onClick={this.handleMenuClose}>
                 <Logo svgClassName={styles.logo} />
-                <h1 className={styles.title}><ScreenReaderOnly>SEEK </ScreenReaderOnly>Style Guide</h1>
+                <h1 className={styles.title}>
+                  <ScreenReaderOnly>SEEK </ScreenReaderOnly>
+                  Style Guide
+                </h1>
               </Link>
 
               <div className={styles.hamburger}>
@@ -74,103 +175,51 @@ export default class Header extends Component {
                   <PageBlock className={fullWidth ? styles.fullWidth : null}>
                     <Section header>
                       <Card transparent>
-                        <Text headline regular><Link className={styles.link} to="/">Home</Link></Text>
+                        <TextField
+                          id={SEARCH_BAR_ID}
+                          label="Search"
+                          ref={this.searchBarRef}
+                          onChange={this.handleSearch}
+                          inputProps={{
+                            onKeyDown: this.handleSearchbarKeydown
+                          }}
+                        />
                       </Card>
 
-                      <Card transparent>
-                        <h2>
-                          <Text headline>Guides</Text>
-                        </h2>
-                      </Card>
-                      <Card transparent>
-                        <Text headline regular><Link className={styles.link} to="/typography">Typography</Link></Text>
-                        <Text headline regular><Link className={styles.link} to="/page-layout">Page Layout</Link></Text>
-                      </Card>
-
-                      <Card transparent>
-                        <h2>
-                          <Text headline>Tools</Text>
-                        </h2>
-                      </Card>
-                      <Card transparent>
-                        <Text headline regular><Link className={styles.link} to="/sandbox">Sandbox</Link></Text>
-                      </Card>
-
-                      <Card transparent>
-                        <h2>
-                          <Text headline>Layout Components</Text>
-                        </h2>
-                      </Card>
-                      <Card transparent>
-                        {
-                          demoSpecs
-                            .filter(({ category }) => category === 'Layout')
-                            .map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link className={styles.link} to={demoSpec.route}>
-                                  { demoSpec.title }
-                                </Link>
-                              </Text>
-                            ))
-                        }
-                      </Card>
-
-                      <Card transparent>
-                        <h2>
-                          <Text headline>Typography Components</Text>
-                        </h2>
-                      </Card>
-                      <Card transparent>
-                        {
-                          demoSpecs
-                            .filter(({ category }) => category === 'Typography')
-                            .map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link className={styles.link} to={demoSpec.route}>
-                                  { demoSpec.title }
-                                </Link>
-                              </Text>
-                            ))
-                        }
-                      </Card>
-
-                      <Card transparent>
-                        <h2>
-                          <Text headline>Form Components</Text>
-                        </h2>
-                      </Card>
-                      <Card transparent>
-                        {
-                          demoSpecs
-                            .filter(({ category }) => category === 'Form')
-                            .map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link className={styles.link} to={demoSpec.route}>
-                                  { demoSpec.title }
-                                </Link>
-                              </Text>
-                            ))
-                        }
-                      </Card>
-
-                      <Card transparent>
-                        <h2>
-                          <Text headline>Other Components</Text>
-                        </h2>
-                      </Card>
-                      <Card transparent>
-                        {
-                          demoSpecs
-                            .filter(({ category }) => !category)
-                            .map(demoSpec => (
-                              <Text headline regular key={demoSpec.title}>
-                                <Link className={styles.link} to={demoSpec.route}>
-                                  { demoSpec.title }
-                                </Link>
-                              </Text>
-                            ))
-                        }
-                      </Card>
+                      {routeList.map(([category, routes]) => {
+                        const title = routes[0].component ?
+                          `${category} Components` :
+                          category;
+                        return (
+                          <Fragment key={category}>
+                            <Card transparent>
+                              <h2>
+                                <Text headline>{title}</Text>
+                              </h2>
+                            </Card>
+                            <Card transparent>
+                              {routes.map(demoSpec => (
+                                <WithHighlighting
+                                  key={demoSpec.title}
+                                  highlighted={demoSpec.highlighted}>
+                                  <Text headline regular>
+                                    <Link
+                                      ref={
+                                        demoSpec.highlighted ?
+                                          this.highlightedRef :
+                                          ''
+                                      }
+                                      className={styles.link}
+                                      to={demoSpec.route}>
+                                      {demoSpec.title}
+                                    </Link>
+                                  </Text>
+                                </WithHighlighting>
+                              ))}
+                            </Card>
+                          </Fragment>
+                        );
+                      })}
                     </Section>
                   </PageBlock>
                 </div>
@@ -182,3 +231,5 @@ export default class Header extends Component {
     );
   }
 }
+
+export default withRouter(Header);
