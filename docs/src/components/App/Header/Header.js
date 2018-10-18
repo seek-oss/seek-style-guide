@@ -56,7 +56,7 @@ class Header extends Component {
   };
 
   componentWillUnmount = () => {
-    document.removeEventListener(this.handleDocumentKeydown);
+    document.removeEventListener('keydown', this.handleDocumentKeydown);
   };
 
   handleDocumentKeydown = event => {
