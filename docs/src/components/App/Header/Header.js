@@ -70,7 +70,6 @@ class Header extends Component {
   };
 
   handleSearchbarKeydown = event => {
-    const { highlightedElement, displayComponents } = this.state;
     switch (event.key) {
       case 'Enter':
         const route = this.highlightedRef.current.props.to;
@@ -79,18 +78,20 @@ class Header extends Component {
         break;
       case 'ArrowUp':
         event.preventDefault();
-        const newIndexUp = highlightedElement - 1;
-        this.setState({
-          highlightedElement: newIndexUp < 0 ? 0 : newIndexUp
+        this.setState(currentState => {
+          const newIndexUp = currentState.highlightedElement - 1;
+          return { highlightedElement: newIndexUp < 0 ? 0 : newIndexUp };
         });
         break;
       case 'ArrowDown':
         event.preventDefault();
-        const newIndexDown = highlightedElement + 1;
-        const totalLength = displayComponents.length;
-        this.setState({
-          highlightedElement:
-            newIndexDown < totalLength ? newIndexDown : totalLength - 1
+        this.setState(currentState => {
+          const newIndexDown = currentState.highlightedElement + 1;
+          const totalLength = currentState.displayComponents.length;
+          return {
+            highlightedElement:
+              newIndexDown < totalLength ? newIndexDown : totalLength - 1
+          };
         });
         break;
       default:
