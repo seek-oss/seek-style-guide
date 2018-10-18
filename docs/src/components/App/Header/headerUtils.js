@@ -10,7 +10,7 @@ export const buildRoutes = inputRoutes =>
     };
   }, {});
 
-export const sortRoutes = (routeA, routeB) => {
+export const compareRoutes = (routeA, routeB) => {
   if (!routeA.component && routeB.component) {
     return -1;
   }
@@ -41,7 +41,7 @@ const sort = fn => arr => arr.sort(fn);
 
 export const generateRouteList = highlightedElement =>
   pipe(
-    sort(sortRoutes),
+    sort(compareRoutes),
     applyHighlighting(highlightedElement),
     buildRoutes,
     Object.entries
