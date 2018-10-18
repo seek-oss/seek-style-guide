@@ -138,6 +138,14 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     margin-bottom: 6px;
   }
 }
+.WithHighlighting__highlightWrapper___1oapN {
+  position: relative;
+}
+.WithHighlighting__highlightedIcon___QJ6jZ {
+  position: absolute;
+  top: 16px;
+  left: -24px;
+}
 ._3D-VK4o>*{min-width:150px}._3H0uKbk{display:block}._1EaLs4d{width:300px}._13P-4TD{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}._13P-4TD>*{min-width:150px}._3ZuHJ-R{background-color:#eee}._3u6UdGU{display:block}.Footer__root___3Nd3p {
   text-align: center;
   margin: 48px 0;
