@@ -1,8 +1,7 @@
 import React from 'react';
 import ProfileIcon from './ProfileIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Profile': (
-    <ProfileIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Profile', <ProfileIcon />)
 };

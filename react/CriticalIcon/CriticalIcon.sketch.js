@@ -1,8 +1,7 @@
 import React from 'react';
 import CriticalIcon from './CriticalIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Critical': (
-    <CriticalIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Critical', <CriticalIcon />)
 };

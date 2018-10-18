@@ -1,8 +1,7 @@
 import React from 'react';
 import BuildingIcon from './BuildingIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Building': (
-    <BuildingIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Building', <BuildingIcon />)
 };

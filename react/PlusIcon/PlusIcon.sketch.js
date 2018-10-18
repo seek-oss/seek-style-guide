@@ -1,8 +1,7 @@
 import React from 'react';
 import PlusIcon from './PlusIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Plus': (
-    <PlusIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Plus', <PlusIcon />)
 };

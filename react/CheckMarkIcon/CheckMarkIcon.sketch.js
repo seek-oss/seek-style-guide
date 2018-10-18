@@ -1,8 +1,7 @@
 import React from 'react';
 import CheckMarkIcon from './CheckMarkIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/CheckMark': (
-    <CheckMarkIcon size="standard" />
-  )
+  ...generateSketchIconSizes('CheckMark', <CheckMarkIcon />)
 };

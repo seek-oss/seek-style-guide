@@ -1,11 +1,8 @@
 import React from 'react';
 import TwitterIcon from './TwitterIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Twitter/1. Unfilled': (
-    <TwitterIcon size="standard" />
-  ),
-  'Icons/Twitter/2. Filled': (
-    <TwitterIcon size="standard" filled />
-  )
+  ...generateSketchIconSizes('Twitter/1. Unfilled', <TwitterIcon />),
+  ...generateSketchIconSizes('Twitter/2. Filled', <TwitterIcon filled />)
 };

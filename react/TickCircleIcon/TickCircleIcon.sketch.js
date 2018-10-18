@@ -1,11 +1,8 @@
 import React from 'react';
 import TickCircleIcon from './TickCircleIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/TickCircle/1. Unfilled': (
-    <TickCircleIcon size="standard" />
-  ),
-  'Icons/TickCircle/2. Filled': (
-    <TickCircleIcon size="standard" filled />
-  )
+  ...generateSketchIconSizes('TickCircle/1. Unfilled', <TickCircleIcon />),
+  ...generateSketchIconSizes('TickCircle/2. Filled', <TickCircleIcon filled />)
 };

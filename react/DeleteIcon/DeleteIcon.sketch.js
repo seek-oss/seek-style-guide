@@ -1,8 +1,7 @@
 import React from 'react';
 import DeleteIcon from './DeleteIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Delete': (
-    <DeleteIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Delete', <DeleteIcon />)
 };

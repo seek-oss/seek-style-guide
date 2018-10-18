@@ -1,8 +1,7 @@
 import React from 'react';
 import DownRightArrowIcon from './DownRightArrowIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/DownRightArrow': (
-    <DownRightArrowIcon size="standard" />
-  )
+  ...generateSketchIconSizes('DownRightArrow', <DownRightArrowIcon />)
 };

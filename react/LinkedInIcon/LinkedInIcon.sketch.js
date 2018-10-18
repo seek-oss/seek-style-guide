@@ -1,11 +1,8 @@
 import React from 'react';
 import LinkedInIcon from './LinkedInIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/LinkedIn/1. Unfilled': (
-    <LinkedInIcon size="standard" />
-  ),
-  'Icons/LinkedIn/2. Filled': (
-    <LinkedInIcon size="standard" filled />
-  )
+  ...generateSketchIconSizes('LinkedIn/1. Unfilled', <LinkedInIcon />),
+  ...generateSketchIconSizes('LinkedIn/2. Filled', <LinkedInIcon filled />)
 };

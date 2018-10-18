@@ -1,11 +1,8 @@
 import React from 'react';
 import FacebookIcon from './FacebookIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Facebook/1. Unfilled': (
-    <FacebookIcon size="standard" />
-  ),
-  'Icons/Facebook/2. Filled': (
-    <FacebookIcon size="standard" filled />
-  )
+  ...generateSketchIconSizes('Facebook/1. Unfilled', <FacebookIcon />),
+  ...generateSketchIconSizes('Facebook/2. Filled', <FacebookIcon filled />)
 };

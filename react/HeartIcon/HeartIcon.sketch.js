@@ -1,11 +1,8 @@
 import React from 'react';
 import HeartIcon from './HeartIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Heart/1. Unfilled': (
-    <HeartIcon size="standard" />
-  ),
-  'Icons/Heart/2. Filled': (
-    <HeartIcon size="standard" filled />
-  )
+  ...generateSketchIconSizes('Heart/1. Unfilled', <HeartIcon />),
+  ...generateSketchIconSizes('Heart/2. Filled', <HeartIcon filled />)
 };

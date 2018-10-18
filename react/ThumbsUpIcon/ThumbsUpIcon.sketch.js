@@ -1,8 +1,7 @@
 import React from 'react';
 import ThumbsUpIcon from './ThumbsUpIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/ThumbsUp': (
-    <ThumbsUpIcon size="standard" />
-  )
+  ...generateSketchIconSizes('ThumbsUp', <ThumbsUpIcon />)
 };

@@ -1,8 +1,7 @@
 import React from 'react';
 import HelpIcon from './HelpIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Help': (
-    <HelpIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Help', <HelpIcon />)
 };

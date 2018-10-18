@@ -1,8 +1,7 @@
 import React from 'react';
 import InfoIcon from './InfoIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Info': (
-    <InfoIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Info', <InfoIcon />)
 };

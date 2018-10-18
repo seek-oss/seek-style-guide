@@ -1,8 +1,7 @@
 import React from 'react';
 import CloseIcon from './CloseIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/Close': (
-    <CloseIcon size="standard" />
-  )
+  ...generateSketchIconSizes('Close', <CloseIcon />)
 };

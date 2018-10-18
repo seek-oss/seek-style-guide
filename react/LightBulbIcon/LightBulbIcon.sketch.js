@@ -1,8 +1,7 @@
 import React from 'react';
 import LightBulbIcon from './LightBulbIcon';
+import generateSketchIconSizes from '../private/generateSketchIconSizes';
 
 export const symbols = {
-  'Icons/LightBulb': (
-    <LightBulbIcon size="standard" />
-  )
+  ...generateSketchIconSizes('LightBulb', <LightBulbIcon />)
 };
