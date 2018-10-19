@@ -5,7 +5,8 @@ import queryString from 'query-string';
 import base64url from 'base64-url';
 import debounce from 'lodash/debounce';
 import localforage from 'localforage';
-import { Parser } from 'acorn-jsx';
+import acorn from 'acorn';
+import acornJsx from 'acorn-jsx';
 import Preview from './Preview/Preview';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
@@ -102,8 +103,7 @@ export default class Sandbox extends Component {
     cm.clearGutter(styles.gutter);
 
     try {
-      const parser = new Parser({ plugins: { jsx: true } }, `<div>${code}</div>`);
-      parser.parse();
+      acorn.Parser.extend(acornJsx()).parse(`<div>${code}</div>`);
 
       const cursor = cm.getDoc().getCursor();
       this.setState({ renderCode: code, cursor });
