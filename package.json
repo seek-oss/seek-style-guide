@@ -27,6 +27,7 @@
     "build-gh-pages": "BASE_HREF=/seek-style-guide/ npm run build",
     "deploy-gh-pages": "node scripts/deploy-gh-pages.js",
     "deploy-surge": "surge -p ./docs/dist",
+    "post-commit-status": "node scripts/post-commit-status",
     "commit": "git-cz",
     "commitmsg": "commitlint --edit --extends seek",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
@@ -66,6 +67,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.0",
+    "@octokit/rest": "^15.15.1",
     "acorn": "^6.0.2",
     "acorn-jsx": "^5.0.0",
     "autoprefixer": "^7.1.5",
