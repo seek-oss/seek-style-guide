@@ -5,8 +5,8 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 
 import themeVars from '../private/themeVars';
-import Button from '../Button/Button';
-import ChevronIcon from '../ChevronIcon/ChevronIcon';
+import Text from '../Text/Text';
+import TextLink from '../TextLink/TextLink';
 
 const { rowHeight, standardTypeRowSpan, interactionTypeRowSpan } = themeVars;
 const buttonHeight = rowHeight * interactionTypeRowSpan;
@@ -127,16 +127,15 @@ class ReadMore extends PureComponent<Props, State> {
             <div className={classnames(styles.fadeOut, fadeColor)} />
           ) : null}
         </div>
-        {showMoreLessButton ? (
-          <Button color="transparent" onClick={this.handleShowMore}>
+        {showMoreLessButton && (
+          <TextLink
+            chevron={showMore ? 'up' : 'down'}
+            className={styles.showMore}
+            component={Text}
+            onClick={this.handleShowMore}>
             {showMore ? lessLabel : moreLabel}
-            <ChevronIcon
-              direction={showMore ? 'up' : 'down'}
-              size="standard"
-              className={styles.chevron}
-            />
-          </Button>
-        ) : null}
+          </TextLink>
+        )}
       </div>
     );
   }
