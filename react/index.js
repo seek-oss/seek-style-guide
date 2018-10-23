@@ -4,6 +4,7 @@ export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuidePr
 export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider'; // Alias for backwards compatibility
 
 // Components
+export { default as AccordionItem } from './AccordionItem/AccordionItem';
 export { default as Alert } from './Alert/Alert';
 export { default as Badge } from './Badge/Badge';
 export { default as Button } from './Button/Button';
