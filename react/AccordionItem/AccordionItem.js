@@ -10,7 +10,7 @@ type Props = {
   title: React$Node,
   id: string | number,
   expanded?: boolean,
-  onChange?: func,
+  onClick?: func,
   className?: object
 };
 
@@ -42,8 +42,8 @@ export default class AccordionItem extends Component<Props, State> {
   props: Props;
 
   handleChange = () => {
-    if (this.props.onChange) {
-      this.props.onChange();
+    if (this.props.onClick) {
+      this.props.onClick();
       return;
     }
     this.setState({
