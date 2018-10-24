@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { transform } from 'buble';
+import { transform } from 'buble/dist/buble-browser.cjs.js'; // Fix for https://github.com/Rich-Harris/buble/issues/159
 import scopeEval from 'scope-eval';
 
 export default class RenderJsx extends Component {

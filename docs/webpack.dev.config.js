@@ -121,7 +121,9 @@ const createConfigWithPort = (port) => {
       new webpack.DefinePlugin({
         'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
       })
-    ]
+    ],
+
+    devtool: 'cheap-module-eval-source-map'
   });
 }
 
