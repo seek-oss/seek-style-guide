@@ -14,16 +14,24 @@ type Props = {
   className?: object
 };
 
-export default class AccordionItem extends Component<Props> {
+type State = {
+  expanded: boolean
+};
+
+export default class AccordionItem extends Component<Props, State> {
+  static defaultProps = {
+    expanded: false
+  }
+
   constructor(props) {
     super(props);
-    const expanded = this.props.expanded ? true : false;
+    const { expanded } = this.props;
     this.state = {
       expanded
     };
   }
 
-  componentWillReceiveProps = nextProps => {
+  componentWillReceiveProps(nextProps) {
     if (this.props.expanded !== nextProps.expanded) {
       this.setState({
         expanded: nextProps.expanded

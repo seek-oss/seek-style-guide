@@ -30,10 +30,10 @@ export default {
   container: AccordionContainer,
   block: true,
   initialProps: {
-    title: () => <Text>Business ethics and the characteristics that are defining our generations leadership</Text>,
+    title: () => <Text>Living Style Guide</Text>,
     onClick: () => {},
     id: 'accordion_1',
-    children: <Text>Hello world</Text>,
+    children: <Text>This is some text inside of an Accordion Item</Text>
   },
   options: [
     {

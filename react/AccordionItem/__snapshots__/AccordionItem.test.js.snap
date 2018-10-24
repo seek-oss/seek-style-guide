@@ -17,7 +17,109 @@ exports[`should render AccordionItem 1`] = `
   >
     <div>
       <span>
-        Hello world
+        Living Style Guide
+      </span>
+    </div>
+    <ChevronIcon
+      className="AccordionItem__chevron"
+      direction="down"
+      svgClassName="AccordionItem__chevronSvg"
+    />
+  </label>
+  <div
+    className="AccordionItem__toggleContainer"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`should render expanded when prop changes 1`] = `
+<div
+  className=""
+>
+  <input
+    checked={true}
+    className="AccordionItem__toggle"
+    id="abc123"
+    type="checkbox"
+  />
+  <label
+    className="AccordionItem__toggleLink AccordionItem__toggleLabel"
+    htmlFor="abc123"
+    onClick={[Function]}
+  >
+    <div>
+      <span>
+        Living Style Guide
+      </span>
+    </div>
+    <ChevronIcon
+      className="AccordionItem__chevron"
+      direction="down"
+      svgClassName="AccordionItem__chevronSvg"
+    />
+  </label>
+  <div
+    className="AccordionItem__toggleContainer"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`should render with className 1`] = `
+<div
+  className="foobar"
+>
+  <input
+    checked={false}
+    className="AccordionItem__toggle"
+    id="abc123"
+    type="checkbox"
+  />
+  <label
+    className="AccordionItem__toggleLink AccordionItem__toggleLabel"
+    htmlFor="abc123"
+    onClick={[Function]}
+  >
+    <div>
+      <span>
+        Living Style Guide
+      </span>
+    </div>
+    <ChevronIcon
+      className="AccordionItem__chevron"
+      direction="down"
+      svgClassName="AccordionItem__chevronSvg"
+    />
+  </label>
+  <div
+    className="AccordionItem__toggleContainer"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`should render with expanded prop 1`] = `
+<div
+  className=""
+>
+  <input
+    checked={true}
+    className="AccordionItem__toggle"
+    id="abc123"
+    type="checkbox"
+  />
+  <label
+    className="AccordionItem__toggleLink AccordionItem__toggleLabel"
+    htmlFor="abc123"
+    onClick={[Function]}
+  >
+    <div>
+      <span>
+        Living Style Guide
       </span>
     </div>
     <ChevronIcon
