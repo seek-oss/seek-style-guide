@@ -6,7 +6,7 @@ const defaultProps = {
   title: () => <span>Living Style Guide</span>,
   children: <span>This is the content inside an Accordion Item</span>,
   id: 'abc123'
-}
+};
 const renderAccordion = (props = defaultProps) => shallow(<AccordionItem {...props}>Hello world</AccordionItem>);
 
 test('should render AccordionItem', () => {
