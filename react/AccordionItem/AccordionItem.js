@@ -10,12 +10,12 @@ type Props = {
   title: React$Node,
   id: string | number,
   expanded?: boolean,
-  onClick?: func,
-  className?: object
+  onClick?: Function,
+  className?: string
 };
 
 type State = {
-  expanded: boolean
+  expanded?: boolean
 };
 
 export default class AccordionItem extends Component<Props, State> {
@@ -23,7 +23,7 @@ export default class AccordionItem extends Component<Props, State> {
     expanded: false
   }
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     const { expanded } = this.props;
     this.state = {
@@ -31,7 +31,7 @@ export default class AccordionItem extends Component<Props, State> {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     if (this.props.expanded !== nextProps.expanded) {
       this.setState({
         expanded: nextProps.expanded
@@ -57,17 +57,16 @@ export default class AccordionItem extends Component<Props, State> {
     return (
       <div
         className={classnames({
-          [className]: className
+          ...(className ? { [className]: className } : {})
         })}>
-        <input id={id} className={styles.toggle} type="checkbox" checked={expanded} />
+        <input onChange={this.handleChange} id={id} className={styles.toggle} type="checkbox" checked={expanded} />
         <label
           htmlFor={id}
-          onClick={this.handleChange}
           className={classnames({
             [styles.toggleLink]: true,
             [styles.toggleLabel]: true
           })}>
-          <div>{title()}</div>
+          <div>{title}</div>
           <ChevronIcon
             direction="down"
             className={styles.chevron}

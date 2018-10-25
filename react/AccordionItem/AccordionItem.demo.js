@@ -30,7 +30,7 @@ export default {
   container: AccordionContainer,
   block: true,
   initialProps: {
-    title: () => <Text>Living Style Guide</Text>,
+    title: <Text>Living Style Guide</Text>,
     id: 'accordion_1',
     children: <Text>This is some text inside of an Accordion Item</Text>
   },

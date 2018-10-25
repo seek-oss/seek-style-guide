@@ -8,17 +8,15 @@ exports[`should render AccordionItem 1`] = `
     checked={false}
     className="AccordionItem__toggle"
     id="abc123"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
-    onClick={[Function]}
   >
     <div>
-      <span>
-        Living Style Guide
-      </span>
+      <Component />
     </div>
     <ChevronIcon
       className="AccordionItem__chevron"
@@ -42,17 +40,15 @@ exports[`should render expanded when prop changes 1`] = `
     checked={true}
     className="AccordionItem__toggle"
     id="abc123"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
-    onClick={[Function]}
   >
     <div>
-      <span>
-        Living Style Guide
-      </span>
+      <Component />
     </div>
     <ChevronIcon
       className="AccordionItem__chevron"
@@ -76,17 +72,15 @@ exports[`should render with className 1`] = `
     checked={false}
     className="AccordionItem__toggle"
     id="abc123"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
-    onClick={[Function]}
   >
     <div>
-      <span>
-        Living Style Guide
-      </span>
+      <Component />
     </div>
     <ChevronIcon
       className="AccordionItem__chevron"
@@ -110,17 +104,15 @@ exports[`should render with expanded prop 1`] = `
     checked={true}
     className="AccordionItem__toggle"
     id="abc123"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
-    onClick={[Function]}
   >
     <div>
-      <span>
-        Living Style Guide
-      </span>
+      <Component />
     </div>
     <ChevronIcon
       className="AccordionItem__chevron"
