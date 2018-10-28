@@ -8,17 +8,17 @@ import type { Level } from '../private/level';
 
 type Props = {
   children: any,
-  className?: string,
-  header?: boolean,
-  pullout?: boolean,
-  slim?: boolean,
-  tone?: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.NEUTRAL | typeof TONE.HELP,
-  level?: Level
+  className: string,
+  header: boolean,
+  pullout: boolean,
+  slim: boolean,
+  tone: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.INFO | typeof TONE.HELP,
+  level: Level
 }
 
 export default function Section({
   children,
-  className = '',
+  className,
   header,
   pullout,
   slim,
@@ -47,5 +47,7 @@ Section.defaultProps = {
   className: '',
   header: false,
   pullout: false,
-  slim: false
+  slim: false,
+  tone: '',
+  level: ''
 };
