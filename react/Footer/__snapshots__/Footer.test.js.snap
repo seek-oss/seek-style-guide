@@ -564,10 +564,13 @@ exports[`Footer: should render when authenticated 1`] = `
               >
                 Work for SEEK
               </a>
-              <span
-                class="FooterLink__newBadge"
-              >
-                new
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
               </span>
             </li>
             <li
@@ -1329,10 +1332,13 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 Work for SEEK
               </a>
-              <span
-                class="FooterLink__newBadge"
-              >
-                new
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
               </span>
             </li>
             <li
@@ -2094,10 +2100,13 @@ exports[`Footer: should render when unauthenticated 1`] = `
               >
                 Work for SEEK
               </a>
-              <span
-                class="FooterLink__newBadge"
-              >
-                new
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
               </span>
             </li>
             <li
@@ -2859,10 +2868,13 @@ exports[`Footer: should render with locale of AU 1`] = `
               >
                 Work for SEEK
               </a>
-              <span
-                class="FooterLink__newBadge"
-              >
-                new
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
               </span>
             </li>
             <li
@@ -3510,10 +3522,13 @@ exports[`Footer: should render with locale of NZ 1`] = `
               >
                 Work for SEEK
               </a>
-              <span
-                class="FooterLink__newBadge"
-              >
-                new
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
               </span>
             </li>
             <li
