@@ -24,6 +24,15 @@ test('should render with className', () => {
   expect(accordion).toMatchSnapshot();
 });
 
+test('should call in an onClick function', () => {
+  const onClick = jest.fn();
+  const accordion = renderAccordion({ ...defaultProps, onClick });
+  const event = { expanded: true };
+
+  accordion.find('input').simulate('change', event);
+  expect(onClick).toBeCalledWith(event);
+});
+
 test('should render expanded when prop changes', () => {
   jest.spyOn(AccordionItem.prototype, 'componentWillReceiveProps');
   const accordion = renderAccordion();

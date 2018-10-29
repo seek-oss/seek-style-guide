@@ -15,9 +15,7 @@ exports[`should render AccordionItem 1`] = `
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
   >
-    <div>
-      <Component />
-    </div>
+    <Component />
     <ChevronIcon
       className="AccordionItem__chevron"
       direction="down"
@@ -47,9 +45,7 @@ exports[`should render expanded when prop changes 1`] = `
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
   >
-    <div>
-      <Component />
-    </div>
+    <Component />
     <ChevronIcon
       className="AccordionItem__chevron"
       direction="down"
@@ -79,9 +75,7 @@ exports[`should render with className 1`] = `
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
   >
-    <div>
-      <Component />
-    </div>
+    <Component />
     <ChevronIcon
       className="AccordionItem__chevron"
       direction="down"
@@ -111,9 +105,7 @@ exports[`should render with expanded prop 1`] = `
     className="AccordionItem__toggleLink AccordionItem__toggleLabel"
     htmlFor="abc123"
   >
-    <div>
-      <Component />
-    </div>
+    <Component />
     <ChevronIcon
       className="AccordionItem__chevron"
       direction="down"

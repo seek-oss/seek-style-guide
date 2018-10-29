@@ -30,7 +30,7 @@ export default {
   container: AccordionContainer,
   block: true,
   initialProps: {
-    title: <Text>Living Style Guide</Text>,
+    title: <Text baseline={false} raw>Living Style Guide</Text>,
     id: 'accordion_1',
     children: <Text>This is some text inside of an Accordion Item</Text>
   },
@@ -56,7 +56,7 @@ export default {
           label: 'Custom onClick',
           transformProps: props => ({
             ...props,
-            onClick: () => {}
+            onClick: expanded => console.log(expanded)
           })
         }
       ]

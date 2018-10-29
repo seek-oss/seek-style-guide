@@ -9,23 +9,24 @@ type Props = {
   children: React$Node,
   title: React$Node,
   id: string | number,
-  expanded?: boolean,
+  expanded: boolean,
   onClick?: Function,
-  className?: string
+  className: string
 };
 
 type State = {
-  expanded?: boolean
+  expanded: boolean
 };
 
 export default class AccordionItem extends Component<Props, State> {
   static defaultProps = {
-    expanded: false
+    expanded: false,
+    className: ''
   }
 
   constructor(props: Props) {
     super(props);
-    const { expanded } = this.props;
+    const { expanded } = props;
     this.state = {
       expanded
     };
@@ -42,13 +43,15 @@ export default class AccordionItem extends Component<Props, State> {
   props: Props;
 
   handleChange = () => {
-    if (this.props.onClick) {
-      this.props.onClick();
-      return;
-    }
+    const expanded = !this.state.expanded;
+
     this.setState({
-      expanded: !this.state.expanded
+      expanded
     });
+
+    if (typeof this.props.onClick === 'function') {
+      this.props.onClick({ expanded });
+    }
   }
 
   render() {
@@ -57,16 +60,13 @@ export default class AccordionItem extends Component<Props, State> {
     return (
       <div
         className={classnames({
-          ...(className ? { [className]: className } : {})
+          [className]: className
         })}>
         <input onChange={this.handleChange} id={id} className={styles.toggle} type="checkbox" checked={expanded} />
         <label
           htmlFor={id}
-          className={classnames({
-            [styles.toggleLink]: true,
-            [styles.toggleLabel]: true
-          })}>
-          <div>{title}</div>
+          className={classnames([styles.toggleLink], [styles.toggleLabel])}>
+          {title}
           <ChevronIcon
             direction="down"
             className={styles.chevron}
