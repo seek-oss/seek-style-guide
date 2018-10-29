@@ -61,13 +61,15 @@
 }
 
 .newBadge {
-  margin-left: 5px;
   @media only screen and (max-width: @container-width) {
     position: absolute;
-    top: -4px;
-    right: (@gutter-width / 2);
+    right: 0;
+    top: -@touchableTextHeight / 2 + 2px;
     &.newBadge_isShort {
-      right: @gutter-width * 1.5;
+      right: 17%;
+    }
+    &.newBadge_isLast {
+      right: @gutter-width;
     }
   }
 }
