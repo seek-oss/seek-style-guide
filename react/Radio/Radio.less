@@ -2,9 +2,7 @@
 @circumference: @row-height * 5;
 
 .root {
-  .touchableText(@standard-type-scale);
-  display: inline-flex;
-  align-items: center;
+  margin-bottom:  @row-height * 2;
 }
 
 .input {
@@ -20,7 +18,6 @@
 .label {
   display: flex;
   cursor: pointer;
-  align-items: center;
 
   :global(*) {
     pointer-events: none;
@@ -28,6 +25,10 @@
 }
 
 .labelText {
+  .standardTextResponsive(@baseline: false);
+  line-height: @circumference;
+  margin-top: (@circumference - (@standard-type-row-span * @row-height)) / 2;
+
   .input:checked + .label & {
     font-weight: @sk-bold;
   }
