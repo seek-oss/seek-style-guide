@@ -8,7 +8,7 @@ type Props = {
   children: React$Node,
   secondary?: boolean,
   className?: string,
-  tone: typeof TONE.CRITICAL | typeof TONE.NEUTRAL
+  tone?: typeof TONE.CRITICAL | typeof TONE.NEUTRAL
 };
 
 export default function Highlight(props: Props) {
