@@ -12,8 +12,8 @@ type Props = {
   header: boolean,
   pullout: boolean,
   slim: boolean,
-  tone: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.INFO | typeof TONE.HELP,
-  level: Level
+  tone: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.INFO | typeof TONE.HELP | '',
+  level: Level | ''
 }
 
 export default function Section({
