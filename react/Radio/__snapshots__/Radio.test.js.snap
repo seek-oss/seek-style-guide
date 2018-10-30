@@ -35,13 +35,11 @@ exports[`Radio inputProps should pass through other props to the input 1`] = `
         r="100"
       />
     </svg>
-    <Text
-      baseline={false}
+    <span
       className="Radio__labelText"
-      raw={true}
     >
       Still in role
-    </Text>
+    </span>
   </label>
 </div>
 `;
@@ -80,13 +78,11 @@ exports[`Radio should render with className 1`] = `
         r="100"
       />
     </svg>
-    <Text
-      baseline={false}
+    <span
       className="Radio__labelText"
-      raw={true}
     >
       Still in role
-    </Text>
+    </span>
   </label>
 </div>
 `;
@@ -125,13 +121,11 @@ exports[`Radio should render with simple props 1`] = `
         r="100"
       />
     </svg>
-    <Text
-      baseline={false}
+    <span
       className="Radio__labelText"
-      raw={true}
     >
       Still in role
-    </Text>
+    </span>
   </label>
 </div>
 `;
