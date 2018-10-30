@@ -2,7 +2,6 @@ import styles from './Radio.less';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import Text from '../Text/Text';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
