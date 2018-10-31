@@ -42,7 +42,7 @@ type FieldLabelProps = {
   label?: string,
   labelProps?: Object,
   secondaryLabel?: string,
-  tertiaryLabel?: string
+  tertiaryLabel?: React$Node
 };
 
 type FieldMessageProps = {
