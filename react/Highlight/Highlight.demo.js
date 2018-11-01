@@ -17,7 +17,7 @@ export default {
   component: Text,
   initialProps: {
     headline: true,
-    children: renderChildren({ tone: TONE.NEUTRAL })
+    children: renderChildren({})
   },
   options: [
     {

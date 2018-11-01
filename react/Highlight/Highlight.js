@@ -8,11 +8,11 @@ type Props = {
   children: React$Node,
   secondary?: boolean,
   className?: string,
-  tone?: typeof TONE.CRITICAL | typeof TONE.NEUTRAL
+  tone?: typeof TONE.CRITICAL
 };
 
 export default function Highlight(props: Props) {
-  const { children, secondary, tone = TONE.NEUTRAL, className, ...restProps } = props;
+  const { children, secondary, tone, className, ...restProps } = props;
 
   return (
     <mark
@@ -20,7 +20,7 @@ export default function Highlight(props: Props) {
       className={classnames({
         [styles.root]: true,
         [styles.secondaryText]: secondary,
-        [styles[tone]]: true,
+        [styles[tone]]: tone,
         ...(className ? { [className]: className } : {})
       })}>
       {children}
