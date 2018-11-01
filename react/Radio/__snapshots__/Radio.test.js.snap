@@ -2,20 +2,20 @@
 
 exports[`Radio inputProps should pass through other props to the input 1`] = `
 <div
-  className="Radio__root"
+  className=""
 >
-  <input
-    checked={true}
-    className="Radio__input"
-    data-automation="first-name-field"
-    id="testRadio"
-    onChange={[Function]}
-    type="radio"
-  />
   <label
     className="Radio__label"
     htmlFor="testRadio"
   >
+    <input
+      checked={true}
+      className="Radio__input"
+      data-automation="first-name-field"
+      id="testRadio"
+      onChange={[Function]}
+      type="radio"
+    />
     <svg
       className="Radio__svg"
       focusable="false"
@@ -48,19 +48,19 @@ exports[`Radio inputProps should pass through other props to the input 1`] = `
 
 exports[`Radio should render with className 1`] = `
 <div
-  className="Radio__root testClassname"
+  className="testClassname"
 >
-  <input
-    checked={false}
-    className="Radio__input"
-    id="testRadio"
-    onChange={[Function]}
-    type="radio"
-  />
   <label
     className="Radio__label"
     htmlFor="testRadio"
   >
+    <input
+      checked={false}
+      className="Radio__input"
+      id="testRadio"
+      onChange={[Function]}
+      type="radio"
+    />
     <svg
       className="Radio__svg"
       focusable="false"
@@ -93,19 +93,19 @@ exports[`Radio should render with className 1`] = `
 
 exports[`Radio should render with simple props 1`] = `
 <div
-  className="Radio__root"
+  className=""
 >
-  <input
-    checked={false}
-    className="Radio__input"
-    id="testRadio"
-    onChange={[Function]}
-    type="radio"
-  />
   <label
     className="Radio__label"
     htmlFor="testRadio"
   >
+    <input
+      checked={false}
+      className="Radio__input"
+      id="testRadio"
+      onChange={[Function]}
+      type="radio"
+    />
     <svg
       className="Radio__svg"
       focusable="false"
