@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Highlight: should render as secondary 1`] = `
+<mark
+  className="Highlight__root Highlight__secondaryText Highlight__critical foo"
+>
+  text
+</mark>
+`;
+
+exports[`Highlight: should render with className 1`] = `
+<mark
+  className="Highlight__root foo"
+>
+  text
+</mark>
+`;
+
+exports[`Highlight: should render with defaults 1`] = `
+<mark
+  className="Highlight__root"
+>
+  text
+</mark>
+`;
+
+exports[`Highlight: should render with tone 1`] = `
+<mark
+  className="Highlight__root Highlight__critical foo"
+>
+  text
+</mark>
+`;
