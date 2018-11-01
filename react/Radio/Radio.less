@@ -1,10 +1,15 @@
 @import (reference) "~seek-style-guide/theme";
 @circumference: @row-height * 5;
+@touchableMargin: (@touchableTextHeight - @circumference) / 2;
 
-.root {
-  .touchableText(@standard-type-scale);
-  display: inline-flex;
-  align-items: center;
+.label {
+  display: flex;
+  cursor: pointer;
+  min-height: @touchableTextHeight;
+
+  :global(*) {
+    pointer-events: none;
+  }
 }
 
 .input {
@@ -13,36 +18,34 @@
   width: @circumference;
   height: @circumference;
   border: none;
-  margin: 0;
-  cursor: pointer;
-}
-
-.label {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-
-  :global(*) {
-    pointer-events: none;
-  }
+  margin: @touchableMargin 0 0 0;
 }
 
 .labelText {
-  .input:checked + .label & {
+  @media @desktop {
+    padding: (((@interaction-type-row-span - @standard-type-row-span) / 2) * @row-height) 0;
+  }
+  @media @mobile {
+    padding: (((@interaction-type-row-span - @standard-type-row-span-mobile) / 2) * @row-height) 0;
+  }
+
+  .input:checked + .svg & {
     font-weight: @sk-bold;
   }
 }
 
 .svg {
+  flex-shrink: 0;
   background-color: @sk-white;
   width: @circumference;
   height: @circumference;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: 100%;
   padding: 5px;
+  margin-top: @touchableMargin;
   margin-right: @gutter-width / 2;
 
-  .input:not([readonly]):not([disabled]):focus + .label & {
+  .input:not([readonly]):not([disabled]):focus + .svg & {
     .focus();
     border-radius: 100%;
   }
@@ -55,14 +58,14 @@
   transform-origin: 50% 50%;
   opacity: 0;
 
-  .input:active + .label & {
+  .input:active + .svg & {
     transform: scale(0.9);
   }
 
   &.circle_isSelected {
     fill: @sk-form-accent;
 
-    .input:checked + .label & {
+    .input:checked + .svg & {
       opacity: 1;
     }
   }
@@ -70,8 +73,8 @@
   &.circle_isHover {
     fill: @sk-gray-light;
 
-    .input:focus:not(:checked) + .label &,
-    .input:hover:not(:checked) + .label & {
+    .input:focus:not(:checked) + .svg &,
+    .input:hover:not(:checked) + .svg & {
       opacity: 1;
     }
   }
