@@ -60,8 +60,7 @@ class Header extends Component {
   };
 
   handleDocumentKeydown = event => {
-    const isInputField =
-      ['INPUT', 'TEXTAREA'].indexOf(event.target.tagName) !== -1;
+    const isInputField = event.target.tagName.match(/INPUT|TEXTAREA/i) !== null;
     if (event.key === '/' && !isInputField) {
       event.preventDefault();
       this.handleMenuToggle({ target: { checked: true } });
