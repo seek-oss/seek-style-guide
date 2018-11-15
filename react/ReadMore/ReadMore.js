@@ -1,87 +1,34 @@
 // @flow
-import styles from './ReadMore.less';
-
 import React, { PureComponent } from 'react';
-import classnames from 'classnames';
-
-import themeVars from '../private/themeVars';
 import Text from '../Text/Text';
 import TextLink from '../TextLink/TextLink';
 
-const { rowHeight, standardTypeRowSpan, interactionTypeRowSpan } = themeVars;
-const buttonHeight = rowHeight * interactionTypeRowSpan;
-
-const getMaxHeight = (maxLines?: number, maxRows?: number) => {
-  if (maxLines) {
-    return maxLines * rowHeight * standardTypeRowSpan;
-  }
-
-  if (maxRows) {
-    return maxRows * rowHeight;
-  }
-
-  return 0;
-};
-
 type Props = {|
-  children: React$Element<*>,
-  maxLines?: number,
-  maxRows?: number,
+  id: string,
+  preview: React$Element<*>,
+  full: React$Element<*>,
   moreLabel: string,
   lessLabel: string,
-  backgroundComponentName: 'card' | 'body',
   onShowMore?: Function
 |};
+
 type State = {|
-  showMore: boolean,
-  tooLong: boolean,
-  mounted: boolean
+  showMore: boolean
 |};
+
 class ReadMore extends PureComponent<Props, State> {
   static defaultProps = {
     moreLabel: 'More',
-    lessLabel: 'Less',
-    backgroundComponentName: 'card'
+    lessLabel: 'Less'
   };
 
   constructor(props: Props) {
     super(props);
 
-    this.contentRef = null;
-
     this.state = {
-      showMore: false,
-      tooLong: false,
-      mounted: false
+      showMore: false
     };
   }
-
-  componentDidMount() {
-    this.update();
-  }
-
-  componentDidUpdate() {
-    this.update();
-  }
-
-  contentRef: ?HTMLDivElement;
-
-  update = () => {
-    const { maxLines, maxRows } = this.props;
-
-    if (this.contentRef) {
-      const { scrollHeight } = this.contentRef;
-
-      const tooLong =
-        scrollHeight > getMaxHeight(maxLines, maxRows) + buttonHeight;
-
-      this.setState({ tooLong, mounted: true }); // eslint-disable-line
-    }
-  };
-
-  setTextRef = (element: ?HTMLDivElement) => {
-    this.contentRef = element;
-  };
 
   handleShowMore = () => {
     const { onShowMore } = this.props;
@@ -100,43 +47,30 @@ class ReadMore extends PureComponent<Props, State> {
 
   render() {
     const {
-      children,
-      maxLines,
-      maxRows,
+      id,
+      preview,
+      full,
       moreLabel,
-      lessLabel,
-      backgroundComponentName
+      lessLabel
     } = this.props;
-    const { tooLong, showMore, mounted } = this.state;
-
-    const truncate = mounted ? !showMore && tooLong : true;
-    const showFade = truncate && mounted;
-    const fadeColor = styles[backgroundComponentName];
-    const showMoreLessButton = tooLong && mounted;
-
-    const contentStyle = truncate ? {
-      maxHeight: getMaxHeight(maxLines, maxRows),
-      overflow: 'hidden'
-    } : {};
+    const { showMore } = this.state;
 
     return (
-      <div>
-        <div className={styles.content} style={contentStyle}>
-          <div ref={this.setTextRef}>{children}</div>
-          {showFade ? (
-            <div className={classnames(styles.fadeOut, fadeColor)} />
-          ) : null}
+      <div id={id}>
+        {preview}
+        <Text
+          strong
+          chevron={showMore ? 'up' : 'down'}
+          component={TextLink}
+          onClick={this.handleShowMore}
+          aria-expanded={showMore}
+          aria-controls={`${id}-content`} >
+          {showMore ? lessLabel : moreLabel}
+        </Text>
+
+        <div id={`${id}-content`} style={!showMore ? { display: 'none' } : {}}>
+          {full}
         </div>
-        {showMoreLessButton && (
-          <Text
-            strong
-            chevron={showMore ? 'up' : 'down'}
-            className={styles.showMore}
-            component={TextLink}
-            onClick={this.handleShowMore}>
-            {showMore ? lessLabel : moreLabel}
-          </Text>
-        )}
       </div>
     );
   }

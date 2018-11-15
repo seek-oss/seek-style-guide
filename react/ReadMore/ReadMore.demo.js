@@ -1,5 +1,4 @@
 import React from 'react';
-import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
 
 import ReadMore from './ReadMore';
@@ -7,7 +6,11 @@ import Text from '../Text/Text';
 import Card from '../Card/Card';
 import Section from '../Section/Section';
 
-import styles from './ReadMore.demo.less';
+const preText = (
+  <Text>
+    This is the preview version of the content, click below to read more!
+  </Text>
+);
 
 const longText = (
   <Text>
@@ -39,11 +42,7 @@ const shortText = (
 );
 
 const ReadMoreContainer = ({ component: DemoComponent, componentProps }) => (
-  <Card
-    style={{ width: 500 }}
-    className={
-      componentProps.backgroundComponentName === 'body' ? styles.grayBackground : ''
-    }>
+  <Card style={{ width: 500 }}>
     <Section>
       <DemoComponent {...componentProps} />
     </Section>
@@ -62,8 +61,9 @@ export default {
   component: ReadMore,
   container: ReadMoreContainer,
   initialProps: {
-    maxLines: 3,
-    children: longText
+    id: 'read-more',
+    preview: preText,
+    full: longText
   },
   options: [
     {
@@ -74,79 +74,21 @@ export default {
           label: 'Long text',
           transformProps: props => ({
             ...props,
-            children: longText
+            full: longText
           })
         },
         {
           label: 'Medium text',
           transformProps: props => ({
             ...props,
-            children: mediumText
+            full: mediumText
           })
         },
         {
           label: 'Short text',
           transformProps: props => ({
             ...props,
-            children: shortText
-          })
-        }
-      ]
-    },
-    {
-      label: 'Max',
-      type: 'radio',
-      states: [
-        {
-          label: '3 lines',
-          transformProps: props => ({
-            ...omit(props, 'maxRows'),
-            maxLines: 3
-          })
-        },
-        {
-          label: '5 lines',
-          transformProps: props => ({
-            ...omit(props, 'maxRows'),
-            maxLines: 5
-          })
-        },
-        {
-          label: '0 rows/lines',
-          transformProps: props => omit(props, ['maxLines', 'maxRows'])
-        },
-        {
-          label: '10 rows',
-          transformProps: props => ({
-            ...omit(props, 'maxLines'),
-            maxRows: 10
-          })
-        },
-        {
-          label: '20 rows',
-          transformProps: props => ({
-            ...omit(props, 'maxLines'),
-            maxRows: 20
-          })
-        }
-      ]
-    },
-    {
-      label: 'Color',
-      type: 'radio',
-      states: [
-        {
-          label: 'Card Background',
-          transformProps: props => ({
-            ...props,
-            backgroundComponentName: 'card'
-          })
-        },
-        {
-          label: 'Body Background',
-          transformProps: props => ({
-            ...props,
-            backgroundComponentName: 'body'
+            full: shortText
           })
         }
       ]
