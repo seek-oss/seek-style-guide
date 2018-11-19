@@ -98,6 +98,25 @@ exports[`Footer: should render when authenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:career+guide"
+                href="https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
+              >
+                Explore Careers
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:companies"
                 href="/companies/"
               >
@@ -860,6 +879,25 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 Career Advice
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:career+guide"
+                href="https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
+              >
+                Explore Careers
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -1634,6 +1672,25 @@ exports[`Footer: should render when unauthenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:career+guide"
+                href="https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
+              >
+                Explore Careers
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:companies"
                 href="/companies/"
               >
@@ -2396,6 +2453,25 @@ exports[`Footer: should render with locale of AU 1`] = `
               >
                 Career Advice
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:career+guide"
+                href="https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
+              >
+                Explore Careers
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
