@@ -220,7 +220,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:about+seek"
-                href="/about"
+                href="/about/"
               >
                 About SEEK
               </a>
@@ -242,7 +242,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:investor+centre"
-                href="/about/investors"
+                href="/about/investors/"
               >
                 Investors
               </a>
@@ -488,7 +488,7 @@ exports[`Footer: should render when authenticated 1`] = `
                     class="FooterLink__link"
                     data-analytics="toolbar:jora+local"
                     data-automation="jora-local-link"
-                    href="http://www.joralocal.com.au"
+                    href="http://www.joralocal.com.au/"
                   >
                     Jora Local
                   </a>
@@ -568,7 +568,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
-                href="/contact-us"
+                href="/contact-us/"
               >
                 Contact us / FAQs
               </a>
@@ -579,7 +579,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:work+for+seek"
-                href="/work-for-seek"
+                href="/work-for-seek/life-at-seek/"
               >
                 Work for SEEK
               </a>
@@ -598,7 +598,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:product+blog"
-                href="http://productblog.seek.com.au"
+                href="https://medium.com/seek-blog"
               >
                 Product & Tech Blog
               </a>
@@ -712,7 +712,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:products+prices"
-                href="https://talent.seek.com.au/Support/OurProducts"
+                href="https://talent.seek.com.au/products/jobads"
               >
                 Products & prices
               </a>
@@ -734,7 +734,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au"
+                href="http://insightsresources.seek.com.au/"
               >
                 Insights & Resources
               </a>
@@ -748,7 +748,7 @@ exports[`Footer: should render when authenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy"
+          href="/privacy/"
           rel="nofollow"
         >
           Privacy
@@ -756,7 +756,7 @@ exports[`Footer: should render when authenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:terms+conditions"
-          href="/terms"
+          href="/terms/"
           rel="nofollow"
         >
           Terms & Conditions
@@ -764,7 +764,7 @@ exports[`Footer: should render when authenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:seek+safely"
-          href="/safe-job-searching"
+          href="/safe-job-searching/"
           rel="nofollow"
         >
           Protect yourself online
@@ -1007,7 +1007,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:about+seek"
-                href="/about"
+                href="/about/"
               >
                 About SEEK
               </a>
@@ -1029,7 +1029,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:investor+centre"
-                href="/about/investors"
+                href="/about/investors/"
               >
                 Investors
               </a>
@@ -1275,7 +1275,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     class="FooterLink__link"
                     data-analytics="toolbar:jora+local"
                     data-automation="jora-local-link"
-                    href="http://www.joralocal.com.au"
+                    href="http://www.joralocal.com.au/"
                   >
                     Jora Local
                   </a>
@@ -1355,7 +1355,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
-                href="/contact-us"
+                href="/contact-us/"
               >
                 Contact us / FAQs
               </a>
@@ -1366,7 +1366,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:work+for+seek"
-                href="/work-for-seek"
+                href="/work-for-seek/life-at-seek/"
               >
                 Work for SEEK
               </a>
@@ -1385,7 +1385,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:product+blog"
-                href="http://productblog.seek.com.au"
+                href="https://medium.com/seek-blog"
               >
                 Product & Tech Blog
               </a>
@@ -1499,7 +1499,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:products+prices"
-                href="https://talent.seek.com.au/Support/OurProducts"
+                href="https://talent.seek.com.au/products/jobads"
               >
                 Products & prices
               </a>
@@ -1521,7 +1521,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au"
+                href="http://insightsresources.seek.com.au/"
               >
                 Insights & Resources
               </a>
@@ -1535,7 +1535,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy"
+          href="/privacy/"
           rel="nofollow"
         >
           Privacy
@@ -1543,7 +1543,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:terms+conditions"
-          href="/terms"
+          href="/terms/"
           rel="nofollow"
         >
           Terms & Conditions
@@ -1551,7 +1551,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:seek+safely"
-          href="/safe-job-searching"
+          href="/safe-job-searching/"
           rel="nofollow"
         >
           Protect yourself online
@@ -1794,7 +1794,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:about+seek"
-                href="/about"
+                href="/about/"
               >
                 About SEEK
               </a>
@@ -1816,7 +1816,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:investor+centre"
-                href="/about/investors"
+                href="/about/investors/"
               >
                 Investors
               </a>
@@ -2062,7 +2062,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                     class="FooterLink__link"
                     data-analytics="toolbar:jora+local"
                     data-automation="jora-local-link"
-                    href="http://www.joralocal.com.au"
+                    href="http://www.joralocal.com.au/"
                   >
                     Jora Local
                   </a>
@@ -2142,7 +2142,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
-                href="/contact-us"
+                href="/contact-us/"
               >
                 Contact us / FAQs
               </a>
@@ -2153,7 +2153,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:work+for+seek"
-                href="/work-for-seek"
+                href="/work-for-seek/life-at-seek/"
               >
                 Work for SEEK
               </a>
@@ -2172,7 +2172,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:product+blog"
-                href="http://productblog.seek.com.au"
+                href="https://medium.com/seek-blog"
               >
                 Product & Tech Blog
               </a>
@@ -2286,7 +2286,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:products+prices"
-                href="https://talent.seek.com.au/Support/OurProducts"
+                href="https://talent.seek.com.au/products/jobads"
               >
                 Products & prices
               </a>
@@ -2308,7 +2308,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au"
+                href="http://insightsresources.seek.com.au/"
               >
                 Insights & Resources
               </a>
@@ -2322,7 +2322,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy"
+          href="/privacy/"
           rel="nofollow"
         >
           Privacy
@@ -2330,7 +2330,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:terms+conditions"
-          href="/terms"
+          href="/terms/"
           rel="nofollow"
         >
           Terms & Conditions
@@ -2338,7 +2338,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:seek+safely"
-          href="/safe-job-searching"
+          href="/safe-job-searching/"
           rel="nofollow"
         >
           Protect yourself online
@@ -2581,7 +2581,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:about+seek"
-                href="/about"
+                href="/about/"
               >
                 About SEEK
               </a>
@@ -2603,7 +2603,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:investor+centre"
-                href="/about/investors"
+                href="/about/investors/"
               >
                 Investors
               </a>
@@ -2849,7 +2849,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                     class="FooterLink__link"
                     data-analytics="toolbar:jora+local"
                     data-automation="jora-local-link"
-                    href="http://www.joralocal.com.au"
+                    href="http://www.joralocal.com.au/"
                   >
                     Jora Local
                   </a>
@@ -2929,7 +2929,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
-                href="/contact-us"
+                href="/contact-us/"
               >
                 Contact us / FAQs
               </a>
@@ -2940,7 +2940,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:work+for+seek"
-                href="/work-for-seek"
+                href="/work-for-seek/life-at-seek/"
               >
                 Work for SEEK
               </a>
@@ -2959,7 +2959,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:product+blog"
-                href="http://productblog.seek.com.au"
+                href="https://medium.com/seek-blog"
               >
                 Product & Tech Blog
               </a>
@@ -3073,7 +3073,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:products+prices"
-                href="https://talent.seek.com.au/Support/OurProducts"
+                href="https://talent.seek.com.au/products/jobads"
               >
                 Products & prices
               </a>
@@ -3095,7 +3095,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au"
+                href="http://insightsresources.seek.com.au/"
               >
                 Insights & Resources
               </a>
@@ -3109,7 +3109,7 @@ exports[`Footer: should render with locale of AU 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy"
+          href="/privacy/"
           rel="nofollow"
         >
           Privacy
@@ -3117,7 +3117,7 @@ exports[`Footer: should render with locale of AU 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:terms+conditions"
-          href="/terms"
+          href="/terms/"
           rel="nofollow"
         >
           Terms & Conditions
@@ -3125,7 +3125,7 @@ exports[`Footer: should render with locale of AU 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:seek+safely"
-          href="/safe-job-searching"
+          href="/safe-job-searching/"
           rel="nofollow"
         >
           Protect yourself online
@@ -3338,7 +3338,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:about+seek"
-                href="/about"
+                href="/about/"
               >
                 About SEEK
               </a>
@@ -3360,7 +3360,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:investor+centre"
-                href="/about/investors"
+                href="/about/investors/"
               >
                 Investors
               </a>
@@ -3583,7 +3583,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
-                href="/contact-us"
+                href="/contact-us/"
               >
                 Contact us / FAQs
               </a>
@@ -3594,7 +3594,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:work+for+seek"
-                href="/work-for-seek"
+                href="/work-for-seek/life-at-seek/"
               >
                 Work for SEEK
               </a>
@@ -3613,7 +3613,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:product+blog"
-                href="http://productblog.seek.com.au"
+                href="https://medium.com/seek-blog"
               >
                 Product & Tech Blog
               </a>
@@ -3727,7 +3727,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:products+prices"
-                href="https://talent.seek.co.nz/Support/OurProducts"
+                href="https://talent.seek.co.nz/products/jobads"
               >
                 Products & prices
               </a>
@@ -3749,7 +3749,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.co.nz"
+                href="http://insightsresources.seek.co.nz/"
               >
                 Insights & Resources
               </a>
@@ -3763,7 +3763,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy"
+          href="/privacy/"
           rel="nofollow"
         >
           Privacy
@@ -3771,7 +3771,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:terms+conditions"
-          href="/terms"
+          href="/terms/"
           rel="nofollow"
         >
           Terms & Conditions
@@ -3779,7 +3779,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:seek+safely"
-          href="/safe-job-searching"
+          href="/safe-job-searching/"
           rel="nofollow"
         >
           Protect yourself online

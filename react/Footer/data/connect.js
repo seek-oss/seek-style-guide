@@ -1,18 +1,18 @@
 export default [
   {
     name: 'Contact us / FAQs',
-    href: '/contact-us',
+    href: '/contact-us/',
     analytics: 'toolbar:contact+us'
   },
   {
     name: 'Work for SEEK',
-    href: '/work-for-seek',
+    href: '/work-for-seek/life-at-seek/',
     analytics: 'toolbar:work+for+seek',
     newBadge: true
   },
   {
     name: 'Product & Tech Blog',
-    href: 'http://productblog.seek.com.au',
+    href: 'https://medium.com/seek-blog',
     analytics: 'toolbar:product+blog',
     secondary: true
   }
