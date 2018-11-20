@@ -58,7 +58,7 @@ export const seekApps = [
   },
   {
     name: 'iOS',
-    href: 'https://itunes.apple.com/nz/app/seek-jobs/id520400855?mt=8',
+    href: 'https://itunes.apple.com/nz/app/seek-job-search/id520400855?mt=8',
     specificLocale: 'NZ'
   },
   {
