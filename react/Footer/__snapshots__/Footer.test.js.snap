@@ -3412,7 +3412,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 >
                   <a
                     class="FooterLink__link"
-                    href="https://itunes.apple.com/nz/app/seek-jobs/id520400855?mt=8"
+                    href="https://itunes.apple.com/nz/app/seek-job-search/id520400855?mt=8"
                   >
                     iOS
                   </a>
