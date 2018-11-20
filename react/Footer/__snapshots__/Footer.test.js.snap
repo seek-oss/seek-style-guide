@@ -128,6 +128,50 @@ exports[`Footer: should render when authenticated 1`] = `
             >
               <input
                 class="ToggleContainer__toggle"
+                id="DownloadAppsToggle"
+                type="checkbox"
+              />
+              <label
+                class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
+                for="DownloadAppsToggle"
+              >
+                Download Apps
+                <span
+                  class="Icon__root ChevronIcon__root ToggleContainer__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
+              <ul
+                class="ToggleContainer__toggleContainer"
+              >
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://itunes.apple.com/au/app/seek-jobs/id520400855?mt=8"
+                  >
+                    iOS
+                  </a>
+                </li>
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://play.google.com/store/apps/details?id=au.com.seek&hl=en_AU"
+                  >
+                    Android
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class=""
+            >
+              <input
+                class="ToggleContainer__toggle"
                 id="PartnerSitesToggle"
                 type="checkbox"
               />
@@ -901,6 +945,50 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 Company reviews
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <input
+                class="ToggleContainer__toggle"
+                id="DownloadAppsToggle"
+                type="checkbox"
+              />
+              <label
+                class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
+                for="DownloadAppsToggle"
+              >
+                Download Apps
+                <span
+                  class="Icon__root ChevronIcon__root ToggleContainer__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
+              <ul
+                class="ToggleContainer__toggleContainer"
+              >
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://itunes.apple.com/au/app/seek-jobs/id520400855?mt=8"
+                  >
+                    iOS
+                  </a>
+                </li>
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://play.google.com/store/apps/details?id=au.com.seek&hl=en_AU"
+                  >
+                    Android
+                  </a>
+                </li>
+              </ul>
             </li>
             <li
               class=""
@@ -1686,6 +1774,50 @@ exports[`Footer: should render when unauthenticated 1`] = `
             >
               <input
                 class="ToggleContainer__toggle"
+                id="DownloadAppsToggle"
+                type="checkbox"
+              />
+              <label
+                class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
+                for="DownloadAppsToggle"
+              >
+                Download Apps
+                <span
+                  class="Icon__root ChevronIcon__root ToggleContainer__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
+              <ul
+                class="ToggleContainer__toggleContainer"
+              >
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://itunes.apple.com/au/app/seek-jobs/id520400855?mt=8"
+                  >
+                    iOS
+                  </a>
+                </li>
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://play.google.com/store/apps/details?id=au.com.seek&hl=en_AU"
+                  >
+                    Android
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class=""
+            >
+              <input
+                class="ToggleContainer__toggle"
                 id="PartnerSitesToggle"
                 type="checkbox"
               />
@@ -2465,6 +2597,50 @@ exports[`Footer: should render with locale of AU 1`] = `
             >
               <input
                 class="ToggleContainer__toggle"
+                id="DownloadAppsToggle"
+                type="checkbox"
+              />
+              <label
+                class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
+                for="DownloadAppsToggle"
+              >
+                Download Apps
+                <span
+                  class="Icon__root ChevronIcon__root ToggleContainer__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
+              <ul
+                class="ToggleContainer__toggleContainer"
+              >
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://itunes.apple.com/au/app/seek-jobs/id520400855?mt=8"
+                  >
+                    iOS
+                  </a>
+                </li>
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://play.google.com/store/apps/details?id=au.com.seek&hl=en_AU"
+                  >
+                    Android
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class=""
+            >
+              <input
+                class="ToggleContainer__toggle"
                 id="PartnerSitesToggle"
                 type="checkbox"
               />
@@ -3214,6 +3390,50 @@ exports[`Footer: should render with locale of NZ 1`] = `
             >
               <input
                 class="ToggleContainer__toggle"
+                id="DownloadAppsToggle"
+                type="checkbox"
+              />
+              <label
+                class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
+                for="DownloadAppsToggle"
+              >
+                Download Apps
+                <span
+                  class="Icon__root ChevronIcon__root ToggleContainer__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
+              <ul
+                class="ToggleContainer__toggleContainer"
+              >
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://itunes.apple.com/nz/app/seek-jobs/id520400855?mt=8"
+                  >
+                    iOS
+                  </a>
+                </li>
+                <li
+                  class=""
+                >
+                  <a
+                    class="FooterLink__link"
+                    href="https://play.google.com/store/apps/details?id=au.com.seek&hl=en_AU"
+                  >
+                    Android
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class=""
+            >
+              <input
+                class="ToggleContainer__toggle"
                 id="PartnerSitesToggle"
                 type="checkbox"
               />
@@ -3281,7 +3501,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   <a
                     class="FooterLink__link"
                     data-analytics="toolbar:volunteering"
-                    href="https://www.volunteer.co.nz/?tracking=SKMNZ:main+header"
+                    href="https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header"
                   >
                     Volunteering
                   </a>

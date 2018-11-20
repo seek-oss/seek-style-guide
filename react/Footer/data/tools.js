@@ -50,6 +50,23 @@ export default [
   }
 ];
 
+export const seekApps = [
+  {
+    name: 'iOS',
+    href: 'https://itunes.apple.com/au/app/seek-jobs/id520400855?mt=8',
+    specificLocale: 'AU'
+  },
+  {
+    name: 'iOS',
+    href: 'https://itunes.apple.com/nz/app/seek-jobs/id520400855?mt=8',
+    specificLocale: 'NZ'
+  },
+  {
+    name: 'Android',
+    href: 'https://play.google.com/store/apps/details?id=au.com.seek&hl=en_AU'
+  }
+];
+
 export const seekSites = [
   {
     name: 'Employer site',
@@ -107,7 +124,7 @@ export const seekSites = [
   },
   {
     name: 'Volunteering',
-    href: 'https://www.volunteer.co.nz/?tracking=SKMNZ:main+header',
+    href: 'https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header',
     analytics: 'toolbar:volunteering',
     specificLocale: 'NZ'
   }
