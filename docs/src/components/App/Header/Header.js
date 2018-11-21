@@ -60,7 +60,8 @@ class Header extends Component {
   };
 
   handleDocumentKeydown = event => {
-    if (event.key === '/' && event.target.id !== SEARCH_BAR_ID) {
+    const isInputField = /^(INPUT|TEXTAREA)$/i.test(event.target.tagName);
+    if (event.key === '/' && !isInputField) {
       event.preventDefault();
       this.handleMenuToggle({ target: { checked: true } });
     } else if (event.key === 'Escape') {
