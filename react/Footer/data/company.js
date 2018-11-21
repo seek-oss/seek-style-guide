@@ -1,7 +1,7 @@
 export default [
   {
     name: 'About SEEK',
-    href: '/about',
+    href: '/about/',
     analytics: 'toolbar:about+seek',
     secondary: true
   },
@@ -13,7 +13,7 @@ export default [
   },
   {
     name: 'Investors',
-    href: '/about/investors',
+    href: '/about/investors/',
     analytics: 'toolbar:investor+centre',
     secondary: true
   }
@@ -96,7 +96,7 @@ export const services = [
   },
   {
     name: 'Jora Local',
-    href: 'http://www.joralocal.com.au',
+    href: 'http://www.joralocal.com.au/',
     analytics: 'toolbar:jora+local',
     'data-automation': 'jora-local-link'
   },
