@@ -5,8 +5,7 @@ import TextLink from '../TextLink/TextLink';
 
 type Props = {|
   id: string,
-  preview: React$Element<*>,
-  full: React$Element<*>,
+  children: React$Element<*>,
   moreLabel: string,
   lessLabel: string,
   onShowMore?: Function
@@ -48,8 +47,7 @@ class ReadMore extends PureComponent<Props, State> {
   render() {
     const {
       id,
-      preview,
-      full,
+      children,
       moreLabel,
       lessLabel
     } = this.props;
@@ -57,7 +55,6 @@ class ReadMore extends PureComponent<Props, State> {
 
     return (
       <div id={id}>
-        {preview}
         <Text
           strong
           chevron={showMore ? 'up' : 'down'}
@@ -69,7 +66,7 @@ class ReadMore extends PureComponent<Props, State> {
         </Text>
 
         <div id={`${id}-content`} style={!showMore ? { display: 'none' } : {}}>
-          {full}
+          {children}
         </div>
       </div>
     );

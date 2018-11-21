@@ -6,12 +6,6 @@ import Text from '../Text/Text';
 import Card from '../Card/Card';
 import Section from '../Section/Section';
 
-const preText = (
-  <Text>
-    This is the preview version of the content, click below to read more!
-  </Text>
-);
-
 const longText = (
   <Text>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae nulla
@@ -44,6 +38,9 @@ const shortText = (
 const ReadMoreContainer = ({ component: DemoComponent, componentProps }) => (
   <Card style={{ width: 500 }}>
     <Section>
+      <Text>
+        This is the preview version of the content, click below to read more!
+      </Text>
       <DemoComponent {...componentProps} />
     </Section>
   </Card>
@@ -62,8 +59,7 @@ export default {
   container: ReadMoreContainer,
   initialProps: {
     id: 'read-more',
-    preview: preText,
-    full: longText
+    children: longText
   },
   options: [
     {
@@ -74,21 +70,21 @@ export default {
           label: 'Long text',
           transformProps: props => ({
             ...props,
-            full: longText
+            children: longText
           })
         },
         {
           label: 'Medium text',
           transformProps: props => ({
             ...props,
-            full: mediumText
+            children: mediumText
           })
         },
         {
           label: 'Short text',
           transformProps: props => ({
             ...props,
-            full: shortText
+            children: shortText
           })
         }
       ]
