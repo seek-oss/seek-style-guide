@@ -64,7 +64,7 @@ export default class Footer extends Component {
             <div className={styles.columns}>
               <FooterNav label="Tools">
                 { tools.map(this.renderLink) }
-                <ToggleContainer name="DownloadAppsToggle" label="Download Apps">
+                <ToggleContainer name="DownloadAppsToggle" label="Download apps">
                   { seekApps.map(this.renderLink) }
                 </ToggleContainer>
                 <ToggleContainer name="PartnerSitesToggle" label="SEEK sites">

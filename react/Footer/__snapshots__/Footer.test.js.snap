@@ -135,7 +135,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                 for="DownloadAppsToggle"
               >
-                Download Apps
+                Download apps
                 <span
                   class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                 >
@@ -958,7 +958,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                 for="DownloadAppsToggle"
               >
-                Download Apps
+                Download apps
                 <span
                   class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                 >
@@ -1781,7 +1781,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                 for="DownloadAppsToggle"
               >
-                Download Apps
+                Download apps
                 <span
                   class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                 >
@@ -2604,7 +2604,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                 for="DownloadAppsToggle"
               >
-                Download Apps
+                Download apps
                 <span
                   class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                 >
@@ -3397,7 +3397,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 class="ToggleContainer__toggleLink ToggleContainer__toggleLabel"
                 for="DownloadAppsToggle"
               >
-                Download Apps
+                Download apps
                 <span
                   class="Icon__root ChevronIcon__root ToggleContainer__chevron"
                 >
