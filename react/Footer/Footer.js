@@ -1,6 +1,6 @@
 import styles from './Footer.less';
 
-import tools, { seekSites } from './data/tools';
+import tools, { seekSites, seekApps } from './data/tools';
 import company, { partners, services } from './data/company';
 import connect, { social } from './data/connect';
 import employers from './data/employers';
@@ -64,6 +64,9 @@ export default class Footer extends Component {
             <div className={styles.columns}>
               <FooterNav label="Tools">
                 { tools.map(this.renderLink) }
+                <ToggleContainer name="DownloadAppsToggle" label="Download apps">
+                  { seekApps.map(this.renderLink) }
+                </ToggleContainer>
                 <ToggleContainer name="PartnerSitesToggle" label="SEEK sites">
                   { seekSites.map(this.renderLink) }
                 </ToggleContainer>
