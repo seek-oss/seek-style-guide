@@ -134,7 +134,11 @@ const renderConfig = {
   resolve: resolveConfig,
 
   plugins: [
-    new StaticSiteGeneratorPlugin()
+    new StaticSiteGeneratorPlugin({
+      globals: {
+        window: {}
+      }
+    })
   ]
 };
 
