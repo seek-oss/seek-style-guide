@@ -36,10 +36,34 @@ export default [
     analytics: 'toolbar:advice+tips'
   },
   {
+    name: 'Explore Careers',
+    href: 'https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link',
+    analytics: 'toolbar:career+guide',
+    specificLocale: 'AU',
+    newBadge: true
+  },
+  {
     name: 'Company reviews',
     href: '/companies/',
     analytics: 'toolbar:companies',
     specificLocale: 'AU'
+  }
+];
+
+export const seekApps = [
+  {
+    name: 'iOS',
+    href: 'https://itunes.apple.com/au/app/seek-jobs/id520400855?mt=8',
+    specificLocale: 'AU'
+  },
+  {
+    name: 'iOS',
+    href: 'https://itunes.apple.com/nz/app/seek-job-search/id520400855?mt=8',
+    specificLocale: 'NZ'
+  },
+  {
+    name: 'Android',
+    href: 'https://play.google.com/store/apps/details?id=au.com.seek&hl=en_AU'
   }
 ];
 
@@ -100,7 +124,7 @@ export const seekSites = [
   },
   {
     name: 'Volunteering',
-    href: 'https://www.volunteer.co.nz/?tracking=SKMNZ:main+header',
+    href: 'https://seekvolunteer.co.nz/?tracking=SKMNZ:main+header',
     analytics: 'toolbar:volunteering',
     specificLocale: 'NZ'
   }

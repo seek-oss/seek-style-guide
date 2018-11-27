@@ -27,13 +27,13 @@ export default [
   },
   {
     name: 'Products & prices',
-    href: 'https://talent.seek.com.au/Support/OurProducts',
+    href: 'https://talent.seek.com.au/products/jobads',
     analytics: 'toolbar:products+prices',
     specificLocale: 'AU'
   },
   {
     name: 'Products & prices',
-    href: 'https://talent.seek.co.nz/Support/OurProducts',
+    href: 'https://talent.seek.co.nz/products/jobads',
     analytics: 'toolbar:products+prices',
     specificLocale: 'NZ'
   },
@@ -51,13 +51,13 @@ export default [
   },
   {
     name: 'Insights & Resources',
-    href: 'http://insightsresources.seek.com.au',
+    href: 'http://insightsresources.seek.com.au/',
     analytics: 'toolbar:insight+blog',
     specificLocale: 'AU'
   },
   {
     name: 'Insights & Resources',
-    href: 'http://insightsresources.seek.co.nz',
+    href: 'http://insightsresources.seek.co.nz/',
     analytics: 'toolbar:insight+blog',
     specificLocale: 'NZ'
   }
