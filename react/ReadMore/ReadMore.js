@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
-import Text from '../Text/Text';
+import Button from '../Button/Button';
 import TextLink from '../TextLink/TextLink';
 
 type Props = {|
@@ -55,15 +55,16 @@ class ReadMore extends PureComponent<Props, State> {
 
     return (
       <div id={id}>
-        <Text
+        <TextLink
           strong
+          color="transparent"
           chevron={showMore ? 'up' : 'down'}
-          component={TextLink}
+          component={Button}
           onClick={this.handleShowMore}
           aria-expanded={showMore}
           aria-controls={`${id}-content`} >
           {showMore ? lessLabel : moreLabel}
-        </Text>
+        </TextLink>
 
         <div id={`${id}-content`} style={!showMore ? { display: 'none' } : {}}>
           {children}
