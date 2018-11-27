@@ -20,6 +20,8 @@ const appPaths = [
 ];
 
 const config = {
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+
   target: 'node',
 
   entry: path.resolve(__dirname, 'src/server-render'),
@@ -101,7 +103,6 @@ const config = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     }),
     new StaticSiteGeneratorPlugin({
@@ -113,14 +114,6 @@ const config = {
         '/playground'
       ],
       locals: { template }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false
-      }
     })
   ]
 };

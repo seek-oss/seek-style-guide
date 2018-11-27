@@ -14,8 +14,10 @@ const appPaths = [
   path.resolve(__dirname, 'wip_modules')
 ];
 
-const createConfigWithPort = (port) => {
+const createConfigWithPort = port => {
   return decorateClientConfig({
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+
     entry: [
       'core-js/modules/es6.symbol',
       'react-hot-loader/patch',
@@ -125,7 +127,6 @@ const createConfigWithPort = (port) => {
 
     devtool: 'cheap-module-eval-source-map'
   });
-}
-
+};
 
 module.exports = createConfigWithPort;

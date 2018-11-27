@@ -6,6 +6,7 @@
 .*/node_modules/immutable/.*
 .*/node_modules/npmconf/.*
 .*/node_modules/fbjs/.*
+.*/node_modules/@webassemblyjs/.*
 
 [include]
 
