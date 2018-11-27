@@ -144,7 +144,7 @@
     "react-test-renderer": "^16.0.0",
     "renovate-config-seek": "^0.4.0",
     "scope-eval": "^1.0.0",
-    "seek-style-guide-webpack": "^3.0.0",
+    "seek-style-guide-webpack": "^3.0.1",
     "semantic-release": "^8.1.2",
     "serialize-javascript": "^1.4.0",
     "sinon": "^4.0.1",
