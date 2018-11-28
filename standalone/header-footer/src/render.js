@@ -61,8 +61,8 @@ const renderFileForLocale = (Component, props, locale) => {
   const renderProps = { ...props, ...localeProps };
 
   return {
-    [`/${fileName}.html`]: renderHtml(Header, renderProps),
-    [`/${fileName}__preview.html`]: renderHtml(Header, renderProps, { preview: true })
+    [`/${fileName}.html`]: renderHtml(Component, renderProps),
+    [`/${fileName}__preview.html`]: renderHtml(Component, renderProps, { preview: true })
   };
 };
 
