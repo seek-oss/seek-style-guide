@@ -81,8 +81,12 @@ class Header extends Component {
   handleSearchbarKeydown = event => {
     switch (event.key) {
       case 'Enter':
-        const route = this.highlightedRef.current.props.to;
-        this.props.history.push(route);
+        const { to, target } = this.highlightedRef.current.props;
+        if (target === '_blank') {
+          window.open(to);
+        } else {
+          this.props.history.push(to);
+        }
         this.handleMenuClose();
         break;
       case 'ArrowUp':
