@@ -1,12 +1,11 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Route } from 'react-router';
 import { StyleGuideProvider } from 'seek-style-guide/react';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from 'Home/Home';
 import PageLayout from 'PageLayout/PageLayout';
 import Typography from 'Typography/Typography';
-import LoadSandbox from 'Sandbox/LoadSandbox';
 import Playground from 'Playground/Playground';
 import SketchExports from 'SketchExports/SketchExports';
 import Demo from 'Demo/Demo';
@@ -20,20 +19,13 @@ const demoRoutes = demoSpecs.map(demoSpec => {
 
 export default () => (
   <StyleGuideProvider fullScreen={true} title="SEEK Style Guide">
-    <Switch>
-      <Route path="/sandbox" render={() => <Header fullWidth />} />
-      <Route component={Header} />
-    </Switch>
+    <Route component={Header} />
     <Route path="/" exact component={Home} />
     <Route path="/typography" component={Typography} />
     <Route path="/page-layout" component={PageLayout} />
-    <Route path="/sandbox" component={LoadSandbox} />
     <Route path="/playground" component={Playground} />
     <Route path="/sketch-exports" component={SketchExports} />
     { demoRoutes }
-    <Switch>
-      <Route path="/sandbox" render={() => null} />
-      <Route component={Footer} />
-    </Switch>
+    <Route component={Footer} />
   </StyleGuideProvider>
 );
