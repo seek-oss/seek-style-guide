@@ -8,7 +8,7 @@ module.exports = {
   components: 'seek-style-guide/react',
   frameComponent:
     'seek-style-guide/react/StyleGuideProvider/StyleGuideProvider.js',
-  outputPath: './dist/playroom',
+  outputPath: './docs/dist/playroom',
   widths: [320, 740, 1024],
   webpackConfig: () => decorateClientConfig({})
 };
