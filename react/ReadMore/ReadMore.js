@@ -29,7 +29,7 @@ type Props = {|
   maxRows?: number,
   moreLabel: string,
   lessLabel: string,
-  backgroundComponentName: 'card' | 'body',
+  backgroundComponentName: 'card' | 'body' | 'gray-lightest',
   onShowMore?: Function
 |};
 type State = {|
