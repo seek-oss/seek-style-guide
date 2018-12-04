@@ -30,6 +30,7 @@ export { default as TextLink } from './TextLink/TextLink';
 export { default as BulletList } from './BulletList/BulletList';
 export { default as Bullet } from './Bullet/Bullet';
 export { default as ReadMore } from './ReadMore/ReadMore';
+export { default as ToggleContent } from './ToggleContent/ToggleContent';
 
 // Layout
 export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';
