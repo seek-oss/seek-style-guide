@@ -7,6 +7,7 @@ import FieldMessage from '../FieldMessage/FieldMessage';
 import FieldLabel from '../FieldLabel/FieldLabel';
 import invoke from 'lodash/invoke';
 import { TONE } from '../private/tone';
+import attachRefs from '../private/attachRefs';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -16,14 +17,6 @@ function combineClassNames(props = {}, ...classNames) {
     ...restProps
   };
 }
-
-const attachRefs = (...refs): Object => (ref: React$ElementRef<'input'>): void => {
-  refs.forEach(callRef => {
-    if (typeof callRef === 'function') {
-      callRef(ref);
-    }
-  });
-};
 
 type ComponentProps = {
   id: string,
