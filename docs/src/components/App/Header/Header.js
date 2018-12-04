@@ -22,7 +22,15 @@ const demoSpecs = demoSpecExports.map(x => x.default);
 const allRoutes = [
   { route: '/typography', title: 'Typography', category: 'Guides' },
   { route: '/page-layout', title: 'Page Layout', category: 'Guides' },
-  { route: '/sandbox', title: 'Sandbox', category: 'Tools' },
+  {
+    route:
+      process.env.NODE_ENV === 'production' ?
+        '/playroom' :
+        'http://localhost:9000/',
+    title: 'Playroom',
+    category: 'Tools',
+    target: '_blank'
+  },
   ...demoSpecs
 ];
 
@@ -73,8 +81,12 @@ class Header extends Component {
   handleSearchbarKeydown = event => {
     switch (event.key) {
       case 'Enter':
-        const route = this.highlightedRef.current.props.to;
-        this.props.history.push(route);
+        const { to, target } = this.highlightedRef.current.props;
+        if (target === '_blank') {
+          window.open(to);
+        } else {
+          this.props.history.push(to);
+        }
         this.handleMenuClose();
         break;
       case 'ArrowUp':
@@ -211,7 +223,8 @@ class Header extends Component {
                                           ''
                                       }
                                       className={styles.link}
-                                      to={demoSpec.route}>
+                                      to={demoSpec.route}
+                                      target={demoSpec.target}>
                                       {demoSpec.title}
                                     </Link>
                                   </Text>
