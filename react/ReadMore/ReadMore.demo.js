@@ -1,6 +1,7 @@
 import React from 'react';
 import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import ReadMore from './ReadMore';
 import Text from '../Text/Text';
@@ -38,17 +39,21 @@ const shortText = (
   </Text>
 );
 
-const ReadMoreContainer = ({ component: DemoComponent, componentProps }) => (
-  <Card
-    style={{ width: 500 }}
-    className={
-      componentProps.backgroundComponentName === 'body' ? styles.grayBackground : ''
-    }>
-    <Section>
-      <DemoComponent {...componentProps} />
-    </Section>
-  </Card>
-);
+const ReadMoreContainer = ({ component: DemoComponent, componentProps }) => {
+  const className = classnames({
+    [styles.grayBackground]: componentProps.backgroundComponentName === 'body',
+    [styles.lightGrayBackground]:
+      componentProps.backgroundComponentName === 'gray-lightest'
+  });
+
+  return (
+    <Card style={{ width: 500 }} className={className}>
+      <Section>
+        <DemoComponent {...componentProps} />
+      </Section>
+    </Card>
+  );
+};
 
 ReadMoreContainer.propTypes = {
   component: PropTypes.any,
@@ -147,6 +152,13 @@ export default {
           transformProps: props => ({
             ...props,
             backgroundComponentName: 'body'
+          })
+        },
+        {
+          label: 'Gray lightest',
+          transformProps: props => ({
+            ...props,
+            backgroundComponentName: 'gray-lightest'
           })
         }
       ]

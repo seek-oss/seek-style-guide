@@ -7,6 +7,7 @@ import FieldLabel from '../FieldLabel/FieldLabel';
 import Text from '../Text/Text';
 import { TONE } from '../private/tone';
 import { formatInvalidText } from './textAreaUtils';
+import attachRefs from '../private/attachRefs';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -112,6 +113,7 @@ export default class Textarea extends Component {
 
   renderInput() {
     const { id, value, invalidText, onChange, onFocus, onBlur, inputProps } = this.props;
+    const { ref: inputRef } = inputProps;
     let formattedText;
     const highlightErrors = typeof invalidText !== 'undefined';
     if (highlightErrors) {
@@ -128,7 +130,7 @@ export default class Textarea extends Component {
           onBlur,
           ...combineClassNames(inputProps, styles.textarea, classname),
           'aria-describedby': `${id}-message`,
-          ref: this.storeTextareaRef,
+          ref: attachRefs(this.storeTextareaRef, inputRef),
           ...props
         }}
       />
