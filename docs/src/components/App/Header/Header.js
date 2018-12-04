@@ -25,7 +25,7 @@ const allRoutes = [
   {
     route:
       process.env.NODE_ENV === 'production' ?
-        '/playroom' :
+        `${process.env.BASE_HREF}playroom` :
         'http://localhost:9000/',
     title: 'Playroom',
     category: 'Tools',
@@ -142,6 +142,34 @@ class Header extends Component {
     });
   };
 
+  renderListItem = demoSpec => {
+    const isExternal = demoSpec.target === '_blank';
+    const ComponentItem = isExternal ? 'a' : Link;
+    const linkDestination = isExternal ?
+      { href: demoSpec.route } :
+      { to: demoSpec.route };
+
+    return (
+      <WithHighlighting
+        key={demoSpec.title}
+        highlighted={demoSpec.highlighted}>
+        <Text headline regular>
+          <ComponentItem
+            ref={
+              demoSpec.highlighted ?
+                this.highlightedRef :
+                ''
+            }
+            className={styles.link}
+            target={demoSpec.target}
+            {...linkDestination}>
+            {demoSpec.title}
+          </ComponentItem>
+        </Text>
+      </WithHighlighting>
+    );
+  }
+
   render() {
     const { fullWidth } = this.props;
     const { menuOpen, displayComponents, highlightedElement } = this.state;
@@ -211,25 +239,7 @@ class Header extends Component {
                               </h2>
                             </Card>
                             <Card transparent>
-                              {routes.map(demoSpec => (
-                                <WithHighlighting
-                                  key={demoSpec.title}
-                                  highlighted={demoSpec.highlighted}>
-                                  <Text headline regular>
-                                    <Link
-                                      ref={
-                                        demoSpec.highlighted ?
-                                          this.highlightedRef :
-                                          ''
-                                      }
-                                      className={styles.link}
-                                      to={demoSpec.route}
-                                      target={demoSpec.target}>
-                                      {demoSpec.title}
-                                    </Link>
-                                  </Text>
-                                </WithHighlighting>
-                              ))}
+                              {routes.map(this.renderListItem)}
                             </Card>
                           </Fragment>
                         );
