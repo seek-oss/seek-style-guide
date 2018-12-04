@@ -60,6 +60,7 @@ class ToggleContent extends PureComponent<Props, State> {
           color="transparent"
           chevron={showMore ? 'up' : 'down'}
           component={Button}
+          type="button"
           onClick={this.handleShowMore}
           aria-expanded={showMore}
           aria-controls={`${id}-content`} >
