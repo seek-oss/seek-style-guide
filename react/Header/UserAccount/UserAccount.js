@@ -46,7 +46,7 @@ export default class UserAccount extends Component {
     };
   }
 
-  handleMenuToggleClick = () => {
+  handleMenuToggle = () => {
     this.setState(state => {
       this.props.onMenuToggle({ open: !state.menuOpen });
       return { menuOpen: !state.menuOpen };
@@ -76,14 +76,14 @@ export default class UserAccount extends Component {
           className={styles.toggle}
           type="checkbox"
           checked={this.state.menuOpen}
+          onChange={this.handleMenuToggle}
         />
 
         <div className={styles.menuBackdrop}>
           <label
             data-automation="user-account-menu-backdrop"
             htmlFor="user-account-menu-toggle"
-            className={styles.menuBackdropLabel}
-            onClick={this.handleMenuToggleClick}>
+            className={styles.menuBackdropLabel}>
             <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
           </label>
         </div>
@@ -91,8 +91,7 @@ export default class UserAccount extends Component {
         <label
           data-automation="user-account-menu-toggle"
           className={styles.toggleLabel}
-          htmlFor="user-account-menu-toggle"
-          onClick={this.handleMenuToggleClick}>
+          htmlFor="user-account-menu-toggle">
           <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
           <span data-hj-masked={true}>
             <span className={styles.mobileMenuLabel}>{ mobileMenuLabel }</span>
