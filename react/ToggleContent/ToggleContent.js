@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
-import Button from '../Button/Button';
 import TextLink from '../TextLink/TextLink';
+import Text from '../Text/Text';
 
 type Props = {|
   id: string,
@@ -55,17 +55,17 @@ class ToggleContent extends PureComponent<Props, State> {
 
     return (
       <div id={id}>
-        <TextLink
+        <Text
           strong
+          component={TextLink}
           color="transparent"
           chevron={showMore ? 'up' : 'down'}
-          component={Button}
           type="button"
           onClick={this.handleShowMore}
           aria-expanded={showMore}
           aria-controls={`${id}-content`} >
           {showMore ? collapseLabel : expandLabel}
-        </TextLink>
+        </Text>
 
         <div id={`${id}-content`} style={!showMore ? { display: 'none' } : {}}>
           {children}
