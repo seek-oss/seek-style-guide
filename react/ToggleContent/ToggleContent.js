@@ -1,7 +1,10 @@
 // @flow
+import styles from './ToggleContent.less';
+
 import React, { PureComponent } from 'react';
 import Button from '../Button/Button';
 import TextLink from '../TextLink/TextLink';
+import Strong from '../Strong/Strong';
 
 type Props = {|
   id: string,
@@ -56,15 +59,16 @@ class ToggleContent extends PureComponent<Props, State> {
     return (
       <div id={id}>
         <TextLink
+          className={styles.button}
+          component={Button}
           strong
           color="transparent"
           chevron={showMore ? 'up' : 'down'}
-          component={Button}
           type="button"
           onClick={this.handleShowMore}
           aria-expanded={showMore}
-          aria-controls={`${id}-content`} >
-          {showMore ? collapseLabel : expandLabel}
+          aria-controls={`${id}-content`}>
+          <Strong>{showMore ? collapseLabel : expandLabel}</Strong>
         </TextLink>
 
         <div id={`${id}-content`} style={!showMore ? { display: 'none' } : {}}>
