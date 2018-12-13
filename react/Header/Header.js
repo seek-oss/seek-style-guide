@@ -85,9 +85,7 @@ export default function Header({
           </div>
           <Hidden screen className={styles.logoNote}>Australia’s #1 job site</Hidden>
           <Hidden print className={styles.userWrapper}>
-            <NotificationBell>
-              {notification}
-            </NotificationBell>
+            {isAuthenticated && <NotificationBell>{notification}</NotificationBell>}
 
             <div className={userClasses}>
               <div className={styles.userAccountWrapper}>
