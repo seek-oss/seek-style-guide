@@ -1,0 +1,138 @@
+@import (reference) "~seek-style-guide/theme";
+@import (reference) "../Header.less";
+
+.root {
+  @media @desktop {
+    position: relative;
+    margin-right: @gutter-width;
+  }
+}
+
+.toggleLabel {
+  .touchableText();
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  z-index: @z-index-inline-overlay;
+  @media @mobile {
+    color: @sk-white;
+  }
+}
+
+.toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle:checked {
+  & ~ .toggleContainer {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  & ~ .menuBackdrop {
+    display: block;
+  }
+}
+
+.toggleContainer {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  transform-origin: 50% 0;
+  transform: translateY(@row-height * -4);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s cubic-bezier(0.02, 1.505, 0.745, 1.235);
+  pointer-events: none;
+  z-index: @z-index-inline-overlay;
+  @media @mobile {
+    transform: translateY(@row-height * -1);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+    top: @headerHeightMobile;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.menuBackdrop {
+  position: fixed;
+  top: -999px;
+  left: -999px;
+  right: -999px;
+  bottom: -9999px;
+  z-index: @z-index-inline-overlay;
+  display: none;
+}
+
+.menuBackdropLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bell {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  @keyframes shake {
+    10%,
+    90% {
+      transform: rotate(-1deg);
+    }
+    20%,
+    80% {
+      transform: rotate(2deg);
+    }
+    30%,
+    50%,
+    70% {
+      transform: rotate(-3deg);
+    }
+    40%,
+    60% {
+      transform: rotate(3deg);
+    }
+  }
+
+  .toggle:hover + .toggleLabel & {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+.bellSvg {
+  width: 24px;
+  height: 24px;
+  fill: @sk-pink;
+  @media @mobile {
+    fill: @sk-white;
+  }
+}
+
+.cross {
+  position: absolute;
+  top: @row-height * 3;
+  right: @gutter-width;
+}
+
+.notification {
+  position: relative;
+  width: 320px;
+  padding: (@row-height * 3) @gutter-width;
+  @border-width: 1px;
+  background-color: @sk-white;
+  border: @border-width solid @sk-mid-gray-light;
+  border-radius: 2px;
+}

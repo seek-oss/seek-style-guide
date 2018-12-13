@@ -15,6 +15,8 @@ import employerLinkForLocale from './employerLinkForLocale';
 import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
 import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
 
+import NotificationBell from './NotificationBell/NotificationBell';
+
 const handleLegacyTabName = tabName => (
   tabName === 'Advice & Tips' ?
     'Career Advice' :
@@ -47,7 +49,8 @@ export default function Header({
   linkRenderer,
   divider,
   returnUrl,
-  onMenuToggle = () => {}
+  onMenuToggle = () => {},
+  notification
 }) {
   const activeTab = handleLegacyTabName(activeTabProp);
   const newBadgeTab = handleLegacyTabName(newBadgeTabProp);
@@ -82,6 +85,10 @@ export default function Header({
           </div>
           <Hidden screen className={styles.logoNote}>Australia’s #1 job site</Hidden>
           <Hidden print className={styles.userWrapper}>
+            <NotificationBell>
+              {notification}
+            </NotificationBell>
+
             <div className={userClasses}>
               <div className={styles.userAccountWrapper}>
                 <UserAccount
@@ -147,7 +154,8 @@ Header.propTypes = {
   newBadgeTab: PropTypes.oneOf(allowedBadgeTabs),
   divider: PropTypes.bool,
   returnUrl: PropTypes.string,
-  onMenuToggle: PropTypes.func
+  onMenuToggle: PropTypes.func,
+  notification: PropTypes.object
 };
 
 Header.defaultProps = {

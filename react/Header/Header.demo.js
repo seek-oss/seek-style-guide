@@ -5,6 +5,8 @@ import { Header } from 'seek-style-guide/react';
 import * as sketch from './Header.sketch';
 import LogoRainbow from '../LogoRainbow/LogoRainbow';
 
+import { Text, TextLink } from 'seek-style-guide/react';
+
 export const makeDummyLinkRendererForPath = path => {
   const DummyLinkRenderer = ({ href, ...props }) => (
     <Link to={`${path}#actualHref=${href}`} {...props} />
@@ -57,6 +59,20 @@ export default {
           transformProps: props => ({
             ...props,
             logoComponent: LogoRainbow
+          })
+        },
+        {
+          label: 'Bell',
+          transformProps: props => ({
+            ...props,
+            notification: (
+              <div>
+                <Text strong>New job opportunity:</Text>
+                <Text><TextLink>Developer - Front end great benefits and flexibility</TextLink></Text>
+                <Text>SEEK Limited</Text>
+                <Text>Melbourne > Melbourne CBD</Text>
+              </div>
+            )
           })
         }
       ]
