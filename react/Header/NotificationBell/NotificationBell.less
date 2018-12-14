@@ -50,16 +50,6 @@
     transform 0.25s cubic-bezier(0.02, 1.505, 0.745, 1.235);
   pointer-events: none;
   z-index: @z-index-inline-overlay;
-  @media @mobile {
-    transform: translateY(@row-height * -1);
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease;
-    top: @headerHeightMobile;
-    right: 0;
-    left: 0;
-    bottom: 0;
-  }
 }
 
 .menuBackdrop {
