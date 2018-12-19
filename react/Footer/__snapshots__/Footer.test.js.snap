@@ -611,10 +611,21 @@ exports[`Footer: should render when authenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:help+centre"
+                href="https://seek.zendesk.com/"
+              >
+                Help centre
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
                 href="/contact-us/"
               >
-                Contact us / FAQs
+                Contact us
               </a>
             </li>
             <li
@@ -1434,10 +1445,21 @@ exports[`Footer: should render when authentication is pending 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:help+centre"
+                href="https://seek.zendesk.com/"
+              >
+                Help centre
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
                 href="/contact-us/"
               >
-                Contact us / FAQs
+                Contact us
               </a>
             </li>
             <li
@@ -2257,10 +2279,21 @@ exports[`Footer: should render when unauthenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:help+centre"
+                href="https://seek.zendesk.com/"
+              >
+                Help centre
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
                 href="/contact-us/"
               >
-                Contact us / FAQs
+                Contact us
               </a>
             </li>
             <li
@@ -3080,10 +3113,21 @@ exports[`Footer: should render with locale of AU 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:help+centre"
+                href="https://seek.zendesk.com/"
+              >
+                Help centre
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
                 href="/contact-us/"
               >
-                Contact us / FAQs
+                Contact us
               </a>
             </li>
             <li
@@ -3770,10 +3814,21 @@ exports[`Footer: should render with locale of NZ 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:help+centre"
+                href="https://seek.zendesk.com/"
+              >
+                Help centre
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:contact+us"
                 href="/contact-us/"
               >
-                Contact us / FAQs
+                Contact us
               </a>
             </li>
             <li
