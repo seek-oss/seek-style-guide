@@ -1,6 +1,11 @@
 export default [
   {
-    name: 'Contact us / FAQs',
+    name: 'Help centre',
+    href: 'https://seek.zendesk.com/',
+    analytics: 'toolbar:help+centre'
+  },
+  {
+    name: 'Contact us',
     href: '/contact-us/',
     analytics: 'toolbar:contact+us'
   },
