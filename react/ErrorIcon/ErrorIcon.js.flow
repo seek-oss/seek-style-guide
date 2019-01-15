@@ -1,0 +1,7 @@
+/** THIS FILE IS GENERATED, MANUAL CHANGES WILL BE DISCARDED **/
+// @flow
+export type ErrorIconProps = React.HTMLProps<HTMLSpanElement> & {
+  filled?: boolean
+};
+declare var ErrorIcon: SFC<ErrorIconProps>;
+declare module.exports: typeof ErrorIcon;

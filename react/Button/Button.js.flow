@@ -1,0 +1,12 @@
+/** THIS FILE IS GENERATED, MANUAL CHANGES WILL BE DISCARDED **/
+// @flow
+declare type Props = React.HTMLProps<HTMLButtonElement> & {
+  color: "pink" | "blue" | "gray" | "transparent" | "white",
+  children: ReactNode,
+  className?: string,
+  component?: string | ReactNode,
+  ghost?: boolean,
+  loading?: boolean,
+  fullWidth?: boolean
+};
+declare module.exports: typeof RemoveButton;
