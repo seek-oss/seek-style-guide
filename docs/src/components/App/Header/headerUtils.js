@@ -1,8 +1,10 @@
 import { pipe } from 'lodash/fp';
 
+const OTHER_CATEGORY = 'Other';
+
 export const buildRoutes = inputRoutes =>
   inputRoutes.reduce((acc, route) => {
-    const category = route.category || 'Other';
+    const category = route.category || OTHER_CATEGORY;
     const initialArrayVal = acc[category] || [];
     return {
       ...acc,
@@ -17,10 +19,14 @@ export const compareRoutes = (routeA, routeB) => {
   if (!routeB.component && routeA.component) {
     return 1;
   }
-  if ((routeA.category || 'Other') < (routeB.category || 'Other')) {
+  if (
+    (routeA.category || OTHER_CATEGORY) < (routeB.category || OTHER_CATEGORY)
+  ) {
     return -1;
   }
-  if ((routeA.category || 'Other') > (routeB.category || 'Other')) {
+  if (
+    (routeA.category || OTHER_CATEGORY) > (routeB.category || OTHER_CATEGORY)
+  ) {
     return 1;
   }
   if (routeA.title < routeB.title) {
