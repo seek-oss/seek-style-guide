@@ -13,20 +13,18 @@ export const buildRoutes = inputRoutes =>
   }, {});
 
 export const compareRoutes = (routeA, routeB) => {
+  const routeACategory = routeA.category || OTHER_CATEGORY;
+  const routeBCategory = routeB.category || OTHER_CATEGORY;
   if (!routeA.component && routeB.component) {
     return -1;
   }
   if (!routeB.component && routeA.component) {
     return 1;
   }
-  if (
-    (routeA.category || OTHER_CATEGORY) < (routeB.category || OTHER_CATEGORY)
-  ) {
+  if (routeACategory < routeBCategory) {
     return -1;
   }
-  if (
-    (routeA.category || OTHER_CATEGORY) > (routeB.category || OTHER_CATEGORY)
-  ) {
+  if (routeACategory > routeBCategory) {
     return 1;
   }
   if (routeA.title < routeB.title) {
