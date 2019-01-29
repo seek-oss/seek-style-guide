@@ -322,6 +322,20 @@ exports[`Header: should append returnUrl to signin and register links if present
                       />
                     </a>
                   </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -851,6 +865,20 @@ exports[`Header: should render first part of email address when username isn't p
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
                       <div
                         class="UserAccountMenu__iconSpacer"
                       />
@@ -1407,6 +1435,20 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       />
                     </a>
                   </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -1936,6 +1978,20 @@ exports[`Header: should render when authenticated 1`] = `
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
                       <div
                         class="UserAccountMenu__iconSpacer"
                       />
@@ -2477,6 +2533,20 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
                       <div
                         class="UserAccountMenu__iconSpacer"
                       />
@@ -3033,6 +3103,20 @@ exports[`Header: should render when authentication is pending 1`] = `
                       />
                     </a>
                   </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -3583,6 +3667,20 @@ exports[`Header: should render when unauthenticated 1`] = `
                       />
                     </a>
                   </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -4086,6 +4184,20 @@ exports[`Header: should render with a custom logo 1`] = `
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
                       <div
                         class="UserAccountMenu__iconSpacer"
                       />
@@ -4631,6 +4743,20 @@ exports[`Header: should render with locale of AU 1`] = `
                       />
                     </a>
                   </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -5136,6 +5262,20 @@ exports[`Header: should render with locale of NZ 1`] = `
                       href="https://talent.seek.co.nz/"
                     >
                       Employer Site
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
                       <div
                         class="UserAccountMenu__iconSpacer"
                       />
@@ -5653,6 +5793,20 @@ exports[`Header: should render with no divider 1`] = `
                       href="https://talent.seek.com.au/"
                     >
                       Employer Site
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="Hidden__desktop"
+                  >
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:courses"
+                      href="/learning/"
+                    >
+                      Courses
                       <div
                         class="UserAccountMenu__iconSpacer"
                       />
