@@ -277,6 +277,20 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
       }
     </Hidden>
 
+    <Hidden desktop component="li">
+      {
+        linkRenderer({
+          'data-analytics': 'header:courses',
+          className: styles.item,
+          href: '/learning/',
+          children: [
+            'Courses',
+            <div key="iconSpacer" className={styles.iconSpacer} />
+          ]
+        })
+      }
+    </Hidden>
+
     {
       authenticationStatus === AUTHENTICATED ? (
         <Hidden mobile component="li">
