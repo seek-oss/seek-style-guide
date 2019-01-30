@@ -282,7 +282,7 @@ export default ({ locale, authenticationStatus, linkRenderer, returnUrl, activeT
         linkRenderer({
           'data-analytics': 'header:courses',
           className: styles.item,
-          href: '/learning/',
+          href: 'https://www.seek.com.au/learning/',
           children: [
             'Courses',
             <div key="iconSpacer" className={styles.iconSpacer} />

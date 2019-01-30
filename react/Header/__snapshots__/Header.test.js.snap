@@ -328,7 +328,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -876,7 +876,7 @@ exports[`Header: should render first part of email address when username isn't p
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -1441,7 +1441,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -1989,7 +1989,7 @@ exports[`Header: should render when authenticated 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -2544,7 +2544,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -3109,7 +3109,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -3673,7 +3673,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -4195,7 +4195,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -4749,7 +4749,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -5273,7 +5273,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
@@ -5804,7 +5804,7 @@ exports[`Header: should render with no divider 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:courses"
-                      href="/learning/"
+                      href="https://www.seek.com.au/learning/"
                     >
                       Courses
                       <div
