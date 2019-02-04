@@ -57,6 +57,13 @@ export default {
             ...props,
             pullout: !pullout
           })
+        },
+        {
+          label: 'Headline',
+          transformProps: ({ headline, ...props }) => ({
+            ...props,
+            headline: headline ? '' : 'Some stronger text for emphasis'
+          })
         }
       ]
     },

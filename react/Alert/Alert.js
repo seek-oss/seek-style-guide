@@ -46,15 +46,22 @@ export default class Alert extends Component {
   handleClose = event => this.props.onClose(event);
 
   renderContents = () => {
-    const { tone, message, hideIcon, onClose } = this.props;
+    const { tone, message, headline, hideIcon, onClose } = this.props;
 
     const Icon = tone ? ICONS[tone] : null;
 
     return (
       <div className={styles.alert}>
-        {(!hideIcon && Icon) && <Icon className={styles.icon} />}
+        {!hideIcon && Icon && <Icon className={styles.icon} />}
         <div className={styles.text}>
-          <Text raw baseline={false}>{message}</Text>
+          {headline && (
+            <Text strong raw baseline={false}>
+              {headline}
+            </Text>
+          )}
+          <Text raw baseline={false}>
+            {message}
+          </Text>
         </div>
         {onClose && (
           <button className={styles.close} onClick={this.handleClose}>
