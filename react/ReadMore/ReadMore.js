@@ -31,7 +31,7 @@ type Props = {|
   lessLabel: string,
   backgroundComponentName: 'card' | 'body' | 'gray-lightest',
   onShowMore?: Function,
-  onMoreButtonToggle?: Function
+  onMoreButtonVisibilityChange?: Function
 |};
 type State = {|
   showMore: boolean,
@@ -68,7 +68,7 @@ class ReadMore extends PureComponent<Props, State> {
   contentRef: ?HTMLDivElement;
 
   update = () => {
-    const { maxLines, maxRows, onMoreButtonToggle } = this.props;
+    const { maxLines, maxRows, onMoreButtonVisibilityChange } = this.props;
 
     if (this.contentRef) {
       const { scrollHeight } = this.contentRef;
@@ -78,8 +78,8 @@ class ReadMore extends PureComponent<Props, State> {
 
       this.setState({ tooLong, mounted: true }); // eslint-disable-line
 
-      if (onMoreButtonToggle && tooLong !== this.state.tooLong) {
-        onMoreButtonToggle(tooLong);
+      if (onMoreButtonVisibilityChange && tooLong !== this.state.tooLong) {
+        onMoreButtonVisibilityChange(tooLong);
       }
     }
   };
