@@ -18,8 +18,8 @@ import styles from './Palette.less';
 
 const palettes = [
   { name: 'brand.less', variables: lessToJs(brand) },
-  { name: 'elements.less', variables: lessToJs(elements) },
   { name: 'grays.less', variables: lessToJs(grays) },
+  { name: 'elements.less', variables: lessToJs(elements) },
   { name: 'partners.less', variables: lessToJs(partners) },
   { name: 'accessible-variants.less', variables: lessToJs(accessibleVariants) }
 ];
