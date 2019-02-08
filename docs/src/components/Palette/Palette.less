@@ -1,0 +1,21 @@
+@import (reference) '../../../../theme';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 0 0 160px;
+  margin: 0 (@gutter-width / 2) (@row-height * 3);
+  background-color: @sk-white;
+  text-align: center;
+}
+
+.swatch {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto @row-height;
+  border-radius: 50%;
+  border: 1px solid @sk-gray-medium;
+}
