@@ -33,7 +33,10 @@ export default () => (
       <Card transparent style={{ maxWidth: 720 }}>
         <Section>
           <Paragraph>
-            <Text>Colours are important...</Text>
+            <Text>
+              Below are all the colours included in the style guide grouped by
+              the file they reside in.
+            </Text>
           </Paragraph>
         </Section>
       </Card>
