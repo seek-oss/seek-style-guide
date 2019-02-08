@@ -24,8 +24,6 @@ const palettes = [
   { name: 'accessible-variants.less', variables: lessToJs(accessibleVariants) }
 ];
 
-console.log(palettes);
-
 export default () => (
   <div>
     <PageBlock>
