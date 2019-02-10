@@ -35,12 +35,25 @@ export default class Textarea extends Component {
     countFeedback: (props, propName, componentName) => {
       const { value, inputProps = {} } = props;
 
-      if (typeof props[propName] !== 'function' && typeof props[propName] !== 'undefined') {
-        return new Error(`Invalid prop \`${propName}\` of type \`${typeof props[propName]}\` supplied to \`${componentName}\`, expected \`function\`.`);
+      if (
+        typeof props[propName] !== 'function' &&
+        typeof props[propName] !== 'undefined'
+      ) {
+        return new Error(
+          `Invalid prop \`${propName}\` of type \`${typeof props[
+            propName
+          ]}\` supplied to \`${componentName}\`, expected \`function\`.`
+        );
       }
 
-      if (props[propName] && typeof value !== 'string' && typeof inputProps.value !== 'string') {
-        return new Error(`\`value\` must be supplied if \`${propName}\` is set`);
+      if (
+        props[propName] &&
+        typeof value !== 'string' &&
+        typeof inputProps.value !== 'string'
+      ) {
+        return new Error(
+          `\`value\` must be supplied if \`${propName}\` is set`
+        );
       }
 
       return null;
@@ -49,7 +62,9 @@ export default class Textarea extends Component {
     tone: PropTypes.oneOf([TONE.POSITIVE, TONE.CRITICAL, TONE.NEUTRAL]),
     /* eslint-enable consistent-return */
     invalidText: PropTypes.oneOfType([
-      PropTypes.string, PropTypes.object, PropTypes.arrayOf(PropTypes.object)
+      PropTypes.string,
+      PropTypes.object,
+      PropTypes.arrayOf(PropTypes.object)
     ])
   };
 
@@ -95,29 +110,37 @@ export default class Textarea extends Component {
 
     const className = classnames({
       [styles.characterCount]: true,
-      [styles.invalidCharacterCount]: (count < 0)
+      [styles.invalidCharacterCount]: count < 0
     });
 
-    return (
-      <span className={className}>
-        { count }
-      </span>
-    );
+    return <span className={className}>{count}</span>;
   }
   /* eslint-enable consistent-return */
 
   onScroll = () => {
     const scrollTop = this.textarea.scrollTop;
     this.textareaBackdrop.scrollTop = scrollTop;
-  }
+  };
 
   renderInput() {
-    const { id, value, invalidText, onChange, onFocus, onBlur, inputProps } = this.props;
+    const {
+      id,
+      value,
+      invalidText,
+      onChange,
+      onFocus,
+      onBlur,
+      inputProps
+    } = this.props;
     const { ref: inputRef } = inputProps;
     let formattedText;
     const highlightErrors = typeof invalidText !== 'undefined';
     if (highlightErrors) {
-      formattedText = formatInvalidText(value, invalidText, styles.invalidTextChunk);
+      formattedText = formatInvalidText(
+        value,
+        invalidText,
+        styles.invalidTextChunk
+      );
     }
 
     const renderTextarea = (props = {}, classname) => (
@@ -141,35 +164,75 @@ export default class Textarea extends Component {
         <div
           data-automation="backdrop"
           ref={this.storeTextareaBackdropRef}
-          className={classnames(styles.textarea, styles.backdrop)}>
+          className={classnames(styles.textarea, styles.backdrop)}
+        >
           {formattedText}
         </div>
         {renderTextarea({ onScroll: this.onScroll }, styles.highlightTextarea)}
       </div>
-    ) : renderTextarea();
+    ) : (
+      renderTextarea()
+    );
   }
 
   render() {
     const { id, className, valid, tone } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
+      [styles.invalid]:
+        typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [className]: className
     });
 
-    // eslint-disable-next-line react/prop-types
-    const { label, labelProps, invalid, help, helpProps, message, messageProps, secondaryLabel, tertiaryLabel, description } = this.props;
+    const {
+      // eslint-disable-next-line react/prop-types
+      label,
+      // eslint-disable-next-line react/prop-types
+      labelProps,
+      // eslint-disable-next-line react/prop-types
+      invalid,
+      // eslint-disable-next-line react/prop-types
+      help,
+      // eslint-disable-next-line react/prop-types
+      helpProps,
+      // eslint-disable-next-line react/prop-types
+      message,
+      // eslint-disable-next-line react/prop-types
+      messageProps,
+      secondaryLabel,
+      // eslint-disable-next-line react/prop-types
+      tertiaryLabel,
+      description
+    } = this.props;
     const hasDescription = description.length > 0;
 
     return (
       <div className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel, raw: hasDescription }} />
-        {
-          hasDescription ? <Text secondary>{description}</Text> : null
-        }
+        <FieldLabel
+          {...{
+            id,
+            label,
+            labelProps,
+            secondaryLabel,
+            tertiaryLabel,
+            raw: hasDescription
+          }}
+        />
+        {hasDescription ? <Text secondary>{description}</Text> : null}
         {this.renderInput()}
         <div className={styles.footer}>
-          <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, message, messageProps, tone, ...(tone ? {} : { valid }) }} />
+          <FieldMessage
+            {...{
+              id: `${id}-message`,
+              invalid,
+              help,
+              helpProps,
+              message,
+              messageProps,
+              tone,
+              ...(tone ? {} : { valid })
+            }}
+          />
           {this.renderCharacterCount()}
         </div>
       </div>

@@ -31,17 +31,24 @@ export default class Dropdown extends Component {
     options: PropTypes.arrayOf(
       PropTypes.shape({
         value: PropTypes.oneOfType([
-          PropTypes.arrayOf(PropTypes.shape({
-            value: PropTypes.string,
-            label: PropTypes.string
-          })),
+          PropTypes.arrayOf(
+            PropTypes.shape({
+              value: PropTypes.string,
+              label: PropTypes.string
+            })
+          ),
           PropTypes.string
         ]).isRequired,
         label: PropTypes.string
       })
     ),
     placeholder: PropTypes.string,
-    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL])
+    tone: PropTypes.oneOf([
+      TONE.POSITIVE,
+      TONE.INFO,
+      TONE.CRITICAL,
+      TONE.NEUTRAL
+    ])
   };
 
   static defaultProps = {
@@ -58,16 +65,24 @@ export default class Dropdown extends Component {
   }
 
   renderOption({ value, label }) {
-    return (<option
-      value={value}
-      key={value}
-      className={styles.option}>
-      { label }
-    </option>);
+    return (
+      <option value={value} key={value} className={styles.option}>
+        {label}
+      </option>
+    );
   }
 
   renderSelect() {
-    const { id, value, onChange, onFocus, onBlur, inputProps, options, placeholder } = this.props;
+    const {
+      id,
+      value,
+      onChange,
+      onFocus,
+      onBlur,
+      inputProps,
+      options,
+      placeholder
+    } = this.props;
     const inputStyles = classnames({
       [styles.dropdown]: true,
       [styles.placeholderSelected]: !value && !inputProps.value
@@ -84,19 +99,19 @@ export default class Dropdown extends Component {
 
     return (
       <select {...allInputProps}>
-        <option
-          value=""
-          disabled={true}>
-          { placeholder }
+        <option value="" disabled={true}>
+          {placeholder}
         </option>
-        {
-          options.map(option => {
-            if (Array.isArray(option.value)) {
-              return (<optgroup value="" label={option.label} key={option.label}>{option.value.map(this.renderOption)}</optgroup>);
-            }
-            return this.renderOption(option);
-          })
-        }
+        {options.map(option => {
+          if (Array.isArray(option.value)) {
+            return (
+              <optgroup value="" label={option.label} key={option.label}>
+                {option.value.map(this.renderOption)}
+              </optgroup>
+            );
+          }
+          return this.renderOption(option);
+        })}
       </select>
     );
   }
@@ -104,10 +119,7 @@ export default class Dropdown extends Component {
   renderChevron() {
     return (
       <div className={styles.chevron}>
-        <ChevronIcon
-          svgClassName={styles.chevronSvg}
-          direction="down"
-        />
+        <ChevronIcon svgClassName={styles.chevronSvg} direction="down" />
       </div>
     );
   }
@@ -116,19 +128,51 @@ export default class Dropdown extends Component {
     const { id, className, valid, tone } = this.props;
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
+      [styles.invalid]:
+        typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [className]: className
     });
 
-    // eslint-disable-next-line react/prop-types
-    const { label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
+    const {
+      // eslint-disable-next-line react/prop-types
+      label,
+      // eslint-disable-next-line react/prop-types
+      labelProps,
+      // eslint-disable-next-line react/prop-types
+      secondaryLabel,
+      // eslint-disable-next-line react/prop-types
+      tertiaryLabel,
+      // eslint-disable-next-line react/prop-types
+      invalid,
+      // eslint-disable-next-line react/prop-types
+      help,
+      // eslint-disable-next-line react/prop-types
+      helpProps,
+      // eslint-disable-next-line react/prop-types
+      message,
+      // eslint-disable-next-line react/prop-types
+      messageProps
+    } = this.props;
 
     return (
       <div className={classNames}>
-        <FieldLabel {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }} />
+        <FieldLabel
+          {...{ id, label, labelProps, secondaryLabel, tertiaryLabel }}
+        />
         {this.renderChevron()}
         {this.renderSelect()}
-        <FieldMessage {...{ id: `${id}-message`, invalid, help, helpProps, message, messageProps, tone, ...(tone ? {} : { valid }) }} />
+        <FieldMessage
+          {...{
+            id: `${id}-message`,
+            invalid,
+            help,
+            helpProps,
+            message,
+            messageProps,
+            tone,
+            ...(tone ? {} : { valid })
+          }}
+        />
       </div>
     );
   }

@@ -7,27 +7,26 @@ import classnames from 'classnames';
 
 import withTextProps, { SizePropTypes } from '../withTextProps';
 
-function Icon({
-  markup,
-  className,
-  svgClassName,
-  size,
-  ...restProps }) {
-  const svgClassNames = classnames(
-    styles.svg,
-    svgClassName,
-    { [styles[`${size}Svg`]]: size }
-  );
+function Icon({ markup, className, svgClassName, size, ...restProps }) {
+  const svgClassNames = classnames(styles.svg, svgClassName, {
+    [styles[`${size}Svg`]]: size
+  });
 
-  const svgWithClasses = markup
-    .replace('<svg ', `<svg class="${svgClassNames}" `);
+  const svgWithClasses = markup.replace(
+    '<svg ',
+    `<svg class="${svgClassNames}" `
+  );
   const combinedProps = {
     ...restProps,
     className: classnames(styles.root, className)
   };
 
   return (
-    <span dangerouslySetInnerHTML={{ __html: svgWithClasses }} {...combinedProps} /> // eslint-disable-line react/no-danger
+    <span
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: svgWithClasses }}
+      {...combinedProps}
+    />
   );
 }
 
