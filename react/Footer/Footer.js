@@ -14,9 +14,13 @@ import FooterLink from './FooterLink/FooterLink';
 import FooterNav from './FooterNav/FooterNav';
 import Hidden from '../Hidden/Hidden';
 import ToggleContainer from './ToggleContainer/ToggleContainer';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from '../private/authStatusTypes';
 
-const defaultLinkRenderer = props => (<a {...props} />);
+const defaultLinkRenderer = props => <a {...props} />;
 
 export default class Footer extends Component {
   static propTypes = {
@@ -42,15 +46,26 @@ export default class Footer extends Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    return this.props.locale !== nextProps.locale || this.props.authenticationStatus !== nextProps.authenticationStatus;
+    return (
+      this.props.locale !== nextProps.locale ||
+      this.props.authenticationStatus !== nextProps.authenticationStatus
+    );
   }
 
   renderLink({ name, specificLocale, secondary, ...restProps }, i) {
     const { locale, linkRenderer, authenticationStatus } = this.props;
 
-    return (!specificLocale || specificLocale === locale) ?
-      <FooterLink secondary={secondary} linkRenderer={linkRenderer} authenticationStatus={authenticationStatus} key={i} {...restProps}>{name}</FooterLink> :
-      null;
+    return !specificLocale || specificLocale === locale ? (
+      <FooterLink
+        secondary={secondary}
+        linkRenderer={linkRenderer}
+        authenticationStatus={authenticationStatus}
+        key={i}
+        {...restProps}
+      >
+        {name}
+      </FooterLink>
+    ) : null;
   }
 
   render() {
@@ -63,58 +78,68 @@ export default class Footer extends Component {
           <div className={styles.content}>
             <div className={styles.columns}>
               <FooterNav label="Tools">
-                { tools.map(this.renderLink) }
-                <ToggleContainer name="DownloadAppsToggle" label="Download apps">
-                  { seekApps.map(this.renderLink) }
+                {tools.map(this.renderLink)}
+                <ToggleContainer
+                  name="DownloadAppsToggle"
+                  label="Download apps"
+                >
+                  {seekApps.map(this.renderLink)}
                 </ToggleContainer>
                 <ToggleContainer name="PartnerSitesToggle" label="SEEK sites">
-                  { seekSites.map(this.renderLink) }
+                  {seekSites.map(this.renderLink)}
                 </ToggleContainer>
               </FooterNav>
 
               <FooterNav secondary label="Company">
-                { company.map(this.renderLink) }
-                <ToggleContainer secondary name="InternationalPartnersToggle" label="International partners">
-                  { partners.map(this.renderLink) }
+                {company.map(this.renderLink)}
+                <ToggleContainer
+                  secondary
+                  name="InternationalPartnersToggle"
+                  label="International partners"
+                >
+                  {partners.map(this.renderLink)}
                 </ToggleContainer>
-                {
-                  isAU ?
-                    <ToggleContainer secondary name="PartnerServicesToggle" label="Partner services" data-automation="partner-services-toggle">
-                      { services.map(this.renderLink) }
-                    </ToggleContainer> :
-                    null
-                }
+                {isAU ? (
+                  <ToggleContainer
+                    secondary
+                    name="PartnerServicesToggle"
+                    label="Partner services"
+                    data-automation="partner-services-toggle"
+                  >
+                    {services.map(this.renderLink)}
+                  </ToggleContainer>
+                ) : null}
               </FooterNav>
 
               <FooterNav label="Connect">
-                { connect.map(this.renderLink) }
+                {connect.map(this.renderLink)}
                 <ToggleContainer name="SocialToggle" label="Social">
-                  { social.map(this.renderLink) }
+                  {social.map(this.renderLink)}
                 </ToggleContainer>
               </FooterNav>
 
               <FooterNav secondary label="Employers">
-                { employers.map(this.renderLink) }
+                {employers.map(this.renderLink)}
               </FooterNav>
             </div>
 
             <div className={styles.copyright}>
-              {
-                copyright.map(({ name, analytics, href, rel, secondary }, key) => (
-                  linkRenderer({
-                    children: name,
-                    href,
-                    rel,
-                    'data-analytics': analytics,
-                    key,
-                    className: classnames({
-                      [styles.copyrightLink]: true,
-                      [styles.secondaryLink]: secondary
-                    })
+              {copyright.map(({ name, analytics, href, rel, secondary }, key) =>
+                linkRenderer({
+                  children: name,
+                  href,
+                  rel,
+                  'data-analytics': analytics,
+                  key,
+                  className: classnames({
+                    [styles.copyrightLink]: true,
+                    [styles.secondaryLink]: secondary
                   })
-                ))
-              }
-              <p className={styles.copyrightMessage}>{'\u00A9 SEEK. All rights reserved.'}</p>
+                })
+              )}
+              <p className={styles.copyrightMessage}>
+                {'\u00A9 SEEK. All rights reserved.'}
+              </p>
             </div>
           </div>
         </Hidden>

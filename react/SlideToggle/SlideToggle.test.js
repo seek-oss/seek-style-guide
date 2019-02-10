@@ -3,14 +3,12 @@ import { shallow } from 'enzyme';
 
 import SlideToggle from './SlideToggle';
 
-const renderSlideToggle = (props, children) => shallow(
-  <SlideToggle
-    id="testSlideToggle"
-    label="Test toggle"
-    {...props}>
-    {children}
-  </SlideToggle>
-);
+const renderSlideToggle = (props, children) =>
+  shallow(
+    <SlideToggle id="testSlideToggle" label="Test toggle" {...props}>
+      {children}
+    </SlideToggle>
+  );
 
 describe('Slide toggle:', () => {
   it('should render with default props', () => {

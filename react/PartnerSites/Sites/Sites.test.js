@@ -4,7 +4,7 @@ import { render } from 'enzyme';
 import Sites from './Sites';
 
 const renderSites = props => render(<Sites {...props} />);
-const linkRenderer = props => (<a {...props} />);
+const linkRenderer = props => <a {...props} />;
 
 describe('Sites:', () => {
   describe('locale states:', () => {
@@ -21,16 +21,32 @@ describe('Sites:', () => {
       expect(renderSites({ locale: 'AU', linkRenderer })).toMatchSnapshot();
     });
     it('should render with jobs link as active', () => {
-      expect(renderSites({ locale: 'AU', linkRenderer, activeProduct: 'Jobs' })).toMatchSnapshot();
+      expect(
+        renderSites({ locale: 'AU', linkRenderer, activeProduct: 'Jobs' })
+      ).toMatchSnapshot();
     });
     it('should render with courses link as active', () => {
-      expect(renderSites({ locale: 'AU', linkRenderer, activeProduct: 'Courses' })).toMatchSnapshot();
+      expect(
+        renderSites({ locale: 'AU', linkRenderer, activeProduct: 'Courses' })
+      ).toMatchSnapshot();
     });
     it('should render with businesses link as active', () => {
-      expect(renderSites({ locale: 'AU', linkRenderer, activeProduct: 'Businesses for sale' })).toMatchSnapshot();
+      expect(
+        renderSites({
+          locale: 'AU',
+          linkRenderer,
+          activeProduct: 'Businesses for sale'
+        })
+      ).toMatchSnapshot();
     });
     it('should render with volunteering link as active', () => {
-      expect(renderSites({ locale: 'AU', linkRenderer, activeProduct: 'Volunteering' })).toMatchSnapshot();
+      expect(
+        renderSites({
+          locale: 'AU',
+          linkRenderer,
+          activeProduct: 'Volunteering'
+        })
+      ).toMatchSnapshot();
     });
   });
 });

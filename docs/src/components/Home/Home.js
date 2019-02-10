@@ -6,7 +6,9 @@ import Preface from './Preface/Preface';
 export default function Home() {
   return (
     <div>
-      <ScreenReaderOnly><h1>SEEK Style Guide</h1></ScreenReaderOnly>
+      <ScreenReaderOnly>
+        <h1>SEEK Style Guide</h1>
+      </ScreenReaderOnly>
       <Hero />
       <Preface />
     </div>

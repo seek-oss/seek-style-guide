@@ -24,9 +24,9 @@ const allRoutes = [
   { route: '/page-layout', title: 'Page Layout', category: 'Guides' },
   {
     route:
-      process.env.NODE_ENV === 'production' ?
-        `${process.env.BASE_HREF}playroom` :
-        'http://localhost:9000/',
+      process.env.NODE_ENV === 'production'
+        ? `${process.env.BASE_HREF}playroom`
+        : 'http://localhost:9000/',
     title: 'Playroom',
     category: 'Tools',
     target: '_blank'
@@ -145,30 +145,25 @@ class Header extends Component {
   renderListItem = demoSpec => {
     const isExternal = demoSpec.target === '_blank';
     const ComponentItem = isExternal ? 'a' : Link;
-    const linkDestination = isExternal ?
-      { href: demoSpec.route } :
-      { to: demoSpec.route };
+    const linkDestination = isExternal
+      ? { href: demoSpec.route }
+      : { to: demoSpec.route };
 
     return (
-      <WithHighlighting
-        key={demoSpec.title}
-        highlighted={demoSpec.highlighted}>
+      <WithHighlighting key={demoSpec.title} highlighted={demoSpec.highlighted}>
         <Text headline regular>
           <ComponentItem
-            ref={
-              demoSpec.highlighted ?
-                this.highlightedRef :
-                ''
-            }
+            ref={demoSpec.highlighted ? this.highlightedRef : ''}
             className={styles.link}
             target={demoSpec.target}
-            {...linkDestination}>
+            {...linkDestination}
+          >
             {demoSpec.title}
           </ComponentItem>
         </Text>
       </WithHighlighting>
     );
-  }
+  };
 
   render() {
     const { fullWidth } = this.props;
@@ -189,7 +184,8 @@ class Header extends Component {
               <Link
                 className={styles.logoLink}
                 to="/"
-                onClick={this.handleMenuClose}>
+                onClick={this.handleMenuClose}
+              >
                 <Logo svgClassName={styles.logo} />
                 <h1 className={styles.title}>
                   <ScreenReaderOnly>SEEK </ScreenReaderOnly>
@@ -228,9 +224,9 @@ class Header extends Component {
                       </Card>
 
                       {routeList.map(([category, routes]) => {
-                        const title = routes[0].component ?
-                          `${category} Components` :
-                          category;
+                        const title = routes[0].component
+                          ? `${category} Components`
+                          : category;
                         return (
                           <Fragment key={category}>
                             <Card transparent>

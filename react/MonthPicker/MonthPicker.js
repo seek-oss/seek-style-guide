@@ -31,7 +31,12 @@ export default class MonthPicker extends Component {
     minYear: PropTypes.number,
     maxYear: PropTypes.number,
     ascendingYears: PropTypes.bool,
-    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL])
+    tone: PropTypes.oneOf([
+      TONE.POSITIVE,
+      TONE.INFO,
+      TONE.CRITICAL,
+      TONE.NEUTRAL
+    ])
   };
 
   static defaultProps = {
@@ -113,7 +118,16 @@ export default class MonthPicker extends Component {
       <div className={classNames}>
         {this.renderInput()}
         <FieldMessage
-          {...{ id: `${id}-message`, invalid, help, helpProps, message, messageProps, tone, ...(tone ? {} : { valid }) }}
+          {...{
+            id: `${id}-message`,
+            invalid,
+            help,
+            helpProps,
+            message,
+            messageProps,
+            tone,
+            ...(tone ? {} : { valid })
+          }}
         />
       </div>
     );

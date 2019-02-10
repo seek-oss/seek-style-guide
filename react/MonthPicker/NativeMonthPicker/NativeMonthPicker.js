@@ -20,7 +20,7 @@ const makeMonthString = ({ month, year }) => {
 };
 
 const getValueFromString = monthString => {
-  const [ year, month ] = monthString.split('-');
+  const [year, month] = monthString.split('-');
 
   return {
     year: parseInt(year, 10),
@@ -97,7 +97,12 @@ export default class NativeMonthPicker extends Component {
         <FieldLabel
           {...{
             id,
-            label: <span>{label}<ScreenReaderOnly> Month Year</ScreenReaderOnly></span>,
+            label: (
+              <span>
+                {label}
+                <ScreenReaderOnly> Month Year</ScreenReaderOnly>
+              </span>
+            ),
             labelProps,
             secondaryLabel,
             tertiaryLabel

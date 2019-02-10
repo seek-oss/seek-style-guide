@@ -99,7 +99,10 @@ export default {
       ].map(newBadgeTab => {
         let label = newBadgeTab;
         if (!newBadgeTab) {
-          label = newBadgeTab === undefined ? 'Default "new" badge' : 'No "new" badge';
+          label =
+            newBadgeTab === undefined
+              ? 'Default "new" badge'
+              : 'No "new" badge';
         }
         return {
           label,

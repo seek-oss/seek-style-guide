@@ -35,11 +35,15 @@ const shortText = (
   </Text>
 );
 
-const ToggleContentContainer = ({ component: DemoComponent, componentProps }) => (
+const ToggleContentContainer = ({
+  component: DemoComponent,
+  componentProps
+}) => (
   <Card style={{ width: 500 }}>
     <Section>
       <Text>
-        This is just a normal Text component before the ToggleContent component, click below to show more!
+        This is just a normal Text component before the ToggleContent component,
+        click below to show more!
       </Text>
       <DemoComponent {...componentProps} />
     </Section>

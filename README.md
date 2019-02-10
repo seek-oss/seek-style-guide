@@ -36,12 +36,8 @@ export default class App extends Component {
   render() {
     const locale = 'AU';
     const title = '...';
-    const meta = [
-      { name: 'description', content: '...' }
-    ];
-    const link = [
-      { rel: 'canonical', href: 'https://www.seek.com.au/' }
-    ];
+    const meta = [{ name: 'description', content: '...' }];
+    const link = [{ rel: 'canonical', href: 'https://www.seek.com.au/' }];
 
     return (
       <StyleGuideProvider locale={locale} title={title} meta={meta} link={link}>
@@ -49,7 +45,7 @@ export default class App extends Component {
       </StyleGuideProvider>
     );
   }
-};
+}
 ```
 
 `StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
@@ -72,6 +68,7 @@ The `<Header>` component accepts the following props:
 - **linkRenderer:** Function to allow custom rendering of links. The default implementation simply renders a standard link, spreading all props: `props => <a {...props} />`
 
 The `<Footer>` component accepts the following props:
+
 - **locale:** See above.
 - **linkRenderer:** See above.
 
@@ -86,7 +83,7 @@ For more advanced pages, if you need to drop down into Less, the style guide pro
 In any style sheet that depends on the style guide, first import the Less theme by reference.
 
 ```less
-@import (reference) "~seek-style-guide/theme";
+@import (reference) '~seek-style-guide/theme';
 ```
 
 ### Responsive Breakpoint
@@ -107,8 +104,7 @@ The following colors are provided:
 
 ```less
 // Brand colors
-@sk-blue-darker
-@sk-blue-dark
+@sk-blue-darker @sk-blue-dark
 @sk-blue
 @sk-blue-light
 @sk-blue-lighter
@@ -154,7 +150,7 @@ The following colors are provided:
 @sk-critical-light
 @sk-critical
 @sk-help-light
-@sk-help
+@sk-help;
 ```
 
 ### Z-Indexes
@@ -162,11 +158,10 @@ The following colors are provided:
 To ensure correct relative elements stacking order, z-index variables are provided:
 
 ```less
-@z-index-header-overlay
-@z-index-header
+@z-index-header-overlay @z-index-header
 @z-index-page-overlay
 @z-index-inline-overlay
-@z-index-negative
+@z-index-negative;
 ```
 
 ### Accessible Color Variants
@@ -174,12 +169,11 @@ To ensure correct relative elements stacking order, z-index variables are provid
 The contrast ratio of certain foreground/background color combinations don't meet the [AA accessibility standards](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) that we aim for. As a result, a suite of accessible variants have been provided:
 
 ```less
-@sk-mid-gray-on-white
-@sk-pink-on-gray-light
+@sk-mid-gray-on-white @sk-pink-on-gray-light
 @sk-learning-dark-on-gray-light
 @sk-business-on-gray-light
 @sk-link-on-mid-gray-light
-@sk-mid-gray-dark-on-gray-light
+@sk-mid-gray-dark-on-gray-light;
 ```
 
 Please note that this list is not exhaustive, so contributions are encouraged. To validate color combinations, we recommend the use of the web-based tool [Accessible Colors](http://accessible-colors.com) by [@moroshko](https://github.com/moroshko).
@@ -189,10 +183,9 @@ Please note that this list is not exhaustive, so contributions are encouraged. T
 In order to ensure elements correctly follow the grid, element sizing should always be controlled by the following variables:
 
 ```less
-@row-height
-@gutter-width
+@row-height @gutter-width
 @column-width
-@container-width
+@container-width;
 ```
 
 When defining a document content container:
@@ -238,22 +231,26 @@ It's important to note that any additions to these values (e.g. borders) will ne
 If you're maintaining or updating a non-React app, a standalone JS + CSS + HTML package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
 
 First, include the following files in your app:
+
 - `seek-style-guide/dist/header-footer/styles.css`
 - `seek-style-guide/dist/header-footer/client.js`
 
 Then, include the appropriate header and footer HTML snippets, switching based on locale:
 
 **Header:**
+
 - `seek-style-guide/dist/header-footer/header__au.html`
 - `seek-style-guide/dist/header-footer/header__nz.html`
 
 **Header, with "Career Advice" tab selected:**
+
 - `seek-style-guide/dist/header-footer/header__au__career_advice.html`
 - `seek-style-guide/dist/header-footer/header__nz__career_advice.html`
 
-*Note: If you need a different tab selected, feel free to open a pull request or raise an issue*
+_Note: If you need a different tab selected, feel free to open a pull request or raise an issue_
 
 **Footer:**
+
 - `seek-style-guide/dist/header-footer/footer__au.html`
 - `seek-style-guide/dist/header-footer/footer__nz.html`
 
@@ -287,8 +284,12 @@ First, add placeholder elements to the page:
 Then, trigger the initial render client-side:
 
 ```js
-var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), { ...props });
-var footer = SeekHeaderFooter.renderHeader(document.getElementById('footer'), { ...props });
+var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), {
+  ...props
+});
+var footer = SeekHeaderFooter.renderHeader(document.getElementById('footer'), {
+  ...props
+});
 ```
 
 For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
@@ -345,11 +346,12 @@ module.name_mapper.extension='less' -> '<PROJECT_ROOT>/no-declarations.js.flow'
 # Good idea to ignore json too
 module.name_mapper.extension='json' -> '<PROJECT_ROOT>/no-declarations.js.flow'
 ```
-> *no-declarations.js.flow* is just an empty file
+
+> _no-declarations.js.flow_ is just an empty file
 
 ## Sketch asset generation
 
-On every successful build (via `npm test`), `asketch.json` files (i.e. *almost* Sketch files) are generated by [html-sketchapp](https://github.com/brainly/html-sketchapp) containing document styles and symbols. These are provided via the following JSON files:
+On every successful build (via `npm test`), `asketch.json` files (i.e. _almost_ Sketch files) are generated by [html-sketchapp](https://github.com/brainly/html-sketchapp) containing document styles and symbols. These are provided via the following JSON files:
 
 - `dist/asketch/document.asketch.json`
 - `dist/asketch/page.asketch.json`

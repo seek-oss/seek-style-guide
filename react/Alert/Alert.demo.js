@@ -28,7 +28,7 @@ export default {
   initialProps: {
     tone: TONE.POSITIVE,
     level: LEVEL.PRIMARY,
-    message: 'I\'m some timely text that helps the user understand something',
+    message: "I'm some timely text that helps the user understand something",
     hideIcon: false,
     onClose: null
   },

@@ -1,8 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AsidedLayout, PageBlock, Card, Section, Text } from 'seek-style-guide/react';
+import {
+  AsidedLayout,
+  PageBlock,
+  Card,
+  Section,
+  Text
+} from 'seek-style-guide/react';
 
-const AsidedLayoutContainer = ({ component: DemoComponent, componentProps }) => (
+const AsidedLayoutContainer = ({
+  component: DemoComponent,
+  componentProps
+}) => (
   <PageBlock>
     <DemoComponent {...componentProps} />
   </PageBlock>

@@ -39,7 +39,13 @@ const items = [
   }
 ];
 
-export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTab, divider }) {
+export default function Navigation({
+  locale,
+  linkRenderer,
+  activeTab,
+  newBadgeTab,
+  divider
+}) {
   return (
     <nav
       aria-label="Primary navigation"
@@ -47,49 +53,45 @@ export default function Navigation({ locale, linkRenderer, activeTab, newBadgeTa
       className={classnames({
         [styles.root]: true,
         [styles.divider]: divider
-      })}>
-
+      })}
+    >
       <ul className={styles.list} data-automation="nav-tabs">
-        {
-          items.map(({ specificLocale = locale, analytics, name, isShort, ...restProps }, key) => {
-            return (
-              (specificLocale === locale) ?
-                <li className={styles.item} key={name}>
-                  {
-                    linkRenderer({
-                      children: [
-                        name,
-                        name === newBadgeTab && (
-                          <span
-                            key={name}
-                            className={classnames({
-                              [styles.newBadge]: true,
-                              [styles.newBadge_isShort]: isShort,
-                              [styles.newBadge_isLast]: items.length - 1 === key
-                            })}>&nbsp;
-                            <Badge
-                              strong
-                              tone="info"
-                              children="New"
-                            />
-                          </span>
-                        )
-                      ],
-                      'data-analytics': analytics,
-                      className: classnames({
-                        [styles.link]: true,
-                        [styles.link_isActive]: name === activeTab
-                      }),
-                      ...restProps
-                    })
-                  }
-                </li> :
-                null
-            );
-          })
-        }
+        {items.map(
+          (
+            { specificLocale = locale, analytics, name, isShort, ...restProps },
+            key
+          ) => {
+            return specificLocale === locale ? (
+              <li className={styles.item} key={name}>
+                {linkRenderer({
+                  children: [
+                    name,
+                    name === newBadgeTab && (
+                      <span
+                        key={name}
+                        className={classnames({
+                          [styles.newBadge]: true,
+                          [styles.newBadge_isShort]: isShort,
+                          [styles.newBadge_isLast]: items.length - 1 === key
+                        })}
+                      >
+                        &nbsp;
+                        <Badge strong tone="info" children="New" />
+                      </span>
+                    )
+                  ],
+                  'data-analytics': analytics,
+                  className: classnames({
+                    [styles.link]: true,
+                    [styles.link_isActive]: name === activeTab
+                  }),
+                  ...restProps
+                })}
+              </li>
+            ) : null;
+          }
+        )}
       </ul>
-
     </nav>
   );
 }

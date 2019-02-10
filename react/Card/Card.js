@@ -4,7 +4,13 @@ import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-export default function Card({ className, children, group, transparent, ...restProps }) {
+export default function Card({
+  className,
+  children,
+  group,
+  transparent,
+  ...restProps
+}) {
   return (
     <div
       {...restProps}
@@ -13,7 +19,8 @@ export default function Card({ className, children, group, transparent, ...restP
         [styles.root]: true,
         [styles.group]: group,
         [styles.transparent]: transparent
-      })}>
+      })}
+    >
       {children}
     </div>
   );

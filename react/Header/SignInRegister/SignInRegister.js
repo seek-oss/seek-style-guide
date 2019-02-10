@@ -8,28 +8,25 @@ export default function SignInRegister({ linkRenderer, returnUrl }) {
     <nav
       aria-label="Sign in or register"
       data-automation="sign-in-register"
-      className={styles.root}>
-      {
-        linkRenderer({
-          'data-analytics': 'header:sign-in',
-          href: appendReturnUrl('/sign-in', returnUrl),
-          rel: 'nofollow',
-          className: styles.link,
-          title: 'Sign in',
-          children: 'Sign in'
-        })
-      }
+      className={styles.root}
+    >
+      {linkRenderer({
+        'data-analytics': 'header:sign-in',
+        href: appendReturnUrl('/sign-in', returnUrl),
+        rel: 'nofollow',
+        className: styles.link,
+        title: 'Sign in',
+        children: 'Sign in'
+      })}
       {' or '}
-      {
-        linkRenderer({
-          'data-analytics': 'header:register',
-          href: appendReturnUrl('/sign-up', returnUrl),
-          rel: 'nofollow',
-          className: styles.link,
-          title: 'Register',
-          children: 'Register'
-        })
-      }
+      {linkRenderer({
+        'data-analytics': 'header:register',
+        href: appendReturnUrl('/sign-up', returnUrl),
+        rel: 'nofollow',
+        className: styles.link,
+        title: 'Register',
+        children: 'Register'
+      })}
     </nav>
   );
 }

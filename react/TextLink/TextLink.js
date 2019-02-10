@@ -16,13 +16,22 @@ const renderChevron = (chevron, chevronProps, isLeftChevron) => {
   return (
     <ChevronIcon
       {...chevronProps}
-      className={isLeftChevron ? styles.chevronLeftSide : styles.chevronRightSide}
+      className={
+        isLeftChevron ? styles.chevronLeftSide : styles.chevronRightSide
+      }
       direction={chevron}
     />
   );
 };
 
-export default function TextLink({ component: Root, className, children, chevron, chevronProps, ...restProps }) {
+export default function TextLink({
+  component: Root,
+  className,
+  children,
+  chevron,
+  chevronProps,
+  ...restProps
+}) {
   const allProps = {
     ...restProps,
     className: classnames(styles.link, className)

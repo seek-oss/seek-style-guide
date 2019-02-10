@@ -11,7 +11,9 @@ describe('contentEditableUtils', () => {
       it('should do nothing if there is no invalid text', () => {
         const value = 'my text';
         const invalidText = '';
-        expect(formatInvalidText(value, invalidText, style)).toEqual(['my text']);
+        expect(formatInvalidText(value, invalidText, style)).toEqual([
+          'my text'
+        ]);
       });
 
       it('should render text with no required formatting correctly', () => {
@@ -25,7 +27,9 @@ describe('contentEditableUtils', () => {
         const invalidText = 'bad text';
         expect(formatInvalidText(value, invalidText, style)).toEqual([
           'my ',
-          <Highlight className="my-class-name" tone="critical" key="0">bad text</Highlight>
+          <Highlight className="my-class-name" tone="critical" key="0">
+            bad text
+          </Highlight>
         ]);
       });
 
@@ -33,11 +37,17 @@ describe('contentEditableUtils', () => {
         const value = 'very very very bad text';
         const invalidText = 'very';
         expect(formatInvalidText(value, invalidText, style)).toEqual([
-          <Highlight className="my-class-name" tone="critical" key="0">very</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="0">
+            very
+          </Highlight>,
           ' ',
-          <Highlight className="my-class-name" tone="critical" key="1">very</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="1">
+            very
+          </Highlight>,
           ' ',
-          <Highlight className="my-class-name" tone="critical" key="2">very</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="2">
+            very
+          </Highlight>,
           ' bad text'
         ]);
       });
@@ -59,7 +69,9 @@ describe('contentEditableUtils', () => {
         };
         expect(formatInvalidText(value, invalidText, style)).toEqual([
           'my str',
-          <Highlight className="my-class-name" tone="critical" key="0">ing of text</Highlight>
+          <Highlight className="my-class-name" tone="critical" key="0">
+            ing of text
+          </Highlight>
         ]);
       });
 
@@ -71,7 +83,9 @@ describe('contentEditableUtils', () => {
         };
         expect(formatInvalidText(value, invalidText, style)).toEqual([
           'my ',
-          <Highlight className="my-class-name" tone="critical" key="0">longer</Highlight>,
+          <Highlight className="my-class-name" tone="critical" key="0">
+            longer
+          </Highlight>,
           ' text'
         ]);
       });
@@ -95,11 +109,17 @@ describe('contentEditableUtils', () => {
           ];
           expect(formatInvalidText(value, invalidText, style)).toEqual([
             'my ',
-            <Highlight className="my-class-name" tone="critical" key="0">lon</Highlight>,
+            <Highlight className="my-class-name" tone="critical" key="0">
+              lon
+            </Highlight>,
             'g',
-            <Highlight className="my-class-name" tone="critical" key="1">e</Highlight>,
+            <Highlight className="my-class-name" tone="critical" key="1">
+              e
+            </Highlight>,
             'r te',
-            <Highlight className="my-class-name" tone="critical" key="2">x</Highlight>,
+            <Highlight className="my-class-name" tone="critical" key="2">
+              x
+            </Highlight>,
             't'
           ]);
         });
@@ -118,7 +138,9 @@ describe('contentEditableUtils', () => {
           ];
           expect(formatInvalidText(value, invalidText, style)).toEqual([
             'aaaaaaaaaa',
-            <Highlight className="my-class-name" tone="critical" key="0">bbb</Highlight>
+            <Highlight className="my-class-name" tone="critical" key="0">
+              bbb
+            </Highlight>
           ]);
         });
       });

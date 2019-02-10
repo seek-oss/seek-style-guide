@@ -2,31 +2,45 @@ import styles from './FooterLink.less';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from '../../private/authStatusTypes';
 import urlForAuthStatus from '../../private/urlForAuthStatus';
 import Badge from '../../Badge/Badge';
 
-export default function FooterLink({ secondary, partner, analytics, className, linkRenderer, href, newBadge, authRequired, authenticationStatus, ...props }) {
+export default function FooterLink({
+  secondary,
+  partner,
+  analytics,
+  className,
+  linkRenderer,
+  href,
+  newBadge,
+  authRequired,
+  authenticationStatus,
+  ...props
+}) {
   return (
-    <li
-      className={classnames(
-        className,
-        { [styles.secondary]: secondary }
-      )}>
-      {
-        linkRenderer({
-          'data-analytics': analytics,
-          className: styles.link,
-          href: authRequired ? urlForAuthStatus(authenticationStatus, href) : href,
-          ...props
-        })
-      }
-      {newBadge && <span>&nbsp;&nbsp;<Badge children="New" strong tone="info" /></span> }
-      {
-        partner ?
-          <span className={styles.partnerCountry}>{` — ${partner}`}</span> :
-          null
-      }
+    <li className={classnames(className, { [styles.secondary]: secondary })}>
+      {linkRenderer({
+        'data-analytics': analytics,
+        className: styles.link,
+        href: authRequired
+          ? urlForAuthStatus(authenticationStatus, href)
+          : href,
+        ...props
+      })}
+      {newBadge && (
+        <span>
+          &nbsp;&nbsp;
+          <Badge children="New" strong tone="info" />
+        </span>
+      )}
+      {partner ? (
+        <span className={styles.partnerCountry}>{` — ${partner}`}</span>
+      ) : null}
     </li>
   );
 }

@@ -11,14 +11,10 @@ import Text from '../Text/Text';
 
 import withTextProps, { SizePropTypes } from '../private/withTextProps';
 
-const getPercent = (rating, position) => Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
+const getPercent = (rating, position) =>
+  Math.round(Math.min(Math.max(rating - position, 0), 1) * 100);
 
-const getStar = (
-  percent,
-  key,
-  starClassName,
-  size
-) => {
+const getStar = (percent, key, starClassName, size) => {
   const props = {
     key,
     size,
@@ -43,29 +39,20 @@ const Rating = ({
   const extendedStarClassName = classnames({ [starClassName]: starClassName });
 
   return (
-    <Text
-      raw
-      size={size}
-      regular
-      {...restProps}>
-      <ScreenReaderOnly>
-        {rating} out of 5
-      </ScreenReaderOnly>
+    <Text raw size={size} regular {...restProps}>
+      <ScreenReaderOnly>{rating} out of 5</ScreenReaderOnly>
       <span className={styles.rating}>
         {[...Array(5)].map((v, position) => {
           const percent = getPercent(rating, position);
-          return getStar(
-            percent,
-            position,
-            extendedStarClassName,
-            size
-          );
+          return getStar(percent, position, extendedStarClassName, size);
         })}
-        {(showTextRating || Boolean(description)) &&
+        {(showTextRating || Boolean(description)) && (
           <span className={styles.textRating}>
-            {rating.toFixed(1)}{description ? ' ' : ''}{description}
+            {rating.toFixed(1)}
+            {description ? ' ' : ''}
+            {description}
           </span>
-        }
+        )}
       </span>
     </Text>
   );

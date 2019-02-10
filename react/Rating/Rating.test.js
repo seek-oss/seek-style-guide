@@ -4,23 +4,31 @@ import Rating from './Rating';
 
 describe('Rating', () => {
   it('should render with starClassName', () => {
-    const wrapper = render(<Rating rating={5.0} starClassName={'star-class-name'} />);
+    const wrapper = render(
+      <Rating rating={5.0} starClassName={'star-class-name'} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with className', () => {
-    const wrapper = render(<Rating rating={5.0} className={'root-class-name'} />);
+    const wrapper = render(
+      <Rating rating={5.0} className={'root-class-name'} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with description', () => {
-    const wrapper = render(<Rating rating={5.0} description="overall rating from..." />);
+    const wrapper = render(
+      <Rating rating={5.0} description="overall rating from..." />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render with description as a component', () => {
     const SomeComponent = () => <span>overall rating</span>;
-    const wrapper = render(<Rating rating={5.0} description={<SomeComponent />} />);
+    const wrapper = render(
+      <Rating rating={5.0} description={<SomeComponent />} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -47,7 +55,9 @@ describe('Rating', () => {
 
     sizes.forEach(size => {
       it(`when size is: ${size} and rating text is shown`, () => {
-        const wrapper = render(<Rating rating={4} {...{ [size]: true }} showTextRating />);
+        const wrapper = render(
+          <Rating rating={4} {...{ [size]: true }} showTextRating />
+        );
         expect(wrapper).toMatchSnapshot();
       });
     });

@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import map from 'lodash/map';
 import assign from 'lodash/assign';
 import fixSketchRendering from './fixSketchRendering/fixSketchRendering';
-import {
-  PageBlock,
-  Section,
-  Text
-} from 'seek-style-guide/react';
+import { PageBlock, Section, Text } from 'seek-style-guide/react';
 import styles from './SketchExports.less';
 
 import colorsExports from '../../../../theme/**/*.sketch.js';
@@ -15,14 +11,18 @@ const colors = assign({}, ...colorsExports.map(x => x.colors || {}));
 
 import componentExports from '../../../../react/*/*.sketch.js';
 const textComponents = assign({}, ...componentExports.map(x => x.text || {}));
-const blockSymbolComponents = assign({}, ...componentExports.map(x => x.blockSymbols || {}));
-const symbolComponents = assign({}, ...componentExports.map(x => x.symbols || {}));
+const blockSymbolComponents = assign(
+  {},
+  ...componentExports.map(x => x.blockSymbols || {})
+);
+const symbolComponents = assign(
+  {},
+  ...componentExports.map(x => x.symbols || {})
+);
 
 const SketchText = ({ name, children }) => (
   <div className={styles.text}>
-    <div data-sketch-text={name}>
-      { children }
-    </div>
+    <div data-sketch-text={name}>{children}</div>
   </div>
 );
 SketchText.propTypes = {
@@ -33,9 +33,13 @@ SketchText.propTypes = {
 const SketchColor = ({ name, value }) => (
   <div className={styles.color}>
     <div className={styles.name}>
-      <Text strong>{ name }</Text>
+      <Text strong>{name}</Text>
     </div>
-    <div data-sketch-color={value} className={styles.swatch} style={{ background: value }} />
+    <div
+      data-sketch-color={value}
+      className={styles.swatch}
+      style={{ background: value }}
+    />
   </div>
 );
 SketchColor.propTypes = {
@@ -46,11 +50,9 @@ SketchColor.propTypes = {
 const SketchSymbol = ({ name, children }) => (
   <div className={styles.symbol}>
     <div className={styles.name}>
-      <Text strong>{ name }</Text>
+      <Text strong>{name}</Text>
     </div>
-    <div data-sketch-symbol={name}>
-      { children }
-    </div>
+    <div data-sketch-symbol={name}>{children}</div>
   </div>
 );
 SketchSymbol.propTypes = {
@@ -85,7 +87,7 @@ export default class SketchExports extends Component {
 
   storeRef = el => {
     this.el = el;
-  }
+  };
 
   render() {
     return (
@@ -100,11 +102,11 @@ export default class SketchExports extends Component {
         </PageBlock>
         <PageBlock style={{ background: 'white' }}>
           <Section>
-            {
-              map(textComponents, (element, name) => (
-                <SketchText key={name} name={name}>{ element }</SketchText>
-              ))
-            }
+            {map(textComponents, (element, name) => (
+              <SketchText key={name} name={name}>
+                {element}
+              </SketchText>
+            ))}
           </Section>
         </PageBlock>
         <PageBlock>
@@ -116,11 +118,9 @@ export default class SketchExports extends Component {
           <SketchSymbol name="colours">
             <Section>
               <div className={styles.colors}>
-                {
-                  map(colors, (color, name) => (
-                    <SketchColor key={name} name={name} value={color} />
-                  ))
-                }
+                {map(colors, (color, name) => (
+                  <SketchColor key={name} name={name} value={color} />
+                ))}
               </div>
             </Section>
           </SketchSymbol>
@@ -132,13 +132,11 @@ export default class SketchExports extends Component {
         </PageBlock>
         <PageBlock style={{ background: 'white' }}>
           <Section>
-            {
-              map(symbolComponents, (element, name) => (
-                <SketchSymbol key={name} name={name}>
-                  { element }
-                </SketchSymbol>
-              ))
-            }
+            {map(symbolComponents, (element, name) => (
+              <SketchSymbol key={name} name={name}>
+                {element}
+              </SketchSymbol>
+            ))}
           </Section>
         </PageBlock>
         <PageBlock>
@@ -146,13 +144,11 @@ export default class SketchExports extends Component {
             <Text headline>Block Symbols</Text>
           </Section>
         </PageBlock>
-        {
-          map(blockSymbolComponents, (element, name) => (
-            <SketchSymbol key={name} name={name}>
-              { element }
-            </SketchSymbol>
-          ))
-        }
+        {map(blockSymbolComponents, (element, name) => (
+          <SketchSymbol key={name} name={name}>
+            {element}
+          </SketchSymbol>
+        ))}
       </div>
     );
   }

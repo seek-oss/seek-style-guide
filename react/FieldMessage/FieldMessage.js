@@ -45,16 +45,27 @@ export default class FieldMessage extends Component<Props> {
     return {
       showCritical: toneDefined ? tone === TONE.CRITICAL : valid === false,
       showPositive: toneDefined ? tone === TONE.POSITIVE : valid === true,
-      showSecondary: toneDefined ? tone === TONE.NEUTRAL : typeof valid === 'undefined'
+      showSecondary: toneDefined
+        ? tone === TONE.NEUTRAL
+        : typeof valid === 'undefined'
     };
-  }
+  };
 
   renderMessage = () => {
     const { id, message } = this.props;
 
     if (message) {
-      const { critical, positive, secondary, ...restMessageProps } = this.props.messageProps;
-      const { showCritical, showPositive, showSecondary } = this.calculateMessageDisplay();
+      const {
+        critical,
+        positive,
+        secondary,
+        ...restMessageProps
+      } = this.props.messageProps;
+      const {
+        showCritical,
+        showPositive,
+        showSecondary
+      } = this.calculateMessageDisplay();
 
       return (
         <Text
@@ -64,7 +75,8 @@ export default class FieldMessage extends Component<Props> {
           critical={(showCritical && !secondary) || critical}
           positive={(showPositive && !secondary) || positive}
           secondary={showSecondary || secondary}
-          tabIndex='-1'>
+          tabIndex="-1"
+        >
           {this.renderMessageIcon()}
           {message}
         </Text>
@@ -72,7 +84,7 @@ export default class FieldMessage extends Component<Props> {
     }
 
     return null;
-  }
+  };
 
   renderMessageIcon = () => {
     const {
@@ -101,13 +113,15 @@ export default class FieldMessage extends Component<Props> {
     }
 
     return null;
-  }
+  };
 
   render() {
     const { invalid, help, helpProps, message } = this.props;
 
     if (invalid || help || helpProps) {
-      throw new Error('WARNING: "invalid", "help", and "helpProps" have been deprecated in favour of "valid" and "message" props');
+      throw new Error(
+        'WARNING: "invalid", "help", and "helpProps" have been deprecated in favour of "valid" and "message" props'
+      );
     }
 
     const classNames = classnames({
@@ -115,10 +129,6 @@ export default class FieldMessage extends Component<Props> {
       [styles.noMarginBottom]: message || message === false
     });
 
-    return (
-      <div className={classNames}>
-        {this.renderMessage()}
-      </div>
-    );
+    return <div className={classNames}>{this.renderMessage()}</div>;
   }
 }

@@ -24,7 +24,7 @@ export default class Button extends Component<Props> {
     loading: false,
     fullWidth: false,
     component: 'button'
-  }
+  };
 
   button: ?HTMLElement;
   props: Props;

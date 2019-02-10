@@ -17,11 +17,19 @@ describe('TextLink', () => {
 
   chevronDirections.forEach(direction => {
     it(`should render with ${direction} chevron`, () => {
-      expect(shallow(<TextLink chevron={direction}>Google</TextLink>)).toMatchSnapshot();
+      expect(
+        shallow(<TextLink chevron={direction}>Google</TextLink>)
+      ).toMatchSnapshot();
     });
   });
 
   it('should render with chevron props', () => {
-    expect(shallow(<TextLink chevron="up" chevronProps={{ size: 'hero' }}>Google</TextLink>)).toMatchSnapshot();
+    expect(
+      shallow(
+        <TextLink chevron="up" chevronProps={{ size: 'hero' }}>
+          Google
+        </TextLink>
+      )
+    ).toMatchSnapshot();
   });
 });

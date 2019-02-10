@@ -8,7 +8,7 @@
     position: relative;
     outline: 2px solid red;
     &::after {
-      content: 'ERROR: Multiple <Text> components nested';
+      content: "ERROR: Multiple <Text> components nested";
       background: red;
       font-weight: @sk-bold;
       color: white;
@@ -21,41 +21,69 @@
 }
 
 .standard {
-  &:not(.baseline) { .standardTextResponsive(@baseline: false); }
-  &.baseline { .standardTextResponsive(@baseline: true); }
+  &:not(.baseline) {
+    .standardTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .standardTextResponsive(@baseline: true);
+  }
   padding-bottom: @row-height;
 }
 
 .small {
-  &:not(.baseline) { .smallTextResponsive(@baseline: false); }
-  &.baseline { .smallTextResponsive(@baseline: true); }
+  &:not(.baseline) {
+    .smallTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .smallTextResponsive(@baseline: true);
+  }
   padding-bottom: @row-height;
 }
 
 .large {
-  &:not(.baseline) { .largeTextResponsive(@baseline: false); }
-  &.baseline { .largeTextResponsive(@baseline: true); }
+  &:not(.baseline) {
+    .largeTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .largeTextResponsive(@baseline: true);
+  }
   padding-bottom: @row-height;
 }
 
 .subheading {
-  &:not(.baseline) { .subheadingTextResponsive(@baseline: false); }
-  &.baseline { .subheadingTextResponsive(@baseline: true); }
+  &:not(.baseline) {
+    .subheadingTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .subheadingTextResponsive(@baseline: true);
+  }
 }
 
 .headline {
-  &:not(.baseline) { .headlineTextResponsive(@baseline: false); }
-  &.baseline { .headlineTextResponsive(@baseline: true); }
+  &:not(.baseline) {
+    .headlineTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .headlineTextResponsive(@baseline: true);
+  }
 }
 
 .heading {
-  &:not(.baseline) { .headingTextResponsive(@baseline: false); }
-  &.baseline { .headingTextResponsive(@baseline: true); }
+  &:not(.baseline) {
+    .headingTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .headingTextResponsive(@baseline: true);
+  }
 }
 
 .hero {
-  &:not(.baseline) { .heroTextResponsive(@baseline: false); }
-  &.baseline { .heroTextResponsive(@baseline: true); }
+  &:not(.baseline) {
+    .heroTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .heroTextResponsive(@baseline: true);
+  }
 }
 
 .light {

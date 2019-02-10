@@ -2,12 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Pill from './Pill';
 
-const renderPill = props => shallow(
-  <Pill
-    children="I am a pill"
-    {...props}
-  />
-);
+const renderPill = props => shallow(<Pill children="I am a pill" {...props} />);
 
 describe('Pill:', () => {
   it('should render a static pill', () => {
@@ -16,13 +11,13 @@ describe('Pill:', () => {
   });
 
   it('should render a child component', () => {
-    const ChildComponent = () => (<div>Hello</div>);
+    const ChildComponent = () => <div>Hello</div>;
     const pill = renderPill({ children: <ChildComponent /> });
     expect(pill).toMatchSnapshot();
   });
 
   it('should support the legacy "text" prop', () => {
-    const ChildComponent = () => (<div>Hello</div>);
+    const ChildComponent = () => <div>Hello</div>;
     const pill = renderPill({ children: null, text: <ChildComponent /> });
     expect(pill).toMatchSnapshot();
   });
@@ -33,7 +28,11 @@ describe('Pill:', () => {
   });
 
   it('should render an interactive pill with the legacy "text" prop', () => {
-    const pill = renderPill({ onClose: () => {}, children: null, text: 'I am a pill' });
+    const pill = renderPill({
+      onClose: () => {},
+      children: null,
+      text: 'I am a pill'
+    });
     expect(pill).toMatchSnapshot();
   });
 
