@@ -6,18 +6,22 @@
 }
 
 .item {
-  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25%;
+  width: 25%;
   text-align: center;
 
-  @media @desktop {
-    flex-basis: 178px;
+  @media @mobile {
+    max-width: 50%;
+    width: 50%;
   }
 }
 
 .swatch {
   width: 100px;
   height: 100px;
-  margin: 0 auto @row-height;
   border-radius: 50%;
   border: 1px solid @sk-gray-medium;
 }

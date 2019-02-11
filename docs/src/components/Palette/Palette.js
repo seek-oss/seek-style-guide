@@ -39,17 +39,11 @@ const palettes = [
 ];
 
 const renderSwatch = swatchValue => {
-  const isNotHex = !swatchValue.startsWith('#');
-  let bgColour = swatchValue;
+  const backgroundColor = !/^#/.test(swatchValue)
+    ? paletteVariables[swatchValue]
+    : swatchValue;
 
-  if (isNotHex) {
-    Object.keys(paletteVariables).map(varsKey => {
-      bgColour = varsKey === swatchValue ? paletteVariables[varsKey] : bgColour;
-    });
-  }
-  return (
-    <div className={styles.swatch} style={{ backgroundColor: bgColour }} />
-  );
+  return <div className={styles.swatch} style={{ backgroundColor }} />;
 };
 
 export default () => (
@@ -76,15 +70,16 @@ export default () => (
           <Card>
             <Section className={styles.container}>
               {Object.keys(palette.variables).map((pvars, i) => {
-                const hexValue = palette.variables[pvars];
+                const variableValue = palette.variables[pvars];
                 return (
-                  <div key={`palette-variable-${i}`} className={styles.item}>
-                    <Section>
-                      {renderSwatch(hexValue)}
-                      <Text secondary>{hexValue}</Text>
-                      <Text>{pvars}</Text>
-                    </Section>
-                  </div>
+                  <Section
+                    key={`palette-variable-${i}`}
+                    className={styles.item}
+                  >
+                    {renderSwatch(variableValue)}
+                    <Text secondary>{variableValue}</Text>
+                    <Text>{pvars}</Text>
+                  </Section>
                 );
               })}
             </Section>
