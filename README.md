@@ -104,52 +104,53 @@ The following colors are provided:
 
 ```less
 // Brand colors
-@sk-blue-darker @sk-blue-dark
-@sk-blue
-@sk-blue-light
-@sk-blue-lighter
-@sk-pink
-@sk-green
-@sk-green-light
-@sk-purple
-@sk-teal
-@sk-orange
-@sk-yellow
-@sk-yellow-light
+@sk-blue-darker;
+@sk-blue-dark;
+@sk-blue;
+@sk-blue-light;
+@sk-blue-lighter;
+@sk-pink;
+@sk-green;
+@sk-green-light;
+@sk-purple;
+@sk-teal;
+@sk-orange;
+@sk-yellow;
+@sk-yellow-light;
 
 // Partner brand colors
-@sk-business
-@sk-volunteer
-@sk-learning-light
-@sk-learning-medium
-@sk-learning-dark
+@sk-business;
+@sk-volunteer;
+@sk-learning-light;
+@sk-learning-medium;
+@sk-learning-dark;
 
 // Grays
-@sk-black
-@sk-charcoal
-@sk-mid-gray-dark
-@sk-mid-gray-medium
-@sk-mid-gray
-@sk-mid-gray-light
-@sk-gray-light
-@sk-gray-lightest
-@sk-off-white
-@sk-white
+@sk-black;
+@sk-charcoal;
+@sk-mid-gray-dark;
+@sk-mid-gray-medium;
+@sk-mid-gray;
+@sk-mid-gray-light;
+@sk-gray-light;
+@sk-gray-lightest;
+@sk-off-white;
+@sk-white;
 
 // Element colors
-@sk-link
-@sk-link-visited
-@sk-focus
-@sk-footer
-@sk-background
-@sk-form-accent
-@sk-positive-light
-@sk-positive
-@sk-info-light
-@sk-info
-@sk-critical-light
-@sk-critical
-@sk-help-light
+@sk-link;
+@sk-link-visited;
+@sk-focus;
+@sk-footer;
+@sk-background;
+@sk-form-accent;
+@sk-positive-light;
+@sk-positive;
+@sk-info-light;
+@sk-info;
+@sk-critical-light;
+@sk-critical;
+@sk-help-light;
 @sk-help;
 ```
 
@@ -158,9 +159,10 @@ The following colors are provided:
 To ensure correct relative elements stacking order, z-index variables are provided:
 
 ```less
-@z-index-header-overlay @z-index-header
-@z-index-page-overlay
-@z-index-inline-overlay
+@z-index-header-overlay;
+@z-index-header;
+@z-index-page-overlay;
+@z-index-inline-overlay;
 @z-index-negative;
 ```
 
@@ -169,10 +171,11 @@ To ensure correct relative elements stacking order, z-index variables are provid
 The contrast ratio of certain foreground/background color combinations don't meet the [AA accessibility standards](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) that we aim for. As a result, a suite of accessible variants have been provided:
 
 ```less
-@sk-mid-gray-on-white @sk-pink-on-gray-light
-@sk-learning-dark-on-gray-light
-@sk-business-on-gray-light
-@sk-link-on-mid-gray-light
+@sk-mid-gray-on-white;
+@sk-pink-on-gray-light;
+@sk-learning-dark-on-gray-light;
+@sk-business-on-gray-light;
+@sk-link-on-mid-gray-light;
 @sk-mid-gray-dark-on-gray-light;
 ```
 
@@ -183,8 +186,9 @@ Please note that this list is not exhaustive, so contributions are encouraged. T
 In order to ensure elements correctly follow the grid, element sizing should always be controlled by the following variables:
 
 ```less
-@row-height @gutter-width
-@column-width
+@row-height;
+@gutter-width;
+@column-width;
 @container-width;
 ```
 

@@ -58,13 +58,13 @@ Code format is controlled by [Prettier](https://prettier.io/docs/en/).
 To format your code:
 
 ```bash
-$ yarn format
+$ npm run format
 ```
 
 To confirm your code is formatted correctly:
 
 ```bash
-$ yarn lint-format
+$ npm run lint-format
 ```
 
 **Note:** The `yarn lint` command will automatically run `yarn lint-format`.
