@@ -16,17 +16,41 @@ import accessibleVariants from '!!raw-loader!../../../../theme/palette/accessibl
 
 import styles from './Palette.less';
 
+const brandJsVars = lessToJs(brand);
+const grayJsVars = lessToJs(grays);
+const elementsJsVars = lessToJs(elements);
+const partnersJsVars = lessToJs(partners);
+const accessibleVariantsJsVars = lessToJs(accessibleVariants);
+
+const paletteVariables = {
+  ...brandJsVars,
+  ...grayJsVars,
+  ...elementsJsVars,
+  ...partnersJsVars,
+  ...accessibleVariantsJsVars
+};
+
 const palettes = [
-  { name: 'Brand', variables: lessToJs(brand) },
-  { name: 'Grays', variables: lessToJs(grays) },
-  { name: 'Elements', variables: lessToJs(elements) },
-  { name: 'Partners', variables: lessToJs(partners) },
-  { name: 'Accessible Variants', variables: lessToJs(accessibleVariants) }
+  { name: 'Brand', variables: brandJsVars },
+  { name: 'Grays', variables: grayJsVars },
+  { name: 'Elements', variables: elementsJsVars },
+  { name: 'Partners', variables: partnersJsVars },
+  { name: 'Accessible Variants', variables: accessibleVariantsJsVars }
 ];
 
-const renderSwatch = hexValue => (
-  <div className={styles.swatch} style={{ backgroundColor: hexValue }} />
-);
+const renderSwatch = swatchValue => {
+  const isNotHex = !swatchValue.startsWith('#');
+  let bgColour = swatchValue;
+
+  if (isNotHex) {
+    Object.keys(paletteVariables).map(varsKey => {
+      bgColour = varsKey === swatchValue ? paletteVariables[varsKey] : bgColour;
+    });
+  }
+  return (
+    <div className={styles.swatch} style={{ backgroundColor: bgColour }} />
+  );
+};
 
 export default () => (
   <div>
