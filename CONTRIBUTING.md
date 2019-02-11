@@ -51,6 +51,24 @@ Note that the test suite needs to pass for your changes to be accepted, so it's 
 
 Even though we'd like to automate as much as possible, a comprehensive manual test is never a bad idea, especially if you're working in an area of the codebase that's particularly business critical. Reviewers are also encouraged to put UI changes through their paces, to act as a last line of defense before merging.
 
+### Formatting
+
+Code format is controlled by [Prettier](https://prettier.io/docs/en/).
+
+To format your code:
+
+```bash
+$ yarn format
+```
+
+To confirm your code is formatted correctly:
+
+```bash
+$ yarn lint-format
+```
+
+**Note:** The `yarn lint` command will automatically run `yarn lint-format`.
+
 ### Committing
 
 Once you've made the desired changes and you're ready to commit, first stage your local changes:
