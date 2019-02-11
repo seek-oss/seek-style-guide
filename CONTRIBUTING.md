@@ -67,7 +67,7 @@ To confirm your code is formatted correctly:
 $ npm run lint-format
 ```
 
-**Note:** The `yarn lint` command will automatically run `yarn lint-format`.
+**Note:** The `npm run lint` command will automatically run `npm run lint-format`.
 
 ### Committing
 

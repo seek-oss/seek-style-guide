@@ -184,26 +184,20 @@ export default class Textarea extends Component {
       [className]: className
     });
 
+    /* eslint-disable react/prop-types */
     const {
-      // eslint-disable-next-line react/prop-types
       label,
-      // eslint-disable-next-line react/prop-types
       labelProps,
-      // eslint-disable-next-line react/prop-types
       invalid,
-      // eslint-disable-next-line react/prop-types
       help,
-      // eslint-disable-next-line react/prop-types
       helpProps,
-      // eslint-disable-next-line react/prop-types
       message,
-      // eslint-disable-next-line react/prop-types
       messageProps,
       secondaryLabel,
-      // eslint-disable-next-line react/prop-types
       tertiaryLabel,
       description
     } = this.props;
+    /* eslint-enable react/prop-types */
     const hasDescription = description.length > 0;
 
     return (

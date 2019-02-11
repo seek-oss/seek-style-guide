@@ -7,8 +7,8 @@ const portfinder = require('portfinder');
 portfinder.basePort = 4000;
 
 (async () => {
+  // eslint-disable-next-line no-sync
   if (!fs.existsSync('docs/dist/seek-style-guide')) {
-    // eslint-disable-line no-sync
     await mv('docs/dist', 'docs/seek-style-guide', { mkdirp: true });
     await mv('docs/seek-style-guide', 'docs/dist/seek-style-guide', {
       mkdirp: true

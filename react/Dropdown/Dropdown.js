@@ -133,26 +133,19 @@ export default class Dropdown extends Component {
       [className]: className
     });
 
+    /* eslint-disable react/prop-types */
     const {
-      // eslint-disable-next-line react/prop-types
       label,
-      // eslint-disable-next-line react/prop-types
       labelProps,
-      // eslint-disable-next-line react/prop-types
       secondaryLabel,
-      // eslint-disable-next-line react/prop-types
       tertiaryLabel,
-      // eslint-disable-next-line react/prop-types
       invalid,
-      // eslint-disable-next-line react/prop-types
       help,
-      // eslint-disable-next-line react/prop-types
       helpProps,
-      // eslint-disable-next-line react/prop-types
       message,
-      // eslint-disable-next-line react/prop-types
       messageProps
     } = this.props;
+    /* eslint-enable react/prop-types */
 
     return (
       <div className={classNames}>
