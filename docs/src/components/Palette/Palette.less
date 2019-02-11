@@ -6,10 +6,12 @@
 }
 
 .item {
-  flex: 0 0 168px;
-  margin: 0 (@gutter-width / 2) (@row-height * 3);
-  background-color: @sk-white;
+  flex: 0 0 50%;
   text-align: center;
+
+  @media @desktop {
+    flex-basis: 178px;
+  }
 }
 
 .swatch {

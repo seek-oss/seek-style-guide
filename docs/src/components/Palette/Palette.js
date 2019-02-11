@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
   PageBlock,
   Card,
@@ -17,12 +17,16 @@ import accessibleVariants from '!!raw-loader!../../../../theme/palette/accessibl
 import styles from './Palette.less';
 
 const palettes = [
-  { name: 'brand.less', variables: lessToJs(brand) },
-  { name: 'grays.less', variables: lessToJs(grays) },
-  { name: 'elements.less', variables: lessToJs(elements) },
-  { name: 'partners.less', variables: lessToJs(partners) },
-  { name: 'accessible-variants.less', variables: lessToJs(accessibleVariants) }
+  { name: 'Brand', variables: lessToJs(brand) },
+  { name: 'Grays', variables: lessToJs(grays) },
+  { name: 'Elements', variables: lessToJs(elements) },
+  { name: 'Partners', variables: lessToJs(partners) },
+  { name: 'Accessible Variants', variables: lessToJs(accessibleVariants) }
 ];
+
+const renderSwatch = hexValue => (
+  <div className={styles.swatch} style={{ backgroundColor: hexValue }} />
+);
 
 export default () => (
   <div>
@@ -41,28 +45,27 @@ export default () => (
         </Section>
       </Card>
       {palettes.map((palette, index) => (
-        <Card transparent key={`palette-${index}`}>
+        <Fragment key={`palette-${index}`}>
           <Section>
-            <Text heading>{palette.name}</Text>
+            <Text headline>{palette.name}</Text>
           </Section>
-          <div className={styles.container}>
-            {Object.keys(palette.variables).map((pvars, i) => {
-              const hexValue = palette.variables[pvars];
-              return (
-                <div key={`palette-variable-${i}`} className={styles.item}>
-                  <Section>
-                    <div
-                      className={styles.swatch}
-                      style={{ backgroundColor: hexValue }}
-                    />
-                    <Text secondary>{hexValue}</Text>
-                    <Text>{pvars}</Text>
-                  </Section>
-                </div>
-              );
-            })}
-          </div>
-        </Card>
+          <Card>
+            <Section className={styles.container}>
+              {Object.keys(palette.variables).map((pvars, i) => {
+                const hexValue = palette.variables[pvars];
+                return (
+                  <div key={`palette-variable-${i}`} className={styles.item}>
+                    <Section>
+                      {renderSwatch(hexValue)}
+                      <Text secondary>{hexValue}</Text>
+                      <Text>{pvars}</Text>
+                    </Section>
+                  </div>
+                );
+              })}
+            </Section>
+          </Card>
+        </Fragment>
       ))}
     </PageBlock>
   </div>
