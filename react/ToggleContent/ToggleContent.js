@@ -45,12 +45,7 @@ class ToggleContent extends PureComponent<Props, State> {
   };
 
   render() {
-    const {
-      id,
-      children,
-      expandLabel,
-      collapseLabel
-    } = this.props;
+    const { id, children, expandLabel, collapseLabel } = this.props;
     const { showMore } = this.state;
 
     return (
@@ -63,7 +58,8 @@ class ToggleContent extends PureComponent<Props, State> {
           type="button"
           onClick={this.handleShowMore}
           aria-expanded={showMore}
-          aria-controls={`${id}-content`} >
+          aria-controls={`${id}-content`}
+        >
           {showMore ? collapseLabel : expandLabel}
         </TextLink>
 

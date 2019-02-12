@@ -5,7 +5,16 @@ import classNames from 'classnames';
 
 import styles from './Hidden.less';
 
-const Hidden = ({ children, component, className, print, screen, mobile, desktop, ...restprops }) => {
+const Hidden = ({
+  children,
+  component,
+  className,
+  print,
+  screen,
+  mobile,
+  desktop,
+  ...restprops
+}) => {
   const props = {
     ...restprops,
     className: classNames({
@@ -22,10 +31,7 @@ const Hidden = ({ children, component, className, print, screen, mobile, desktop
 
 Hidden.propTypes = {
   children: PropTypes.node,
-  component: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.string
-  ]),
+  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   desktop: PropTypes.bool,
   mobile: PropTypes.bool,

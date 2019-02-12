@@ -40,7 +40,8 @@ export default class Badge extends PureComponent<Props> {
           [styles[tone]]: tone,
           [styles.strong]: strong
         })}
-        {...omit(restProps, 'className')}>
+        {...omit(restProps, 'className')}
+      >
         {children}
       </div>
     );

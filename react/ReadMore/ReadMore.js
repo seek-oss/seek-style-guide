@@ -30,7 +30,8 @@ type Props = {|
   moreLabel: string,
   lessLabel: string,
   backgroundComponentName: 'card' | 'body' | 'gray-lightest',
-  onShowMore?: Function
+  onShowMore?: Function,
+  onMoreButtonVisibilityChange?: Function
 |};
 type State = {|
   showMore: boolean,
@@ -67,7 +68,7 @@ class ReadMore extends PureComponent<Props, State> {
   contentRef: ?HTMLDivElement;
 
   update = () => {
-    const { maxLines, maxRows } = this.props;
+    const { maxLines, maxRows, onMoreButtonVisibilityChange } = this.props;
 
     if (this.contentRef) {
       const { scrollHeight } = this.contentRef;
@@ -76,6 +77,10 @@ class ReadMore extends PureComponent<Props, State> {
         scrollHeight > getMaxHeight(maxLines, maxRows) + buttonHeight;
 
       this.setState({ tooLong, mounted: true }); // eslint-disable-line
+
+      if (onMoreButtonVisibilityChange && tooLong !== this.state.tooLong) {
+        onMoreButtonVisibilityChange(tooLong);
+      }
     }
   };
 
@@ -114,10 +119,12 @@ class ReadMore extends PureComponent<Props, State> {
     const fadeColor = styles[backgroundComponentName];
     const showMoreLessButton = tooLong && mounted;
 
-    const contentStyle = truncate ? {
-      maxHeight: getMaxHeight(maxLines, maxRows),
-      overflow: 'hidden'
-    } : {};
+    const contentStyle = truncate
+      ? {
+          maxHeight: getMaxHeight(maxLines, maxRows),
+          overflow: 'hidden'
+        }
+      : {};
 
     return (
       <div>
@@ -133,7 +140,8 @@ class ReadMore extends PureComponent<Props, State> {
             chevron={showMore ? 'up' : 'down'}
             className={styles.showMore}
             component={TextLink}
-            onClick={this.handleShowMore}>
+            onClick={this.handleShowMore}
+          >
             {showMore ? lessLabel : moreLabel}
           </Text>
         )}

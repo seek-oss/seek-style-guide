@@ -51,6 +51,24 @@ Note that the test suite needs to pass for your changes to be accepted, so it's 
 
 Even though we'd like to automate as much as possible, a comprehensive manual test is never a bad idea, especially if you're working in an area of the codebase that's particularly business critical. Reviewers are also encouraged to put UI changes through their paces, to act as a last line of defense before merging.
 
+### Formatting
+
+Code format is controlled by [Prettier](https://prettier.io/docs/en/).
+
+To format your code:
+
+```bash
+$ npm run format
+```
+
+To confirm your code is formatted correctly:
+
+```bash
+$ npm run lint-format
+```
+
+**Note:** The `npm run lint` command will automatically run `npm run lint-format`.
+
 ### Committing
 
 Once you've made the desired changes and you're ready to commit, first stage your local changes:
@@ -61,7 +79,7 @@ $ git add .
 
 Before continuing, consider the scope of your changes according to [semantic versioning](http://semver.org), noting whether this is a breaking change, a feature release or a patch.
 
-New versions are published automatically from [Travis CI](https://travis-ci.org) using [semantic-release](https://github.com/semantic-release/semantic-release). In order to automatically increment version numbers correctly, commit messages must follow the [conventional commit message format](https://github.com/marionebl/commitlint/tree/master/%40commitlint/config-conventional). If your commit includes a breaking change, be sure to prefix your commit body with `BREAKING CHANGE: `. To make this process easier, we have a commit script (powered by [commitizen](https://github.com/commitizen/cz-cli)) to help guide you through the commit process:
+New versions are published automatically from [Travis CI](https://travis-ci.org) using [semantic-release](https://github.com/semantic-release/semantic-release). In order to automatically increment version numbers correctly, commit messages must follow the [conventional commit message format](https://github.com/marionebl/commitlint/tree/master/%40commitlint/config-conventional). If your commit includes a breaking change, be sure to prefix your commit body with `BREAKING CHANGE:`. To make this process easier, we have a commit script (powered by [commitizen](https://github.com/commitizen/cz-cli)) to help guide you through the commit process:
 
 ```bash
 $ npm run commit
@@ -81,9 +99,9 @@ In order for your pull request to be accepted, the [Travis CI](https://travis-ci
 
 Once your work is approved and ready to go, follow these steps:
 
-1) Hit the merge button
-2) Ensure the commit message matches the title of the PR (it may have been edited!)
-3) Copy and paste the text under **"Commit Message For Review"** into the commit body (again, it may have been edited!)
+1. Hit the merge button
+2. Ensure the commit message matches the title of the PR (it may have been edited!)
+3. Copy and paste the text under **"Commit Message For Review"** into the commit body (again, it may have been edited!)
 
 Finally, take a deep breath, hit the green "confirm" button, and we have liftoff—your work should be automatically deployed!
 

@@ -4,17 +4,29 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 
-export default function ToggleContainer({ children, secondary, label, name, 'data-automation': dataAutomation }) {
+export default function ToggleContainer({
+  children,
+  secondary,
+  label,
+  name,
+  'data-automation': dataAutomation
+}) {
   return (
     <li className={classnames({ [styles.secondary]: secondary })}>
-      <input id={name} className={styles.toggle} type="checkbox" data-automation={dataAutomation} />
-      <label className={`${styles.toggleLink} ${styles.toggleLabel}`} htmlFor={name}>
+      <input
+        id={name}
+        className={styles.toggle}
+        type="checkbox"
+        data-automation={dataAutomation}
+      />
+      <label
+        className={`${styles.toggleLink} ${styles.toggleLabel}`}
+        htmlFor={name}
+      >
         {label}
         <ChevronIcon direction="down" className={styles.chevron} small />
       </label>
-      <ul className={styles.toggleContainer}>
-        { children }
-      </ul>
+      <ul className={styles.toggleContainer}>{children}</ul>
     </li>
   );
 }

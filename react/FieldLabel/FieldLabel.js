@@ -29,15 +29,21 @@ export default class FieldLabel extends Component {
       const { htmlFor: labelFor } = labelProps || {};
 
       if (typeof labelProps !== 'undefined' && typeof labelProps !== 'object') {
-        return new Error(`Invalid prop \`labelProps\` of type \`${typeof labelProps}\` supplied to \`${componentName}\`, expected \`object\`.`);
+        return new Error(
+          `Invalid prop \`labelProps\` of type \`${typeof labelProps}\` supplied to \`${componentName}\`, expected \`object\`.`
+        );
       }
 
       if (!label && labelProps) {
-        return new Error(`Specifying \`labelProps\` is redundant when \`label\` is not specified in ${componentName}.`);
+        return new Error(
+          `Specifying \`labelProps\` is redundant when \`label\` is not specified in ${componentName}.`
+        );
       }
 
       if (labelFor && id) {
-        return new Error(`\`labelProps.htmlFor\` will be overridden by \`id\` in ${componentName}. Please remove it.`);
+        return new Error(
+          `\`labelProps.htmlFor\` will be overridden by \`id\` in ${componentName}. Please remove it.`
+        );
       }
     },
     /* eslint-enable consistent-return */
@@ -66,11 +72,7 @@ export default class FieldLabel extends Component {
       return null;
     }
 
-    return (
-      <Secondary>
-        {secondaryLabel}
-      </Secondary>
-    );
+    return <Secondary>{secondaryLabel}</Secondary>;
   }
 
   renderTertiary() {
@@ -80,11 +82,7 @@ export default class FieldLabel extends Component {
       return null;
     }
 
-    return (
-      <span className={styles.tertiary}>
-        {tertiaryLabel}
-      </span>
-    );
+    return <span className={styles.tertiary}>{tertiaryLabel}</span>;
   }
 
   render() {
@@ -101,7 +99,10 @@ export default class FieldLabel extends Component {
     };
     return (
       <label {...allLabelProps}>
-        <Text raw={raw}><Strong>{label}</Strong> {this.renderSecondary()}{this.renderTertiary()}</Text>
+        <Text raw={raw}>
+          <Strong>{label}</Strong> {this.renderSecondary()}
+          {this.renderTertiary()}
+        </Text>
       </label>
     );
   }

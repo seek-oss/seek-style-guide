@@ -43,7 +43,8 @@ const Text = ({
         [styles.raw]: raw,
         [styles.bullet]: bullet,
         [styles.baseline]: baseline
-      })}>
+      })}
+    >
       <span
         className={classnames({
           [stylesPositive.root]: positive,
@@ -55,7 +56,8 @@ const Text = ({
           [stylesStrong.root]: strong,
           [stylesRegular.root]: regular,
           [styles.light]: light
-        })}>
+        })}
+      >
         {children}
       </span>
     </Component>

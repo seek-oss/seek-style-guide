@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../../private/authStatusTypes';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from '../../private/authStatusTypes';
 import styles from './UserAccount.less';
 
 const calculateMobileMenuLabel = (authenticationStatus, userName) => {
@@ -36,7 +40,7 @@ export default class UserAccount extends Component {
 
   static defaultProps = {
     onMenuToggle: () => {}
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -58,9 +62,20 @@ export default class UserAccount extends Component {
   };
 
   render() {
-    const { locale, authenticationStatus, userName, linkRenderer, returnUrl, activeTab, newBadgeTab } = this.props;
+    const {
+      locale,
+      authenticationStatus,
+      userName,
+      linkRenderer,
+      returnUrl,
+      activeTab,
+      newBadgeTab
+    } = this.props;
 
-    const mobileMenuLabel = calculateMobileMenuLabel(authenticationStatus, userName);
+    const mobileMenuLabel = calculateMobileMenuLabel(
+      authenticationStatus,
+      userName
+    );
     const desktopMenuLabel = userName;
 
     return (
@@ -68,8 +83,8 @@ export default class UserAccount extends Component {
         aria-label="my account"
         role="navigation"
         data-automation="user-account"
-        className={styles.root}>
-
+        className={styles.root}
+      >
         <input
           id="user-account-menu-toggle"
           autoComplete="off"
@@ -83,7 +98,8 @@ export default class UserAccount extends Component {
           <label
             data-automation="user-account-menu-backdrop"
             htmlFor="user-account-menu-toggle"
-            className={styles.menuBackdropLabel}>
+            className={styles.menuBackdropLabel}
+          >
             <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
           </label>
         </div>
@@ -91,13 +107,23 @@ export default class UserAccount extends Component {
         <label
           data-automation="user-account-menu-toggle"
           className={styles.toggleLabel}
-          htmlFor="user-account-menu-toggle">
+          htmlFor="user-account-menu-toggle"
+        >
           <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
           <span data-hj-masked={true}>
-            <span className={styles.mobileMenuLabel}>{ mobileMenuLabel }</span>
-            <span className={styles.desktopMenuLabel} data-automation="user-account-name">{ desktopMenuLabel }</span>
+            <span className={styles.mobileMenuLabel}>{mobileMenuLabel}</span>
+            <span
+              className={styles.desktopMenuLabel}
+              data-automation="user-account-name"
+            >
+              {desktopMenuLabel}
+            </span>
           </span>
-          <ChevronIcon direction="down" className={styles.chevron} svgClassName={styles.chevronSvg} />
+          <ChevronIcon
+            direction="down"
+            className={styles.chevron}
+            svgClassName={styles.chevronSvg}
+          />
         </label>
 
         <div onClick={this.handleMenuClick} className={styles.toggleContainer}>
@@ -110,7 +136,6 @@ export default class UserAccount extends Component {
             newBadgeTab={newBadgeTab}
           />
         </div>
-
       </nav>
     );
   }

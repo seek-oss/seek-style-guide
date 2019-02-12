@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import Radio from './Radio';
 import styles from './Radio.demo.less';
 
-const Container = ({ children }) => <div className={styles.root}>{ children }</div>;
+const Container = ({ children }) => (
+  <div className={styles.root}>{children}</div>
+);
 Container.propTypes = {
   children: PropTypes.node.isRequired
 };

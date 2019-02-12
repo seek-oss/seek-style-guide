@@ -1,6 +1,8 @@
 // @flow
 
-export { default as StyleGuideProvider } from './StyleGuideProvider/StyleGuideProvider';
+export {
+  default as StyleGuideProvider
+} from './StyleGuideProvider/StyleGuideProvider';
 export { default as SeekApp } from './StyleGuideProvider/StyleGuideProvider'; // Alias for backwards compatibility
 
 // Components
@@ -50,7 +52,9 @@ export { default as CloseIcon } from './CloseIcon/CloseIcon';
 export { default as CriticalIcon } from './CriticalIcon/CriticalIcon';
 export { default as CrossIcon } from './CrossIcon/CrossIcon';
 export { default as DeleteIcon } from './DeleteIcon/DeleteIcon';
-export { default as DownRightArrowIcon } from './DownRightArrowIcon/DownRightArrowIcon';
+export {
+  default as DownRightArrowIcon
+} from './DownRightArrowIcon/DownRightArrowIcon';
 export { default as ErrorIcon } from './ErrorIcon/ErrorIcon';
 export { default as FacebookIcon } from './FacebookIcon/FacebookIcon';
 export { default as HeartIcon } from './HeartIcon/HeartIcon';
@@ -83,6 +87,12 @@ export { default as FieldLabel } from './FieldLabel/FieldLabel';
 export { default as FieldMessage } from './FieldMessage/FieldMessage';
 
 // Accessibility
-export { default as ScreenReaderOnly } from './ScreenReaderOnly/ScreenReaderOnly';
-export { default as ScreenReaderSkipLink } from './ScreenReaderSkipLink/ScreenReaderSkipLink';
-export { default as ScreenReaderSkipTarget } from './ScreenReaderSkipTarget/ScreenReaderSkipTarget';
+export {
+  default as ScreenReaderOnly
+} from './ScreenReaderOnly/ScreenReaderOnly';
+export {
+  default as ScreenReaderSkipLink
+} from './ScreenReaderSkipLink/ScreenReaderSkipLink';
+export {
+  default as ScreenReaderSkipTarget
+} from './ScreenReaderSkipTarget/ScreenReaderSkipTarget';

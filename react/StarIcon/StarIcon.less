@@ -15,9 +15,15 @@
 }
 
 @keyframes spring {
-  0% { transform: scale(0.6); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 ._large {
@@ -30,28 +36,44 @@
     .iconHeight(@hero-type-row-span, @hero-type-row-span-mobile);
   }
   .heroSvg {
-    .iconSize(@typography-scale: @hero-type-scale, @typography-scale-mobile: @hero-type-scale-mobile, @icon-scale: @icon-scale);
+    .iconSize(
+      @typography-scale: @hero-type-scale,
+      @typography-scale-mobile: @hero-type-scale-mobile,
+      @icon-scale: @icon-scale
+    );
   }
 
   &.headline {
     .iconHeight(@headline-type-row-span, @headline-type-row-span-mobile);
   }
   .headlineSvg {
-    .iconSize(@typography-scale: @headline-type-scale, @typography-scale-mobile: @headline-type-scale-mobile,@icon-scale: @icon-scale);
+    .iconSize(
+      @typography-scale: @headline-type-scale,
+      @typography-scale-mobile: @headline-type-scale-mobile,
+      @icon-scale: @icon-scale
+    );
   }
 
   &.subheading {
     .iconHeight(@subheading-type-row-span, @subheading-type-row-span-mobile);
   }
   .subheadingSvg {
-    .iconSize(@typography-scale: @subheading-type-scale, @typography-scale-mobile: @subheading-type-scale-mobile,@icon-scale: @icon-scale);
+    .iconSize(
+      @typography-scale: @subheading-type-scale,
+      @typography-scale-mobile: @subheading-type-scale-mobile,
+      @icon-scale: @icon-scale
+    );
   }
 
   &.heading {
     .iconHeight(@heading-type-row-span, @heading-type-row-span-mobile);
   }
   .headingSvg {
-    .iconSize(@typography-scale: @heading-type-scale, @typography-scale-mobile: @heading-type-scale-mobile,@icon-scale: @icon-scale);
+    .iconSize(
+      @typography-scale: @heading-type-scale,
+      @typography-scale-mobile: @heading-type-scale-mobile,
+      @icon-scale: @icon-scale
+    );
   }
 
   &.large {
@@ -65,14 +87,18 @@
     .iconHeight(@standard-type-row-span, @standard-type-row-span-mobile);
   }
   .standardSvg {
-    .iconSize(@typography-scale: @standard-type-scale, @typography-scale-mobile: @standard-type-scale-mobile,@icon-scale: @icon-scale);
+    .iconSize(
+      @typography-scale: @standard-type-scale,
+      @typography-scale-mobile: @standard-type-scale-mobile,
+      @icon-scale: @icon-scale
+    );
   }
 
   &.small {
     .iconHeight(@small-type-row-span, @small-type-row-span-mobile);
   }
   .smallSvg {
-    .iconSize(@small-type-scale,@icon-scale: @icon-scale);
+    .iconSize(@small-type-scale, @icon-scale: @icon-scale);
   }
 
   &.interaction {

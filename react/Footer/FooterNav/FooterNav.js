@@ -7,14 +7,12 @@ export default function FooterNav({ secondary, label, children, className }) {
   return (
     <nav
       aria-label={label}
-      className={classnames(
-        className || styles.category,
-        { [styles.secondary]: secondary }
-      )}>
+      className={classnames(className || styles.category, {
+        [styles.secondary]: secondary
+      })}
+    >
       <h4 className={styles.heading}>{label}</h4>
-      <ul>
-        { children }
-      </ul>
+      <ul>{children}</ul>
     </nav>
   );
 }

@@ -29,10 +29,14 @@ describe('Header:', () => {
   });
 
   it('should render with overridden AU Locale link', () => {
-    expect(renderPartnerSites({ locale: 'NZ', localeLinks: links })).toMatchSnapshot();
+    expect(
+      renderPartnerSites({ locale: 'NZ', localeLinks: links })
+    ).toMatchSnapshot();
   });
 
   it('should render with overridden NZ Locale link', () => {
-    expect(renderPartnerSites({ locale: 'AU', localeLinks: links })).toMatchSnapshot();
+    expect(
+      renderPartnerSites({ locale: 'AU', localeLinks: links })
+    ).toMatchSnapshot();
   });
 });

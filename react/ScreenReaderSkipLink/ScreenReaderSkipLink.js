@@ -13,6 +13,10 @@ export default class ScreenReaderSkipLink extends Component {
   };
 
   render() {
-    return <a className={styles.root} href={`#${this.props.to}`}>{ this.props.children }</a>;
+    return (
+      <a className={styles.root} href={`#${this.props.to}`}>
+        {this.props.children}
+      </a>
+    );
   }
 }

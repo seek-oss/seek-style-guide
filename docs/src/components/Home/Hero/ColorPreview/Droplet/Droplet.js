@@ -9,11 +9,19 @@ import grid from '!!raw-loader!seek-style-guide/theme/layout/grid.less';
 const gridValues = lessToJs(grid);
 const rowHeight = parseInt(gridValues['@row-height'], 10);
 
-export default function Droplet({ color, outline, outlineColor, showHex, showVariable, variableName, sizeInRows }) {
+export default function Droplet({
+  color,
+  outline,
+  outlineColor,
+  showHex,
+  showVariable,
+  variableName,
+  sizeInRows
+}) {
   const size = sizeInRows * rowHeight;
-  const outlineStyles = outline ?
-    { boxShadow: `0 0 1px 0 ${outlineColor}` } :
-    {};
+  const outlineStyles = outline
+    ? { boxShadow: `0 0 1px 0 ${outlineColor}` }
+    : {};
   const dropletStyles = {
     height: `${size}px`,
     width: `${size}px`,
@@ -24,15 +32,13 @@ export default function Droplet({ color, outline, outlineColor, showHex, showVar
   return (
     <div className={styles.root}>
       <div className={styles.drop} style={dropletStyles} />
-      {
-        (showHex || showVariable) ?
-          <div className={styles.hex}>
-            {showHex ? <p>{color}</p> : null}
-            {(showHex && showVariable) ? ' — ' : null}
-            {showVariable ? <p>{variableName}</p> : null}
-          </div> :
-          null
-      }
+      {showHex || showVariable ? (
+        <div className={styles.hex}>
+          {showHex ? <p>{color}</p> : null}
+          {showHex && showVariable ? ' — ' : null}
+          {showVariable ? <p>{variableName}</p> : null}
+        </div>
+      ) : null}
     </div>
   );
 }

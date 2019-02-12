@@ -12,21 +12,11 @@ const getSwatch = name => {
 
   return (
     <div className={styles.drop} key={name}>
-      <Droplet
-        color={value}
-        sizeInRows={8}
-        showHex={true}
-      />
+      <Droplet color={value} sizeInRows={8} showHex={true} />
     </div>
   );
 };
 
 export default function ColorPreview() {
-  return (
-    <div>
-      {
-        ['@sk-blue', '@sk-pink', '@sk-teal'].map(getSwatch)
-      }
-    </div>
-  );
+  return <div>{['@sk-blue', '@sk-pink', '@sk-teal'].map(getSwatch)}</div>;
 }

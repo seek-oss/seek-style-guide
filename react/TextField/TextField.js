@@ -105,25 +105,45 @@ export default class TextField extends Component<Props> {
     return (
       <span
         className={styles.clearField}
-        onMouseDown={this.handleMouseDownOnClear}>
+        onMouseDown={this.handleMouseDownOnClear}
+      >
         <ClearField />
       </span>
     );
   }
 
   render() {
-    const { id, value, className, tone, onClear, inputProps = {}, valid } = this.props;
+    const {
+      id,
+      value,
+      className,
+      tone,
+      onClear,
+      inputProps = {},
+      valid
+    } = this.props;
     const resolvedValue = value || inputProps.value || '';
     const hasValue = resolvedValue.length > 0;
-    const canClear = hasValue && (typeof onClear === 'function');
+    const canClear = hasValue && typeof onClear === 'function';
     const classNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
+      [styles.invalid]:
+        typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [styles.canClear]: canClear,
       ...(className ? { [className]: className } : {})
     });
 
-    const { label, labelProps, secondaryLabel, tertiaryLabel, invalid, help, helpProps, message, messageProps } = this.props;
+    const {
+      label,
+      labelProps,
+      secondaryLabel,
+      tertiaryLabel,
+      invalid,
+      help,
+      helpProps,
+      message,
+      messageProps
+    } = this.props;
 
     return (
       <div ref={this.storeContainerReference} className={classNames}>

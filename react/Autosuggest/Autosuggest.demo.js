@@ -68,7 +68,12 @@ export default {
     value: '...',
     onChange: () => {},
     autosuggestProps: {
-      suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer'],
+      suggestions: [
+        'Developer',
+        'Product manager',
+        'Iteration manager',
+        'Designer'
+      ],
       onSuggestionsFetchRequested: () => {},
       onSuggestionsClearRequested: () => {},
       renderSuggestion: suggestion => <div>{suggestion}</div>,
@@ -96,10 +101,17 @@ export default {
             autosuggestProps: {
               ...autosuggestProps,
               multiSection: true,
-              suggestions: [{
-                title: 'RECENT TITLES',
-                suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer']
-              }],
+              suggestions: [
+                {
+                  title: 'RECENT TITLES',
+                  suggestions: [
+                    'Developer',
+                    'Product manager',
+                    'Iteration manager',
+                    'Designer'
+                  ]
+                }
+              ],
               renderSectionTitle: section => <div>{section.title}</div>,
               getSectionSuggestions: section => section.suggestions
             }

@@ -2,12 +2,13 @@ import styles from './TypographyPreview.less';
 
 import React from 'react';
 
-const items = [
-  'hero',
-  'headline'
-];
+const items = ['hero', 'headline'];
 
-const sampleText = <span>AaBb<span className={styles.cc}>Cc</span></span>;
+const sampleText = (
+  <span>
+    AaBb<span className={styles.cc}>Cc</span>
+  </span>
+);
 
 export default function TypographyPreview() {
   return (

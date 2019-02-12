@@ -34,46 +34,75 @@ describe('CustomMonthPicker', () => {
   function render(jsx) {
     element = jsx;
     monthPicker = renderer.render(element);
-    monthDropdown = findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[0] || null;
-    yearDropdown = findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[1] || null;
+    monthDropdown =
+      findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[0] || null;
+    yearDropdown =
+      findAllWithClass(monthPicker, 'CustomMonthPicker__dropdown')[1] || null;
   }
 
   function renderToDom(jsx) {
     element = jsx;
     monthPicker = renderIntoDocument(element);
     monthDropdown =
-      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[0] ||
-      null;
+      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[0] || null;
     yearDropdown =
-      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[1] ||
-      null;
+      scryRenderedDOMComponentsWithTag(monthPicker, 'select')[1] || null;
   }
 
   it('should have a displayName', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" fieldMessageId="testCustomMonthPicker-message" />);
+    render(
+      <CustomMonthPicker
+        id="testCustomMonthPicker"
+        fieldMessageId="testCustomMonthPicker-message"
+      />
+    );
     expect(element.type.displayName).to.equal('CustomMonthPicker');
   });
 
   it('should render without exploding', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" fieldMessageId="testCustomMonthPicker-message" />);
+    render(
+      <CustomMonthPicker
+        id="testCustomMonthPicker"
+        fieldMessageId="testCustomMonthPicker-message"
+      />
+    );
     expect(errors.length).to.equal(0);
   });
 
   it('should send valid prop to false to both dropdowns when valid is false', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" valid={false} fieldMessageId="testCustomMonthPicker-message" />);
+    render(
+      <CustomMonthPicker
+        id="testCustomMonthPicker"
+        valid={false}
+        fieldMessageId="testCustomMonthPicker-message"
+      />
+    );
     expect(monthDropdown.props.valid).to.equal(false);
     expect(yearDropdown.props.valid).to.equal(false);
   });
 
   it('should send a tone prop to both dropdowns', () => {
-    render(<CustomMonthPicker id="testCustomMonthPicker" tone="critical" fieldMessageId="testCustomMonthPicker-message" />);
+    render(
+      <CustomMonthPicker
+        id="testCustomMonthPicker"
+        tone="critical"
+        fieldMessageId="testCustomMonthPicker-message"
+      />
+    );
     expect(monthDropdown.props.tone).to.equal('critical');
     expect(yearDropdown.props.tone).to.equal('critical');
   });
 
   it('should call onFocus when field has the focus', () => {
     const onFocus = jest.fn();
-    renderToDom(<CustomMonthPicker id="testCustomMonthPicker" onFocus={onFocus} value={{ month: 6, year: 2010 }} fieldMessageId="testCustomMonthPicker-message" />);
+    renderToDom(
+      <CustomMonthPicker
+        id="testCustomMonthPicker"
+        onFocus={onFocus}
+        value={{ month: 6, year: 2010 }}
+        fieldMessageId="testCustomMonthPicker-message"
+      />
+    );
     Simulate.focus(monthDropdown);
     Simulate.focus(yearDropdown);
     expect(onFocus.mock.calls.length).equal(2);

@@ -14,7 +14,9 @@ const SectionContainer = ({ component: DemoComponent, componentProps }) => (
   </PageBlock>
 );
 
-const SectionUnstyledContent = <Text>This content is nested within a Section component</Text>;
+const SectionUnstyledContent = (
+  <Text>This content is nested within a Section component</Text>
+);
 
 SectionContainer.propTypes = {
   component: PropTypes.any,
@@ -50,7 +52,9 @@ export default {
             header: true,
             children: (
               <div style={{ backgroundColor: 'blue', color: 'white' }}>
-                <Text hero>This content is nested within a Section component</Text>
+                <Text hero>
+                  This content is nested within a Section component
+                </Text>
               </div>
             )
           })

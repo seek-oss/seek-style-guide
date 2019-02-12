@@ -1,7 +1,9 @@
 @import (reference) "~seek-style-guide/theme";
 
 @keyframes loading {
-  to { width: @gutter-width; }
+  to {
+    width: @gutter-width;
+  }
 }
 
 .hoverState(@rules) {
@@ -28,16 +30,11 @@
 .buttonColor(@color, @background-color) {
   color: @color;
   background-color: @background-color;
-  .hoverState({
-    background-color: lighten(@background-color, 5%);
-  });
-  .activeState({
-    background-color: darken(@background-color, 5%);
-  });
+  .hoverState({background-color: lighten(@background-color, 5%) ;});
+  .activeState({background-color: darken(@background-color, 5%) ;});
 }
 
 .ghostColor(@color) {
-
   .activeBackground() {
     background-color: lighten(@color, 51%);
   }
@@ -45,17 +42,11 @@
   border-color: @color;
   color: @color;
 
-  .hoverState({
-    background-color: lighten(@color, 56%);
-  });
+  .hoverState({background-color: lighten(@color, 56%) ;});
 
-  .activeState({
-    .activeBackground;
-  });
+  .activeState({.activeBackground;});
 
-  .focusState({
-    .activeBackground;
-  });
+  .focusState({.activeBackground;});
 }
 
 .root {
@@ -69,21 +60,13 @@
   box-shadow: inset 0 -1px fade(@sk-charcoal, 40%);
   border: 0;
   border-radius: 2px;
-  transition:
-    background-color 0.2s,
-    @spring-transition;
+  transition: background-color 0.2s, @spring-transition;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  .activeState({
-    box-shadow: none;
-    outline: none;
-    transform: scale(0.95);
-  });
-  .focusState({
-    .focus();
-  });
+  .activeState({box-shadow: none; outline: none; transform: scale(0.95) ;});
+  .focusState({.focus() ;});
 }
 
 .root_isPink {
@@ -113,11 +96,11 @@
 }
 
 .root_isPink.root_isGhost {
-  .ghostColor(@sk-pink)
+  .ghostColor(@sk-pink);
 }
 
 .root_isBlue.root_isGhost {
-  .ghostColor(@sk-blue-lighter)
+  .ghostColor(@sk-blue-lighter);
 }
 
 .root_isWhite.root_isGhost {
@@ -128,17 +111,11 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  .activeState({
-    .activeBackground;
-  });
+  .activeState({.activeBackground;});
 
-  .hoverState({
-    .activeBackground;
-  });
+  .hoverState({.activeBackground;});
 
-  .focusState({
-    .activeBackground;
-  });
+  .focusState({.activeBackground;});
 }
 
 .root_isTransparent {
@@ -146,13 +123,9 @@
   padding-left: 0;
   padding-right: 0;
 
-  .hoverState({
-    text-decoration: underline;
-  });
+  .hoverState({text-decoration: underline;});
 
-  .activeState({
-    transform: none;
-  });
+  .activeState({transform: none;});
 
   .touchableText(@standard-type-scale);
 }
@@ -161,7 +134,7 @@
   padding-right: @gutter-width * 2;
 
   &::after {
-    content: ' \2026';
+    content: " \2026";
     text-align: left;
     width: 0;
     overflow-x: hidden;

@@ -13,15 +13,16 @@ import SignInRegister from './SignInRegister/SignInRegister';
 import UserAccount from './UserAccount/UserAccount';
 import employerLinkForLocale from './employerLinkForLocale';
 import StructuredDataSchema from './StructuredDataSchema/StructuredDataSchema';
-import { AUTHENTICATED, UNAUTHENTICATED, AUTH_PENDING } from '../private/authStatusTypes';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from '../private/authStatusTypes';
 
-const handleLegacyTabName = tabName => (
-  tabName === 'Advice & Tips' ?
-    'Career Advice' :
-    tabName
-);
+const handleLegacyTabName = tabName =>
+  tabName === 'Advice & Tips' ? 'Career Advice' : tabName;
 
-const defaultLinkRenderer = props => (<a {...props} />);
+const defaultLinkRenderer = props => <a {...props} />;
 const tabNames = [
   'Job Search',
   '$150k+ Jobs',
@@ -32,10 +33,7 @@ const tabNames = [
   'Career Advice',
   'Advice & Tips' // Backwards compatible name for 'Career Advice'
 ];
-const allowedBadgeTabs = [
-  ...tabNames,
-  null
-];
+const allowedBadgeTabs = [...tabNames, null];
 export default function Header({
   logoComponent: LogoComponent,
   newBadgeTab: newBadgeTabProp,
@@ -52,8 +50,9 @@ export default function Header({
   const activeTab = handleLegacyTabName(activeTabProp);
   const newBadgeTab = handleLegacyTabName(newBadgeTabProp);
 
-  const isAuthenticated = (authenticationStatus === AUTHENTICATED && (userName || userEmail));
-  const isUnauthenticated = (authenticationStatus === UNAUTHENTICATED);
+  const isAuthenticated =
+    authenticationStatus === AUTHENTICATED && (userName || userEmail);
+  const isUnauthenticated = authenticationStatus === UNAUTHENTICATED;
 
   const userClasses = classnames({
     [styles.user]: true,
@@ -71,16 +70,16 @@ export default function Header({
         <div className={styles.banner}>
           <div data-automation="logo" className={styles.logo}>
             <LogoComponent locale={locale} svgClassName={styles.logoSvg} />
-            {
-              linkRenderer({
-                'data-analytics': 'header:jobs',
-                className: styles.logoLink,
-                href: '/',
-                children: <ScreenReaderOnly>SEEK</ScreenReaderOnly>
-              })
-            }
+            {linkRenderer({
+              'data-analytics': 'header:jobs',
+              className: styles.logoLink,
+              href: '/',
+              children: <ScreenReaderOnly>SEEK</ScreenReaderOnly>
+            })}
           </div>
-          <Hidden screen className={styles.logoNote}>Australia’s #1 job site</Hidden>
+          <Hidden screen className={styles.logoNote}>
+            Australia’s #1 job site
+          </Hidden>
           <Hidden print className={styles.userWrapper}>
             <div className={userClasses}>
               <div className={styles.userAccountWrapper}>
@@ -96,19 +95,20 @@ export default function Header({
                 />
               </div>
               <div className={styles.signInRegisterWrapper}>
-                <SignInRegister linkRenderer={linkRenderer} returnUrl={returnUrl} />
+                <SignInRegister
+                  linkRenderer={linkRenderer}
+                  returnUrl={returnUrl}
+                />
               </div>
               <span className={styles.divider} />
             </div>
             <div className={styles.employerSite}>
-              {
-                linkRenderer({
-                  'data-analytics': 'header:employer+site',
-                  className: styles.employerLink,
-                  href: employerLinkForLocale(locale),
-                  children: 'Employer site'
-                })
-              }
+              {linkRenderer({
+                'data-analytics': 'header:employer+site',
+                className: styles.employerLink,
+                href: employerLinkForLocale(locale),
+                children: 'Employer site'
+              })}
             </div>
           </Hidden>
         </div>
@@ -122,7 +122,11 @@ export default function Header({
           />
         </Hidden>
         <div className={styles.topBanner}>
-          <PartnerSites locale={locale} linkRenderer={linkRenderer} activeSite='Jobs' />
+          <PartnerSites
+            locale={locale}
+            linkRenderer={linkRenderer}
+            activeSite="Jobs"
+          />
         </div>
       </div>
     </header>

@@ -24,7 +24,11 @@ export default function IconPreview() {
       <TickCircleIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <CloseIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <SearchIcon className={styles.icon} svgClassName={styles.iconSvg} />
-      <ChevronIcon direction="down" className={styles.icon} svgClassName={styles.iconSvg} />
+      <ChevronIcon
+        direction="down"
+        className={styles.icon}
+        svgClassName={styles.iconSvg}
+      />
       <StarIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <ThumbsUpIcon className={styles.icon} svgClassName={styles.iconSvg} />
       <ErrorIcon className={styles.icon} svgClassName={styles.iconSvg} />

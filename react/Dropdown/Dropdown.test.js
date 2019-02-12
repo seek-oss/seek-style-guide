@@ -23,7 +23,14 @@ const options = [
 ];
 
 describe('Dropdown', () => {
-  let element, dropdown, input, placeholder, optionGroup, childOptions, errors, option;
+  let element,
+    dropdown,
+    input,
+    placeholder,
+    optionGroup,
+    childOptions,
+    errors,
+    option;
 
   beforeEach(() => {
     errors = [];
@@ -71,21 +78,27 @@ describe('Dropdown', () => {
 
   it('should invoke the focus handler', () => {
     const onFocus = jest.fn();
-    const wrapper = shallow(<Dropdown id="testDropdown" value="" onFocus={onFocus} />);
+    const wrapper = shallow(
+      <Dropdown id="testDropdown" value="" onFocus={onFocus} />
+    );
     wrapper.find('select').simulate('focus');
     expect(onFocus.mock.calls.length).to.equal(1);
   });
 
   it('should invoke the blur handler', () => {
     const onBlur = jest.fn();
-    const wrapper = shallow(<Dropdown id="testDropdown" value="" onBlur={onBlur} />);
+    const wrapper = shallow(
+      <Dropdown id="testDropdown" value="" onBlur={onBlur} />
+    );
     wrapper.find('select').simulate('blur');
     expect(onBlur.mock.calls.length).to.equal(1);
   });
 
   it('should invoke the change handler', () => {
     const onChange = jest.fn();
-    const wrapper = shallow(<Dropdown id="testDropdown" value="" onChange={onChange} />);
+    const wrapper = shallow(
+      <Dropdown id="testDropdown" value="" onChange={onChange} />
+    );
     wrapper.find('select').simulate('change', { target: { value: 'foo' } });
     expect(onChange.mock.calls.length).to.equal(1);
     expect(onChange.mock.calls[0][0].target.value).to.equal('foo');
@@ -101,7 +114,15 @@ describe('Dropdown', () => {
 
   describe('Option Group', () => {
     beforeAll(() => {
-      const opts = [{ label: 'suburbs', value: [{ label: 'truganina', value: '3029' }, { label: 'wl', value: '3029' }] }];
+      const opts = [
+        {
+          label: 'suburbs',
+          value: [
+            { label: 'truganina', value: '3029' },
+            { label: 'wl', value: '3029' }
+          ]
+        }
+      ];
       render(<Dropdown id="testDropdown" value="" options={opts} />);
     });
     it('should render optgroup correctly', () => {
@@ -120,41 +141,68 @@ describe('Dropdown', () => {
 
   describe('placeholder', () => {
     it('should render placeholder as first option in list ', () => {
-      render(<Dropdown id="testDropdown" value="" options={options} placeholder="test" />);
+      render(
+        <Dropdown
+          id="testDropdown"
+          value=""
+          options={options}
+          placeholder="test"
+        />
+      );
       expect(placeholderText()).to.equal('test');
     });
   });
 
   describe('inputProps', () => {
     it('should pass through className to the input', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ className: 'first-name-field' }} />);
+      render(
+        <Dropdown
+          id="testDropdown"
+          inputProps={{ className: 'first-name-field' }}
+        />
+      );
       expect(input.props.className).to.match(/first-name-field$/);
     });
 
     it('should invoke the focus handler', () => {
       const onFocus = jest.fn();
-      const wrapper = shallow(<Dropdown id="testDropdown" value="" inputProps={{ onFocus }} />);
+      const wrapper = shallow(
+        <Dropdown id="testDropdown" value="" inputProps={{ onFocus }} />
+      );
       wrapper.find('select').simulate('focus');
       expect(onFocus.mock.calls.length).to.equal(1);
     });
 
     it('should invoke the blur handler', () => {
       const onBlur = jest.fn();
-      const wrapper = shallow(<Dropdown id="testDropdown" value="" inputProps={{ onBlur }} />);
+      const wrapper = shallow(
+        <Dropdown id="testDropdown" value="" inputProps={{ onBlur }} />
+      );
       wrapper.find('select').simulate('blur');
       expect(onBlur.mock.calls.length).to.equal(1);
     });
 
     it('should invoke the change handler', () => {
       const onChange = jest.fn();
-      const wrapper = shallow(<Dropdown id="testDropdown" value="" inputProps={{ onChange }} />);
+      const wrapper = shallow(
+        <Dropdown id="testDropdown" value="" inputProps={{ onChange }} />
+      );
       wrapper.find('select').simulate('change', { target: { value: 'foo' } });
       expect(onChange.mock.calls.length).to.equal(1);
       expect(onChange.mock.calls[0][0].target.value).to.equal('foo');
     });
 
     it('should pass through other props to the input', () => {
-      render(<Dropdown id="testDropdown" inputProps={{ id: 'firstName', value: 'value', 'data-automation': 'first-name-field' }} />);
+      render(
+        <Dropdown
+          id="testDropdown"
+          inputProps={{
+            id: 'firstName',
+            value: 'value',
+            'data-automation': 'first-name-field'
+          }}
+        />
+      );
       expect(input.props.id).to.equal('firstName');
       expect(input.props.value).to.equal('value');
       expect(input.props['data-automation']).to.equal('first-name-field');

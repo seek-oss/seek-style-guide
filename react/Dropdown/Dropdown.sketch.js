@@ -25,12 +25,22 @@ export const symbols = {
   ),
   'Dropdown/With Critical Text': (
     <SketchFieldContainer>
-      <Dropdown {...commonProps} id="dropdown3" message="Critical text" tone="critical" />
+      <Dropdown
+        {...commonProps}
+        id="dropdown3"
+        message="Critical text"
+        tone="critical"
+      />
     </SketchFieldContainer>
   ),
   'Dropdown/With Positive Text': (
     <SketchFieldContainer>
-      <Dropdown {...commonProps} id="dropdown4" message="Positive text" tone="positive" />
+      <Dropdown
+        {...commonProps}
+        id="dropdown4"
+        message="Positive text"
+        tone="positive"
+      />
     </SketchFieldContainer>
   )
 };

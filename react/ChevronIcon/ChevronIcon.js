@@ -19,9 +19,7 @@ export default function ChevronIcon({ direction, className, ...props }) {
 ChevronIcon.displayName = 'ChevronIcon';
 
 ChevronIcon.propTypes = {
-  direction: PropTypes.oneOf([
-    'up', 'down', 'right', 'left'
-  ]).isRequired,
+  direction: PropTypes.oneOf(['up', 'down', 'right', 'left']).isRequired,
   className: PropTypes.string
 };
 

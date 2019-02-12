@@ -13,8 +13,10 @@ export default (Component, defaultProps = {}) => (el, props) => {
     updateProps = propsUpdater;
   };
 
-  const renderTarget = el || document.getElementById(`__SSG_${Component.displayName}__`);
-  const initialProps = props || window[`__SSG_${Component.displayName}_props__`] || {};
+  const renderTarget =
+    el || document.getElementById(`__SSG_${Component.displayName}__`);
+  const initialProps =
+    props || window[`__SSG_${Component.displayName}_props__`] || {};
 
   render(
     <StandaloneProvider

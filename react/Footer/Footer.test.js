@@ -15,11 +15,15 @@ describe('Footer:', () => {
   });
 
   it('should render when authenticated', () => {
-    expect(renderFooter({ authenticationStatus: 'authenticated' })).toMatchSnapshot();
+    expect(
+      renderFooter({ authenticationStatus: 'authenticated' })
+    ).toMatchSnapshot();
   });
 
   it('should render when unauthenticated', () => {
-    expect(renderFooter({ authenticationStatus: 'unauthenticated' })).toMatchSnapshot();
+    expect(
+      renderFooter({ authenticationStatus: 'unauthenticated' })
+    ).toMatchSnapshot();
   });
 
   it('should render when authentication is pending', () => {

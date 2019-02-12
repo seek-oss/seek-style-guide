@@ -4,14 +4,15 @@ import Alert from './Alert';
 import { TONE } from '../private/tone';
 import { LEVEL } from '../private/level';
 
-const renderAlert = props => shallow(
-  <Alert
-    tone={TONE.POSITIVE}
-    level={LEVEL.PRIMARY}
-    message="Test message"
-    {...props}
-  />
-);
+const renderAlert = props =>
+  shallow(
+    <Alert
+      tone={TONE.POSITIVE}
+      level={LEVEL.PRIMARY}
+      message="Test message"
+      {...props}
+    />
+  );
 
 describe('Alert:', () => {
   describe('types:', () => {

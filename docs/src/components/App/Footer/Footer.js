@@ -11,7 +11,8 @@ export default function Footer() {
           <a
             className={styles.link}
             href="https://github.com/seek-oss/seek-style-guide"
-            title="View project on Github">
+            title="View project on Github"
+          >
             <GithubIcon svgClassName={styles.github} />
           </a>
         </div>

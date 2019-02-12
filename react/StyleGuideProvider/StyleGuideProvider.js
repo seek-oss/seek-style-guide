@@ -7,12 +7,22 @@ import classnames from 'classnames';
 import Helmet from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
-const defaultPageTitleAU = 'SEEK - Australia\'s no. 1 jobs, employment, career and recruitment site';
-const defaultPageTitleNZ = 'Jobs on SEEK - New Zealand\'s no. 1 Employment, Career and Recruitment site';
+const defaultPageTitleAU =
+  "SEEK - Australia's no. 1 jobs, employment, career and recruitment site";
+const defaultPageTitleNZ =
+  "Jobs on SEEK - New Zealand's no. 1 Employment, Career and Recruitment site";
 
-const getLocalisedPageTitle = locale => locale === 'AU' ? defaultPageTitleAU : defaultPageTitleNZ;
+const getLocalisedPageTitle = locale =>
+  locale === 'AU' ? defaultPageTitleAU : defaultPageTitleNZ;
 
-export default function StyleGuideProvider({ fullScreen, children, meta, link, title, locale }) {
+export default function StyleGuideProvider({
+  fullScreen,
+  children,
+  meta,
+  link,
+  title,
+  locale
+}) {
   const className = classnames({
     [styles.root]: true,
     [styles.fullScreen]: fullScreen
@@ -22,11 +32,7 @@ export default function StyleGuideProvider({ fullScreen, children, meta, link, t
 
   return (
     <div className={className}>
-      <Helmet
-        title={pageTitle}
-        meta={meta}
-        link={link}
-      />
+      <Helmet title={pageTitle} meta={meta} link={link} />
 
       <ScreenReaderOnly component="div">
         <h1>{pageTitle}</h1>

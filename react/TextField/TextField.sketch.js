@@ -15,12 +15,22 @@ export const symbols = {
   ),
   'TextField/With Critical Text': (
     <SketchFieldContainer>
-      <TextField id="firstName3" label="Label" message="Critical text" tone="critical" />
+      <TextField
+        id="firstName3"
+        label="Label"
+        message="Critical text"
+        tone="critical"
+      />
     </SketchFieldContainer>
   ),
   'TextField/With Positive Text': (
     <SketchFieldContainer>
-      <TextField id="firstName4" label="Label" message="Positive text" tone="positive" />
+      <TextField
+        id="firstName4"
+        label="Label"
+        message="Positive text"
+        tone="positive"
+      />
     </SketchFieldContainer>
   )
 };
