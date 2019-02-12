@@ -34,11 +34,15 @@ export default class Autosuggest extends Component {
       const propType = typeof suggestionsContainerClassName;
 
       if (propType !== 'undefined' && propType !== 'string') {
-        return new Error(`Invalid prop \`suggestionsContainerClassName\` of type \`${propType}\` supplied to \`${componentName}\`, expected \`string\`.`);
+        return new Error(
+          `Invalid prop \`suggestionsContainerClassName\` of type \`${propType}\` supplied to \`${componentName}\`, expected \`string\`.`
+        );
       }
 
       if (suggestionsContainer && suggestionsContainerClassName) {
-        return new Error('\`suggestionsContainerClassName\` will be overridden by the \`suggestionsContainer\` class in autosuggestProps \`theme\`. Please remove it.');
+        return new Error(
+          '`suggestionsContainerClassName` will be overridden by the `suggestionsContainer` class in autosuggestProps `theme`. Please remove it.'
+        );
       }
     }
     /* eslint-enable consistent-return */
@@ -55,10 +59,14 @@ export default class Autosuggest extends Component {
 
   state = {
     areSuggestionsShown: false
-  }
+  };
 
   componentWillUpdate(nextProps, nextState) {
-    if (!this.state.areSuggestionsShown && nextState.areSuggestionsShown && smallDeviceOnly()) {
+    if (
+      !this.state.areSuggestionsShown &&
+      nextState.areSuggestionsShown &&
+      smallDeviceOnly()
+    ) {
       smoothScroll(this.textField);
     }
   }
@@ -67,13 +75,13 @@ export default class Autosuggest extends Component {
     if (autosuggest !== null) {
       this.input = autosuggest.input;
     }
-  }
+  };
 
   storeTextFieldReference = textField => {
     if (textField !== null) {
       this.textField = textField.container;
     }
-  }
+  };
 
   renderSuggestionsContainer = ({ containerProps, children }) => {
     const { ref, ...rest } = containerProps;
@@ -90,7 +98,7 @@ export default class Autosuggest extends Component {
     };
 
     return <IsolatedScroll {...rest} ref={callRef} children={children} />;
-  }
+  };
 
   renderInputComponent = inputProps => {
     const { label, labelProps } = this.props;
@@ -98,7 +106,7 @@ export default class Autosuggest extends Component {
     const textFieldProps = {
       ref: this.storeTextFieldReference,
       inputProps,
-      ...omit(this.props, [ 'inputProps', 'labelProps', 'autosuggestProps' ])
+      ...omit(this.props, ['inputProps', 'labelProps', 'autosuggestProps'])
     };
 
     if (label) {
@@ -111,10 +119,8 @@ export default class Autosuggest extends Component {
       };
     }
 
-    return (
-      <TextField {...textFieldProps} />
-    );
-  }
+    return <TextField {...textFieldProps} />;
+  };
 
   render() {
     const {

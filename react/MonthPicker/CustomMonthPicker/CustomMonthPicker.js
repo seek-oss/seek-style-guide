@@ -39,7 +39,12 @@ export default class CustomMonthPicker extends Component {
       year: PropTypes.number
     }),
     valid: PropTypes.bool,
-    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL]),
+    tone: PropTypes.oneOf([
+      TONE.POSITIVE,
+      TONE.INFO,
+      TONE.CRITICAL,
+      TONE.NEUTRAL
+    ]),
     minYear: PropTypes.number.isRequired,
     maxYear: PropTypes.number.isRequired,
     ascendingYears: PropTypes.bool.isRequired,
@@ -91,7 +96,10 @@ export default class CustomMonthPicker extends Component {
   }
 
   handleMonthChange({ target: { value } }) {
-    const { onChange, value: { year } } = this.props;
+    const {
+      onChange,
+      value: { year }
+    } = this.props;
 
     if (typeof onChange === 'function') {
       onChange({
@@ -102,7 +110,10 @@ export default class CustomMonthPicker extends Component {
   }
 
   handleYearChange({ target: { value } }) {
-    const { onChange, value: { month } } = this.props;
+    const {
+      onChange,
+      value: { month }
+    } = this.props;
 
     if (typeof onChange === 'function') {
       onChange({
@@ -157,7 +168,12 @@ export default class CustomMonthPicker extends Component {
         <FieldLabel
           {...{
             id: `${id}-month`,
-            label: <span>{label}<ScreenReaderOnly> Month</ScreenReaderOnly></span>,
+            label: (
+              <span>
+                {label}
+                <ScreenReaderOnly> Month</ScreenReaderOnly>
+              </span>
+            ),
             labelProps,
             secondaryLabel,
             tertiaryLabel

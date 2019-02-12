@@ -29,9 +29,7 @@
   overflow-y: auto;
   top: @row-height * @suggestionContainerRowsOffset;
 
-  .smallDeviceOnly({
-    max-height: ~"calc(100vh - @{containerHeight})";
-  });
+  .smallDeviceOnly({max-height: ~"calc(100vh - @{containerHeight})" ;});
 }
 
 .suggestionsContainerOpen {
@@ -81,9 +79,7 @@
   visibility: visible;
 
   &.backdrop_isMobile {
-    .smallDeviceOnly({
-      .backdrop();
-    });
+    .smallDeviceOnly({.backdrop() ;});
   }
 }
 

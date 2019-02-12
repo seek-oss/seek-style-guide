@@ -119,10 +119,12 @@ class ReadMore extends PureComponent<Props, State> {
     const fadeColor = styles[backgroundComponentName];
     const showMoreLessButton = tooLong && mounted;
 
-    const contentStyle = truncate ? {
-      maxHeight: getMaxHeight(maxLines, maxRows),
-      overflow: 'hidden'
-    } : {};
+    const contentStyle = truncate
+      ? {
+          maxHeight: getMaxHeight(maxLines, maxRows),
+          overflow: 'hidden'
+        }
+      : {};
 
     return (
       <div>
@@ -138,7 +140,8 @@ class ReadMore extends PureComponent<Props, State> {
             chevron={showMore ? 'up' : 'down'}
             className={styles.showMore}
             component={TextLink}
-            onClick={this.handleShowMore}>
+            onClick={this.handleShowMore}
+          >
             {showMore ? lessLabel : moreLabel}
           </Text>
         )}

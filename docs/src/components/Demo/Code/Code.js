@@ -33,9 +33,12 @@ export default class Code extends Component {
   }
 
   handleCopy() {
-    this.setState({
-      copiedToClipboard: true
-    }, this.debouncedHandleMouseLeave);
+    this.setState(
+      {
+        copiedToClipboard: true
+      },
+      this.debouncedHandleMouseLeave
+    );
   }
 
   render() {
@@ -50,28 +53,33 @@ export default class Code extends Component {
         filterProps: ['className', 'style'],
         useBooleanShorthandSyntax: false
       })
-        .replace(/\={true}/ig, '')
-        .replace(/svgClassName=".*?"/ig, 'svgClassName="..."')
-        .replace(/function noRefCheck\(\) \{\}/ig, '() => {...}')
+        .replace(/\={true}/gi, '')
+        .replace(/svgClassName=".*?"/gi, 'svgClassName="..."')
+        .replace(/function noRefCheck\(\) \{\}/gi, '() => {...}')
         .replace('<MockContent />', 'Lorem ipsum');
 
       const componentNames = uniq(
-        (componentCode.match(/<([A-Z]\w*)(?=[\s>])/g) || [])
-          .map(x => x.replace('<', ''))
+        (componentCode.match(/<([A-Z]\w*)(?=[\s>])/g) || []).map(x =>
+          x.replace('<', '')
+        )
       );
 
-      code = `import {\n  ${componentNames.join(',\n  ')}\n} from 'seek-style-guide/react';\n\n\n${componentCode}`;
+      code = `import {\n  ${componentNames.join(
+        ',\n  '
+      )}\n} from 'seek-style-guide/react';\n\n\n${componentCode}`;
     } else if (less) {
       code = `@import (reference) "~seek-style-guide/theme";\n\n\n.element {\n  .${less}\n}`;
     }
 
     return (
       <CopyToClipboard text={code} onCopy={this.handleCopy}>
-        <Section header className={styles.root} onMouseLeave={this.handleMouseLeave}>
+        <Section
+          header
+          className={styles.root}
+          onMouseLeave={this.handleMouseLeave}
+        >
           <pre className={styles.code}>
-            <code>
-              {code}
-            </code>
+            <code>{code}</code>
           </pre>
           <Text strong className={styles.message} positive={copiedToClipboard}>
             {copiedToClipboard ? 'Copied' : 'Click to copy'}

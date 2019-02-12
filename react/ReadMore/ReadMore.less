@@ -1,12 +1,11 @@
-@import (reference) '~seek-style-guide/theme';
+@import (reference) "~seek-style-guide/theme";
 
 .fadeOutBackground(@fadeColor: @sk-card-bg) {
-  background:
-    linear-gradient(
-      to bottom,
-      fade(@fadeColor, 0) 0%,
-      @fadeColor 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    fade(@fadeColor, 0) 0%,
+    @fadeColor 100%
+  );
 }
 
 .content {

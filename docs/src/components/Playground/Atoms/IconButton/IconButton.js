@@ -7,8 +7,8 @@ import { PlusIcon, DeleteIcon } from 'seek-style-guide/react';
 export default function IconButton({ children, icon }) {
   return (
     <button className={styles.root}>
-      {icon === 'plus' ? <PlusIcon /> : null }
-      {icon === 'delete' ? <DeleteIcon /> : null }
+      {icon === 'plus' ? <PlusIcon /> : null}
+      {icon === 'delete' ? <DeleteIcon /> : null}
       {children}
     </button>
   );

@@ -10,10 +10,7 @@ export default {
   initialProps: {
     headline: true,
     regular: true,
-    children: [
-      'This text is ',
-      <Strong key="strong">strong</Strong>
-    ]
+    children: ['This text is ', <Strong key="strong">strong</Strong>]
   },
   options: []
 };

@@ -1,7 +1,7 @@
 import styles from './fixSketchRendering.less';
 
 export default rootEl => {
-  const parseContent = content => content === 'none' ? '' : content;
+  const parseContent = content => (content === 'none' ? '' : content);
 
   // Total hack until html-sketchapp supports before and after pseudo elements
   // GitHub Issue: https://github.com/brainly/html-sketchapp/issues/20
@@ -65,7 +65,11 @@ export default rootEl => {
   // since neither "overflow: hidden" nor "-webkit-mask-image" work properly.
   // To fix it, we remove all children of masked elements inside the label.
   // (Yep, this one is pretty awful...)
-  Array.from(rootEl.querySelectorAll('[aria-label="Slide toggle"]:not(:checked) ~ label *')).forEach(el => {
+  Array.from(
+    rootEl.querySelectorAll(
+      '[aria-label="Slide toggle"]:not(:checked) ~ label *'
+    )
+  ).forEach(el => {
     if (getComputedStyle(el).webkitMaskImage !== 'none') {
       Array.from(el.querySelectorAll('*')).forEach(maskedEl => {
         maskedEl.parentNode.removeChild(maskedEl);

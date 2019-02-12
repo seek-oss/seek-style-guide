@@ -12,9 +12,14 @@ type Props = {
   header: boolean,
   pullout: boolean,
   slim: boolean,
-  tone: typeof TONE.POSITIVE | typeof TONE.CRITICAL | typeof TONE.INFO | typeof TONE.HELP | '',
+  tone:
+    | typeof TONE.POSITIVE
+    | typeof TONE.CRITICAL
+    | typeof TONE.INFO
+    | typeof TONE.HELP
+    | '',
   level: Level | ''
-}
+};
 
 export default function Section({
   children,
@@ -37,7 +42,8 @@ export default function Section({
         [styles.slim]: slim,
         [styles[tone]]: tone,
         [styles[level]]: level
-      })}>
+      })}
+    >
       {children}
     </div>
   );

@@ -17,7 +17,7 @@ export default class SlideToggle extends Component {
     children: PropTypes.node,
     checked: PropTypes.bool,
     className: PropTypes.string
-  }
+  };
 
   static defaultProps = {
     position: RIGHT,
@@ -30,12 +30,12 @@ export default class SlideToggle extends Component {
       styles.labelText,
       position === LEFT ? styles.labelLeft : styles.labelRight
     );
-    return hideLabel !== true && position === currentPosition && !children && (
-      <span className={labelStyle}>
-        {label}
-      </span>
+    return (
+      hideLabel !== true &&
+      position === currentPosition &&
+      !children && <span className={labelStyle}>{label}</span>
     );
-  }
+  };
 
   render() {
     const { id, checked, label, position, onChange, className } = this.props;

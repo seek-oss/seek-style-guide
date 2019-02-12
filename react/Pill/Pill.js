@@ -16,14 +16,14 @@ type Props = {
 export default class Pill extends Component<Props> {
   static displayName = 'Pill';
 
-  props: Props
+  props: Props;
 
   handleClose = (event: Object) => {
     const { onClose } = this.props;
     if (onClose) {
       onClose(event);
     }
-  }
+  };
 
   renderStaticPill() {
     const { children, text, className, ...restProps } = this.props;
@@ -31,7 +31,9 @@ export default class Pill extends Component<Props> {
 
     return (
       <span className={classnames(className, styles.staticPill)} {...restProps}>
-        <Text baseline={false} raw>{content}</Text>
+        <Text baseline={false} raw>
+          {content}
+        </Text>
       </span>
     );
   }
@@ -43,11 +45,12 @@ export default class Pill extends Component<Props> {
     return (
       <span
         className={classnames(className, styles.interactivePill)}
-        {...restProps}>
-        <Text baseline={false} raw>{content}</Text>
-        <button
-          className={styles.removeButton}
-          onClick={onClose}>
+        {...restProps}
+      >
+        <Text baseline={false} raw>
+          {content}
+        </Text>
+        <button className={styles.removeButton} onClick={onClose}>
           <ScreenReaderOnly>Remove item {content}</ScreenReaderOnly>
           <div className={styles.removeCircle}>
             <CrossIcon
@@ -63,8 +66,6 @@ export default class Pill extends Component<Props> {
   render() {
     const { onClose } = this.props;
 
-    return onClose ?
-      this.renderInteractivePill() :
-      this.renderStaticPill();
+    return onClose ? this.renderInteractivePill() : this.renderStaticPill();
   }
 }

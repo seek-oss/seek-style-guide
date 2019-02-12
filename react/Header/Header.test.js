@@ -15,26 +15,47 @@ describe('Header:', () => {
   });
 
   it('should render when authenticated', () => {
-    expect(renderHeader({ authenticationStatus: 'authenticated', userName: 'Leeroy', userEmail: 'leeroybrown@email.com', returnUrl: '/jobs' })).toMatchSnapshot();
+    expect(
+      renderHeader({
+        authenticationStatus: 'authenticated',
+        userName: 'Leeroy',
+        userEmail: 'leeroybrown@email.com',
+        returnUrl: '/jobs'
+      })
+    ).toMatchSnapshot();
   });
 
   it('should render when authenticated but username and email is not yet provided', () => {
-    expect(renderHeader({ authenticationStatus: 'authenticated', userName: '', userEmail: '' })).toMatchSnapshot();
+    expect(
+      renderHeader({
+        authenticationStatus: 'authenticated',
+        userName: '',
+        userEmail: ''
+      })
+    ).toMatchSnapshot();
   });
 
-  it('should render first part of email address when username isn\'t present', () => {
-    expect(renderHeader({ authenticationStatus: 'authenticated', userName: '', userEmail: 'leeroybrown@email.com' })).toMatchSnapshot();
+  it("should render first part of email address when username isn't present", () => {
+    expect(
+      renderHeader({
+        authenticationStatus: 'authenticated',
+        userName: '',
+        userEmail: 'leeroybrown@email.com'
+      })
+    ).toMatchSnapshot();
   });
 
   it('should render when unauthenticated', () => {
-    expect(renderHeader({ authenticationStatus: 'unauthenticated' })).toMatchSnapshot();
+    expect(
+      renderHeader({ authenticationStatus: 'unauthenticated' })
+    ).toMatchSnapshot();
   });
 
   it('should render when authentication is pending', () => {
     expect(renderHeader({ authenticationStatus: 'pending' })).toMatchSnapshot();
   });
 
-  it('should render when activeTab is \'Profile\'', () => {
+  it("should render when activeTab is 'Profile'", () => {
     expect(renderHeader({ activeTab: 'Profile' })).toMatchSnapshot();
   });
 

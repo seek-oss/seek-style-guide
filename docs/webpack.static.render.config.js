@@ -1,13 +1,19 @@
 // Alias 'seek-style-guide' so 'seek-style-guide-webpack' works correctly
 const path = require('path');
-require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '..'));
+require('module-alias').addAlias(
+  'seek-style-guide',
+  path.join(__dirname, '..')
+);
 
 const fs = require('fs');
 const ejs = require('ejs');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const decorateServerConfig = require('seek-style-guide-webpack').decorateServerConfig;
-const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
+const decorateServerConfig = require('seek-style-guide-webpack')
+  .decorateServerConfig;
+const babelConfig = require('../config/babel.config.js')({
+  reactHotLoader: false
+});
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const templatePath = path.resolve(__dirname, 'index.ejs');

@@ -27,7 +27,8 @@ const commonSocialLinks = [
 ];
 
 const generateStructureDataSchema = (locale = 'AU') => {
-  const { telephone, socialLinks, url } = locale === 'NZ' ? nzOrgSchema : auOrgSchema;
+  const { telephone, socialLinks, url } =
+    locale === 'NZ' ? nzOrgSchema : auOrgSchema;
 
   return {
     '@context': 'http://schema.org',
@@ -35,10 +36,7 @@ const generateStructureDataSchema = (locale = 'AU') => {
     url,
     legalName: 'Seek Limited',
     logo: 'https://www.seek.com.au/content/images/logos/seek-logo-positive.svg',
-    sameAs: [
-      ...commonSocialLinks,
-      ...socialLinks
-    ],
+    sameAs: [...commonSocialLinks, ...socialLinks],
     contactPoint: [
       {
         '@type': 'ContactPoint',

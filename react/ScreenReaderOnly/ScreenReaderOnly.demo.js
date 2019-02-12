@@ -11,7 +11,9 @@ export default {
     style: { padding: '0 20px' },
     children: [
       'The next sentence can only be read by screen readers. ',
-      <ScreenReaderOnly key="ScreenReaderOnly">This sentence can only be read by screen readers.</ScreenReaderOnly>
+      <ScreenReaderOnly key="ScreenReaderOnly">
+        This sentence can only be read by screen readers.
+      </ScreenReaderOnly>
     ]
   },
   options: []

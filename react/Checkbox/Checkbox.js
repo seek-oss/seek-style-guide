@@ -33,13 +33,15 @@ export default class Checkbox extends Component {
     inputProps: PropTypes.object,
     type: PropTypes.oneOf([STANDARD, BUTTON]),
     valid: PropTypes.bool,
-    message: PropTypes.oneOfType([
-      PropTypes.oneOf([false]),
-      PropTypes.node
-    ]),
+    message: PropTypes.oneOfType([PropTypes.oneOf([false]), PropTypes.node]),
     messageProps: PropTypes.object,
-    tone: PropTypes.oneOf([TONE.POSITIVE, TONE.INFO, TONE.CRITICAL, TONE.NEUTRAL])
-  }
+    tone: PropTypes.oneOf([
+      TONE.POSITIVE,
+      TONE.INFO,
+      TONE.CRITICAL,
+      TONE.NEUTRAL
+    ])
+  };
 
   static defaultProps = {
     className: '',
@@ -49,11 +51,7 @@ export default class Checkbox extends Component {
   };
 
   renderButton(label) {
-    return (
-      <span className={styles.button}>
-        {label}
-      </span>
-    );
+    return <span className={styles.button}>{label}</span>;
   }
 
   renderStandard(label) {
@@ -62,10 +60,16 @@ export default class Checkbox extends Component {
         <div className={styles.checkbox}>
           <CheckMarkIcon
             className={styles.checkMark}
-            svgClassName={classnames(styles.checkMarkSvg, styles.checkMarkSvg_isHover)}
+            svgClassName={classnames(
+              styles.checkMarkSvg,
+              styles.checkMarkSvg_isHover
+            )}
           />
           <CheckMarkIcon
-            svgClassName={classnames(styles.checkMarkSvg, styles.checkMarkSvg_isSelected)}
+            svgClassName={classnames(
+              styles.checkMarkSvg,
+              styles.checkMarkSvg_isSelected
+            )}
             className={styles.checkMark}
           />
         </div>
@@ -79,21 +83,37 @@ export default class Checkbox extends Component {
 
     return (
       <label htmlFor={id} className={styles.label}>
-        {
-          type === STANDARD ?
-            this.renderStandard(label) :
-            this.renderButton(label)
-        }
+        {type === STANDARD
+          ? this.renderStandard(label)
+          : this.renderButton(label)}
       </label>
     );
   }
 
   renderMessage(id, valid, message, messageProps, tone) {
-    return <FieldMessage {...{ id: `${id}-message`, message, messageProps, tone, ...(tone ? {} : { valid }) }} />;
+    return (
+      <FieldMessage
+        {...{
+          id: `${id}-message`,
+          message,
+          messageProps,
+          tone,
+          ...(tone ? {} : { valid })
+        }}
+      />
+    );
   }
 
   renderInput() {
-    const { id, value, checked, onChange, onFocus, onBlur, inputProps } = this.props;
+    const {
+      id,
+      value,
+      checked,
+      onChange,
+      onFocus,
+      onBlur,
+      inputProps
+    } = this.props;
 
     const allInputProps = {
       id,
@@ -106,9 +126,7 @@ export default class Checkbox extends Component {
       type: 'checkbox'
     };
 
-    return (
-      <input {...allInputProps} />
-    );
+    return <input {...allInputProps} />;
   }
 
   render() {
@@ -116,15 +134,16 @@ export default class Checkbox extends Component {
 
     const rootClassNames = classnames({
       [styles.root]: true,
-      [styles.invalid]: typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
+      [styles.invalid]:
+        typeof tone !== 'undefined' ? tone === TONE.CRITICAL : valid === false,
       [className]: className
     });
 
     return (
       <div className={rootClassNames}>
-        { this.renderInput() }
-        { this.renderLabel() }
-        { this.renderMessage(id, valid, message, messageProps, tone) }
+        {this.renderInput()}
+        {this.renderLabel()}
+        {this.renderMessage(id, valid, message, messageProps, tone)}
       </div>
     );
   }

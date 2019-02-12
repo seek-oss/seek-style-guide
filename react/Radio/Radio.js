@@ -36,7 +36,15 @@ export default class Radio extends Component {
   };
 
   renderInput() {
-    const { id, value, checked, onChange, onFocus, onBlur, inputProps } = this.props;
+    const {
+      id,
+      value,
+      checked,
+      onChange,
+      onFocus,
+      onBlur,
+      inputProps
+    } = this.props;
     const allInputProps = {
       id,
       value,
@@ -66,11 +74,24 @@ export default class Radio extends Component {
             className={styles.svg}
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
-            focusable="false" >
-            <circle className={classnames(styles.circle, styles.circle_isHover)} cx="100" cy="100" r="100" />
-            <circle className={classnames(styles.circle, styles.circle_isSelected)} cx="100" cy="100" r="100" />
+            focusable="false"
+          >
+            <circle
+              className={classnames(styles.circle, styles.circle_isHover)}
+              cx="100"
+              cy="100"
+              r="100"
+            />
+            <circle
+              className={classnames(styles.circle, styles.circle_isSelected)}
+              cx="100"
+              cy="100"
+              r="100"
+            />
           </svg>
-          <Text raw={true} baseline={false} className={styles.labelText}>{label}</Text>
+          <Text raw={true} baseline={false} className={styles.labelText}>
+            {label}
+          </Text>
         </label>
       </div>
     );

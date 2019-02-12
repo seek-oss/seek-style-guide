@@ -1,0 +1,6 @@
+.github
+dist
+node_modules
+*.log
+yarn.lock
+flow-typed/*.generated.*

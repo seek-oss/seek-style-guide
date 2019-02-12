@@ -17,32 +17,48 @@ const renderHtml = (Component, initialProps, options = { preview: false }) => {
   );
 
   const html = `
-    ${!options.preview ? '' : `
+    ${
+      !options.preview
+        ? ''
+        : `
       <!DOCTYPE html>
       <head>
         <style type="text/css">html,body{padding:0;margin:0;}</style>
         <link rel="stylesheet" type="text/css" href="styles.css" />
       </head>
       <body>
-    `}
+    `
+    }
 
     <div id="__SSG_${Component.displayName}__">${componentHtml}</div>
-    <script type="text/javascript">window.__SSG_${Component.displayName}_props__ = ${serialize(initialProps)}</script>
+    <script type="text/javascript">window.__SSG_${
+      Component.displayName
+    }_props__ = ${serialize(initialProps)}</script>
 
-    ${!options.preview ? '' : dedent`
+    ${
+      !options.preview
+        ? ''
+        : dedent`
       <script type="text/javascript" src="client.js"></script>
       <script type="text/javascript">
         // Create the instance
-        window.seek${Component.displayName}Instance = SeekHeaderFooter.render${Component.displayName}();
+        window.seek${Component.displayName}Instance = SeekHeaderFooter.render${
+            Component.displayName
+          }();
 
         // Simulate authenticating the user
-        seek${Component.displayName}Instance.updateProps({ authenticationStatus: 'authenticated', userName: 'Olivia' });
+        seek${
+          Component.displayName
+        }Instance.updateProps({ authenticationStatus: 'authenticated', userName: 'Olivia' });
 
         // Let developers know what's up
-        console.log("The standalone ${Component.displayName.toLowerCase()} instance is available as 'window.seek${Component.displayName}Instance'");
+        console.log("The standalone ${Component.displayName.toLowerCase()} instance is available as 'window.seek${
+            Component.displayName
+          }Instance'");
       </script>
       </body>
-    `}
+    `
+    }
   `;
 
   return minify(html, { collapseWhitespace: true });
@@ -53,8 +69,13 @@ const renderFileForLocale = (Component, props, locale) => {
     throw new Error('Component must have a display name');
   }
 
-  const tabSuffix = !props.activeTab ? '' :
-    `__${props.activeTab.toLowerCase().replace(/ /g, '_').replace('$', '').replace('&', 'and')}`;
+  const tabSuffix = !props.activeTab
+    ? ''
+    : `__${props.activeTab
+        .toLowerCase()
+        .replace(/ /g, '_')
+        .replace('$', '')
+        .replace('&', 'and')}`;
   const fileName = `${Component.displayName.toLowerCase()}__${locale.toLowerCase()}${tabSuffix}`;
 
   const localeProps = locale !== 'AU' ? { locale } : {};
@@ -62,7 +83,9 @@ const renderFileForLocale = (Component, props, locale) => {
 
   return {
     [`/${fileName}.html`]: renderHtml(Component, renderProps),
-    [`/${fileName}__preview.html`]: renderHtml(Component, renderProps, { preview: true })
+    [`/${fileName}__preview.html`]: renderHtml(Component, renderProps, {
+      preview: true
+    })
   };
 };
 

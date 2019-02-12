@@ -18,7 +18,9 @@ describe('Text', () => {
   describe('sizes', () => {
     sizes.forEach(size => {
       it(`should render as ${size}`, () => {
-        expect(render(<Text {...{ [size]: true }}>Hello</Text>)).toMatchSnapshot();
+        expect(
+          render(<Text {...{ [size]: true }}>Hello</Text>)
+        ).toMatchSnapshot();
         expect(render(<Text size={size}>Hello</Text>)).toMatchSnapshot();
       });
     });

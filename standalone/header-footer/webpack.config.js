@@ -1,26 +1,32 @@
 // Alias 'seek-style-guide' so 'seek-style-guide-webpack' works correctly
 const path = require('path');
-require('module-alias').addAlias('seek-style-guide', path.join(__dirname, '../..'));
+require('module-alias').addAlias(
+  'seek-style-guide',
+  path.join(__dirname, '../..')
+);
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const autoprefixerConfig = require('../../config/autoprefixer.config');
-const { decorateClientConfig, decorateServerConfig } = require('seek-style-guide-webpack');
-const babelConfig = require('../../config/babel.config.js')({ reactHotLoader: false });
+const {
+  decorateClientConfig,
+  decorateServerConfig
+} = require('seek-style-guide-webpack');
+const babelConfig = require('../../config/babel.config.js')({
+  reactHotLoader: false
+});
 const cssSelectorPrefix = require('./cssSelectorPrefix');
 
 // Must be absolute paths
-const appPaths = [
-  __dirname
-];
+const appPaths = [__dirname];
 
 const resolveConfig = {
   modules: ['node_modules', 'components']
 };
 
-const getCommonRules = () => ([
+const getCommonRules = () => [
   {
     test: /\.js$/,
     include: appPaths,
@@ -41,7 +47,7 @@ const getCommonRules = () => ([
       }
     ]
   }
-]);
+];
 
 const getStyleLoaders = (options = {}) => {
   return [
@@ -52,26 +58,30 @@ const getStyleLoaders = (options = {}) => {
         localIdentName: '[name]__[local]___[hash:base64:5]'
       }
     },
-    ...(options.server ? [] : [
-      {
-        loader: 'postcss-loader',
-        options: {
-          plugins: [autoprefixer(autoprefixerConfig)]
-        }
-      }
-    ]),
+    ...(options.server
+      ? []
+      : [
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer(autoprefixerConfig)]
+            }
+          }
+        ]),
     {
       loader: 'less-loader'
     },
-    ...(options.server ? [] : [
-      {
-        loader: 'string-replace-loader',
-        options: {
-          search: '__standalone_css_selector_prefix__',
-          replace: cssSelectorPrefix
-        }
-      }
-    ])
+    ...(options.server
+      ? []
+      : [
+          {
+            loader: 'string-replace-loader',
+            options: {
+              search: '__standalone_css_selector_prefix__',
+              replace: cssSelectorPrefix
+            }
+          }
+        ])
   ];
 };
 
@@ -93,18 +103,18 @@ const clientConfig = {
       {
         test: /\.less$/,
         include: appPaths,
-        use: [ MiniCssExtractPlugin.loader ].concat(getStyleLoaders({ server: false }))
+        use: [MiniCssExtractPlugin.loader].concat(
+          getStyleLoaders({ server: false })
+        )
       }
     ]
   },
 
   resolve: resolveConfig,
 
-  plugins: [
-    new MiniCssExtractPlugin({ filename: 'styles.css' })
-  ].concat(process.env.NODE_ENV !== 'production' ? [
-    new HtmlWebpackPlugin()
-  ] : []),
+  plugins: [new MiniCssExtractPlugin({ filename: 'styles.css' })].concat(
+    process.env.NODE_ENV !== 'production' ? [new HtmlWebpackPlugin()] : []
+  ),
 
   stats: { children: false }
 };

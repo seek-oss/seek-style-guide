@@ -8,8 +8,14 @@ const RIGHT = 'right';
 
 const defaultRenderAside = () => null;
 
-const conditionallyRenderAside = (condition, renderAside, classNameAside, size, position) => (
-  condition ?
+const conditionallyRenderAside = (
+  condition,
+  renderAside,
+  classNameAside,
+  size,
+  position
+) =>
+  condition ? (
     <div
       className={classnames({
         [classNameAside]: classNameAside,
@@ -17,13 +23,22 @@ const conditionallyRenderAside = (condition, renderAside, classNameAside, size, 
         [styles.rightAside]: position !== LEFT,
         [styles.aside]: true
       })}
-      style={{ flexBasis: size }}>
+      style={{ flexBasis: size }}
+    >
       {renderAside()}
-    </div> :
-    null
-);
+    </div>
+  ) : null;
 
-export default function AsidedLayout({ className, children, position, renderAside = defaultRenderAside, classNameAside, size, reverse, ...restProps }) {
+export default function AsidedLayout({
+  className,
+  children,
+  position,
+  renderAside = defaultRenderAside,
+  classNameAside,
+  size,
+  reverse,
+  ...restProps
+}) {
   const renderAsideBeforeContent = position === LEFT ? !reverse : reverse;
   return (
     <div
@@ -32,12 +47,23 @@ export default function AsidedLayout({ className, children, position, renderAsid
         [className]: className,
         [styles.root]: true,
         [styles.reverse]: reverse
-      })}>
-      { conditionallyRenderAside(renderAsideBeforeContent, renderAside, classNameAside, size, position) }
-      <div className={styles.content}>
-        {children}
-      </div>
-      { conditionallyRenderAside(!renderAsideBeforeContent, renderAside, classNameAside, size, position) }
+      })}
+    >
+      {conditionallyRenderAside(
+        renderAsideBeforeContent,
+        renderAside,
+        classNameAside,
+        size,
+        position
+      )}
+      <div className={styles.content}>{children}</div>
+      {conditionallyRenderAside(
+        !renderAsideBeforeContent,
+        renderAside,
+        classNameAside,
+        size,
+        position
+      )}
     </div>
   );
 }

@@ -83,7 +83,7 @@
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     width: 100%;
@@ -114,7 +114,7 @@
   // Split the focus styles out to a pseudo element
   // to fix `box-shadow` rendering artifact on transition
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -145,9 +145,7 @@
 .svg {
   fill: @sk-form-accent;
   opacity: 0;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   transform: rotate(-25deg);
 
   .input:checked:active ~ .switch & {

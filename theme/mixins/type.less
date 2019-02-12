@@ -25,25 +25,25 @@
 }
 
 .heroTextResponsive(@baseline: true) {
-  .__responsiveType("hero"; @baseline);
+  .__responsiveType("hero" ; @baseline);
 }
 .headlineTextResponsive(@baseline: true) {
-  .__responsiveType("headline"; @baseline);
+  .__responsiveType("headline" ; @baseline);
 }
 .headingTextResponsive(@baseline: true) {
-  .__responsiveType("heading"; @baseline);
+  .__responsiveType("heading" ; @baseline);
 }
 .subheadingTextResponsive(@baseline: true) {
-  .__responsiveType("subheading"; @baseline);
+  .__responsiveType("subheading" ; @baseline);
 }
 .standardTextResponsive(@baseline: true) {
-  .__responsiveType("standard"; @baseline);
+  .__responsiveType("standard" ; @baseline);
 }
 .largeTextResponsive(@baseline: true) {
-  .__responsiveType("large"; @baseline);
+  .__responsiveType("large" ; @baseline);
 }
 .smallTextResponsive(@baseline: true) {
-  .__responsiveType("small"; @baseline);
+  .__responsiveType("small" ; @baseline);
 }
 
 @touchableTextHeight: @row-height * @interaction-type-row-span;
@@ -59,9 +59,19 @@
 }
 
 // Private type mixins
-.__type(@type-scale; @row-span; @baseline) when (isnumber(@type-scale)) and (isnumber(@row-span)) {
+.__type(@type-scale; @row-span; @baseline)
+  when
+  (isnumber(@type-scale))
+  and
+  (isnumber(@row-span)) {
   .__baselineCheck(@baseline) when (@baseline = true) {
-    .basekick(@type-scale, @row-span, @font-descender-height-scale, @base-font-size, @row-height);
+    .basekick(
+      @type-scale,
+      @row-span,
+      @font-descender-height-scale,
+      @base-font-size,
+      @row-height
+    );
   }
   .__baselineCheck(@baseline) when (@baseline = false) {
     .rawText(@type-scale);

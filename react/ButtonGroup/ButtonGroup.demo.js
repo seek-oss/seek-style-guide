@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonGroup, Button, PageBlock, Section } from 'seek-style-guide/react';
+import {
+  ButtonGroup,
+  Button,
+  PageBlock,
+  Section
+} from 'seek-style-guide/react';
 import * as sketch from './ButtonGroup.sketch';
 
 const ButtonGroupContainer = ({ component: DemoComponent, componentProps }) => (
@@ -43,8 +48,12 @@ export default {
           transformProps: props => ({
             ...props,
             children: [
-              <Button key="1" color="pink">Create a Profile</Button>,
-              <Button key="2" color="transparent">Cancel</Button>
+              <Button key="1" color="pink">
+                Create a Profile
+              </Button>,
+              <Button key="2" color="transparent">
+                Cancel
+              </Button>
             ]
           })
         },
@@ -53,9 +62,15 @@ export default {
           transformProps: props => ({
             ...props,
             children: [
-              <Button key="1" color="pink">Create a Profile</Button>,
-              <Button key="2" color="transparent">Clear</Button>,
-              <Button key="3" color="transparent">Cancel</Button>
+              <Button key="1" color="pink">
+                Create a Profile
+              </Button>,
+              <Button key="2" color="transparent">
+                Clear
+              </Button>,
+              <Button key="3" color="transparent">
+                Cancel
+              </Button>
             ]
           })
         }

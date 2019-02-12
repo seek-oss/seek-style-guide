@@ -11,7 +11,7 @@ const rowHeight = parseInt(gridValues['@row-height'], 10);
 
 function calculateBackground(type, lineHeight, color) {
   if (type === 'line') {
-    const percentage = (lineHeight - 1) / lineHeight * 100;
+    const percentage = ((lineHeight - 1) / lineHeight) * 100;
 
     return {
       backgroundSize: `100% ${lineHeight}px`,
@@ -26,7 +26,15 @@ function calculateBackground(type, lineHeight, color) {
 }
 
 function Baseline(props) {
-  const { isVisible, type, lineHeight, color, children, style, ...restProps } = props;
+  const {
+    isVisible,
+    type,
+    lineHeight,
+    color,
+    children,
+    style,
+    ...restProps
+  } = props;
   const baselineStyle = {
     position: 'absolute',
     top: 0,
@@ -43,7 +51,7 @@ function Baseline(props) {
 
   return (
     <div {...rootProps}>
-      { isVisible && <div style={baselineStyle} /> }
+      {isVisible && <div style={baselineStyle} />}
       {Children.only(children)}
     </div>
   );

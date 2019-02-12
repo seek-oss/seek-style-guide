@@ -28,7 +28,9 @@ describe('Radio', () => {
   });
 
   it('should pass through the value', () => {
-    const wrapper = shallow(<Radio {...requiredProps} value="foo" checked={true} />);
+    const wrapper = shallow(
+      <Radio {...requiredProps} value="foo" checked={true} />
+    );
     const inputValue = wrapper.find('input').prop('value');
     expect(inputValue).toEqual('foo');
   });
@@ -61,7 +63,10 @@ describe('Radio', () => {
   describe('inputProps', () => {
     it('should invoke the change handler', () => {
       const onChange = jest.fn();
-      const props = { ...requiredProps, inputProps: { onChange, checked: false } };
+      const props = {
+        ...requiredProps,
+        inputProps: { onChange, checked: false }
+      };
       const checkedEvent = { target: { checked: true } };
       const wrapper = shallow(<Radio {...props} />);
       wrapper.find('input').simulate('change', checkedEvent);
@@ -85,7 +90,12 @@ describe('Radio', () => {
     });
 
     it('should pass through other props to the input', () => {
-      const wrapper = shallow(<Radio {...requiredProps} inputProps={{ checked: true, 'data-automation': 'first-name-field' }} />);
+      const wrapper = shallow(
+        <Radio
+          {...requiredProps}
+          inputProps={{ checked: true, 'data-automation': 'first-name-field' }}
+        />
+      );
       expect(wrapper).toMatchSnapshot();
     });
   });

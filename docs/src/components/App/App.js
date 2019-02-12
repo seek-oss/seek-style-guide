@@ -14,7 +14,9 @@ const demoSpecs = demoSpecExports.map(x => x.default);
 
 const demoRoutes = demoSpecs.map(demoSpec => {
   const DemoRoute = () => <Demo spec={demoSpec} />;
-  return <Route key={demoSpec.title} path={demoSpec.route} component={DemoRoute} />;
+  return (
+    <Route key={demoSpec.title} path={demoSpec.route} component={DemoRoute} />
+  );
 });
 
 export default () => (
@@ -25,7 +27,7 @@ export default () => (
     <Route path="/page-layout" component={PageLayout} />
     <Route path="/playground" component={Playground} />
     <Route path="/sketch-exports" component={SketchExports} />
-    { demoRoutes }
+    {demoRoutes}
     <Route component={Footer} />
   </StyleGuideProvider>
 );

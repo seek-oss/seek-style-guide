@@ -10,10 +10,7 @@ export default class ScreenReaderOnly extends Component {
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node
     ]),
-    component: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.string
-    ])
+    component: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
   };
 
   static defaultProps = {

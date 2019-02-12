@@ -22,7 +22,12 @@ export const symbols = {
   ),
   'Alert/1. Positive/2. Secondary/2. With Close Button': (
     <SketchFieldContainer>
-      <Alert message="Message" tone="positive" level="secondary" onClose={noop} />
+      <Alert
+        message="Message"
+        tone="positive"
+        level="secondary"
+        onClose={noop}
+      />
     </SketchFieldContainer>
   ),
   'Alert/1. Positive/3. Tertiary/1. Standard': (
@@ -32,7 +37,12 @@ export const symbols = {
   ),
   'Alert/1. Positive/3. Tertiary/2. With Close Button': (
     <SketchFieldContainer>
-      <Alert message="Message" tone="positive" level="tertiary" onClose={noop} />
+      <Alert
+        message="Message"
+        tone="positive"
+        level="tertiary"
+        onClose={noop}
+      />
     </SketchFieldContainer>
   ),
 
@@ -53,7 +63,12 @@ export const symbols = {
   ),
   'Alert/2. Critical/2. Tertiary/2. With Close Button': (
     <SketchFieldContainer>
-      <Alert message="Message" tone="critical" level="tertiary" onClose={noop} />
+      <Alert
+        message="Message"
+        tone="critical"
+        level="tertiary"
+        onClose={noop}
+      />
     </SketchFieldContainer>
   ),
 

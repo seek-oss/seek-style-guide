@@ -25,7 +25,8 @@ export default function Columns({
         [styles.columns_flexible]: flexible,
         [styles.columns_reverse]: reverse,
         [className]: className
-      })}>
+      })}
+    >
       {children.map(renderColumn)}
     </div>
   );

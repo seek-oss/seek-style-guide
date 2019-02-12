@@ -30,7 +30,8 @@ describe('Textarea', () => {
     element = jsx;
     textarea = renderer.render(element);
     input = findAllWithClass(textarea, 'Textarea__textarea')[0] || null;
-    characterCount = findAllWithClass(textarea, 'Textarea__characterCount')[0] || null;
+    characterCount =
+      findAllWithClass(textarea, 'Textarea__characterCount')[0] || null;
   }
 
   it('should have a displayName', () => {
@@ -80,12 +81,26 @@ describe('Textarea', () => {
 
   describe('inputProps', () => {
     it('should pass through className to the input', () => {
-      render(<Textarea id="testTextarea" inputProps={{ className: 'first-name-field' }} />);
+      render(
+        <Textarea
+          id="testTextarea"
+          inputProps={{ className: 'first-name-field' }}
+        />
+      );
       expect(input.props.className).to.match(/first-name-field$/);
     });
 
     it('should pass through other props to the input', () => {
-      render(<Textarea id="testTextarea" inputProps={{ id: 'firstName', value: 'value', 'data-automation': 'first-name-field' }} />);
+      render(
+        <Textarea
+          id="testTextarea"
+          inputProps={{
+            id: 'firstName',
+            value: 'value',
+            'data-automation': 'first-name-field'
+          }}
+        />
+      );
       expect(input.props.id).to.equal('firstName');
       expect(input.props.value).to.equal('value');
       expect(input.props['data-automation']).to.equal('first-name-field');
@@ -121,9 +136,11 @@ describe('Textarea', () => {
       expect(textarea.props.children[0].props.secondaryLabel).to.equal('');
     });
 
-    it('should pass secondaryLabel message if \`secondaryLabel\` is supplied', () => {
+    it('should pass secondaryLabel message if `secondaryLabel` is supplied', () => {
       render(<Textarea id="testTextarea" secondaryLabel="secondary" />);
-      expect(textarea.props.children[0].props.secondaryLabel).to.equal('secondary');
+      expect(textarea.props.children[0].props.secondaryLabel).to.equal(
+        'secondary'
+      );
     });
   });
 
@@ -145,51 +162,85 @@ describe('Textarea', () => {
       expect(characterCount).to.equal(null);
     });
 
-    it('should error if \`countFeedback\` is not a function', () => {
+    it('should error if `countFeedback` is not a function', () => {
       render(<Textarea id="testTextarea" countFeedback={true} />);
       expect(errors[0]).to.match(/Invalid prop `countFeedback`/);
     });
 
-    it('should error if \`countFeedback\` is supplied without a value', () => {
+    it('should error if `countFeedback` is supplied without a value', () => {
       const countFeedback = v => ({ count: v.length });
       render(<Textarea id="testTextarea" countFeedback={countFeedback} />);
-      expect(errors[0]).to.match(/`value` must be supplied if `countFeedback` is set/);
+      expect(errors[0]).to.match(
+        /`value` must be supplied if `countFeedback` is set/
+      );
     });
 
-    it('should show count value if \`countFeedback\` function is supplied correctly', () => {
+    it('should show count value if `countFeedback` function is supplied correctly', () => {
       const countFeedback = v => ({ count: v.length });
-      render(<Textarea id="testTextarea" countFeedback={countFeedback} value="Test value" />);
+      render(
+        <Textarea
+          id="testTextarea"
+          countFeedback={countFeedback}
+          value="Test value"
+        />
+      );
       expect(characterCount.props.children).to.equal(10);
     });
 
     it('should show count value if value is blank', () => {
       const countFeedback = v => ({ count: 500 - v.length });
-      render(<Textarea id="testTextarea" countFeedback={countFeedback} value="" />);
+      render(
+        <Textarea id="testTextarea" countFeedback={countFeedback} value="" />
+      );
       expect(characterCount.props.children).to.equal(500);
     });
 
-    it('should hide count value if \`countFeedback\` function returns \`{ show: false }\`', () => {
+    it('should hide count value if `countFeedback` function returns `{ show: false }`', () => {
       const countFeedback = () => ({ show: false });
-      render(<Textarea id="testTextarea" countFeedback={countFeedback} value="Test value" />);
+      render(
+        <Textarea
+          id="testTextarea"
+          countFeedback={countFeedback}
+          value="Test value"
+        />
+      );
       expect(characterCount).to.equal(null);
     });
 
     describe('inputProps', () => {
-      it('should show count value if \`countFeedback\` function is supplied correctly', () => {
+      it('should show count value if `countFeedback` function is supplied correctly', () => {
         const countFeedback = v => ({ count: v.length });
-        render(<Textarea id="testTextarea" countFeedback={countFeedback} inputProps={{ value: 'Test value' }} />);
+        render(
+          <Textarea
+            id="testTextarea"
+            countFeedback={countFeedback}
+            inputProps={{ value: 'Test value' }}
+          />
+        );
         expect(characterCount.props.children).to.equal(10);
       });
 
       it('should show count value if value is blank', () => {
         const countFeedback = v => ({ count: 500 - v.length });
-        render(<Textarea id="testTextarea" countFeedback={countFeedback} inputProps={{ value: '' }} />);
+        render(
+          <Textarea
+            id="testTextarea"
+            countFeedback={countFeedback}
+            inputProps={{ value: '' }}
+          />
+        );
         expect(characterCount.props.children).to.equal(500);
       });
 
-      it('should hide count value if \`countFeedback\` function returns \`{ show: false }\`', () => {
+      it('should hide count value if `countFeedback` function returns `{ show: false }`', () => {
         const countFeedback = () => ({ show: false });
-        render(<Textarea id="testTextarea" countFeedback={countFeedback} inputProps={{ value: 'Test value' }} />);
+        render(
+          <Textarea
+            id="testTextarea"
+            countFeedback={countFeedback}
+            inputProps={{ value: 'Test value' }}
+          />
+        );
         expect(characterCount).to.equal(null);
       });
     });
@@ -197,9 +248,15 @@ describe('Textarea', () => {
 
   describe('textarea with highlighting', () => {
     it('should format invalid text', () => {
-      const wrapper = shallow(<Textarea id="testTextarea" value="test input" invalidText="test" />);
-      const textareaBackdrop = wrapper.find('[data-automation="backdrop"]').html();
-      expect(textareaBackdrop).to.contain('<mark class="Highlight__root Highlight__critical Textarea__invalidTextChunk">test</mark> input</div>');
+      const wrapper = shallow(
+        <Textarea id="testTextarea" value="test input" invalidText="test" />
+      );
+      const textareaBackdrop = wrapper
+        .find('[data-automation="backdrop"]')
+        .html();
+      expect(textareaBackdrop).to.contain(
+        '<mark class="Highlight__root Highlight__critical Textarea__invalidTextChunk">test</mark> input</div>'
+      );
     });
   });
 });

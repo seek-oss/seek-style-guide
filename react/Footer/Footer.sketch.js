@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Footer from './Footer';
 
-const DummyLinkRenderer = ({ href, ...props }) => (
-  <a {...props} />
-);
+const DummyLinkRenderer = ({ href, ...props }) => <a {...props} />;
 
 DummyLinkRenderer.propTypes = {
   href: PropTypes.string

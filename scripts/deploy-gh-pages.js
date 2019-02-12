@@ -17,9 +17,9 @@ var log = function(message) {
 
 var makeConfig = function() {
   return {
-    repo: GH_PAGES_TOKEN ?
-      repoUrl.replace('https://', 'https://' + GH_PAGES_TOKEN + '@') :
-      repoUrl,
+    repo: GH_PAGES_TOKEN
+      ? repoUrl.replace('https://', 'https://' + GH_PAGES_TOKEN + '@')
+      : repoUrl,
     logger: log
   };
 };

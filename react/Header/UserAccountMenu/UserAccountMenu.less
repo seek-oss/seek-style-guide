@@ -15,7 +15,7 @@
   @media @mobile {
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -76,9 +76,15 @@
   }
 }
 
-.icon.jobSearch { color: @sk-teal; }
-.icon.profile { color: @sk-purple; }
-.icon.saveJobs { color: @sk-pink; }
+.icon.jobSearch {
+  color: @sk-teal;
+}
+.icon.profile {
+  color: @sk-purple;
+}
+.icon.saveJobs {
+  color: @sk-pink;
+}
 
 .icon.saveSearches {
   color: @sk-blue-lighter;
@@ -87,7 +93,9 @@
   }
 }
 
-.icon.recommendedJobs { color: @sk-green-light; }
+.icon.recommendedJobs {
+  color: @sk-green-light;
+}
 
 .crSvg {
   width: 14px;
@@ -125,7 +133,7 @@
     padding-top: @padding-height;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: ceil(@padding-height / 2);
       width: 100%;

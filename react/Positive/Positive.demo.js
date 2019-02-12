@@ -9,10 +9,7 @@ export default {
   component: Text,
   initialProps: {
     headline: true,
-    children: [
-      'This text is ',
-      <Positive key="positive">positive</Positive>
-    ]
+    children: ['This text is ', <Positive key="positive">positive</Positive>]
   },
   options: []
 };

@@ -5,7 +5,7 @@ const opn = require('opn');
 const portfinder = require('portfinder');
 portfinder.basePort = 3000;
 
-const startServer = (port) => {
+const startServer = port => {
   const config = createConfigWithPort(port);
 
   new WebpackDevServer(webpack(config), {
@@ -21,7 +21,6 @@ const startServer = (port) => {
       opn(`http://localhost:${port}`);
     }
   });
-}
+};
 
-portfinder.getPortPromise()
-  .then(startServer)
+portfinder.getPortPromise().then(startServer);
