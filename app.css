@@ -557,6 +557,41 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   opacity: 1;
 }
 
+.Palette__container___4k8rI {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.Palette__item___2Dipj {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 25%;
+  width: 25%;
+  text-align: center;
+}
+@media only screen and (max-width: 739px) {
+  .Palette__item___2Dipj {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+.Palette__swatch___15kw5 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #e1e1e1;
+}
+
 .Playground__header___3ROt6 {
   background: #3f51b5;
   color: #ffffff;
