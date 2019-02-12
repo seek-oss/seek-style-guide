@@ -6,6 +6,7 @@ import Footer from './Footer/Footer';
 import Home from 'Home/Home';
 import PageLayout from 'PageLayout/PageLayout';
 import Typography from 'Typography/Typography';
+import Palette from 'Palette/Palette';
 import Playground from 'Playground/Playground';
 import SketchExports from 'SketchExports/SketchExports';
 import Demo from 'Demo/Demo';
@@ -24,6 +25,7 @@ export default () => (
     <Route component={Header} />
     <Route path="/" exact component={Home} />
     <Route path="/typography" component={Typography} />
+    <Route path="/palette" component={Palette} />
     <Route path="/page-layout" component={PageLayout} />
     <Route path="/playground" component={Playground} />
     <Route path="/sketch-exports" component={SketchExports} />

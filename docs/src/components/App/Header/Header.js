@@ -20,6 +20,7 @@ import { generateRouteList } from './headerUtils';
 import demoSpecExports from '../../../../../react/*/*.demo.js';
 const demoSpecs = demoSpecExports.map(x => x.default);
 const allRoutes = [
+  { route: '/palette', title: 'Colour Palette', category: 'Guides' },
   { route: '/typography', title: 'Typography', category: 'Guides' },
   { route: '/page-layout', title: 'Page Layout', category: 'Guides' },
   {
