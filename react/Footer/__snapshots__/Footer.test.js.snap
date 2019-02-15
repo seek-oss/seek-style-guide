@@ -612,7 +612,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc/"
+                href="https://seek.zendesk.com/hc"
               >
                 Help centre
               </a>
@@ -1446,7 +1446,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc/"
+                href="https://seek.zendesk.com/hc"
               >
                 Help centre
               </a>
@@ -2280,7 +2280,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc/"
+                href="https://seek.zendesk.com/hc"
               >
                 Help centre
               </a>
@@ -3114,7 +3114,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc/"
+                href="https://seek.zendesk.com/hc"
               >
                 Help centre
               </a>
@@ -3815,7 +3815,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc/"
+                href="https://seek.zendesk.com/hc"
               >
                 Help centre
               </a>
