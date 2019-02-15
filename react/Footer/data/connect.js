@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Help centre',
-    href: 'https://seek.zendesk.com/',
+    href: 'https://seek.zendesk.com/hc',
     analytics: 'toolbar:help+centre'
   },
   {
