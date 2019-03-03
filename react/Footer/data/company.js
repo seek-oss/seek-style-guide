@@ -107,7 +107,7 @@ export const services = [
   },
   {
     name: 'Sidekicker',
-    href: 'https://www.sidekicker.com.au/',
+    href: 'https://sidekicker.com/au',
     analytics: 'toolbar:sidekicker'
   },
   {
