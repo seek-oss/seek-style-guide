@@ -92,37 +92,50 @@ export const services = [
   {
     name: 'JobAdder',
     href: 'https://jobadder.com/au',
-    analytics: 'toolbar:jobadder'
+    analytics: 'toolbar:jobadder',
+    specificLocale: 'AU'
   },
   {
     name: 'Jora Local',
     href: 'http://www.joralocal.com.au/',
     analytics: 'toolbar:jora+local',
+    specificLocale: 'AU',
     'data-automation': 'jora-local-link'
   },
   {
     name: 'realestate.com.au',
     href: 'https://www.realestate.com.au/buy',
-    analytics: 'toolbar:realestate+au'
+    analytics: 'toolbar:realestate+au',
+    specificLocale: 'AU'
   },
   {
     name: 'Sidekicker',
-    href: 'https://www.sidekicker.com.au/',
-    analytics: 'toolbar:sidekicker'
+    href: 'https://sidekicker.com/au',
+    analytics: 'toolbar:sidekicker',
+    specificLocale: 'AU'
+  },
+  {
+    name: 'Sidekicker',
+    href: 'https://sidekicker.com/nz',
+    analytics: 'toolbar:sidekicker',
+    specificLocale: 'NZ'
   },
   {
     name: 'Ximble',
     href: 'https://www.ximble.com',
-    analytics: 'toolbar:ximble'
+    analytics: 'toolbar:ximble',
+    specificLocale: 'AU'
   },
   {
     name: 'Spark Hire',
     href: 'https://anz.sparkhire.com/',
-    analytics: 'toolbar:sparkhire'
+    analytics: 'toolbar:sparkhire',
+    specificLocale: 'AU'
   },
   {
     name: 'Certsy',
     href: 'https://certsy.com/',
-    analytics: 'toolbar:certsy'
+    analytics: 'toolbar:certsy',
+    specificLocale: 'AU'
   }
 ];

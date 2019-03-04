@@ -69,8 +69,7 @@ export default class Footer extends Component {
   }
 
   render() {
-    const { locale, linkRenderer } = this.props;
-    const isAU = locale === 'AU';
+    const { linkRenderer } = this.props;
 
     return (
       <footer role="contentinfo" className={styles.root}>
@@ -99,16 +98,14 @@ export default class Footer extends Component {
                 >
                   {partners.map(this.renderLink)}
                 </ToggleContainer>
-                {isAU ? (
-                  <ToggleContainer
-                    secondary
-                    name="PartnerServicesToggle"
-                    label="Partner services"
-                    data-automation="partner-services-toggle"
-                  >
-                    {services.map(this.renderLink)}
-                  </ToggleContainer>
-                ) : null}
+                <ToggleContainer
+                  secondary
+                  name="PartnerServicesToggle"
+                  label="Partner services"
+                  data-automation="partner-services-toggle"
+                >
+                  {services.map(this.renderLink)}
+                </ToggleContainer>
               </FooterNav>
 
               <FooterNav label="Connect">
