@@ -795,7 +795,7 @@ exports[`Footer: should render when authenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy/"
+          href="/my-privacy/"
           rel="nofollow"
         >
           Privacy
@@ -1629,7 +1629,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy/"
+          href="/my-privacy/"
           rel="nofollow"
         >
           Privacy
@@ -2463,7 +2463,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy/"
+          href="/my-privacy/"
           rel="nofollow"
         >
           Privacy
@@ -3297,7 +3297,7 @@ exports[`Footer: should render with locale of AU 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy/"
+          href="/my-privacy/"
           rel="nofollow"
         >
           Privacy
@@ -4034,7 +4034,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
         <a
           class="Footer__copyrightLink"
           data-analytics="toolbar:privacy"
-          href="/privacy/"
+          href="/my-privacy/"
           rel="nofollow"
         >
           Privacy
