@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Privacy',
-    href: '/privacy/',
+    href: '/my-privacy/',
     rel: 'nofollow',
     analytics: 'toolbar:privacy'
   },
