@@ -96,7 +96,6 @@ export default ({
         ]
       })}
     </Hidden>
-
     <li className={classnames(activeTab === PROFILE && styles.activeTab)}>
       {linkRenderer({
         'data-analytics': 'header:profile',
@@ -113,13 +112,12 @@ export default ({
         ]
       })}
     </li>
-
     <li
       className={classnames(activeTab === SAVED_SEARCHES && styles.activeTab)}
     >
       {linkRenderer({
         'data-analytics': 'header:saved+searches',
-        className: `${styles.item} ${styles.subItem}`,
+        className: styles.item,
         href: '/my-activity/saved-searches',
         children: [
           <span key="label">{SAVED_SEARCHES}</span>,
@@ -131,7 +129,6 @@ export default ({
         ]
       })}
     </li>
-
     <li
       className={classnames(
         activeTab === SAVED_AND_APPLIED && styles.activeTab
@@ -139,7 +136,7 @@ export default ({
     >
       {linkRenderer({
         'data-analytics': 'header:saved+jobs',
-        className: `${styles.item} ${styles.subItem}`,
+        className: styles.item,
         href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
         children: [
           newBadgeTab === SAVED_AND_APPLIED && <BadgeComponent />,
@@ -154,7 +151,6 @@ export default ({
         ]
       })}
     </li>
-
     <Hidden
       mobile
       component="li"
@@ -162,7 +158,7 @@ export default ({
     >
       {linkRenderer({
         'data-analytics': 'header:applied+jobs',
-        className: `${styles.item} ${styles.subItem}`,
+        className: styles.item,
         href: urlForAuthStatus(
           authenticationStatus,
           '/my-activity/applied-jobs'
@@ -170,15 +166,12 @@ export default ({
         children: APPLIED_JOBS
       })}
     </Hidden>
-
-    <Hidden
-      desktop
-      component="li"
+    <li
       className={classnames(activeTab === RECOMMENDED_JOBS && styles.activeTab)}
     >
       {linkRenderer({
         'data-analytics': 'header:recommended+jobs',
-        className: `${styles.item} ${styles.subItem}`,
+        className: styles.item,
         href: urlForAuthStatus(authenticationStatus, '/recommended'),
         children: [
           newBadgeTab === RECOMMENDED_JOBS && <BadgeComponent />,
@@ -190,8 +183,8 @@ export default ({
           />
         ]
       })}
-    </Hidden>
-
+    </li>
+    <hr className={styles.menuSeparator} />
     {locale === 'NZ' ? null : (
       <Hidden
         desktop
@@ -202,7 +195,7 @@ export default ({
       >
         {linkRenderer({
           'data-analytics': 'header:companies',
-          className: `${styles.item} ${styles.subItem}`,
+          className: styles.item,
           href: '/companies/',
           children: [
             newBadgeTab === COMPANY_REVIEWS && <BadgeComponent />,
@@ -216,7 +209,6 @@ export default ({
         })}
       </Hidden>
     )}
-
     <Hidden
       mobile
       component="li"
@@ -229,7 +221,6 @@ export default ({
         children: SETTINGS
       })}
     </Hidden>
-
     <Hidden desktop component="li" className={styles.firstItemInGroup}>
       {(() => {
         switch (authenticationStatus) {
@@ -285,7 +276,6 @@ export default ({
         }
       })()}
     </Hidden>
-
     {locale === 'NZ' ? null : (
       <Hidden
         desktop
@@ -307,7 +297,6 @@ export default ({
         })}
       </Hidden>
     )}
-
     <Hidden
       desktop
       component="li"
@@ -323,7 +312,6 @@ export default ({
         ]
       })}
     </Hidden>
-
     <Hidden desktop component="li">
       {linkRenderer({
         'data-analytics': 'header:courses',
@@ -335,7 +323,6 @@ export default ({
         ]
       })}
     </Hidden>
-
     {authenticationStatus === AUTHENTICATED ? (
       <Hidden mobile component="li">
         {linkRenderer({
