@@ -176,7 +176,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -194,7 +194,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -218,7 +218,7 @@ exports[`Header: should append returnUrl to signin and register links if present
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -226,10 +226,10 @@ exports[`Header: should append returnUrl to signin and register links if present
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -243,11 +243,14 @@ exports[`Header: should append returnUrl to signin and register links if present
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -734,7 +737,7 @@ exports[`Header: should render first part of email address when username isn't p
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -752,7 +755,7 @@ exports[`Header: should render first part of email address when username isn't p
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
@@ -776,7 +779,7 @@ exports[`Header: should render first part of email address when username isn't p
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
@@ -784,10 +787,10 @@ exports[`Header: should render first part of email address when username isn't p
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
@@ -801,11 +804,14 @@ exports[`Header: should render first part of email address when username isn't p
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -1289,7 +1295,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -1307,7 +1313,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -1331,7 +1337,7 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -1339,10 +1345,10 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -1356,11 +1362,14 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -1847,7 +1856,7 @@ exports[`Header: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -1865,7 +1874,7 @@ exports[`Header: should render when authenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
@@ -1889,7 +1898,7 @@ exports[`Header: should render when authenticated 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
@@ -1897,10 +1906,10 @@ exports[`Header: should render when authenticated 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
@@ -1914,11 +1923,14 @@ exports[`Header: should render when authenticated 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -2402,7 +2414,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -2420,7 +2432,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/my-activity/saved-jobs"
                     >
@@ -2444,7 +2456,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/my-activity/applied-jobs"
                     >
@@ -2452,10 +2464,10 @@ exports[`Header: should render when authenticated but username and email is not 
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/recommended"
                     >
@@ -2469,11 +2481,14 @@ exports[`Header: should render when authenticated but username and email is not 
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -2957,7 +2972,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -2975,7 +2990,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -2999,7 +3014,7 @@ exports[`Header: should render when authentication is pending 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -3007,10 +3022,10 @@ exports[`Header: should render when authentication is pending 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -3024,11 +3039,14 @@ exports[`Header: should render when authentication is pending 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -3513,7 +3531,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -3531,7 +3549,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -3555,7 +3573,7 @@ exports[`Header: should render when unauthenticated 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -3563,10 +3581,10 @@ exports[`Header: should render when unauthenticated 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -3580,11 +3598,14 @@ exports[`Header: should render when unauthenticated 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -4043,7 +4064,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -4061,7 +4082,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -4085,7 +4106,7 @@ exports[`Header: should render with a custom logo 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -4093,10 +4114,10 @@ exports[`Header: should render with a custom logo 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -4110,11 +4131,14 @@ exports[`Header: should render with a custom logo 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -4597,7 +4621,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -4615,7 +4639,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -4639,7 +4663,7 @@ exports[`Header: should render with locale of AU 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -4647,10 +4671,10 @@ exports[`Header: should render with locale of AU 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -4664,11 +4688,14 @@ exports[`Header: should render with locale of AU 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
@@ -5151,7 +5178,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -5169,7 +5196,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -5193,7 +5220,7 @@ exports[`Header: should render with locale of NZ 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -5201,10 +5228,10 @@ exports[`Header: should render with locale of NZ 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -5218,6 +5245,9 @@ exports[`Header: should render with locale of NZ 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__mobile"
                   >
@@ -5652,7 +5682,7 @@ exports[`Header: should render with no divider 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+searches"
                       href="/my-activity/saved-searches"
                     >
@@ -5670,7 +5700,7 @@ exports[`Header: should render with no divider 1`] = `
                     class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:saved+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
@@ -5694,7 +5724,7 @@ exports[`Header: should render with no divider 1`] = `
                     class="Hidden__mobile"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:applied+jobs"
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
                     >
@@ -5702,10 +5732,10 @@ exports[`Header: should render with no divider 1`] = `
                     </a>
                   </li>
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:recommended+jobs"
                       href="/sign-in?returnUrl=%2Frecommended"
                     >
@@ -5719,11 +5749,14 @@ exports[`Header: should render with no divider 1`] = `
                       </span>
                     </a>
                   </li>
+                  <hr
+                    class="UserAccountMenu__menuSeparator"
+                  />
                   <li
                     class="Hidden__desktop"
                   >
                     <a
-                      class="UserAccountMenu__item UserAccountMenu__subItem"
+                      class="UserAccountMenu__item"
                       data-analytics="header:companies"
                       href="/companies/"
                     >
