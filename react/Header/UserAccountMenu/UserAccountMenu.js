@@ -184,7 +184,7 @@ export default ({
         ]
       })}
     </li>
-    <hr className={styles.menuSeparator} />
+    <Hidden mobile component="hr" className={styles.menuSeparator} />
     {locale === 'NZ' ? null : (
       <Hidden
         desktop
