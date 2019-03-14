@@ -1,6 +1,8 @@
 @import (reference) "~seek-style-guide/theme";
 @import (reference) "../Header.less";
 
+@separator-height = @row-height - 1;
+
 .root {
   @media @desktop {
     @border-width: 1px;
@@ -62,10 +64,11 @@
 }
 
 .menuSeparator {
-  height: 1px;
+  @separator-height: 1px;
+  height: @separator-height;
   border: 0;
   background-color: @sk-mid-gray-light;
-  margin: @row-height @row-height (@row-height - 1);
+  margin: @row-height (@gutter-width / 2) (@row-height - @separator-height);
 }
 
 .icon {
