@@ -27,7 +27,6 @@ const JOB_SEARCH = 'Job Search';
 const PROFILE = 'Profile';
 const SAVED_SEARCHES = 'Saved Searches';
 const SAVED_AND_APPLIED = 'Saved & Applied Jobs';
-const APPLIED_JOBS = 'Applied Jobs';
 const RECOMMENDED_JOBS = 'Recommended Jobs';
 const SETTINGS = 'Settings';
 const CAREER_ADVICE = 'Career Advice';
@@ -38,7 +37,6 @@ type TabsType =
   | typeof PROFILE
   | typeof SAVED_SEARCHES
   | typeof SAVED_AND_APPLIED
-  | typeof APPLIED_JOBS
   | typeof RECOMMENDED_JOBS
   | typeof SETTINGS
   | typeof CAREER_ADVICE
@@ -140,9 +138,7 @@ export default ({
         href: urlForAuthStatus(authenticationStatus, '/my-activity/saved-jobs'),
         children: [
           newBadgeTab === SAVED_AND_APPLIED && <BadgeComponent />,
-          <span key="label">
-            Saved <Hidden desktop>& Applied </Hidden>Jobs
-          </span>,
+          <span key="label">{SAVED_AND_APPLIED}</span>,
           <StarIcon
             key="icon"
             className={classnames(styles.icon, styles.saveJobs)}
@@ -151,21 +147,6 @@ export default ({
         ]
       })}
     </li>
-    <Hidden
-      mobile
-      component="li"
-      className={classnames(activeTab === APPLIED_JOBS && styles.activeTab)}
-    >
-      {linkRenderer({
-        'data-analytics': 'header:applied+jobs',
-        className: styles.item,
-        href: urlForAuthStatus(
-          authenticationStatus,
-          '/my-activity/applied-jobs'
-        ),
-        children: APPLIED_JOBS
-      })}
-    </Hidden>
     <li
       className={classnames(activeTab === RECOMMENDED_JOBS && styles.activeTab)}
     >

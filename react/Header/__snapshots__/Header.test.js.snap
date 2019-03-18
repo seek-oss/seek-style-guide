@@ -199,30 +199,13 @@ exports[`Header: should append returnUrl to signin and register links if present
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -760,30 +743,13 @@ exports[`Header: should render first part of email address when username isn't p
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/my-activity/applied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -1318,30 +1284,13 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -1879,30 +1828,13 @@ exports[`Header: should render when authenticated 1`] = `
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/my-activity/applied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -2437,30 +2369,13 @@ exports[`Header: should render when authenticated but username and email is not 
                       href="/my-activity/saved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/my-activity/applied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -2995,30 +2910,13 @@ exports[`Header: should render when authentication is pending 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -3554,30 +3452,13 @@ exports[`Header: should render when unauthenticated 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -4087,30 +3968,13 @@ exports[`Header: should render with a custom logo 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -4644,30 +4508,13 @@ exports[`Header: should render with locale of AU 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -5201,30 +5048,13 @@ exports[`Header: should render with locale of NZ 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
@@ -5705,30 +5535,13 @@ exports[`Header: should render with no divider 1`] = `
                       href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-jobs"
                     >
                       <span>
-                        Saved 
-                        <span
-                          class="Hidden__desktop"
-                        >
-                          & Applied 
-                        </span>
-                        Jobs
+                        Saved & Applied Jobs
                       </span>
                       <span
                         class="Icon__root UserAccountMenu__icon UserAccountMenu__saveJobs"
                       >
                         mock svg
                       </span>
-                    </a>
-                  </li>
-                  <li
-                    class="Hidden__mobile"
-                  >
-                    <a
-                      class="UserAccountMenu__item"
-                      data-analytics="header:applied+jobs"
-                      href="/sign-in?returnUrl=%2Fmy-activity%2Fapplied-jobs"
-                    >
-                      Applied Jobs
                     </a>
                   </li>
                   <li
