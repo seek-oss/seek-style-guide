@@ -40,7 +40,7 @@
     background-color: darken(@sk-blue, 5%);
     @media @desktop {
       color: @sk-black;
-      background-color: @sk-mid-gray-light;
+      background-color: @sk-gray-light;
     }
   }
   @media @desktop {
@@ -61,10 +61,12 @@
   opacity: 0.5;
 }
 
-.subItem {
-  @media @desktop {
-    background-color: @sk-gray-light;
-  }
+.menuSeparator {
+  @separator-height: 1px;
+  height: @separator-height;
+  border: 0;
+  background-color: @sk-mid-gray-light;
+  margin: @row-height (@gutter-width / 2) (@row-height - @separator-height);
 }
 
 .icon {
