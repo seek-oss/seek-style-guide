@@ -73,7 +73,7 @@ export default class Checkbox extends Component {
             className={styles.checkMark}
           />
         </div>
-        <span>{label}</span>
+        <span className={styles.checkboxLabel}>{label}</span>
       </div>
     );
   }

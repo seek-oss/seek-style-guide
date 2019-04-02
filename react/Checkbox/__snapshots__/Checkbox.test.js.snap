@@ -30,7 +30,9 @@ exports[`Checkbox FieldMessage should render field message when passed 1`] = `
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
@@ -81,7 +83,9 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
@@ -130,7 +134,9 @@ exports[`Checkbox should not render the invalid style if tone is set to positive
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
@@ -180,7 +186,9 @@ exports[`Checkbox should render the invalid style for tone="critical" even if th
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
@@ -230,7 +238,9 @@ exports[`Checkbox should render the invalid style for valid={false} where no ton
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
@@ -315,7 +325,9 @@ exports[`Checkbox should render with className 1`] = `
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
@@ -364,7 +376,9 @@ exports[`Checkbox should render with simple props 1`] = `
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
@@ -413,7 +427,9 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
           svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
         />
       </div>
-      <span>
+      <span
+        className="Checkbox__checkboxLabel"
+      >
         Still in role
       </span>
     </div>
