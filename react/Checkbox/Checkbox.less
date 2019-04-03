@@ -1,4 +1,6 @@
 @import (reference) "~seek-style-guide/theme";
+@checkbox-size: @row-height * 5;
+@touchable-margin: (@touchableTextHeight - @checkbox-size) / 2;
 
 .activeFocusReset() {
   .input:not([readonly]):not([disabled]):focus + .label &,
@@ -11,38 +13,69 @@
 
 .root {
   display: inline-block;
+  position: relative;
 }
 
 .input {
   opacity: 0;
   position: absolute;
+  pointer-events: none;
+}
+
+.input_isCheckbox {
+  width: @checkbox-size;
+  height: @checkbox-size;
+  margin: @touchable-margin 0 0 0;
+}
+
+.input_isButton {
+  width: 100%;
+  height: @touchableTextHeight;
+  margin: 0;
 }
 
 .label {
-  display: block;
+  display: flex;
+  cursor: pointer;
+  min-height: @touchableTextHeight;
 
-  :checked + & {
+  :global(*) {
+    pointer-events: none;
+  }
+
+  .input:checked + &,
+  .input:checked + & .labelText {
     font-weight: @sk-bold;
   }
 }
 
-.standard {
-  .touchableText(@standard-type-scale);
-  height: 100%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+.labelText {
+  @media @desktop {
+    padding: (
+        ((@interaction-type-row-span - @standard-type-row-span) / 2) *
+          @row-height
+      )
+      0;
+  }
+  @media @mobile {
+    padding: (
+        ((@interaction-type-row-span - @standard-type-row-span-mobile) / 2) *
+          @row-height
+      )
+      0;
+  }
 }
 
 .checkbox {
   .activeFocusReset();
 
   background-color: @sk-white;
-  width: @row-height * 5;
-  height: @row-height * 5;
-  flex: 0 0 (@row-height * 5);
+  width: @checkbox-size;
+  height: @checkbox-size;
+  flex: 0 0 @checkbox-size;
   border: @field-border-width solid @sk-mid-gray-light;
   border-radius: @field-border-radius;
+  margin-top: @touchable-margin;
   margin-right: @field-gutter-width;
   position: relative;
 
@@ -94,18 +127,18 @@
 
 .button {
   .activeFocusReset();
-  .touchableText(@standard-type-scale-mobile);
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding: 0 @field-gutter-width;
+  white-space: nowrap;
+  overflow: hidden;
   background-color: @sk-gray-light;
   color: @sk-charcoal;
   border: 1px solid @sk-mid-gray-light;
   border-radius: 2px;
   cursor: pointer;
-  @media @desktop {
-    .touchableText(@standard-type-scale);
-  }
 
   .input:checked + .label & {
     font-weight: @sk-bold;

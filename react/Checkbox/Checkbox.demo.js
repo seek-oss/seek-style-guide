@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Checkbox from './Checkbox';
+import classnames from 'classnames';
+import Checkbox, { STANDARD, BUTTON } from './Checkbox';
 import * as sketch from './Checkbox.sketch';
 import demoStyles from './Checkbox.demo.less';
 import fieldMessageOptions from '../FieldMessage/FieldMessage.demoFragment';
@@ -15,26 +16,47 @@ class CheckboxContainer extends Component {
     super();
 
     this.state = {
-      checked: false
+      checked1: false,
+      checked2: false
     };
   }
 
-  handleChange = event => {
+  handleChange1 = event => {
     this.setState({
-      checked: event.target.checked
+      checked1: event.target.checked
+    });
+  };
+
+  handleChange2 = event => {
+    this.setState({
+      checked2: event.target.checked
     });
   };
 
   render() {
     const { component: DemoComponent, componentProps } = this.props;
-    const { checked } = this.state;
+    const { checked1, checked2 } = this.state;
 
     return (
-      <div className={demoStyles.root}>
+      <div
+        className={classnames({
+          [demoStyles.root_isStandard]: componentProps.type === STANDARD,
+          [demoStyles.root_isButton]: componentProps.type === BUTTON
+        })}
+      >
         <DemoComponent
           {...componentProps}
-          checked={checked}
-          onChange={this.handleChange}
+          id="fullTime"
+          label="Full time"
+          checked={checked1}
+          onChange={this.handleChange1}
+        />
+        <DemoComponent
+          {...componentProps}
+          id="partTime"
+          label="Part time / casual / vacation"
+          checked={checked2}
+          onChange={this.handleChange2}
         />
       </div>
     );
@@ -49,10 +71,9 @@ export default {
   container: CheckboxContainer,
   sketch,
   initialProps: {
-    id: 'stillInRole',
-    label: 'Still in role',
     type: 'standard',
     // Documentation only:
+    label: 'Full Time',
     checked: false,
     onChange: () => {}
   },

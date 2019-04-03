@@ -6,7 +6,7 @@ exports[`Checkbox FieldMessage should render field message when passed 1`] = `
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -16,24 +16,25 @@ exports[`Checkbox FieldMessage should render field message when passed 1`] = `
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -56,7 +57,7 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     data-automation="first-name-field"
     id="testCheckbox"
     onChange={[Function]}
@@ -67,24 +68,25 @@ exports[`Checkbox inputProps should pass through other props to the input 1`] = 
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -106,7 +108,7 @@ exports[`Checkbox should not render the invalid style if tone is set to positive
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -116,24 +118,25 @@ exports[`Checkbox should not render the invalid style if tone is set to positive
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -156,7 +159,7 @@ exports[`Checkbox should render the invalid style for tone="critical" even if th
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -166,24 +169,25 @@ exports[`Checkbox should render the invalid style for tone="critical" even if th
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -206,7 +210,7 @@ exports[`Checkbox should render the invalid style for valid={false} where no ton
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -216,24 +220,25 @@ exports[`Checkbox should render the invalid style for valid={false} where no ton
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -256,7 +261,7 @@ exports[`Checkbox should render with button style 1`] = `
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isButton"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -265,11 +270,14 @@ exports[`Checkbox should render with button style 1`] = `
     className="Checkbox__label"
     htmlFor="testCheckbox"
   >
-    <span
+    <Text
+      baseline={false}
       className="Checkbox__button"
+      component="span"
+      raw={true}
     >
       Still in role
-    </span>
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -291,7 +299,7 @@ exports[`Checkbox should render with className 1`] = `
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -301,24 +309,25 @@ exports[`Checkbox should render with className 1`] = `
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -340,7 +349,7 @@ exports[`Checkbox should render with simple props 1`] = `
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -350,24 +359,25 @@ exports[`Checkbox should render with simple props 1`] = `
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
@@ -389,7 +399,7 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
 >
   <input
     checked={false}
-    className="Checkbox__input"
+    className="Checkbox__input Checkbox__input_isCheckbox"
     id="testCheckbox"
     onChange={[Function]}
     type="checkbox"
@@ -399,24 +409,25 @@ exports[`Checkbox should render with standard checkbox style 1`] = `
     htmlFor="testCheckbox"
   >
     <div
-      className="Checkbox__standard"
+      className="Checkbox__checkbox"
     >
-      <div
-        className="Checkbox__checkbox"
-      >
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
-        />
-        <CheckMarkIcon
-          className="Checkbox__checkMark"
-          svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
-        />
-      </div>
-      <span>
-        Still in role
-      </span>
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isHover"
+      />
+      <CheckMarkIcon
+        className="Checkbox__checkMark"
+        svgClassName="Checkbox__checkMarkSvg Checkbox__checkMarkSvg_isSelected"
+      />
     </div>
+    <Text
+      baseline={false}
+      className="Checkbox__labelText"
+      component="span"
+      raw={true}
+    >
+      Still in role
+    </Text>
   </label>
   <FieldMessage
     id="testCheckbox-message"
