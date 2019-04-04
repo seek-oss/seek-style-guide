@@ -5,8 +5,8 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 
 import themeVars from '../private/themeVars';
+import Text from '../Text/Text';
 import TextLink from '../TextLink/TextLink';
-import Button from '../Button/Button';
 
 const { rowHeight, standardTypeRowSpan, interactionTypeRowSpan } = themeVars;
 const buttonHeight = rowHeight * interactionTypeRowSpan;
@@ -135,17 +135,14 @@ class ReadMore extends PureComponent<Props, State> {
           ) : null}
         </div>
         {showMoreLessButton && (
-          <TextLink
-            strong
-            color="transparent"
-            type="button"
+          <Text
             chevron={showMore ? 'up' : 'down'}
             className={styles.showMore}
-            component={Button}
+            component={TextLink}
             onClick={this.handleShowMore}
           >
             {showMore ? lessLabel : moreLabel}
-          </TextLink>
+          </Text>
         )}
       </div>
     );
