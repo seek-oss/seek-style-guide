@@ -66,8 +66,8 @@
     "shallow-equal": "^1.0.0"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "react-helmet": "^3.0.0 || ^4.0.0 || ^5.0.0"
   },
   "devDependencies": {
@@ -134,16 +134,16 @@
     "query-string": "^6.1.0",
     "raf": "^3.4.0",
     "raw-loader": "^0.5.1",
-    "react": "^16.0.0",
+    "react": "^16.8.6",
     "react-copy-to-clipboard": "^5.0.1",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.8.6",
     "react-element-to-jsx-string": "^13.0.0",
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^3.0.0-beta.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-shallow-testutils": "^3.0.0",
-    "react-test-renderer": "^16.0.0",
+    "react-test-renderer": "^16.8.6",
     "renovate-config-seek": "^0.4.0",
     "seek-style-guide-webpack": "^3.0.1",
     "semantic-release": "^8.1.2",
