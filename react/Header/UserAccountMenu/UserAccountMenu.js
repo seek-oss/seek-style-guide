@@ -11,6 +11,7 @@ import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import HeartIcon from '../../HeartIcon/HeartIcon';
 import StarIcon from '../../StarIcon/StarIcon';
 import ThumbsUpIcon from '../../ThumbsUpIcon/ThumbsUpIcon';
+import TickCircleIcon from '../../TickCircleIcon/TickCircleIcon';
 import Hidden from '../../Hidden/Hidden';
 import Loader from '../../Loader/Loader';
 import Badge from '../../Badge/Badge';
@@ -163,7 +164,15 @@ export default ({
           authenticationStatus,
           '/my-activity/applied-jobs'
         ),
-        children: APPLIED_JOBS
+        children: [
+          newBadgeTab === APPLIED_JOBS && <BadgeComponent />,
+          <span key="label">{APPLIED_JOBS}</span>,
+          <TickCircleIcon
+            key="icon"
+            className={classnames(styles.icon, styles.appliedJobs)}
+            svgClassName={styles.iconSvg}
+          />
+        ]
       })}
     </Hidden>
     <li
