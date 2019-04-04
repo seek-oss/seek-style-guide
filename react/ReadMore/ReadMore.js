@@ -136,7 +136,6 @@ class ReadMore extends PureComponent<Props, State> {
         </div>
         {showMoreLessButton && (
           <Text
-            strong
             chevron={showMore ? 'up' : 'down'}
             className={styles.showMore}
             component={TextLink}
