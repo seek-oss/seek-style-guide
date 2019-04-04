@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Checkbox.less';
 import CheckMarkIcon from '../CheckMarkIcon/CheckMarkIcon';
 import classnames from 'classnames';
 import FieldMessage from '../FieldMessage/FieldMessage';
+import Text from '../Text/Text';
 import { TONE } from '../private/tone';
 
-const STANDARD = 'standard';
-const BUTTON = 'button';
+export const STANDARD = 'standard';
+export const BUTTON = 'button';
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
@@ -51,12 +52,21 @@ export default class Checkbox extends Component {
   };
 
   renderButton(label) {
-    return <span className={styles.button}>{label}</span>;
+    return (
+      <Text
+        component="span"
+        baseline={false}
+        raw={true}
+        className={styles.button}
+      >
+        {label}
+      </Text>
+    );
   }
 
   renderStandard(label) {
     return (
-      <div className={styles.standard}>
+      <Fragment>
         <div className={styles.checkbox}>
           <CheckMarkIcon
             className={styles.checkMark}
@@ -73,8 +83,15 @@ export default class Checkbox extends Component {
             className={styles.checkMark}
           />
         </div>
-        <span>{label}</span>
-      </div>
+        <Text
+          component="span"
+          baseline={false}
+          raw={true}
+          className={styles.labelText}
+        >
+          {label}
+        </Text>
+      </Fragment>
     );
   }
 
@@ -112,7 +129,8 @@ export default class Checkbox extends Component {
       onChange,
       onFocus,
       onBlur,
-      inputProps
+      inputProps,
+      type
     } = this.props;
 
     const allInputProps = {
@@ -122,7 +140,11 @@ export default class Checkbox extends Component {
       onChange,
       onFocus,
       onBlur,
-      ...combineClassNames(inputProps, styles.input),
+      ...combineClassNames(inputProps, {
+        [styles.input]: true,
+        [styles.input_isCheckbox]: type === STANDARD,
+        [styles.input_isButton]: type === BUTTON
+      }),
       type: 'checkbox'
     };
 
