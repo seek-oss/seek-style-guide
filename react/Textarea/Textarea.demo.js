@@ -71,7 +71,7 @@ export default {
           })
         },
         {
-          label: 'Show Count',
+          label: 'Count',
           transformProps: props => ({
             ...props,
             countFeedback: value => ({
@@ -84,6 +84,20 @@ export default {
           transformProps: props => ({
             ...props,
             description: 'Describe a descriptive description descriptively'
+          })
+        },
+        {
+          label: 'Inital Rows 20',
+          transformProps: props => ({
+            ...props,
+            initalRows: 10
+          })
+        },
+        {
+          label: 'Max Rows 50',
+          transformProps: props => ({
+            ...props,
+            maxRows: 50
           })
         }
       ]
@@ -99,7 +113,7 @@ export default {
           })
         },
         {
-          label: 'Disallowed word(s)',
+          label: 'Disallowed words',
           transformProps: props => ({
             ...props,
             invalidText: 'bad',
@@ -118,7 +132,7 @@ export default {
           })
         },
         {
-          label: 'Multiple invalid ranges',
+          label: 'Multi invalid range',
           transformProps: props => ({
             ...props,
             invalidText: [
