@@ -9,11 +9,7 @@ import { TONE } from '../private/tone';
 import { formatInvalidText } from './textAreaUtils';
 import attachRefs from '../private/attachRefs';
 
-import lessToJs from 'less-vars-to-js';
-
-import grid from '!!raw-loader!seek-style-guide/theme/layout/grid.less';
-const gridValues = lessToJs(grid);
-const rowHeight = parseInt(gridValues['@row-height'], 10);
+const rowHeight = 6;
 
 function combineClassNames(props = {}, ...classNames) {
   const { className, ...restProps } = props;
