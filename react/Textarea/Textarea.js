@@ -9,6 +9,7 @@ import { TONE } from '../private/tone';
 import { formatInvalidText } from './textAreaUtils';
 import attachRefs from '../private/attachRefs';
 
+// Hard codded as lessToJS is not prod ready, should be in sync with seek-style-guide/theme/layout/grid.less:1
 const rowHeight = 6;
 
 function combineClassNames(props = {}, ...classNames) {
@@ -34,7 +35,7 @@ export default class Textarea extends Component {
     valid: PropTypes.bool,
     description: PropTypes.string,
     inputProps: PropTypes.object,
-    initalRows: PropTypes.number,
+    initialRows: PropTypes.number,
     maxRows: PropTypes.number,
     countFeedback: (props, propName, componentName) => {
       const { value, inputProps = {} } = props;
@@ -76,7 +77,7 @@ export default class Textarea extends Component {
     className: '',
     description: '',
     inputProps: {},
-    initalRows: 15,
+    initialRows: 15,
     maxRows: 30
   };
 
@@ -137,7 +138,7 @@ export default class Textarea extends Component {
       onFocus,
       onBlur,
       inputProps,
-      initalRows,
+      initialRows,
       maxRows
     } = this.props;
     const { ref: inputRef } = inputProps;
@@ -151,7 +152,7 @@ export default class Textarea extends Component {
       );
     }
 
-    const height = initalRows * rowHeight;
+    const height = initialRows * rowHeight;
     const maxHeight = maxRows * rowHeight;
 
     const style = {

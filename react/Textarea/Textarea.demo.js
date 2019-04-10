@@ -71,7 +71,7 @@ export default {
           })
         },
         {
-          label: 'Count',
+          label: 'Show Count',
           transformProps: props => ({
             ...props,
             countFeedback: value => ({
@@ -87,10 +87,10 @@ export default {
           })
         },
         {
-          label: 'Inital Rows 20',
+          label: 'Initial Rows 20',
           transformProps: props => ({
             ...props,
-            initalRows: 10
+            initialRows: 20
           })
         },
         {
@@ -113,7 +113,7 @@ export default {
           })
         },
         {
-          label: 'Disallowed words',
+          label: 'Disallowed word(s)',
           transformProps: props => ({
             ...props,
             invalidText: 'bad',
@@ -132,7 +132,7 @@ export default {
           })
         },
         {
-          label: 'Multi invalid range',
+          label: 'Multiple invalid ranges',
           transformProps: props => ({
             ...props,
             invalidText: [
