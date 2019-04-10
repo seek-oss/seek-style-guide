@@ -85,6 +85,20 @@ export default {
             ...props,
             description: 'Describe a descriptive description descriptively'
           })
+        },
+        {
+          label: 'Initial Rows 20',
+          transformProps: props => ({
+            ...props,
+            initialRows: 20
+          })
+        },
+        {
+          label: 'Max Rows 50',
+          transformProps: props => ({
+            ...props,
+            maxRows: 50
+          })
         }
       ]
     },
