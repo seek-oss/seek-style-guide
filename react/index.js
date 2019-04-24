@@ -35,6 +35,7 @@ export { default as ReadMore } from './ReadMore/ReadMore';
 export { default as ToggleContent } from './ToggleContent/ToggleContent';
 
 // Layout
+export { default as AccordionItem } from './AccordionItem/AccordionItem';
 export { default as AsidedLayout } from './AsidedLayout/AsidedLayout';
 export { default as Card } from './Card/Card';
 export { default as CardGroup } from './CardGroup/CardGroup';

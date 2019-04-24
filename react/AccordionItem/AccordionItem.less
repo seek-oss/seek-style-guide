@@ -1,0 +1,61 @@
+@import (reference) '~seek-style-guide/theme';
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  border-top: 1px solid @sk-gray-medium;
+  width: 100%;
+
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:focus {
+    .focus();
+  }
+
+  &:hover .text {
+    text-decoration: underline;
+  }
+}
+
+.text {
+  padding: 16px 0;
+  font-size: 16px;
+  color: @sk-blue-lighter;
+  font-weight: 500;
+}
+
+.titleContent {}
+
+.expander {
+  transition: 0.3s all cubic-bezier(0, 0, 0.29, 0.96);
+  overflow: hidden;
+}
+
+.expanderOpen {
+  overflow: visible;
+}
+
+.content {
+  // border: 1px solid grey;
+}
+
+.chevron {
+  margin-left: 9px;
+  transition: transform 0.3s ease;
+  transform: translateY(1px);
+  color: @sk-blue-lighter;
+}
+
+.chevronOpen {
+  transform: rotate(-180deg);
+}
+
+.chevronSvg {
+  width: 12px;
+  height: 12px;
+}
