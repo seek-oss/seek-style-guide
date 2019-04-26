@@ -27,11 +27,11 @@ Container.propTypes = {
 };
 
 const titleContent = (
-  <div style={{padding: '16px 0'}}>
+  <div style={{ padding: '16px 0' }}>
     <TextLink>Heading</TextLink>
     <Text small>This is some smaller text</Text>
   </div>
-)
+);
 
 const content = (
   <Fragment>
@@ -54,7 +54,7 @@ export default {
     titleText: 'Accordion title',
     onOpen: () => console.log('On open handler called'),
     onClose: () => console.log('On close handler called'),
-    children: content,
+    children: content
   },
   options: [
     {
@@ -67,8 +67,8 @@ export default {
             ...props,
             titleContent
           })
-        },
+        }
       ]
-    },
+    }
   ]
 };

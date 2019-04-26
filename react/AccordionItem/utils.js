@@ -17,11 +17,11 @@ export function toggleContent({
   isOpen,
   setIsOpen,
   setCssVisibility,
-  setCssOverflow,
+  setCssOverflow
 }) {
   const contentHeight = el.offsetHeight;
   const isOpening = !isOpen;
-  clearTimeout(timeoutHandle)
+  clearTimeout(timeoutHandle);
 
   if (isOpening) {
     setCssVisibility('visible');
@@ -34,7 +34,7 @@ export function toggleContent({
         // on form fields
         setCssOverflow('visible');
         setCurrentHeight('auto');
-      }),
+      })
     );
   } else {
     setCurrentHeight(`${contentHeight}px`);
@@ -47,7 +47,7 @@ export function toggleContent({
     setTimeoutHandle(
       onAnimationEnd(() => {
         setCssVisibility('hidden');
-      }),
+      })
     );
 
     setIsOpen(false);

@@ -1,4 +1,4 @@
-@import (reference) '~seek-style-guide/theme';
+@import (reference) "~seek-style-guide/theme";
 
 .title {
   display: flex;
@@ -36,11 +36,11 @@
   overflow: hidden;
 }
 
-.content{
-  &::after, 
+.content {
+  &::after,
   &::before {
     // This is needed to account for margins of containing elements.
-    content: '\00a0';
+    content: "\00a0";
   }
 }
 

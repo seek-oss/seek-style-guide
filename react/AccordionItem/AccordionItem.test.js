@@ -11,7 +11,7 @@ describe('AccordionItem', () => {
     it('should show titleText', () => {
       const titleText = 'title text';
       const accordion = renderer.render(
-        <AccordionItem titleText={titleText} />,
+        <AccordionItem titleText={titleText} />
       );
 
       const [item] = findAllWithClass(accordion, 'AccordionItem__text');
@@ -23,7 +23,7 @@ describe('AccordionItem', () => {
     it('it should not render titleText', () => {
       const titleContent = <div>some jsx</div>;
       const accordion = renderer.render(
-        <AccordionItem titleContent={titleContent} />,
+        <AccordionItem titleContent={titleContent} />
       );
 
       const [item] = findAllWithClass(accordion, 'AccordionItem__text');
@@ -34,7 +34,7 @@ describe('AccordionItem', () => {
     it('it should render titleContent', () => {
       const titleContent = <div>some jsx</div>;
       const accordion = renderer.render(
-        <AccordionItem titleContent={titleContent} />,
+        <AccordionItem titleContent={titleContent} />
       );
       const [item] = findAllWithClass(accordion, 'AccordionItem__titleContent');
       expect(item).toBeDefined();
@@ -46,11 +46,11 @@ describe('AccordionItem', () => {
     it('they should be passed in as props to the button element', () => {
       const expectedProps = ['foo', 'bar', 'baz'];
       const accordion = renderer.render(
-        <AccordionItem titleText="title" foo bar baz />,
+        <AccordionItem titleText="title" foo bar baz />
       );
       const [button] = findAllWithType(accordion, 'button');
       expect(Object.keys(button.props)).toEqual(
-        expect.arrayContaining(expectedProps),
+        expect.arrayContaining(expectedProps)
       );
     });
   });
@@ -61,10 +61,7 @@ describe('AccordionItem', () => {
 
       expect(() => {
         renderer.render(
-          <AccordionItem
-            titleText="Example text"
-            titleContent={titleContent}
-          />,
+          <AccordionItem titleText="Example text" titleContent={titleContent} />
         );
       }).toThrow();
     });
@@ -75,10 +72,7 @@ describe('AccordionItem', () => {
       const mockOnOpen = jest.fn();
       const element = (
         <div>
-          <AccordionItem
-            titleText={'title'}
-            onOpen={mockOnOpen}
-          />
+          <AccordionItem titleText={'title'} onOpen={mockOnOpen} />
         </div>
       );
 
@@ -95,11 +89,7 @@ describe('AccordionItem', () => {
       const mockOnClose = jest.fn();
       const element = (
         <div>
-          <AccordionItem
-            titleText={'title'}
-            onClose={mockOnClose}
-            open
-          />
+          <AccordionItem titleText={'title'} onClose={mockOnClose} open />
         </div>
       );
 
