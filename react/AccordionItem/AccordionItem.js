@@ -23,9 +23,7 @@ function AccordionItem({
   const initialHeight = open ? 'auto' : '0px';
   const initialVisibility = open ? 'visible' : 'hidden';
   const initialOverflow = initialVisibility;
-  console.log({ useRef });
   const contentEl = useRef(null);
-  console.log({ contentEl });
   const [currentHeight, setCurrentHeight] = useState(initialHeight);
   const [cssVisibility, setCssVisibility] = useState(initialVisibility);
   const [cssOverflow, setCssOverflow] = useState(initialOverflow);
@@ -96,15 +94,3 @@ function AccordionItem({
 }
 
 export default AccordionItem;
-
-/*
-<AccordionItem
-  titleText="This is the title"
-  titleContent={titleHtml} open={true}
-  onOpen={() => {}}
-  onClose={() => {}}
-  open
->
-  {content}
-</AccordionItem>
-*/

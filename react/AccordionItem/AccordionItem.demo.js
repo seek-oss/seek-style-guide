@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
+
 import {
   AccordionItem,
   Card,
   Section,
   Text,
+  TextLink,
   BulletList,
   Bullet
 } from 'seek-style-guide/react';
@@ -23,6 +26,13 @@ Container.propTypes = {
   component: PropTypes.any,
   componentProps: PropTypes.object.isRequired
 };
+
+const titleContent = (
+  <div style={{padding: '16px 0'}}>
+    <TextLink>Heading</TextLink>
+    <Text small>This is some smaller text</Text>
+  </div>
+)
 
 const content = (
   <Fragment>
@@ -43,7 +53,23 @@ export default {
   container: Container,
   initialProps: {
     titleText: 'Accordion title',
-    children: content
+    onOpen: () => console.log('On open handler called'),
+    onClose: () => console.log('On close handler called'),
+    children: content,
   },
-  options: []
+  options: [
+    {
+      label: 'States',
+      type: 'checklist',
+      states: [
+        {
+          label: 'Custom Title',
+          transformProps: ({ onOpen, titleText, ...props }) => ({
+            ...props,
+            titleContent
+          })
+        },
+      ]
+    },
+  ]
 };
