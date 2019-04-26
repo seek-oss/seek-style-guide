@@ -1,25 +1,19 @@
 import React, { Fragment, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './AccordionItem.less';
 import { toggleContent } from './utils';
 import { ChevronIcon } from 'seek-style-guide/react';
 import classnames from 'classnames';
 
 function AccordionItem({
-  className = '',
-  titleText,
-  titleContent,
+  className,
+  title,
   children,
-  open = false,
+  open,
   onOpen,
   onClose,
   ...restProps
 }) {
-  if (titleText && titleContent) {
-    throw new Error(
-      'AccordionItem can only accept either titleText or titleContent'
-    );
-  }
-
   const initialHeight = open ? 'auto' : '0px';
   const initialVisibility = open ? 'visible' : 'hidden';
   const initialOverflow = initialVisibility;
@@ -66,10 +60,10 @@ function AccordionItem({
         }}
         {...restProps}
       >
-        {titleContent ? (
-          <span className="AccordionItem__titleContent">{titleContent}</span>
+        {typeof title === 'string' ? (
+          <span className={styles.titleText}>{title}</span>
         ) : (
-          <span className={styles.text}>{titleText}</span>
+          <span className="AccordionItem__titleContent">{title}</span>
         )}
         <ChevronIcon
           direction="down"
@@ -92,5 +86,19 @@ function AccordionItem({
     </Fragment>
   );
 }
+
+AccordionItem.propTypes = {
+  title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+  onOpen: PropTypes.func,
+  onClose: PropTypes.func,
+  children: PropTypes.element.isRequired,
+  className: PropTypes.string,
+  open: PropTypes.bool
+};
+
+AccordionItem.defaultProps = {
+  className: '',
+  open: false
+};
 
 export default AccordionItem;

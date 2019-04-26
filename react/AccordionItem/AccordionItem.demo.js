@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -34,14 +34,14 @@ const titleContent = (
 );
 
 const content = (
-  <Fragment>
+  <div>
     <Text>The quick brown fox jumps over the lazy dog</Text>
     <BulletList>
       <Bullet>Bullet 1</Bullet>
       <Bullet>Bullet 2</Bullet>
       <Bullet>Bullet 3</Bullet>
     </BulletList>
-  </Fragment>
+  </div>
 );
 
 export default {
@@ -51,7 +51,7 @@ export default {
   component: AccordionItem,
   container: Container,
   initialProps: {
-    titleText: 'Accordion title',
+    title: 'Accordion title',
     onOpen: () => console.log('On open handler called'),
     onClose: () => console.log('On close handler called'),
     children: content
@@ -63,9 +63,9 @@ export default {
       states: [
         {
           label: 'Custom Title',
-          transformProps: ({ onOpen, titleText, ...props }) => ({
+          transformProps: ({ onOpen, ...props }) => ({
             ...props,
-            titleContent
+            title: titleContent
           })
         }
       ]

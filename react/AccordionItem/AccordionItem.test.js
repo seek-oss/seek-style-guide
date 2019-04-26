@@ -7,35 +7,20 @@ import { findAllWithClass, findAllWithType } from 'react-shallow-testutils';
 describe('AccordionItem', () => {
   const renderer = createRenderer();
 
-  describe('when titleContent is passed in', () => {
-    it('should show titleText', () => {
+  describe('when title is passed a string', () => {
+    it('should render the string with titleText styling', () => {
       const titleText = 'title text';
-      const accordion = renderer.render(
-        <AccordionItem titleText={titleText} />
-      );
+      const accordion = renderer.render(<AccordionItem title={titleText} />);
 
-      const [item] = findAllWithClass(accordion, 'AccordionItem__text');
+      const [item] = findAllWithClass(accordion, 'AccordionItem__titleText');
       expect(item.props.children).toBe(titleText);
     });
   });
 
-  describe('when titleContent is passed in', () => {
-    it('it should not render titleText', () => {
+  describe('when title is passed in a React element', () => {
+    it('it should render the content with no styling', () => {
       const titleContent = <div>some jsx</div>;
-      const accordion = renderer.render(
-        <AccordionItem titleContent={titleContent} />
-      );
-
-      const [item] = findAllWithClass(accordion, 'AccordionItem__text');
-
-      expect(item).toBeUndefined();
-    });
-
-    it('it should render titleContent', () => {
-      const titleContent = <div>some jsx</div>;
-      const accordion = renderer.render(
-        <AccordionItem titleContent={titleContent} />
-      );
+      const accordion = renderer.render(<AccordionItem title={titleContent} />);
       const [item] = findAllWithClass(accordion, 'AccordionItem__titleContent');
       expect(item).toBeDefined();
       expect(item.props.children).toBe(titleContent);
@@ -46,7 +31,7 @@ describe('AccordionItem', () => {
     it('they should be passed in as props to the button element', () => {
       const expectedProps = ['foo', 'bar', 'baz'];
       const accordion = renderer.render(
-        <AccordionItem titleText="title" foo bar baz />
+        <AccordionItem title="title" foo bar baz />
       );
       const [button] = findAllWithType(accordion, 'button');
       expect(Object.keys(button.props)).toEqual(
@@ -55,24 +40,12 @@ describe('AccordionItem', () => {
     });
   });
 
-  describe('when both titleContent and titleText are passed in', () => {
-    it('it should throw an error', () => {
-      const titleContent = <div>some jsx</div>;
-
-      expect(() => {
-        renderer.render(
-          <AccordionItem titleText="Example text" titleContent={titleContent} />
-        );
-      }).toThrow();
-    });
-  });
-
   describe('onOpen', () => {
     it('it should call the passed onOpen function', () => {
       const mockOnOpen = jest.fn();
       const element = (
         <div>
-          <AccordionItem titleText={'title'} onOpen={mockOnOpen} />
+          <AccordionItem title={'title'} onOpen={mockOnOpen} />
         </div>
       );
 
@@ -89,7 +62,7 @@ describe('AccordionItem', () => {
       const mockOnClose = jest.fn();
       const element = (
         <div>
-          <AccordionItem titleText={'title'} onClose={mockOnClose} open />
+          <AccordionItem title={'title'} onClose={mockOnClose} open />
         </div>
       );
 
