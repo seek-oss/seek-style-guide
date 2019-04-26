@@ -58,16 +58,16 @@ function AccordionItem({
             setCssOverflow
           });
 
-          if (isOpen) {
-            onClose && onClose();
-          } else {
-            onOpen && onOpen();
+          if (isOpen && onClose) {
+            onClose();
+          } else if (!isOpen && onOpen) {
+            onOpen();
           }
         }}
         {...restProps}
       >
         {titleContent ? (
-          <span className={styles.titleContent}>{titleContent}</span>
+          <span className="AccordionItem__titleContent">{titleContent}</span>
         ) : (
           <span className={styles.text}>{titleText}</span>
         )}

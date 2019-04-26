@@ -1,5 +1,3 @@
-import { styles } from "ansi-colors";
-
 const DURATION = 500;
 const CLOSED_HEIGHT = '0px';
 
@@ -32,8 +30,10 @@ export function toggleContent({
 
     setTimeoutHandle(
       onAnimationEnd(() => {
-        setCurrentHeight('auto');
+        // We toggle overflow on and off to avoid cropping the focus state
+        // on form fields
         setCssOverflow('visible');
+        setCurrentHeight('auto');
       }),
     );
   } else {

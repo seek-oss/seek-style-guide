@@ -31,15 +31,14 @@
   font-weight: 500;
 }
 
-.titleContent {}
-
 .expander {
   transition: 0.3s all cubic-bezier(0, 0, 0.29, 0.96);
   overflow: hidden;
 }
 
 .content{
-  &:after, &:before {
+  &::after, 
+  &::before {
     // This is needed to account for margins of containing elements.
     content: '\00a0';
   }
