@@ -1,5 +1,4 @@
-const DURATION = 500;
-const CLOSED_HEIGHT = '0px';
+import { CLOSED_HEIGHT, DURATION } from './constants';
 
 function onAnimationStart(fn) {
   setTimeout(fn, 0);

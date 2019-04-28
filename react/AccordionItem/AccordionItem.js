@@ -1,9 +1,10 @@
 import React, { Fragment, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import styles from './AccordionItem.less';
-import { toggleContent } from './utils';
 import { ChevronIcon } from 'seek-style-guide/react';
 import classnames from 'classnames';
+import styles from './AccordionItem.less';
+import { toggleContent } from './utils';
+import { CLOSED_HEIGHT } from './constants';
 
 function AccordionItem({
   className,
@@ -14,7 +15,7 @@ function AccordionItem({
   onClose,
   ...restProps
 }) {
-  const initialHeight = open ? 'auto' : '0px';
+  const initialHeight = open ? 'auto' : CLOSED_HEIGHT;
   const initialVisibility = open ? 'visible' : 'hidden';
   const initialOverflow = initialVisibility;
   const contentEl = useRef(null);
@@ -26,7 +27,7 @@ function AccordionItem({
 
   const buttonClasses = classnames(className, styles.title);
 
-  const isAnimating = currentHeight === '0px' && isOpen;
+  const isAnimating = currentHeight === CLOSED_HEIGHT && isOpen;
   const expanderClasses = classnames(styles.expander, {
     [styles.expanderOpen]: isAnimating
   });
