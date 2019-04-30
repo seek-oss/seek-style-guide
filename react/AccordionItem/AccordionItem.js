@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState, useEffect } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ChevronIcon } from 'seek-style-guide/react';
 import classnames from 'classnames';
