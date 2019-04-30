@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from 'react';
+import React, { Fragment, useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ChevronIcon } from 'seek-style-guide/react';
 import classnames from 'classnames';
@@ -31,10 +31,7 @@ function AccordionItem({
   const expanderClasses = classnames(styles.expander, {
     [styles.expanderOpen]: isAnimating
   });
-
-  const chevronClasses = classnames(styles.chevron, {
-    [styles.chevronOpen]: isOpen
-  });
+  const chevronDirection = isOpen ? 'up' : 'down';
 
   return (
     <Fragment>
@@ -67,8 +64,8 @@ function AccordionItem({
           <span className="AccordionItem__titleContent">{title}</span>
         )}
         <ChevronIcon
-          direction="down"
-          className={chevronClasses}
+          direction={chevronDirection}
+          className={styles.chevron}
           svgClassName={styles.chevronSvg}
         />
       </button>
