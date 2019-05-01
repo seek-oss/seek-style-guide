@@ -67,4 +67,10 @@ export default [
     analytics: 'toolbar:integration-partners',
     specificLocale: 'AU'
   },
+  {
+    name: 'Recruitment software partners',
+    href: 'https://talent.seek.co.nz/integration-partners/',
+    analytics: 'toolbar:integration-partners',
+    specificLocale: 'NZ'
+  },
 ];
