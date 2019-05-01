@@ -72,5 +72,5 @@ export default [
     href: 'https://talent.seek.co.nz/integration-partners/',
     analytics: 'toolbar:integration-partners',
     specificLocale: 'NZ'
-  },
+  }
 ];
