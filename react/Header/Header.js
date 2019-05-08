@@ -6,7 +6,7 @@ import classnames from 'classnames';
 
 import PartnerSites from '../PartnerSites/PartnerSites';
 import Logo from '../Logo/Logo';
-import BellIcon from '../BellIcon/BellIcon';
+import NotificationsLink from './NotificationsLink/NotificationsLink';
 import Navigation from './Navigation/Navigation';
 import Hidden from '../Hidden/Hidden';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
@@ -87,7 +87,7 @@ export default function Header({
                 className: styles.item,
                 href: '/notifications',
                 children: [
-                  <BellIcon className={styles.bell} />
+                  <NotificationsLink />
                 ]
               })}
               <span className={styles.bellDivider} />
