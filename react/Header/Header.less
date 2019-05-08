@@ -154,6 +154,17 @@
   }
 }
 
+.bellDivider {
+  .divider();
+  display: inline-block;
+
+  @media @mobile {
+    margin-right: 0;
+    border-right: @divider-width solid white;
+    opacity: 0.2;
+  }
+}
+
 .bellWrapper {
   display: inline-block;
   margin-top: 15px;
@@ -163,10 +174,9 @@
   padding: 15px 0;
   position: relative;
   top: 1px;
-  color: white;
+  color: @sk-pink;
 
   @media @desktop {
-    color: black;
     display: inline-block;
   }
   

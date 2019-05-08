@@ -85,12 +85,12 @@ export default function Header({
             <span>
               {linkRenderer({
                 className: styles.item,
-                href: '/my-activity/applied-jobs',
+                href: '/notifications',
                 children: [
                   <BellIcon className={styles.bell} />
                 ]
               })}
-              <span className={styles.divider} />
+              <span className={styles.bellDivider} />
             </span>
 
             <div className={userClasses}>
