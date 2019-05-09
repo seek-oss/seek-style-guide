@@ -82,9 +82,9 @@ export default function Header({
             Australia’s #1 job site
           </Hidden>
           <Hidden print className={styles.userWrapper}>
-            <NotificationsLinkContainer 
-              authenticationStatus={authenticationStatus} 
-              linkRenderer={linkRenderer} 
+            <NotificationsLinkContainer
+              authenticationStatus={authenticationStatus}
+              linkRenderer={linkRenderer}
             />
 
             <div className={userClasses}>
