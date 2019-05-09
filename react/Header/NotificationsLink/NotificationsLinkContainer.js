@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react';
-import BellIcon from '../../BellIcon/BellIcon';
-import styles from './NotificationsLink.less';
 import { getCookie } from './utils';
 import { AUTHENTICATED } from '../../private/authStatusTypes';
 import { EXPERIMENT_ID } from './constants';
+import NotificationsLink from './NotificationsLink';
 
-class NotificationsLink extends React.Component {
+class NotificationsLinkContainer extends React.Component {
+  state = {
+    isInExperiment: false
+  }
+
   componentDidMount() {
     const visitorId = getCookie('JobseekerVisitorId');
     const url = `http://experiments-api.candidate.prod.outfra.xyz/participants/${visitorId}`;
@@ -26,22 +29,17 @@ class NotificationsLink extends React.Component {
   }
 
   render() {
-    const { isAuthenticated, linkRenderer, isInExperiment } = this.props;
+    const { authenticationStatus, linkRenderer } = this.props;
+    const isAuthenticated = (authenticationStatus === AUTHENTICATED);
 
     return (
-      isInExperiment && isAuthenticated ? (
-        <Fragment>
-          {linkRenderer({
-            href: '/notifications',
-            children: [
-              <BellIcon className={styles.bell} />
-            ]
-          })}
-          <span className={styles.bellDivider} />
-        </Fragment>
-      ) : null
+      <NotificationsLink 
+        isAuthenticated={isAuthenticated}
+        isInExperiment={this.state.isInExperiment}
+        linkRenderer={linkRenderer}
+      />
     );
   }
 }
 
-export default NotificationsLink;
+export default NotificationsLinkContainer;

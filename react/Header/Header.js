@@ -6,7 +6,7 @@ import classnames from 'classnames';
 
 import PartnerSites from '../PartnerSites/PartnerSites';
 import Logo from '../Logo/Logo';
-import NotificationsLink from './NotificationsLink/NotificationsLink';
+import NotificationsLinkContainer from './NotificationsLink/NotificationsLinkContainer';
 import Navigation from './Navigation/Navigation';
 import Hidden from '../Hidden/Hidden';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
@@ -82,7 +82,7 @@ export default function Header({
             Australia’s #1 job site
           </Hidden>
           <Hidden print className={styles.userWrapper}>
-            <NotificationsLink 
+            <NotificationsLinkContainer 
               authenticationStatus={authenticationStatus} 
               linkRenderer={linkRenderer} 
             />
