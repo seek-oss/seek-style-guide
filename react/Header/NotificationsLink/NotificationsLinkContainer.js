@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCookie } from './utils';
+import { getCookieFromString } from './utils';
 import { AUTHENTICATED } from '../../private/authStatusTypes';
 import { EXPERIMENT_ID } from './constants';
 import NotificationsLink from './NotificationsLink';
@@ -10,12 +10,17 @@ class NotificationsLinkContainer extends React.Component {
   }
 
   componentDidMount() {
-    const visitorId = getCookie('JobseekerVisitorId');
-    const url = `http://experiments-api.candidate.prod.outfra.xyz/participants/${visitorId}`;
+    let visitorId = null;
 
+    if (typeof document !== 'undefined') {
+      visitorId = getCookieFromString('JobseekerVisitorId', document.cookie);
+    }
+    
     try {
       if (visitorId) {
-        fetch(url) // Call the fetch function passing the url of the API as a parameter
+        const url = `https://experiments.cloud.seek.com.au/participants/${visitorId}`;
+        
+        fetch(url)
           .then(response => response.json())
           .then((response) => {
             const isInExperiment = Boolean(response.experiments[EXPERIMENT_ID]);
