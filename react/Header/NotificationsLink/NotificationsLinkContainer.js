@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { getCookie } from './utils';
 import { AUTHENTICATED } from '../../private/authStatusTypes';
 import { EXPERIMENT_ID } from './constants';
