@@ -12,13 +12,13 @@ class NotificationsLinkContainer extends React.Component {
   componentDidMount() {
     let visitorId = null;
 
-    if (typeof document !== 'undefined') {
-      visitorId = getCookieFromString('JobseekerVisitorId', document.cookie);
-    }
     
     try {
+      if (typeof document !== 'undefined') {
+        visitorId = getCookieFromString('JobseekerVisitorId', document.cookie);
+      }
       if (visitorId) {
-        const url = `https://experiments.cloud.seek.com.au/participants/${visitorId}`;
+        const url = `${AB_CRUNCH_URL}/${visitorId}`;
         
         fetch(url)
           .then(response => response.json())
