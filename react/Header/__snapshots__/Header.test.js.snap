@@ -634,18 +634,6 @@ exports[`Header: should render first part of email address when username isn't p
       <span
         class="Header__userWrapper Hidden__print"
       >
-        <a
-          href="/notifications"
-        >
-          <span
-            class="Icon__root NotificationsLink__bell"
-          >
-            mock svg
-          </span>
-        </a>
-        <span
-          class="NotificationsLink__bellDivider"
-        />
         <div
           class="Header__user Header__user_isAuthenticated Header__user_isReady"
         >
@@ -1779,18 +1767,6 @@ exports[`Header: should render when authenticated 1`] = `
       <span
         class="Header__userWrapper Hidden__print"
       >
-        <a
-          href="/notifications"
-        >
-          <span
-            class="Icon__root NotificationsLink__bell"
-          >
-            mock svg
-          </span>
-        </a>
-        <span
-          class="NotificationsLink__bellDivider"
-        />
         <div
           class="Header__user Header__user_isAuthenticated Header__user_isReady"
         >
@@ -2360,18 +2336,6 @@ exports[`Header: should render when authenticated but username and email is not 
       <span
         class="Header__userWrapper Hidden__print"
       >
-        <a
-          href="/notifications"
-        >
-          <span
-            class="Icon__root NotificationsLink__bell"
-          >
-            mock svg
-          </span>
-        </a>
-        <span
-          class="NotificationsLink__bellDivider"
-        />
         <div
           class="Header__user"
         >
