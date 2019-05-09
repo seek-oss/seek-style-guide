@@ -3,9 +3,10 @@ import BellIcon from '../../BellIcon/BellIcon';
 import styles from './NotificationsLink.less';
 import { getCookie } from './utils';
 import { AUTHENTICATED } from '../../private/authStatusTypes';
+
 class NotificationsLink extends React.Component {
   state = {
-    showBell: false
+    isInExperiment: false
   }
 
   componentDidMount() {
@@ -19,9 +20,9 @@ class NotificationsLink extends React.Component {
           .then(response => response.json())
           .then((response) => {
             const isInExperiment = Boolean(response.experiments[EXPERIMENT_ID]);
-            console.log('response', response);
+
             if (isInExperiment) {
-              this.setState({showBell: true})
+              this.setState({isInExperiment: true})
             }
           });
       }
@@ -35,7 +36,7 @@ class NotificationsLink extends React.Component {
     const isAuthenticated = (authenticationStatus === AUTHENTICATED);
 
     return (
-      this.state.showBell && isAuthenticated ? (
+      this.state.isInExperiment && isAuthenticated ? (
         <Fragment>
           <BellIcon className={styles.bell} />
           <span className={styles.bellDivider} />
