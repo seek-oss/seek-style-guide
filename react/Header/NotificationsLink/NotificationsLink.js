@@ -6,7 +6,7 @@ import { AUTHENTICATED } from '../../private/authStatusTypes';
 
 class NotificationsLink extends React.Component {
   state = {
-    isInExperiment: false
+    isInExperiment: true
   }
 
   componentDidMount() {
@@ -32,13 +32,18 @@ class NotificationsLink extends React.Component {
   }
 
   render() {
-    const { authenticationStatus } = this.props;
+    const { authenticationStatus, linkRenderer } = this.props;
     const isAuthenticated = (authenticationStatus === AUTHENTICATED);
 
     return (
       this.state.isInExperiment && isAuthenticated ? (
         <Fragment>
-          <BellIcon className={styles.bell} />
+          {linkRenderer({
+            href: '/notifications',
+            children: [
+              <BellIcon className={styles.bell} />
+            ]
+          })}
           <span className={styles.bellDivider} />
         </Fragment>
       ) : null
