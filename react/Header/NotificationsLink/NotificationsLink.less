@@ -1,4 +1,5 @@
 @import (reference) "~seek-style-guide/theme";
+@import (reference) "../Header.less";
 
 .bell {
   padding: 15px 0;
@@ -8,5 +9,16 @@
 
   @media @desktop {
     display: inline-block;
+  }
+}
+
+.bellDivider {
+  .divider();
+  display: inline-block;
+
+  @media @mobile {
+    margin-right: 0;
+    border-right: @divider-width solid white;
+    opacity: 0.2;
   }
 }

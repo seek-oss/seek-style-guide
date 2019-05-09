@@ -4,12 +4,3 @@ dist
 yarn.lock
 package-lock.json
 flow-typed/*.generated.*
-
-# managed by sku
-.eslintrc
-.prettierrc
-coverage/
-dist-storybook/
-dist/
-report/
-# end managed by sku

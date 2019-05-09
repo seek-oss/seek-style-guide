@@ -73,15 +73,6 @@ exports[`Header: should append returnUrl to signin and register links if present
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -651,15 +642,6 @@ exports[`Header: should render first part of email address when username isn't p
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -1234,15 +1216,6 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -1812,15 +1785,6 @@ exports[`Header: should render when authenticated 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -2395,15 +2359,6 @@ exports[`Header: should render when authenticated but username and email is not 
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -2974,15 +2929,6 @@ exports[`Header: should render when authentication is pending 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -3552,15 +3498,6 @@ exports[`Header: should render when unauthenticated 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -4108,15 +4045,6 @@ exports[`Header: should render with a custom logo 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -4686,15 +4614,6 @@ exports[`Header: should render with locale of AU 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -5264,15 +5183,6 @@ exports[`Header: should render with locale of NZ 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div
@@ -5789,15 +5699,6 @@ exports[`Header: should render with no divider 1`] = `
         <span>
           <a
             href="/notifications"
-          >
-            <span
-              class="Icon__root Header__bell"
-            >
-              mock svg
-            </span>
-          </a>
-          <span
-            class="Header__bellDivider"
           />
         </span>
         <div

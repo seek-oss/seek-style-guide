@@ -87,10 +87,9 @@ export default function Header({
                 className: styles.item,
                 href: '/notifications',
                 children: [
-                  <NotificationsLink />
+                  <NotificationsLink authenticationStatus={authenticationStatus} />
                 ]
               })}
-              <span className={styles.bellDivider} />
             </span>
 
             <div className={userClasses}>
