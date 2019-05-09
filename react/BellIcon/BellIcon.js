@@ -9,11 +9,3 @@ export default function BellIcon(props) {
 }
 
 BellIcon.displayName = 'BellIcon';
-
-BellIcon.propTypes = {
-  className: PropTypes.string
-};
-
-BellIcon.defaultProps = {
-  className: ''
-};

@@ -6,7 +6,7 @@ import { AUTHENTICATED } from '../../private/authStatusTypes';
 
 class NotificationsLink extends React.Component {
   state = {
-    isInExperiment: true
+    isInExperiment: false
   }
 
   componentDidMount() {
