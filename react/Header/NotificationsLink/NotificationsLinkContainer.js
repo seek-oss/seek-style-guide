@@ -33,7 +33,8 @@ class NotificationsLinkContainer extends React.Component {
             if (isInExperiment) {
               this.setState({ isInExperiment: true });
             }
-          });
+          })
+          .catch(() => {});
       }
       // eslint-disable-next-line no-empty
     } catch (e) {}
