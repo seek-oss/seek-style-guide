@@ -21,7 +21,7 @@ const NotificationsLink = ({
 
 NotificationsLink.propTypes = {
   isAuthenticated: PropTypes.bool,
-  linkRenderer: PropTypes.element,
+  linkRenderer: PropTypes.func,
   isInExperiment: PropTypes.bool
 };
 

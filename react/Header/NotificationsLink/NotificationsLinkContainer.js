@@ -1,14 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getCookieFromString } from './utils';
-import { AUTHENTICATED } from '../../private/authStatusTypes';
+import {
+  AUTHENTICATED,
+  UNAUTHENTICATED,
+  AUTH_PENDING
+} from '../../private/authStatusTypes';
 import { EXPERIMENT_ID, AB_CRUNCH_URL } from './constants';
 import NotificationsLink from './NotificationsLink';
 
 class NotificationsLinkContainer extends React.Component {
   static propTypes = {
-    authenticationStatus: PropTypes.bool,
-    linkRenderer: PropTypes.element
+    authenticationStatus: PropTypes.oneOf([
+      AUTHENTICATED,
+      UNAUTHENTICATED,
+      AUTH_PENDING
+    ]),
+    linkRenderer: PropTypes.func
   };
 
   state = {

@@ -2,24 +2,27 @@
 @import (reference) "../Header.less";
 
 .bell {
-  padding: (@row-height * 3) 0;
-  position: relative;
-  top: 1px;
-  color: white;
+  @bell-touch-area: @interaction-type-row-span * @row-height;
+
+  height: @bell-touch-area;
+  width: @bell-touch-area;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: @sk-white;
 
   @media @desktop {
     color: @sk-black;
-    display: inline-block;
   }
 }
 
 .bellDivider {
   .divider();
-  display: inline-block;
+  margin-left: 1px; // To balance with space between user name
+  display: inline-block; // Override display:none from Header usage
 
   @media @mobile {
-    margin-right: 0;
-    border-right: @divider-width solid white;
+    border-color: @sk-white;
     opacity: 0.2;
   }
 }
