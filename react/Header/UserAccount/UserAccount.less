@@ -7,6 +7,11 @@
   }
 }
 
+.accountContainer {
+  display: flex;
+  align-items: center;
+}
+
 .toggleLabel {
   .touchableText();
   display: flex;
@@ -96,28 +101,18 @@
   bottom: 0;
 }
 
-.mobileMenuLabel {
-  user-select: none;
-  display: inline-block;
-  min-width: 60px;
-  text-align: right;
-  @media @desktop {
-    display: none;
-  }
-}
-
-.desktopMenuLabel {
+.menuLabel {
   pointer-events: none;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
   white-space: nowrap;
-  max-width: 100px; // ~ 10 characters
-  @media only screen and (min-width: 400px) {
-    max-width: 200px; // ~ 20 characters
+  max-width: 90px; // ~ 10 characters
+  @media only screen and (min-width: 385px) {
+    max-width: 150px; // ~ 16 characters
   }
-  @media @mobile {
-    display: none;
+  @media only screen and (min-width: 435px) {
+    max-width: 200px; // ~ 20 characters
   }
 }
 
