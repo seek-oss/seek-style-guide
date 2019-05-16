@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   border: 0;
+  padding: 0;
   width: 100%;
   text-align: left;
   cursor: pointer;
@@ -16,13 +17,9 @@
   &:focus {
     .focus();
   }
-
-  &:hover .titleText {
-    text-decoration: underline;
-  }
 }
 
-.titleLink {
+.titleText {
   padding: (@row-height * 3) 0;
 }
 
@@ -46,5 +43,5 @@
 
 .chevronSvg {
   width: 12px;
-  height: 12px;
+  height: (@row-height * 2);
 }

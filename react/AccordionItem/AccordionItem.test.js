@@ -21,7 +21,7 @@ describe('AccordionItem', () => {
     it('it should render the content with no styling', () => {
       const titleContent = <div>some jsx</div>;
       const accordion = renderer.render(<AccordionItem title={titleContent} />);
-      const [item] = findAllWithClass(accordion, 'AccordionItem__titleContent');
+      const [item] = findAllWithType(accordion, 'span');
       expect(item).toBeDefined();
       expect(item.props.children).toBe(titleContent);
     });

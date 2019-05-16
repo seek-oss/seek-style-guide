@@ -59,13 +59,13 @@ function AccordionItem({
         {...restProps}
       >
         {typeof title === 'string' ? (
-          <TextLink className={styles.titleLink}>
-            <Text raw subheading baseline={false}>
+          <TextLink>
+            <Text raw subheading baseline={false} className={styles.titleText}>
               {title}
             </Text>
           </TextLink>
         ) : (
-          <span className="AccordionItem__titleContent">{title}</span>
+          <span>{title}</span>
         )}
         <ChevronIcon
           direction={chevronDirection}
