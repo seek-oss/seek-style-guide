@@ -59,8 +59,8 @@ function AccordionItem({
         {...restProps}
       >
         {typeof title === 'string' ? (
-          <TextLink>
-            <Text subheading baseline={false}>
+          <TextLink className={styles.titleLink}>
+            <Text raw subheading baseline={false}>
               {title}
             </Text>
           </TextLink>
