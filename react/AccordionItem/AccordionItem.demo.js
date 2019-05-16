@@ -28,7 +28,9 @@ Container.propTypes = {
 
 const titleContent = (
   <div style={{ padding: '16px 0' }}>
-    <TextLink>Heading</TextLink>
+    <TextLink>
+      <Text subheading>Heading</Text>
+    </TextLink>
     <Text small>This is some smaller text</Text>
   </div>
 );

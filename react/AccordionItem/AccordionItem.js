@@ -1,6 +1,6 @@
 import React, { Fragment, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { ChevronIcon } from 'seek-style-guide/react';
+import { ChevronIcon, TextLink, Text } from 'seek-style-guide/react';
 import classnames from 'classnames';
 import styles from './AccordionItem.less';
 import { toggleContent } from './utils';
@@ -59,7 +59,11 @@ function AccordionItem({
         {...restProps}
       >
         {typeof title === 'string' ? (
-          <span className={styles.titleText}>{title}</span>
+          <TextLink>
+            <Text subheading baseline={false}>
+              {title}
+            </Text>
+          </TextLink>
         ) : (
           <span className="AccordionItem__titleContent">{title}</span>
         )}
