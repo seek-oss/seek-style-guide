@@ -1,0 +1,47 @@
+@import (reference) "~seek-style-guide/theme";
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:focus {
+    .focus();
+  }
+}
+
+.titleText {
+  padding: (@row-height * 3) 0;
+}
+
+.expander {
+  transition: 0.3s all cubic-bezier(0, 0, 0.29, 0.96);
+  overflow: hidden;
+}
+
+.content {
+  &::after,
+  &::before {
+    // This is needed to account for margins of containing elements.
+    content: "\00a0";
+  }
+}
+
+.chevron {
+  margin-left: 9px;
+  transition: transform 0.3s ease;
+}
+
+.chevronSvg {
+  width: 12px;
+  height: (@row-height * 2);
+}
