@@ -26,7 +26,6 @@ function AccordionItem({
   const [isOpen, setIsOpen] = useState(open);
 
   const buttonClasses = classnames(className, styles.title);
-
   const isAnimating = currentHeight === CLOSED_HEIGHT && isOpen;
   const expanderClasses = classnames(styles.expander, {
     [styles.expanderOpen]: isAnimating
