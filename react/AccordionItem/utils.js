@@ -1,7 +1,7 @@
 import { CLOSED_HEIGHT, DURATION } from './constants';
 
 function onAnimationStart(fn) {
-  setTimeout(fn, 0);
+  requestAnimationFrame(fn);
 }
 
 function onAnimationEnd(fn) {
@@ -20,6 +20,7 @@ export function toggleContent({
 }) {
   const contentHeight = el.offsetHeight;
   const isOpening = !isOpen;
+  console.log('isOpening', isOpening);
   clearTimeout(timeoutHandle);
 
   if (isOpening) {
@@ -36,8 +37,10 @@ export function toggleContent({
       })
     );
   } else {
+    console.log('contentHeight', contentHeight);
     setCurrentHeight(`${contentHeight}px`);
     setCssOverflow('hidden');
+    setIsOpen(false);
 
     onAnimationStart(() => {
       setCurrentHeight(CLOSED_HEIGHT);
@@ -49,6 +52,5 @@ export function toggleContent({
       })
     );
 
-    setIsOpen(false);
   }
 }

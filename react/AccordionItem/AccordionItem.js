@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from 'react';
+import React, { Fragment, useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ChevronIcon, TextLink, Text } from 'seek-style-guide/react';
 import classnames from 'classnames';
@@ -11,6 +11,7 @@ function AccordionItem({
   title,
   children,
   open,
+  isOpen: externalIsOpen,
   onOpen,
   onClose,
   ...restProps
@@ -24,6 +25,25 @@ function AccordionItem({
   const [cssOverflow, setCssOverflow] = useState(initialOverflow);
   const [timeoutHandle, setTimeoutHandle] = useState(null);
   const [isOpen, setIsOpen] = useState(open);
+  const useInternalState = (externalIsOpen === undefined);
+  const finalIsOpen = useInternalState ? isOpen : externalIsOpen;
+
+  const prevIsOpen = usePrevious(finalIsOpen);
+  useEffect(() => {
+    const needsUpdate = prevIsOpen !== finalIsOpen;
+    if (!useInternalState && needsUpdate) {
+      toggleContent({
+        el: contentEl.current,
+        setCurrentHeight,
+        timeoutHandle,
+        setTimeoutHandle,
+        isOpen: finalIsOpen,
+        setIsOpen: () => {},
+        setCssVisibility,
+        setCssOverflow
+      });
+    }
+  });
 
   const buttonClasses = classnames(className, styles.title);
   const isAnimating = currentHeight === CLOSED_HEIGHT && isOpen;
@@ -38,16 +58,18 @@ function AccordionItem({
         type="button"
         className={buttonClasses}
         onClick={() => {
-          toggleContent({
-            el: contentEl.current,
-            setCurrentHeight,
-            timeoutHandle,
-            setTimeoutHandle,
-            isOpen,
-            setIsOpen,
-            setCssVisibility,
-            setCssOverflow
-          });
+          if (useInternalState) {
+            toggleContent({
+              el: contentEl.current,
+              setCurrentHeight,
+              timeoutHandle,
+              setTimeoutHandle,
+              isOpen: finalIsOpen,
+              setIsOpen,
+              setCssVisibility,
+              setCssOverflow
+            });
+          }
 
           if (isOpen && onClose) {
             onClose();
@@ -86,6 +108,14 @@ function AccordionItem({
       </div>
     </Fragment>
   );
+}
+
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
 }
 
 AccordionItem.propTypes = {
