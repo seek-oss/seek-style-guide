@@ -8,6 +8,7 @@ import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 type Props = {
   children?: React$Node,
+  buttonType?: string,
   text?: React$Node,
   onClose?: Function,
   className?: string
@@ -39,7 +40,14 @@ export default class Pill extends Component<Props> {
   }
 
   renderInteractivePill() {
-    const { children, text, onClose, className, ...restProps } = this.props;
+    const {
+      children,
+      text,
+      onClose,
+      buttonType = 'button',
+      className,
+      ...restProps
+    } = this.props;
     const content = children || text;
 
     return (
@@ -50,7 +58,11 @@ export default class Pill extends Component<Props> {
         <Text baseline={false} raw>
           {content}
         </Text>
-        <button className={styles.removeButton} onClick={onClose}>
+        <button
+          type={buttonType}
+          className={styles.removeButton}
+          onClick={onClose}
+        >
           <ScreenReaderOnly>Remove item {content}</ScreenReaderOnly>
           <div className={styles.removeCircle}>
             <CrossIcon
