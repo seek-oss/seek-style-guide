@@ -53,6 +53,7 @@ exports[`Pill: should render an additional class for the interactive pill 1`] = 
   <button
     className="Pill__removeButton"
     onClick={[Function]}
+    type="button"
   >
     <ScreenReaderOnly
       component="span"
@@ -98,6 +99,7 @@ exports[`Pill: should render an interactive pill 1`] = `
   <button
     className="Pill__removeButton"
     onClick={[Function]}
+    type="button"
   >
     <ScreenReaderOnly
       component="span"
@@ -130,6 +132,7 @@ exports[`Pill: should render an interactive pill with the legacy "text" prop 1`]
   <button
     className="Pill__removeButton"
     onClick={[Function]}
+    type="button"
   >
     <ScreenReaderOnly
       component="span"
