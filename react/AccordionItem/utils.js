@@ -1,9 +1,5 @@
 import { CLOSED_HEIGHT, DURATION } from './constants';
 
-function onAnimationStart(fn) {
-  setTimeout(fn, 15);
-}
-
 function onAnimationEnd(fn) {
   return setTimeout(fn, DURATION);
 }
@@ -33,18 +29,13 @@ export function toggleContent({
         // We toggle overflow on and off to avoid cropping the focus state
         // on form fields
         setCssOverflow('visible');
-        setCurrentHeight('auto');
       })
     );
   } else {
     console.log('contentHeight', contentHeight);
-    setCurrentHeight(`${contentHeight}px`);
+    setCurrentHeight(CLOSED_HEIGHT);
     setCssOverflow('hidden');
     setIsOpen(false);
-
-    onAnimationStart(() => {
-      setCurrentHeight(CLOSED_HEIGHT);
-    });
 
     setTimeoutHandle(
       onAnimationEnd(() => {
