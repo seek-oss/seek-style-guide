@@ -21,10 +21,12 @@ function AccordionItem({
   const initialHeight = open ? 'auto' : CLOSED_HEIGHT;
   const initialVisibility = open ? 'visible' : 'hidden';
   const initialOverflow = initialVisibility;
+  const initialOpacity = open ? 1 : 0;
   const contentEl = useRef(null);
   const [currentHeight, setCurrentHeight] = useState(initialHeight);
   const [cssVisibility, setCssVisibility] = useState(initialVisibility);
   const [cssOverflow, setCssOverflow] = useState(initialOverflow);
+  const [cssOpacity, setCssOpacity] = useState(initialOpacity);
   const [timeoutHandle, setTimeoutHandle] = useState(null);
   const [isOpen, setIsOpen] = useState(open);
   const useInternalState = externalIsOpen === undefined;
@@ -40,7 +42,8 @@ function AccordionItem({
         isOpen: finalIsOpen,
         setIsOpen: () => {},
         setCssVisibility,
-        setCssOverflow
+        setCssOverflow,
+        setCssOpacity,
       });
     }
   }, [finalIsOpen]);
@@ -98,7 +101,7 @@ function AccordionItem({
       </button>
       <div
         className={expanderClasses}
-        style={{ height: currentHeight, overflow: cssOverflow }}
+        style={{ height: currentHeight, overflow: cssOverflow, opacity: cssOpacity }}
       >
         <div
           className={styles.content}

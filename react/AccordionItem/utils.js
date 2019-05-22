@@ -12,7 +12,8 @@ export function toggleContent({
   isOpen,
   setIsOpen,
   setCssVisibility,
-  setCssOverflow
+  setCssOverflow,
+  setCssOpacity,
 }) {
   const contentHeight = el.offsetHeight;
   const isOpening = !isOpen;
@@ -23,6 +24,7 @@ export function toggleContent({
     setCssVisibility('visible');
     setCurrentHeight(`${contentHeight}px`);
     setIsOpen(true);
+    setCssOpacity(1);
 
     setTimeoutHandle(
       onAnimationEnd(() => {
@@ -36,6 +38,7 @@ export function toggleContent({
     setCurrentHeight(CLOSED_HEIGHT);
     setCssOverflow('hidden');
     setIsOpen(false);
+    setCssOpacity(0);
 
     setTimeoutHandle(
       onAnimationEnd(() => {
