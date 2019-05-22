@@ -9,7 +9,7 @@ import {
   TextLink,
   BulletList,
   Bullet,
-  Button,
+  Button
 } from 'seek-style-guide/react';
 
 const Container = ({ component: DemoComponent, componentProps }) => {
@@ -17,12 +17,18 @@ const Container = ({ component: DemoComponent, componentProps }) => {
 
   return (
     <Card style={{ width: '500px' }}>
-      <Button color="blue" onClick={() => setIsOpen(!isOpen)}>toggle</Button>
+      <Button color="blue" onClick={() => setIsOpen(!isOpen)}>
+        toggle
+      </Button>
       <Section>
-        <DemoComponent {...componentProps} isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}/>
+        <DemoComponent
+          {...componentProps}
+          isOpen={isOpen}
+          onClick={() => setIsOpen(!isOpen)}
+        />
       </Section>
     </Card>
-  )
+  );
 };
 
 Container.propTypes = {

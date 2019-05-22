@@ -51,6 +51,5 @@ export function toggleContent({
         setCssVisibility('hidden');
       })
     );
-
   }
 }

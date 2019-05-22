@@ -27,9 +27,8 @@ function AccordionItem({
   const [cssOverflow, setCssOverflow] = useState(initialOverflow);
   const [timeoutHandle, setTimeoutHandle] = useState(null);
   const [isOpen, setIsOpen] = useState(open);
-  const useInternalState = (externalIsOpen === undefined);
-  const finalIsOpen = useInternalState ? isOpen : externalIsOpen;
-  // const 
+  const useInternalState = externalIsOpen === undefined;
+  const finalIsOpen = useInternalState ? isOpen : !externalIsOpen;
 
   useEffect(() => {
     if (!useInternalState) {
@@ -73,7 +72,7 @@ function AccordionItem({
           }
 
           if (onClick) {
-            onClick()
+            onClick();
           }
 
           if (isOpen && onClose) {
@@ -86,9 +85,7 @@ function AccordionItem({
       >
         {typeof title === 'string' ? (
           <Text raw baseline={false} className={styles.titleText}>
-            <TextLink>
-              {title}
-            </TextLink>
+            <TextLink>{title}</TextLink>
           </Text>
         ) : (
           <span>{title}</span>
