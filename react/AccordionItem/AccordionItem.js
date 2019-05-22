@@ -25,31 +25,22 @@ function AccordionItem({
   const [isOpen, setIsOpen] = useState(false);
   const useInternalState = externalIsOpen === undefined;
   const finalIsOpen = useInternalState ? isOpen : externalIsOpen;
-  const finalSetIsOpen = useInternalState ? setIsOpen : () => {};
-
-  const toggleContentWrapper = () => {
-    toggleContent({
-      el: contentEl.current,
-      setCurrentHeight,
-      timeoutHandle,
-      setTimeoutHandle,
-      isOpen: finalIsOpen,
-      setCssVisibility,
-      setCssOverflow,
-      setCssOpacity
-    });
-  };
 
   useEffect(() => {
-    toggleContentWrapper();
+    toggleContent({
+      el: contentEl.current,
+      isOpen: finalIsOpen,
+      timeoutHandle,
+      setTimeoutHandle,
+      setCurrentHeight,
+      setCssOpacity,
+      setCssOverflow,
+      setCssVisibility
+    });
   }, [finalIsOpen]);
 
   const buttonClasses = classnames(className, styles.title);
-  const isAnimating = currentHeight === CLOSED_HEIGHT && isOpen;
-  const expanderClasses = classnames(styles.expander, {
-    [styles.expanderOpen]: isAnimating
-  });
-  const chevronDirection = isOpen ? 'up' : 'down';
+  const chevronDirection = finalIsOpen ? 'up' : 'down';
 
   return (
     <Fragment>
@@ -58,16 +49,16 @@ function AccordionItem({
         className={buttonClasses}
         onClick={() => {
           if (useInternalState) {
-            isOpen ? setIsOpen(false) : setIsOpen(true);
+            setIsOpen(!finalIsOpen);
           }
 
           if (onClick) {
             onClick();
           }
 
-          if (isOpen && onClose) {
+          if (finalIsOpen && onClose) {
             onClose();
-          } else if (!isOpen && onOpen) {
+          } else if (!finalIsOpen && onOpen) {
             onOpen();
           }
         }}
@@ -87,7 +78,7 @@ function AccordionItem({
         />
       </button>
       <div
-        className={expanderClasses}
+        className={styles.expander}
         style={{
           height: currentHeight,
           overflow: cssOverflow,
@@ -106,16 +97,9 @@ function AccordionItem({
   );
 }
 
-function usePrevious(value) {
-  const ref = useRef();
-  useEffect(() => {
-    ref.current = value;
-  });
-  return ref.current;
-}
-
 AccordionItem.propTypes = {
   title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+  isOpen: PropTypes.bool,
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
   onClick: PropTypes.func,

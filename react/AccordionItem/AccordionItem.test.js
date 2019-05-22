@@ -2,7 +2,7 @@ import React from 'react';
 import AccordionItem from './AccordionItem';
 import { createRenderer } from 'react-test-renderer/shallow';
 import ReactTestUtils from 'react-dom/test-utils';
-import { findAllWithClass, findAllWithType } from 'react-shallow-testutils';
+import { findAllWithType } from 'react-shallow-testutils';
 import { TextLink } from 'seek-style-guide/react';
 
 describe('AccordionItem', () => {
@@ -58,11 +58,11 @@ describe('AccordionItem', () => {
   });
 
   describe('onClose', () => {
-    it('it should call the passed onClose function', () => {
+    it('it should call the passed onClose function ', () => {
       const mockOnClose = jest.fn();
       const element = (
         <div>
-          <AccordionItem title={'title'} onClose={mockOnClose} open />
+          <AccordionItem title={'title'} onClose={mockOnClose} isOpen />
         </div>
       );
 
@@ -70,6 +70,7 @@ describe('AccordionItem', () => {
       const button = renderedElement.querySelector('button');
 
       ReactTestUtils.Simulate.click(button);
+
       expect(mockOnClose).toHaveBeenCalledTimes(1);
     });
   });
