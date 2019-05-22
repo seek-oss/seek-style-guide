@@ -10,20 +10,16 @@ export function toggleContent({
   timeoutHandle,
   setTimeoutHandle,
   isOpen,
-  setIsOpen,
   setCssVisibility,
   setCssOverflow,
   setCssOpacity
 }) {
   const contentHeight = el.offsetHeight;
-  const isOpening = !isOpen;
-  console.log('isOpening', isOpening);
   clearTimeout(timeoutHandle);
 
-  if (isOpening) {
+  if (isOpen) {
     setCssVisibility('visible');
     setCurrentHeight(`${contentHeight}px`);
-    setIsOpen(true);
     setCssOpacity(1);
 
     setTimeoutHandle(
@@ -34,10 +30,8 @@ export function toggleContent({
       })
     );
   } else {
-    console.log('contentHeight', contentHeight);
     setCurrentHeight(CLOSED_HEIGHT);
     setCssOverflow('hidden');
-    setIsOpen(false);
     setCssOpacity(0);
 
     setTimeoutHandle(

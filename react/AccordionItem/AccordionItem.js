@@ -10,7 +10,6 @@ function AccordionItem({
   className,
   title,
   children,
-  open,
   isOpen: externalIsOpen,
   onClick,
   onOpen,
@@ -23,9 +22,9 @@ function AccordionItem({
   const [cssOverflow, setCssOverflow] = useState('visible');
   const [cssOpacity, setCssOpacity] = useState(0);
   const [timeoutHandle, setTimeoutHandle] = useState(null);
-  const [isOpen, setIsOpen] = useState(open);
+  const [isOpen, setIsOpen] = useState(false);
   const useInternalState = externalIsOpen === undefined;
-  const finalIsOpen = useInternalState ? isOpen : !externalIsOpen;
+  const finalIsOpen = useInternalState ? isOpen : externalIsOpen;
   const finalSetIsOpen = useInternalState ? setIsOpen : () => {};
 
   const toggleContentWrapper = () => {
@@ -35,7 +34,6 @@ function AccordionItem({
       timeoutHandle,
       setTimeoutHandle,
       isOpen: finalIsOpen,
-      setIsOpen: finalSetIsOpen,
       setCssVisibility,
       setCssOverflow,
       setCssOpacity
@@ -43,9 +41,7 @@ function AccordionItem({
   };
 
   useEffect(() => {
-    if (!useInternalState) {
-      toggleContentWrapper();
-    }
+    toggleContentWrapper();
   }, [finalIsOpen]);
 
   const buttonClasses = classnames(className, styles.title);
@@ -62,7 +58,7 @@ function AccordionItem({
         className={buttonClasses}
         onClick={() => {
           if (useInternalState) {
-            toggleContentWrapper();
+            isOpen ? setIsOpen(false) : setIsOpen(true);
           }
 
           if (onClick) {
@@ -122,14 +118,13 @@ AccordionItem.propTypes = {
   title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
+  onClick: PropTypes.func,
   children: PropTypes.element.isRequired,
-  className: PropTypes.string,
-  open: PropTypes.bool
+  className: PropTypes.string
 };
 
 AccordionItem.defaultProps = {
-  className: '',
-  open: false
+  className: ''
 };
 
 export default AccordionItem;
