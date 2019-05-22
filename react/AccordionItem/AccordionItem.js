@@ -29,11 +29,10 @@ function AccordionItem({
   const [isOpen, setIsOpen] = useState(open);
   const useInternalState = (externalIsOpen === undefined);
   const finalIsOpen = useInternalState ? isOpen : externalIsOpen;
+  // const 
 
-  const prevIsOpen = usePrevious(finalIsOpen);
   useEffect(() => {
-    const needsUpdate = prevIsOpen !== finalIsOpen;
-    if (!useInternalState && needsUpdate) {
+    if (!useInternalState) {
       toggleContent({
         el: contentEl.current,
         setCurrentHeight,
@@ -45,7 +44,7 @@ function AccordionItem({
         setCssOverflow
       });
     }
-  });
+  }, [finalIsOpen]);
 
   const buttonClasses = classnames(className, styles.title);
   const isAnimating = currentHeight === CLOSED_HEIGHT && isOpen;
@@ -86,11 +85,11 @@ function AccordionItem({
         {...restProps}
       >
         {typeof title === 'string' ? (
-          <TextLink>
-            <Text raw subheading baseline={false} className={styles.titleText}>
+          <Text raw baseline={false} className={styles.titleText}>
+            <TextLink>
               {title}
-            </Text>
-          </TextLink>
+            </TextLink>
+          </Text>
         ) : (
           <span>{title}</span>
         )}

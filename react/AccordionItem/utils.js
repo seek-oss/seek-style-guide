@@ -1,7 +1,7 @@
 import { CLOSED_HEIGHT, DURATION } from './constants';
 
 function onAnimationStart(fn) {
-  requestAnimationFrame(fn);
+  setTimeout(fn, 15);
 }
 
 function onAnimationEnd(fn) {
@@ -44,7 +44,7 @@ export function toggleContent({
 
     onAnimationStart(() => {
       setCurrentHeight(CLOSED_HEIGHT);
-    }, 0);
+    });
 
     setTimeoutHandle(
       onAnimationEnd(() => {
