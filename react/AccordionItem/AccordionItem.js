@@ -12,39 +12,39 @@ function AccordionItem({
   children,
   open,
   isOpen: externalIsOpen,
-  setIsOpen: externalSetIsOpen,
   onClick,
   onOpen,
   onClose,
   ...restProps
 }) {
-  const initialHeight = open ? 'auto' : CLOSED_HEIGHT;
-  const initialVisibility = open ? 'visible' : 'hidden';
-  const initialOverflow = initialVisibility;
-  const initialOpacity = open ? 1 : 0;
   const contentEl = useRef(null);
-  const [currentHeight, setCurrentHeight] = useState(initialHeight);
-  const [cssVisibility, setCssVisibility] = useState(initialVisibility);
-  const [cssOverflow, setCssOverflow] = useState(initialOverflow);
-  const [cssOpacity, setCssOpacity] = useState(initialOpacity);
+  const [currentHeight, setCurrentHeight] = useState(CLOSED_HEIGHT);
+  const [cssVisibility, setCssVisibility] = useState('visible');
+  const [cssOverflow, setCssOverflow] = useState('visible');
+  const [cssOpacity, setCssOpacity] = useState(0);
   const [timeoutHandle, setTimeoutHandle] = useState(null);
   const [isOpen, setIsOpen] = useState(open);
   const useInternalState = externalIsOpen === undefined;
   const finalIsOpen = useInternalState ? isOpen : !externalIsOpen;
+  const finalSetIsOpen = useInternalState ? setIsOpen : () => {};
+
+  const toggleContentWrapper = () => {
+    toggleContent({
+      el: contentEl.current,
+      setCurrentHeight,
+      timeoutHandle,
+      setTimeoutHandle,
+      isOpen: finalIsOpen,
+      setIsOpen: finalSetIsOpen,
+      setCssVisibility,
+      setCssOverflow,
+      setCssOpacity,
+    });
+  }
 
   useEffect(() => {
     if (!useInternalState) {
-      toggleContent({
-        el: contentEl.current,
-        setCurrentHeight,
-        timeoutHandle,
-        setTimeoutHandle,
-        isOpen: finalIsOpen,
-        setIsOpen: () => {},
-        setCssVisibility,
-        setCssOverflow,
-        setCssOpacity,
-      });
+      toggleContentWrapper()
     }
   }, [finalIsOpen]);
 
@@ -62,16 +62,7 @@ function AccordionItem({
         className={buttonClasses}
         onClick={() => {
           if (useInternalState) {
-            toggleContent({
-              el: contentEl.current,
-              setCurrentHeight,
-              timeoutHandle,
-              setTimeoutHandle,
-              isOpen: finalIsOpen,
-              setIsOpen,
-              setCssVisibility,
-              setCssOverflow
-            });
+            toggleContentWrapper()
           }
 
           if (onClick) {

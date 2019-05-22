@@ -23,8 +23,8 @@ const Container = ({ component: DemoComponent, componentProps }) => {
       <Section>
         <DemoComponent
           {...componentProps}
-          isOpen={isOpen}
-          onClick={() => setIsOpen(!isOpen)}
+          // isOpen={isOpen}
+          // onClick={() => setIsOpen(!isOpen)}
         />
       </Section>
     </Card>
