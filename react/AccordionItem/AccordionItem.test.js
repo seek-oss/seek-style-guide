@@ -3,6 +3,7 @@ import AccordionItem from './AccordionItem';
 import { createRenderer } from 'react-test-renderer/shallow';
 import ReactTestUtils from 'react-dom/test-utils';
 import { findAllWithClass, findAllWithType } from 'react-shallow-testutils';
+import { TextLink } from 'seek-style-guide/react';
 
 describe('AccordionItem', () => {
   const renderer = createRenderer();
@@ -11,8 +12,7 @@ describe('AccordionItem', () => {
     it('should render the string with titleText styling', () => {
       const titleText = 'title text';
       const accordion = renderer.render(<AccordionItem title={titleText} />);
-
-      const [item] = findAllWithClass(accordion, 'AccordionItem__titleText');
+      const [item] = findAllWithType(accordion, TextLink);
       expect(item.props.children).toBe(titleText);
     });
   });

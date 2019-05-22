@@ -38,13 +38,13 @@ function AccordionItem({
       setIsOpen: finalSetIsOpen,
       setCssVisibility,
       setCssOverflow,
-      setCssOpacity,
+      setCssOpacity
     });
-  }
+  };
 
   useEffect(() => {
     if (!useInternalState) {
-      toggleContentWrapper()
+      toggleContentWrapper();
     }
   }, [finalIsOpen]);
 
@@ -62,7 +62,7 @@ function AccordionItem({
         className={buttonClasses}
         onClick={() => {
           if (useInternalState) {
-            toggleContentWrapper()
+            toggleContentWrapper();
           }
 
           if (onClick) {
@@ -92,7 +92,11 @@ function AccordionItem({
       </button>
       <div
         className={expanderClasses}
-        style={{ height: currentHeight, overflow: cssOverflow, opacity: cssOpacity }}
+        style={{
+          height: currentHeight,
+          overflow: cssOverflow,
+          opacity: cssOpacity
+        }}
       >
         <div
           className={styles.content}

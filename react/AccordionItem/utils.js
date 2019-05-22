@@ -13,7 +13,7 @@ export function toggleContent({
   setIsOpen,
   setCssVisibility,
   setCssOverflow,
-  setCssOpacity,
+  setCssOpacity
 }) {
   const contentHeight = el.offsetHeight;
   const isOpening = !isOpen;
