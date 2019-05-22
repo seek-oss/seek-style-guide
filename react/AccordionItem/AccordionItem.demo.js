@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -8,18 +8,22 @@ import {
   Text,
   TextLink,
   BulletList,
-  Bullet
+  Bullet,
+  Button,
 } from 'seek-style-guide/react';
 
-const Container = ({ component: DemoComponent, componentProps }) => (
-  <Card style={{ width: '500px' }}>
-    <Section>
-      <DemoComponent {...componentProps} />
-      <DemoComponent {...componentProps} />
-      <DemoComponent {...componentProps} />
-    </Section>
-  </Card>
-);
+const Container = ({ component: DemoComponent, componentProps }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Card style={{ width: '500px' }}>
+      <Button color="blue" onClick={() => setIsOpen(!isOpen)}>toggle</Button>
+      <Section>
+        <DemoComponent {...componentProps} isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}/>
+      </Section>
+    </Card>
+  )
+};
 
 Container.propTypes = {
   component: PropTypes.any,

@@ -12,6 +12,8 @@ function AccordionItem({
   children,
   open,
   isOpen: externalIsOpen,
+  setIsOpen: externalSetIsOpen,
+  onClick,
   onOpen,
   onClose,
   ...restProps
@@ -69,6 +71,10 @@ function AccordionItem({
               setCssVisibility,
               setCssOverflow
             });
+          }
+
+          if (onClick) {
+            onClick()
           }
 
           if (isOpen && onClose) {
