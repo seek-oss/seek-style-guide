@@ -30,6 +30,8 @@ function AccordionItem({
     toggleContent({
       el: contentEl.current,
       isOpen: finalIsOpen,
+      onOpen,
+      onClose,
       timeoutHandle,
       setTimeoutHandle,
       setCurrentHeight,
@@ -48,18 +50,12 @@ function AccordionItem({
         type="button"
         className={buttonClasses}
         onClick={() => {
-          if (useInternalState) {
-            setIsOpen(!finalIsOpen);
-          }
-
           if (onClick) {
             onClick();
           }
 
-          if (finalIsOpen && onClose) {
-            onClose();
-          } else if (!finalIsOpen && onOpen) {
-            onOpen();
+          if (useInternalState) {
+            setIsOpen(!finalIsOpen);
           }
         }}
         {...restProps}

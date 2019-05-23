@@ -6,18 +6,23 @@ function onAnimationEnd(fn) {
 
 export function toggleContent({
   el,
+  onOpen,
+  onClose,
   setCurrentHeight,
   timeoutHandle,
   setTimeoutHandle,
   isOpen,
-  setCssVisibility,
+  setCssOpacity,
   setCssOverflow,
-  setCssOpacity
+  setCssVisibility
 }) {
   const contentHeight = el.offsetHeight;
   clearTimeout(timeoutHandle);
 
   if (isOpen) {
+    if (onOpen) {
+      onOpen();
+    }
     setCssVisibility('visible');
     setCurrentHeight(`${contentHeight}px`);
     setCssOpacity(1);
@@ -30,6 +35,9 @@ export function toggleContent({
       })
     );
   } else {
+    if (onClose) {
+      onClose();
+    }
     setCurrentHeight(CLOSED_HEIGHT);
     setCssOverflow('hidden');
     setCssOpacity(0);

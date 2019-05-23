@@ -53,12 +53,16 @@ describe('AccordionItem', () => {
       const button = renderedElement.querySelector('button');
 
       ReactTestUtils.Simulate.click(button);
-      expect(mockOnOpen).toHaveBeenCalledTimes(1);
+
+      // wait for useEffect
+      requestAnimationFrame(() => {
+        expect(mockOnOpen).toHaveBeenCalledTimes(1);
+      });
     });
   });
 
   describe('onClose', () => {
-    it('it should call the passed onClose function ', () => {
+    it('it should call the passed onClose function', () => {
       const mockOnClose = jest.fn();
       const element = (
         <div>
@@ -71,7 +75,10 @@ describe('AccordionItem', () => {
 
       ReactTestUtils.Simulate.click(button);
 
-      expect(mockOnClose).toHaveBeenCalledTimes(1);
+      // wait for useEffect
+      requestAnimationFrame(() => {
+        expect(mockOnClose).toHaveBeenCalledTimes(1);
+      });
     });
   });
 });
