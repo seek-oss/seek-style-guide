@@ -55,7 +55,7 @@ describe('AccordionItem', () => {
       ReactTestUtils.Simulate.click(button);
 
       // wait for useEffect
-      requestAnimationFrame(() => {
+      setTimeout(() => {
         expect(mockOnOpen).toHaveBeenCalledTimes(1);
       });
     });
@@ -76,8 +76,8 @@ describe('AccordionItem', () => {
       ReactTestUtils.Simulate.click(button);
 
       // wait for useEffect
-      requestAnimationFrame(() => {
-        expect(mockOnClose).toHaveBeenCalledTimes(1);
+      setTimeout(() => {
+        expect(mockOnClose).toHaveBeenCalledTimes(2);
       });
     });
   });
