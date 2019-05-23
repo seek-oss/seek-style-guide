@@ -19,6 +19,11 @@ describe('Button:', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
+    it('should render white button', () => {
+      const wrapper = shallow(<Button color="white">SEEK</Button>);
+      expect(wrapper).toMatchSnapshot();
+    });
+
     it('should render transparent button', () => {
       const wrapper = shallow(<Button color="transparent">SEEK</Button>);
       expect(wrapper).toMatchSnapshot();
