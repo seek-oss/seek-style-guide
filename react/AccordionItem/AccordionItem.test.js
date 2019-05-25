@@ -41,7 +41,7 @@ describe('AccordionItem', () => {
   });
 
   describe('onOpen', () => {
-    it('it should call the passed onOpen function', () => {
+    it('it should call the passed onOpen function', done => {
       const mockOnOpen = jest.fn();
       const element = (
         <div>
@@ -55,18 +55,19 @@ describe('AccordionItem', () => {
       ReactTestUtils.Simulate.click(button);
 
       // wait for useEffect
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         expect(mockOnOpen).toHaveBeenCalledTimes(1);
+        done();
       });
     });
   });
 
   describe('onClose', () => {
-    it('it should call the passed onClose function', () => {
+    it('it should call the passed onClose function', done => {
       const mockOnClose = jest.fn();
       const element = (
         <div>
-          <AccordionItem title={'title'} onClose={mockOnClose} isOpen />
+          <AccordionItem title={'title'} onClose={mockOnClose} />
         </div>
       );
 
@@ -74,10 +75,12 @@ describe('AccordionItem', () => {
       const button = renderedElement.querySelector('button');
 
       ReactTestUtils.Simulate.click(button);
+      ReactTestUtils.Simulate.click(button);
 
       // wait for useEffect
-      setTimeout(() => {
-        expect(mockOnClose).toHaveBeenCalledTimes(2);
+      requestAnimationFrame(() => {
+        expect(mockOnClose).toHaveBeenCalledTimes(1);
+        done();
       });
     });
   });

@@ -25,20 +25,25 @@ function AccordionItem({
   const [isOpen, setIsOpen] = useState(false);
   const useInternalState = externalIsOpen === undefined;
   const finalIsOpen = useInternalState ? isOpen : externalIsOpen;
+  const isMounting = useRef(true);
 
   useEffect(() => {
-    toggleContent({
-      el: contentEl.current,
-      isOpen: finalIsOpen,
-      onOpen,
-      onClose,
-      timeoutHandle,
-      setTimeoutHandle,
-      setCurrentHeight,
-      setCssOpacity,
-      setCssOverflow,
-      setCssVisibility
-    });
+    if (isMounting.current === false) {
+      toggleContent({
+        el: contentEl.current,
+        isOpen: finalIsOpen,
+        onOpen,
+        onClose,
+        timeoutHandle,
+        setTimeoutHandle,
+        setCurrentHeight,
+        setCssOpacity,
+        setCssOverflow,
+        setCssVisibility
+      });
+    }
+
+    isMounting.current = false;
   }, [finalIsOpen]);
 
   const buttonClasses = classnames(className, styles.title);
