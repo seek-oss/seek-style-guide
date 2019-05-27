@@ -1,7 +1,9 @@
 import { CLOSED_HEIGHT, DURATION } from './constants';
 
 function onAnimationStart(fn) {
-  requestAnimationFrame(fn, 0);
+  // 20ms is just enough to delay by a single frame
+  // since 1000ms / 60fps = 16.66ms
+  setTimeout(fn, 20);
 }
 
 function onAnimationEnd(fn) {
@@ -12,7 +14,7 @@ export function toggleContent({
   el,
   onOpen,
   onClose,
-  setCurrentHeight,
+  setCssHeight,
   timeoutHandle,
   setTimeoutHandle,
   isOpen,
@@ -28,15 +30,15 @@ export function toggleContent({
       onOpen();
     }
     setCssVisibility('visible');
-    setCurrentHeight(`${contentHeight}px`);
+    setCssHeight(`${contentHeight}px`);
     setCssOpacity(1);
 
     setTimeoutHandle(
       onAnimationEnd(() => {
         // After the animation finishes, we change the height to auto, to account
-        // for things that may change height within the content area, such as 
-        // expanding text fields, etc.
-        setCurrentHeight('auto');
+        // for things that may change height within the content area, such as
+        // expanding text fields, and also browser resizing etc.
+        setCssHeight('auto');
         // We toggle overflow on and off to avoid cropping the focus state
         // on form fields
         setCssOverflow('visible');
@@ -46,13 +48,13 @@ export function toggleContent({
     if (onClose) {
       onClose();
     }
-    setCurrentHeight(`${contentHeight}px`);
+    setCssHeight(`${contentHeight}px`);
     setCssOverflow('hidden');
     setCssOpacity(0);
 
     onAnimationStart(() => {
-      setCurrentHeight(CLOSED_HEIGHT);
-    })
+      setCssHeight(CLOSED_HEIGHT);
+    });
 
     setTimeoutHandle(
       onAnimationEnd(() => {

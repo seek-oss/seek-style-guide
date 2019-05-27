@@ -17,7 +17,7 @@ function AccordionItem({
   ...restProps
 }) {
   const contentEl = useRef(null);
-  const [currentHeight, setCurrentHeight] = useState(CLOSED_HEIGHT);
+  const [cssHeight, setCssHeight] = useState(CLOSED_HEIGHT);
   const [cssVisibility, setCssVisibility] = useState('hidden');
   const [cssOverflow, setCssOverflow] = useState('hidden');
   const [cssOpacity, setCssOpacity] = useState(0);
@@ -36,7 +36,7 @@ function AccordionItem({
         onClose,
         timeoutHandle,
         setTimeoutHandle,
-        setCurrentHeight,
+        setCssHeight,
         setCssOpacity,
         setCssOverflow,
         setCssVisibility
@@ -81,7 +81,7 @@ function AccordionItem({
       <div
         className={styles.expander}
         style={{
-          height: currentHeight,
+          height: cssHeight,
           overflow: cssOverflow,
           opacity: cssOpacity
         }}
