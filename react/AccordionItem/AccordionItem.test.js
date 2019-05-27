@@ -2,7 +2,8 @@ import React from 'react';
 import AccordionItem from './AccordionItem';
 import { createRenderer } from 'react-test-renderer/shallow';
 import ReactTestUtils from 'react-dom/test-utils';
-import { findAllWithClass, findAllWithType } from 'react-shallow-testutils';
+import { findAllWithType } from 'react-shallow-testutils';
+import { TextLink } from 'seek-style-guide/react';
 
 describe('AccordionItem', () => {
   const renderer = createRenderer();
@@ -11,8 +12,7 @@ describe('AccordionItem', () => {
     it('should render the string with titleText styling', () => {
       const titleText = 'title text';
       const accordion = renderer.render(<AccordionItem title={titleText} />);
-
-      const [item] = findAllWithClass(accordion, 'AccordionItem__titleText');
+      const [item] = findAllWithType(accordion, TextLink);
       expect(item.props.children).toBe(titleText);
     });
   });
@@ -41,7 +41,7 @@ describe('AccordionItem', () => {
   });
 
   describe('onOpen', () => {
-    it('it should call the passed onOpen function', () => {
+    it('it should call the passed onOpen function', done => {
       const mockOnOpen = jest.fn();
       const element = (
         <div>
@@ -53,16 +53,21 @@ describe('AccordionItem', () => {
       const button = renderedElement.querySelector('button');
 
       ReactTestUtils.Simulate.click(button);
-      expect(mockOnOpen).toHaveBeenCalledTimes(1);
+
+      // wait for useEffect
+      requestAnimationFrame(() => {
+        expect(mockOnOpen).toHaveBeenCalledTimes(1);
+        done();
+      });
     });
   });
 
   describe('onClose', () => {
-    it('it should call the passed onClose function', () => {
+    it('it should call the passed onClose function', done => {
       const mockOnClose = jest.fn();
       const element = (
         <div>
-          <AccordionItem title={'title'} onClose={mockOnClose} open />
+          <AccordionItem title={'title'} onClose={mockOnClose} />
         </div>
       );
 
@@ -70,7 +75,13 @@ describe('AccordionItem', () => {
       const button = renderedElement.querySelector('button');
 
       ReactTestUtils.Simulate.click(button);
-      expect(mockOnClose).toHaveBeenCalledTimes(1);
+      ReactTestUtils.Simulate.click(button);
+
+      // wait for useEffect
+      requestAnimationFrame(() => {
+        expect(mockOnClose).toHaveBeenCalledTimes(1);
+        done();
+      });
     });
   });
 });

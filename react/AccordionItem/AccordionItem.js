@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from 'react';
+import React, { Fragment, useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ChevronIcon, TextLink, Text } from 'seek-style-guide/react';
 import classnames from 'classnames';
@@ -10,27 +10,44 @@ function AccordionItem({
   className,
   title,
   children,
-  open,
+  isOpen: externalIsOpen,
+  onClick,
   onOpen,
   onClose,
   ...restProps
 }) {
-  const initialHeight = open ? 'auto' : CLOSED_HEIGHT;
-  const initialVisibility = open ? 'visible' : 'hidden';
-  const initialOverflow = initialVisibility;
   const contentEl = useRef(null);
-  const [currentHeight, setCurrentHeight] = useState(initialHeight);
-  const [cssVisibility, setCssVisibility] = useState(initialVisibility);
-  const [cssOverflow, setCssOverflow] = useState(initialOverflow);
+  const [currentHeight, setCurrentHeight] = useState(CLOSED_HEIGHT);
+  const [cssVisibility, setCssVisibility] = useState('visible');
+  const [cssOverflow, setCssOverflow] = useState('visible');
+  const [cssOpacity, setCssOpacity] = useState(0);
   const [timeoutHandle, setTimeoutHandle] = useState(null);
-  const [isOpen, setIsOpen] = useState(open);
+  const [isOpen, setIsOpen] = useState(false);
+  const useInternalState = externalIsOpen === undefined;
+  const finalIsOpen = useInternalState ? isOpen : externalIsOpen;
+  const isMounting = useRef(true);
+
+  useEffect(() => {
+    if (isMounting.current === false) {
+      toggleContent({
+        el: contentEl.current,
+        isOpen: finalIsOpen,
+        onOpen,
+        onClose,
+        timeoutHandle,
+        setTimeoutHandle,
+        setCurrentHeight,
+        setCssOpacity,
+        setCssOverflow,
+        setCssVisibility
+      });
+    }
+
+    isMounting.current = false;
+  }, [finalIsOpen]);
 
   const buttonClasses = classnames(className, styles.title);
-  const isAnimating = currentHeight === CLOSED_HEIGHT && isOpen;
-  const expanderClasses = classnames(styles.expander, {
-    [styles.expanderOpen]: isAnimating
-  });
-  const chevronDirection = isOpen ? 'up' : 'down';
+  const chevronDirection = finalIsOpen ? 'up' : 'down';
 
   return (
     <Fragment>
@@ -38,31 +55,20 @@ function AccordionItem({
         type="button"
         className={buttonClasses}
         onClick={() => {
-          toggleContent({
-            el: contentEl.current,
-            setCurrentHeight,
-            timeoutHandle,
-            setTimeoutHandle,
-            isOpen,
-            setIsOpen,
-            setCssVisibility,
-            setCssOverflow
-          });
+          if (onClick) {
+            onClick();
+          }
 
-          if (isOpen && onClose) {
-            onClose();
-          } else if (!isOpen && onOpen) {
-            onOpen();
+          if (useInternalState) {
+            setIsOpen(!finalIsOpen);
           }
         }}
         {...restProps}
       >
         {typeof title === 'string' ? (
-          <TextLink>
-            <Text raw subheading baseline={false} className={styles.titleText}>
-              {title}
-            </Text>
-          </TextLink>
+          <Text raw baseline={false} className={styles.titleText}>
+            <TextLink>{title}</TextLink>
+          </Text>
         ) : (
           <span>{title}</span>
         )}
@@ -73,8 +79,12 @@ function AccordionItem({
         />
       </button>
       <div
-        className={expanderClasses}
-        style={{ height: currentHeight, overflow: cssOverflow }}
+        className={styles.expander}
+        style={{
+          height: currentHeight,
+          overflow: cssOverflow,
+          opacity: cssOpacity
+        }}
       >
         <div
           className={styles.content}
@@ -90,16 +100,16 @@ function AccordionItem({
 
 AccordionItem.propTypes = {
   title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+  isOpen: PropTypes.bool,
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
+  onClick: PropTypes.func,
   children: PropTypes.element.isRequired,
-  className: PropTypes.string,
-  open: PropTypes.bool
+  className: PropTypes.string
 };
 
 AccordionItem.defaultProps = {
-  className: '',
-  open: false
+  className: ''
 };
 
 export default AccordionItem;

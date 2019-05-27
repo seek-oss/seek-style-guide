@@ -1,54 +1,51 @@
 import { CLOSED_HEIGHT, DURATION } from './constants';
 
-function onAnimationStart(fn) {
-  setTimeout(fn, 0);
-}
-
 function onAnimationEnd(fn) {
   return setTimeout(fn, DURATION);
 }
 
 export function toggleContent({
   el,
+  onOpen,
+  onClose,
   setCurrentHeight,
   timeoutHandle,
   setTimeoutHandle,
   isOpen,
-  setIsOpen,
-  setCssVisibility,
-  setCssOverflow
+  setCssOpacity,
+  setCssOverflow,
+  setCssVisibility
 }) {
   const contentHeight = el.offsetHeight;
-  const isOpening = !isOpen;
   clearTimeout(timeoutHandle);
 
-  if (isOpening) {
+  if (isOpen) {
+    if (onOpen) {
+      onOpen();
+    }
     setCssVisibility('visible');
     setCurrentHeight(`${contentHeight}px`);
-    setIsOpen(true);
+    setCssOpacity(1);
 
     setTimeoutHandle(
       onAnimationEnd(() => {
         // We toggle overflow on and off to avoid cropping the focus state
         // on form fields
         setCssOverflow('visible');
-        setCurrentHeight('auto');
       })
     );
   } else {
-    setCurrentHeight(`${contentHeight}px`);
+    if (onClose) {
+      onClose();
+    }
+    setCurrentHeight(CLOSED_HEIGHT);
     setCssOverflow('hidden');
-
-    onAnimationStart(() => {
-      setCurrentHeight(CLOSED_HEIGHT);
-    }, 0);
+    setCssOpacity(0);
 
     setTimeoutHandle(
       onAnimationEnd(() => {
         setCssVisibility('hidden');
       })
     );
-
-    setIsOpen(false);
   }
 }
