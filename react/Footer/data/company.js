@@ -121,12 +121,6 @@ export const services = [
     specificLocale: 'NZ'
   },
   {
-    name: 'Ximble',
-    href: 'https://www.ximble.com',
-    analytics: 'toolbar:ximble',
-    specificLocale: 'AU'
-  },
-  {
     name: 'Spark Hire',
     href: 'https://anz.sparkhire.com/',
     analytics: 'toolbar:sparkhire',

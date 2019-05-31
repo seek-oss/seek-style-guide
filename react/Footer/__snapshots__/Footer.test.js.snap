@@ -564,17 +564,6 @@ exports[`Footer: should render when authenticated 1`] = `
                 >
                   <a
                     class="FooterLink__link"
-                    data-analytics="toolbar:ximble"
-                    href="https://www.ximble.com"
-                  >
-                    Ximble
-                  </a>
-                </li>
-                <li
-                  class=""
-                >
-                  <a
-                    class="FooterLink__link"
                     data-analytics="toolbar:sparkhire"
                     href="https://anz.sparkhire.com/"
                   >
@@ -1402,17 +1391,6 @@ exports[`Footer: should render when authentication is pending 1`] = `
                     href="https://sidekicker.com/au"
                   >
                     Sidekicker
-                  </a>
-                </li>
-                <li
-                  class=""
-                >
-                  <a
-                    class="FooterLink__link"
-                    data-analytics="toolbar:ximble"
-                    href="https://www.ximble.com"
-                  >
-                    Ximble
                   </a>
                 </li>
                 <li
@@ -2254,17 +2232,6 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 >
                   <a
                     class="FooterLink__link"
-                    data-analytics="toolbar:ximble"
-                    href="https://www.ximble.com"
-                  >
-                    Ximble
-                  </a>
-                </li>
-                <li
-                  class=""
-                >
-                  <a
-                    class="FooterLink__link"
                     data-analytics="toolbar:sparkhire"
                     href="https://anz.sparkhire.com/"
                   >
@@ -3092,17 +3059,6 @@ exports[`Footer: should render with locale of AU 1`] = `
                     href="https://sidekicker.com/au"
                   >
                     Sidekicker
-                  </a>
-                </li>
-                <li
-                  class=""
-                >
-                  <a
-                    class="FooterLink__link"
-                    data-analytics="toolbar:ximble"
-                    href="https://www.ximble.com"
-                  >
-                    Ximble
                   </a>
                 </li>
                 <li
