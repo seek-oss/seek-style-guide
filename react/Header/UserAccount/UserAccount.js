@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChevronIcon from '../../ChevronIcon/ChevronIcon';
-import Hidden from '../../Hidden/Hidden';
-import NotificationsLinkContainer from '../NotificationsLink/NotificationsLinkContainer';
 import ScreenReaderOnly from '../../ScreenReaderOnly/ScreenReaderOnly';
 import UserAccountMenu from '../UserAccountMenu/UserAccountMenu';
 import {
@@ -106,37 +104,27 @@ export default class UserAccount extends Component {
           </label>
         </div>
 
-        <div className={styles.accountContainer}>
-          <NotificationsLinkContainer
-            authenticationStatus={authenticationStatus}
-            linkRenderer={linkRenderer}
-          />
-
-          <label
-            data-automation="user-account-menu-toggle"
-            className={styles.toggleLabel}
-            htmlFor="user-account-menu-toggle"
-          >
-            <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
-            <span data-hj-masked={true}>
-              <Hidden desktop className={styles.menuLabel}>
-                {mobileMenuLabel}
-              </Hidden>
-              <Hidden
-                mobile
-                className={styles.menuLabel}
-                data-automation="user-account-name"
-              >
-                {desktopMenuLabel}
-              </Hidden>
+        <label
+          data-automation="user-account-menu-toggle"
+          className={styles.toggleLabel}
+          htmlFor="user-account-menu-toggle"
+        >
+          <ScreenReaderOnly>Show user menu</ScreenReaderOnly>
+          <span data-hj-masked={true}>
+            <span className={styles.mobileMenuLabel}>{mobileMenuLabel}</span>
+            <span
+              className={styles.desktopMenuLabel}
+              data-automation="user-account-name"
+            >
+              {desktopMenuLabel}
             </span>
-            <ChevronIcon
-              direction="down"
-              className={styles.chevron}
-              svgClassName={styles.chevronSvg}
-            />
-          </label>
-        </div>
+          </span>
+          <ChevronIcon
+            direction="down"
+            className={styles.chevron}
+            svgClassName={styles.chevronSvg}
+          />
+        </label>
 
         <div onClick={this.handleMenuClick} className={styles.toggleContainer}>
           <UserAccountMenu
