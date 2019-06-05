@@ -103,37 +103,33 @@ exports[`Header: should append returnUrl to signin and register links if present
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -671,41 +667,37 @@ exports[`Header: should render first part of email address when username isn't p
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
+                    class="UserAccount__menuLabel Hidden__desktop"
                   >
-                    Show user menu
+                    leeroybrown
                   </span>
                   <span
-                    data-hj-masked="true"
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
                   >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    >
-                      leeroybrown
-                    </span>
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    >
-                      leeroybrown
-                    </span>
+                    leeroybrown
                   </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -1244,37 +1236,33 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -1812,41 +1800,37 @@ exports[`Header: should render when authenticated 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
+                    class="UserAccount__menuLabel Hidden__desktop"
                   >
-                    Show user menu
+                    Leeroy
                   </span>
                   <span
-                    data-hj-masked="true"
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
                   >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    >
-                      Leeroy
-                    </span>
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    >
-                      Leeroy
-                    </span>
+                    Leeroy
                   </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -2385,37 +2369,33 @@ exports[`Header: should render when authenticated but username and email is not 
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -2954,37 +2934,33 @@ exports[`Header: should render when authentication is pending 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -3522,39 +3498,35 @@ exports[`Header: should render when unauthenticated 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
+                    class="UserAccount__menuLabel Hidden__desktop"
                   >
-                    Show user menu
+                    Menu
                   </span>
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    >
-                      Menu
-                    </span>
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -4068,37 +4040,33 @@ exports[`Header: should render with a custom logo 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -4636,37 +4604,33 @@ exports[`Header: should render with locale of AU 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -5204,37 +5168,33 @@ exports[`Header: should render with locale of NZ 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
@@ -5719,37 +5679,33 @@ exports[`Header: should render with no divider 1`] = `
                   </span>
                 </label>
               </div>
-              <div
-                class="UserAccount__accountContainer"
+              <label
+                class="UserAccount__toggleLabel"
+                data-automation="user-account-menu-toggle"
+                for="user-account-menu-toggle"
               >
-                <label
-                  class="UserAccount__toggleLabel"
-                  data-automation="user-account-menu-toggle"
-                  for="user-account-menu-toggle"
+                <span
+                  class="ScreenReaderOnly__root"
+                >
+                  Show user menu
+                </span>
+                <span
+                  data-hj-masked="true"
                 >
                   <span
-                    class="ScreenReaderOnly__root"
-                  >
-                    Show user menu
-                  </span>
+                    class="UserAccount__menuLabel Hidden__desktop"
+                  />
                   <span
-                    data-hj-masked="true"
-                  >
-                    <span
-                      class="UserAccount__menuLabel Hidden__desktop"
-                    />
-                    <span
-                      class="UserAccount__menuLabel Hidden__mobile"
-                      data-automation="user-account-name"
-                    />
-                  </span>
-                  <span
-                    class="Icon__root ChevronIcon__root UserAccount__chevron"
-                  >
-                    mock svg
-                  </span>
-                </label>
-              </div>
+                    class="UserAccount__menuLabel Hidden__mobile"
+                    data-automation="user-account-name"
+                  />
+                </span>
+                <span
+                  class="Icon__root ChevronIcon__root UserAccount__chevron"
+                >
+                  mock svg
+                </span>
+              </label>
               <div
                 class="UserAccount__toggleContainer"
               >
