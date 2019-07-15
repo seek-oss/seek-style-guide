@@ -58,7 +58,7 @@
   "dependencies": {
     "basekick": "^3.0.0",
     "classnames": "^2.2.5",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.11",
     "pad-left": "^2.1.0",
     "prop-types": "^15.6.0",
     "react-autowhatever": "10.1.1",
