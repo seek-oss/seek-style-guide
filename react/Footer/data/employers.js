@@ -39,13 +39,13 @@ export default [
   },
   {
     name: 'Customer service',
-    href: 'https://talent.seek.com.au/ContactUs',
+    href: 'https://talent.seek.com.au/contactus',
     analytics: 'toolbar:customer+service',
     specificLocale: 'AU'
   },
   {
     name: 'Customer service',
-    href: 'https://talent.seek.co.nz/ContactUs',
+    href: 'https://talent.seek.co.nz/contactus',
     analytics: 'toolbar:customer+service',
     specificLocale: 'NZ'
   },

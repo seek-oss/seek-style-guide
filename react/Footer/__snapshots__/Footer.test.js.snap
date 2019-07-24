@@ -335,14 +335,14 @@ exports[`Footer: should render when authenticated 1`] = `
                   <a
                     class="FooterLink__link"
                     data-analytics="toolbar:brighter+monday"
-                    href="https://www.brightermonday.com"
+                    href="https://www.brightermonday.co.ke"
                   >
-                    Brighter Monday
+                    BrighterMonday
                   </a>
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — E Africa
+                     — Kenya
                   </span>
                 </li>
                 <li
@@ -374,7 +374,7 @@ exports[`Footer: should render when authenticated 1`] = `
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — W Africa
+                     — Nigeria
                   </span>
                 </li>
                 <li
@@ -601,7 +601,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc"
+                href="https://seek.zendesk.com/hc/en-us"
               >
                 Help centre
               </a>
@@ -759,7 +759,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:customer+service"
-                href="https://talent.seek.com.au/ContactUs"
+                href="https://talent.seek.com.au/contactus"
               >
                 Customer service
               </a>
@@ -1169,14 +1169,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   <a
                     class="FooterLink__link"
                     data-analytics="toolbar:brighter+monday"
-                    href="https://www.brightermonday.com"
+                    href="https://www.brightermonday.co.ke"
                   >
-                    Brighter Monday
+                    BrighterMonday
                   </a>
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — E Africa
+                     — Kenya
                   </span>
                 </li>
                 <li
@@ -1208,7 +1208,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — W Africa
+                     — Nigeria
                   </span>
                 </li>
                 <li
@@ -1435,7 +1435,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc"
+                href="https://seek.zendesk.com/hc/en-us"
               >
                 Help centre
               </a>
@@ -1593,7 +1593,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:customer+service"
-                href="https://talent.seek.com.au/ContactUs"
+                href="https://talent.seek.com.au/contactus"
               >
                 Customer service
               </a>
@@ -2003,14 +2003,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   <a
                     class="FooterLink__link"
                     data-analytics="toolbar:brighter+monday"
-                    href="https://www.brightermonday.com"
+                    href="https://www.brightermonday.co.ke"
                   >
-                    Brighter Monday
+                    BrighterMonday
                   </a>
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — E Africa
+                     — Kenya
                   </span>
                 </li>
                 <li
@@ -2042,7 +2042,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — W Africa
+                     — Nigeria
                   </span>
                 </li>
                 <li
@@ -2269,7 +2269,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc"
+                href="https://seek.zendesk.com/hc/en-us"
               >
                 Help centre
               </a>
@@ -2427,7 +2427,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:customer+service"
-                href="https://talent.seek.com.au/ContactUs"
+                href="https://talent.seek.com.au/contactus"
               >
                 Customer service
               </a>
@@ -2837,14 +2837,14 @@ exports[`Footer: should render with locale of AU 1`] = `
                   <a
                     class="FooterLink__link"
                     data-analytics="toolbar:brighter+monday"
-                    href="https://www.brightermonday.com"
+                    href="https://www.brightermonday.co.ke"
                   >
-                    Brighter Monday
+                    BrighterMonday
                   </a>
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — E Africa
+                     — Kenya
                   </span>
                 </li>
                 <li
@@ -2876,7 +2876,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — W Africa
+                     — Nigeria
                   </span>
                 </li>
                 <li
@@ -3103,7 +3103,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc"
+                href="https://seek.zendesk.com/hc/en-us"
               >
                 Help centre
               </a>
@@ -3261,7 +3261,7 @@ exports[`Footer: should render with locale of AU 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:customer+service"
-                href="https://talent.seek.com.au/ContactUs"
+                href="https://talent.seek.com.au/contactus"
               >
                 Customer service
               </a>
@@ -3641,14 +3641,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   <a
                     class="FooterLink__link"
                     data-analytics="toolbar:brighter+monday"
-                    href="https://www.brightermonday.com"
+                    href="https://www.brightermonday.co.ke"
                   >
-                    Brighter Monday
+                    BrighterMonday
                   </a>
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — E Africa
+                     — Kenya
                   </span>
                 </li>
                 <li
@@ -3680,7 +3680,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                   <span
                     class="FooterLink__partnerCountry"
                   >
-                     — W Africa
+                     — Nigeria
                   </span>
                 </li>
                 <li
@@ -3851,7 +3851,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:help+centre"
-                href="https://seek.zendesk.com/hc"
+                href="https://seek.zendesk.com/hc/en-us"
               >
                 Help centre
               </a>
@@ -4009,7 +4009,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:customer+service"
-                href="https://talent.seek.co.nz/ContactUs"
+                href="https://talent.seek.co.nz/contactus"
               >
                 Customer service
               </a>
