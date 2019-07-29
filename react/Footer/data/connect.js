@@ -21,7 +21,7 @@ export default [
     secondary: true
   },
   {
-    name: 'SEEK Videos',
+    name: 'SEEK videos',
     href: 'https://video.seek.com.au',
     analytics: 'toolbar:seek+videos',
     newBadge: true

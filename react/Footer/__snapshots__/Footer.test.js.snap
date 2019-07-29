@@ -639,7 +639,7 @@ exports[`Footer: should render when authenticated 1`] = `
                 data-analytics="toolbar:seek+videos"
                 href="https://video.seek.com.au"
               >
-                SEEK Videos
+                SEEK videos
               </a>
               <span>
                   
@@ -1484,7 +1484,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 data-analytics="toolbar:seek+videos"
                 href="https://video.seek.com.au"
               >
-                SEEK Videos
+                SEEK videos
               </a>
               <span>
                   
@@ -2329,7 +2329,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
                 data-analytics="toolbar:seek+videos"
                 href="https://video.seek.com.au"
               >
-                SEEK Videos
+                SEEK videos
               </a>
               <span>
                   
@@ -3174,7 +3174,7 @@ exports[`Footer: should render with locale of AU 1`] = `
                 data-analytics="toolbar:seek+videos"
                 href="https://video.seek.com.au"
               >
-                SEEK Videos
+                SEEK videos
               </a>
               <span>
                   
@@ -3941,7 +3941,7 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 data-analytics="toolbar:seek+videos"
                 href="https://video.seek.com.au"
               >
-                SEEK Videos
+                SEEK videos
               </a>
               <span>
                   
