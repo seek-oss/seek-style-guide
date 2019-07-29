@@ -19,6 +19,12 @@ export default [
     href: 'https://medium.com/seek-blog',
     analytics: 'toolbar:product+blog',
     secondary: true
+  },
+  {
+    name: 'SEEK Videos',
+    href: 'https://video.seek.com.au',
+    analytics: 'toolbar:seek+videos',
+    newBadge: true
   }
 ];
 

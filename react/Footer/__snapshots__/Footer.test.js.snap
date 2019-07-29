@@ -103,14 +103,6 @@ exports[`Footer: should render when authenticated 1`] = `
               >
                 Explore Careers
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -638,6 +630,25 @@ exports[`Footer: should render when authenticated 1`] = `
               >
                 Product & Tech Blog
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:seek+videos"
+                href="https://video.seek.com.au"
+              >
+                SEEK Videos
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -937,14 +948,6 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 Explore Careers
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -1472,6 +1475,25 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 Product & Tech Blog
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:seek+videos"
+                href="https://video.seek.com.au"
+              >
+                SEEK Videos
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -1771,14 +1793,6 @@ exports[`Footer: should render when unauthenticated 1`] = `
               >
                 Explore Careers
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -2306,6 +2320,25 @@ exports[`Footer: should render when unauthenticated 1`] = `
               >
                 Product & Tech Blog
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:seek+videos"
+                href="https://video.seek.com.au"
+              >
+                SEEK Videos
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -2605,14 +2638,6 @@ exports[`Footer: should render with locale of AU 1`] = `
               >
                 Explore Careers
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -3140,6 +3165,25 @@ exports[`Footer: should render with locale of AU 1`] = `
               >
                 Product & Tech Blog
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:seek+videos"
+                href="https://video.seek.com.au"
+              >
+                SEEK Videos
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -3888,6 +3932,25 @@ exports[`Footer: should render with locale of NZ 1`] = `
               >
                 Product & Tech Blog
               </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:seek+videos"
+                href="https://video.seek.com.au"
+              >
+                SEEK Videos
+              </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""

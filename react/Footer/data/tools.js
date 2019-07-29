@@ -40,8 +40,7 @@ export default [
     href:
       'https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link',
     analytics: 'toolbar:career+guide',
-    specificLocale: 'AU',
-    newBadge: true
+    specificLocale: 'AU'
   },
   {
     name: 'Company reviews',
