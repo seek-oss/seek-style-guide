@@ -109,7 +109,8 @@ export const seekSites = [
   },
   {
     name: 'Business for sale',
-    href: 'https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus',
+    href:
+      'https://www.seekbusiness.com.au/?tracking=sk%3Amain%3Aau%3Anav%3Abus',
     analytics: 'toolbar:business+for+sale',
     specificLocale: 'AU'
   },
