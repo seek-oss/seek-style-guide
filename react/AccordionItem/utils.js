@@ -20,13 +20,14 @@ export function toggleContent({
   isOpen,
   setCssOpacity,
   setCssOverflow,
-  setCssVisibility
+  setCssVisibility,
+  isMounting
 }) {
   const contentHeight = el.offsetHeight;
   clearTimeout(timeoutHandle);
 
   if (isOpen) {
-    if (onOpen) {
+    if (onOpen && !isMounting) {
       onOpen();
     }
     setCssVisibility('visible');
@@ -45,7 +46,7 @@ export function toggleContent({
       })
     );
   } else {
-    if (onClose) {
+    if (onClose && !isMounting) {
       onClose();
     }
     setCssHeight(`${contentHeight}px`);
