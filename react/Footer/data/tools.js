@@ -40,8 +40,7 @@ export default [
     href:
       'https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link',
     analytics: 'toolbar:career+guide',
-    specificLocale: 'AU',
-    newBadge: true
+    specificLocale: 'AU'
   },
   {
     name: 'Company reviews',
@@ -109,13 +108,15 @@ export const seekSites = [
   },
   {
     name: 'Business for sale',
-    href: 'https://www.seekbusiness.com.au/?tracking=sk:main:au:nav:bus',
+    href:
+      'https://www.seekbusiness.com.au/?tracking=sk%3Amain%3Aau%3Anav%3Abus',
     analytics: 'toolbar:business+for+sale',
     specificLocale: 'AU'
   },
   {
     name: 'Business for sale',
-    href: 'https://www.seekbusiness.co.nz/?tracking=sk:main:nz:nav:bus',
+    href:
+      'https://www.seekbusiness.com.au/?site=nz&tracking=sk%3Amain%3Anz%3Anav%3Abus',
     analytics: 'toolbar:business+for+sale',
     specificLocale: 'NZ'
   },

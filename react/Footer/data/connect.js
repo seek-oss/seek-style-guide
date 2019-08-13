@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Help centre',
-    href: 'https://seek.zendesk.com/hc',
+    href: 'https://seek.zendesk.com/hc/en-us',
     analytics: 'toolbar:help+centre'
   },
   {
@@ -19,6 +19,20 @@ export default [
     href: 'https://medium.com/seek-blog',
     analytics: 'toolbar:product+blog',
     secondary: true
+  },
+  {
+    name: 'SEEK videos',
+    href: 'https://video.seek.com.au',
+    analytics: 'toolbar:seek+videos',
+    newBadge: true,
+    specificLocale: 'AU'
+  },
+  {
+    name: 'SEEK videos',
+    href: 'https://video.seek.co.nz',
+    analytics: 'toolbar:seek+videos',
+    newBadge: true,
+    specificLocale: 'NZ'
   }
 ];
 

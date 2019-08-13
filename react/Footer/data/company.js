@@ -27,9 +27,9 @@ export const partners = [
     analytics: 'toolbar:bdjobs'
   },
   {
-    name: 'Brighter Monday',
-    partner: 'E Africa',
-    href: 'https://www.brightermonday.com',
+    name: 'BrighterMonday',
+    partner: 'Kenya',
+    href: 'https://www.brightermonday.co.ke',
     analytics: 'toolbar:brighter+monday'
   },
   {
@@ -40,7 +40,7 @@ export const partners = [
   },
   {
     name: 'Jobberman',
-    partner: 'W Africa',
+    partner: 'Nigeria',
     href: 'https://www.jobberman.com',
     analytics: 'toolbar:jobberman'
   },
