@@ -28,21 +28,19 @@ function AccordionItem({
   const isMounting = useRef(true);
 
   useEffect(() => {
-    if (isMounting.current === false) {
-      toggleContent({
-        el: contentEl.current,
-        isOpen: finalIsOpen,
-        onOpen,
-        onClose,
-        timeoutHandle,
-        setTimeoutHandle,
-        setCssHeight,
-        setCssOpacity,
-        setCssOverflow,
-        setCssVisibility
-      });
-    }
-
+    toggleContent({
+      el: contentEl.current,
+      isOpen: finalIsOpen,
+      onOpen,
+      onClose,
+      timeoutHandle,
+      setTimeoutHandle,
+      setCssHeight,
+      setCssOpacity,
+      setCssOverflow,
+      setCssVisibility,
+      isMounting: isMounting.current
+    });
     isMounting.current = false;
   }, [finalIsOpen]);
 
