@@ -103,12 +103,6 @@ export const services = [
     'data-automation': 'jora-local-link'
   },
   {
-    name: 'realestate.com.au',
-    href: 'https://www.realestate.com.au/buy',
-    analytics: 'toolbar:realestate+au',
-    specificLocale: 'AU'
-  },
-  {
     name: 'Sidekicker',
     href: 'https://sidekicker.com/au',
     analytics: 'toolbar:sidekicker',
