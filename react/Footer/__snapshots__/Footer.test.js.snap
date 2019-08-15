@@ -816,13 +816,6 @@ exports[`Footer: should render when authenticated 1`] = `
         >
           Protect yourself online
         </a>
-        <a
-          class="Footer__copyrightLink Footer__secondaryLink"
-          data-analytics="toolbar:site+map"
-          href="/sitemap"
-        >
-          Site Map
-        </a>
         <p
           class="Footer__copyrightMessage"
         >
@@ -1649,13 +1642,6 @@ exports[`Footer: should render when authentication is pending 1`] = `
           rel="nofollow"
         >
           Protect yourself online
-        </a>
-        <a
-          class="Footer__copyrightLink Footer__secondaryLink"
-          data-analytics="toolbar:site+map"
-          href="/sitemap"
-        >
-          Site Map
         </a>
         <p
           class="Footer__copyrightMessage"
@@ -2484,13 +2470,6 @@ exports[`Footer: should render when unauthenticated 1`] = `
         >
           Protect yourself online
         </a>
-        <a
-          class="Footer__copyrightLink Footer__secondaryLink"
-          data-analytics="toolbar:site+map"
-          href="/sitemap"
-        >
-          Site Map
-        </a>
         <p
           class="Footer__copyrightMessage"
         >
@@ -3318,13 +3297,6 @@ exports[`Footer: should render with locale of AU 1`] = `
         >
           Protect yourself online
         </a>
-        <a
-          class="Footer__copyrightLink Footer__secondaryLink"
-          data-analytics="toolbar:site+map"
-          href="/sitemap"
-        >
-          Site Map
-        </a>
         <p
           class="Footer__copyrightMessage"
         >
@@ -4084,13 +4056,6 @@ exports[`Footer: should render with locale of NZ 1`] = `
           rel="nofollow"
         >
           Protect yourself online
-        </a>
-        <a
-          class="Footer__copyrightLink Footer__secondaryLink"
-          data-analytics="toolbar:site+map"
-          href="/sitemap"
-        >
-          Site Map
         </a>
         <p
           class="Footer__copyrightMessage"
