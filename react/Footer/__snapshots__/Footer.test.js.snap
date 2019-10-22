@@ -99,7 +99,7 @@ exports[`Footer: should render when authenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:career+guide"
-                href="https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
+                href="https://www.seek.com.au/career-advice/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
               >
                 Explore Careers
               </a>
@@ -926,7 +926,7 @@ exports[`Footer: should render when authentication is pending 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:career+guide"
-                href="https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
+                href="https://www.seek.com.au/career-advice/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
               >
                 Explore Careers
               </a>
@@ -1753,7 +1753,7 @@ exports[`Footer: should render when unauthenticated 1`] = `
               <a
                 class="FooterLink__link"
                 data-analytics="toolbar:career+guide"
-                href="https://www.seek.com.au/career-guide/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
+                href="https://www.seek.com.au/career-advice/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link"
               >
                 Explore Careers
               </a>
