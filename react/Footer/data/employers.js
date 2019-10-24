@@ -50,15 +50,27 @@ export default [
     specificLocale: 'NZ'
   },
   {
-    name: 'Insights & Resources',
-    href: 'http://insightsresources.seek.com.au/',
-    analytics: 'toolbar:insight+blog',
+    name: 'Hiring Advice',
+    href: 'http://insightsresources.seek.com.au/hiring-advice/',
+    analytics: 'toolbar:hirer+advice',
     specificLocale: 'AU'
   },
   {
-    name: 'Insights & Resources',
-    href: 'http://insightsresources.seek.co.nz/',
-    analytics: 'toolbar:insight+blog',
+    name: 'Hiring Advice',
+    href: 'http://insightsresources.seek.co.nz/hiring-advice/',
+    analytics: 'toolbar:hirer+advice',
+    specificLocale: 'NZ'
+  },
+  {
+    name: 'Market Insights',
+    href: 'http://insightsresources.seek.com.au/market-insights/',
+    analytics: 'toolbar:market+insights',
+    specificLocale: 'AU'
+  },
+  {
+    name: 'Market Insights',
+    href: 'http://insightsresources.seek.co.nz/market-insights/',
+    analytics: 'toolbar:market+insights',
     specificLocale: 'NZ'
   },
   {

@@ -769,10 +769,21 @@ exports[`Footer: should render when authenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
-                data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au/"
+                data-analytics="toolbar:hirer+advice"
+                href="http://insightsresources.seek.com.au/hiring-advice/"
               >
-                Insights & Resources
+                Hiring Advice
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:market+insights"
+                href="http://insightsresources.seek.com.au/market-insights/"
+              >
+                Market Insights
               </a>
             </li>
             <li
@@ -1596,10 +1607,21 @@ exports[`Footer: should render when authentication is pending 1`] = `
             >
               <a
                 class="FooterLink__link"
-                data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au/"
+                data-analytics="toolbar:hirer+advice"
+                href="http://insightsresources.seek.com.au/hiring-advice/"
               >
-                Insights & Resources
+                Hiring Advice
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:market+insights"
+                href="http://insightsresources.seek.com.au/market-insights/"
+              >
+                Market Insights
               </a>
             </li>
             <li
@@ -2423,10 +2445,21 @@ exports[`Footer: should render when unauthenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
-                data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au/"
+                data-analytics="toolbar:hirer+advice"
+                href="http://insightsresources.seek.com.au/hiring-advice/"
               >
-                Insights & Resources
+                Hiring Advice
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:market+insights"
+                href="http://insightsresources.seek.com.au/market-insights/"
+              >
+                Market Insights
               </a>
             </li>
             <li
@@ -3250,10 +3283,21 @@ exports[`Footer: should render with locale of AU 1`] = `
             >
               <a
                 class="FooterLink__link"
-                data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.com.au/"
+                data-analytics="toolbar:hirer+advice"
+                href="http://insightsresources.seek.com.au/hiring-advice/"
               >
-                Insights & Resources
+                Hiring Advice
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:market+insights"
+                href="http://insightsresources.seek.com.au/market-insights/"
+              >
+                Market Insights
               </a>
             </li>
             <li
@@ -4010,10 +4054,21 @@ exports[`Footer: should render with locale of NZ 1`] = `
             >
               <a
                 class="FooterLink__link"
-                data-analytics="toolbar:insight+blog"
-                href="http://insightsresources.seek.co.nz/"
+                data-analytics="toolbar:hirer+advice"
+                href="http://insightsresources.seek.co.nz/hiring-advice/"
               >
-                Insights & Resources
+                Hiring Advice
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:market+insights"
+                href="http://insightsresources.seek.co.nz/market-insights/"
+              >
+                Market Insights
               </a>
             </li>
             <li
