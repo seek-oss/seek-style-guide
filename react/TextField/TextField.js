@@ -95,7 +95,7 @@ export default class TextField extends Component<Props> {
       type,
       ...combineClassNames(inputProps, styles.input),
       ref: attachRefs(this.storeInputReference, ref),
-      'aria-describedby': `${id}-message`
+      'aria-describedby': id
     };
 
     return <input {...allInputProps} />;
