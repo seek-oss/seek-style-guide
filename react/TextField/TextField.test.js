@@ -92,6 +92,14 @@ describe('TextField', () => {
     });
   });
 
+  describe('message', () => {
+    it('should render the message if the message prop is passed in', () => {
+      expect(
+        shallow(<TextField {...requiredProps} message="This is required" />)
+      ).toMatchSnapshot();
+    });
+  });
+
   describe('clear button', () => {
     const handleClear = () => {};
 

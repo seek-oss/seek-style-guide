@@ -29,7 +29,6 @@ exports[`Autosuggest should render with label 1`] = `
       </label>
       <input
         aria-autocomplete="list"
-        aria-describedby="testAutosuggest-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
@@ -96,7 +95,6 @@ exports[`Autosuggest should render with mobile backdrop 1`] = `
       </label>
       <input
         aria-autocomplete="list"
-        aria-describedby="testAutosuggest-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
@@ -144,7 +142,6 @@ exports[`Autosuggest should render with simple props 1`] = `
     >
       <input
         aria-autocomplete="list"
-        aria-describedby="testAutosuggest-message"
         aria-expanded="false"
         aria-owns="react-autowhatever-1"
         autocomplete="off"
@@ -192,7 +189,6 @@ exports[`Autosuggest should render with suggestions 1`] = `
     >
       <input
         aria-autocomplete="list"
-        aria-describedby="testAutosuggest-message"
         aria-expanded="true"
         aria-owns="react-autowhatever-1"
         autocomplete="off"

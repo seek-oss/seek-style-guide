@@ -12,7 +12,6 @@ exports[`TextField clear button inputProps should be visible when value has whit
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -50,7 +49,6 @@ exports[`TextField clear button inputProps should be visible when value is provi
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -88,7 +86,6 @@ exports[`TextField clear button inputProps should not be visible when value is e
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -126,7 +123,6 @@ exports[`TextField clear button inputProps should not be visible when value is p
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -164,7 +160,6 @@ exports[`TextField clear button should be visible when value has white spaces on
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -202,7 +197,6 @@ exports[`TextField clear button should be visible when value is provided 1`] = `
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -240,7 +234,6 @@ exports[`TextField clear button should not be visible when value is empty 1`] = 
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -278,7 +271,6 @@ exports[`TextField clear button should not be visible when value is provided but
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -304,7 +296,7 @@ exports[`TextField clear button should not be visible when value is provided but
 </div>
 `;
 
-exports[`TextField should render with defaults 1`] = `
+exports[`TextField message should render the message if the message prop is passed in 1`] = `
 <div
   className="TextField__root"
 >
@@ -317,6 +309,43 @@ exports[`TextField should render with defaults 1`] = `
   />
   <input
     aria-describedby="testTextField-message"
+    className="TextField__input"
+    id="testTextField"
+    onChange={[Function]}
+    value=""
+  />
+  <span
+    className="TextField__clearField"
+    onMouseDown={[Function]}
+  >
+    <ClearField />
+  </span>
+  <FieldMessage
+    id="testTextField-message"
+    message="This is required"
+    messageProps={
+      Object {
+        "critical": false,
+        "positive": false,
+        "secondary": false,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`TextField should render with defaults 1`] = `
+<div
+  className="TextField__root"
+>
+  <FieldLabel
+    id="testTextField"
+    label=""
+    raw={false}
+    secondaryLabel=""
+    tertiaryLabel=""
+  />
+  <input
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -354,7 +383,6 @@ exports[`TextField should render with input props 1`] = `
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input first-name-field"
     data-automation="first-name-field"
     id="testTextField"
@@ -393,7 +421,6 @@ exports[`TextField valid / tone should not render the invalid style if tone is s
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -432,7 +459,6 @@ exports[`TextField valid / tone should render the invalid style for tone="critic
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}
@@ -471,7 +497,6 @@ exports[`TextField valid / tone should render the invalid style for valid={false
     tertiaryLabel=""
   />
   <input
-    aria-describedby="testTextField-message"
     className="TextField__input"
     id="testTextField"
     onChange={[Function]}

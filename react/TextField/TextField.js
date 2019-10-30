@@ -83,7 +83,8 @@ export default class TextField extends Component<Props> {
       onFocus,
       onBlur,
       type,
-      inputProps = {}
+      inputProps = {},
+      message
     } = this.props;
     const { ref } = inputProps;
     const allInputProps = {
@@ -94,9 +95,12 @@ export default class TextField extends Component<Props> {
       onBlur,
       type,
       ...combineClassNames(inputProps, styles.input),
-      ref: attachRefs(this.storeInputReference, ref),
-      'aria-describedby': id
+      ref: attachRefs(this.storeInputReference, ref)
     };
+
+    if (message) {
+      allInputProps['aria-describedby'] = `${id}-message`;
+    }
 
     return <input {...allInputProps} />;
   };
