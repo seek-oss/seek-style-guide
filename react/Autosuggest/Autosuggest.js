@@ -61,7 +61,7 @@ export default class Autosuggest extends Component {
     areSuggestionsShown: false
   };
 
-  componentWillUpdate(nextProps, nextState) {
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     if (
       !this.state.areSuggestionsShown &&
       nextState.areSuggestionsShown &&
@@ -155,7 +155,14 @@ export default class Autosuggest extends Component {
     return (
       <div>
         <ReactAutosuggest
-          inputProps={{ value, onChange, onFocus, onBlur, type, ...inputProps }}
+          inputProps={{
+            value,
+            onChange,
+            onFocus,
+            onBlur,
+            type,
+            ...inputProps
+          }}
           ref={this.storeInputReference}
           {...allAutosuggestProps}
         />

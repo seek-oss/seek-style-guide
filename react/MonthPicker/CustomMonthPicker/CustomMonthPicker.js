@@ -69,7 +69,7 @@ export default class CustomMonthPicker extends Component {
     this.yearOptions = getYearOptions(minYear, maxYear, ascendingYears);
   }
 
-  componentWillUpdate(newProps) {
+  UNSAFE_componentWillUpdate(newProps) {
     if (
       ['minYear', 'maxYear', 'ascendingYears'].filter(
         key => newProps[key] !== this.props[key]
