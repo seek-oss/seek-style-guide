@@ -630,14 +630,6 @@ exports[`Footer: should render when authenticated 1`] = `
               >
                 SEEK videos
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -774,6 +766,14 @@ exports[`Footer: should render when authenticated 1`] = `
               >
                 Hiring Advice
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -785,6 +785,14 @@ exports[`Footer: should render when authenticated 1`] = `
               >
                 Market Insights
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -1468,14 +1476,6 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 SEEK videos
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -1612,6 +1612,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 Hiring Advice
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -1623,6 +1631,14 @@ exports[`Footer: should render when authentication is pending 1`] = `
               >
                 Market Insights
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -2306,14 +2322,6 @@ exports[`Footer: should render when unauthenticated 1`] = `
               >
                 SEEK videos
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -2450,6 +2458,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
               >
                 Hiring Advice
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -2461,6 +2477,14 @@ exports[`Footer: should render when unauthenticated 1`] = `
               >
                 Market Insights
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -3144,14 +3168,6 @@ exports[`Footer: should render with locale of AU 1`] = `
               >
                 SEEK videos
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -3288,6 +3304,14 @@ exports[`Footer: should render with locale of AU 1`] = `
               >
                 Hiring Advice
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -3299,6 +3323,14 @@ exports[`Footer: should render with locale of AU 1`] = `
               >
                 Market Insights
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -3915,14 +3947,6 @@ exports[`Footer: should render with locale of NZ 1`] = `
               >
                 SEEK videos
               </a>
-              <span>
-                  
-                <div
-                  class="Badge__root Badge__info Badge__strong"
-                >
-                  New
-                </div>
-              </span>
             </li>
             <li
               class=""
@@ -4059,6 +4083,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
               >
                 Hiring Advice
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""
@@ -4070,6 +4102,14 @@ exports[`Footer: should render with locale of NZ 1`] = `
               >
                 Market Insights
               </a>
+              <span>
+                  
+                <div
+                  class="Badge__root Badge__info Badge__strong"
+                >
+                  New
+                </div>
+              </span>
             </li>
             <li
               class=""

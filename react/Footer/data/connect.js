@@ -24,14 +24,12 @@ export default [
     name: 'SEEK videos',
     href: 'https://video.seek.com.au',
     analytics: 'toolbar:seek+videos',
-    newBadge: true,
     specificLocale: 'AU'
   },
   {
     name: 'SEEK videos',
     href: 'https://video.seek.co.nz',
     analytics: 'toolbar:seek+videos',
-    newBadge: true,
     specificLocale: 'NZ'
   }
 ];
