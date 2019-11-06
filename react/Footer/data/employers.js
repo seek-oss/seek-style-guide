@@ -53,24 +53,28 @@ export default [
     name: 'Hiring Advice',
     href: 'http://insightsresources.seek.com.au/hiring-advice/',
     analytics: 'toolbar:hirer+advice',
+    newBadge: true,
     specificLocale: 'AU'
   },
   {
     name: 'Hiring Advice',
     href: 'http://insightsresources.seek.co.nz/hiring-advice/',
     analytics: 'toolbar:hirer+advice',
+    newBadge: true,
     specificLocale: 'NZ'
   },
   {
     name: 'Market Insights',
     href: 'http://insightsresources.seek.com.au/market-insights/',
     analytics: 'toolbar:market+insights',
+    newBadge: true,
     specificLocale: 'AU'
   },
   {
     name: 'Market Insights',
     href: 'http://insightsresources.seek.co.nz/market-insights/',
     analytics: 'toolbar:market+insights',
+    newBadge: true,
     specificLocale: 'NZ'
   },
   {
