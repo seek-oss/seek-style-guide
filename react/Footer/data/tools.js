@@ -37,8 +37,7 @@ export default [
   },
   {
     name: 'Explore Careers',
-    href:
-      'https://www.seek.com.au/career-advice/?campaigncode=seek_banner_29&sc_trk=skj-career-guide-link',
+    href: 'https://www.seek.com.au/career-advice/explore-careers',
     analytics: 'toolbar:career+guide',
     specificLocale: 'AU'
   },
