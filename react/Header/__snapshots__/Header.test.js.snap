@@ -5,6 +5,11 @@ exports[`Header: should append returnUrl to signin and register links if present
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -569,6 +574,11 @@ exports[`Header: should render first part of email address when username isn't p
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -1138,6 +1148,11 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -1702,6 +1717,11 @@ exports[`Header: should render when authenticated 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -2271,6 +2291,11 @@ exports[`Header: should render when authenticated but username and email is not 
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -2836,6 +2861,11 @@ exports[`Header: should render when authentication is pending 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -3400,6 +3430,11 @@ exports[`Header: should render when unauthenticated 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -3974,6 +4009,11 @@ exports[`Header: should render with a custom logo 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -4506,6 +4546,11 @@ exports[`Header: should render with locale of AU 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -5070,6 +5115,11 @@ exports[`Header: should render with locale of NZ 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.co.nz/","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seeknz/","https://twitter.com/seekjobsnz","https://plus.google.com/+seeknz","https://nz.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+64-0508-733-569","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
@@ -5581,6 +5631,11 @@ exports[`Header: should render with no divider 1`] = `
   class="Header__root"
   role="banner"
 >
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"Organization","url":"https://www.seek.com.au","legalName":"Seek Limited","logo":"https://www.seek.com.au/content/images/logos/seek-logo-positive.svg","sameAs":["https://www.facebook.com/SEEK/","https://en.wikipedia.org/wiki/Seek_Limited","https://www.youtube.com/user/SEEKJobs","https://www.instagram.com/seekau/","https://twitter.com/seekjobs","https://plus.google.com/+seekau","https://au.linkedin.com/company/seek"],"contactPoint":[{"@type":"ContactPoint","telephone":"+61-1300-658-700","contactType":"customer service","contactOption":"TollFree"}]}
+  </script>
   <div
     class="Header__content"
   >
