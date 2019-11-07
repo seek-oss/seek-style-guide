@@ -37,8 +37,7 @@ export default [
   },
   {
     name: 'Explore Careers',
-    href:
-      'https://www.seek.com.au/career-advice/explore-careers',
+    href: 'https://www.seek.com.au/career-advice/explore-careers',
     analytics: 'toolbar:career+guide',
     specificLocale: 'AU'
   },
