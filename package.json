@@ -147,7 +147,7 @@
     "renovate-config-seek": "^0.4.0",
     "seek-style-guide-webpack": "^3.0.1",
     "semantic-release": "^8.1.2",
-    "serialize-javascript": "^1.4.0",
+    "serialize-javascript": "^2.1.1",
     "sinon": "^4.0.1",
     "sinon-chai": "^2.14.0",
     "static-site-generator-webpack-plugin": "^3.4.1",
