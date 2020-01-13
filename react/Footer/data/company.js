@@ -125,5 +125,11 @@ export const services = [
     href: 'https://certsy.com/',
     analytics: 'toolbar:certsy',
     specificLocale: 'AU'
+  },
+  {
+    name: 'GradConnection',
+    href: 'https://au.gradconnection.com/',
+    analytics: 'toolbar:gradconnection',
+    specificLocale: 'AU'
   }
 ];
