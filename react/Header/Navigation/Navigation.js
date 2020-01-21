@@ -59,7 +59,14 @@ export default function Navigation({
       <ul className={styles.list} data-automation="nav-tabs">
         {items.map(
           (
-            { specificLocale = locale, analytics, name, isShort, promo, ...restProps },
+            {
+              specificLocale = locale,
+              analytics,
+              name,
+              isShort,
+              promo,
+              ...restProps
+            },
             key
           ) => {
             return specificLocale === locale ? (

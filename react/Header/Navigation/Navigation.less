@@ -37,9 +37,10 @@
       @-inline-hands: url('data:image/svg+xml,@{-walter-hands-svg}');
     }
 
-    .inline-svg();
+    
 
-    &:before {
+    &::before {
+      .inline-svg();
       content: '';
       background-image: @-inline-head;
       background-repeat: no-repeat;
@@ -52,13 +53,14 @@
       transition: all 0.2s ease-out;
     }
 
-    &:hover:before, &:focus:before {
+    &:hover::before, &:focus::before {
       top: -41px;
       height: 41px;
     }
 
 
-    &:after {
+    &::after {
+      .inline-svg();
       content: ''; 
       background-image: @-inline-hands;
       background-repeat: no-repeat;
@@ -70,10 +72,6 @@
       top: -4px;
       left: 50%;
       transform: translateX(-50%);
-    }
-
-    &:focus:after {
-      outline: none;
     }
   }
 }
