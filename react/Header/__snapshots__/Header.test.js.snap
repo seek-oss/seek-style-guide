@@ -423,23 +423,22 @@ exports[`Header: should append returnUrl to signin and register links if present
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -457,11 +456,12 @@ exports[`Header: should append returnUrl to signin and register links if present
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -992,23 +992,22 @@ exports[`Header: should render first part of email address when username isn't p
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -1026,11 +1025,12 @@ exports[`Header: should render first part of email address when username isn't p
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -1556,23 +1556,22 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              class="Navigation__link Navigation__link_isActive"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link Navigation__link_isActive"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -1590,11 +1589,12 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -2125,23 +2125,22 @@ exports[`Header: should render when authenticated 1`] = `
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -2159,11 +2158,12 @@ exports[`Header: should render when authenticated 1`] = `
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -2690,23 +2690,22 @@ exports[`Header: should render when authenticated but username and email is not 
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -2724,11 +2723,12 @@ exports[`Header: should render when authenticated but username and email is not 
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -3254,23 +3254,22 @@ exports[`Header: should render when authentication is pending 1`] = `
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -3288,11 +3287,12 @@ exports[`Header: should render when authentication is pending 1`] = `
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -3828,23 +3828,22 @@ exports[`Header: should render when unauthenticated 1`] = `
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -3862,11 +3861,12 @@ exports[`Header: should render when unauthenticated 1`] = `
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -4360,23 +4360,22 @@ exports[`Header: should render with a custom logo 1`] = `
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -4394,11 +4393,12 @@ exports[`Header: should render with a custom logo 1`] = `
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -4924,23 +4924,22 @@ exports[`Header: should render with locale of AU 1`] = `
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -4958,11 +4957,12 @@ exports[`Header: should render with locale of AU 1`] = `
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -5999,23 +5999,22 @@ exports[`Header: should render with no divider 1`] = `
             class="Navigation__item"
           >
             <a
-              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
+              data-analytics="header:profile"
+              href="/profile/"
             >
-              $150k+ Jobs
+              Profile
             </a>
           </li>
           <li
             class="Navigation__item"
           >
             <a
-              class="Navigation__link"
-              data-analytics="header:profile"
-              href="/profile/"
+              class="Navigation__link Navigation__promo"
+              data-analytics="header:advice"
+              href="/career-advice/"
             >
-              Profile
+              Career Advice
             </a>
           </li>
           <li
@@ -6033,11 +6032,12 @@ exports[`Header: should render with no divider 1`] = `
             class="Navigation__item"
           >
             <a
+              aria-label="One fifty K jobs"
               class="Navigation__link"
-              data-analytics="header:advice"
-              href="/career-advice/"
+              data-analytics="header:high+salary"
+              href="/150kjobs"
             >
-              Career Advice
+              $150k+ Jobs
             </a>
           </li>
         </ul>
