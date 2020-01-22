@@ -142,6 +142,7 @@ The following colors are provided:
 @sk-link-visited;
 @sk-focus;
 @sk-footer;
+@sk-footer-promo;
 @sk-background;
 @sk-form-accent;
 @sk-positive-light;

@@ -25,6 +25,7 @@ const defaultLinkRenderer = props => <a {...props} />;
 export default class Footer extends Component {
   static propTypes = {
     locale: PropTypes.oneOf(['AU', 'NZ']),
+    promo: PropTypes.bool,
     linkRenderer: PropTypes.func,
     authenticationStatus: PropTypes.oneOf([
       AUTHENTICATED,
@@ -35,6 +36,7 @@ export default class Footer extends Component {
 
   static defaultProps = {
     locale: 'AU',
+    promo: false,
     linkRenderer: defaultLinkRenderer,
     authenticationStatus: AUTH_PENDING
   };
@@ -48,17 +50,19 @@ export default class Footer extends Component {
   shouldComponentUpdate(nextProps) {
     return (
       this.props.locale !== nextProps.locale ||
+      this.props.promo !== nextProps.promo ||
       this.props.authenticationStatus !== nextProps.authenticationStatus
     );
   }
 
   renderLink({ name, specificLocale, secondary, ...restProps }, i) {
-    const { locale, linkRenderer, authenticationStatus } = this.props;
+    const { locale, linkRenderer, authenticationStatus, promo } = this.props;
 
     return !specificLocale || specificLocale === locale ? (
       <FooterLink
         secondary={secondary}
         linkRenderer={linkRenderer}
+        promo={promo}
         authenticationStatus={authenticationStatus}
         key={i}
         {...restProps}
@@ -69,10 +73,15 @@ export default class Footer extends Component {
   }
 
   render() {
-    const { linkRenderer } = this.props;
-
+    const { linkRenderer, promo } = this.props;
     return (
-      <footer role="contentinfo" className={styles.root}>
+      <footer
+        role="contentinfo"
+        className={classnames({
+          [styles.root]: true,
+          [styles.promo]: promo
+        })}
+      >
         <Hidden print>
           <div className={styles.content}>
             <div className={styles.columns}>
@@ -130,6 +139,7 @@ export default class Footer extends Component {
                   key,
                   className: classnames({
                     [styles.copyrightLink]: true,
+                    [styles.promo]: promo,
                     [styles.secondaryLink]: secondary
                   })
                 })
