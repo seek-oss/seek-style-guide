@@ -53,6 +53,7 @@ FooterLink.propTypes = {
   newBadge: PropTypes.bool,
   className: PropTypes.string,
   partner: PropTypes.string,
+  promo: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
