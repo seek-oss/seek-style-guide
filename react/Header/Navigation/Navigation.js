@@ -14,17 +14,16 @@ const items = [
     analytics: 'header:jobs'
   },
   {
-    name: '$150k+ Jobs',
-    'aria-label': 'One fifty K jobs',
-    href: '/150kjobs',
-    analytics: 'header:high+salary',
-    specificLocale: 'AU'
-  },
-  {
     name: 'Profile',
     href: '/profile/',
     analytics: 'header:profile',
     isShort: true
+  },
+  {
+    name: 'Career Advice',
+    href: '/career-advice/',
+    analytics: 'header:advice',
+    promo: true
   },
   {
     name: 'Company Reviews',
@@ -33,9 +32,11 @@ const items = [
     specificLocale: 'AU'
   },
   {
-    name: 'Career Advice',
-    href: '/career-advice/',
-    analytics: 'header:advice'
+    name: '$150k+ Jobs',
+    'aria-label': 'One fifty K jobs',
+    href: '/150kjobs',
+    analytics: 'header:high+salary',
+    specificLocale: 'AU'
   }
 ];
 
@@ -58,7 +59,14 @@ export default function Navigation({
       <ul className={styles.list} data-automation="nav-tabs">
         {items.map(
           (
-            { specificLocale = locale, analytics, name, isShort, ...restProps },
+            {
+              specificLocale = locale,
+              analytics,
+              name,
+              isShort,
+              promo,
+              ...restProps
+            },
             key
           ) => {
             return specificLocale === locale ? (
@@ -83,7 +91,8 @@ export default function Navigation({
                   'data-analytics': analytics,
                   className: classnames({
                     [styles.link]: true,
-                    [styles.link_isActive]: name === activeTab
+                    [styles.link_isActive]: name === activeTab,
+                    [styles.promo]: promo && locale === 'AU'
                   }),
                   ...restProps
                 })}
