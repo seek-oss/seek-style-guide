@@ -74,6 +74,7 @@ export default class Footer extends Component {
 
   render() {
     const { linkRenderer, promo } = this.props;
+
     return (
       <footer
         role="contentinfo"
@@ -88,12 +89,17 @@ export default class Footer extends Component {
               <FooterNav label="Tools">
                 {tools.map(this.renderLink)}
                 <ToggleContainer
+                  promo={promo}
                   name="DownloadAppsToggle"
                   label="Download apps"
                 >
                   {seekApps.map(this.renderLink)}
                 </ToggleContainer>
-                <ToggleContainer name="PartnerSitesToggle" label="SEEK sites">
+                <ToggleContainer
+                  promo={promo}
+                  name="PartnerSitesToggle"
+                  label="SEEK sites"
+                >
                   {seekSites.map(this.renderLink)}
                 </ToggleContainer>
               </FooterNav>
@@ -101,6 +107,7 @@ export default class Footer extends Component {
               <FooterNav secondary label="Company">
                 {company.map(this.renderLink)}
                 <ToggleContainer
+                  promo={promo}
                   secondary
                   name="InternationalPartnersToggle"
                   label="International partners"
@@ -108,6 +115,7 @@ export default class Footer extends Component {
                   {partners.map(this.renderLink)}
                 </ToggleContainer>
                 <ToggleContainer
+                  promo={promo}
                   secondary
                   name="PartnerServicesToggle"
                   label="Partner services"
@@ -119,7 +127,11 @@ export default class Footer extends Component {
 
               <FooterNav label="Connect">
                 {connect.map(this.renderLink)}
-                <ToggleContainer name="SocialToggle" label="Social">
+                <ToggleContainer
+                  name="SocialToggle"
+                  label="Social"
+                  promo={promo}
+                >
                   {social.map(this.renderLink)}
                 </ToggleContainer>
               </FooterNav>
@@ -139,12 +151,17 @@ export default class Footer extends Component {
                   key,
                   className: classnames({
                     [styles.copyrightLink]: true,
-                    [styles.promo]: promo,
-                    [styles.secondaryLink]: secondary
+                    [styles.secondaryLink]: secondary,
+                    [styles.promoText]: promo
                   })
                 })
               )}
-              <p className={styles.copyrightMessage}>
+              <p
+                className={classnames({
+                  [styles.copyrightMessage]: true,
+                  [styles.promoText]: promo
+                })}
+              >
                 {'\u00A9 SEEK. All rights reserved.'}
               </p>
             </div>
