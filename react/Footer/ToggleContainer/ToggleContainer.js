@@ -8,6 +8,7 @@ export default function ToggleContainer({
   children,
   secondary,
   label,
+  promo,
   name,
   'data-automation': dataAutomation
 }) {
@@ -20,7 +21,11 @@ export default function ToggleContainer({
         data-automation={dataAutomation}
       />
       <label
-        className={`${styles.toggleLink} ${styles.toggleLabel}`}
+        className={classnames({
+          [styles.toggleLink]: true,
+          [styles.toggleLabel]: true,
+          [styles.promo]: promo
+        })}
         htmlFor={name}
       >
         {label}
@@ -34,6 +39,7 @@ export default function ToggleContainer({
 ToggleContainer.propTypes = {
   secondary: PropTypes.bool,
   name: PropTypes.string.isRequired,
+  promo: PropTypes.bool,
   label: PropTypes.string.isRequired,
   'data-automation': PropTypes.string,
   children: PropTypes.oneOfType([

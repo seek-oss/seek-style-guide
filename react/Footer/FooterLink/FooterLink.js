@@ -19,6 +19,7 @@ export default function FooterLink({
   href,
   newBadge,
   authRequired,
+  promo,
   authenticationStatus,
   ...props
 }) {
@@ -26,7 +27,7 @@ export default function FooterLink({
     <li className={classnames(className, { [styles.secondary]: secondary })}>
       {linkRenderer({
         'data-analytics': analytics,
-        className: styles.link,
+        className: classnames({ [styles.link]: true, [styles.promo]: promo }),
         href: authRequired
           ? urlForAuthStatus(authenticationStatus, href)
           : href,
@@ -52,6 +53,7 @@ FooterLink.propTypes = {
   newBadge: PropTypes.bool,
   className: PropTypes.string,
   partner: PropTypes.string,
+  promo: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node

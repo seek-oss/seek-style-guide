@@ -25,6 +25,7 @@ const defaultLinkRenderer = props => <a {...props} />;
 export default class Footer extends Component {
   static propTypes = {
     locale: PropTypes.oneOf(['AU', 'NZ']),
+    promo: PropTypes.bool,
     linkRenderer: PropTypes.func,
     authenticationStatus: PropTypes.oneOf([
       AUTHENTICATED,
@@ -35,6 +36,7 @@ export default class Footer extends Component {
 
   static defaultProps = {
     locale: 'AU',
+    promo: false,
     linkRenderer: defaultLinkRenderer,
     authenticationStatus: AUTH_PENDING
   };
@@ -48,17 +50,19 @@ export default class Footer extends Component {
   shouldComponentUpdate(nextProps) {
     return (
       this.props.locale !== nextProps.locale ||
+      this.props.promo !== nextProps.promo ||
       this.props.authenticationStatus !== nextProps.authenticationStatus
     );
   }
 
   renderLink({ name, specificLocale, secondary, ...restProps }, i) {
-    const { locale, linkRenderer, authenticationStatus } = this.props;
+    const { locale, linkRenderer, authenticationStatus, promo } = this.props;
 
     return !specificLocale || specificLocale === locale ? (
       <FooterLink
         secondary={secondary}
         linkRenderer={linkRenderer}
+        promo={promo}
         authenticationStatus={authenticationStatus}
         key={i}
         {...restProps}
@@ -69,22 +73,33 @@ export default class Footer extends Component {
   }
 
   render() {
-    const { linkRenderer } = this.props;
+    const { linkRenderer, promo } = this.props;
 
     return (
-      <footer role="contentinfo" className={styles.root}>
+      <footer
+        role="contentinfo"
+        className={classnames({
+          [styles.root]: true,
+          [styles.promo]: promo
+        })}
+      >
         <Hidden print>
           <div className={styles.content}>
             <div className={styles.columns}>
               <FooterNav label="Tools">
                 {tools.map(this.renderLink)}
                 <ToggleContainer
+                  promo={promo}
                   name="DownloadAppsToggle"
                   label="Download apps"
                 >
                   {seekApps.map(this.renderLink)}
                 </ToggleContainer>
-                <ToggleContainer name="PartnerSitesToggle" label="SEEK sites">
+                <ToggleContainer
+                  promo={promo}
+                  name="PartnerSitesToggle"
+                  label="SEEK sites"
+                >
                   {seekSites.map(this.renderLink)}
                 </ToggleContainer>
               </FooterNav>
@@ -92,6 +107,7 @@ export default class Footer extends Component {
               <FooterNav secondary label="Company">
                 {company.map(this.renderLink)}
                 <ToggleContainer
+                  promo={promo}
                   secondary
                   name="InternationalPartnersToggle"
                   label="International partners"
@@ -99,6 +115,7 @@ export default class Footer extends Component {
                   {partners.map(this.renderLink)}
                 </ToggleContainer>
                 <ToggleContainer
+                  promo={promo}
                   secondary
                   name="PartnerServicesToggle"
                   label="Partner services"
@@ -110,7 +127,11 @@ export default class Footer extends Component {
 
               <FooterNav label="Connect">
                 {connect.map(this.renderLink)}
-                <ToggleContainer name="SocialToggle" label="Social">
+                <ToggleContainer
+                  name="SocialToggle"
+                  label="Social"
+                  promo={promo}
+                >
                   {social.map(this.renderLink)}
                 </ToggleContainer>
               </FooterNav>
@@ -130,11 +151,17 @@ export default class Footer extends Component {
                   key,
                   className: classnames({
                     [styles.copyrightLink]: true,
-                    [styles.secondaryLink]: secondary
+                    [styles.secondaryLink]: secondary,
+                    [styles.promoText]: promo
                   })
                 })
               )}
-              <p className={styles.copyrightMessage}>
+              <p
+                className={classnames({
+                  [styles.copyrightMessage]: true,
+                  [styles.promoText]: promo
+                })}
+              >
                 {'\u00A9 SEEK. All rights reserved.'}
               </p>
             </div>

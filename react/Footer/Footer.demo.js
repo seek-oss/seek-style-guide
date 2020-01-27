@@ -55,6 +55,20 @@ export default {
           })
         }
       ]
+    },
+    {
+      type: 'checklist',
+      label: 'States',
+
+      states: [
+        {
+          label: 'Promo',
+          transformProps: props => ({
+            ...props,
+            promo: true
+          })
+        }
+      ]
     }
   ]
 };
