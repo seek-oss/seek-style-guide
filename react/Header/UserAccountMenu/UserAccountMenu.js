@@ -198,9 +198,7 @@ export default ({
       <Hidden
         desktop
         component="li"
-        className={classnames(
-          activeTab === CAREER_ADVICE && styles.activeTab,
-        )}
+        className={classnames(activeTab === CAREER_ADVICE && styles.activeTab)}
       >
         {linkRenderer({
           'data-analytics': 'header:advice',
@@ -217,7 +215,7 @@ export default ({
           ]
         })}
       </Hidden>
-    )}    
+    )}
     <Hidden
       mobile
       component="li"
