@@ -5,7 +5,7 @@ import styles from './UserAccountMenu.less';
 import React from 'react';
 import classnames from 'classnames';
 
-import BuildingIcon from '../../BuildingIcon/BuildingIcon';
+import ArticleIcon from '../../ArticleIcon/ArticleIcon';
 import SearchIcon from '../../SearchIcon/SearchIcon';
 import ProfileIcon from '../../ProfileIcon/ProfileIcon';
 import HeartIcon from '../../HeartIcon/HeartIcon';
@@ -199,25 +199,25 @@ export default ({
         desktop
         component="li"
         className={classnames(
-          activeTab === COMPANY_REVIEWS && styles.activeTab
+          activeTab === CAREER_ADVICE && styles.activeTab,
         )}
       >
         {linkRenderer({
-          'data-analytics': 'header:companies',
+          'data-analytics': 'header:advice',
           className: styles.item,
-          href: '/companies/',
+          href: '/career-advice/',
           children: [
-            newBadgeTab === COMPANY_REVIEWS && <BadgeComponent />,
-            COMPANY_REVIEWS,
-            <BuildingIcon
+            newBadgeTab === CAREER_ADVICE && <BadgeComponent />,
+            CAREER_ADVICE,
+            <ArticleIcon
               key="icon"
               className={styles.icon}
-              svgClassName={styles.crSvg}
+              svgClassName={styles.caSvg}
             />
           ]
         })}
       </Hidden>
-    )}
+    )}    
     <Hidden
       mobile
       component="li"
@@ -290,17 +290,17 @@ export default ({
         desktop
         component="li"
         className={classnames(
-          activeTab === CAREER_ADVICE && styles.activeTab,
+          activeTab === COMPANY_REVIEWS && styles.activeTab,
           styles.firstItemInGroup
         )}
       >
         {linkRenderer({
-          'data-analytics': 'header:advice',
+          'data-analytics': 'header:companies',
           className: styles.item,
-          href: '/career-advice/',
+          href: '/companies/',
           children: [
-            newBadgeTab === CAREER_ADVICE && <BadgeComponent />,
-            CAREER_ADVICE,
+            newBadgeTab === COMPANY_REVIEWS && <BadgeComponent />,
+            COMPANY_REVIEWS,
             <div key="iconSpacer" className={styles.iconSpacer} />
           ]
         })}
