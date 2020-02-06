@@ -255,9 +255,7 @@ export default ({
           case AUTHENTICATED:
             return (
               <Fragment>
-                <Hidden
-                  desktop
-                  component="li"
+                <li
                   className={classnames(
                     activeTab === SETTINGS && styles.activeTab
                   )}
@@ -271,7 +269,7 @@ export default ({
                       <div key="iconSpacer" className={styles.iconSpacer} />
                     ]
                   })}
-                </Hidden>
+                </li>
                 {linkRenderer({
                   'data-analytics': 'header:sign-out',
                   className: styles.item,
@@ -281,11 +279,7 @@ export default ({
                     : '/Login/Logout',
                   children: [
                     'Sign Out',
-                    <Hidden
-                      desktop
-                      key="iconSpacer"
-                      className={styles.iconSpacer}
-                    />
+                    <div key="iconSpacer" className={styles.iconSpacer} />
                   ]
                 })}
               </Fragment>

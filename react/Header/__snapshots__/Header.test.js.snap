@@ -852,7 +852,7 @@ exports[`Header: should render first part of email address when username isn't p
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   />
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
                       class="UserAccountMenu__item"
@@ -871,8 +871,8 @@ exports[`Header: should render first part of email address when username isn't p
                     href="/Login/Logout"
                   >
                     Sign Out
-                    <span
-                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    <div
+                      class="UserAccountMenu__iconSpacer"
                     />
                   </a>
                   <li
@@ -1998,7 +1998,7 @@ exports[`Header: should render when authenticated 1`] = `
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   />
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
                       class="UserAccountMenu__item"
@@ -2017,8 +2017,8 @@ exports[`Header: should render when authenticated 1`] = `
                     href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
                   >
                     Sign Out
-                    <span
-                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    <div
+                      class="UserAccountMenu__iconSpacer"
                     />
                   </a>
                   <li
@@ -2576,7 +2576,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   />
                   <li
-                    class="Hidden__desktop"
+                    class=""
                   >
                     <a
                       class="UserAccountMenu__item"
@@ -2595,8 +2595,8 @@ exports[`Header: should render when authenticated but username and email is not 
                     href="/Login/Logout"
                   >
                     Sign Out
-                    <span
-                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    <div
+                      class="UserAccountMenu__iconSpacer"
                     />
                   </a>
                   <li
