@@ -2,7 +2,7 @@
 
 import styles from './UserAccountMenu.less';
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import classnames from 'classnames';
 
 import ArticleIcon from '../../ArticleIcon/ArticleIcon';
@@ -253,22 +253,38 @@ export default ({
               </span>
             );
           case AUTHENTICATED:
-            return linkRenderer({
-              'data-analytics': 'header:sign-out',
-              className: styles.item,
-              onClick: clearLocalStorage,
-              href: returnUrl
-                ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl)
-                : '/Login/Logout',
-              children: [
-                'Sign Out',
-                <Hidden
-                  desktop
-                  key="iconSpacer"
-                  className={styles.iconSpacer}
-                />
-              ]
-            });
+            return (
+              <Fragment>
+                <li
+                  className={classnames(
+                    activeTab === SETTINGS && styles.activeTab
+                  )}
+                >
+                  {linkRenderer({
+                    'data-analytics': 'header:settings',
+                    className: styles.item,
+                    href: '/settings/',
+                    children: [
+                      SETTINGS,
+                      <div key="iconSpacer" className={styles.iconSpacer} />
+                    ]
+                  })}
+                </li>
+                {linkRenderer({
+                  'data-analytics': 'header:sign-out',
+                  className: styles.item,
+                  onClick: clearLocalStorage,
+                  href: returnUrl
+                    ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl)
+                    : '/Login/Logout',
+                  children: [
+                    'Sign Out',
+                    <div key="iconSpacer" className={styles.iconSpacer} />
+                  ]
+                })}
+              </Fragment>
+            );
+
           default:
             return (
               <span className={classnames(styles.item, styles.pendingAuth)}>
