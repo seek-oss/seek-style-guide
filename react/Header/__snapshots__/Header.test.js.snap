@@ -280,30 +280,26 @@ exports[`Header: should append returnUrl to signin and register links if present
                       Settings
                     </a>
                   </li>
-                  <li
-                    class="UserAccountMenu__firstItemInGroup Hidden__desktop"
+                  <span
+                    class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                   >
-                    <span
-                      class="UserAccountMenu__item UserAccountMenu__pendingAuth"
+                    <div
+                      class="Loader__root Loader__inline Loader__xsmall"
                     >
                       <div
-                        class="Loader__root Loader__inline Loader__xsmall"
-                      >
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                      </div>
-                      <span
-                        class="UserAccountMenu__iconSpacer Hidden__desktop"
+                        class="Loader__ball"
                       />
-                    </span>
-                  </li>
+                      <div
+                        class="Loader__ball"
+                      />
+                      <div
+                        class="Loader__ball"
+                      />
+                    </div>
+                    <span
+                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    />
+                  </span>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -850,9 +846,6 @@ exports[`Header: should render first part of email address when username isn't p
                   </li>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
-                  />
-                  <li
-                    class=""
                   >
                     <a
                       class="UserAccountMenu__item"
@@ -865,16 +858,20 @@ exports[`Header: should render first part of email address when username isn't p
                       />
                     </a>
                   </li>
-                  <a
-                    class="UserAccountMenu__item"
-                    data-analytics="header:sign-out"
-                    href="/Login/Logout"
+                  <li
+                    class="Hidden__desktop"
                   >
-                    Sign Out
-                    <div
-                      class="UserAccountMenu__iconSpacer"
-                    />
-                  </a>
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:sign-out"
+                      href="/Login/Logout"
+                    >
+                      Sign Out
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -1426,30 +1423,26 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
                       Settings
                     </a>
                   </li>
-                  <li
-                    class="UserAccountMenu__firstItemInGroup Hidden__desktop"
+                  <span
+                    class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                   >
-                    <span
-                      class="UserAccountMenu__item UserAccountMenu__pendingAuth"
+                    <div
+                      class="Loader__root Loader__inline Loader__xsmall"
                     >
                       <div
-                        class="Loader__root Loader__inline Loader__xsmall"
-                      >
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                      </div>
-                      <span
-                        class="UserAccountMenu__iconSpacer Hidden__desktop"
+                        class="Loader__ball"
                       />
-                    </span>
-                  </li>
+                      <div
+                        class="Loader__ball"
+                      />
+                      <div
+                        class="Loader__ball"
+                      />
+                    </div>
+                    <span
+                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    />
+                  </span>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -1996,9 +1989,6 @@ exports[`Header: should render when authenticated 1`] = `
                   </li>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
-                  />
-                  <li
-                    class=""
                   >
                     <a
                       class="UserAccountMenu__item"
@@ -2011,16 +2001,20 @@ exports[`Header: should render when authenticated 1`] = `
                       />
                     </a>
                   </li>
-                  <a
-                    class="UserAccountMenu__item"
-                    data-analytics="header:sign-out"
-                    href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                  <li
+                    class="Hidden__desktop"
                   >
-                    Sign Out
-                    <div
-                      class="UserAccountMenu__iconSpacer"
-                    />
-                  </a>
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:sign-out"
+                      href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                    >
+                      Sign Out
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -2574,9 +2568,6 @@ exports[`Header: should render when authenticated but username and email is not 
                   </li>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
-                  />
-                  <li
-                    class=""
                   >
                     <a
                       class="UserAccountMenu__item"
@@ -2589,16 +2580,20 @@ exports[`Header: should render when authenticated but username and email is not 
                       />
                     </a>
                   </li>
-                  <a
-                    class="UserAccountMenu__item"
-                    data-analytics="header:sign-out"
-                    href="/Login/Logout"
+                  <li
+                    class="Hidden__desktop"
                   >
-                    Sign Out
-                    <div
-                      class="UserAccountMenu__iconSpacer"
-                    />
-                  </a>
+                    <a
+                      class="UserAccountMenu__item"
+                      data-analytics="header:sign-out"
+                      href="/Login/Logout"
+                    >
+                      Sign Out
+                      <div
+                        class="UserAccountMenu__iconSpacer"
+                      />
+                    </a>
+                  </li>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -3150,30 +3145,26 @@ exports[`Header: should render when authentication is pending 1`] = `
                       Settings
                     </a>
                   </li>
-                  <li
-                    class="UserAccountMenu__firstItemInGroup Hidden__desktop"
+                  <span
+                    class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                   >
-                    <span
-                      class="UserAccountMenu__item UserAccountMenu__pendingAuth"
+                    <div
+                      class="Loader__root Loader__inline Loader__xsmall"
                     >
                       <div
-                        class="Loader__root Loader__inline Loader__xsmall"
-                      >
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                      </div>
-                      <span
-                        class="UserAccountMenu__iconSpacer Hidden__desktop"
+                        class="Loader__ball"
                       />
-                    </span>
-                  </li>
+                      <div
+                        class="Loader__ball"
+                      />
+                      <div
+                        class="Loader__ball"
+                      />
+                    </div>
+                    <span
+                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    />
+                  </span>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -4256,30 +4247,26 @@ exports[`Header: should render with a custom logo 1`] = `
                       Settings
                     </a>
                   </li>
-                  <li
-                    class="UserAccountMenu__firstItemInGroup Hidden__desktop"
+                  <span
+                    class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                   >
-                    <span
-                      class="UserAccountMenu__item UserAccountMenu__pendingAuth"
+                    <div
+                      class="Loader__root Loader__inline Loader__xsmall"
                     >
                       <div
-                        class="Loader__root Loader__inline Loader__xsmall"
-                      >
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                      </div>
-                      <span
-                        class="UserAccountMenu__iconSpacer Hidden__desktop"
+                        class="Loader__ball"
                       />
-                    </span>
-                  </li>
+                      <div
+                        class="Loader__ball"
+                      />
+                      <div
+                        class="Loader__ball"
+                      />
+                    </div>
+                    <span
+                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    />
+                  </span>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -4820,30 +4807,26 @@ exports[`Header: should render with locale of AU 1`] = `
                       Settings
                     </a>
                   </li>
-                  <li
-                    class="UserAccountMenu__firstItemInGroup Hidden__desktop"
+                  <span
+                    class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                   >
-                    <span
-                      class="UserAccountMenu__item UserAccountMenu__pendingAuth"
+                    <div
+                      class="Loader__root Loader__inline Loader__xsmall"
                     >
                       <div
-                        class="Loader__root Loader__inline Loader__xsmall"
-                      >
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                      </div>
-                      <span
-                        class="UserAccountMenu__iconSpacer Hidden__desktop"
+                        class="Loader__ball"
                       />
-                    </span>
-                  </li>
+                      <div
+                        class="Loader__ball"
+                      />
+                      <div
+                        class="Loader__ball"
+                      />
+                    </div>
+                    <span
+                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    />
+                  </span>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -5368,30 +5351,26 @@ exports[`Header: should render with locale of NZ 1`] = `
                       Settings
                     </a>
                   </li>
-                  <li
-                    class="UserAccountMenu__firstItemInGroup Hidden__desktop"
+                  <span
+                    class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                   >
-                    <span
-                      class="UserAccountMenu__item UserAccountMenu__pendingAuth"
+                    <div
+                      class="Loader__root Loader__inline Loader__xsmall"
                     >
                       <div
-                        class="Loader__root Loader__inline Loader__xsmall"
-                      >
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                      </div>
-                      <span
-                        class="UserAccountMenu__iconSpacer Hidden__desktop"
+                        class="Loader__ball"
                       />
-                    </span>
-                  </li>
+                      <div
+                        class="Loader__ball"
+                      />
+                      <div
+                        class="Loader__ball"
+                      />
+                    </div>
+                    <span
+                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    />
+                  </span>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
@@ -5895,30 +5874,26 @@ exports[`Header: should render with no divider 1`] = `
                       Settings
                     </a>
                   </li>
-                  <li
-                    class="UserAccountMenu__firstItemInGroup Hidden__desktop"
+                  <span
+                    class="UserAccountMenu__item UserAccountMenu__pendingAuth"
                   >
-                    <span
-                      class="UserAccountMenu__item UserAccountMenu__pendingAuth"
+                    <div
+                      class="Loader__root Loader__inline Loader__xsmall"
                     >
                       <div
-                        class="Loader__root Loader__inline Loader__xsmall"
-                      >
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                        <div
-                          class="Loader__ball"
-                        />
-                      </div>
-                      <span
-                        class="UserAccountMenu__iconSpacer Hidden__desktop"
+                        class="Loader__ball"
                       />
-                    </span>
-                  </li>
+                      <div
+                        class="Loader__ball"
+                      />
+                      <div
+                        class="Loader__ball"
+                      />
+                    </div>
+                    <span
+                      class="UserAccountMenu__iconSpacer Hidden__desktop"
+                    />
+                  </span>
                   <li
                     class="UserAccountMenu__firstItemInGroup Hidden__desktop"
                   >
