@@ -228,11 +228,11 @@ export default ({
         children: SETTINGS
       })}
     </Hidden>
-    <Hidden desktop component="li" className={styles.firstItemInGroup}>
-      {(() => {
-        switch (authenticationStatus) {
-          case UNAUTHENTICATED:
-            return (
+    {(() => {
+      switch (authenticationStatus) {
+        case UNAUTHENTICATED:
+          return (
+            <Hidden desktop component="li" className={styles.firstItemInGroup}>
               <span className={styles.item}>
                 {linkRenderer({
                   'data-analytics': 'header:sign-in',
@@ -251,25 +251,30 @@ export default ({
                 })}
                 <div className={styles.iconSpacer} />
               </span>
-            );
-          case AUTHENTICATED:
-            return (
-              <Fragment>
-                <li
-                  className={classnames(
-                    activeTab === SETTINGS && styles.activeTab
-                  )}
-                >
-                  {linkRenderer({
-                    'data-analytics': 'header:settings',
-                    className: styles.item,
-                    href: '/settings/',
-                    children: [
-                      SETTINGS,
-                      <div key="iconSpacer" className={styles.iconSpacer} />
-                    ]
-                  })}
-                </li>
+            </Hidden>
+          );
+        case AUTHENTICATED:
+          return (
+            <Fragment>
+              <Hidden
+                desktop
+                component="li"
+                className={classnames(
+                  activeTab === SETTINGS && styles.activeTab,
+                  styles.firstItemInGroup
+                )}
+              >
+                {linkRenderer({
+                  'data-analytics': 'header:settings',
+                  className: styles.item,
+                  href: '/settings/',
+                  children: [
+                    SETTINGS,
+                    <div key="iconSpacer" className={styles.iconSpacer} />
+                  ]
+                })}
+              </Hidden>
+              <Hidden desktop component="li">
                 {linkRenderer({
                   'data-analytics': 'header:sign-out',
                   className: styles.item,
@@ -282,23 +287,19 @@ export default ({
                     <div key="iconSpacer" className={styles.iconSpacer} />
                   ]
                 })}
-              </Fragment>
-            );
+              </Hidden>
+            </Fragment>
+          );
 
-          default:
-            return (
-              <span className={classnames(styles.item, styles.pendingAuth)}>
-                <Loader inline xsmall />
-                <Hidden
-                  desktop
-                  key="iconSpacer"
-                  className={styles.iconSpacer}
-                />
-              </span>
-            );
-        }
-      })()}
-    </Hidden>
+        default:
+          return (
+            <span className={classnames(styles.item, styles.pendingAuth)}>
+              <Loader inline xsmall />
+              <Hidden desktop key="iconSpacer" className={styles.iconSpacer} />
+            </span>
+          );
+      }
+    })()}
     {locale === 'NZ' ? null : (
       <Hidden
         desktop
