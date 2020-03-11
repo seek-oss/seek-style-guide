@@ -9527,9 +9527,9 @@ pkginfo@0.x.x:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/pkginfo/-/pkginfo-0.4.1.tgz#b5418ef0439de5425fc4995042dced14fb2a84ff"
 
-playroom@0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/playroom/-/playroom-0.15.1.tgz#801b03eebef9181517d6f85c914d1ae35d1378c6"
+playroom@0.15.2:
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/playroom/-/playroom-0.15.2.tgz#92a5e42c6ab38614cd2fe5a225e6c24a8999ca48"
   dependencies:
     "@babel/cli" "^7.8.3"
     "@babel/core" "^7.8.3"
