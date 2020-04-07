@@ -10,6 +10,13 @@ export default [
     analytics: 'toolbar:profile'
   },
   {
+    name: 'Recommended jobs',
+    href: '/recommended',
+    rel: 'nofollow',
+    authRequired: true,
+    analytics: 'toolbar:recommended+jobs'
+  },
+  {
     name: 'Saved searches',
     href: '/my-activity/saved-searches',
     rel: 'nofollow',

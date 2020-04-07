@@ -51,6 +51,18 @@ exports[`Footer: should render when authenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:recommended+jobs"
+                href="/recommended"
+                rel="nofollow"
+              >
+                Recommended jobs
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
                 href="/my-activity/saved-searches"
                 rel="nofollow"
@@ -901,6 +913,18 @@ exports[`Footer: should render when authentication is pending 1`] = `
                 href="/profile/"
               >
                 Profile
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:recommended+jobs"
+                href="/sign-in?returnUrl=%2Frecommended"
+                rel="nofollow"
+              >
+                Recommended jobs
               </a>
             </li>
             <li
@@ -1765,6 +1789,18 @@ exports[`Footer: should render when unauthenticated 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:recommended+jobs"
+                href="/sign-in?returnUrl=%2Frecommended"
+                rel="nofollow"
+              >
+                Recommended jobs
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
                 href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-searches"
                 rel="nofollow"
@@ -2622,6 +2658,18 @@ exports[`Footer: should render with locale of AU 1`] = `
             >
               <a
                 class="FooterLink__link"
+                data-analytics="toolbar:recommended+jobs"
+                href="/sign-in?returnUrl=%2Frecommended"
+                rel="nofollow"
+              >
+                Recommended jobs
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
                 data-analytics="toolbar:my+activity"
                 href="/sign-in?returnUrl=%2Fmy-activity%2Fsaved-searches"
                 rel="nofollow"
@@ -3472,6 +3520,18 @@ exports[`Footer: should render with locale of NZ 1`] = `
                 href="/profile/"
               >
                 Profile
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                class="FooterLink__link"
+                data-analytics="toolbar:recommended+jobs"
+                href="/sign-in?returnUrl=%2Frecommended"
+                rel="nofollow"
+              >
+                Recommended jobs
               </a>
             </li>
             <li
