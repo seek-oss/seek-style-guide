@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
 const defaultPageTitleAU =
