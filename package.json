@@ -68,7 +68,7 @@
   "peerDependencies": {
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "react-helmet": "^3.0.0 || ^4.0.0 || ^5.0.0"
+    "react-helmet": "^5.0.0 || ^6.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.0",
