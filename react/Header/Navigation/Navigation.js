@@ -30,13 +30,6 @@ const items = [
     href: '/companies/',
     analytics: 'header:companies',
     specificLocale: 'AU'
-  },
-  {
-    name: '$150k+ Jobs',
-    'aria-label': 'One fifty K jobs',
-    href: '/150kjobs',
-    analytics: 'header:high+salary',
-    specificLocale: 'AU'
   }
 ];
 
