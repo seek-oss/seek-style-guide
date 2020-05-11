@@ -448,18 +448,6 @@ exports[`Header: should append returnUrl to signin and register links if present
               Company Reviews
             </a>
           </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
-            </a>
-          </li>
         </ul>
       </nav>
     </span>
@@ -1031,18 +1019,6 @@ exports[`Header: should render first part of email address when username isn't p
               Company Reviews
             </a>
           </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
-            </a>
-          </li>
         </ul>
       </nav>
     </span>
@@ -1589,18 +1565,6 @@ exports[`Header: should render when activeTab is 'Profile' 1`] = `
               href="/companies/"
             >
               Company Reviews
-            </a>
-          </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -2174,18 +2138,6 @@ exports[`Header: should render when authenticated 1`] = `
               Company Reviews
             </a>
           </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
-            </a>
-          </li>
         </ul>
       </nav>
     </span>
@@ -2753,18 +2705,6 @@ exports[`Header: should render when authenticated but username and email is not 
               Company Reviews
             </a>
           </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
-            </a>
-          </li>
         </ul>
       </nav>
     </span>
@@ -3311,18 +3251,6 @@ exports[`Header: should render when authentication is pending 1`] = `
               href="/companies/"
             >
               Company Reviews
-            </a>
-          </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -3887,18 +3815,6 @@ exports[`Header: should render when unauthenticated 1`] = `
               Company Reviews
             </a>
           </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
-            </a>
-          </li>
         </ul>
       </nav>
     </span>
@@ -4413,18 +4329,6 @@ exports[`Header: should render with a custom logo 1`] = `
               href="/companies/"
             >
               Company Reviews
-            </a>
-          </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -4973,18 +4877,6 @@ exports[`Header: should render with locale of AU 1`] = `
               href="/companies/"
             >
               Company Reviews
-            </a>
-          </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
             </a>
           </li>
         </ul>
@@ -6040,18 +5932,6 @@ exports[`Header: should render with no divider 1`] = `
               href="/companies/"
             >
               Company Reviews
-            </a>
-          </li>
-          <li
-            class="Navigation__item"
-          >
-            <a
-              aria-label="One fifty K jobs"
-              class="Navigation__link"
-              data-analytics="header:high+salary"
-              href="/150kjobs"
-            >
-              $150k+ Jobs
             </a>
           </li>
         </ul>

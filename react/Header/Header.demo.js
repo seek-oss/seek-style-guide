@@ -67,7 +67,6 @@ export default {
       states: [
         null,
         'Job Search',
-        '$150k+ Jobs',
         'Profile',
         'Saved & Applied Jobs',
         'Recommended Jobs',
@@ -89,7 +88,6 @@ export default {
         undefined,
         null,
         'Job Search',
-        '$150k+ Jobs',
         'Profile',
         'Saved & Applied Jobs',
         'Recommended Jobs',

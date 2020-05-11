@@ -25,7 +25,6 @@ const handleLegacyTabName = tabName =>
 const defaultLinkRenderer = props => <a {...props} />;
 const tabNames = [
   'Job Search',
-  '$150k+ Jobs',
   'Profile',
   'Saved & Applied Jobs',
   'Recommended Jobs',
