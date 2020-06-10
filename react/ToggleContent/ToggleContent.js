@@ -51,7 +51,6 @@ class ToggleContent extends PureComponent<Props, State> {
     return (
       <div id={id}>
         <TextLink
-          strong
           color="transparent"
           chevron={showMore ? 'up' : 'down'}
           component={Button}
