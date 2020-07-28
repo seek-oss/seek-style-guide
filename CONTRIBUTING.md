@@ -1,3 +1,9 @@
+## ⚠️ NOTE: This project has been deprecated in favour of [Braid Design System.](https://github.com/seek-oss/braid-design-system)
+
+Unless you're fixing a critical production issue, you should be making changes to [Braid Design System](https://github.com/seek-oss/braid-design-system) instead.
+
+---
+
 # Contributing to seek-style-guide
 
 ⚠️ 🌏 👀 First and foremost, remember that this repo is **open source**.

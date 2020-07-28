@@ -1,3 +1,7 @@
+## ⚠️ NOTE: This project has been deprecated in favour of [Braid Design System.](https://github.com/seek-oss/braid-design-system)
+
+---
+
 [![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/) [![Styled with Prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 # seek-style-guide
@@ -49,28 +53,6 @@ export default class App extends Component {
 ```
 
 `StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
-
-### Applying the Standard Header and Footer
-
-The standard header and footer are provided as React components:
-
-```js
-import { Header, Footer } from 'seek-style-guide/react';
-```
-
-The `<Header>` component accepts the following props:
-
-- **locale:** `'AU'` (default) or `'NZ'`
-- **authenticated:** `null/undefined` (default, authentication pending), `true` or `false`
-- **userName:** User's display name, when authenticated
-- **activeTab:** Text of the active tab, e.g. `'Job Search'`
-- **divider:** `true` (default, renders a blue divider below the navigation tabs) or `false`
-- **linkRenderer:** Function to allow custom rendering of links. The default implementation simply renders a standard link, spreading all props: `props => <a {...props} />`
-
-The `<Footer>` component accepts the following props:
-
-- **locale:** See above.
-- **linkRenderer:** See above.
 
 ## High Level Components
 
@@ -228,80 +210,6 @@ It's important to note that any additions to these values (e.g. borders) will ne
   border-bottom: @border-width solid @sk-charcoal;
   padding-bottom: @row-height - @border-width;
 }
-```
-
-## Standalone Header and Footer
-
-If you're maintaining or updating a non-React app, a standalone JS + CSS + HTML package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
-
-First, include the following files in your app:
-
-- `seek-style-guide/dist/header-footer/styles.css`
-- `seek-style-guide/dist/header-footer/client.js`
-
-Then, include the appropriate header and footer HTML snippets, switching based on locale:
-
-**Header:**
-
-- `seek-style-guide/dist/header-footer/header__au.html`
-- `seek-style-guide/dist/header-footer/header__nz.html`
-
-**Header, with "Career Advice" tab selected:**
-
-- `seek-style-guide/dist/header-footer/header__au__career_advice.html`
-- `seek-style-guide/dist/header-footer/header__nz__career_advice.html`
-
-_Note: If you need a different tab selected, feel free to open a pull request or raise an issue_
-
-**Footer:**
-
-- `seek-style-guide/dist/header-footer/footer__au.html`
-- `seek-style-guide/dist/header-footer/footer__nz.html`
-
-When the document is ready, rehydrate the header by triggering a client-side render:
-
-```js
-var header = SeekHeaderFooter.renderHeader();
-
-// Update props later, if needed:
-header.updateProps({ ...newProps });
-```
-
-Finally, render the footer following a similar pattern:
-
-```js
-var footer = SeekHeaderFooter.renderFooter();
-
-// Again, update props later, if needed:
-footer.updateProps({ ...newProps });
-```
-
-If you'd prefer not to use the pre-rendered header and footer snippets and purely render client-side, you can manually pass the container element and initial props to the render methods yourself.
-
-First, add placeholder elements to the page:
-
-```html
-<div id="header"></div>
-<div id="footer"></div>
-```
-
-Then, trigger the initial render client-side:
-
-```js
-var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), {
-  ...props
-});
-var footer = SeekHeaderFooter.renderHeader(document.getElementById('footer'), {
-  ...props
-});
-```
-
-For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
-
-If you need to create React elements (e.g. when providing a `linkRenderer` function), the standalone bundle also exports React's [createElement](https://facebook.github.io/react/docs/react-api.html#createelement) function so you don't need to install React separately to gain access to it:
-
-```js
-var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
 ```
 
 ## Advanced Usage

@@ -8,7 +8,6 @@ import {
   Section,
   Paragraph,
   Text,
-  TextLink,
   Strong
 } from 'seek-style-guide/react';
 import Demo from '../Demo/Demo';
@@ -93,18 +92,6 @@ export default () => (
               write custom styles for standard layouts. When needed, you can
               pass additional classes or inline styles as overrides, but this
               should ideally be the exception.
-            </Text>
-          </Paragraph>
-        </Section>
-        <Section>
-          <Text heading>Header and Footer</Text>
-          <Paragraph>
-            <Text>
-              The obvious starting point is to add the{' '}
-              <TextLink to="/header">Header</TextLink> and{' '}
-              <TextLink to="/footer">Footer</TextLink> components to your page,
-              both of which are fairly self explanatory and documented
-              separately.
             </Text>
           </Paragraph>
         </Section>
