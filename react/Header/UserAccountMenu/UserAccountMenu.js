@@ -279,9 +279,7 @@ export default ({
                   'data-analytics': 'header:sign-out',
                   className: styles.item,
                   onClick: clearLocalStorage,
-                  href: returnUrl
-                    ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl)
-                    : '/Login/Logout',
+                  href: appendReturnUrl('/oauth/logout/', returnUrl),
                   children: [
                     'Sign Out',
                     <div key="iconSpacer" className={styles.iconSpacer} />
@@ -353,9 +351,7 @@ export default ({
           'data-analytics': 'header:sign-out',
           className: styles.item,
           onClick: clearLocalStorage,
-          href: returnUrl
-            ? appendReturnUrl('/login/LogoutWithReturnUrl', returnUrl)
-            : '/Login/Logout',
+          href: appendReturnUrl('/oauth/logout/', returnUrl),
           children: 'Sign Out'
         })}
       </Hidden>

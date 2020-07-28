@@ -852,7 +852,7 @@ exports[`Header: should render first part of email address when username isn't p
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:sign-out"
-                      href="/Login/Logout"
+                      href="/oauth/logout/"
                     >
                       Sign Out
                       <div
@@ -908,7 +908,7 @@ exports[`Header: should render first part of email address when username isn't p
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:sign-out"
-                      href="/Login/Logout"
+                      href="/oauth/logout/"
                     >
                       Sign Out
                     </a>
@@ -1971,7 +1971,7 @@ exports[`Header: should render when authenticated 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:sign-out"
-                      href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                      href="/oauth/logout/?returnUrl=%2Fjobs"
                     >
                       Sign Out
                       <div
@@ -2027,7 +2027,7 @@ exports[`Header: should render when authenticated 1`] = `
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:sign-out"
-                      href="/login/LogoutWithReturnUrl?returnUrl=%2Fjobs"
+                      href="/oauth/logout/?returnUrl=%2Fjobs"
                     >
                       Sign Out
                     </a>
@@ -2538,7 +2538,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:sign-out"
-                      href="/Login/Logout"
+                      href="/oauth/logout/"
                     >
                       Sign Out
                       <div
@@ -2594,7 +2594,7 @@ exports[`Header: should render when authenticated but username and email is not 
                     <a
                       class="UserAccountMenu__item"
                       data-analytics="header:sign-out"
-                      href="/Login/Logout"
+                      href="/oauth/logout/"
                     >
                       Sign Out
                     </a>
