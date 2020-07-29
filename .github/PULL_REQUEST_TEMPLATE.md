@@ -1,31 +1,3 @@
-** Please provide as much detail as possible, but feel free to remove irrelevant sections **
+NOTE: This project has been deprecated in favour of [Braid Design System.](https://github.com/seek-oss/braid-design-system)
 
-{{ Reason for change }}
-
-BREAKING CHANGE:
-
-{{ Description of breaking API change }}
-
-RFC URL:
-
-{{ URL of associated RFC for API change }}
-
-MIGRATION GUIDE:
-
-Before:
-
-```js
-{{ Old code }}
-```
-
-After:
-
-```js
-{{ New code }}
-```
-
-EXAMPLE USAGE:
-
-```js
-{{ Code }}
-```
+Unless there's a critical production issue, we won't be making further changes to this repo.
