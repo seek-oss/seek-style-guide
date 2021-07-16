@@ -1,4 +1,4 @@
-// @flow
+/* eslint-disable react/prop-types */
 import styles from './FieldMessage.less';
 
 import React, { Component } from 'react';
@@ -11,22 +11,7 @@ import TickCircleIcon from '../TickCircleIcon/TickCircleIcon';
 import Text from '../Text/Text';
 import { TONE } from '../private/tone';
 
-type Props = {
-  id: string,
-  invalid?: boolean,
-  help?: string,
-  helpProps?: Object,
-  valid?: boolean,
-  message: false | string | Node,
-  messageProps: {
-    critical?: boolean,
-    positive?: boolean,
-    secondary?: boolean
-  },
-  tone?: 'positive' | 'critical' | 'neutral'
-};
-
-export default class FieldMessage extends Component<Props> {
+export default class FieldMessage extends Component {
   static displayName = 'FieldMessage';
 
   static defaultProps = {

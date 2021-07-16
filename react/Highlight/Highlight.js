@@ -1,17 +1,9 @@
-// @flow
+/* eslint-disable react/prop-types */
 import styles from './Highlight.less';
 import React from 'react';
 import classnames from 'classnames';
-import { TONE } from '../private/tone';
 
-type Props = {
-  children: React$Node,
-  secondary?: boolean,
-  className?: string,
-  tone?: typeof TONE.CRITICAL
-};
-
-export default function Highlight(props: Props) {
+export default function Highlight(props) {
   const { children, secondary, tone, className, ...restProps } = props;
 
   return (

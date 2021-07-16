@@ -1,9 +1,4 @@
-// @flow
-export type Level = 'primary' | 'secondary' | 'tertiary';
-
-export const LEVEL: {
-  ['PRIMARY' | 'SECONDARY' | 'TERTIARY']: Level
-} = {
+export const LEVEL = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
   TERTIARY: 'tertiary'

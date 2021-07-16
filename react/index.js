@@ -1,5 +1,3 @@
-// @flow
-
 export {
   default as StyleGuideProvider
 } from './StyleGuideProvider/StyleGuideProvider';

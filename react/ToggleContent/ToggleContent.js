@@ -1,27 +1,15 @@
-// @flow
+/* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react';
 import Button from '../Button/Button';
 import TextLink from '../TextLink/TextLink';
 
-type Props = {|
-  id: string,
-  children: React$Element<*>,
-  expandLabel: string,
-  collapseLabel: string,
-  onShowMore?: Function
-|};
-
-type State = {|
-  showMore: boolean
-|};
-
-class ToggleContent extends PureComponent<Props, State> {
+class ToggleContent extends PureComponent {
   static defaultProps = {
     expandLabel: 'Show content',
     collapseLabel: 'Hide content'
   };
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
 
     this.state = {

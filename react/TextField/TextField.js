@@ -1,4 +1,4 @@
-// @flow
+/* eslint-disable react/prop-types */
 import styles from './TextField.less';
 import classnames from 'classnames';
 import React, { Component } from 'react';
@@ -18,58 +18,24 @@ function combineClassNames(props = {}, ...classNames) {
   };
 }
 
-type ComponentProps = {
-  id: string,
-  value: string,
-  onChange: Function,
-  onFocus?: Function,
-  onBlur?: Function,
-  type?: string,
-  className?: string,
-  valid?: boolean,
-  inputProps?: Object,
-  onClear?: Function
-};
-
-type FieldLabelProps = {
-  label?: string,
-  labelProps?: Object,
-  secondaryLabel?: string,
-  tertiaryLabel?: React$Node
-};
-
-type FieldMessageProps = {
-  message?: false | Node | string,
-  invalid?: boolean,
-  help?: string,
-  helpProps?: Object,
-  tone?: 'positive' | 'critical' | 'neutral',
-  messageProps?: Object
-};
-
-type Props = ComponentProps & FieldLabelProps & FieldMessageProps;
-
-export default class TextField extends Component<Props> {
+export default class TextField extends Component {
   static displayName = 'TextField';
 
   static defaultProps = { className: '', inputProps: {} };
 
-  container: React$ElementRef<'div'>;
-  input: React$ElementRef<'input'>;
-
-  storeContainerReference = (textField: ?React$ElementRef<'div'>): void => {
+  storeContainerReference = textField => {
     if (textField && textField !== null) {
       this.container = textField;
     }
   };
 
-  storeInputReference = (input: React$ElementRef<'input'>): void => {
+  storeInputReference = input => {
     if (input !== null) {
       this.input = input;
     }
   };
 
-  handleMouseDownOnClear = (event: Event): void => {
+  handleMouseDownOnClear = event => {
     event.preventDefault(); // https://developer.mozilla.org/en/docs/Web/API/HTMLElement/focus#Notes
     invoke(this.props, 'onClear', event);
     this.input.focus();

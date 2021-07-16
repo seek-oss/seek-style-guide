@@ -6,14 +6,14 @@
     "jest": true
   },
   "parser": "babel-eslint",
-  "plugins": ["babel", "react", "jest", "flowtype"],
+  "plugins": ["babel", "react", "jest"],
   "settings": {
     "react": {
       "pragma": "React",
       "version": "16"
     }
   },
-  "extends": ["plugin:flowtype/recommended", "eslint-config-prettier"],
+  "extends": ["eslint-config-prettier"],
   "rules": {
     "no-cond-assign": 2,
     "no-console": 0,
@@ -183,7 +183,5 @@
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "jest/no-focused-tests": 2,
-
-    "flowtype/space-after-type-colon": 0
   }
 }
