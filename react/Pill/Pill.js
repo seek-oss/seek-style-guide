@@ -1,4 +1,4 @@
-// @flow
+/* eslint-disable react/prop-types */
 import styles from './Pill.less';
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -6,20 +6,10 @@ import Text from '../Text/Text';
 import CrossIcon from '../CrossIcon/CrossIcon';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 
-type Props = {
-  children?: React$Node,
-  buttonType?: string,
-  text?: React$Node,
-  onClose?: Function,
-  className?: string
-};
-
-export default class Pill extends Component<Props> {
+export default class Pill extends Component {
   static displayName = 'Pill';
 
-  props: Props;
-
-  handleClose = (event: Object) => {
+  handleClose = event => {
     const { onClose } = this.props;
     if (onClose) {
       onClose(event);

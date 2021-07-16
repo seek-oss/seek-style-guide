@@ -1,18 +1,9 @@
-// @flow
-
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styles from './Loader.less';
 import classnames from 'classnames';
 
-export default function Loader({
-  inline,
-  small,
-  xsmall
-}: {
-  inline?: boolean,
-  small?: boolean,
-  xsmall?: boolean
-}) {
+export default function Loader({ inline, small, xsmall }) {
   return (
     <div
       className={classnames(styles.root, {

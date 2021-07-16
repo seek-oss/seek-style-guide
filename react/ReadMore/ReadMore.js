@@ -1,4 +1,4 @@
-// @flow
+/* eslint-disable react/prop-types */
 import styles from './ReadMore.less';
 
 import React, { PureComponent } from 'react';
@@ -11,7 +11,7 @@ import TextLink from '../TextLink/TextLink';
 const { rowHeight, standardTypeRowSpan, interactionTypeRowSpan } = themeVars;
 const buttonHeight = rowHeight * interactionTypeRowSpan;
 
-const getMaxHeight = (maxLines?: number, maxRows?: number) => {
+const getMaxHeight = (maxLines, maxRows) => {
   if (maxLines) {
     return maxLines * rowHeight * standardTypeRowSpan;
   }
@@ -23,29 +23,14 @@ const getMaxHeight = (maxLines?: number, maxRows?: number) => {
   return 0;
 };
 
-type Props = {|
-  children: React$Element<*>,
-  maxLines?: number,
-  maxRows?: number,
-  moreLabel: string,
-  lessLabel: string,
-  backgroundComponentName: 'card' | 'body' | 'gray-lightest',
-  onShowMore?: Function,
-  onMoreButtonVisibilityChange?: Function
-|};
-type State = {|
-  showMore: boolean,
-  tooLong: boolean,
-  mounted: boolean
-|};
-class ReadMore extends PureComponent<Props, State> {
+class ReadMore extends PureComponent {
   static defaultProps = {
     moreLabel: 'More',
     lessLabel: 'Less',
     backgroundComponentName: 'card'
   };
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
 
     this.contentRef = null;
@@ -65,8 +50,6 @@ class ReadMore extends PureComponent<Props, State> {
     this.update();
   }
 
-  contentRef: ?HTMLDivElement;
-
   update = () => {
     const { maxLines, maxRows, onMoreButtonVisibilityChange } = this.props;
 
@@ -84,7 +67,7 @@ class ReadMore extends PureComponent<Props, State> {
     }
   };
 
-  setTextRef = (element: ?HTMLDivElement) => {
+  setTextRef = element => {
     this.contentRef = element;
   };
 

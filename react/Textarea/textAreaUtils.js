@@ -1,37 +1,25 @@
-// @flow
 import React from 'react';
 import Highlight from '../Highlight/Highlight';
 import flatten from 'lodash/flatten';
 
-type Range = {
-  start: number,
-  end: number
-};
-
-type InvalidText = string | Range | Array<Range>;
-
-const formatText = (text: string, style: string, key: number) => (
+const formatText = (text, style, key) => (
   <Highlight tone="critical" className={style} key={key}>
     {text}
   </Highlight>
 );
 
-export const formatInvalidText = (
-  value: string,
-  invalidText: InvalidText,
-  style: string
-): [Node | string] => {
+export const formatInvalidText = (value, invalidText, style) => {
   if (invalidText && value) {
-    const textToHighlight: Array<string> = [];
-    let splitText: Array<string> = [];
+    const textToHighlight = [];
+    let splitText = [];
 
     if (typeof invalidText !== 'string') {
-      const highlightRanges: Array<Range> = Array.isArray(invalidText)
+      const highlightRanges = Array.isArray(invalidText)
         ? invalidText
         : [invalidText];
       highlightRanges.forEach((range, i) => {
         const { start, end } = range;
-        const highlightedText: string = value.slice(start, end);
+        const highlightedText = value.slice(start, end);
         if (highlightedText) {
           textToHighlight.push(highlightedText);
         }

@@ -1,21 +1,10 @@
-// @flow
+/* eslint-disable react/prop-types */
 import styles from './Button.less';
 import React from 'react';
 import { Component } from 'react';
 import classnames from 'classnames';
 import capitalize from 'lodash/capitalize';
-
-type Props = {
-  color: 'pink' | 'blue' | 'gray' | 'transparent' | 'white',
-  children: React$Node,
-  className?: string,
-  component?: string | Function,
-  ghost?: boolean,
-  loading?: boolean,
-  fullWidth?: boolean
-};
-
-export default class Button extends Component<Props> {
+export default class Button extends Component {
   static displayName = 'Button';
 
   static defaultProps = {
@@ -25,9 +14,6 @@ export default class Button extends Component<Props> {
     fullWidth: false,
     component: 'button'
   };
-
-  button: ?HTMLElement;
-  props: Props;
 
   render() {
     const {
